@@ -55,50 +55,33 @@ CASE_STUDY_HEADER_RE = re.compile(
     re.IGNORECASE,
 )
 
-DOMAIN_BLUEPRINT = [
-    ("1", "Plan and manage an Azure AI solution", 0.23),
-    ("2", "Implement generative AI solutions", 0.18),
-    ("3", "Implement an agentic solution", 0.08),
-    ("4", "Implement computer vision solutions", 0.13),
-    ("5", "Implement natural language processing solutions", 0.18),
-    ("6", "Implement knowledge mining and information extraction solutions", 0.20),
-]
+def _load_day_assignments(questions_filepath):
+    """
+    Load day-assignments.json from the same folder as questions_filepath.
 
-# Daily practice targets from plan.md.
-DAY_LOCK_TARGETS = {
-    1: 8, 2: 8, 3: 8, 4: 15, 5: 15,
-    6: 8, 7: 8, 8: 8, 9: 8, 10: 8,
-    11: 15, 12: 15,
-    13: 15, 14: 8, 15: 8, 16: 8,
-    17: 8, 18: 15, 19: 15, 20: 8, 21: 8, 22: 8,
-    23: 8, 24: 8, 25: 15, 26: 15, 27: 8, 28: 8,
-    29: 8, 30: 20, 31: 20, 32: 35,
-}
+    The file specifies per-day question pools and daily targets for the exam plan.
+    It is exam-specific and lives alongside questions.json — the runner itself
+    contains no hardcoded exam or domain knowledge.
 
+    Expected schema:
+        {
+          "totalDays": 32,
+          "studyDays": 28,
+          "dayTargets": { "1": 8, "2": 8, ... },
+          "dayAssignments": { "1": ["q001", ...], "2": [...], ... }  // days 1-studyDays
+        }
 
-def _active_domain_for_day(day):
-    """Return active domain id for content-introduction days, else None."""
-    if 1 <= day <= 5:
-        return "1"
-    if 6 <= day <= 10:
-        return "2"
-    if 11 <= day <= 12:
-        return "3"
-    if 13 <= day <= 16:
-        return "4"
-    if 17 <= day <= 22:
-        return "5"
-    if 23 <= day <= 28:
-        return "6"
-    return None
-
-
-def _unlocked_domains_for_day(day):
-    """Return domains that are considered covered by the given study day."""
-    active = _active_domain_for_day(day)
-    if active is None:
-        return ["1", "2", "3", "4", "5", "6"]
-    return [str(i) for i in range(1, int(active) + 1)]
+    Raises FileNotFoundError if the file is missing.
+    """
+    base_dir = os.path.dirname(os.path.abspath(questions_filepath))
+    path = os.path.join(base_dir, "day-assignments.json")
+    if not os.path.exists(path):
+        raise FileNotFoundError(
+            f"day-assignments.json not found in {base_dir}. "
+            "This file must exist alongside questions.json for --day-lock mode."
+        )
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 def _flatten_with_domain(data):
@@ -130,99 +113,69 @@ def _pick_recent_unique(source_ids, count):
     return picked
 
 
-def _build_full_day_assignment(all_rows):
+def build_day_locked_questions(data, day, carryover_count=3, questions_filepath=None):
     """
-    Pre-assign every question in the bank to exactly one primary study day (days 1–28)
-    using round-robin distribution within each domain's allocated day range.
+    Build the question set for the given study day, driven entirely by day-assignments.json.
 
-    This guarantees 100% question coverage — no question is ever skipped.
-    Domain-to-days mapping mirrors the study plan:
-        D1 → days 1–5,  D2 → days 6–10,  D3 → days 11–12,
-        D4 → days 13–16, D5 → days 17–22, D6 → days 23–28.
-
-    Returns: dict {day_int: [list_of_question_ids]}
-    """
-    domain_days = {
-        "1": list(range(1, 6)),
-        "2": list(range(6, 11)),
-        "3": list(range(11, 13)),
-        "4": list(range(13, 17)),
-        "5": list(range(17, 23)),
-        "6": list(range(23, 29)),
-    }
-
-    assignment = {d: [] for d in range(1, 29)}  # days 1–28 only; review days handled separately
-
-    # Group question IDs by domain, preserving dataset order.
-    by_domain = {}
-    for q in all_rows:
-        d_id = q.get("domainId")
-        if d_id:
-            by_domain.setdefault(d_id, []).append(q.get("id"))
-
-    # Round-robin distribute each domain's questions across its study days.
-    for domain_id, days in domain_days.items():
-        for i, qid in enumerate(by_domain.get(domain_id, [])):
-            assignment[days[i % len(days)]].append(qid)
-
-    return assignment
-
-
-def build_day_locked_questions(data, day, carryover_count=3):
-    """
-    Build the question set for the given study day.
-
-    For days 1–28 (domain study days):
-        - Each day has a pre-assigned set of questions distributed round-robin
-          from that domain, guaranteeing every question appears on exactly one day.
+    For study days (1 to studyDays in day-assignments.json):
+        - Serves the pre-assigned question list for that day (round-robin distributed
+          from questions.json when the file was generated — see day-assignments.json).
         - Carryover (up to carryover_count) recent questions from prior days are
           prepended for spaced-repetition reinforcement.
 
-    For days 29–32 (review / mock days):
-        - All previously introduced questions are eligible (full cross-domain pool).
-        - Carryover is applied, then remaining slots filled from the full pool.
-        - Target size from DAY_LOCK_TARGETS is respected as a soft cap.
+    For review / mock days (studyDays+1 to totalDays):
+        - The full question pool is used, capped to dayTargets[day].
+        - Carryover is applied, then remaining slots are filled from the full pool.
+
+    Parameters:
+        data              – normalized question dataset (output of load_questions)
+        day               – target study day (int, 1-indexed)
+        carryover_count   – max prior-session questions to prepend (0–3, default 3)
+        questions_filepath – path to the questions.json file; used to locate day-assignments.json
 
     Rules:
-    - No questions from future (uncovered) domains ever appear.
-    - Day 1 has no carryover.
+        - Day 1 has no carryover.
+        - Review days exceed the study-days range in day-assignments.json.
     """
-    if day not in DAY_LOCK_TARGETS:
-        raise ValueError("--day-lock must be between 1 and 32")
+    if questions_filepath is None:
+        raise ValueError("--day-lock requires questions_filepath to locate day-assignments.json")
+
+    config = _load_day_assignments(questions_filepath)
+    study_days = int(config.get("studyDays", 28))
+    day_targets = {int(k): int(v) for k, v in config.get("dayTargets", {}).items()}
+    day_assignments = {int(k): v for k, v in config.get("dayAssignments", {}).items()}
+    total_days = int(config.get("totalDays", max(day_targets.keys(), default=32)))
+
+    if day < 1 or day > total_days:
+        raise ValueError(f"--day-lock must be between 1 and {total_days}")
 
     carryover_count = max(0, min(int(carryover_count), 3))
     all_rows = _flatten_with_domain(data)
     by_id = {q.get("id"): q for q in all_rows}
 
-    # Pre-assign all domain questions to days 1–28.
-    assignment = _build_full_day_assignment(all_rows)
-
-    # Build the flat history of all questions asked on prior days (for carryover).
+    # Flat ordered history of question IDs asked on days prior to today (for carryover).
     asked_history_flat = []
     for d in range(1, day):
-        asked_history_flat.extend(assignment.get(d, []))
+        asked_history_flat.extend(day_assignments.get(d, []))
 
     carry_ids = [] if day == 1 else _pick_recent_unique(asked_history_flat, carryover_count)
     carry_set = set(carry_ids)
 
-    if day <= 28:
-        # Primary domain day: use pre-assigned questions (excluding carryover duplicates).
-        primary_ids = [qid for qid in assignment.get(day, []) if qid not in carry_set]
+    if day <= study_days:
+        # Study day: serve the pre-assigned questions for this day plus carryover.
+        primary_ids = [qid for qid in day_assignments.get(day, []) if qid not in carry_set]
         selected_ids = carry_ids + primary_ids
 
     else:
-        # Review / mock day (29–32): cross-domain pool of all introduced questions.
-        target = int(DAY_LOCK_TARGETS[day])
-        unlocked_domains = set(_unlocked_domains_for_day(day))  # all 6 domains
-        pool = [
-            q.get("id") for q in all_rows
-            if q.get("domainId") in unlocked_domains and q.get("id") not in carry_set
-        ]
-        # Fill up to target (carryover already counted toward target).
+        # Review / mock day: full pool capped to dayTargets[day].
+        target = day_targets.get(day, 20)
+        pool = [q.get("id") for q in all_rows if q.get("id") not in carry_set]
         fill_count = max(0, target - len(carry_ids))
         selected_ids = carry_ids + pool[:fill_count]
 
     return [by_id[qid] for qid in selected_ids if qid in by_id]
+
+
 
 
 def load_questions(filepath):
@@ -1374,7 +1327,7 @@ def main():
     cross = args.cross.split(",") if args.cross else None
 
     if args.day_lock is not None:
-        questions = build_day_locked_questions(data, args.day_lock, carryover_count=args.carryover)
+        questions = build_day_locked_questions(data, args.day_lock, carryover_count=args.carryover, questions_filepath=args.questions_file)
         if not questions:
             print(f"{RED}Day-lock selected zero questions. Check day or dataset content.{RESET}")
             sys.exit(1)
