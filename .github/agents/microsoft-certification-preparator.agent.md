@@ -66,12 +66,13 @@ You operate in three distinct phases. Detect which phase the user needs based on
    - Certification page: `https://learn.microsoft.com/en-us/credentials/certifications/<exam-name>` (look for "Prepare for the exam" section)
    - Training course: `https://learn.microsoft.com/en-us/training/courses/<exam-code>t00`
      Save the course URL, name, and learning paths (with estimated durations) to `training-course.md` in workspace root.
-8. **Deploy Quiz Runner**: Check if `quiz_runner.py` exists in the workspace root (where `questions.json` lives). If not, copy it from the workspace agent directory at `.github/agents/quiz_runner.py` into the workspace root. This is a standalone Python CLI tool (no external dependencies) that:
+8. **Deploy Quiz Runner**: Check if `quiz_runner.py` exists in the workspace root (where `questions.json` lives). If not, copy it from the workspace agent directory at `.github/agents/quiz_runner.py` into the workspace root. Also copy `.github/agents/quiz_web.py` to `./quiz_web.py` so web mode works. This is a standalone Python quiz tool (no external dependencies) that:
    - Presents questions interactively in the terminal (not in chat — saves context window)
    - Shows immediate correct/wrong feedback with explanations
    - Saves results to `session-results.json` for agent analysis
-   - Supports filtering by domain, topic, question IDs, cross-topic mode, and mock exam mode
-     Copy command: `Copy-Item ".github/agents/quiz_runner.py" "./quiz_runner.py"`
+    - Supports filtering by domain, topic, question IDs, cross-topic mode, strict day-lock mode, and mock exam mode
+    - Supports local browser UI mode with inline image rendering via `--web`
+       Copy commands: `Copy-Item ".github/agents/quiz_runner.py" "./quiz_runner.py"; Copy-Item ".github/agents/quiz_web.py" "./quiz_web.py"`
 9. **Confirm Setup**: Tell the user setup is complete. Summarize: number of topics, number of questions found, official training course link, and next steps. **Strongly encourage** the user to:
    - Complete the official Microsoft Learn training course BEFORE starting study sessions
    - Make notes in their own words as they go through it (paper, Notion, or a `user-notes/` folder in the workspace)

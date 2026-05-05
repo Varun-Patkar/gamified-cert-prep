@@ -86,15 +86,18 @@ Every session follows this exact sequence. Do NOT skip steps.
 
 1. **Determine question set**: Identify question IDs from `questions.json` that match today's topic.
 2. **Cross-topic questions — PAST SESSIONS ONLY**: Check `progress.md` for previously completed sessions. Cross-topic questions must ONLY come from topics the user has already studied in prior sessions. NEVER include questions from future/upcoming topics. On Day 1 there are no cross-topic questions. On Day 2, cross-topic questions come only from Day 1's topic. And so on.
-3. **Run the CLI quiz**: Execute in terminal:
+3. **Run the CLI quiz**: Execute in terminal with strict day-lock:
    ```
-   python quiz_runner.py questions.json --topic "<today's topic prefix>" --shuffle
+  python quiz_runner.py questions.json --day-lock <today_day_number> --carryover 3 --shuffle
    ```
-   For cross-topic review (ONLY if past sessions exist), run a second pass using ONLY domains/topics from completed sessions:
-   ```
-   python quiz_runner.py questions.json --cross "<past_domain1>,<past_domain2>" --limit 5 --shuffle --output session-results-cross.json
-   ```
-   **Skip this entirely on Day 1** — there are no past topics to review yet.
+  Day-lock automatically enforces:
+  - No future/uncovered topics
+  - Day 1 has no carryover
+  - Day N includes 2-3 prior-session questions via carryover
+  Optional browser mode for better image-heavy questions:
+  ```
+  python quiz_runner.py questions.json --day-lock <today_day_number> --carryover 3 --shuffle --web --port 8765
+  ```
 4. **Wait for completion**: The user will answer questions interactively in the terminal. The tool shows immediate correct/wrong feedback with explanations, and saves results to `session-results.json`.
 5. **Read results back**: After the quiz finishes, read `session-results.json` (and `session-results-cross.json` if applicable). Analyze:
    - Overall accuracy

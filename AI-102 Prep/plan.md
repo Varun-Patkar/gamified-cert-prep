@@ -215,39 +215,42 @@
 ## Quiz Runner Commands By Day
 Run from the AI-102 Prep folder.
 
+Example:
+- `python quiz_runner.py questions.json --day-lock 7 --carryover 3 --shuffle --open-images --web --port 8765`
+
 ### Core Command Pattern
-- `python quiz_runner.py questions.json --domain <domainId> --limit <n> --shuffle --open-images`
+- `python quiz_runner.py questions.json --day-lock <dayNumber> --carryover 3 --shuffle --open-images --web --port 8765`
 
 ### Daily Commands
-- Day 1: `python quiz_runner.py questions.json --domain 1 --limit 8 --shuffle --open-images`
-- Day 2: `python quiz_runner.py questions.json --domain 1 --limit 8 --shuffle --open-images`
-- Day 3: `python quiz_runner.py questions.json --domain 1 --limit 8 --shuffle --open-images`
-- Day 4: `python quiz_runner.py questions.json --domain 1 --limit 15 --shuffle --open-images`
-- Day 5: `python quiz_runner.py questions.json --domain 1 --limit 15 --shuffle --open-images`
-- Day 6: `python quiz_runner.py questions.json --domain 2 --limit 8 --shuffle --open-images`
-- Day 7: `python quiz_runner.py questions.json --domain 2 --limit 8 --shuffle --open-images`
-- Day 8: `python quiz_runner.py questions.json --domain 2 --limit 8 --shuffle --open-images`
-- Day 9: `python quiz_runner.py questions.json --domain 2 --limit 8 --shuffle --open-images`
-- Day 10: `python quiz_runner.py questions.json --domain 2 --limit 8 --shuffle --open-images`
-- Day 11: `python quiz_runner.py questions.json --domain 3 --limit 15 --shuffle --open-images`
-- Day 12: `python quiz_runner.py questions.json --cross 2,3 --limit 15 --shuffle --open-images`
-- Day 13: `python quiz_runner.py questions.json --domain 4 --limit 15 --shuffle --open-images`
-- Day 14: `python quiz_runner.py questions.json --domain 4 --limit 8 --shuffle --open-images`
-- Day 15: `python quiz_runner.py questions.json --domain 4 --limit 8 --shuffle --open-images`
-- Day 16: `python quiz_runner.py questions.json --domain 4 --limit 8 --shuffle --open-images`
-- Day 17: `python quiz_runner.py questions.json --domain 5 --limit 8 --shuffle --open-images`
-- Day 18: `python quiz_runner.py questions.json --domain 5 --limit 15 --shuffle --open-images`
-- Day 19: `python quiz_runner.py questions.json --domain 5 --limit 15 --shuffle --open-images`
-- Day 20: `python quiz_runner.py questions.json --domain 5 --limit 8 --shuffle --open-images`
-- Day 21: `python quiz_runner.py questions.json --domain 5 --limit 8 --shuffle --open-images`
-- Day 22: `python quiz_runner.py questions.json --domain 5 --limit 8 --shuffle --open-images`
-- Day 23: `python quiz_runner.py questions.json --domain 6 --limit 8 --shuffle --open-images`
-- Day 24: `python quiz_runner.py questions.json --domain 6 --limit 8 --shuffle --open-images`
-- Day 25: `python quiz_runner.py questions.json --domain 6 --limit 15 --shuffle --open-images`
-- Day 26: `python quiz_runner.py questions.json --domain 6 --limit 15 --shuffle --open-images`
-- Day 27: `python quiz_runner.py questions.json --domain 6 --limit 8 --shuffle --open-images`
-- Day 28: `python quiz_runner.py questions.json --domain 6 --limit 8 --shuffle --open-images`
-- Day 29: `python quiz_runner.py questions.json --all --limit 8 --shuffle --open-images`
-- Day 30: `python quiz_runner.py questions.json --cross 1,2,5 --limit 20 --shuffle --open-images`
-- Day 31: `python quiz_runner.py questions.json --cross 3,4,6 --limit 20 --shuffle --open-images`
-- Day 32: `python quiz_runner.py questions.json --all --limit 35 --shuffle --open-images`
+- Day 1: `python quiz_runner.py questions.json --day-lock 1 --carryover 0 --shuffle --open-images --web --port 8765`
+- Day 2: `python quiz_runner.py questions.json --day-lock 2 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 3: `python quiz_runner.py questions.json --day-lock 3 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 4: `python quiz_runner.py questions.json --day-lock 4 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 5: `python quiz_runner.py questions.json --day-lock 5 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 6: `python quiz_runner.py questions.json --day-lock 6 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 7: `python quiz_runner.py questions.json --day-lock 7 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 8: `python quiz_runner.py questions.json --day-lock 8 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 9: `python quiz_runner.py questions.json --day-lock 9 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 10: `python quiz_runner.py questions.json --day-lock 10 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 11: `python quiz_runner.py questions.json --day-lock 11 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 12: `python quiz_runner.py questions.json --day-lock 12 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 13: `python quiz_runner.py questions.json --day-lock 13 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 14: `python quiz_runner.py questions.json --day-lock 14 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 15: `python quiz_runner.py questions.json --day-lock 15 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 16: `python quiz_runner.py questions.json --day-lock 16 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 17: `python quiz_runner.py questions.json --day-lock 17 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 18: `python quiz_runner.py questions.json --day-lock 18 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 19: `python quiz_runner.py questions.json --day-lock 19 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 20: `python quiz_runner.py questions.json --day-lock 20 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 21: `python quiz_runner.py questions.json --day-lock 21 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 22: `python quiz_runner.py questions.json --day-lock 22 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 23: `python quiz_runner.py questions.json --day-lock 23 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 24: `python quiz_runner.py questions.json --day-lock 24 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 25: `python quiz_runner.py questions.json --day-lock 25 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 26: `python quiz_runner.py questions.json --day-lock 26 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 27: `python quiz_runner.py questions.json --day-lock 27 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 28: `python quiz_runner.py questions.json --day-lock 28 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 29: `python quiz_runner.py questions.json --day-lock 29 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 30: `python quiz_runner.py questions.json --day-lock 30 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 31: `python quiz_runner.py questions.json --day-lock 31 --carryover 3 --shuffle --open-images --web --port 8765`
+- Day 32: `python quiz_runner.py questions.json --day-lock 32 --carryover 3 --shuffle --open-images --web --port 8765`

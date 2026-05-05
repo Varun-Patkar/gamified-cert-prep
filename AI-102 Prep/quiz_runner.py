@@ -7,6 +7,7 @@ Usage:
     python quiz_runner.py questions.json --ids q001,q005    # Specific question IDs
     python quiz_runner.py questions.json --cross 1,2        # Cross-topic: mix domains 1 and 2
     python quiz_runner.py questions.json --all              # All questions (mock exam mode)
+    python quiz_runner.py questions.json --day-lock 7       # Strict study-plan day lock (no future)
 
 Results saved to session-results.json after completion.
 """
@@ -62,6 +63,166 @@ DOMAIN_BLUEPRINT = [
     ("5", "Implement natural language processing solutions", 0.18),
     ("6", "Implement knowledge mining and information extraction solutions", 0.20),
 ]
+
+# Daily practice targets from plan.md.
+DAY_LOCK_TARGETS = {
+    1: 8, 2: 8, 3: 8, 4: 15, 5: 15,
+    6: 8, 7: 8, 8: 8, 9: 8, 10: 8,
+    11: 15, 12: 15,
+    13: 15, 14: 8, 15: 8, 16: 8,
+    17: 8, 18: 15, 19: 15, 20: 8, 21: 8, 22: 8,
+    23: 8, 24: 8, 25: 15, 26: 15, 27: 8, 28: 8,
+    29: 8, 30: 20, 31: 20, 32: 35,
+}
+
+
+def _active_domain_for_day(day):
+    """Return active domain id for content-introduction days, else None."""
+    if 1 <= day <= 5:
+        return "1"
+    if 6 <= day <= 10:
+        return "2"
+    if 11 <= day <= 12:
+        return "3"
+    if 13 <= day <= 16:
+        return "4"
+    if 17 <= day <= 22:
+        return "5"
+    if 23 <= day <= 28:
+        return "6"
+    return None
+
+
+def _unlocked_domains_for_day(day):
+    """Return domains that are considered covered by the given study day."""
+    active = _active_domain_for_day(day)
+    if active is None:
+        return ["1", "2", "3", "4", "5", "6"]
+    return [str(i) for i in range(1, int(active) + 1)]
+
+
+def _flatten_with_domain(data):
+    """Flatten canonical dataset into stable ordered rows with domain metadata."""
+    rows = []
+    for domain in data.get("domains", []):
+        d_id = str(domain.get("domainId", ""))
+        d_name = domain.get("domainName", "")
+        for q in domain.get("questions", []):
+            q_copy = dict(q)
+            q_copy["domainId"] = d_id
+            q_copy["domainName"] = d_name
+            rows.append(q_copy)
+    return rows
+
+
+def _pick_recent_unique(source_ids, count):
+    """Pick up to count most-recent unique question ids preserving recency."""
+    picked = []
+    seen = set()
+    for qid in reversed(source_ids):
+        if qid in seen:
+            continue
+        seen.add(qid)
+        picked.append(qid)
+        if len(picked) >= count:
+            break
+    picked.reverse()
+    return picked
+
+
+def _build_full_day_assignment(all_rows):
+    """
+    Pre-assign every question in the bank to exactly one primary study day (days 1–28)
+    using round-robin distribution within each domain's allocated day range.
+
+    This guarantees 100% question coverage — no question is ever skipped.
+    Domain-to-days mapping mirrors the study plan:
+        D1 → days 1–5,  D2 → days 6–10,  D3 → days 11–12,
+        D4 → days 13–16, D5 → days 17–22, D6 → days 23–28.
+
+    Returns: dict {day_int: [list_of_question_ids]}
+    """
+    domain_days = {
+        "1": list(range(1, 6)),
+        "2": list(range(6, 11)),
+        "3": list(range(11, 13)),
+        "4": list(range(13, 17)),
+        "5": list(range(17, 23)),
+        "6": list(range(23, 29)),
+    }
+
+    assignment = {d: [] for d in range(1, 29)}  # days 1–28 only; review days handled separately
+
+    # Group question IDs by domain, preserving dataset order.
+    by_domain = {}
+    for q in all_rows:
+        d_id = q.get("domainId")
+        if d_id:
+            by_domain.setdefault(d_id, []).append(q.get("id"))
+
+    # Round-robin distribute each domain's questions across its study days.
+    for domain_id, days in domain_days.items():
+        for i, qid in enumerate(by_domain.get(domain_id, [])):
+            assignment[days[i % len(days)]].append(qid)
+
+    return assignment
+
+
+def build_day_locked_questions(data, day, carryover_count=3):
+    """
+    Build the question set for the given study day.
+
+    For days 1–28 (domain study days):
+        - Each day has a pre-assigned set of questions distributed round-robin
+          from that domain, guaranteeing every question appears on exactly one day.
+        - Carryover (up to carryover_count) recent questions from prior days are
+          prepended for spaced-repetition reinforcement.
+
+    For days 29–32 (review / mock days):
+        - All previously introduced questions are eligible (full cross-domain pool).
+        - Carryover is applied, then remaining slots filled from the full pool.
+        - Target size from DAY_LOCK_TARGETS is respected as a soft cap.
+
+    Rules:
+    - No questions from future (uncovered) domains ever appear.
+    - Day 1 has no carryover.
+    """
+    if day not in DAY_LOCK_TARGETS:
+        raise ValueError("--day-lock must be between 1 and 32")
+
+    carryover_count = max(0, min(int(carryover_count), 3))
+    all_rows = _flatten_with_domain(data)
+    by_id = {q.get("id"): q for q in all_rows}
+
+    # Pre-assign all domain questions to days 1–28.
+    assignment = _build_full_day_assignment(all_rows)
+
+    # Build the flat history of all questions asked on prior days (for carryover).
+    asked_history_flat = []
+    for d in range(1, day):
+        asked_history_flat.extend(assignment.get(d, []))
+
+    carry_ids = [] if day == 1 else _pick_recent_unique(asked_history_flat, carryover_count)
+    carry_set = set(carry_ids)
+
+    if day <= 28:
+        # Primary domain day: use pre-assigned questions (excluding carryover duplicates).
+        primary_ids = [qid for qid in assignment.get(day, []) if qid not in carry_set]
+        selected_ids = carry_ids + primary_ids
+
+    else:
+        # Review / mock day (29–32): cross-domain pool of all introduced questions.
+        target = int(DAY_LOCK_TARGETS[day])
+        unlocked_domains = set(_unlocked_domains_for_day(day))  # all 6 domains
+        pool = [
+            q.get("id") for q in all_rows
+            if q.get("domainId") in unlocked_domains and q.get("id") not in carry_set
+        ]
+        # Fill up to target (carryover already counted toward target).
+        fill_count = max(0, target - len(carry_ids))
+        selected_ids = carry_ids + pool[:fill_count]
+
+    return [by_id[qid] for qid in selected_ids if qid in by_id]
 
 
 def load_questions(filepath):
@@ -1107,7 +1268,7 @@ def save_results(results, data, total_time_sec, output_path="session-results.jso
     return output_path
 
 
-def run_quiz(questions, data, open_images=False):
+def run_quiz(questions, data, open_images=False, output_path="session-results.json"):
     """
     Main quiz loop — present questions one-by-one, collect answers, show results.
 
@@ -1177,7 +1338,7 @@ def run_quiz(questions, data, open_images=False):
 
     if results:
         show_summary(results, elapsed)
-        return save_results(results, data, elapsed)
+        return save_results(results, data, elapsed, output_path=output_path)
     else:
         print(f"{YELLOW}No questions answered.{RESET}")
         return None
@@ -1194,10 +1355,14 @@ def main():
     parser.add_argument("--ids", type=str, help="Comma-separated question IDs (e.g., q001,q005,q010)")
     parser.add_argument("--cross", type=str, help="Cross-topic: comma-separated domain IDs to mix (e.g., 1,2)")
     parser.add_argument("--all", action="store_true", help="All questions (mock exam mode)")
+    parser.add_argument("--day-lock", type=int, help="Strict day lock by plan day (1-32); blocks future questions")
+    parser.add_argument("--carryover", type=int, default=3, help="Questions from previous sessions to include with --day-lock (0-3)")
     parser.add_argument("--shuffle", action="store_true", help="Randomize question order")
     parser.add_argument("--limit", type=int, help="Limit number of questions")
     parser.add_argument("--output", type=str, default="session-results.json", help="Output results file path")
     parser.add_argument("--open-images", action="store_true", help="Open image URLs in browser as questions are shown")
+    parser.add_argument("--web", action="store_true", help="Launch local web UI instead of terminal prompts")
+    parser.add_argument("--port", type=int, default=8765, help="Port for --web mode (default 8765)")
 
     args = parser.parse_args()
 
@@ -1208,14 +1373,21 @@ def main():
     q_ids = args.ids.split(",") if args.ids else None
     cross = args.cross.split(",") if args.cross else None
 
-    questions = filter_questions(
-        data,
-        domain_id=args.domain,
-        topic_prefix=args.topic,
-        question_ids=q_ids,
-        cross_domains=cross,
-        all_mode=args.all
-    )
+    if args.day_lock is not None:
+        questions = build_day_locked_questions(data, args.day_lock, carryover_count=args.carryover)
+        if not questions:
+            print(f"{RED}Day-lock selected zero questions. Check day or dataset content.{RESET}")
+            sys.exit(1)
+        print(f"{CYAN}Day-lock mode active: Day {args.day_lock} with carryover={max(0, min(args.carryover, 3))}.{RESET}")
+    else:
+        questions = filter_questions(
+            data,
+            domain_id=args.domain,
+            topic_prefix=args.topic,
+            question_ids=q_ids,
+            cross_domains=cross,
+            all_mode=args.all
+        )
 
     questions = enrich_case_study_metadata(questions, data)
     questions = deduplicate_questions(questions)
@@ -1227,7 +1399,32 @@ def main():
         questions = limit_preserving_case_studies(questions, args.limit)
 
     # Run the quiz
-    result_path = run_quiz(questions, data, open_images=args.open_images)
+    if args.web:
+        try:
+            from quiz_web import run_web_quiz
+        except ImportError:
+            print(f"{YELLOW}--web requested but quiz_web.py was not found next to quiz_runner.py.{RESET}")
+            print(f"{YELLOW}Falling back to terminal mode for this run.{RESET}")
+            run_web_quiz = None
+
+        if run_web_quiz is not None:
+            result_path = run_web_quiz(
+                questions,
+                data,
+                output_path=args.output,
+                port=args.port,
+                helpers={
+                    "check_correct": check_correct,
+                    "get_correct_display": get_correct_display,
+                    "get_user_display": get_user_display,
+                    "has_answer_key": has_answer_key,
+                    "save_results": save_results,
+                },
+            )
+        else:
+            result_path = run_quiz(questions, data, open_images=args.open_images, output_path=args.output)
+    else:
+        result_path = run_quiz(questions, data, open_images=args.open_images, output_path=args.output)
 
     if result_path:
         # Print path for agent to pick up
