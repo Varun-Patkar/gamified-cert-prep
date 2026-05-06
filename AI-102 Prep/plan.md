@@ -16,9 +16,9 @@
 ## Daily Schedule
 
 ### Day 1 (2026-05-06) - Domain 1: Service Selection
-- [ ] Study: Choose Foundry services for GenAI, vision, NLP, speech
-- [ ] Practice: 8 questions on Domain 1
-- [ ] Lab: Map 5 scenarios to correct Azure AI services
+- [x] Study: Choose Foundry services for GenAI, vision, NLP, speech
+- [x] Practice: 8 questions on Domain 1
+- [x] Lab: Map 5 scenarios to correct Azure AI services
 - Estimated time: 0.5 hrs
 
 ### Day 2 (2026-05-07) - Domain 1: Deployment Planning

@@ -1,7 +1,7 @@
 {
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
-  "totalQuestions": 329,
+  "totalQuestions": 313,
   "sources": [
     "ExamTopics community dump",
     "AI-generated normalization"
@@ -222,47 +222,6 @@
           },
           "correctAnswer": "A",
           "optionFixMethod": "parsed_boxes"
-        },
-        {
-          "id": "3Y3RJOwa4AAxwZfgycnT",
-          "question": "SIMULATION - Use the following login credentials as needed: To enter your username, place your cursor in the Sign in box and click on the username below. To enter your password, place your cursor in the Enter password box and click on the password below. Azure Username: admin@abc.com - Azure Password: XXXXXXXXXXXX - The following information is for technical support purposes only: Lab Instance: 12345678 - Task - You plan to build an API that will identify whether an image includes a Microsoft Surface Pro or Surface Studio. You need to deploy a service in Azure Cognitive Services for the API. The service must be named AAA12345678 and must be in the East US Azure region. The solution must use the Free pricing tier. To complete this task, sign in to the Azure portal.",
-          "options": [
-            "A. Create a Custom Vision resource named AAA12345678 in East US, Free tier, then create a classification project",
-            "B. Create a Cognitive Services multi-service resource named AAA12345678 in West Europe, Standard S0 tier",
-            "C. Create a Computer Vision resource named AAA12345678 in West US, Free tier, then call the Analyze Image API",
-            "D. Create a Computer Vision resource named AAA12345678 in East US, Free tier"
-          ],
-          "explanation": "Step 1: In the Azure dashboard, click Create a resource. Step 2: In the search bar, type \"Cognitive Services.\" You'll get information about the cognitive services resource and a legal notice. Click Create. Step 3: You'll need to specify the following details about the cognitive service (refer to the image below for a completed example of this page): Subscription: choose your paid or trial subscription, depending on how you created your Azure account. Resource group: click create new to create a new resource group or choose an existing one. Region: choose the Azure region for your cognitive service. Choose: East US Azure region. Name: choose a name for your cognitive service. Enter: AAA12345678 Pricing Tier: Select: Free pricing tier Step 4: Review and create the resource, and wait for deployment to complete. Then go to the deployed resource. Note: The Computer Vision Image Analysis service can extract a wide variety of visual features from your images. For example, it can determine whether an image contains adult content, find specific brands or objects, or find human faces. Tag visual features - Identify and tag visual features in an image, from a set of thousands of recognizable objects, living things, scenery, and actions. When the tags are ambiguous or not common knowledge, the API response provides hints to clarify the context of the tag. Tagging isn't limited to the main subject, such as a person in the foreground, but also includes the setting (indoor or outdoor), furniture, tools, plants, animals, accessories, gadgets, and so on. Try out the image tagging features quickly and easily in your browser using Vision Studio. Reference: https://docs.microsoft.com/en-us/learn/modules/analyze-images-computer-vision/3-analyze-images https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview-image-analysis | Discussion highlights: Computer Vision should be the resource we need to create. | This type of simulation question was not included in the real exam, which was taken on 12 June.",
-          "topic": "Topic 1",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/96461-exam-ai-102-topic-1-question-39-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0005700001.jpg"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "D",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "medium",
-          "answerRationale": "nearest graded-question semantic match",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
         },
         {
           "id": "4TQwVtvve90s7b25vP3W",
@@ -575,45 +534,6 @@
           "optionFixMethod": "parsed_boxes"
         },
         {
-          "id": "E3kvINBaLfFiQbGsLIu1",
-          "question": "SIMULATION - Use the following login credentials as needed: To enter your username, place your cursor in the Sign in box and click on the username below. To enter your password, place your cursor in the Enter password box and click on the password below. Azure Username: admin@abc.com - Azure Password: XXXXXXXXXXXX - The following information is for technical support purposes only: Lab Instance: 12345678 - Task - You plan to analyze stock photography and automatically generate captions for the images. You need to create a service in Azure to analyze the images. The service must be named caption12345678 and must be in the East US Azure region. The solution must use the Free pricing tier. In the C:\\Resources\\Caption\\Params.json folder, enter the value for Key 1 and the endpoint for the new service. To complete this task, sign in to the Azure portal.",
-          "options": [
-            "A. Create a Cognitive Services resource named caption12345678 in East US, Free F0 tier; copy Key 1 and endpoint to C:\\Resources\\Caption\\Params.json",
-            "B. Create a Computer Vision resource named caption12345678 in West US, Free F0 tier; copy the connection string to Params.json",
-            "C. Create a Cognitive Services resource named caption12345678 in East US, Standard S0 tier; copy Key 1 and endpoint to Params.json",
-            "D. Create a Custom Vision resource named caption12345678 in East US, Free F0 tier; copy Key 1 and endpoint to Params.json"
-          ],
-          "explanation": "Step 1: Provision a Cognitive Services resource If you don't already have one in your subscription, you'll need to provision a Cognitive Services resource. 1. Open the Azure portal at https://portal.azure.com, and sign in using the Microsoft account associated with your Azure subscription. 2. Select the Create a resource button, search for cognitive services, and create a Cognitive Services resource with the following settings: Subscription: Your Azure subscription Resource group: Choose or create a resource group (if you are using a restricted subscription, you may not have permission to create a new resource group - use the one provided) Region: East US Azure region - Name: caption12345678 - Pricing tier: Free F0 - 3. Select the required checkboxes and create the resource. Wait for deployment to complete, and then view the deployment details. 4. When the resource has been deployed, go to it and view its Keys and Endpoint page. You will need the endpoint and one of the keys from this page in the next procedure. Step 2: Save Key and Endpoint values in Params.json Open the configuration file, C:\\Resources\\Caption\\Params.json. and update the configuration values it contains to reflect the endpoint and an authentication key for your cognitive services resource. Save your changes. Reference: https://microsoftlearning.github.io/AI-102-AIEngineer/Instructions/15-computer-vision.html | Discussion highlights: create a Computer Vision service | This type of simulation question was not included in the real exam, which was taken on 12 June.",
-          "topic": "Topic 1",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102407-exam-ai-102-topic-1-question-42-discussion/",
-          "questionImages": [],
-          "answerImages": [],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "A",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "medium",
-          "answerRationale": "nearest graded-question semantic match",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
-        },
-        {
           "id": "Em2ZK1evtme2TJuRlp20",
           "question": "You have a factory that produces food products. You need to build a monitoring solution for staff compliance with personal protective equipment (PPE) requirements. The solution must meet the following requirements: * Identify staff who have removed masks or safety glasses. * Perform a compliance check every 15 minutes. * Minimize development effort. * Minimize costs. Which service should you use?",
           "options": [
@@ -696,49 +616,6 @@
             "generatedAt": "2026-05-05T12:02:03.066967Z"
           },
           "optionFixMethod": "parsed_boxes"
-        },
-        {
-          "id": "HvR2VRHTeLRnQywaE02Z",
-          "question": "SIMULATION - You need to create a Form Recognizer resource named fr12345678. Use the Form Recognizer sample labeling tool at https://fott-2-1.azurewebsites.net/ to analyze the invoice located in the C:\\Resources\\Invoices folder. Save the results as C:\\Resources\\Invoices\\Results.json. To complete this task, sign in to the Azure portal and open the Form Recognizer sample labeling tool.",
-          "options": [
-            "A. Create Form Recognizer resource fr12345678; use the custom model labeling tool to train on the invoice; export predictions to Results.json",
-            "B. Create Form Recognizer resource fr12345678; use the Layout API to extract tables from the invoice; save raw output to Results.json",
-            "C. Create Form Recognizer resource fr12345678; in FOTT select \"Use prebuilt model to get data\"; choose Invoice, analyze the file from C:\\Resources\\Invoices, and save results as Results.json",
-            "D. Create a Cognitive Services resource fr12345678; call the Read API on the invoice file; save the OCR text output to Results.json"
-          ],
-          "explanation": "Step 1: Sign in to the Azure Portal. Step 2: Navigate to the Form Recognizer Sample Tool (at https://fott-2-1.azurewebsites.net) Step 3: On the sample tool home page select Use prebuilt model to get data. Step 4: Select the Form Type you would like to analyze from the dropdown window. Step 5: In the Source: URL field, paste the selected URL and select the Fetch button. Step 6: In the Choose file for analysis use the file in the C:\\Resources\\Invoices folder and select the Fetch button. Step 7: Select Run analysis. The Form Recognizer Sample Labeling tool will call the Analyze Prebuilt API and analyze the document. Step 8: View the results - see the key-value pairs extracted, line items, highlighted text extracted and tables detected. Step 9: Save the results as C:\\Resources\\Invoices\\Results.json. Reference: https://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/quickstarts/try-sample-label-tool | Discussion highlights: 1. Create a form recognizer service as part of azure ai service 2. browse to https://fott-2-1.azurewebsites.net/ 3. select prebuilt model for invoices 4. choose local file because the file is a local disk c: and insert t | I think this would be the method as of March 2024: 1. Create a Document Intelligence resource in Azure AI services 2. Launch Document Intelligence Studio 3. Select Invoices from the Prebuilt models 4. Configure the servi",
-          "topic": "Topic 1",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/125119-exam-ai-102-topic-1-question-36-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0005100001.jpg",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0005200001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0005300001.jpg"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "C",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "low",
-          "answerRationale": "weak evidence; defaulted to strongest prior",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
         },
         {
           "id": "IIIB9cMxZWFR8jubZtLT",
@@ -963,45 +840,6 @@
           ],
           "ungraded": false,
           "questionTypeInferredByAgent": "multi-select"
-        },
-        {
-          "id": "NxfQZK1hlewThTqkVVCZ",
-          "question": "SIMULATION - Use the following login credentials as needed: To enter your username, place your cursor in the Sign in box and click on the username below. To enter your password, place your cursor in the Enter password box and click on the password below. Azure Username: admin@abc.com - Azure Password: XXXXXXXXXXXX - The following information is for technical support purposes only: Lab Instance: 12345678 - Task - You need to get insights from a video file located in the C:\\Resources\\Video\\Media.mp4 folder. Save the insights to the C:\\Resources\\Video\\Insights.json folder. To complete this task, sign in to the Azure Video Analyzer for Media at https://www.videoindexer.ai/ by using admin@abc.com",
-          "options": [
-            "A. Sign in to Azure Portal; create a Video Analyzer resource; use the REST API to upload Media.mp4 and download insights to Insights.json",
-            "B. Sign in to videoindexer.ai; upload Media.mp4; use the Video Editor to trim the video; export the project file as Insights.json",
-            "C. Sign in to videoindexer.ai; upload C:\\Resources\\Video\\Media.mp4; once indexed, download the video insights and save as C:\\Resources\\Video\\Insights.json",
-            "D. Sign in to Azure Portal; create a Media Services resource; use the streaming endpoint to process Media.mp4 and save logs to Insights.json"
-          ],
-          "explanation": "Step 1: Login - Browse to the Azure Video Indexer website and sign in. URL: https://www.videoindexer.ai/ Login admin@abc.com - Step 2: Create a project from your video You can create a new project directly from a video in your account. 1. Go to the Library tab of the Azure Video Indexer website. 2. Open the video that you want to use to create your project. On the insights and timeline page, select the Video editor button. Folder: C:\\Resources\\Video\\Media.mp4 This takes you to the same page that you used to create a new project. Unlike the new project, you see the timestamped insights segments of the video, that you had started editing previously. Step 3: Save the insights to the C:\\Resources\\Video\\Insights.json folder. Reference: https://docs.microsoft.com/en-us/azure/azure-video-indexer/use-editor-create-project | Discussion highlights: Will these simulation questions appear in exams on 2024 as of May? | Simulation questions will not appear on the actual exam as of May 25, 2024; ET should remove this type of question.",
-          "topic": "Topic 1",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/125786-exam-ai-102-topic-1-question-41-discussion/",
-          "questionImages": [],
-          "answerImages": [],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "C",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "medium",
-          "answerRationale": "nearest graded-question semantic match",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
         },
         {
           "id": "OWqtloLHfijmINONOyTN",
@@ -1308,48 +1146,6 @@
           "optionFixMethod": "parsed_boxes"
         },
         {
-          "id": "XyUNec84b5MgbnWhY2z0",
-          "question": "SIMULATION - Use the following login credentials as needed: To enter your username, place your cursor in the Sign in box and click on the username below. To enter your password, place your cursor in the Enter password box and click on the password below. Azure Username: admin@abc.com - Azure Password: XXXXXXXXXXXX - The following information is for technical support purposes only: Lab Instance: 12345678 - Task - You plan to build an application that will use caption12345678. The application will be deployed to a virtual network named VNet1. You need to ensure that only virtual machines on VNet1 can access caption12345678. To complete this task, sign in to the Azure portal.",
-          "options": [
-            "A. Create an Azure Application Gateway with a WAF policy and route traffic to caption12345678",
-            "B. Configure the resource firewall to deny all traffic, then add a private endpoint connected to VNet1",
-            "C. Configure the resource networking to allow access from the public internet and add an IP restriction for VNet1's public IP",
-            "D. Create a Network Security Group on VNet1 and add an outbound allow rule for the resource's IP address only"
-          ],
-          "explanation": "Step 1: Create private endpoint for your web app 1. In the left-hand menu, select All Resources > caption12345678 - the name of your web app. 2. In the web app overview, select Settings > Networking. 3. In Networking, select Private endpoints. 4. Select + Add in the Private Endpoint connections page. 5. Enter or select the following information in the Add Private Endpoint page: Name: Enter caption12345678. Subscription Select your Azure subscription. Virtual network Select VNet1. Subnet: - Integrate with private DNS zone: Select Yes. 6. Select OK. Reference: https://docs.microsoft.com/en-us/azure/private-link/tutorial-private-endpoint-webapp-portal | Discussion highlights: This is a Custom vision resource > go to networking > you only need to configure the vnet1 only access. - there is no mention to force traffic over the backbone only and deny internet bound traffic > which would require | Private endpoint is not the answer. Configure the service to allow access from selected network instead: https://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-virtual-networks?tabs=portal#managing",
-          "topic": "Topic 1",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/91127-exam-ai-102-topic-1-question-43-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0006400001.png"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "low",
-          "answerRationale": "weak evidence; defaulted to strongest prior",
-          "questionTypeInferredByAgent": "multi-select",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]",
-            "E. [Inline placeholder option E; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "correctAnswer": "B",
-          "optionFixMethod": "llm_from_ocr"
-        },
-        {
           "id": "ZeHtrCHHR7Jtzlrbpe3X",
           "question": "DRAG DROP - You need to develop an automated call handling system that can respond to callers in their own language. The system will support only French and English. Which Azure Cognitive Services service should you use to meet each requirement? To answer, drag the appropriate services to the correct requirements. Each service may be used once, more than once, or not at all. You may need to drag the split bat between panes or scroll to view content. NOTE: Each correct selection is worth one point. Select and Place:",
           "options": [
@@ -1543,45 +1339,6 @@
           "questionTypeInferredByAgent": "multi-select"
         },
         {
-          "id": "crjF4RCckY634aUdBAi5",
-          "question": "SIMULATION - Use the following login credentials as needed: To enter your username, place your cursor in the Sign in box and click on the username below. To enter your password, place your cursor in the Enter password box and click on the password below. Azure Username: admin@abc.com - Azure Password: XXXXXXXXXXXX - The following information is for technical support purposes only: Lab Instance: 12345678 - Task - You need to ensure that a user named admin@abc.com can regenerate the subscription keys of AAA12345678. The solution must use the principle of least privilege. To complete this task, sign in to the Azure portal.",
-          "options": [
-            "A. Assign the Cognitive Services User role to admin@abc.com on the AAA12345678 resource",
-            "B. Assign the Reader role to admin@abc.com on the AAA12345678 resource",
-            "C. Assign the Cognitive Services Contributor role to admin@abc.com on the AAA12345678 resource",
-            "D. Assign the Owner role to admin@abc.com on the resource group containing AAA12345678"
-          ],
-          "explanation": "Manually rotate subscription keys 1. (Update your application code to reference the secondary key for the Azure account and deploy.) 2. In the Azure portal, navigate to your Azure account. 3. Under Settings, select Authentication. 4. To regenerate the primary key for your Azure account, select the Regenerate button next to the primary key. 5. (Update your application code to reference the new primary key and deploy.) 6. Regenerate the secondary key in the same manner. Reference: https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/azure-maps/how-to-manage-authentication.md | Discussion highlights: Cognitive Services Contributor Lets you create, read, update, delete and manage keys of Cognitive Services. | 1. Sign in to the Azure portal (https://portal.azure.com/) using your account credentials. 2. In the left-hand navigation menu, click on \"All services\" and search for \"Subscriptions.\" Click on the \"Subscriptions\" service",
-          "topic": "Topic 1",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/106675-exam-ai-102-topic-1-question-44-discussion/",
-          "questionImages": [],
-          "answerImages": [],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "C",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "low",
-          "answerRationale": "weak evidence; defaulted to strongest prior",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
-        },
-        {
           "id": "ctrRAi5eAWUqh06GgIAs",
           "question": "You are developing a system that will monitor temperature data from a data stream. The system must generate an alert in response to atypical values. The solution must minimize development effort. What should you include in the solution?",
           "options": [
@@ -1624,49 +1381,6 @@
           "correctAnswer": "D",
           "ungraded": false,
           "questionTypeInferredByAgent": "mcq"
-        },
-        {
-          "id": "dYW5vF3PbkROSIlnDAYA",
-          "question": "SIMULATION - You plan to create a solution to generate captions for images that will be read from Azure Blob Storage. You need to create a service in Azure Cognitive Services for the solution. The service must be named captions12345678 and must use the Free pricing tier. To complete this task, sign in to the Azure portal.",
-          "options": [
-            "A. Create an Azure Cognitive Search service named captions12345678 with the Free pricing tier",
-            "B. Create an Azure AI Services multi-service resource named captions12345678 with the Free pricing tier",
-            "C. Create a Computer Vision resource named captions12345678 with the Free pricing tier",
-            "D. Create a Custom Vision resource named captions12345678 with the Free pricing tier"
-          ],
-          "explanation": "Part 1: Create a search service captions12345678 Step 1: Sign in to the QnA portal. Step 2: Create an Azure Cognitive multi-service resource: Step 3: On the Create page, provide the following information. Name: captions12345678ֲ¨ Pricing tier: Free - Step 4: Click Review + create - (Step 5: Create a data source In Connect to your data, choose Azure Blob Storage. Choose an existing connection to the storage account and container you created. Give the data source a name, and use default values for the rest.) Reference: https://docs.microsoft.com/en-us/azure/search/search-create-service-portal https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-ocr | Discussion highlights: Create a 'Computer Vision' service and use it for image captioning: | I think the steps are: 1. Create a Computer Vision resource in Azure AI services using the Free pricing tier. 2. Launch Vision Studio. 3. Select your Computer Vision resource. 4. Add new dataset. 5. Enter a dataset name",
-          "topic": "Topic 1",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/82103-exam-ai-102-topic-1-question-35-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0004600001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0004700001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0004900001.png"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "C",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "medium",
-          "answerRationale": "nearest graded-question semantic match",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
         },
         {
           "id": "e6OgFHpKYvzeqzH12GgH",
@@ -1821,48 +1535,6 @@
           "questionTypeInferredByAgent": "mcq"
         },
         {
-          "id": "iIfJjt1DnjdHD5nnh0zE",
-          "question": "SIMULATION - You need to create a Text Analytics service named Text12345678, and then enable logging for Text12345678. The solution must ensure that any changes to Text12345678 will be stored in a Log Analytics workspace. To complete this task, sign in to the Azure portal.",
-          "options": [
-            "A. Create a Language resource named Text12345678, enable Activity Log forwarding to a Storage Account, and select the RequestResponse category",
-            "B. Create a Cognitive Services multi-resource named Text12345678, enable Azure Monitor Metrics export to an Event Hub, and select AllMetrics only",
-            "C. Create a Text Analytics resource named Text12345678, navigate to Properties, configure logging output to a Blob Storage account with a retention policy",
-            "D. Create a Text Analytics resource named Text12345678, navigate to Diagnostic settings under Monitoring, add a diagnostic setting targeting a Log Analytics workspace, and enable Audit, RequestResponse, and AllMetrics"
-          ],
-          "explanation": "Step 1: Sign in to the QnA portal. Step 2: Create an Azure Cognitive multi-service resource: Step 3: On the Create page, provide the following information. Name: Text12345678 - Step 4: Configure additional settings for your resource as needed, read and accept the conditions (as applicable), and then select Review + create. Step 5: Navigate to the Azure portal. Then locate and select The Text Analytics service resource Text12345678 (which you created in Step 4). Step 6: Next, from the left-hand navigation menu, locate Monitoring and select Diagnostic settings. This screen contains all previously created diagnostic settings for this resource. Step 7: Select + Add diagnostic setting. Step 8: When prompted to configure, select the storage account and OMS workspace that you'd like to use to store you diagnostic logs. Note: If you don't have a storage account or OMS workspace, follow the prompts to create one. Step 9: Select Audit, RequestResponse, and AllMetrics. Then set the retention period for your diagnostic log data. If a retention policy is set to zero, events for that log category are stored indefinitely. Step 10: Click Save. It can take up to two hours before logging data is available to query and analyze. So don't worry if you don't see anything right away. Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account https://docs.microsoft.com/en-us/azure/cognitive-services/diagnostic-logging | Discussion highlights: Will this \"SIMULATION\" type of questions come in exam? If yes, how to answer? It says to login to azure environment and then follow next steps.. How to perform those tasks in the exam? | This type of simulation question was not included in the real exam, which was taken on 12 June.",
-          "topic": "Topic 1",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/84645-exam-ai-102-topic-1-question-33-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0003900001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0004000001.png"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "D",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "low",
-          "answerRationale": "weak evidence; defaulted to strongest prior",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
-        },
-        {
           "id": "mw1OgwdVFn3NzasQPet8",
           "question": "You have an app that analyzes images by using the Computer Vision API. You need to configure the app to provide an output for users who are vision impaired. The solution must provide the output in complete sentences. Which API call should you perform?",
           "options": [
@@ -2010,91 +1682,6 @@
           "correctAnswer": "B",
           "ungraded": false,
           "questionTypeInferredByAgent": "mcq"
-        },
-        {
-          "id": "wWbBP6G5C9jgnF67HzTs",
-          "question": "SIMULATION - You need to create a search service named search12345678 that will index a sample Azure Cosmos DB database named hotels-sample. The solution must ensure that only English language fields are retrievable. To complete this task, sign in to the Azure portal.",
-          "options": [
-            "A. Create an Azure AI Search service named search12345678, use the Import data wizard selecting the hotels-sample Cosmos DB source, and configure the index so only English language fields are retrievable",
-            "B. Create an Azure Cognitive Services resource named search12345678, connect to Cosmos DB via a custom data connector, and set all fields to retrievable with English analyzers",
-            "C. Create an Azure AI Search service named search12345678, create a manual indexer for Cosmos DB, and apply a skillset to filter non-English content",
-            "D. Create an Azure Data Factory pipeline to extract hotels-sample data from Cosmos DB, then load it into a search index named search12345678 with English filters"
-          ],
-          "explanation": "Part 1: Create a search service search12345678 Step 1: Sign in to the QnA portal. Step 2: Create an Azure Cognitive multi-service resource: Step 3: On the Create page, provide the following information. Name: search12345678 - Step 4: Click Review + create - Part 2: Start the Import data wizard and create a data source Step 5: Click Import data on the command bar to create and populate a search index. Step 6: In the wizard, click Connect to your data > Samples > hotels-sample. This data source is built-in. If you were creating your own data source, you would need to specify a name, type, and connection information. Once created, it becomes an \"existing data source\" that can be reused in other import operations. Step 7: Continue to the next page. Step 8: Skip the \"Enrich content\" page Step 9: Configure index. Make sure English is selected for the fields. Step 10: Continue and finish the wizard. Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account https://docs.microsoft.com/en-us/azure/search/search-get-started-portal | Discussion highlights: This type of simulation question was not included in the real exam, which was taken on 12 June. | step 2 create an 'AI Search' resource (not 'Azure Cognitive multi-service resource') step 3 shows a wrong screen",
-          "topic": "Topic 1",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/125117-exam-ai-102-topic-1-question-34-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0004200001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0004300001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0004400001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0004400002.jpg",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0004500001.jpg"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "low",
-          "answerRationale": "weak evidence; defaulted to strongest prior",
-          "questionTypeInferredByAgent": "multi-select",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]",
-            "E. [Inline placeholder option E; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "correctAnswer": "A",
-          "optionFixMethod": "llm_from_ocr"
-        },
-        {
-          "id": "xR5zFYepUmaopAmyVGHj",
-          "question": "SIMULATION - Use the following login credentials as needed: To enter your username, place your cursor in the Sign in box and click on the username below. To enter your password, place your cursor in the Enter password box and click on the password below. Azure Username: admin@abc.com - Azure Password: XXXXXXXXXXXX - The following information is for technical support purposes only: Lab Instance: 12345678 - Task - You need to build an API that uses the service in Azure Cognitive Services named AAA12345678 to identify whether an image includes a Microsoft Surface Pro or Surface Studio. To achieve this goal, you must use the sample images in the C:\\Resources\\Images folder. To complete this task, sign in to the Azure portal.",
-          "options": [
-            "A. Create a Computer Vision resource named AAA12345678, call the Analyze Image API with the Tag visual feature on each image in C:\\Resources\\Images",
-            "B. Create a Face API resource named AAA12345678, upload the sample images, and use the Detect endpoint to classify Surface devices",
-            "C. Create a Custom Vision resource, create a Classification project, upload and tag images from C:\\Resources\\Images as Surface Pro or Surface Studio, train the model, and publish a prediction API",
-            "D. Create an Azure Machine Learning workspace named AAA12345678, build an AutoML image classification model, and deploy it as a REST endpoint"
-          ],
-          "explanation": "Step 1: In the Azure dashboard, click Create a resource. Step 2: In the search bar, type \"Cognitive Services.\" You'll get information about the cognitive services resource and a legal notice. Click Create. Step 3: You'll need to specify the following details about the cognitive service (refer to the image below for a completed example of this page): Subscription: choose your paid or trial subscription, depending on how you created your Azure account. Resource group: click create new to create a new resource group or choose an existing one. Region: choose the Azure region for your cognitive service. Choose: East US Azure region. Name: choose a name for your cognitive service. Enter: AAA12345678 Pricing Tier: Select: Free pricing tier Step 4: Review and create the resource, and wait for deployment to complete. Then go to the deployed resource. Note: The Computer Vision Image Analysis service can extract a wide variety of visual features from your images. For example, it can determine whether an image contains adult content, find specific brands or objects, or find human faces. Tag visual features - Identify and tag visual features in an image, from a set of thousands of recognizable objects, living things, scenery, and actions. When the tags are ambiguous or not common knowledge, the API response provides hints to clarify the context of the tag. Tagging isn't limited to the main subject, such as a person in the foreground, but also includes the setting (indoor or outdoor), furniture, tools, plants, animals, accessories, gadgets, and so on. Try out the image tagging features quickly and easily in your browser using Vision Studio. Reference: https://docs.microsoft.com/en-us/learn/modules/analyze-images-computer-vision/3-analyze-images https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview-image-analysis | Discussion highlights: Is it possible to get questions like this on the exam? | This type of simulation question was not included in the real exam, which was taken on 12 June.",
-          "topic": "Topic 1",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/87191-exam-ai-102-topic-1-question-40-discussion/",
-          "questionImages": [],
-          "answerImages": [],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "C",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "low",
-          "answerRationale": "weak evidence; defaulted to strongest prior",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
         },
         {
           "id": "y0sdIRaGx2ICrqHN54cD",
@@ -4414,47 +4001,6 @@
           "optionFixMethod": "parsed_boxes"
         },
         {
-          "id": "LOJPZMm7JQGZe0g9xfjf",
-          "question": "SIMULATION - Use the following login credentials as needed: To enter your username, place your cursor in the Sign in box and click on the username below. To enter your password, place your cursor in the Enter password box and click on the password below. Azure Username: admin@abc.com - Azure Password: XXXXXXXXXXXX - The following information is for technical support purposes only: Lab Instance: 12345678 - Task - You need to create and publish a Language Understanding (classic) model named 1u12345678. The model will contain an intent of Travel that has an utterance of Boat. To complete this task, sign in to the Language Understanding portal at httptc//www.luis-ai/.",
-          "options": [
-            "A. In the LUIS portal, create a new app named lu12345678, add an intent named Travel with the utterance \"Boat\", train the model, then publish to the Production slot",
-            "B. In the Azure portal, create a Language Understanding resource named lu12345678, use the REST API to add a Travel entity with a \"Boat\" phrase list, then deploy",
-            "C. In the LUIS portal, create a new app named lu12345678, add an entity named Travel, add a pattern \"Boat\" to the entity, then publish to the Staging slot",
-            "D. In the Language Studio portal, create a CLU project named lu12345678, add a Travel classification with \"Boat\" as training data, then deploy to a custom endpoint"
-          ],
-          "explanation": "Create your LUIS model - 1. You should navigate to your LUIS.ai management portal and create a new application. In the portal create a model. Model name: 1u12345678 - 2. Define one intent as ג€Travelג€ and add an example utterances of Boat. 3. Publish the model In order to use your model, you have to publish it. This is as easy as hitting the Publish tab, selecting between the production or staging environments, and hitting Publish. As you can see from this page, you can also choose to enable sentiment analysis, speech priming to improve speech recognition, or the spell checker. For now, you can leave those unchecked. Reference: https://docs.microsoft.com/en-us/azure/health-bot/language_model_howto https://www.codemag.com/article/1809021/Natural-Language-Understanding-with-LUIS | Discussion highlights: 1. go to https://language.cognitive.azure.com/ 2. create an intent Travel 3. create sample utterances with boat 4. train, test, deploy | I saw in the Microsoft question and answer that this question will not be asked, Mr. Big Tits.",
-          "topic": "Topic 3",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111617-exam-ai-102-topic-3-question-30-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0017200001.jpg"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "A",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "low",
-          "answerRationale": "weak evidence; defaulted to strongest prior",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
-        },
-        {
           "id": "LrVoIFW7NYkqWJin5TGe",
           "question": "DRAG DROP - You are building a customer support chatbot. You need to configure the bot to identify the following: • Code names for internal product development • Messages that include credit card numbers The solution must minimize development effort. Which Azure Cognitive Service for Language feature should you use for each requirement? To answer, drag the appropriate features to the correct requirements. Each feature may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point.",
           "options": [
@@ -5329,48 +4875,6 @@
           "questionTypeInferredByAgent": "mcq"
         },
         {
-          "id": "ffDieC0TahaFqQ3sAdlw",
-          "question": "SIMULATION - You need to configure and publish bot12345678 to support task management. The intent must be named TaskReminder. The LUDown for the intent is in the C: \\Resources\\LU folder. To complete this task, use the Microsoft Bot Framework Composer.",
-          "options": [
-            "A. In Bot Framework Composer, open bot12345678, create a new dialog named TaskReminder, add a regex recognizer for task keywords, then deploy using Azure CLI",
-            "B. In the Azure portal, navigate to bot12345678, add a LUIS resource, manually create a TaskReminder intent via the REST API, then publish the bot",
-            "C. In Bot Framework Composer, open bot12345678, import the LUDown file from C:\\Resources\\LU, rename the dialog to TaskReminder, then export as a .bot file",
-            "D. In Bot Framework Composer, open bot12345678, import existing resources from the C:\\Resources\\LU folder, name the intent TaskReminder, then publish the bot from the Publish menu"
-          ],
-          "explanation": "Step 1: Open Microsoft Bot Framework Composer Step 2: Select the bot bot12345678 Step 3: Select Import existing resources. Read the instructions on the right side of the screen and select Next. Step 4: Browse to the C:\\Resources\\LU folder and select the available .lu file Step 5: In the pop-up window Importing existing resources, modify the JSON file content based on your resources information: Name the intent TaskReminder Step 6: Select Publish from the Composer menu. In the Publish your bots pane, select the bot to publish (bot12345678), then select a publish profile from the Publish target drop-down list. Reference: https://docs.microsoft.com/en-us/composer/how-to-publish-bot | Discussion highlights: Anyone seen simulator / labs questions recently (Nov 2024)? | bot is out of syllabus",
-          "topic": "Topic 3",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/147102-exam-ai-102-topic-3-question-24-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0015900001.jpg",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0016000001.jpg"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "D",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "low",
-          "answerRationale": "weak evidence; defaulted to strongest prior",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
-        },
-        {
           "id": "fz3fww1MUnrii1z8LheP",
           "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You build a language model by using a Conversational Language Understanding. The language model is used to search for information on a contact list by using an intent named FindContact. A conversational expert provides you with the following list of phrases to use for training. • Find contacts in London. • Who do I know in Seattle? • Search for contacts in Ukraine. You need to implement the phrase list in Conversational Language Understanding. Solution: You create a new utterance for each phrase in the FindContact intent. Does this meet the goal?",
           "options": [
@@ -5457,48 +4961,6 @@
           "correctAnswer": "D",
           "ungraded": false,
           "questionTypeInferredByAgent": "mcq"
-        },
-        {
-          "id": "jYGKEBgXP4BMH914KFM9",
-          "question": "SIMULATION - You need to configure bot12345678 support the French (FR-FR) language. Export the bot to C:\\Resources\\Bot\\Bot1.zip. To complete this task, use the Microsoft Bot Framework Composer.",
-          "options": [
-            "A. In Bot Framework Composer, open bot12345678, navigate to Language Understanding settings, create a new French LUIS resource, then export from the File menu to C:\\Resources\\Bot\\Bot1.zip",
-            "B. In the Azure portal, navigate to the bot12345678 resource, add French (FR-FR) as a secondary language in the Bot Channels Registration, then download the bot as a .zip file",
-            "C. In Bot Framework Composer, open bot12345678, go to Configure > Localization, select Manage bot language to add French (FR-FR), then export the bot to C:\\Resources\\Bot\\Bot1.zip",
-            "D. In Bot Framework Composer, open bot12345678, add a French language generation (.lg) file manually, configure the LUIS endpoint for fr-FR, then publish and download the package"
-          ],
-          "explanation": "Step 1: Open Microsoft Bot Framework Composer Step 2: Select the bot bot12345678 Step 3: Select Configure. Step 4: Select the Azure Language Understanding tab Step 5: Select the Set up Language Understanding button. The Set up Language Understanding window will appear, shown below: Step 6: Select Use existing resources and then select Next at the bottom of the window. Step 7: Now select the Azure directory, Azure subscription, and Language Understanding resource name (French). Step 8: Select Next on the bottom. Your Key and Region will appear on the next on the next window, shown below: Step 9. Select Done - Reference: https://docs.microsoft.com/en-us/composer/concept-language-understanding https://docs.microsoft.com/en-us/composer/how-to-add-luis | Discussion highlights: Select the Configure page from the left and then select the Localization tab. Select Manage bot language to choose your bot's languages. | The answer is incorrect. The instructions in the following link should be used to add multi-language support to a bot: https://learn.microsoft.com/en-us/composer/how-to-use-multiple-language?tabs=v2x#update-language-sett",
-          "topic": "Topic 3",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/88019-exam-ai-102-topic-3-question-26-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0016200001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0016400001.png"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "C",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "medium",
-          "answerRationale": "nearest graded-question semantic match",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
         },
         {
           "id": "k5BQihvhdxhwndsQCqYm",
@@ -6403,48 +5865,6 @@
             "generatedAt": "2026-05-05T12:02:03.066967Z"
           },
           "optionFixMethod": "ocr_dropdown_sections"
-        },
-        {
-          "id": "AqmWZHbKPDw2Kr378sdi",
-          "question": "SIMULATION - Use the following login credentials as needed: To enter your username, place your cursor in the Sign in box and click on the username below. To enter your password, place your cursor in the Enter password box and click on the password below. Azure Username: admin@abc.com - Azure Password: XXXXXXXXXXXX - The following information is for technical support purposes only: Lab Instance: 12345678 - Task - You need to create an Azure resource named solution12345678 that will index a sample database named realestate-us-sample. The solution must ensure that users can search the index in English for people, organizations, and locations. To complete this task, sign in to the Azure portal.",
-          "options": [
-            "A. Create an Azure Cognitive Search resource named solution12345678, import data using the realestate-us-sample, add AI enrichments to extract people/organizations/locations in English, and configure the target index with those fields set to Searchable",
-            "B. Create an Azure Cognitive Search resource, import data from a custom Azure SQL database, manually define an index schema with people/organizations/locations fields, and run the indexer",
-            "C. Create an Azure AI Services multi-service resource named solution12345678, upload the realestate-us-sample as a blob, and configure a Custom Text Classification project for entity extraction",
-            "D. Create an Azure Cognitive Search resource, use the realestate-us-sample, skip AI enrichments, and configure a synonym map for people/organizations/locations in English"
-          ],
-          "explanation": "Step 1 - Start the Import data wizard and create a data source 1. Sign in to the Azure portal with your Azure account. 2. Find your search service and on the Overview page, click Import data on the command bar to create and populate a search index. 3. In the wizard, click Connect to your data, and select the sample database named realestate-us-sample Step 2 - Skip the \"Enrich content\" page The wizard supports the creation of an AI enrichment pipeline for incorporating the Cognitive Services AI algorithms into indexing. We'll skip this step for now, and move directly on to Customize target index. Step 3 - Configure index - The solution must ensure that users can search the index in English for people, organizations, and locations. Configure Searchable for the fields people, organizations, and locations. Reference: https://docs.microsoft.com/en-us/azure/search/search-get-started-portal | Discussion highlights: 1. Create the Cognitive Search Result 2. Import data 3. On Connect to your data choose Samples --> realestate_us_sample 4.Add enrichments 5. select Extract people, organization and location names 6. Select English Micros | Are there simulation questions as of Nov 2024?",
-          "topic": "Topic 4",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/125536-exam-ai-102-topic-4-question-12-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0020300001.jpg",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0020400001.jpg"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "A",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "low",
-          "answerRationale": "weak evidence; defaulted to strongest prior",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
         },
         {
           "id": "CEvHk7owhHHgTYSqzyTJ",
@@ -7681,51 +7101,6 @@
           "optionFixMethod": "ocr_dropdown_sections"
         },
         {
-          "id": "WXVdW5T1qLRyvoQX8r4B",
-          "question": "SIMULATION - You need to create a QnA Maker service named QNA12345678 in the East US Azure region. QNA12345678 must contain a knowledge base that uses the questions and answers available at https://support.microsoft.com/en-us/help/12435/windows-10-upgrade-faq. To complete this task, sign in to the Azure portal and the QnA Maker portal.",
-          "options": [
-            "A. In the Azure portal, create a QnA Maker resource named QNA12345678 in East US. Then in the QnA Maker portal, create a knowledge base linked to the resource, add the FAQ URL (support.microsoft.com/en-us/help/12435/windows-10-upgrade-faq), and select Create your KB",
-            "B. In the Azure portal, create a Language Service resource in East US. Then in Language Studio, create a custom question answering project, manually type in each question and answer pair from the FAQ page",
-            "C. In the Azure portal, create an Azure Bot Service named QNA12345678 in East US. Then in the Bot Framework Composer, import the FAQ URL and publish the bot to a web channel",
-            "D. In the Azure portal, create a Cognitive Services multi-service resource named QNA12345678 in East US. Then in the QnA Maker portal, create a knowledge base and upload a local copy of the FAQ page as a .docx file"
-          ],
-          "explanation": "Step 1: Sign in to the Azure portal create and a QnA Maker resource. Step 2: Select Create after you read the terms and conditions: Step 3: In QnA Maker, select the appropriate tiers and regions. Name: QNA12345678 - In the Name field, enter a unique name to identify this QnA Maker service. This name also identifies the QnA Maker endpoint that your knowledge bases will be associated with. Resource Group Location: East US Azure Step 4: After all the fields are validated, select Create. The process can take a few minutes to complete. After deployment is completed, you'll see the following resources created in your subscription: Remember your Azure Active Directory ID, Subscription, QnA resource name you selected when you created the resource. Step 5: When you are done creating the resource in the Azure portal, return to the QnA Maker portal, refresh the browser page. Step 6: In the QnA Maker portal, select Create a knowledge base. Step 7: Skip Step 1 as you already have your QnA Maker resource. Step 8: In Step 2, select your Active directory, subscription, service (resource), and the language for all knowledge bases created in the service. Azure QnA service: QNA12345678 - Step 9: In Step 3, name your knowledge base Step 10: In Step 4, configure the following setting: + Add URL: https://support.microsoft.com/en-us/help/12435/windows-10-upgrade-faq Step 11: In Step 5, Select Create your KB. The extraction process takes a few moments to read the document and identify questions and answers. After QnA Maker successfully creates the knowledge base, the Knowledge base page opens. Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/set-up-qnamaker-service-azure https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/quickstarts/create-publish-knowledge-base | Discussion highlights: Deprecated service. 1. Create the Question and answering service on the azure portal with the information provided in the question (name and location) 2. Create a new project on the Language Studio portal 3. Choose in th | Simulation question will not appear on the actual exam as of May 26, 2024.",
-          "topic": "Topic 5",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/125598-exam-ai-102-topic-5-question-19-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0025400001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0025500001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0025600001.png",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0025700001.jpg",
-            "https://www.examtopics.com/assets/media/exam-media/04271/0025800001.png"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "A",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "medium",
-          "answerRationale": "nearest graded-question semantic match",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
-        },
-        {
           "id": "WaogPyLgZvcGJglpIziR",
           "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are building a chatbot that will use question answering in Azure Cognitive Service for Language. You have a PDF named Doc1.pdf that contains a product catalogue and a price list. You upload Doc1.pdf and train the model. During testing, users report that the chatbot responds correctly to the following question: What is the price of ? The chatbot fails to respond to the following question: How much does cost? You need to ensure that the chatbot responds correctly to both questions. Solution: From Language Studio, you create an entity for price, and then retrain and republish the model. Does this meet the goal?",
           "options": [
@@ -7829,49 +7204,6 @@
           "correctAnswer": "B",
           "ungraded": false,
           "questionTypeInferredByAgent": "mcq"
-        },
-        {
-          "id": "YQVtSlScn8GXVg00mYwe",
-          "question": "SIMULATION - You need to add a question pair to the published knowledge base used by a QnA Maker service named QNA12345678. The question must be: `What will be the next version of Windows?` The answer must be: `Windows 11`. To complete this task, sign in to the QnA Maker portal.",
-          "options": [
-            "A. In the QnA Maker portal, open the knowledge base for QNA12345678. On the Edit page, select Add QnA pair, enter 'What will be the next version of Windows?' as the question and 'Windows 11' as the answer, then select Save and train, and Publish",
-            "B. In the QnA Maker portal, open the knowledge base, select Settings, add a new FAQ URL that contains the question-answer pair, then select Save and train",
-            "C. In the Azure portal, navigate to the QNA12345678 resource, select Knowledge base, and use the REST API to POST the new QnA pair directly to the published endpoint",
-            "D. In Language Studio, open the custom question answering project, select Deploy, then use the Test pane to add the new question-answer pair to the production index"
-          ],
-          "explanation": "Step 1: Sign in to the QnA portal, then select the knowledge base to add the QnA pair to. Step 2: On the EDIT page of the knowledge base, select Add QnA pair to add a new QnA pair. Step 3: In the new QnA pair row, add the required question and answer fields. The other fields are optional. All fields can be changed at any time. Question: What will be the next version of Windows? Step 4: Select Save and train to see predictions including the new QnA pair. Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/edit-knowledge-base | Discussion highlights: Now you need to use Language Studio https://language.cognitive.azure.com | Simulation question will not appear on the actual exam as of May 26 2024.",
-          "topic": "Topic 5",
-          "difficulty": "medium",
-          "source": "ExamTopics community dump",
-          "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/125599-exam-ai-102-topic-5-question-20-discussion/",
-          "questionImages": [],
-          "answerImages": [
-            "https://www.examtopics.com/assets/media/exam-media/04271/0025900001.jpg"
-          ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
-          "correctAnswer": "A",
-          "ungraded": true,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "medium",
-          "answerRationale": "nearest graded-question semantic match",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]",
-            "E. [Inline placeholder option E; refer question/answer image and discussion context]",
-            "F. [Inline placeholder option F; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "llm_from_ocr"
         },
         {
           "id": "ajyl3KWbwbjvBiQP9UGz",
