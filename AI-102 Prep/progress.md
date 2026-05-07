@@ -1,11 +1,11 @@
 # Progress Tracker: Designing and Implementing a Microsoft Azure AI Solution (AI-102)
 
 ## Overall
-- Sessions Completed: 1 / 32
-- Questions Answered: 14 / 313
-- Accuracy: 85.7%
-- Current Streak: 1 day
-- Next Session: Day 2 (2026-05-07)
+- Sessions Completed: 2 / 32
+- Questions Answered: 30 / 313
+- Accuracy: 86.7%
+- Current Streak: 2 days
+- Next Session: Day 3 (2026-05-08)
 
 ## Milestones
 - [ ] Domain 1 completed
@@ -30,3 +30,15 @@
 - Lab: 5/5 scenarios correct (Doc Intelligence, Speech STT, Spatial Analysis, AI Search, Content Safety)
 - Notes: _fill in your own words_
 - Next action: Day 2 - Deployment Planning
+
+### Day 2 (2026-05-07) - Domain 1: Deployment Planning
+- Status: Completed
+- Questions Attempted: 16 (graded)
+- Correct: 14 / 16 (87.5%)
+- Time Spent: ~6.7 min quiz + study
+- Key Mistakes:
+  - LUIS container export: confused export order (select v1.1 → export for containers → run container)
+  - Doc Intelligence upload: Azure Files share ≠ Azure Storage account; custom neural not template for inconsistent layouts
+- Lab: 9/10 - Deployment checklist (missed: Azure OpenAI is cloud-only, no container option)
+- Notes: _fill in your own words_
+- Next action: Day 3 - Security and Monitoring

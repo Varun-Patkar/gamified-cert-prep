@@ -22,9 +22,9 @@
 - Estimated time: 0.5 hrs
 
 ### Day 2 (2026-05-07) - Domain 1: Deployment Planning
-- [ ] Study: Resource creation, model choice, deployment options
-- [ ] Practice: 8 questions on Domain 1
-- [ ] Lab: Draft one production deployment checklist
+- [x] Study: Resource creation, model choice, deployment options
+- [x] Practice: 8 questions on Domain 1
+- [x] Lab: Draft one production deployment checklist
 - Estimated time: 0.5 hrs
 
 ### Day 3 (2026-05-08) - Domain 1: Security and Monitoring
