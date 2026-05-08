@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-05-07T21:41:30.832946",
+  "timestamp": "2026-05-08T21:39:59.293850",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
-    "totalQuestions": 16,
-    "gradedQuestions": 16,
-    "correct": 14,
-    "wrong": 2,
+    "totalQuestions": 15,
+    "gradedQuestions": 15,
+    "correct": 15,
+    "wrong": 0,
     "skipped": 0,
     "ungraded": 0,
-    "accuracy": 87.5,
-    "timeSeconds": 404.0
+    "accuracy": 100.0,
+    "timeSeconds": 247.1
   },
   "domainBreakdown": {
     "Plan and manage an Azure AI solution": {
-      "total": 16,
-      "correct": 14,
-      "wrong": 2,
+      "total": 15,
+      "correct": 15,
+      "wrong": 0,
       "skipped": 0
     }
   },
   "topicBreakdown": {
     "Topic 1": {
-      "total": 14,
-      "correct": 12,
-      "wrong": 2,
+      "total": 13,
+      "correct": 13,
+      "wrong": 0,
       "skipped": 0
     },
     "Topic 2": {
@@ -34,64 +34,97 @@
       "skipped": 0
     }
   },
-  "wrongQuestions": [
-    {
-      "questionId": "fXDxfcOzrMhn9iUTBCVJ",
-      "question": "DRAG DROP - You plan to use a Language Understanding application named app1 that is deployed to a container. App1 was developed by using a Language Understanding authoring resource named lu1. App1 has the versions shown in the following table. You need to create a container that uses the latest deployable version of app1. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
-      "userAnswer": "B",
-      "correctAnswer": "A",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0000300001.png",
-        "https://www.examtopics.com/assets/media/exam-media/04271/0000400001.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image199.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/74339-exam-ai-102-topic-1-question-2-discussion/",
-      "explanation": "Discussion highlights: Select the version 1.1 before exporting the model | Select v1.1 Export Run and mount",
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution"
-    },
-    {
-      "questionId": "OWqtloLHfijmINONOyTN",
-      "question": "HOTSPOT - You have 1,000 scanned images of hand-written survey responses. The surveys do NOT have a consistent layout. You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1. You open Document Intelligence Studio and create a new project. You need to extract data from the survey responses. The solution must minimize development effort. To where should you upload the images, and which type of model should you use? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "B",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image167.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image168.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150683-exam-ai-102-topic-1-question-71-discussion/",
-      "explanation": "Discussion highlights: Explanation: Upload To - Azure Storage Account: Azure Document Intelligence (formerly known as Form Recognizer) works well with images and documents stored in an Azure Storage account, which provides direct integration f | An Azure Storage account is CORRECT because Azure AI Document Intelligence requires documents to be uploaded to an Azure Storage account to process and analyze them. This ensures seamless integration with the Document In | Answer inferred from top upvoted discussion consensus.",
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution"
-    }
-  ],
+  "wrongQuestions": [],
   "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "fXDxfcOzrMhn9iUTBCVJ",
-      "question": "DRAG DROP - You plan to use a Language Understanding application named app1 that is deployed to a container. App1 was developed by using a Language Understanding authoring resource named lu1. App1 has the versions shown in the following table. You need to create a container that uses the latest deployable version of app1. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
+      "questionId": "4TQwVtvve90s7b25vP3W",
+      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure Cognitive Search service. During the past 12 months, query volume steadily increased. You discover that some search query requests to the Cognitive Search service are being throttled. You need to reduce the likelihood that search query requests are throttled. Solution: You enable customer-managed key (CMK) encryption. Does this meet the goal?",
       "userAnswer": "B",
-      "correctAnswer": "A",
-      "correct": false,
+      "correctAnswer": "B",
+      "correct": true,
       "gradable": true,
       "skipped": false,
       "topic": "Topic 1",
       "domainName": "Plan and manage an Azure AI solution",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Select the version 1.1 before exporting the model | Select v1.1 Export Run and mount",
+      "explanation": "Discussion highlights: Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/search/search-performance-analysis#throttling-behaviors Throttling occurs when the search service is at capacity. Throttling can occur during qu | Selected Answer: B The best answer is: • B. No Reason for choosing this option: Enabling customer-managed key (CMK) encryption does not directly impact the throttling of search query requests in Azure Cognitive Search se",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77540-exam-ai-102-topic-1-question-27-discussion/"
+    },
+    {
+      "questionId": "fqN5oofCnZtWJ55XAd1k",
+      "question": "You are building a solution in Azure that will use Azure Cognitive Service for Language to process sensitive customer data. You need to ensure that only specific Azure processes can access the Language service. The solution must minimize administrative effort. What should you include in the solution?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 1",
+      "domainName": "Plan and manage an Azure AI solution",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: D Correct. Source: https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-virtual-networks?tabs=portal | answer is virtual network rules. why? because it helps configure IP range address to restrict access to an end point only to services deployed in those IP ranges. this way the access can be restricted. Gateway can work b",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135106-exam-ai-102-topic-1-question-63-discussion/"
+    },
+    {
+      "questionId": "Os2wR3py1ERVrND5H2CX",
+      "question": "You plan to perform predictive maintenance. You collect IoT sensor data from 100 industrial machines for a year. Each machine has 50 different sensors that generate data at one-minute intervals. In total, you have 5,000 time series datasets. You need to identify unusual values in each time series to help predict machinery failures. Which Azure service should you use?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 1",
+      "domainName": "Plan and manage an Azure AI solution",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Correct D. predict machinery failures is using Anomaly detector in azure AI service | Selected Answer: D Azure AI Anomaly Detector is an AI service that enables you to monitor and detect anomalies in your time series data with little machine learning knowledge, either batch validation or real-time inferen",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135071-exam-ai-102-topic-1-question-64-discussion/"
+    },
+    {
+      "questionId": "IIIB9cMxZWFR8jubZtLT",
+      "question": "You plan to provision a QnA Maker service in a new resource group named RG1. In RG1, you create an App Service plan named AP1. Which two Azure resources are automatically created in RG1 when you provision the QnA Maker service? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "D, E",
+      "correctAnswer": "D, E",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 1",
+      "domainName": "Plan and manage an Azure AI solution",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Another one to memorise. A quick trick: Q sounds like a C, for Cognitive n A for App Service | Right answer : at the creation, we have to precise Azure Search an Azure Web App details. \"When you create a QnAMaker resource, you host the data in your own Azure subscription. Azure Search is used to index your data.\"",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/61023-exam-ai-102-topic-1-question-20-discussion/"
+    },
+    {
+      "questionId": "9r8xgk94cdnGf4FlAFFN",
+      "question": "HOTSPOT - You have an Azure Cognitive Search resource named Search1 that is used by multiple apps. You need to secure Search1. The solution must meet the following requirements: • Prevent access to Search1 from the internet. • Limit the access of each app to specific queries. What should you do? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 1",
+      "domainName": "Plan and manage an Azure AI solution",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Create Private Endpoint Use Azure Roles | 1. Create a private endpoint 2. Use Azure roles https://learn.microsoft.com/en-us/azure/search/service-create-private-endpoint#why-use-a-private-endpoint-for-secure-access Private Endpoints for Azure Cognitive Search all",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0000300001.png",
-        "https://www.examtopics.com/assets/media/exam-media/04271/0000400001.png"
+        "https://img.examtopics.com/ai-102/image24.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image199.png"
+        "https://img.examtopics.com/ai-102/image203.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/74339-exam-ai-102-topic-1-question-2-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/106252-exam-ai-102-topic-1-question-52-discussion/"
     },
     {
       "questionId": "w9WTAoHtpOmehNAdvzDY",
@@ -111,128 +144,8 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/82100-exam-ai-102-topic-1-question-31-discussion/"
     },
     {
-      "questionId": "XsMszscqvUA8H6Da7mPL",
-      "question": "HOTSPOT - You have an Azure subscription that has the following configurations: • Subscription ID: 8d3591aa-96b8-4737-ad09-00f9b1ed35ad • Tenant ID: 3edfe572-cb54-3ced-ae12-c5c177f39a12 You plan to create a resource that will perform sentiment analysis and optical character recognition (OCR). You need to use an HTTP request to create the resource in the subscription. The solution must use a single key and endpoint. How should you complete the request? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: 1. subscriptions/8d3591aa-96b8-4737-ad09-00f9b1ed35ad 2. Microsoft.CognitiveServices https://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Canomaly-detector% | correct answer | Inference was flagged as suspect by subagent audit and left ungraded.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image47.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image48.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112134-exam-ai-102-topic-1-question-55-discussion/"
-    },
-    {
-      "questionId": "2ADaD5eHzSBt1onOPAMc",
-      "question": "HOTSPOT - You are developing a streaming Speech to Text solution that will use the Speech SDK and MP3 encoding. You need to develop a method to convert speech to text for streaming MP3 data. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-use-codec-compressed-audio-input-streams?tabs=debian&pivots=programming- language-csharp | Discussion highlights: The answer is correct | We need to convert Streaming MP3 Data. So, option 1 is eliminated, as it's not a Audio Streaming function. rest 3 contains the keyword Stream. But, default audio stream format is WAV, and here we are passing MP3, So othe | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0002300001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0002400001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/62494-exam-ai-102-topic-1-question-18-discussion/"
-    },
-    {
-      "questionId": "b9PEYZiBtHB1ZHH7N5zI",
-      "question": "You are building an app that will use the Speech service. You need to ensure that the app can authenticate to the service by using a Microsoft Azure Active Directory (Azure AD), part of Microsoft Entra, token. Which two actions should you perform? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B, D",
-      "correctAnswer": "B, D",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: BD https://learn.microsoft.com/en-us/azure/ai-services/speech-service/role-based-access-control#authentication-with-keys-and-tokens | Selected Answer: BD under MS Documentation link: https://learn.microsoft.com/en-us/azure/ai-services/speech-service/role-based-access-control#authentication-with-keys-and-token you will find: \"To authenticate with a Micr",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122901-exam-ai-102-topic-1-question-57-discussion/"
-    },
-    {
-      "questionId": "9OJ0PP1Wab2RwHEqZRzM",
-      "question": "HOTSPOT - You make an API request and receive the results shown in the following exhibits. Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: 1. detects 2. 797, 201 https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-face-detection#face-rectangle Each detected face corresponds to a faceRectangle field in the response. This is a s | To answer the first question see the endpoint .../face/v1.0/detect?.... To answer the second question see the first object from the response \"faceRectangle\": {\"TOP\":201, \"LEFT:\"797....} | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image5.png",
-        "https://img.examtopics.com/ai-102/image6.png",
-        "https://img.examtopics.com/ai-102/image7.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image8.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102686-exam-ai-102-topic-2-question-24-discussion/"
-    },
-    {
-      "questionId": "OWqtloLHfijmINONOyTN",
-      "question": "HOTSPOT - You have 1,000 scanned images of hand-written survey responses. The surveys do NOT have a consistent layout. You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1. You open Document Intelligence Studio and create a new project. You need to extract data from the survey responses. The solution must minimize development effort. To where should you upload the images, and which type of model should you use? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "B",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Explanation: Upload To - Azure Storage Account: Azure Document Intelligence (formerly known as Form Recognizer) works well with images and documents stored in an Azure Storage account, which provides direct integration f | An Azure Storage account is CORRECT because Azure AI Document Intelligence requires documents to be uploaded to an Azure Storage account to process and analyze them. This ensures seamless integration with the Document In | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image167.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image168.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150683-exam-ai-102-topic-1-question-71-discussion/"
-    },
-    {
-      "questionId": "ypbQX8q84iDGVhbZlSN9",
-      "question": "You are building a language model by using a Language Understanding (classic) service. You create a new Language Understanding (classic) resource. You need to add more contributors. What should you use?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/luis/luis-how-to-collaborate#add-contributor-to-azure-authoring-resource In the Azure portal, find your Language Understandin | Selected Answer: B correct",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/86971-exam-ai-102-topic-1-question-21-discussion/"
-    },
-    {
-      "questionId": "ctrRAi5eAWUqh06GgIAs",
-      "question": "You are developing a system that will monitor temperature data from a data stream. The system must generate an alert in response to atypical values. The solution must minimize development effort. What should you include in the solution?",
+      "questionId": "dUuu3WSVUXpTXWS7mNlX",
+      "question": "You successfully run the following HTTP request. POST https://management.azure.com/subscriptions/18c51a87-3a69-47a8-aedc-a54745f708a1/resourceGroups/RG1/providers/ Microsoft.CognitiveServices/accounts/contoso1/regenerateKey?api-version=2017-04-18 Body{\"keyName\": \"Key2\"} What is the result of the request?",
       "userAnswer": "D",
       "correctAnswer": "D",
       "correct": true,
@@ -242,14 +155,48 @@
       "domainName": "Plan and manage an Azure AI solution",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C The key requirements here are that you are doing this from a data stream and that you must limit development. Anomaly detection does not work with datastreams natively, so considerable development work | Selected Answer: B This is the similar example, I would vote for B. Use case of Stream Analytics Query: Alert to trigger a business workflow Let's make our query more detailed. For every type of sensor, we want to monito",
+      "explanation": "Discussion highlights: I’d’ve thought it’s D? | Answer is correct - Sample response will be, { \"key1\": \"KEY1\", \"key2\": \"KEY2\" } This shows, Key1 is already there and this JSON request will generate Key2.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135094-exam-ai-102-topic-1-question-66-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/54752-exam-ai-102-topic-1-question-10-discussion/"
     },
     {
-      "questionId": "urND3YDAbNE2XnFWJWk3",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure Cognitive Search service. During the past 12 months, query volume steadily increased. You discover that some search query requests to the Cognitive Search service are being throttled. You need to reduce the likelihood that search query requests are throttled. Solution: You migrate to a Cognitive Search service that uses a higher tier. Does this meet the goal?",
+      "questionId": "mw1OgwdVFn3NzasQPet8",
+      "question": "You have an app that analyzes images by using the Computer Vision API. You need to configure the app to provide an output for users who are vision impaired. The solution must provide the output in complete sentences. Which API call should you perform?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 1",
+      "domainName": "Plan and manage an Azure AI solution",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: D The API call you should perform to provide an output in complete sentences for users who are vision impaired is describeImageInStreamAsync. The describe feature of the Computer Vision API generates a h | This was in the exam on 15/08/2024",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102672-exam-ai-102-topic-1-question-46-discussion/"
+    },
+    {
+      "questionId": "bGbJPMjNRmWzEps23mDW",
+      "question": "You have an app named App1 that uses an Azure Cognitive Services model to identify anomalies in a time series data stream. You need to run App1 in a location that has limited connectivity. The solution must minimize costs. What should you use to host the model?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 1",
+      "domainName": "Plan and manage an Azure AI solution",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Docker - https://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-container-support | Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-container-support",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108815-exam-ai-102-topic-1-question-51-discussion/"
+    },
+    {
+      "questionId": "2SHOdRImHWCBoijQ6oNR",
+      "question": "HOTSPOT - You plan to deploy a containerized version of an Azure Cognitive Services service that will be used for text analysis. You configure https://contoso.cognitiveservices.azure.com as the endpoint URI for the service, and you pull the latest version of the Text Analytics Sentiment Analysis container. You need to run the container on an Azure virtual machine by using Docker. How should you complete the command? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
@@ -259,10 +206,36 @@
       "domainName": "Plan and manage an Azure AI solution",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Using a higher tier does not imply scaling replicas or partitions. The answer should be no | Selected Answer: A answer is correct",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/74847-exam-ai-102-topic-1-question-22-discussion/"
+      "explanation": "Box 1: mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment To run the Sentiment Analysis v3 container, execute the following docker run command. docker run --rm -it -p 5000:5000 --memory 8g --cpus 1 \\ mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment \\ Eula=accept \\ Billing={ENDPOINT_URI} \\ ApiKey={API_KEY} is the endpoint for accessing the Text Analytics API. https://<your-custom-subdomain>.cognitiveservices.azure.com Box 2: https://contoso.cognitiveservices.azure.com {ENDPOINT_URI} is the endpoint for accessing the Text Analytics API: https://<your-custom-subdomain>.cognitiveservices.a The endpoint for accessing the Text Analytics API. zure.com - Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-install-containers?tabs=sentiment | Discussion highlights: Seems correct. For first answer, you \"pull the latest version of the Text Analytics Sentiment Analysis container\", hence the \"sentiment\" in the endpoint. For billing, other options are other services, hence the provided | 1. mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment 2. https://contoso.cognitiveservices.azure.com https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/sentiment-opinion-mining/ho",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0001400001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0001400002.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/54790-exam-ai-102-topic-1-question-8-discussion/"
+    },
+    {
+      "questionId": "1IhMIusZQjm3PHw6CiTC",
+      "question": "HOTSPOT - You are building a model to detect objects in images. The performance of the model based on training data is shown in the following exhibit. Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Plan and manage an Azure AI solution",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: 1. 0 2. 25 https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/custom-text-classification/concepts/evaluation-metrics - Precision: Measures how precise/accurate your model is. It's the ratio betwe | Asked in 28/06/2023 exam",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image49.png",
+        "https://img.examtopics.com/ai-102/image50.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image51.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112135-exam-ai-102-topic-2-question-31-discussion/"
     },
     {
       "questionId": "0loncNLBL5EonWMa0n5x",
@@ -286,25 +259,8 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108602-exam-ai-102-topic-2-question-30-discussion/"
     },
     {
-      "questionId": "5GIFjxU1yKRvyE5jGeGN",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure Cognitive Search service. During the past 12 months, query volume steadily increased. You discover that some search query requests to the Cognitive Search service are being throttled. You need to reduce the likelihood that search query requests are throttled. Solution: You add indexes. Does this meet the goal?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B B is correct answer. \"How your search queries perform is directly connected to the size and complexity of your indexes. The smaller and more optimized your indexes, the fast Azure Cognitive Search can | Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/search/search-performance-analysis#throttling-behaviors Throttling occurs when the search service is at capacity. Throttling can occur during qu",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77572-exam-ai-102-topic-1-question-26-discussion/"
-    },
-    {
-      "questionId": "VVHIPl8XJVJbnGznFpLi",
-      "question": "You have receipts that are accessible from a URL. You need to extract data from the receipts by using Form Recognizer and the SDK. The solution must use a prebuilt model. Which client and method should you use?",
+      "questionId": "WxSbqCGundmsouEDuMYf",
+      "question": "You are developing a monitoring system that will analyze engine sensor data, such as rotation speed, angle, temperature, and pressure. The system must generate an alert in response to atypical values. What should you include in the solution?",
       "userAnswer": "C",
       "correctAnswer": "C",
       "correct": true,
@@ -314,14 +270,14 @@
       "domainName": "Plan and manage an Azure AI solution",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Should be C private static async Task AnalyzeReceipt( FormRecognizerClient recognizerClient, string receiptUri) { RecognizedFormCollection receipts = await recognizerClient.StartRecognizeReceiptsFromUri(new Uri(receiptUr | was on november exam but it said \"using Document Intelligence\", the answer possibilities were the same",
+      "explanation": "Discussion highlights: Selected Answer: C if there is no metrics advisor, then choose Multivariate Anomaly detection as secondary option, Metrics Advisor is the best answer. | This appeared in exam 28/06",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/74350-exam-ai-102-topic-1-question-24-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/109884-exam-ai-102-topic-1-question-50-discussion/"
     },
     {
-      "questionId": "D1Rx0tlrEoPXJbirGNbM",
-      "question": "DRAG DROP - You have 100 chatbots that each has its own Language Understanding model. Frequently, you must add the same phrases to each model. You need to programmatically update the Language Understanding models to include the new phrases. How should you complete the code? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point. Select and Place:",
+      "questionId": "Ms0zxLZZWc1ITofs9t4L",
+      "question": "You have an Azure IoT hub that receives sensor data from machinery. You need to build an app that will perform the following actions: • Perform anomaly detection across multiple correlated sensors. • Identify the root cause of process stops. • Send incident alerts. The solution must minimize development time. Which Azure service should you use?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
@@ -331,18 +287,14 @@
       "domainName": "Plan and manage an Azure AI solution",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Box 1: AddPhraseListAsync - Example: Add phraselist feature - var phraselistId = await client.Features.AddPhraseListAsync(appId, versionId, new PhraselistCreateObject { EnabledForAllModels = false, IsExchangeable = true, Name = \"QuantityPhraselist\", Phrases = \"few,more,extra\" }); Box 2: PhraselistCreateObject - Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/luis/client-libraries-rest-api | Discussion highlights: Box 1: AddPhraseListAsync Box 2: PhraselistCreateObject var phraselistId = await client.Features.AddPhraseListAsync(appId, versionId, new PhraselistCreateObject { EnabledForAllModels = false, IsExchangeable = true, Name | Vote for 'C' as per the provided Link (in Solution itself). But Better go with elimination method. We want to add the Phrases, So most suitable function name is : AddPhraseListAsync (out of all other options) Now, for an | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0000200001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0000200002.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/54103-exam-ai-102-topic-1-question-1-discussion/"
+      "explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/applied-ai-services/metrics-advisor/overview Metrics Advisor is a part of Azure Applied AI Services that uses AI to perform data monitoring and | This came in the exam 28/06/2023",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/106686-exam-ai-102-topic-1-question-45-discussion/"
     },
     {
-      "questionId": "mw1OgwdVFn3NzasQPet8",
-      "question": "You have an app that analyzes images by using the Computer Vision API. You need to configure the app to provide an output for users who are vision impaired. The solution must provide the output in complete sentences. Which API call should you perform?",
+      "questionId": "nmGHgOAQOLcfpxOHSPih",
+      "question": "You have a Language Understanding resource named lu1. You build and deploy an Azure bot named bot1 that uses lu1. You need to ensure that bot1 adheres to the Microsoft responsible AI principle of inclusiveness. How should you extend bot1?",
       "userAnswer": "D",
       "correctAnswer": "D",
       "correct": true,
@@ -352,27 +304,10 @@
       "domainName": "Plan and manage an Azure AI solution",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: D The API call you should perform to provide an output in complete sentences for users who are vision impaired is describeImageInStreamAsync. The describe feature of the Computer Vision API generates a h | This was in the exam on 15/08/2024",
+      "explanation": "Discussion highlights: Selected Answer: D I disagree with JTWang because Direct Line Speech lets the bot speak outloud. This supports Microsoft's goal of AI Inclusiveness because you can include people with disabilities. | Answer is B: user can participate the content of QnA knowledge base https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/use-active-learning The Active learning suggestions feature allows you to impr",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102672-exam-ai-102-topic-1-question-46-discussion/"
-    },
-    {
-      "questionId": "MqUDpUhbyY1lpBh7FrEj",
-      "question": "You plan to perform predictive maintenance. You collect IoT sensor data from 100 industrial machines for a year. Each machine has 50 different sensors that generate data at one-minute intervals. In total, you have 5,000 time series datasets. You need to identify unusual values in each time series to help predict machinery failures. Which Azure service should you use?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/anomaly-detector/overview Anomaly Detector is an AI service with a set of APIs, which enables you to monitor and detect anoma | on my exam (2023-01-16 Passed) My Answer:A",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75106-exam-ai-102-topic-1-question-17-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75222-exam-ai-102-topic-1-question-29-discussion/"
     }
   ]
 }

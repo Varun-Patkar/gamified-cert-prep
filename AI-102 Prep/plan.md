@@ -28,9 +28,9 @@
 - Estimated time: 0.5 hrs
 
 ### Day 3 (2026-05-08) - Domain 1: Security and Monitoring
-- [ ] Study: Keys, identity, monitoring, cost controls
-- [ ] Practice: 8 questions on Domain 1
-- [ ] Lab: Define RBAC + Managed Identity design
+- [x] Study: Keys, identity, monitoring, cost controls
+- [x] Practice: 8 questions on Domain 1
+- [x] Lab: Define RBAC + Managed Identity design
 - Estimated time: 0.5 hrs
 
 ### Day 4 (2026-05-09) - Domain 1: Responsible AI Controls

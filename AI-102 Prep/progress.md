@@ -1,11 +1,11 @@
 # Progress Tracker: Designing and Implementing a Microsoft Azure AI Solution (AI-102)
 
 ## Overall
-- Sessions Completed: 2 / 32
-- Questions Answered: 30 / 313
-- Accuracy: 86.7%
-- Current Streak: 2 days
-- Next Session: Day 3 (2026-05-08)
+- Sessions Completed: 3 / 32
+- Questions Answered: 45 / 313
+- Accuracy: 90.0%
+- Current Streak: 3 days
+- Next Session: Day 4 (2026-05-09)
 
 ## Milestones
 - [ ] Domain 1 completed
@@ -42,3 +42,14 @@
 - Lab: 9/10 - Deployment checklist (missed: Azure OpenAI is cloud-only, no container option)
 - Notes: _fill in your own words_
 - Next action: Day 3 - Security and Monitoring
+
+### Day 3 (2026-05-08) - Domain 1: Security and Monitoring
+- Status: Completed
+- Questions Attempted: 15 (graded)
+- Correct: 15 / 15 (100%)
+- Time Spent: ~4.1 min quiz
+- Key Mistakes: None — perfect quiz run!
+- Lab: 3/4 (75%) - RBAC + Managed Identity Design
+  - Missed: Default action "Deny" enforcement for VNet rules; always conclude key rotation with "use managed identity instead"
+- Notes: _fill in your own words_
+- Next action: Day 4 - Responsible AI Controls
