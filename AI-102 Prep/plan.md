@@ -34,9 +34,9 @@
 - Estimated time: 0.5 hrs
 
 ### Day 4 (2026-05-09) - Domain 1: Responsible AI Controls
-- [ ] Study: Content filters, blocklists, harm detection, prompt shields
-- [ ] Practice: 15 questions on Domain 1
-- [ ] Lab: Create safety policy matrix (input/output/grounding)
+- [x] Study: Content filters, blocklists, harm detection, prompt shields
+- [x] Practice: 15 questions on Domain 1
+- [x] Lab: Create safety policy matrix (input/output/grounding)
 - Estimated time: 1 hr
 
 ### Day 5 (2026-05-10) - Domain 1: Consolidation

@@ -1,11 +1,11 @@
 # Progress Tracker: Designing and Implementing a Microsoft Azure AI Solution (AI-102)
 
 ## Overall
-- Sessions Completed: 3 / 32
-- Questions Answered: 45 / 313
-- Accuracy: 90.0%
-- Current Streak: 3 days
-- Next Session: Day 4 (2026-05-09)
+- Sessions Completed: 4 / 32
+- Questions Answered: 58 / 313
+- Accuracy: 91.4%
+- Current Streak: 4 days
+- Next Session: Day 5 (2026-05-10)
 
 ## Milestones
 - [ ] Domain 1 completed
@@ -53,3 +53,13 @@
   - Missed: Default action "Deny" enforcement for VNet rules; always conclude key rotation with "use managed identity instead"
 - Notes: _fill in your own words_
 - Next action: Day 4 - Responsible AI Controls
+
+### Day 4 (2026-05-09) - Domain 1: Responsible AI Controls
+- Status: Completed
+- Questions Attempted: 13 (graded)
+- Correct: 13 / 13 (100%) — 1 marked wrong by quiz but answer was correct (container ordering: agent-generated options mislabeled)
+- Time Spent: ~1 hr study + quiz
+- Key Mistakes: None (disputed Q on Sentiment container deploy order — correct sequence: Provision Language resource → Deploy Docker on-prem → Query endpoint)
+- Lab: Safety Policy Matrix completed (input/output/grounding layers for financial chatbot)
+- Notes: _fill in your own words_
+- Next action: Day 5 - Domain 1 Consolidation
