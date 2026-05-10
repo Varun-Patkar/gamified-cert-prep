@@ -1,14 +1,14 @@
 # Progress Tracker: Designing and Implementing a Microsoft Azure AI Solution (AI-102)
 
 ## Overall
-- Sessions Completed: 4 / 32
-- Questions Answered: 58 / 313
-- Accuracy: 91.4%
-- Current Streak: 4 days
-- Next Session: Day 5 (2026-05-10)
+- Sessions Completed: 5 / 32
+- Questions Answered: 76 / 313
+- Accuracy: 89.5%
+- Current Streak: 5 days
+- Next Session: Day 6 (2026-05-11)
 
 ## Milestones
-- [ ] Domain 1 completed
+- [x] Domain 1 completed (Days 1-5, avg 90.3%)
 - [ ] Domain 2 completed
 - [ ] Domain 3 completed
 - [ ] Domain 4 completed
@@ -63,3 +63,16 @@
 - Lab: Safety Policy Matrix completed (input/output/grounding layers for financial chatbot)
 - Notes: _fill in your own words_
 - Next action: Day 5 - Domain 1 Consolidation
+
+### Day 5 (2026-05-10) - Domain 1: Consolidation
+- Status: Completed
+- Questions Attempted: 18 (graded)
+- Correct: 15 / 18 (83.3%)
+- Time Spent: ~4.3 min quiz
+- Key Mistakes:
+  - `az cognitiveservices account show` (not `account list`) to identify a created AI Services account
+  - Equitable results = Fairness + Inclusiveness (picked 3 answers instead of 2)
+  - Image captioning resource creation: ComputerVision with free tier (not CognitiveServices multi-service)
+- Lab: Mini architecture review (from session file)
+- Notes: _fill in your own words_
+- Next action: Day 6 - Domain 2: Foundry GenAI Foundations

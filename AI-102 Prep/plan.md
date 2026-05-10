@@ -40,9 +40,9 @@
 - Estimated time: 1 hr
 
 ### Day 5 (2026-05-10) - Domain 1: Consolidation
-- [ ] Study: End-to-end design for secure AI solution lifecycle
-- [ ] Practice: 15 mixed questions from Domain 1
-- [ ] Lab: One mini architecture review
+- [x] Study: End-to-end design for secure AI solution lifecycle
+- [x] Practice: 18 mixed questions from Domain 1 (15/18 = 83.3%)
+- [x] Lab: One mini architecture review
 - Estimated time: 1 hr
 
 ### Day 6 (2026-05-11) - Domain 2: Foundry GenAI Foundations
