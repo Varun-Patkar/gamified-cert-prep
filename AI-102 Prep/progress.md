@@ -1,11 +1,11 @@
 # Progress Tracker: Designing and Implementing a Microsoft Azure AI Solution (AI-102)
 
 ## Overall
-- Sessions Completed: 5 / 32
-- Questions Answered: 76 / 313
-- Accuracy: 89.5%
-- Current Streak: 5 days
-- Next Session: Day 6 (2026-05-11)
+- Sessions Completed: 6 / 32
+- Questions Answered: 89 / 313
+- Accuracy: 88.6%
+- Current Streak: 6 days
+- Next Session: Day 7 (2026-05-12)
 
 ## Milestones
 - [x] Domain 1 completed (Days 1-5, avg 90.3%)
@@ -76,3 +76,16 @@
 - Lab: Mini architecture review (from session file)
 - Notes: _fill in your own words_
 - Next action: Day 6 - Domain 2: Foundry GenAI Foundations
+
+### Day 6 (2026-05-11) - Domain 2: Foundry GenAI Foundations
+- Status: Completed
+- Questions Attempted: 13 (graded) + 1 skipped + 1 ungraded
+- Correct: 11 / 13 (84.6%)
+- Time Spent: ~5.5 min quiz + study
+- Key Mistakes:
+  - Bulk OCR from scanned images: Read API (Computer Vision) is the production answer, not Image Analysis 4.0
+  - Face API find similar with 60K images: use `largeFaceListId` (up to 1M) not `faceListId` (up to 1K); `matchFace` mode for ranked similarity
+- Domain 1 carryover: 3/3 (100%)
+- Lab: Prompt flow design exercise (from session file)
+- Notes: _fill in your own words_
+- Next action: Day 7 - Domain 2: RAG Fundamentals

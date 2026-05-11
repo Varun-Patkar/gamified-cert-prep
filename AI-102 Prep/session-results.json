@@ -1,33 +1,45 @@
 {
-  "timestamp": "2026-05-10T11:04:02.641143",
+  "timestamp": "2026-05-11T22:16:50.192728",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
-    "totalQuestions": 18,
-    "gradedQuestions": 18,
-    "correct": 15,
-    "wrong": 3,
-    "skipped": 0,
-    "ungraded": 0,
-    "accuracy": 83.3,
-    "timeSeconds": 257.8
+    "totalQuestions": 15,
+    "gradedQuestions": 13,
+    "correct": 11,
+    "wrong": 2,
+    "skipped": 1,
+    "ungraded": 1,
+    "accuracy": 84.6,
+    "timeSeconds": 327.9
   },
   "domainBreakdown": {
-    "Plan and manage an Azure AI solution": {
-      "total": 18,
-      "correct": 15,
+    "Implement generative AI solutions": {
+      "total": 12,
+      "correct": 8,
       "wrong": 3,
+      "skipped": 1
+    },
+    "Plan and manage an Azure AI solution": {
+      "total": 3,
+      "correct": 3,
+      "wrong": 0,
       "skipped": 0
     }
   },
   "topicBreakdown": {
-    "Topic 1": {
-      "total": 16,
-      "correct": 13,
+    "Topic 2": {
+      "total": 9,
+      "correct": 6,
       "wrong": 3,
       "skipped": 0
     },
-    "Topic 2": {
+    "Topic 3": {
+      "total": 4,
+      "correct": 3,
+      "wrong": 0,
+      "skipped": 1
+    },
+    "Topic 1": {
       "total": 2,
       "correct": 2,
       "wrong": 0,
@@ -36,323 +48,171 @@
   },
   "wrongQuestions": [
     {
-      "questionId": "2lSTcaMwyoJOtv0EluLZ",
-      "question": "You have an Azure DevOps pipeline named Pipeline1 that is used to deploy an app. Pipeline1 includes a step that will create an Azure AI services account. You need to add a step to Pipeline1 that will identify the created Azure AI services account. The solution must minimize development effort. Which Azure Command-Line Interface (CLI) command should you run?",
-      "userAnswer": "B",
-      "correctAnswer": "C",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150682-exam-ai-102-topic-1-question-70-discussion/",
-      "explanation": "Discussion highlights: Selected Answer: C Correct, answer is C, here the chatGPT explanation -> The correct answer is C. az cognitiveservices account show. Explanation: The az cognitiveservices account show command retrieves details about a sp | Selected Answer: C az cognitiveservices account show is CORRECT because it retrieves detailed information about an Azure Cognitive Services account, including its name, resource group, and configuration. This command ide",
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution"
-    },
-    {
-      "questionId": "NdCsDI1uszqJX4BX9P3v",
-      "question": "You are developing a new sales system that will process the video and text from a public-facing website. You plan to monitor the sales system to ensure that it provides equitable results regardless of the user's location or background. Which two responsible AI principles provide guidance to meet the monitoring requirements? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A, B, C",
-      "correctAnswer": "B, C",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/74870-exam-ai-102-topic-1-question-6-discussion/",
-      "explanation": "Discussion highlights: Selected Answer: BC B and C are correct answers. | Selected Answer: BC BC is the answer. https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/innovate/best-practices/trusted-ai#fairness Fairness is a core ethical principle that all humans aim to understand an",
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution"
-    },
-    {
-      "questionId": "aGJiW4WYxjQ4zbNz8qOa",
-      "question": "You have the following C# method for creating Azure Cognitive Services resources programmatically. You need to call the method to create a free Azure resource in the West US Azure region. The resource will be used to generate captions of images automatically. Which code should you use?",
+      "questionId": "N4ZmG8ix9L69N9JUWV13",
+      "question": "You are building an app that will include one million scanned magazine articles. Each article will be stored as an image file. You need to configure the app to extract text from the images. The solution must minimize development effort. What should you include in the solution?",
       "userAnswer": "C",
-      "correctAnswer": "A",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0001500001.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/57153-exam-ai-102-topic-1-question-9-discussion/",
-      "explanation": "Discussion highlights: Answer shall be A, as there is free tier available for Computer Vision service. - Free - Web/Container - 20 per minute - 5,000 free transactions per month | Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account-client-library?pivots=programming-language-csharp#create-a-cognitive-services-resource",
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution"
-    }
-  ],
-  "skippedQuestions": [],
-  "allResults": [
-    {
-      "questionId": "gOZs9g4kSF2A8JXcu2wE",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You create a web app named app1 that runs on an Azure virtual machine named vm1. Vm1 is on an Azure virtual network named vnet1. You plan to create a new Azure Cognitive Search service named service1. You need to ensure that app1 can connect directly to service1 without routing traffic over the public internet. Solution: You deploy service1 and a public endpoint to a new virtual network, and you configure Azure Private Link. Does this meet the goal?",
-      "userAnswer": "B",
       "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Answer is no. you should create a private link with private endpoint | Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/search/service-create-private-endpoint#why-use-a-private-endpoint-for-secure-access Private Endpoints for Azure Cognitive Search allow a client",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60131-exam-ai-102-topic-1-question-14-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122477-exam-ai-102-topic-2-question-32-discussion/",
+      "explanation": "Discussion highlights: Selected Answer: B To me the correct answer is B. With the new Image Analysis API 4.0 (in preview) you could use OCR feature too, but as i said, it is in preview. And i don't think it is considered in the exam. https://l | All answers should have a reference to prove the answer is true",
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions"
     },
     {
-      "questionId": "pmQAvwfToriMUeRMXaiy",
-      "question": "HOTSPOT - You have an Azure OpenAI resource named AI1 that hosts three deployments of the GPT 3.5 model. Each deployment is optimized for a unique workload. You plan to deploy three apps. Each app will access AI1 by using the REST API and will use the deployment that was optimized for the app's intended workload. You need to provide each app with access to AI1 and the appropriate deployment. The solution must ensure that only the apps can access AI1. What should you use to provide access to AI1, and what should each app use to connect to its appropriate deployment? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: I think the answer should be An API key A deployment endpoint | API key Deployment name (Different deployments can be configured on oai.azure.com) | Answer inferred from top upvoted discussion consensus.",
+      "questionId": "G09XomcWA8CNXKRpc9i6",
+      "question": "DRAG DROP - You are developing a call to the Face API. The call must find similar faces from an existing list named employeefaces. The employeefaces list contains 60,000 images. How should you complete the body of the HTTP request? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point. Select and Place:",
+      "userAnswer": "C",
+      "correctAnswer": "B",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image93.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0009700001.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image206.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0009700002.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135042-exam-ai-102-topic-1-question-60-discussion/"
-    },
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/55440-exam-ai-102-topic-2-question-12-discussion/",
+      "explanation": "Box 1: LargeFaceListID - LargeFaceList: Add a face to a specified large face list, up to 1,000,000 faces. Note: Given query face's faceId, to search the similar-looking faces from a faceId array, a face list or a large face list. A \"faceListId\" is created by FaceList - Create containing persistedFaceIds that will not expire. And a \"largeFaceListId\" is created by LargeFaceList - Create containing persistedFaceIds that will also not expire. Incorrect Answers: Not \"faceListId\": Add a face to a specified face list, up to 1,000 faces. Box 2: matchFace - Find similar has two working modes, \"matchPerson\" and \"matchFace\". \"matchPerson\" is the default mode that it tries to find faces of the same person as possible by using internal same-person thresholds. It is useful to find a known person's other photos. Note that an empty list will be returned if no faces pass the internal thresholds. \"matchFace\" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces. Reference: https://docs.microsoft.com/en-us/rest/api/faceapi/face/findsimilar | Discussion highlights: Correct. | Facelist ID up to 1,000 faces; LargeFaceListId up to 1,000,000 faces https://docs.microsoft.com/en-us/rest/api/faceapi/large-face-list",
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions"
+    }
+  ],
+  "skippedQuestions": [
+    "34idbrTmBSHf5uM3U8Af"
+  ],
+  "allResults": [
     {
-      "questionId": "2PjJNys50Dllns1tpWCB",
-      "question": "HOTSPOT - You are developing an application that will use the Computer Vision client library. The application has the following code. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "D",
-      "correctAnswer": "D",
+      "questionId": "RLZxWi0RxBbcwADhkOFR",
+      "question": "You are developing a method that uses the Computer Vision client library. The method will perform optical character recognition (OCR) in images. The method has the following code. During testing, you discover that the call to the GetReadResultAsync method occurs before the read operation is complete. You need to prevent the GetReadResultAsync method from proceeding until the read operation is complete. Which two actions should you perform? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B, D",
+      "correctAnswer": "B, D",
       "correct": true,
       "gradable": true,
       "skipped": false,
       "topic": "Topic 2",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Box 3 is Yes, the stream will be generated from a local image! | Box 3 should be Yes, a stream is only a pathway for data. and in this case the data actually comes from a local file. The correct answer would be No, Yes, Yes. | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "Discussion highlights: Selected Answer: BD B. Add code to verify the read_results.status value. D. Wrap the call to get_read_result within a loop that contains a delay. Explanation: In order to prevent the GetReadResultAsync method from procee | Selected Answer: BD The code snippet does not match the question. There is NO GetReadResultAsync call.",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0008000001.png",
-        "https://www.examtopics.com/assets/media/exam-media/04271/0008100001.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0010700001.png"
       ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image207.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/54796-exam-ai-102-topic-2-question-1-discussion/"
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/81861-exam-ai-102-topic-2-question-18-discussion/"
     },
     {
-      "questionId": "2lSTcaMwyoJOtv0EluLZ",
-      "question": "You have an Azure DevOps pipeline named Pipeline1 that is used to deploy an app. Pipeline1 includes a step that will create an Azure AI services account. You need to add a step to Pipeline1 that will identify the created Azure AI services account. The solution must minimize development effort. Which Azure Command-Line Interface (CLI) command should you run?",
-      "userAnswer": "B",
-      "correctAnswer": "C",
+      "questionId": "EC11Ztm3DapR1ViTdWFu",
+      "question": "DRAG DROP - You plan to implement an Azure AI Search resource that will use custom skill based on sentiment analysis. You need to create a custom model and configure Azure AI Search use the model. Which five actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: 1. Create an Azure Machine Learning workspace. 2. Create and train the model in the Azure Machine Learning studio. 3. Create an endpoint for the model. 4. Connect the custom skill to the endpoint. 5. Rerun the indexer to | https://learn.microsoft.com/en-us/training/modules/build-azure-machine-learn-custom-skill-for-azure-cognitive-search/03-enrich-search-index-use-model 1.Create an Azure Machine Learning workspace. 2.Create and train the m",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image134.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image225.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135056-exam-ai-102-topic-3-question-74-discussion/"
+    },
+    {
+      "questionId": "A3DrDc4EviDPPeffeyf0",
+      "question": "You have the following Python function for creating Azure Cognitive Services resources programmatically. def create_resource (resource_name, kind, account_tier, location) : parameters = CognitiveServicesAccount(sku=Sku(name=account_tier), kind=kind, location=location, properties={}) result = client.accounts.create(resource_group_name, resource_name, parameters) You need to call the function to create a free Azure resource in the West US Azure region. The resource will be used to generate captions of images automatically. Which code should you use?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A Computer vision provide automatic vision solutions including captions. The key-phrase is \"automatic\". Therefore this answer should be obvious to everyone. I would expect more professionalism from peopl | Same as Topic 1 Question 9. https://www.examtopics.com/discussions/microsoft/view/57153-exam-ai-102-topic-1-question-9-discussion",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/81643-exam-ai-102-topic-2-question-17-discussion/"
+    },
+    {
+      "questionId": "N4ZmG8ix9L69N9JUWV13",
+      "question": "You are building an app that will include one million scanned magazine articles. Each article will be stored as an image file. You need to configure the app to extract text from the images. The solution must minimize development effort. What should you include in the solution?",
+      "userAnswer": "C",
+      "correctAnswer": "B",
       "correct": false,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C Correct, answer is C, here the chatGPT explanation -> The correct answer is C. az cognitiveservices account show. Explanation: The az cognitiveservices account show command retrieves details about a sp | Selected Answer: C az cognitiveservices account show is CORRECT because it retrieves detailed information about an Azure Cognitive Services account, including its name, resource group, and configuration. This command ide",
+      "explanation": "Discussion highlights: Selected Answer: B To me the correct answer is B. With the new Image Analysis API 4.0 (in preview) you could use OCR feature too, but as i said, it is in preview. And i don't think it is considered in the exam. https://l | All answers should have a reference to prove the answer is true",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150682-exam-ai-102-topic-1-question-70-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122477-exam-ai-102-topic-2-question-32-discussion/"
     },
     {
-      "questionId": "4mMVRmDGey7qlFgEQSgk",
-      "question": "HOTSPOT - You are developing an internet-based training solution for remote learners. Your company identifies that during the training, some learners leave their desk for long periods or become distracted. You need to use a video and audio feed from each learner's computer to detect whether the learner is present and paying attention. The solution must minimize development effort and identify each learner. Which Azure Cognitive Services service should you use for each requirement? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "A",
+      "questionId": "34idbrTmBSHf5uM3U8Af",
+      "question": "HOTSPOT - You run the following command. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": null,
       "correctAnswer": "A",
-      "correct": true,
+      "correct": false,
       "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
+      "skipped": true,
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services | Discussion highlights: The answer is correct | 1. Face 2. Face 3. Speech https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview-identity#face-detection-and-analysis Face detection is required as a first step in all the other scenarios. Th | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "Discussion highlights: Yes No Yes Log location is not mounted. The ET answer relates to an example provided on the given website which DOES mount a log location. | YNY is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/text-analytics-for-health/how-to/use-containers?tabs=language#validate-that-a-container-is-running - http://localhost:5000/st",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0002500001.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0013900001.png",
+        "https://www.examtopics.com/assets/media/exam-media/04271/0014000001.jpg"
       ],
       "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0002600001.png"
+        "https://img.examtopics.com/ai-102/image217.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/62493-exam-ai-102-topic-1-question-19-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/80189-exam-ai-102-topic-3-question-11-discussion/"
     },
     {
-      "questionId": "BvCh84ZyJjgrbCleR46P",
-      "question": "DRAG DROP - You plan to use containerized versions of the Anomaly Detector API on local devices for testing and in on-premises datacenters. You need to ensure that the containerized deployments meet the following requirements: ✑ Prevent billing and API information from being stored in the command-line histories of the devices that run the container. ✑ Control access to the container images by using Azure role-based access control (Azure RBAC). Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. NOTE: More than one order of answer choices is correct. You will receive credit for any of the correct orders you select. Select and Place:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
+      "questionId": "eul2BYL93Dubnt1FSllf",
+      "question": "DRAG DROP - You have an app that uses Azure AI and a custom trained classifier to identify products in images. You need to add new products to the classifier. The solution must meet the following requirements: • Minimize how long it takes to add the products. • Minimize development effort. Which five actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+      "userAnswer": "—",
+      "correctAnswer": "?",
+      "correct": false,
+      "gradable": false,
       "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: I think the it should be: 1. Create a custom docker file 2. Pull the container image (in the dockerfile) 3. Build the image 4 Push to ACR | ChatGPT: To meet the requirements, perform the following actions in sequence: 1. Create a custom Dockerfile: This allows you to define the specific configuration and dependencies for your containerized deployment. 2. Bui",
+      "explanation": "Correct sequence: 1) From the Custom Vision portal, open the project — Custom Vision classifiers are managed in the Custom Vision portal (customvision.ai), NOT Vision Studio or Azure ML. 2) Upload sample images of the new products. 3) Label the sample images with the appropriate tags. 4) Retrain the model to learn the new products. 5) Publish the model so the app can consume the updated classifier. Vision Studio and Azure ML studio are distractors — Custom Vision projects are managed in the Custom Vision portal.",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0001200003.png"
+        "https://img.examtopics.com/ai-102/image117.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image200.png"
+        "https://img.examtopics.com/ai-102/image214.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/74867-exam-ai-102-topic-1-question-7-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135013-exam-ai-102-topic-2-question-37-discussion/"
     },
     {
-      "questionId": "G9SeGxe4WWmgLfK4zAYL",
-      "question": "You have an Azure subscription that contains an Anomaly Detector resource. You deploy a Docker host server named Server1 to the on-premises network. You need to host an instance of the Anomaly Detector service on Server1. Which parameter should you include in the docker run command?",
+      "questionId": "sn2Ay2bButbMMeLpTgKg",
+      "question": "You are building an app that will use the Azure AI Video Indexer service. You plan to train a language model to recognize industry-specific terms. You need to upload a file that contains the industry-specific terms. Which file format should you use?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B The answer is correct. Important The Eula, Billing, and ApiKey options must be specified to run the container; otherwise, the container won't start. For more information, see Billing. The ApiKey value | Selected Answer: B docker run --rm -it -p 5000:5000 --memory 4g --cpus 1 \\ mcr.microsoft.com/azure-cognitive-services/decision/anomaly-detector:latest \\ Eula=accept \\ Billing={ENDPOINT_URI} \\ ApiKey={API_KEY} https://lea",
+      "explanation": "Discussion highlights: Selected Answer: B Answer is correct: As per https://learn.microsoft.com/en-us/azure/azure-video-indexer/customize-language-model-with-website This step creates the model and gives the option to upload text files to the | Selected Answer: B TXT because Azure AI Video Indexer supports uploading custom vocabulary files in plain text format for training language models to recognize industry-specific terms. This format is simple and widely us",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112154-exam-ai-102-topic-1-question-56-discussion/"
-    },
-    {
-      "questionId": "KFk8c9vFTM20bKqIXlfO",
-      "question": "HOTSPOT - You plan to deploy a containerized version of an Azure Cognitive Services service that will be used for sentiment analysis. You configure https://contoso.cognitiveservices.azure.com as the endpoint URI for the service. You need to run the container on an Azure virtual machine by using Docker. How should you complete the command? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Correct. https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-opinion-mining/how-to/use-containers | I looked similar question before.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image115.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image116.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135060-exam-ai-102-topic-1-question-65-discussion/"
-    },
-    {
-      "questionId": "NdCsDI1uszqJX4BX9P3v",
-      "question": "You are developing a new sales system that will process the video and text from a public-facing website. You plan to monitor the sales system to ensure that it provides equitable results regardless of the user's location or background. Which two responsible AI principles provide guidance to meet the monitoring requirements? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A, B, C",
-      "correctAnswer": "B, C",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: BC B and C are correct answers. | Selected Answer: BC BC is the answer. https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/innovate/best-practices/trusted-ai#fairness Fairness is a core ethical principle that all humans aim to understand an",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/74870-exam-ai-102-topic-1-question-6-discussion/"
-    },
-    {
-      "questionId": "Ur2GmJJc6Priqo605azQ",
-      "question": "You are building a solution that will detect anomalies in sensor data from the previous 24 hours. You need to ensure that the solution scans the entire dataset, at the same time, for anomalies. Which type of detection should you use?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/anomaly-detector/overview#univariate-anomaly-detection Batch detection Use your time series to detect any anomalies that migh | Selected Answer: A A is the answer because batch detection processes the entire dataset at once to identify anomalies. This is suitable for scenarios where you need to analyze sensor data from the previous 24 hours in on",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112132-exam-ai-102-topic-1-question-53-discussion/"
-    },
-    {
-      "questionId": "XNK3yPJE6Dy9NbzqLrKt",
-      "question": "You need to build a chatbot that meets the following requirements: ✑ Supports chit-chat, knowledge base, and multilingual models ✑ Performs sentiment analysis on user messages ✑ Selects the best language model automatically What should you integrate into the chatbot?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: according to https://learn.microsoft.com/en-us/azure/ai-services/language-service/overview Azure AI Language now unifies the Text Analyrics, QnA Maker and LUIS. So in my opinion, the question is obsolete. | The correct answer is A. QnA Maker, Language Understanding, Dispatch. The reason is: QnA Maker: Knowledge Base Support. Answers frequently asked questions and allows interaction. Language understanding (LUIS): Understand",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/54105-exam-ai-102-topic-1-question-3-discussion/"
-    },
-    {
-      "questionId": "aGJiW4WYxjQ4zbNz8qOa",
-      "question": "You have the following C# method for creating Azure Cognitive Services resources programmatically. You need to call the method to create a free Azure resource in the West US Azure region. The resource will be used to generate captions of images automatically. Which code should you use?",
-      "userAnswer": "C",
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Answer shall be A, as there is free tier available for Computer Vision service. - Free - Web/Container - 20 per minute - 5,000 free transactions per month | Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account-client-library?pivots=programming-language-csharp#create-a-cognitive-services-resource",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0001500001.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/57153-exam-ai-102-topic-1-question-9-discussion/"
-    },
-    {
-      "questionId": "c65aBgnNpT2fxESA9C3N",
-      "question": "A customer uses Azure Cognitive Search. The customer plans to enable a server-side encryption and use customer-managed keys (CMK) stored in Azure. What are three implications of the planned change? Each correct answer presents a complete solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A, B, F",
-      "correctAnswer": "A, B, F",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Should be ABF (use AKV for customer managed key) | Based on the information from Microsoft’s documentation12, the implications of enabling server-side encryption and using customer-managed keys (CMK) stored in Azure for Azure Cognitive Search are: A. The index size will",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60024-exam-ai-102-topic-1-question-12-discussion/"
-    },
-    {
-      "questionId": "e6OgFHpKYvzeqzH12GgH",
-      "question": "You have an Azure subscription that contains a Language service resource named ta1 and a virtual network named vnet1. You need to ensure that only resources in vnet1 can access ta1. What should you configure?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Correct https://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-virtual-networks?tabs=portal | Appeared on Oct/29/2023.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108848-exam-ai-102-topic-1-question-49-discussion/"
-    },
-    {
-      "questionId": "gPJwCxtvixcvekZRkQoC",
-      "question": "You have an Azure OpenAI model named AI1. You are building a web app named App1 by using the Azure OpenAI SDK. You need to configure App1 to connect to AI1. What information must you provide?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C To connect to an Azure OpenAI model using the Azure OpenAI SDK, you need to provide: The deployment name of the model that you want to use. This is the name that you assigned to the model when you depl | Selected Answer: C \"AI1\" is deployment name. https://learn.microsoft.com/en-us/azure/ai-services/openai/quickstart?tabs=command-line%2Cpython-new&pivots=rest-api#retrieve-key-and-endpoint DEPLOYMENT-NAME This value will",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135059-exam-ai-102-topic-1-question-62-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134936-exam-ai-102-topic-2-question-36-discussion/"
     },
     {
       "questionId": "qWpuh2tSs662ljnZf58w",
@@ -370,6 +230,44 @@
       "questionImages": [],
       "answerImages": [],
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60125-exam-ai-102-topic-1-question-13-discussion/"
+    },
+    {
+      "questionId": "BZEwRTJH3z7fJ67tTmRm",
+      "question": "You are building a Language Understanding model for an e-commerce platform. You need to construct an entity to capture billing addresses. Which entity type should you use for the billing address?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: My guess is A. An ML entity can be composed of smaller sub-entities, each of which can have its own properties. For example, Address could have the following structure: Address: 4567 Main Street, NY, 98052, USA Building | ML. Answer is A",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/54402-exam-ai-102-topic-3-question-12-discussion/"
+    },
+    {
+      "questionId": "G09XomcWA8CNXKRpc9i6",
+      "question": "DRAG DROP - You are developing a call to the Face API. The call must find similar faces from an existing list named employeefaces. The employeefaces list contains 60,000 images. How should you complete the body of the HTTP request? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point. Select and Place:",
+      "userAnswer": "C",
+      "correctAnswer": "B",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Box 1: LargeFaceListID - LargeFaceList: Add a face to a specified large face list, up to 1,000,000 faces. Note: Given query face's faceId, to search the similar-looking faces from a faceId array, a face list or a large face list. A \"faceListId\" is created by FaceList - Create containing persistedFaceIds that will not expire. And a \"largeFaceListId\" is created by LargeFaceList - Create containing persistedFaceIds that will also not expire. Incorrect Answers: Not \"faceListId\": Add a face to a specified face list, up to 1,000 faces. Box 2: matchFace - Find similar has two working modes, \"matchPerson\" and \"matchFace\". \"matchPerson\" is the default mode that it tries to find faces of the same person as possible by using internal same-person thresholds. It is useful to find a known person's other photos. Note that an empty list will be returned if no faces pass the internal thresholds. \"matchFace\" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces. Reference: https://docs.microsoft.com/en-us/rest/api/faceapi/face/findsimilar | Discussion highlights: Correct. | Facelist ID up to 1,000 faces; LargeFaceListId up to 1,000,000 faces https://docs.microsoft.com/en-us/rest/api/faceapi/large-face-list",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0009700001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0009700002.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/55440-exam-ai-102-topic-2-question-12-discussion/"
     },
     {
       "questionId": "y0sdIRaGx2ICrqHN54cD",
@@ -404,6 +302,65 @@
       "questionImages": [],
       "answerImages": [],
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102684-exam-ai-102-topic-2-question-21-discussion/"
+    },
+    {
+      "questionId": "mEuyVO7LaSRXdP23QGsQ",
+      "question": "HOTSPOT - You are developing an app that will use the Azure AI Vision API to analyze an image. You need configure the request that will be used by the app to identify whether an image is clipart or a line drawing. How should you complete the request? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: POST, imagetype https://learn.microsoft.com/en-us/rest/api/computervision/analyze-image/analyze-image?view=rest-computervision-v3.2&tabs=HTTP | POST + imageType, for me and ChatGPT too",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image152.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image153.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/145640-exam-ai-102-topic-2-question-40-discussion/"
+    },
+    {
+      "questionId": "y0WlKqr46BcLKj28zoJI",
+      "question": "You have a mobile app that manages printed forms. You need the app to send images of the forms directly to Forms Recognizer to extract relevant information. For compliance reasons, the image files must not be stored in the cloud. In which format should you send the images to the Form Recognizer API endpoint?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A To send images to the Form Recognizer API endpoint without storing them in the cloud, you should send the images in the following format: A. raw image binary Sending the images as raw image binary data | Appeared on Oct/29/2023",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108600-exam-ai-102-topic-2-question-27-discussion/"
+    },
+    {
+      "questionId": "8eGvN1KoF8nLFHnCorX0",
+      "question": "HOTSPOT - You are developing a service that records lectures given in English (United Kingdom). You have a method named AppendToTranscriptFile that takes translated text and a language identifier. You need to develop code that will provide transcripts of the lectures to attendees in their respective language. The supported languages are English, French, Spanish, and German. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Box 1: {\"fr\", \"de\", \"es\"} A common task of speech translation is to specify target translation languages, at least one is required but multiples are supported. The following code snippet sets both French and German as translation language targets. static async Task TranslateSpeechAsync() { var translationConfig = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRIPTION__KEY, SPEECH__SERVICE__REGION); translationConfig.SpeechRecognitionLanguage = \"it-IT\"; // Translate to languages. See, https://aka.ms/speech/sttt-languages translationConfig.AddTargetLanguage(\"fr\"); translationConfig.AddTargetLanguage(\"de\"); } Box 2: TranslationRecognizer - After you've created a SpeechTranslationConfig, the next step is to initialize a TranslationRecognizer. Example code: static async Task TranslateSpeechAsync() { var translationConfig = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRIPTION__KEY, SPEECH__SERVICE__REGION); var fromLanguage = \"en-US\"; var toLanguages = new List<string> { \"it\", \"fr\", \"de\" }; translationConfig.SpeechRecognitionLanguage = fromLanguage; toLanguages.ForEach(translationConfig.AddTargetLanguage); using var recognizer = new TranslationRecognizer(translationConfig); } | Discussion highlights: Correct! | Seems correct https://docs.microsoft.com/en-us/dotnet/api/microsoft.cognitiveservices.speech.translation.translationrecognizer?view=azure-dotnet | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0013100001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0013200001.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56455-exam-ai-102-topic-3-question-5-discussion/"
     }
   ]
 }

@@ -46,9 +46,9 @@
 - Estimated time: 1 hr
 
 ### Day 6 (2026-05-11) - Domain 2: Foundry GenAI Foundations
-- [ ] Study: Foundry project setup, prompt flow, evaluation basics
-- [ ] Practice: 8 questions on Domain 2
-- [ ] Lab: Prompt flow with two connected nodes
+- [x] Study: Foundry project setup, prompt flow, evaluation basics
+- [x] Practice: 13 graded questions (11/13 = 84.6%)
+- [x] Lab: Prompt flow with two connected nodes
 - Estimated time: 0.5 hrs
 
 ### Day 7 (2026-05-12) - Domain 2: RAG Fundamentals

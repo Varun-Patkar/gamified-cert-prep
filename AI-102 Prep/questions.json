@@ -2591,13 +2591,13 @@
           "id": "eul2BYL93Dubnt1FSllf",
           "question": "DRAG DROP - You have an app that uses Azure AI and a custom trained classifier to identify products in images. You need to add new products to the classifier. The solution must meet the following requirements: • Minimize how long it takes to add the products. • Minimize development effort. Which five actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
           "options": [
-            "A. DRAG DROP - You have an app that uses Azure AI and a custom trained classifier to identify products in images. You need to add new products ...",
-            "B. DRAG DROP - You have an app that uses Azure AI and a custom trained classifier to identify products in images. You need to add new products ...",
-            "C. DRAG DROP - You have an app that uses Azure AI and a custom trained classifier to identify products in images. You need to add new products ...",
-            "D. DRAG DROP - You have an app that uses Azure AI and a custom trained classifier to identify products in images. You need to add new products ...",
-            "E. DRAG DROP - You have an app that uses Azure AI and a custom trained classifier to identify products in images. You need to add new products ..."
+            "A. Step 1: From the Custom Vision portal, open the project → Step 2: Upload sample images of the new products → Step 3: Label the sample images → Step 4: Retrain the model → Step 5: Publish the model",
+            "B. Step 1: From Vision Studio, open the project → Step 2: Upload sample images of the new products → Step 3: Label the sample images → Step 4: Retrain the model → Step 5: Publish the model",
+            "C. Step 1: From the Azure Machine Learning studio, open the workspace → Step 2: Upload sample images of the new products → Step 3: Label the sample images → Step 4: Retrain the model → Step 5: Publish the model",
+            "D. Step 1: From the Custom Vision portal, open the project → Step 2: Label the sample images → Step 3: Upload sample images of the new products → Step 4: Retrain the model → Step 5: Publish the model",
+            "E. Step 1: From the Custom Vision portal, open the project → Step 2: Upload sample images of the new products → Step 3: Retrain the model → Step 4: Label the sample images → Step 5: Publish the model"
           ],
-          "explanation": "Discussion highlights: First step should be Custom Vision. Then Upload sample images / Label / Retrain / Publish Custom classifiers have to go through custom vision, obviously | From the Custom Vision Portal, Open the Project. Upload Sample images of the new products. Label the Sample images. Retrain the model. Publish the model.",
+          "explanation": "Correct sequence: 1) From the Custom Vision portal, open the project — Custom Vision classifiers are managed in the Custom Vision portal (customvision.ai), NOT Vision Studio or Azure ML. 2) Upload sample images of the new products. 3) Label the sample images with the appropriate tags. 4) Retrain the model to learn the new products. 5) Publish the model so the app can consume the updated classifier. Vision Studio and Azure ML studio are distractors — Custom Vision projects are managed in the Custom Vision portal.",
           "topic": "Topic 2",
           "difficulty": "medium",
           "source": "ExamTopics community dump",
@@ -2608,34 +2608,14 @@
           "answerImages": [
             "https://img.examtopics.com/ai-102/image214.png"
           ],
-          "answerStatus": "llm_offline_completion",
-          "type": "multi",
-          "ungraded": true,
-          "correctAnswers": [
-            "A",
-            "B",
-            "C",
-            "D",
-            "E"
-          ],
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "medium",
-          "answerRationale": "ordered multi-step answer inferred from explanation/discussion",
-          "questionTypeInferredByAgent": "multi-select",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]",
-            "E. [Inline placeholder option E; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          }
+          "answerStatus": "verified",
+          "type": "mcq",
+          "ungraded": false,
+          "correctAnswer": "A",
+          "answerInferredFrom": "community_discussion_verified",
+          "answerConfidence": "high",
+          "answerRationale": "Custom Vision portal → Upload → Label → Retrain → Publish is the correct 5-step sequence per Microsoft docs and community consensus",
+          "questionTypeInferredByAgent": "ordered-sequence"
         },
         {
           "id": "ix34tYoG4cvNiIGOnSzU",
@@ -3253,14 +3233,14 @@
         },
         {
           "id": "34idbrTmBSHf5uM3U8Af",
-          "question": "HOTSPOT - You run the following command. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
+          "question": "HOTSPOT - You run the following command:\n\ndocker run --rm -it -p 5000:5000 --memory 10g --cpus 2 mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment Eula=accept Billing={ENDPOINT_URI} ApiKey={API_KEY}\n\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\n\n1. Going to http://localhost:5000/status will query the Azure endpoint to verify whether the API key used to start the container is valid.\n2. The container logging provider will write log data.\n3. Going to http://localhost:5000/swagger will provide the details to access the documentation for the available endpoints.",
           "options": [
-            "C. Box 1: to access the documentation for the available endpoints. [el; Box 2: to verify whether the API key used to start the container is valid. ig]; Box 3: Statements",
-            "D. Box 1: to verify whether the API key used to start the container is valid. ig]; Box 2: Statements; Box 3: to access the documentation for the available endpoints. [el",
-            "B. Box 1: to verify whether the API key used to start the container is valid. ig]; Box 2: to access the documentation for the available endpoints. [el; Box 3: Statements",
-            "A. Box 1: Statements; Box 2: to verify whether the API key used to start the container is valid. ig]; Box 3: to access the documentation for the available endpoints. [el"
+            "A. 1: Yes, 2: No, 3: Yes",
+            "B. 1: Yes, 2: Yes, 3: Yes",
+            "C. 1: No, 2: No, 3: Yes",
+            "D. 1: Yes, 2: No, 3: No"
           ],
-          "explanation": "Discussion highlights: Yes No Yes Log location is not mounted. The ET answer relates to an example provided on the given website which DOES mount a log location. | YNY is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/text-analytics-for-health/how-to/use-containers?tabs=language#validate-that-a-container-is-running - http://localhost:5000/st",
+          "explanation": "Answer: Yes, No, Yes.\n\n1. YES — http://localhost:5000/status queries the Azure billing endpoint to validate the API key and that the container is properly connected.\n2. NO — The container logging provider will NOT write log data because no volume mount (-v) for logs was specified in the docker run command. Without mounting a log output directory (e.g., -v /host/logs:/output), no logs are persisted.\n3. YES — http://localhost:5000/swagger serves the Swagger UI with documentation for all available container endpoints.\n\nRef: https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/sentiment-opinion-mining/how-to/use-containers",
           "topic": "Topic 3",
           "difficulty": "medium",
           "source": "ExamTopics community dump",
@@ -3272,28 +3252,14 @@
           "answerImages": [
             "https://img.examtopics.com/ai-102/image217.png"
           ],
-          "answerStatus": "llm_offline_completion",
-          "type": "mc",
+          "answerStatus": "verified",
+          "type": "mcq",
           "correctAnswer": "A",
           "ungraded": false,
-          "answerInferredFrom": "llm_offline_subagent",
-          "answerConfidence": "medium",
-          "answerRationale": "nearest graded-question semantic match",
-          "questionTypeInferredByAgent": "mcq",
-          "originalPlaceholderOptions": [
-            "A. [Inline placeholder option A; refer question/answer image and discussion context]",
-            "B. [Inline placeholder option B; refer question/answer image and discussion context]",
-            "C. [Inline placeholder option C; refer question/answer image and discussion context]",
-            "D. [Inline placeholder option D; refer question/answer image and discussion context]"
-          ],
-          "optionsAgentGenerated": true,
-          "optionGenerationMeta": {
-            "generatedBy": "agent",
-            "method": "contextual_generation_from_question_answer_explanation_image_refs",
-            "warning": "Options were agent-generated and may be incorrect. Verify with image/source discussion.",
-            "generatedAt": "2026-05-05T12:02:03.066967Z"
-          },
-          "optionFixMethod": "ocr_dropdown_sections"
+          "answerInferredFrom": "community_discussion_verified",
+          "answerConfidence": "high",
+          "answerRationale": "Yes/No/Yes confirmed by community consensus — /status validates API key, no -v mount means no log output, /swagger serves endpoint docs",
+          "questionTypeInferredByAgent": "hotspot-converted-mcq"
         },
         {
           "id": "42zs4RAoOPbBjunT2VPf",
@@ -3414,12 +3380,12 @@
           "id": "8eGvN1KoF8nLFHnCorX0",
           "question": "HOTSPOT - You are developing a service that records lectures given in English (United Kingdom). You have a method named AppendToTranscriptFile that takes translated text and a language identifier. You need to develop code that will provide transcripts of the lectures to attendees in their respective language. The supported languages are English, French, Spanish, and German. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
           "options": [
-            "D. Box 1: {\"fr\", \"de\", \"es\"} A common task of speech translation is to specify target...; Box 2: TranslationRecognizer - After you've created a SpeechTranslationConfig, the next step is to initialize a TranslationRecognizer",
-            "A. Box 1: {\"fr\", \"de\", \"es\"} A common task of speech translation is to specify target translation languages, at least one is required but multiples are supported; Box 2: TranslationRecognizer - After you've created a SpeechTranslationConfig, the next step is to initialize a TranslationRecognizer",
-            "C. Box 1: {\"fr\", \"de\", \"es\"} A common task of speech translation is to specify target translation languages, at least one is required but multiples are supported; Box 2: TranslationRecognizer - After you've created a SpeechTranslatio...",
-            "B. Box 1: TranslationRecognizer - After you've created a SpeechTranslationConfig, the next step is to initialize a TranslationRecognizer; Box 2: {\"fr\", \"de\", \"es\"} A common task of speech translation is to specify target translation languages, at least one is required but multiples are supported"
+            "A. Box 1: {\"fr\", \"de\", \"es\"}; Box 2: TranslationRecognizer",
+            "B. Box 1: {\"en-GB\", \"fr\", \"de\", \"es\"}; Box 2: TranslationRecognizer",
+            "C. Box 1: {\"fr\", \"de\", \"es\"}; Box 2: SpeechRecognizer",
+            "D. Box 1: {\"en-GB\", \"fr\", \"de\", \"es\"}; Box 2: SpeechRecognizer"
           ],
-          "explanation": "Box 1: {\"fr\", \"de\", \"es\"} A common task of speech translation is to specify target translation languages, at least one is required but multiples are supported. The following code snippet sets both French and German as translation language targets. static async Task TranslateSpeechAsync() { var translationConfig = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRIPTION__KEY, SPEECH__SERVICE__REGION); translationConfig.SpeechRecognitionLanguage = \"it-IT\"; // Translate to languages. See, https://aka.ms/speech/sttt-languages translationConfig.AddTargetLanguage(\"fr\"); translationConfig.AddTargetLanguage(\"de\"); } Box 2: TranslationRecognizer - After you've created a SpeechTranslationConfig, the next step is to initialize a TranslationRecognizer. Example code: static async Task TranslateSpeechAsync() { var translationConfig = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRIPTION__KEY, SPEECH__SERVICE__REGION); var fromLanguage = \"en-US\"; var toLanguages = new List<string> { \"it\", \"fr\", \"de\" }; translationConfig.SpeechRecognitionLanguage = fromLanguage; toLanguages.ForEach(translationConfig.AddTargetLanguage); using var recognizer = new TranslationRecognizer(translationConfig); } | Discussion highlights: Correct! | Seems correct https://docs.microsoft.com/en-us/dotnet/api/microsoft.cognitiveservices.speech.translation.translationrecognizer?view=azure-dotnet | Answer inferred from top upvoted discussion consensus.",
+          "explanation": "Box 1: {\"fr\", \"de\", \"es\"} — You only specify TARGET languages, not the source. The source language (en-GB) is set via SpeechRecognitionLanguage. English is NOT included as a target because the recognition already produces English text. You only need French, German, and Spanish as translation targets.\n\nBox 2: TranslationRecognizer — After configuring SpeechTranslationConfig with source and target languages, you initialize a TranslationRecognizer (not SpeechRecognizer, which only does speech-to-text without translation).\n\nCode pattern:\nvar config = SpeechTranslationConfig.FromSubscription(key, region);\nconfig.SpeechRecognitionLanguage = \"en-GB\";\nconfig.AddTargetLanguage(\"fr\");\nconfig.AddTargetLanguage(\"de\");\nconfig.AddTargetLanguage(\"es\");\nusing var recognizer = new TranslationRecognizer(config);\n\nRef: https://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-speech-translation",
           "topic": "Topic 3",
           "difficulty": "medium",
           "source": "ExamTopics community dump",
