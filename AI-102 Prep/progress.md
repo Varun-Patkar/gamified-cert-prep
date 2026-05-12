@@ -1,13 +1,15 @@
 # Progress Tracker: Designing and Implementing a Microsoft Azure AI Solution (AI-102)
 
 ## Overall
-- Sessions Completed: 6 / 32
-- Questions Answered: 89 / 313
-- Accuracy: 88.6%
-- Current Streak: 6 days
-- Next Session: Day 7 (2026-05-12)
+
+- Sessions Completed: 7 / 32
+- Questions Answered: 101 / 313
+- Accuracy: 87.1%
+- Current Streak: 7 days
+- Next Session: Day 8 (2026-05-13)
 
 ## Milestones
+
 - [x] Domain 1 completed (Days 1-5, avg 90.3%)
 - [ ] Domain 2 completed
 - [ ] Domain 3 completed
@@ -19,9 +21,11 @@
 - [ ] Final mock completed
 
 ## Daily Log
+
 (Updated after each session)
 
 ### Day 1 (2026-05-06) - Domain 1: Service Selection
+
 - Status: Completed
 - Questions Attempted: 14 (graded) + 2 skipped (simulations)
 - Correct: 12 / 14 (85.7%)
@@ -32,6 +36,7 @@
 - Next action: Day 2 - Deployment Planning
 
 ### Day 2 (2026-05-07) - Domain 1: Deployment Planning
+
 - Status: Completed
 - Questions Attempted: 16 (graded)
 - Correct: 14 / 16 (87.5%)
@@ -44,6 +49,7 @@
 - Next action: Day 3 - Security and Monitoring
 
 ### Day 3 (2026-05-08) - Domain 1: Security and Monitoring
+
 - Status: Completed
 - Questions Attempted: 15 (graded)
 - Correct: 15 / 15 (100%)
@@ -55,6 +61,7 @@
 - Next action: Day 4 - Responsible AI Controls
 
 ### Day 4 (2026-05-09) - Domain 1: Responsible AI Controls
+
 - Status: Completed
 - Questions Attempted: 13 (graded)
 - Correct: 13 / 13 (100%) — 1 marked wrong by quiz but answer was correct (container ordering: agent-generated options mislabeled)
@@ -65,6 +72,7 @@
 - Next action: Day 5 - Domain 1 Consolidation
 
 ### Day 5 (2026-05-10) - Domain 1: Consolidation
+
 - Status: Completed
 - Questions Attempted: 18 (graded)
 - Correct: 15 / 18 (83.3%)
@@ -78,6 +86,7 @@
 - Next action: Day 6 - Domain 2: Foundry GenAI Foundations
 
 ### Day 6 (2026-05-11) - Domain 2: Foundry GenAI Foundations
+
 - Status: Completed
 - Questions Attempted: 13 (graded) + 1 skipped + 1 ungraded
 - Correct: 11 / 13 (84.6%)
@@ -89,3 +98,21 @@
 - Lab: Prompt flow design exercise (from session file)
 - Notes: _fill in your own words_
 - Next action: Day 7 - Domain 2: RAG Fundamentals
+
+### Day 7 (2026-05-12) - Domain 2: RAG Fundamentals
+
+- Status: Completed
+- Questions Attempted: 12 (graded after adjustment) + 3 excluded (garbled options)
+- Correct: 8 / 12 (66.7%)
+- Time Spent: ~5.7 min quiz
+- Excluded Questions: 3 hotspot Qs had garbled agent-generated options (brands CV, Face API stream, Speech SDK translation)
+- Credited: 1 Q (AI Vision tags hotspot) — user demonstrated correct reasoning despite broken options
+- Key Mistakes:
+  - Speech translation: TranslationRecognizer (not SpeechRecognizer) + target langs exclude source lang (en-GB)
+  - Video Indexer upload: all 4 files uploadable (WMV/AVI/MOV/MP4 all supported, 2GB device limit, 30GB URL limit)
+  - Face Recognition hotspot: Yes, No, Yes (Free tier = 1K person groups × 1K persons = 1M max; code uses AddFaceFromUrlAsync matching URI source)
+  - Video Indexer person search: Customize Person model (not create Face API group separately)
+- Topic 2: 3/7 graded (42.9%) — weak area
+- Topic 3: 5/5 graded (100%)
+- Notes: _fill in your own words_
+- Next action: Day 8 - Domain 2: Azure OpenAI Usage

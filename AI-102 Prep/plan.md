@@ -1,6 +1,7 @@
 # Study Plan: Designing and Implementing a Microsoft Azure AI Solution (AI-102)
 
 ## Summary
+
 - Start Date: 2026-05-06
 - Target Exam Date: 2026-06-07
 - Total Study Days: 32
@@ -9,6 +10,7 @@
 - Plan Basis: Intermediate level, no confident domains skipped, all days active, no blackout days
 
 ## Allocation Logic
+
 - Higher-weight domains get more days: D1 > D2/D5/D6 > D4 > D3
 - Buffer included: 1 dedicated catch-up day (~3% by day count, plus micro-buffer in each weekend)
 - Final phase: last 3 days are full review and mock simulation
@@ -16,212 +18,249 @@
 ## Daily Schedule
 
 ### Day 1 (2026-05-06) - Domain 1: Service Selection
+
 - [x] Study: Choose Foundry services for GenAI, vision, NLP, speech
 - [x] Practice: 8 questions on Domain 1
 - [x] Lab: Map 5 scenarios to correct Azure AI services
 - Estimated time: 0.5 hrs
 
 ### Day 2 (2026-05-07) - Domain 1: Deployment Planning
+
 - [x] Study: Resource creation, model choice, deployment options
 - [x] Practice: 8 questions on Domain 1
 - [x] Lab: Draft one production deployment checklist
 - Estimated time: 0.5 hrs
 
 ### Day 3 (2026-05-08) - Domain 1: Security and Monitoring
+
 - [x] Study: Keys, identity, monitoring, cost controls
 - [x] Practice: 8 questions on Domain 1
 - [x] Lab: Define RBAC + Managed Identity design
 - Estimated time: 0.5 hrs
 
 ### Day 4 (2026-05-09) - Domain 1: Responsible AI Controls
+
 - [x] Study: Content filters, blocklists, harm detection, prompt shields
 - [x] Practice: 15 questions on Domain 1
 - [x] Lab: Create safety policy matrix (input/output/grounding)
 - Estimated time: 1 hr
 
 ### Day 5 (2026-05-10) - Domain 1: Consolidation
+
 - [x] Study: End-to-end design for secure AI solution lifecycle
 - [x] Practice: 18 mixed questions from Domain 1 (15/18 = 83.3%)
 - [x] Lab: One mini architecture review
 - Estimated time: 1 hr
 
 ### Day 6 (2026-05-11) - Domain 2: Foundry GenAI Foundations
+
 - [x] Study: Foundry project setup, prompt flow, evaluation basics
 - [x] Practice: 13 graded questions (11/13 = 84.6%)
 - [x] Lab: Prompt flow with two connected nodes
 - Estimated time: 0.5 hrs
 
 ### Day 7 (2026-05-12) - Domain 2: RAG Fundamentals
-- [ ] Study: Grounding data, retrieval flow, context design
-- [ ] Practice: 8 questions on Domain 2
-- [ ] Lab: Draft RAG architecture for internal docs
+
+- [x] Study: Grounding data, retrieval flow, context design
+- [x] Practice: 8 questions on Domain 2
+- [x] Lab: Draft RAG architecture for internal docs
 - Estimated time: 0.5 hrs
 
 ### Day 8 (2026-05-13) - Domain 2: Azure OpenAI Usage
+
 - [ ] Study: Model deployment, prompt calls, multimodal use, DALL-E basics
 - [ ] Practice: 8 questions on Domain 2
 - [ ] Lab: Compare two prompt templates for same task
 - Estimated time: 0.5 hrs
 
 ### Day 9 (2026-05-14) - Domain 2: Optimization and Ops
+
 - [ ] Study: Temperature/top_p, tracing, feedback loops, reflection
 - [ ] Practice: 8 questions on Domain 2
 - [ ] Lab: Define production telemetry KPI list
 - Estimated time: 0.5 hrs
 
 ### Day 10 (2026-05-15) - Domain 2: Fine-tuning and Orchestration
+
 - [ ] Study: Fine-tuning decisions, multi-model orchestration
 - [ ] Practice: 8 questions on Domain 2
 - [ ] Lab: Write decision tree for prompt-only vs fine-tune
 - Estimated time: 0.5 hrs
 
 ### Day 11 (2026-05-16) - Domain 3: Agent Concepts
+
 - [ ] Study: Agent role, use-cases, constraints and tool boundaries
 - [ ] Practice: 15 questions on Domain 3
 - [ ] Lab: Define planner/executor split for one workflow
 - Estimated time: 1 hr
 
 ### Day 12 (2026-05-17) - Domain 3: Agent Framework Refresher
+
 - [ ] Study: Foundry Agent Service and orchestration patterns
 - [ ] Practice: 15 questions on Domain 3 + Domain 2 crossover
 - [ ] Lab: Document safe multi-agent guardrails
 - Estimated time: 1 hr
 
 ### Day 13 (2026-05-18) - Domain 4: Image Analysis
+
 - [ ] Study: OCR, tags, object outputs, response interpretation
 - [ ] Practice: 15 questions on Domain 4
 - [ ] Lab: Compare OCR vs object detection use-cases
 - Estimated time: 1 hr
 
 ### Day 14 (2026-05-19) - Domain 4: Custom Vision Models
+
 - [ ] Study: Classification vs detection, labeling quality, metrics
 - [ ] Practice: 8 questions on Domain 4
 - [ ] Lab: Define labeling rules for dataset consistency
 - Estimated time: 0.5 hrs
 
 ### Day 15 (2026-05-20) - Domain 4: Training and Publishing
+
 - [ ] Study: Train/evaluate/publish/consume custom models
 - [ ] Practice: 8 questions on Domain 4
 - [ ] Lab: Draft CI/CD flow for model publish
 - Estimated time: 0.5 hrs
 
 ### Day 16 (2026-05-21) - Domain 4: Video and Spatial Analysis
+
 - [ ] Study: Video Indexer and Spatial Analysis scenarios
 - [ ] Practice: 8 questions on Domain 4
 - [ ] Lab: Map video analytics requirements to service choices
 - Estimated time: 0.5 hrs
 
 ### Day 17 (2026-05-22) - Domain 5: Text Analytics
+
 - [ ] Study: Entity extraction, sentiment, language detection, PII
 - [ ] Practice: 8 questions on Domain 5
 - [ ] Lab: Build compliance-oriented text processing checklist
 - Estimated time: 0.5 hrs
 
 ### Day 18 (2026-05-23) - Domain 5: Translation Workloads
+
 - [ ] Study: Translator patterns for text and document translation
 - [ ] Practice: 15 questions on Domain 5
 - [ ] Lab: Design multilingual support flow
 - Estimated time: 1 hr
 
 ### Day 19 (2026-05-24) - Domain 5: Speech Solutions
+
 - [ ] Study: STT/TTS, SSML, custom speech, keyword/intent
 - [ ] Practice: 15 questions on Domain 5
 - [ ] Lab: Create a speech bot latency optimization checklist
 - Estimated time: 1 hr
 
 ### Day 20 (2026-05-25) - Domain 5: Custom Language Models
+
 - [ ] Study: intents/entities/utterances lifecycle
 - [ ] Practice: 8 questions on Domain 5
 - [ ] Lab: Plan train-test-publish cycle for one model
 - Estimated time: 0.5 hrs
 
 ### Day 21 (2026-05-26) - Domain 5: Question Answering
+
 - [ ] Study: Q&A sources, multi-turn, alternate phrasing, export
 - [ ] Practice: 8 questions on Domain 5
 - [ ] Lab: Draft knowledge base content strategy
 - Estimated time: 0.5 hrs
 
 ### Day 22 (2026-05-27) - Domain 5: Consolidation
+
 - [ ] Study: End-to-end NLP + speech + translation integration
 - [ ] Practice: 8 mixed questions on Domain 5
 - [ ] Lab: Rapid recap notes in your own words
 - Estimated time: 0.5 hrs
 
 ### Day 23 (2026-05-28) - Domain 6: AI Search Core
+
 - [ ] Study: Index, data source, indexer, skillset fundamentals
 - [ ] Practice: 8 questions on Domain 6
 - [ ] Lab: Design index schema for RAG use-case
 - Estimated time: 0.5 hrs
 
 ### Day 24 (2026-05-29) - Domain 6: Query and Enrichment
+
 - [ ] Study: Filters, sorting, wildcard, custom skills
 - [ ] Practice: 8 questions on Domain 6
 - [ ] Lab: Define enrichment pipeline and custom skill role
 - Estimated time: 0.5 hrs
 
 ### Day 25 (2026-05-30) - Domain 6: Semantic and Vector Search
+
 - [ ] Study: Semantic ranking, vector/hybrid retrieval patterns
 - [ ] Practice: 15 questions on Domain 6
 - [ ] Lab: Choose retrieval strategy for three scenarios
 - Estimated time: 1 hr
 
 ### Day 26 (2026-05-31) - Domain 6: Document Intelligence
+
 - [ ] Study: Prebuilt/custom/composed models
 - [ ] Practice: 15 questions on Domain 6
 - [ ] Lab: Build document extraction validation checklist
 - Estimated time: 1 hr
 
 ### Day 27 (2026-06-01) - Domain 6: Content Understanding
+
 - [ ] Study: OCR pipelines, multimodal extraction from docs/media
 - [ ] Practice: 8 questions on Domain 6
 - [ ] Lab: Map ingestion pipeline for mixed media content
 - Estimated time: 0.5 hrs
 
 ### Day 28 (2026-06-02) - Domain 6: Consolidation
+
 - [ ] Study: Full knowledge mining architecture recap
 - [ ] Practice: 8 mixed questions on Domain 6
 - [ ] Lab: Summarize key failure modes and mitigations
 - Estimated time: 0.5 hrs
 
 ### Day 29 (2026-06-03) - Buffer / Catch-up
+
 - [ ] Study: Revisit weakest two subdomains from Days 1-28
 - [ ] Practice: 8 targeted remediation questions
 - [ ] Lab: Fix notes gaps and unclear concepts
 - Estimated time: 0.5 hrs
 
 ### Day 30 (2026-06-04) - Full Review 1
+
 - [ ] Study: Rapid review Domains 1, 2, 5
 - [ ] Practice: 20 mixed questions (cross-domain)
 - [ ] Lab: 20-minute scenario drill
 - Estimated time: 0.5 hrs
 
 ### Day 31 (2026-06-05) - Full Review 2
+
 - [ ] Study: Rapid review Domains 3, 4, 6
 - [ ] Practice: 20 mixed questions (cross-domain)
 - [ ] Lab: 20-minute architecture reasoning drill
 - Estimated time: 0.5 hrs
 
 ### Day 32 (2026-06-06) - Mock Simulation + Final Revision
+
 - [ ] Study: Final formula sheet and service-selection heuristics
 - [ ] Practice: 35-question mock simulation under time pressure
 - [ ] Lab: Post-mock error analysis and last weak-point touch-up
 - Estimated time: 1 hr
 
 ## Execution Guidance
+
 - Use quiz runner daily to avoid chat context overload.
 - Keep 5-10 lines of personal notes after each day (your own words).
 - Focus on service selection and scenario-based decision patterns; these dominate AI-102 question style.
 
 ## Quiz Runner Commands By Day
+
 Run from the AI-102 Prep folder.
 
 Example:
+
 - `python quiz_runner.py questions.json --day-lock 7 --carryover 3 --shuffle --open-images --web --port 8765`
 
 ### Core Command Pattern
+
 - `python quiz_runner.py questions.json --day-lock <dayNumber> --carryover 3 --shuffle --open-images --web --port 8765`
 
 ### Daily Commands
+
 - Day 1: `python quiz_runner.py questions.json --day-lock 1 --carryover 0 --shuffle --open-images --web --port 8765`
 - Day 2: `python quiz_runner.py questions.json --day-lock 2 --carryover 3 --shuffle --open-images --web --port 8765`
 - Day 3: `python quiz_runner.py questions.json --day-lock 3 --carryover 3 --shuffle --open-images --web --port 8765`

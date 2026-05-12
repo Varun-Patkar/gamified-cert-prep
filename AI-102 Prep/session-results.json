@@ -1,103 +1,120 @@
 {
-  "timestamp": "2026-05-11T22:16:50.192728",
+  "timestamp": "2026-05-12T15:36:34.639759",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
     "totalQuestions": 15,
-    "gradedQuestions": 13,
-    "correct": 11,
-    "wrong": 2,
-    "skipped": 1,
-    "ungraded": 1,
-    "accuracy": 84.6,
-    "timeSeconds": 327.9
+    "gradedQuestions": 12,
+    "correct": 8,
+    "wrong": 4,
+    "skipped": 0,
+    "ungraded": 0,
+    "accuracy": 66.7,
+    "timeSeconds": 342.3,
+    "excluded_garbled": 3,
+    "adjustmentNote": "Recalculated: 3 questions excluded (garbled options), 1 credited (user demonstrated correct reasoning despite garbled options)"
   },
   "domainBreakdown": {
     "Implement generative AI solutions": {
-      "total": 12,
-      "correct": 8,
-      "wrong": 3,
-      "skipped": 1
-    },
-    "Plan and manage an Azure AI solution": {
-      "total": 3,
-      "correct": 3,
-      "wrong": 0,
-      "skipped": 0
+      "total": 15,
+      "correct": 7,
+      "wrong": 6,
+      "skipped": 2
     }
   },
   "topicBreakdown": {
-    "Topic 2": {
-      "total": 9,
-      "correct": 6,
-      "wrong": 3,
-      "skipped": 0
-    },
     "Topic 3": {
-      "total": 4,
-      "correct": 3,
-      "wrong": 0,
+      "total": 7,
+      "correct": 5,
+      "wrong": 1,
       "skipped": 1
     },
-    "Topic 1": {
-      "total": 2,
+    "Topic 2": {
+      "total": 8,
       "correct": 2,
-      "wrong": 0,
-      "skipped": 0
+      "wrong": 5,
+      "skipped": 1
     }
   },
   "wrongQuestions": [
     {
-      "questionId": "N4ZmG8ix9L69N9JUWV13",
-      "question": "You are building an app that will include one million scanned magazine articles. Each article will be stored as an image file. You need to configure the app to extract text from the images. The solution must minimize development effort. What should you include in the solution?",
+      "questionId": "8eGvN1KoF8nLFHnCorX0",
+      "question": "HOTSPOT - You are developing a service that records lectures given in English (United Kingdom). You have a method named AppendToTranscriptFile that takes translated text and a language identifier. You need to develop code that will provide transcripts of the lectures to attendees in their respective language. The supported languages are English, French, Spanish, and German. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
       "userAnswer": "C",
+      "correctAnswer": "A",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0013100001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0013200001.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56455-exam-ai-102-topic-3-question-5-discussion/",
+      "explanation": "Box 1: {\"fr\", \"de\", \"es\"} — You only specify TARGET languages, not the source. The source language (en-GB) is set via SpeechRecognitionLanguage. English is NOT included as a target because the recognition already produces English text. You only need French, German, and Spanish as translation targets.\n\nBox 2: TranslationRecognizer — After configuring SpeechTranslationConfig with source and target languages, you initialize a TranslationRecognizer (not SpeechRecognizer, which only does speech-to-text without translation).\n\nCode pattern:\nvar config = SpeechTranslationConfig.FromSubscription(key, region);\nconfig.SpeechRecognitionLanguage = \"en-GB\";\nconfig.AddTargetLanguage(\"fr\");\nconfig.AddTargetLanguage(\"de\");\nconfig.AddTargetLanguage(\"es\");\nusing var recognizer = new TranslationRecognizer(config);\n\nRef: https://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-speech-translation",
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions"
+    },
+    {
+      "questionId": "tNooLCK4iuVfCGQYLp66",
+      "question": "You have a local folder that contains the files shown in the following table. You need to analyze the files by using Azure AI Video Indexer. Which files can you upload to the Video Indexer website?",
+      "userAnswer": "E",
       "correctAnswer": "B",
-      "questionImages": [],
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image171.png"
+      ],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122477-exam-ai-102-topic-2-question-32-discussion/",
-      "explanation": "Discussion highlights: Selected Answer: B To me the correct answer is B. With the new Image Analysis API 4.0 (in preview) you could use OCR feature too, but as i said, it is in preview. And i don't think it is considered in the exam. https://l | All answers should have a reference to prove the answer is true",
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150146-exam-ai-102-topic-2-question-42-discussion/",
+      "explanation": "Discussion highlights: Selected Answer: B B is right answer 100% | Answer is right : - size limit 2Gb uploaded from a device and 30Gb uploaded from url - time 6 hours basic audio 12 hours - available formats : WMV ,AVI ,MOV ,MP4 So all the files are allowed",
       "topic": "Topic 2",
       "domainName": "Implement generative AI solutions"
     },
     {
-      "questionId": "G09XomcWA8CNXKRpc9i6",
-      "question": "DRAG DROP - You are developing a call to the Face API. The call must find similar faces from an existing list named employeefaces. The employeefaces list contains 60,000 images. How should you complete the body of the HTTP request? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point. Select and Place:",
-      "userAnswer": "C",
-      "correctAnswer": "B",
+      "questionId": "IJvXqrBcH0GCuOhthbmc",
+      "question": "HOTSPOT - You are developing an application to recognize employees' faces by using the Face Recognition API. Images of the faces will be accessible from a URI endpoint. The application has the following code. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": "A",
+      "correctAnswer": "C",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0009700001.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0008700001.png",
+        "https://www.examtopics.com/assets/media/exam-media/04271/0008700002.png"
       ],
       "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0009700002.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0008800001.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/55440-exam-ai-102-topic-2-question-12-discussion/",
-      "explanation": "Box 1: LargeFaceListID - LargeFaceList: Add a face to a specified large face list, up to 1,000,000 faces. Note: Given query face's faceId, to search the similar-looking faces from a faceId array, a face list or a large face list. A \"faceListId\" is created by FaceList - Create containing persistedFaceIds that will not expire. And a \"largeFaceListId\" is created by LargeFaceList - Create containing persistedFaceIds that will also not expire. Incorrect Answers: Not \"faceListId\": Add a face to a specified face list, up to 1,000 faces. Box 2: matchFace - Find similar has two working modes, \"matchPerson\" and \"matchFace\". \"matchPerson\" is the default mode that it tries to find faces of the same person as possible by using internal same-person thresholds. It is useful to find a known person's other photos. Note that an empty list will be returned if no faces pass the internal thresholds. \"matchFace\" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces. Reference: https://docs.microsoft.com/en-us/rest/api/faceapi/face/findsimilar | Discussion highlights: Correct. | Facelist ID up to 1,000 faces; LargeFaceListId up to 1,000,000 faces https://docs.microsoft.com/en-us/rest/api/faceapi/large-face-list",
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/82128-exam-ai-102-topic-2-question-6-discussion/",
+      "explanation": "Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/use-persondirectory | Discussion highlights: Based on the subscription, I think, it could also be Yes Yes Yes \"Free-tier subscription quota: 1,000 person groups. Each holds up to 1,000 persons. S0-tier subscription quota: 1,000,000 person groups. Each holds up to 1 | Yes No Yes \"Free-tier subscription quota: 1,000 person groups. Each holds up to 1,000 persons. So in the code you can have 1000 person groups and 1000 persons each giving you 1,000,000 people",
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions"
+    },
+    {
+      "questionId": "oCFmiVxvr7ipOakyGXeS",
+      "question": "You have an Azure Video Analyzer for Media (previously Video Indexer) service that is used to provide a search interface over company videos on your company's website. You need to be able to search for videos based on who is present in the video. What should you do?",
+      "userAnswer": "B",
+      "correctAnswer": "A",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75691-exam-ai-102-topic-2-question-10-discussion/",
+      "explanation": "Discussion highlights: Selected Answer: A A seems the correct answer https://learn.microsoft.com/en-us/azure/azure-video-indexer/customize-person-model-overview | Selected Answer: A Should be A",
       "topic": "Topic 2",
       "domainName": "Implement generative AI solutions"
     }
   ],
-  "skippedQuestions": [
-    "34idbrTmBSHf5uM3U8Af"
-  ],
+  "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "RLZxWi0RxBbcwADhkOFR",
-      "question": "You are developing a method that uses the Computer Vision client library. The method will perform optical character recognition (OCR) in images. The method has the following code. During testing, you discover that the call to the GetReadResultAsync method occurs before the read operation is complete. You need to prevent the GetReadResultAsync method from proceeding until the read operation is complete. Which two actions should you perform? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B, D",
-      "correctAnswer": "B, D",
+      "questionId": "Bm0JwMRgiJLpgJetUcU9",
+      "question": "You are designing a content management system. You need to ensure that the reading experience is optimized for users who have reduced comprehension and learning differences, such as dyslexia. The solution must minimize development effort. Which Azure service should you include in the solution?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 2",
+      "topic": "Topic 3",
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: BD B. Add code to verify the read_results.status value. D. Wrap the call to get_read_result within a loop that contains a delay. Explanation: In order to prevent the GetReadResultAsync method from procee | Selected Answer: BD The code snippet does not match the question. There is NO GetReadResultAsync call.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0010700001.png"
-      ],
+      "explanation": "Discussion highlights: https://learn.microsoft.com/en-us/azure/ai-services/immersive-reader/overview | Selected Answer: A Immersive Reader",
+      "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/81861-exam-ai-102-topic-2-question-18-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135087-exam-ai-102-topic-3-question-70-discussion/"
     },
     {
       "questionId": "EC11Ztm3DapR1ViTdWFu",
@@ -121,10 +138,31 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135056-exam-ai-102-topic-3-question-74-discussion/"
     },
     {
-      "questionId": "A3DrDc4EviDPPeffeyf0",
-      "question": "You have the following Python function for creating Azure Cognitive Services resources programmatically. def create_resource (resource_name, kind, account_tier, location) : parameters = CognitiveServicesAccount(sku=Sku(name=account_tier), kind=kind, location=location, properties={}) result = client.accounts.create(resource_group_name, resource_name, parameters) You need to call the function to create a free Azure resource in the West US Azure region. The resource will be used to generate captions of images automatically. Which code should you use?",
-      "userAnswer": "A",
+      "questionId": "8eGvN1KoF8nLFHnCorX0",
+      "question": "HOTSPOT - You are developing a service that records lectures given in English (United Kingdom). You have a method named AppendToTranscriptFile that takes translated text and a language identifier. You need to develop code that will provide transcripts of the lectures to attendees in their respective language. The supported languages are English, French, Spanish, and German. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": "C",
       "correctAnswer": "A",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Box 1: {\"fr\", \"de\", \"es\"} — You only specify TARGET languages, not the source. The source language (en-GB) is set via SpeechRecognitionLanguage. English is NOT included as a target because the recognition already produces English text. You only need French, German, and Spanish as translation targets.\n\nBox 2: TranslationRecognizer — After configuring SpeechTranslationConfig with source and target languages, you initialize a TranslationRecognizer (not SpeechRecognizer, which only does speech-to-text without translation).\n\nCode pattern:\nvar config = SpeechTranslationConfig.FromSubscription(key, region);\nconfig.SpeechRecognitionLanguage = \"en-GB\";\nconfig.AddTargetLanguage(\"fr\");\nconfig.AddTargetLanguage(\"de\");\nconfig.AddTargetLanguage(\"es\");\nusing var recognizer = new TranslationRecognizer(config);\n\nRef: https://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-speech-translation",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0013100001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0013200001.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56455-exam-ai-102-topic-3-question-5-discussion/"
+    },
+    {
+      "questionId": "NNHl7NoSfresoj4xVUp9",
+      "question": "Your company uses an Azure Cognitive Services solution to detect faces in uploaded images. The method to detect the faces uses the following code. You discover that the solution frequently fails to detect faces in blurred images and in images that contain sideways faces. You need to increase the likelihood that the solution can detect faces in blurred images and images that contain sideways faces. What should you do?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
       "correct": true,
       "gradable": true,
       "skipped": false,
@@ -132,16 +170,18 @@
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A Computer vision provide automatic vision solutions including captions. The key-phrase is \"automatic\". Therefore this answer should be obvious to everyone. I would expect more professionalism from peopl | Same as Topic 1 Question 9. https://www.examtopics.com/discussions/microsoft/view/57153-exam-ai-102-topic-1-question-9-discussion",
-      "questionImages": [],
+      "explanation": "Discussion highlights: Selected Answer: D D is correct answer : change the detection model. https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/how-to/specify-detection-model#evaluate-different-models | Selected Answer: D D is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/how-to/specify-detection-model#evaluate-different-models The different face detection models are optimized fo",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0010400001.png"
+      ],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/81643-exam-ai-102-topic-2-question-17-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77610-exam-ai-102-topic-2-question-16-discussion/"
     },
     {
-      "questionId": "N4ZmG8ix9L69N9JUWV13",
-      "question": "You are building an app that will include one million scanned magazine articles. Each article will be stored as an image file. You need to configure the app to extract text from the images. The solution must minimize development effort. What should you include in the solution?",
-      "userAnswer": "C",
-      "correctAnswer": "B",
+      "questionId": "AoosNJk84baOnwbHJttB",
+      "question": "HOTSPOT - You develop a test method to verify the results retrieved from a call to the Computer Vision API. The call is used to analyze the existence of company logos in images. The call returns a collection of brands named brands. You have the following code segment. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B",
+      "correctAnswer": "A",
       "correct": false,
       "gradable": true,
       "skipped": false,
@@ -149,87 +189,119 @@
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B To me the correct answer is B. With the new Image Analysis API 4.0 (in preview) you could use OCR feature too, but as i said, it is in preview. And i don't think it is considered in the exam. https://l | All answers should have a reference to prove the answer is true",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122477-exam-ai-102-topic-2-question-32-discussion/"
+      "explanation": "YYN. Statement 1 (Yes): The code checks brand.Confidence >= .75, so only brands with 75%+ confidence are displayed. Statement 2 (Yes): brand.Rectangle.X and brand.Rectangle.Y are the top-left corner coordinates of the bounding box. Statement 3 (No): The code prints brand.Rectangle.X (again, not X+W) and brand.Rectangle.H (height, not Y+H). Bottom-right corner would require (X+W, Y+H). See: https://learn.microsoft.com/en-us/rest/api/computervision/3.1/detect-objects/detect-objects?tabs=HTTP#boundingrect",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image28.png",
+        "https://img.examtopics.com/ai-102/image29.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image30.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108601-exam-ai-102-topic-2-question-29-discussion/",
+      "excluded": true,
+      "excludeReason": "garbled_options"
     },
     {
-      "questionId": "34idbrTmBSHf5uM3U8Af",
-      "question": "HOTSPOT - You run the following command. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
+      "questionId": "42zs4RAoOPbBjunT2VPf",
+      "question": "You have the following C# function. You call the function by using the following code. Which output will you receive?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: D I tried it out. D is correct. Key Phrases: quick brown fox lazy dog | Selected Answer: D Verified the answer using a simple console program",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image76.png",
+        "https://img.examtopics.com/ai-102/image77.png"
+      ],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/123659-exam-ai-102-topic-3-question-56-discussion/"
+    },
+    {
+      "questionId": "zskqGkWLFqxuSnoJ494y",
+      "question": "HOTSPOT - You develop an application that uses the Face API. You need to add multiple images to a person group. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
       "userAnswer": null,
       "correctAnswer": "A",
       "correct": false,
       "gradable": true,
       "skipped": true,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Yes No Yes Log location is not mounted. The ET answer relates to an example provided on the given website which DOES mount a log location. | YNY is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/text-analytics-for-health/how-to/use-containers?tabs=language#validate-that-a-container-is-running - http://localhost:5000/st",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0013900001.png",
-        "https://www.examtopics.com/assets/media/exam-media/04271/0014000001.jpg"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image217.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/80189-exam-ai-102-topic-3-question-11-discussion/"
-    },
-    {
-      "questionId": "eul2BYL93Dubnt1FSllf",
-      "question": "DRAG DROP - You have an app that uses Azure AI and a custom trained classifier to identify products in images. You need to add new products to the classifier. The solution must meet the following requirements: • Minimize how long it takes to add the products. • Minimize development effort. Which five actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
-      "userAnswer": "—",
-      "correctAnswer": "?",
-      "correct": false,
-      "gradable": false,
-      "skipped": false,
       "topic": "Topic 2",
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Correct sequence: 1) From the Custom Vision portal, open the project — Custom Vision classifiers are managed in the Custom Vision portal (customvision.ai), NOT Vision Studio or Azure ML. 2) Upload sample images of the new products. 3) Label the sample images with the appropriate tags. 4) Retrain the model to learn the new products. 5) Publish the model so the app can consume the updated classifier. Vision Studio and Azure ML studio are distractors — Custom Vision projects are managed in the Custom Vision portal.",
+      "explanation": "Discussion highlights: AddFaceFromStreamAsync. Step 5 on https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/how-to-add-faces | Wrong! A - Stream (this is correct) B - AddFaceFromStreamAsync (literally the same code from Step 5 at https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/how-to-add-faces) | Answer inferred from top upvoted discussion consensus.",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image117.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0010200001.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image214.png"
+        "https://img.examtopics.com/ai-102/image211.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135013-exam-ai-102-topic-2-question-37-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/54794-exam-ai-102-topic-2-question-15-discussion/",
+      "excluded": true,
+      "excludeReason": "garbled_options"
     },
     {
-      "questionId": "sn2Ay2bButbMMeLpTgKg",
-      "question": "You are building an app that will use the Azure AI Video Indexer service. You plan to train a language model to recognize industry-specific terms. You need to upload a file that contains the industry-specific terms. Which file format should you use?",
-      "userAnswer": "B",
+      "questionId": "tNooLCK4iuVfCGQYLp66",
+      "question": "You have a local folder that contains the files shown in the following table. You need to analyze the files by using Azure AI Video Indexer. Which files can you upload to the Video Indexer website?",
+      "userAnswer": "E",
       "correctAnswer": "B",
-      "correct": true,
+      "correct": false,
       "gradable": true,
       "skipped": false,
       "topic": "Topic 2",
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B Answer is correct: As per https://learn.microsoft.com/en-us/azure/azure-video-indexer/customize-language-model-with-website This step creates the model and gives the option to upload text files to the | Selected Answer: B TXT because Azure AI Video Indexer supports uploading custom vocabulary files in plain text format for training language models to recognize industry-specific terms. This format is simple and widely us",
-      "questionImages": [],
+      "explanation": "Discussion highlights: Selected Answer: B B is right answer 100% | Answer is right : - size limit 2Gb uploaded from a device and 30Gb uploaded from url - time 6 hours basic audio 12 hours - available formats : WMV ,AVI ,MOV ,MP4 So all the files are allowed",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image171.png"
+      ],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134936-exam-ai-102-topic-2-question-36-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150146-exam-ai-102-topic-2-question-42-discussion/"
     },
     {
-      "questionId": "qWpuh2tSs662ljnZf58w",
-      "question": "You are developing a new sales system that will process the video and text from a public-facing website. You plan to notify users that their data has been processed by the sales system. Which responsible AI principle does this help meet?",
-      "userAnswer": "A",
+      "questionId": "S9rNdftxfn0keGXHkEsu",
+      "question": "HOTSPOT - You are developing an application that will use the Azure AI Vision client library. The application has the following code. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: The correct answer is A, transparency: \"When an AI application relies on personal data, such as a facial recognition system that takes images of people to recognize them; you should make it clear to the user how their da | \"Transparency: AI systems should be understandable.\" \"Reliability and safety: AI systems should perform reliably and safely.\" so the answer is correct, reliability and safety https://docs.microsoft.com/en-us/azure/cloud-",
+      "explanation": "Discussion highlights: No Yes Yes 100% | What kind of a question this is!!. Asking whether it reads the local image or not. How does it become something about AI? That's all about whether you know the python syntax for reading the file. This company should get",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image119.png",
+        "https://img.examtopics.com/ai-102/image120.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image121.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/136424-exam-ai-102-topic-2-question-38-discussion/",
+      "adjustedReason": "user_demonstrated_correct_reasoning_with_garbled_options"
+    },
+    {
+      "questionId": "ABebvW3QPVovA36cGpwI",
+      "question": "You have a chatbot that was built by using the Microsoft Bot Framework. You need to debug the chatbot endpoint remotely. Which two tools should you install on a local computer? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "C, E",
+      "correctAnswer": "C, E",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: CE C. Bot Framework Emulator: This is an essential tool for debugging Microsoft Bot Framework bots. It allows you to test and debug your bots on your local machine by emulating the Bot Framework's channe | Bot framework is no longer part of the exam",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60125-exam-ai-102-topic-1-question-13-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75236-exam-ai-102-topic-3-question-15-discussion/"
     },
     {
       "questionId": "BZEwRTJH3z7fJ67tTmRm",
@@ -249,10 +321,10 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/54402-exam-ai-102-topic-3-question-12-discussion/"
     },
     {
-      "questionId": "G09XomcWA8CNXKRpc9i6",
-      "question": "DRAG DROP - You are developing a call to the Face API. The call must find similar faces from an existing list named employeefaces. The employeefaces list contains 60,000 images. How should you complete the body of the HTTP request? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point. Select and Place:",
-      "userAnswer": "C",
-      "correctAnswer": "B",
+      "questionId": "IJvXqrBcH0GCuOhthbmc",
+      "question": "HOTSPOT - You are developing an application to recognize employees' faces by using the Face Recognition API. Images of the faces will be accessible from a URI endpoint. The application has the following code. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": "A",
+      "correctAnswer": "C",
       "correct": false,
       "gradable": true,
       "skipped": false,
@@ -260,107 +332,76 @@
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Box 1: LargeFaceListID - LargeFaceList: Add a face to a specified large face list, up to 1,000,000 faces. Note: Given query face's faceId, to search the similar-looking faces from a faceId array, a face list or a large face list. A \"faceListId\" is created by FaceList - Create containing persistedFaceIds that will not expire. And a \"largeFaceListId\" is created by LargeFaceList - Create containing persistedFaceIds that will also not expire. Incorrect Answers: Not \"faceListId\": Add a face to a specified face list, up to 1,000 faces. Box 2: matchFace - Find similar has two working modes, \"matchPerson\" and \"matchFace\". \"matchPerson\" is the default mode that it tries to find faces of the same person as possible by using internal same-person thresholds. It is useful to find a known person's other photos. Note that an empty list will be returned if no faces pass the internal thresholds. \"matchFace\" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces. Reference: https://docs.microsoft.com/en-us/rest/api/faceapi/face/findsimilar | Discussion highlights: Correct. | Facelist ID up to 1,000 faces; LargeFaceListId up to 1,000,000 faces https://docs.microsoft.com/en-us/rest/api/faceapi/large-face-list",
+      "explanation": "Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/use-persondirectory | Discussion highlights: Based on the subscription, I think, it could also be Yes Yes Yes \"Free-tier subscription quota: 1,000 person groups. Each holds up to 1,000 persons. S0-tier subscription quota: 1,000,000 person groups. Each holds up to 1 | Yes No Yes \"Free-tier subscription quota: 1,000 person groups. Each holds up to 1,000 persons. So in the code you can have 1000 person groups and 1000 persons each giving you 1,000,000 people",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0009700001.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0008700001.png",
+        "https://www.examtopics.com/assets/media/exam-media/04271/0008700002.png"
       ],
       "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0009700002.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0008800001.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/55440-exam-ai-102-topic-2-question-12-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/82128-exam-ai-102-topic-2-question-6-discussion/"
     },
     {
-      "questionId": "y0sdIRaGx2ICrqHN54cD",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You create a web app named app1 that runs on an Azure virtual machine named vm1. Vm1 is on an Azure virtual network named vnet1. You plan to create a new Azure Cognitive Search service named service1. You need to ensure that app1 can connect directly to service1 without routing traffic over the public internet. Solution: You deploy service1 and a public endpoint, and you configure an IP firewall rule. Does this meet the goal?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 1",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: appeared in august exam | Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/search/service-create-private-endpoint#why-use-a-private-endpoint-for-secure-access Private Endpoints for Azure Cognitive Search allow a client",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/61294-exam-ai-102-topic-1-question-15-discussion/"
-    },
-    {
-      "questionId": "5F54ROmfScX6mUGNOKeZ",
-      "question": "You have an Azure Cognitive Search solution and a collection of handwritten letters stored as JPEG files. You plan to index the collection. The solution must ensure that queries can be performed on the contents of the letters. You need to create an indexer that has a skillset. Which skill should you include?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Plan and manage an Azure AI solution",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B To ensure that queries can be performed on the contents of the letters, the skill that should be included in the indexer is optical character recognition (OCR). Option B, optical character recognition | Selected Answer: B OCR to extract the text and then create an indexer on the text extracted",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102684-exam-ai-102-topic-2-question-21-discussion/"
-    },
-    {
-      "questionId": "mEuyVO7LaSRXdP23QGsQ",
-      "question": "HOTSPOT - You are developing an app that will use the Azure AI Vision API to analyze an image. You need configure the request that will be used by the app to identify whether an image is clipart or a line drawing. How should you complete the request? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "D",
-      "correctAnswer": "D",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: POST, imagetype https://learn.microsoft.com/en-us/rest/api/computervision/analyze-image/analyze-image?view=rest-computervision-v3.2&tabs=HTTP | POST + imageType, for me and ChatGPT too",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image152.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image153.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/145640-exam-ai-102-topic-2-question-40-discussion/"
-    },
-    {
-      "questionId": "y0WlKqr46BcLKj28zoJI",
-      "question": "You have a mobile app that manages printed forms. You need the app to send images of the forms directly to Forms Recognizer to extract relevant information. For compliance reasons, the image files must not be stored in the cloud. In which format should you send the images to the Form Recognizer API endpoint?",
-      "userAnswer": "A",
+      "questionId": "ECBJJD5Byf6A3kLWSsab",
+      "question": "HOTSPOT - You are building an app by using the Speech SDK. The app will translate speech from French to German by using natural language processing. You need to define the source language and the output language. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": null,
       "correctAnswer": "A",
-      "correct": true,
+      "correct": false,
       "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A To send images to the Form Recognizer API endpoint without storing them in the cloud, you should send the images in the following format: A. raw image binary Sending the images as raw image binary data | Appeared on Oct/29/2023",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108600-exam-ai-102-topic-2-question-27-discussion/"
-    },
-    {
-      "questionId": "8eGvN1KoF8nLFHnCorX0",
-      "question": "HOTSPOT - You are developing a service that records lectures given in English (United Kingdom). You have a method named AppendToTranscriptFile that takes translated text and a language identifier. You need to develop code that will provide transcripts of the lectures to attendees in their respective language. The supported languages are English, French, Spanish, and German. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
+      "skipped": true,
       "topic": "Topic 3",
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Box 1: {\"fr\", \"de\", \"es\"} A common task of speech translation is to specify target translation languages, at least one is required but multiples are supported. The following code snippet sets both French and German as translation language targets. static async Task TranslateSpeechAsync() { var translationConfig = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRIPTION__KEY, SPEECH__SERVICE__REGION); translationConfig.SpeechRecognitionLanguage = \"it-IT\"; // Translate to languages. See, https://aka.ms/speech/sttt-languages translationConfig.AddTargetLanguage(\"fr\"); translationConfig.AddTargetLanguage(\"de\"); } Box 2: TranslationRecognizer - After you've created a SpeechTranslationConfig, the next step is to initialize a TranslationRecognizer. Example code: static async Task TranslateSpeechAsync() { var translationConfig = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRIPTION__KEY, SPEECH__SERVICE__REGION); var fromLanguage = \"en-US\"; var toLanguages = new List<string> { \"it\", \"fr\", \"de\" }; translationConfig.SpeechRecognitionLanguage = fromLanguage; toLanguages.ForEach(translationConfig.AddTargetLanguage); using var recognizer = new TranslationRecognizer(translationConfig); } | Discussion highlights: Correct! | Seems correct https://docs.microsoft.com/en-us/dotnet/api/microsoft.cognitiveservices.speech.translation.translationrecognizer?view=azure-dotnet | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "Discussion highlights: SpeechRecognitionLanguage = \"fr\" AddTargetLanguage.(\"de\") | correct | Answer inferred from top upvoted discussion consensus.",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0013100001.png"
+        "https://img.examtopics.com/ai-102/image72.png"
       ],
       "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0013200001.png"
+        "https://img.examtopics.com/ai-102/image73.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56455-exam-ai-102-topic-3-question-5-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/123329-exam-ai-102-topic-3-question-54-discussion/",
+      "excluded": true,
+      "excludeReason": "garbled_options"
+    },
+    {
+      "questionId": "oCFmiVxvr7ipOakyGXeS",
+      "question": "You have an Azure Video Analyzer for Media (previously Video Indexer) service that is used to provide a search interface over company videos on your company's website. You need to be able to search for videos based on who is present in the video. What should you do?",
+      "userAnswer": "B",
+      "correctAnswer": "A",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A A seems the correct answer https://learn.microsoft.com/en-us/azure/azure-video-indexer/customize-person-model-overview | Selected Answer: A Should be A",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75691-exam-ai-102-topic-2-question-10-discussion/"
+    },
+    {
+      "questionId": "ix34tYoG4cvNiIGOnSzU",
+      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Video Indexer account. You need to add a custom brand and logo to the indexer and configure an exclusion for the custom brand. How should you complete the REST API call? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: enabled: false https://learn.microsoft.com/en-us/azure/azure-video-indexer/customize-brands-model-how-to?tabs=customizeapi#exclude-brands-from-the-model For all requests, setting enabled to true puts the brand in the Inc | there are 2 possible answer pairs enabled: false tags: [Excluded list] For all requests, setting enabled to true puts the brand in the Include list for Azure AI Video Indexer to detect. Setting enabled to false puts the",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image169.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image170.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150068-exam-ai-102-topic-2-question-41-discussion/"
     }
   ]
 }

@@ -10,7 +10,6 @@ import time
 import webbrowser
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-
 HTML_PAGE = """<!doctype html>
 <html lang=\"en\">
 <head>
@@ -182,7 +181,7 @@ HTML_PAGE = """<!doctype html>
 
     function extractOptionLetter(opt, idx) {
       const text = String(opt || '');
-      const m = text.match(/^\s*([A-F])\./i);
+      const m = text.match(/^\\s*([A-F])\\./i);
       if (m) return m[1].toUpperCase();
       return String.fromCharCode(65 + idx);
     }
@@ -516,7 +515,8 @@ def _is_ambiguous_placeholder_question(q):
     if qtype == "dropdown":
         dropdowns = q.get("dropdowns", []) or []
         if dropdowns and all(
-            (slot.get("options") or []) and all(_is_placeholder_text(opt) for opt in (slot.get("options") or []))
+            (slot.get("options") or [])
+            and all(_is_placeholder_text(opt) for opt in (slot.get("options") or []))
             for slot in dropdowns
         ):
             return True
@@ -543,10 +543,10 @@ def run_web_quiz(questions, data, output_path, port, helpers):
     save_results = helpers["save_results"]
 
     for q in questions:
-      base_gradable = has_answer_key(q)
-      ambiguous = _is_ambiguous_placeholder_question(q)
-      q["_ambiguousPlaceholder"] = ambiguous
-      q["_gradable"] = base_gradable and not ambiguous
+        base_gradable = has_answer_key(q)
+        ambiguous = _is_ambiguous_placeholder_question(q)
+        q["_ambiguousPlaceholder"] = ambiguous
+        q["_gradable"] = base_gradable and not ambiguous
 
     state = {
         "index": 0,
@@ -591,7 +591,9 @@ def run_web_quiz(questions, data, output_path, port, helpers):
             return
         elapsed = time.time() - state["startTime"]
         if state["results"]:
-            state["savedPath"] = save_results(state["results"], data, elapsed, output_path=state["outputPath"])
+            state["savedPath"] = save_results(
+                state["results"], data, elapsed, output_path=state["outputPath"]
+            )
         state["completed"] = True
 
     class Handler(BaseHTTPRequestHandler):
@@ -666,7 +668,9 @@ def run_web_quiz(questions, data, output_path, port, helpers):
             if qtype == "mc" and isinstance(user_answer, str):
                 user_answer = user_answer.strip().upper()
             elif qtype == "multi" and isinstance(user_answer, list):
-                user_answer = sorted(set(str(x).strip().upper() for x in user_answer if str(x).strip()))
+                user_answer = sorted(
+                    set(str(x).strip().upper() for x in user_answer if str(x).strip())
+                )
             elif qtype == "dropdown" and isinstance(user_answer, list):
                 try:
                     user_answer = [int(x) for x in user_answer]
@@ -676,7 +680,9 @@ def run_web_quiz(questions, data, output_path, port, helpers):
                 normalized = []
                 for item in user_answer:
                     token = str(item).strip().lower()
-                    normalized.append("Yes" if token in ("yes", "y", "true", "1") else "No")
+                    normalized.append(
+                        "Yes" if token in ("yes", "y", "true", "1") else "No"
+                    )
                 user_answer = normalized
 
             if not q.get("_gradable", False):
@@ -731,18 +737,22 @@ def run_web_quiz(questions, data, output_path, port, helpers):
 
             if state["index"] >= len(questions):
                 finalize_session()
-                self._send_json({
-                    "completed": True,
-                    "feedback": feedback,
-                    "nextState": build_state_payload(),
-                })
+                self._send_json(
+                    {
+                        "completed": True,
+                        "feedback": feedback,
+                        "nextState": build_state_payload(),
+                    }
+                )
                 return
 
-            self._send_json({
-                "completed": False,
-                "feedback": feedback,
-                "nextState": build_state_payload(),
-            })
+            self._send_json(
+                {
+                    "completed": False,
+                    "feedback": feedback,
+                    "nextState": build_state_payload(),
+                }
+            )
 
     host = "127.0.0.1"
     bound_port = _find_free_port(host, int(port or 8765))

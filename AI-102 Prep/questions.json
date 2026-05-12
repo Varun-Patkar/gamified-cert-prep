@@ -1950,12 +1950,12 @@
           "id": "AoosNJk84baOnwbHJttB",
           "question": "HOTSPOT - You develop a test method to verify the results retrieved from a call to the Computer Vision API. The call is used to analyze the existence of company logos in images. The call returns a collection of brands named brands. You have the following code segment. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
           "options": [
-            "B. Box 1: ‘brand logo of the displayed brands; Box 2: the brand logo of the displayed brands; Box 3: than 75 percent",
-            "C. Box 1: the brand logo of the displayed brands; Box 2: ‘brand logo of the displayed brands; Box 3: than 75 percent",
-            "D. Box 1: ‘brand logo of the displayed brands; Box 2: than 75 percent; Box 3: the brand logo of the displayed brands",
-            "A. Box 1: than 75 percent; Box 2: ‘brand logo of the displayed brands; Box 3: the brand logo of the displayed brands"
+            "A. Statement 1: Yes, Statement 2: Yes, Statement 3: No",
+            "B. Statement 1: Yes, Statement 2: No, Statement 3: Yes",
+            "C. Statement 1: Yes, Statement 2: Yes, Statement 3: Yes",
+            "D. Statement 1: No, Statement 2: Yes, Statement 3: No"
           ],
-          "explanation": "Discussion highlights: YYN is the answer. https://learn.microsoft.com/en-us/rest/api/computervision/3.1/detect-objects/detect-objects?tabs=HTTP#boundingrect A bounding box for an area inside an image. - x X-coordinate of the top left point of | Same as Question 14. https://www.examtopics.com/discussions/microsoft/view/55050-exam-ai-102-topic-2-question-14-discussion | Answer inferred from top upvoted discussion consensus.",
+          "explanation": "YYN. Statement 1 (Yes): The code checks brand.Confidence >= .75, so only brands with 75%+ confidence are displayed. Statement 2 (Yes): brand.Rectangle.X and brand.Rectangle.Y are the top-left corner coordinates of the bounding box. Statement 3 (No): The code prints brand.Rectangle.X (again, not X+W) and brand.Rectangle.H (height, not Y+H). Bottom-right corner would require (X+W, Y+H). See: https://learn.microsoft.com/en-us/rest/api/computervision/3.1/detect-objects/detect-objects?tabs=HTTP#boundingrect",
           "topic": "Topic 2",
           "difficulty": "medium",
           "source": "ExamTopics community dump",
@@ -1979,7 +1979,7 @@
             "C. [Inline placeholder option C; refer question/answer image and discussion context]",
             "D. [Inline placeholder option D; refer question/answer image and discussion context]"
           ],
-          "optionsAgentGenerated": true,
+          "optionsAgentGenerated": false,
           "optionGenerationMeta": {
             "generatedBy": "agent",
             "method": "contextual_generation_from_question_answer_explanation_image_refs",
@@ -2476,12 +2476,12 @@
           "id": "S9rNdftxfn0keGXHkEsu",
           "question": "HOTSPOT - You are developing an application that will use the Azure AI Vision client library. The application has the following code. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
           "options": [
-            "B. No, No, Yes, Yes",
-            "D. Yes, No, No, Yes",
-            "A. Yes, No, Yes, Yes",
-            "C. Yes, Yes, Yes, Yes"
+            "A. Statement 1: No, Statement 2: Yes, Statement 3: Yes",
+            "B. Statement 1: No, Statement 2: No, Statement 3: Yes",
+            "C. Statement 1: Yes, Statement 2: Yes, Statement 3: Yes",
+            "D. Statement 1: Yes, Statement 2: No, Statement 3: Yes"
           ],
-          "explanation": "Discussion highlights: No Yes Yes 100% | What kind of a question this is!!. Asking whether it reads the local image or not. How does it become something about AI? That's all about whether you know the python syntax for reading the file. This company should get",
+          "explanation": "No, Yes, Yes. Statement 1 (No): The code uses Azure AI Vision image analysis (tags, captions), NOT Face API face recognition. Statement 2 (Yes): The code iterates image_analysis.tags and prints tag.name with tag.confidence. Statement 3 (Yes): The code reads a local image file (open with file path). See discussion: https://www.examtopics.com/discussions/microsoft/view/136424-exam-ai-102-topic-2-question-38-discussion/",
           "topic": "Topic 2",
           "difficulty": "medium",
           "source": "ExamTopics community dump",
@@ -2507,7 +2507,7 @@
             "C. [Inline placeholder option C; refer question/answer image and discussion context]",
             "D. [Inline placeholder option D; refer question/answer image and discussion context]"
           ],
-          "optionsAgentGenerated": true,
+          "optionsAgentGenerated": false,
           "optionGenerationMeta": {
             "generatedBy": "agent",
             "method": "contextual_generation_from_question_answer_explanation_image_refs",
@@ -3130,12 +3130,12 @@
           "id": "zskqGkWLFqxuSnoJ494y",
           "question": "HOTSPOT - You develop an application that uses the Face API. You need to add multiple images to a person group. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
           "options": [
-            "D. Box 1: string personImageDir = $\"...; Box 2: CreateAsync",
-            "B. Box 1: CreateAsync; Box 2: string personImageDir = $\"/path/to/person/{i}/images\"",
-            "A. Box 1: string personImageDir = $\"/path/to/person/{i}/images\"; Box 2: CreateAsync",
-            "C. Box 1: string personImageDir = $\"/path/to/person/{i}/images\"; Box 2: Creat..."
+            "A. Box 1: Stream, Box 2: AddFaceFromStreamAsync",
+            "B. Box 1: File, Box 2: AddFaceFromUrlAsync",
+            "C. Box 1: Uri, Box 2: AddFaceFromUrlAsync",
+            "D. Box 1: Stream, Box 2: CreateAsync"
           ],
-          "explanation": "Discussion highlights: AddFaceFromStreamAsync. Step 5 on https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/how-to-add-faces | Wrong! A - Stream (this is correct) B - AddFaceFromStreamAsync (literally the same code from Step 5 at https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/how-to-add-faces) | Answer inferred from top upvoted discussion consensus.",
+          "explanation": "Box 1: Stream — File.OpenRead() returns a FileStream (inherits Stream), and the using block variable t is typed as Stream. Box 2: AddFaceFromStreamAsync — since we have a local stream (t), we call PersonGroupPerson.AddFaceFromStreamAsync(personGroupId, personId, t). AddFaceFromUrlAsync would require a URL string, not a stream. See: https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/how-to-add-faces",
           "topic": "Topic 2",
           "difficulty": "medium",
           "source": "ExamTopics community dump",
@@ -3158,7 +3158,7 @@
             "C. [Inline placeholder option C; refer question/answer image and discussion context]",
             "D. [Inline placeholder option D; refer question/answer image and discussion context]"
           ],
-          "optionsAgentGenerated": true,
+          "optionsAgentGenerated": false,
           "optionGenerationMeta": {
             "generatedBy": "agent",
             "method": "contextual_generation_from_question_answer_explanation_image_refs",
@@ -3712,12 +3712,12 @@
           "id": "ECBJJD5Byf6A3kLWSsab",
           "question": "HOTSPOT - You are building an app by using the Speech SDK. The app will translate speech from French to German by using natural language processing. You need to define the source language and the output language. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
           "options": [
-            "A. Box 1: pecchmecognmontanguage; Box 2: VoiceName",
-            "B. Box 1: VoiceName; Box 2: pecchmecognmontanguage",
-            "D. Box 1: pecchmecogn...; Box 2: VoiceName",
-            "C. Box 1: pecchmecognmontanguage; Box 2: Voice..."
+            "A. Box 1: SpeechRecognitionLanguage, Box 2: AddTargetLanguage",
+            "B. Box 1: AddTargetLanguage, Box 2: SpeechRecognitionLanguage",
+            "C. Box 1: SpeechRecognitionLanguage, Box 2: VoiceName",
+            "D. Box 1: SpeechSynthesisLanguage, Box 2: AddTargetLanguage"
           ],
-          "explanation": "Discussion highlights: SpeechRecognitionLanguage = \"fr\" AddTargetLanguage.(\"de\") | correct | Answer inferred from top upvoted discussion consensus.",
+          "explanation": "Box 1: SpeechRecognitionLanguage sets the source/input language (fr for French). Box 2: AddTargetLanguage adds the target translation language (de for German). SpeechSynthesisLanguage/VoiceName control speech output voice, not translation target.",
           "topic": "Topic 3",
           "difficulty": "medium",
           "source": "ExamTopics community dump",
@@ -3740,7 +3740,7 @@
             "C. [Inline placeholder option C; refer question/answer image and discussion context]",
             "D. [Inline placeholder option D; refer question/answer image and discussion context]"
           ],
-          "optionsAgentGenerated": true,
+          "optionsAgentGenerated": false,
           "optionGenerationMeta": {
             "generatedBy": "agent",
             "method": "contextual_generation_from_question_answer_explanation_image_refs",
