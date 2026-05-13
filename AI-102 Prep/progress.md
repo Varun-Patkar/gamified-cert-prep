@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 7 / 32
-- Questions Answered: 101 / 313
+- Sessions Completed: 8 / 32
+- Questions Answered: 116 / 313
 - Accuracy: 87.1%
-- Current Streak: 7 days
-- Next Session: Day 8 (2026-05-13)
+- Current Streak: 8 days
+- Next Session: Day 9 (2026-05-14)
 
 ## Milestones
 
@@ -116,3 +116,19 @@
 - Topic 3: 5/5 graded (100%)
 - Notes: _fill in your own words_
 - Next action: Day 8 - Domain 2: Azure OpenAI Usage
+
+### Day 8 (2026-05-13) - Domain 2: Azure OpenAI Usage
+
+- Status: Completed
+- Questions Attempted: 15 (graded)
+- Correct: 13 / 15 (86.7% adjusted; 1 quiz answer corrected — key phrases Q was right)
+- Raw Score: 12 / 15 (80.0%)
+- Time Spent: ~8.9 min quiz
+- Key Mistakes:
+  - Custom Speech container deploy order: disputed ordering (export model vs request approval first)
+  - Speech SDK translation hotspot: SpeechRecognitionLanguage sets source (fr), AddTargetLanguage sets output (de) — not SpeechSynthesisLanguage
+- Corrected Questions: 46A5oFwQ4xmzReGvqTDq (key phrases NYN — answer changed from B to A)
+- Topic 2: 7/7 (100%) — strong improvement from Day 7's 42.9%
+- Topic 3: 5/8 (62.5%) — hotspot Qs remain tricky
+- Notes: _fill in your own words_
+- Next action: Day 9 - Domain 2: Optimization and Ops

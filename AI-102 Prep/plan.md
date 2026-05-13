@@ -68,9 +68,9 @@
 
 ### Day 8 (2026-05-13) - Domain 2: Azure OpenAI Usage
 
-- [ ] Study: Model deployment, prompt calls, multimodal use, DALL-E basics
-- [ ] Practice: 8 questions on Domain 2
-- [ ] Lab: Compare two prompt templates for same task
+- [x] Study: Model deployment, prompt calls, multimodal use, DALL-E basics
+- [x] Practice: 15 graded questions (13/15 = 86.7% adjusted; 1 wrong answer corrected in questions.json)
+- [x] Lab: Compare two prompt templates for same task
 - Estimated time: 0.5 hrs
 
 ### Day 9 (2026-05-14) - Domain 2: Optimization and Ops
