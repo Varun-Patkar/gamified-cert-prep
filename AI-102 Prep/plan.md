@@ -75,9 +75,9 @@
 
 ### Day 9 (2026-05-14) - Domain 2: Optimization and Ops
 
-- [ ] Study: Temperature/top_p, tracing, feedback loops, reflection
-- [ ] Practice: 8 questions on Domain 2
-- [ ] Lab: Define production telemetry KPI list
+- [x] Study: Temperature/top_p, tracing, feedback loops, reflection
+- [x] Practice: 14 graded questions (13/14 = 92.9% adjusted; 1 wrongly marked wrong — Video Indexer widget Q had duplicate options)
+- [x] Lab: Define production telemetry KPI list
 - Estimated time: 0.5 hrs
 
 ### Day 10 (2026-05-15) - Domain 2: Fine-tuning and Orchestration

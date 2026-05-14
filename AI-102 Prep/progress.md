@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 8 / 32
-- Questions Answered: 116 / 313
-- Accuracy: 87.1%
-- Current Streak: 8 days
-- Next Session: Day 9 (2026-05-14)
+- Sessions Completed: 9 / 32
+- Questions Answered: 130 / 313
+- Accuracy: 87.7%
+- Current Streak: 9 days
+- Next Session: Day 10 (2026-05-15)
 
 ## Milestones
 
@@ -132,3 +132,19 @@
 - Topic 3: 5/8 (62.5%) — hotspot Qs remain tricky
 - Notes: _fill in your own words_
 - Next action: Day 9 - Domain 2: Optimization and Ops
+
+### Day 9 (2026-05-14) - Domain 2: Optimization and Ops
+
+- Status: Completed
+- Questions Attempted: 14 (graded) + 1 skipped (broken options, now fixed)
+- Correct: 13 / 14 (92.9% adjusted; Video Indexer widget Q wrongly marked wrong — duplicate options fixed)
+- Raw Score: 12 / 14 (85.7%)
+- Time Spent: ~5.4 min quiz
+- Key Mistakes:
+  - Custom Speech container deploy order: disputed ordering (export model vs request approval first)
+- Corrected Questions: InafH60aKv8ilod7fM8e (Video Indexer widget — correctAnswer changed C→A, duplicate options)
+- Fixed Questions: lbvU8kjpmEBbth3PjpoY (Computer Vision smart cropping — garbled options rewritten)
+- Topic 2: 5/7 graded (71.4%)
+- Topic 3: 7/8 graded (87.5%) — carryover questions strong
+- Notes: _fill in your own words_
+- Next action: Day 10 - Domain 2: Fine-tuning and Orchestration

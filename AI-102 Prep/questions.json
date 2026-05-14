@@ -2111,7 +2111,7 @@
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
-					"correctAnswer": "C",
+					"correctAnswer": "A",
 					"ungraded": false,
 					"questionTypeInferredByAgent": "drag-drop",
 					"originalPlaceholderOptions": [
@@ -2567,12 +2567,12 @@
 					"id": "lbvU8kjpmEBbth3PjpoY",
 					"question": "HOTSPOT - You have a Computer Vision resource named contoso1 that is hosted in the West US Azure region. You need to use contoso1 to make a different size of a product photo by using the smart cropping feature. How should you complete the API URL? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
 					"options": [
-						"C. Box 1: https 7api projectoxford at; Box 2: areaOfinterest; Box 3: -0 “sample.png” -H “Content-Type: application/json” /",
-						"B. Box 1: areaOfinterest; Box 2: https 7api projectoxford at; Box 3: -0 “sample.png” -H “Content-Type: application/json” /",
-						"D. Box 1: areaOfinterest; Box 2: -0 “sample.png” -H “Content-Type: application/json” /; Box 3: https 7api projectoxford at",
-						"A. Box 1: -0 “sample.png” -H “Content-Type: application/json” /; Box 2: areaOfinterest; Box 3: https 7api projectoxford at"
+						"A. Box 1: https://contoso1.cognitiveservices.azure.com; Box 2: generateThumbnail",
+						"B. Box 1: https://westus.api.cognitive.microsoft.com; Box 2: generateThumbnail",
+						"C. Box 1: https://contoso1.cognitiveservices.azure.com; Box 2: areaOfInterest",
+						"D. Box 1: https://api.projectoxford.ai; Box 2: detect"
 					],
-					"explanation": "Discussion highlights: The second one should be generate Thumbnail imho. | Both answers are incorrect. The correct answers are: https://contoso1.cognitiveservices.azure.com/ AND generateThumbnail westus.dev.cognitive.microsoft.com wouldn't be a correct Computer Vision endpoint if the resource n | Answer inferred from top upvoted discussion consensus.",
+					"explanation": "The resource is named contoso1, so the endpoint is https://contoso1.cognitiveservices.azure.com (custom subdomain format). Smart cropping is a parameter of the generateThumbnail API, not areaOfInterest or detect.",
 					"topic": "Topic 2",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
@@ -2581,7 +2581,7 @@
 						"https://www.examtopics.com/assets/media/exam-media/04271/0008300001.png"
 					],
 					"answerImages": ["https://img.examtopics.com/ai-102/image208.png"],
-					"answerStatus": "inferred_consensus",
+					"answerStatus": "verified_fixed",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
 					"correctAnswer": "A",
