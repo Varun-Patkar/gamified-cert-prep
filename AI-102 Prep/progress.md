@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 9 / 32
-- Questions Answered: 130 / 313
-- Accuracy: 87.7%
-- Current Streak: 9 days
-- Next Session: Day 10 (2026-05-15)
+- Sessions Completed: 10 / 32
+- Questions Answered: 144 / 313
+- Accuracy: 88.2%
+- Current Streak: 10 days
+- Next Session: Day 11 (2026-05-16)
 
 ## Milestones
 
@@ -148,3 +148,18 @@
 - Topic 3: 7/8 graded (87.5%) — carryover questions strong
 - Notes: _fill in your own words_
 - Next action: Day 10 - Domain 2: Fine-tuning and Orchestration
+
+### Day 10 (2026-05-15) - Domain 2: Fine-tuning and Orchestration
+
+- Status: Completed
+- Questions Attempted: 14 (graded)
+- Correct: 13 / 14 (92.9% adjusted; alt text hotspot had broken options — not a real miss)
+- Raw Score: 12 / 14 (85.7%)
+- Time Spent: ~5.3 min quiz
+- Key Mistakes:
+  - Image tagging hotspot: Computer Vision analyze endpoint + imageType property (photographs/drawings/clipart detection)
+- Corrected Questions: wJsz2eoOtd9CfW1uz9zR (alt text hotspot — agent-generated options were all wrong customvision URLs; replaced with actual dropdown values)
+- Topic 2: 6/7 (85.7% adjusted)
+- Topic 3: 7/7 (100%)
+- Notes: _fill in your own words_
+- Next action: Day 11

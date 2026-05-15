@@ -1,82 +1,80 @@
 {
-  "timestamp": "2026-05-14T13:44:39.124109",
+  "timestamp": "2026-05-15T14:48:47.407711",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
-    "totalQuestions": 15,
+    "totalQuestions": 14,
     "gradedQuestions": 14,
     "correct": 12,
     "wrong": 2,
-    "skipped": 1,
+    "skipped": 0,
     "ungraded": 0,
     "accuracy": 85.7,
-    "timeSeconds": 322.9
+    "timeSeconds": 315.6
   },
   "domainBreakdown": {
     "Implement generative AI solutions": {
-      "total": 15,
+      "total": 14,
       "correct": 12,
       "wrong": 2,
-      "skipped": 1
+      "skipped": 0
     }
   },
   "topicBreakdown": {
     "Topic 3": {
-      "total": 8,
+      "total": 7,
       "correct": 7,
-      "wrong": 1,
+      "wrong": 0,
       "skipped": 0
     },
     "Topic 2": {
       "total": 7,
       "correct": 5,
-      "wrong": 1,
-      "skipped": 1
+      "wrong": 2,
+      "skipped": 0
     }
   },
   "wrongQuestions": [
     {
-      "questionId": "InafH60aKv8ilod7fM8e",
-      "question": "DRAG DROP - You are developing a webpage that will use the Azure Video Analyzer for Media (previously Video Indexer) service to display videos of internal company meetings. You embed the Player widget and the Cognitive Insights widget into the page. You need to configure the widgets to meet the following requirements: ✑ Ensure that users can search for keywords. ✑ Display the names and faces of people in the video. ✑ Show captions in the video in English (United States). How should you complete the URL for each widget? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point. Select and Place:",
-      "userAnswer": "A",
+      "questionId": "pXuYh0rkOhAEmlouUoKX",
+      "question": "HOTSPOT - You have a library that contains thousands of images. You need to tag the images as photographs, drawings, or clipart. Which service endpoint and response property should you use? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "D",
       "correctAnswer": "C",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0008500001.png"
+        "https://img.examtopics.com/ai-102/image3.png"
       ],
       "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0008500002.png"
+        "https://img.examtopics.com/ai-102/image213.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77130-exam-ai-102-topic-2-question-4-discussion/",
-      "explanation": "Reference: https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-for-media-docs/video-indexer-embed-widgets | Discussion highlights: 1. people, keywords / search 2. true / en-US https://learn.microsoft.com/en-us/azure/azure-video-indexer/video-indexer-embed-widgets#cognitive-insights-widget - widgets Allows you to control the insights that you want to | Answer is correct. https://docs.microsoft.com/en-us/azure/azure-video-indexer/video-indexer-embed-widgets | Answer inferred from top upvoted discussion consensus.",
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102936-exam-ai-102-topic-2-question-22-discussion/",
+      "explanation": "Discussion highlights: I think that the answers are wrong. They should be: 1 - Computer Vision analyze image 2 - imageType According to https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-detecting-image-types Co | 1. Computer Vision analyze images 2. imageType https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-detecting-image-types With the Analyze Image API, Computer Vision can analyze the content",
       "topic": "Topic 2",
       "domainName": "Implement generative AI solutions"
     },
     {
-      "questionId": "CsTapV8XiL2z1jvWwK8d",
-      "question": "DRAG DROP - You have a Docker host named Host1 that contains a container base image. You have an Azure subscription that contains a custom speech-to-text model named model1. You need to run model1 on Host1. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+      "questionId": "wJsz2eoOtd9CfW1uz9zR",
+      "question": "HOTSPOT - You are building an app that will enable users to upload images. The solution must meet the following requirements: * Automatically suggest alt text for the images. * Detect inappropriate images and block them. * Minimize development effort. You need to recommend a computer vision endpoint for each requirement. What should you recommend? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
       "userAnswer": "D",
       "correctAnswer": "A",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image57.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0010800001.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image58.png"
+        "https://img.examtopics.com/ai-102/image212.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112140-exam-ai-102-topic-3-question-50-discussion/",
-      "explanation": "Discussion highlights: 1. Request approval to run container 2. Export model1 to Host1 3. Run the container https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-container-stt?tabs=container&pivots=programming-languag | No. 1.Export model1 to Host1. 2.Request approval to run the container. 3.Run the container. | Answer inferred from top upvoted discussion consensus.",
-      "topic": "Topic 3",
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/83146-exam-ai-102-topic-2-question-19-discussion/",
+      "explanation": "Discussion highlights: I think it is vision/v3.2/analyze/?visualFeatures=Adult,Description for both | 1. https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Description 2. https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Description https://learn.micros",
+      "topic": "Topic 2",
       "domainName": "Implement generative AI solutions"
     }
   ],
-  "skippedQuestions": [
-    "lbvU8kjpmEBbth3PjpoY"
-  ],
+  "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "7Hye3xeqMSLD2OHttyOr",
-      "question": "You have a Language service resource that performs the following: • Sentiment analysis • Named Entity Recognition (NER) • Personally Identifiable Information (PII) identification You need to prevent the resource from persisting input data once the data is analyzed. Which query parameter in the Language service API should you configure?",
-      "userAnswer": "D",
-      "correctAnswer": "D",
+      "questionId": "AagodIBFPznYqH3RCQGv",
+      "question": "You are developing an app that will use the text-to-speech capability of the Azure AI Speech service. The app will be used in motor vehicles. You need to optimize the quality of the synthesized voice output. Which Speech Synthesis Markup Language (SSML) attribute should you configure?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
@@ -84,31 +82,10 @@
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: D The LoggingOptOut parameter is true by default for the PII and health feature endpoints. Reference https://learn.microsoft.com/en-us/legal/cognitive-services/language-service/data-privacy | Another of the Microsoft greatness in naming conventions. loggingOutput=false means it will keep the data, if it is true it will not keep the data. Now make sense of that. https://learn.microsoft.com/en-us/legal/cognitiv",
+      "explanation": "Discussion highlights: Answer is correct: The audio effect processor that's used to optimize the quality of the synthesized speech output for specific scenarios on devices. For some scenarios in production environments, the auditory experience | Answer is correct The Microsoft guy read the following text: \"The audio effect processor that's used to optimize the quality of the synthesized speech output for specific scenarios on devices. For some scenarios in produ",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102570-exam-ai-102-topic-3-question-32-discussion/"
-    },
-    {
-      "questionId": "InafH60aKv8ilod7fM8e",
-      "question": "DRAG DROP - You are developing a webpage that will use the Azure Video Analyzer for Media (previously Video Indexer) service to display videos of internal company meetings. You embed the Player widget and the Cognitive Insights widget into the page. You need to configure the widgets to meet the following requirements: ✑ Ensure that users can search for keywords. ✑ Display the names and faces of people in the video. ✑ Show captions in the video in English (United States). How should you complete the URL for each widget? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point. Select and Place:",
-      "userAnswer": "A",
-      "correctAnswer": "C",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Reference: https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-for-media-docs/video-indexer-embed-widgets | Discussion highlights: 1. people, keywords / search 2. true / en-US https://learn.microsoft.com/en-us/azure/azure-video-indexer/video-indexer-embed-widgets#cognitive-insights-widget - widgets Allows you to control the insights that you want to | Answer is correct. https://docs.microsoft.com/en-us/azure/azure-video-indexer/video-indexer-embed-widgets | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0008500001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0008500002.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77130-exam-ai-102-topic-2-question-4-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135068-exam-ai-102-topic-3-question-69-discussion/"
     },
     {
       "questionId": "D55Rs3hlVca41j8BmjuH",
@@ -132,44 +109,6 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135148-exam-ai-102-topic-3-question-73-discussion/"
     },
     {
-      "questionId": "OKxtdhztVhLf8ifCYbEW",
-      "question": "HOTSPOT - You are building a model that will be used in an iOS app. You have images of cats and dogs. Each image contains either a cat or a dog. You need to use the Custom Vision service to detect whether the images is of a cat or a dog. How should you configure the project in the Custom Vision portal? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Box 1: Classification - Incorrect Answers: An object detection project is for detecting which objects, if any, from a set of candidates are present in an image. Box 2: Multiclass - A multiclass classification project is for classifying images into a set of tags, or target labels. An image can be assigned to one tag only. Incorrect Answers: A multilabel classification project is similar, but each image can have multiple tags assigned to it. Box 3: General - General: Optimized for a broad range of image classification tasks. If none of the other specific domains are appropriate, or if you're unsure of which domain to choose, select one of the General domains. Reference: https://cran.r-project.org/web/packages/AzureVision/vignettes/customvision.html | Discussion highlights: The third choice should be General compact, in other that the model can be exported to be used in iOS device | Classification Multiclass General (compact)",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0009300001.jpg"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0009400001.jpg"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/74741-exam-ai-102-topic-2-question-9-discussion/"
-    },
-    {
-      "questionId": "0M8IwPG4SyDF0AKpNc9G",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You develop an application to identify species of flowers by training a Custom Vision model. You receive images of new flower species. You need to add the new images to the classifier. Solution: You add the new images, and then use the Smart Labeler tool. Does this meet the goal?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: The answer is correct. | Selected Answer: B The answer is B is because the limitations of the smart labeler: You should only request suggested tags for images whose tags have already been trained on once. Don't get suggestions for a new tag that",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56451-exam-ai-102-topic-3-question-2-discussion/"
-    },
-    {
       "questionId": "FNqXvBTpApS1GE0FHvY7",
       "question": "You have an Azure subscription that contains a multi-service Azure Cognitive Services Translator resource named Translator1. You are building an app that will translate text and documents by using Translator1. You need to create the REST API request for the app. Which headers should you include in the request?",
       "userAnswer": "D",
@@ -187,61 +126,8 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134939-exam-ai-102-topic-3-question-64-discussion/"
     },
     {
-      "questionId": "uTtfqlE1Tfe8q3sNxyQO",
-      "question": "You are developing a method that uses the Azure AI Vision client library. The method will perform optical character recognition (OCR) in images. The method has the following code. During testing, you discover that the call to the get_read_result method occurs before the read operation is complete. You need to prevent the get_read_result method from proceeding until the read operation is complete. Which two actions should you perform? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B, D",
-      "correctAnswer": "B, D",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: BD B - D, repeated many times with both python an C# | Selected Answer: BD B and D",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image151.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/145183-exam-ai-102-topic-2-question-39-discussion/"
-    },
-    {
-      "questionId": "YTfOQmLl8kzvTJd4dxOh",
-      "question": "You have an app that captures live video of exam candidates. You need to use the Face service to validate that the subjects of the videos are real people. What should you do?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/how-to/use-headpose#detect-head-gestures You can detect head gestures like nodding and head shaking by tracki | Selected Answer: A \"You need to use the Face service to validate that the subjects of the videos are real people.\" Never think too much into these questions. A can detect if it's real or not. Not asking anything else. It",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102569-exam-ai-102-topic-2-question-23-discussion/"
-    },
-    {
-      "questionId": "DRvM1txk3iBQ5X7Lit7f",
-      "question": "You need to build a solution that will use optical character recognition (OCR) to scan sensitive documents by using the Computer Vision API. The solution must NOT be deployed to the public cloud. What should you do?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/deploy-computer-vision-on-premises One option to manage your Computer Vision containers on-premises is to use | Selected Answer: B I say this answer is B. Please hurry up and transport the meat.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/91092-exam-ai-102-topic-2-question-20-discussion/"
-    },
-    {
-      "questionId": "pWW3izxoiIZyGvxma83Q",
-      "question": "DRAG DROP - You train a Custom Vision model to identify a company's products by using the Retail domain. You plan to deploy the model as part of an app for Android phones. You need to prepare the model for deployment. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
+      "questionId": "EH8BmOGVUw2vc2YL9gd0",
+      "question": "HOTSPOT - You are building an app that will share user images. You need to configure the app to meet the following requirements: • Uploaded images must be scanned and any text must be extracted from the images. • Extracted text must be analyzed for the presence of profane language. • The solution must minimize development effort. What should you use for each requirement? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
@@ -251,18 +137,132 @@
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Actually the model should be retrained prior to publishing: \"From the top of the page, select Train to retrain using the new domain.\" So it should be: 1. Change the model domain 2. Retrain 3. Publish | Change the model domain {Retail(compact)} Retrain the model Export the model https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model",
+      "explanation": "Discussion highlights: Text Extraction from Images: You can use an Optical Character Recognition (OCR) service to scan and extract text from the uploaded images. Computer Vision API are examples of services that provide OCR capabilities. Profa | Azure AI vision for me. Both Document Intelligence and AI vision have OCR, but document inte is more for structure and semi-structure files, like pdf doc, w-2, forms, etc. AI vision is easier to extract simple text from",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0008600001.jpg"
+        "https://img.examtopics.com/ai-102/image95.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image209.png"
+        "https://img.examtopics.com/ai-102/image96.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60335-exam-ai-102-topic-2-question-5-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134929-exam-ai-102-topic-2-question-34-discussion/"
     },
     {
-      "questionId": "EWdhhbwD8UFjMhpr0PFa",
-      "question": "DRAG DROP - You train a Custom Vision model used in a mobile app. You receive 1,000 new images that do not have any associated data. You need to use the images to retrain the model. The solution must minimize how long it takes to retrain the model. Which three actions should you perform in the Custom Vision portal? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
+      "questionId": "MTFOjEdBHLPDUkzh5tLy",
+      "question": "You have an Azure subscription that contains an AI enrichment pipeline in Azure Cognitive Search and an Azure Storage account that has 10 GB of scanned documents and images. You need to index the documents and images in the storage account. The solution must minimize how long it takes to build the index. What should you do?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/search/search-howto-large-index#run-indexers-in-parallel If you partition your data, you can create multiple indexer-data-source combinations th | Selected Answer: A A is correct.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108276-exam-ai-102-topic-2-question-25-discussion/"
+    },
+    {
+      "questionId": "PG5k7O7oULcHCyhigbIM",
+      "question": "DRAG DROP - You are developing an application that will recognize faults in components produced on a factory production line. The components are specific to your business. You need to use the Custom Vision API to help detect common faults. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Step 1: Create a project - Create a new project. Step 2: Upload and tag the images Choose training images. Then upload and tag the images. Step 3: Train the classifier model. Train the classifier - Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier | Discussion highlights: The anwser is correct Create a project Upload and tag images Train a classifier model https://learn.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/quickstarts/image-classification?tabs=visual-studio&p | The choice between Object Detection and Classification depends on the nature of your defect detection problem in the production line components. Here are some considerations: Classification: You use classification when y | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0009000001.jpg"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0009100001.jpg"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/74355-exam-ai-102-topic-2-question-8-discussion/"
+    },
+    {
+      "questionId": "biGTrsccoCIkhWC8AQzq",
+      "question": "You have a 20-GB video file named File1.avi that is stored on a local drive. You need to index File1.avi by using the Azure Video Indexer website. What should you do first?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: This question is part of free assessment given by Microsoft and the answer in that was C. | Selected Answer: C Upload file size and video duration If uploading a file from your device, the file size limit is 2 GB. If the video is uploaded from a URL, the file size limit is 30 GB. The URL must lead to an online",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122636-exam-ai-102-topic-2-question-33-discussion/"
+    },
+    {
+      "questionId": "mC3blqdCnayyXTHxfRjx",
+      "question": "You are building an app that will share user images. You need to configure the app to perform the following actions when a user uploads an image: • Categorize the image as either a photograph or a drawing. • Generate a caption for the image. The solution must minimize development effort. Which two services should you include in the solution? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "C, D",
+      "correctAnswer": "C, D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: CD I think Categorize the image as either a photograph or a drawing should be Image type detection https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-detecting-image-types Image | Selected Answer: CE CE, Categorize instantly becomes Classification",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134935-exam-ai-102-topic-2-question-35-discussion/"
+    },
+    {
+      "questionId": "pXuYh0rkOhAEmlouUoKX",
+      "question": "HOTSPOT - You have a library that contains thousands of images. You need to tag the images as photographs, drawings, or clipart. Which service endpoint and response property should you use? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "D",
+      "correctAnswer": "C",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: I think that the answers are wrong. They should be: 1 - Computer Vision analyze image 2 - imageType According to https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-detecting-image-types Co | 1. Computer Vision analyze images 2. imageType https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-detecting-image-types With the Analyze Image API, Computer Vision can analyze the content",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image3.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image213.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102936-exam-ai-102-topic-2-question-22-discussion/"
+    },
+    {
+      "questionId": "wJsz2eoOtd9CfW1uz9zR",
+      "question": "HOTSPOT - You are building an app that will enable users to upload images. The solution must meet the following requirements: * Automatically suggest alt text for the images. * Detect inappropriate images and block them. * Minimize development effort. You need to recommend a computer vision endpoint for each requirement. What should you recommend? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": "D",
+      "correctAnswer": "A",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: I think it is vision/v3.2/analyze/?visualFeatures=Adult,Description for both | 1. https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Description 2. https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Description https://learn.micros",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0010800001.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image212.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/83146-exam-ai-102-topic-2-question-19-discussion/"
+    },
+    {
+      "questionId": "2fT4VARgeB04H2dLoTq6",
+      "question": "You have an Azure Cognitive Services model named Model1 that identifies the intent of text input. You develop an app in C# named App1. You need to configure App1 to use Model1. Which package should you add to App1?",
       "userAnswer": "C",
       "correctAnswer": "C",
       "correct": true,
@@ -272,18 +272,50 @@
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: The given answer is incorrect. The question emphasizes two things - 1) the model has already been trained 2) the solution should be expedient. The given answer will be very slow to manually tag 1,000 images. instead: 1.) | Answer is correct. When uploading all images from a same folder, you can tag all of them with the same value at the same time. Then you wont tag all 1000 images one by one, but only once by category (which is time saving | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0013400001.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image215.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60473-exam-ai-102-topic-3-question-6-discussion/"
+      "explanation": "Discussion highlights: Selected Answer: C Azure Conversational Language Understanding is part of Azure Cognitive Services and is designed to understand the intent of text input. The Azure.AI.Language.Conversations package provides C# developer | Selected Answer: C C is the answer. https://learn.microsoft.com/en-us/dotnet/api/overview/azure/ai.language.conversations-readme?view=azure-dotnet Conversational Language Understanding - aka CLU for short - is a cloud-ba",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102571-exam-ai-102-topic-3-question-33-discussion/"
     },
     {
-      "questionId": "AKisF2X8uT2E19xxDoNl",
-      "question": "You need to upload speech samples to a Speech Studio project for use in training. How should you upload the samples?",
+      "questionId": "7sFQtADIFMcWg46v11aZ",
+      "question": "You have the following Python function. You call the function by using the following code. my_function(text_analytics_client, \"the quick brown fox jumps over the lazy dog\") Following 'Key phrases', what output will you receive?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: C Correct answer: C | Selected Answer: C repeat qn Answer is C",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image173.png"
+      ],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/152249-exam-ai-102-topic-3-question-80-discussion/"
+    },
+    {
+      "questionId": "BGndDDffZvK9bNVU2oBN",
+      "question": "You train a Conversational Language Understanding model to understand the natural language input of users. You need to evaluate the accuracy of the model before deploying it. What are two methods you can use? Each correct answer presents a complete solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A, C",
+      "correctAnswer": "A, C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: AC agree with SmallFire: Active Learning cannot be initiated prior to the deployment of the model. The primary purpose of the 'Active Learning' feature is to leverage actual user interaction data to enha | Selected Answer: AC AC is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/conversational-language-understanding/how-to/view-model-evaluation?tabs=Language-studio%2Cmodel-performanc",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/110101-exam-ai-102-topic-3-question-39-discussion/"
+    },
+    {
+      "questionId": "D76miQugR8VC8r7pHszD",
+      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You develop an application to identify species of flowers by training a Custom Vision model. You receive images of new flower species. You need to add the new images to the classifier. Solution: You create a new model, and then upload the new images and labels. Does this meet the goal?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
@@ -293,69 +325,10 @@
       "domainName": "Implement generative AI solutions",
       "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B , the best option is B. Upload a .zip file that contains a collection of audio files in the .wav format and a corresponding text transcript file. This method provides a balance of audio quality (with . | A modified version of this was in the exam today.",
+      "explanation": "Discussion highlights: To pass this exam, you will need to separate and memorise each of the following categories: ‘Yes/No questions that are presented in sequence and cannot be reversed once a decision has been made’, ‘Yes/No three-choice que | Answer is correct, no need to create a new model, the existing one should be extended and retrained",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77612-exam-ai-102-topic-3-question-13-discussion/"
-    },
-    {
-      "questionId": "lbvU8kjpmEBbth3PjpoY",
-      "question": "HOTSPOT - You have a Computer Vision resource named contoso1 that is hosted in the West US Azure region. You need to use contoso1 to make a different size of a product photo by using the smart cropping feature. How should you complete the API URL? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: The second one should be generate Thumbnail imho. | Both answers are incorrect. The correct answers are: https://contoso1.cognitiveservices.azure.com/ AND generateThumbnail westus.dev.cognitive.microsoft.com wouldn't be a correct Computer Vision endpoint if the resource n | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0008300001.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image208.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60330-exam-ai-102-topic-2-question-3-discussion/"
-    },
-    {
-      "questionId": "AagodIBFPznYqH3RCQGv",
-      "question": "You are developing an app that will use the text-to-speech capability of the Azure AI Speech service. The app will be used in motor vehicles. You need to optimize the quality of the synthesized voice output. Which Speech Synthesis Markup Language (SSML) attribute should you configure?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Answer is correct: The audio effect processor that's used to optimize the quality of the synthesized speech output for specific scenarios on devices. For some scenarios in production environments, the auditory experience | Answer is correct The Microsoft guy read the following text: \"The audio effect processor that's used to optimize the quality of the synthesized speech output for specific scenarios on devices. For some scenarios in produ",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135068-exam-ai-102-topic-3-question-69-discussion/"
-    },
-    {
-      "questionId": "CsTapV8XiL2z1jvWwK8d",
-      "question": "DRAG DROP - You have a Docker host named Host1 that contains a container base image. You have an Azure subscription that contains a custom speech-to-text model named model1. You need to run model1 on Host1. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
-      "userAnswer": "D",
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: 1. Request approval to run container 2. Export model1 to Host1 3. Run the container https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-container-stt?tabs=container&pivots=programming-languag | No. 1.Export model1 to Host1. 2.Request approval to run the container. 3.Run the container. | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image57.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image58.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112140-exam-ai-102-topic-3-question-50-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56454-exam-ai-102-topic-3-question-4-discussion/"
     }
   ]
 }
