@@ -151,9 +151,12 @@ You operate in three distinct phases. Detect which phase the user needs based on
 **Delegate the entire session to the `CertSessionRunner` subagent.** Before delegating:
 
 1. Read `plan.md` and `progress.md` to determine today's day number and topic.
-2. Pass this context to the session runner along with an EXPLICIT INSTRUCTION:
-   > "You MUST do live web research (Microsoft Learn) and create a comprehensive `sessions/day-XX-<topic-slug>.md` file BEFORE producing any teaching content in chat. The chat must be a short pointer + TL;DR only. The markdown file must be detailed enough to prepare for both the quiz and the exam without further chat questions. Skipping these steps is a session failure."
-3. Verify after the subagent returns: confirm `sessions/day-XX-*.md` was actually created. If not, re-invoke the subagent with stronger instructions.
+2. Read `day-assignments.json` to get the exact question IDs assigned to today's day. Read those questions from `questions.json` and include a summary of what each question tests (service, concept, trap) in the delegation prompt.
+3. Pass this context to the session runner along with an EXPLICIT INSTRUCTION:
+   > "You MUST do live web research (Microsoft Learn) and create a comprehensive `sessions/day-XX-<topic-slug>.md` file BEFORE producing any teaching content in chat. The chat must be a short pointer + TL;DR only. The markdown file must be detailed enough to prepare for both the quiz and the exam without further chat questions. Skipping these steps is a session failure.
+   >
+   > CRITICAL: The session file content MUST be aligned with the quiz questions. Read EVERY assigned question ID from day-assignments.json and ensure the session file covers every concept, service, API, and trap tested by those questions — including cross-domain carryover questions from earlier domains. Add a 'Cross-Domain Quiz Question Refreshers' table for any question topics outside today's main domain. If the session file doesn't prepare the user to answer every quiz question, that is a session failure."
+4. Verify after the subagent returns: confirm `sessions/day-XX-*.md` was actually created. If not, re-invoke the subagent with stronger instructions.
 
 ## State Detection
 

@@ -66,7 +66,24 @@ If today's session is 0.5 hrs, keep it SHORT. Cut sections that aren't directly 
 
 **TRAP COVERAGE FROM QUESTIONS (critical — this is what makes the file useful):**
 
-Before writing the session file, read ALL question IDs assigned to today's day from `day-assignments.json` (or determine them from the quiz runner's `--day-lock` output). For each question, extract the key trap/concept being tested. The session file MUST cover every concept tested by every quiz question — but **embed the traps naturally within the concept explanations**, not as a standalone trap list. Use the DP-800 session style as reference: explain the concept (what it is, how it works, when to use it), then inline `**Trap**:` markers where the exam tries to trip you up. Include comparison tables, code/CLI examples, and configuration details. The document reads as study material, not a checklist. The goal: after reading the session file, the user should be able to answer every quiz question correctly.
+Before writing the session file, you MUST:
+
+1. **Read `day-assignments.json`** to get the exact question IDs assigned to today's day number.
+2. **Read each assigned question from `questions.json`** — every single one. Understand what concept, service, API, or decision each question tests.
+3. **Identify cross-domain questions**: Many days include carryover questions from earlier domains. These questions test services/concepts OUTSIDE today's domain topic (e.g., a Day 11 "Agent Concepts" session may include questions about LUIS containers, NER APIs, Custom Neural Voice, or Document Translation). You MUST cover these cross-domain concepts too.
+4. **Build the session file around the questions**: The session file must cover every concept tested by every quiz question. If a question tests `RecognizeEntities` vs `ExtractKeyPhrases`, the session file must explain both. If a question tests LUIS container deployment order, the session file must cover that exact workflow.
+
+**Structure rule**: After the main domain content sections, add a **"Cross-Domain Quiz Question Refreshers"** section that briefly covers every concept from OTHER domains that appears in today's assigned questions. Format as a quick-reference table:
+
+```markdown
+## Cross-Domain Quiz Question Refreshers
+| Concept | Key Fact | Trap |
+|---------|----------|------|
+| LUIS container deploy | Export → Move package → Run container | Can't run before package is in input dir |
+| RecognizeEntities vs ExtractKeyPhrases | NER returns entities (people, places); KeyPhrases returns important phrases | Method name in code may not match function name |
+```
+
+The goal: after reading the session file, the user should be able to answer **every single quiz question** correctly — including cross-domain carryover questions. If the session file doesn't cover a concept that a quiz question tests, that is a session failure.
 
 The file MUST follow this structure (trim/merge sections to hit the line target):
 
