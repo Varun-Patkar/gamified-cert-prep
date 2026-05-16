@@ -89,9 +89,9 @@
 
 ### Day 11 (2026-05-16) - Domain 3: Agent Concepts
 
-- [ ] Study: Agent role, use-cases, constraints and tool boundaries
-- [ ] Practice: 15 questions on Domain 3
-- [ ] Lab: Define planner/executor split for one workflow
+- [x] Study: Agent role, use-cases, constraints and tool boundaries
+- [x] Practice: 15 questions on Domain 3
+- [x] Lab: Define planner/executor split for one workflow
 - Estimated time: 1 hr
 
 ### Day 12 (2026-05-17) - Domain 3: Agent Framework Refresher

@@ -1,282 +1,107 @@
 {
-  "timestamp": "2026-05-15T14:48:47.407711",
+  "timestamp": "2026-05-16T11:32:07.245531",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
-    "totalQuestions": 14,
+    "totalQuestions": 16,
     "gradedQuestions": 14,
-    "correct": 12,
-    "wrong": 2,
-    "skipped": 0,
+    "correct": 10,
+    "wrong": 4,
+    "skipped": 2,
     "ungraded": 0,
-    "accuracy": 85.7,
-    "timeSeconds": 315.6
+    "accuracy": 71.4,
+    "timeSeconds": 936.5
   },
   "domainBreakdown": {
     "Implement generative AI solutions": {
-      "total": 14,
-      "correct": 12,
-      "wrong": 2,
+      "total": 3,
+      "correct": 3,
+      "wrong": 0,
       "skipped": 0
+    },
+    "Implement an agentic solution": {
+      "total": 13,
+      "correct": 7,
+      "wrong": 4,
+      "skipped": 2
     }
   },
   "topicBreakdown": {
     "Topic 3": {
-      "total": 7,
-      "correct": 7,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "Topic 2": {
-      "total": 7,
-      "correct": 5,
-      "wrong": 2,
-      "skipped": 0
+      "total": 16,
+      "correct": 10,
+      "wrong": 4,
+      "skipped": 2
     }
   },
   "wrongQuestions": [
     {
-      "questionId": "pXuYh0rkOhAEmlouUoKX",
-      "question": "HOTSPOT - You have a library that contains thousands of images. You need to tag the images as photographs, drawings, or clipart. Which service endpoint and response property should you use? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "D",
-      "correctAnswer": "C",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image3.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image213.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102936-exam-ai-102-topic-2-question-22-discussion/",
-      "explanation": "Discussion highlights: I think that the answers are wrong. They should be: 1 - Computer Vision analyze image 2 - imageType According to https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-detecting-image-types Co | 1. Computer Vision analyze images 2. imageType https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-detecting-image-types With the Analyze Image API, Computer Vision can analyze the content",
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions"
-    },
-    {
-      "questionId": "wJsz2eoOtd9CfW1uz9zR",
-      "question": "HOTSPOT - You are building an app that will enable users to upload images. The solution must meet the following requirements: * Automatically suggest alt text for the images. * Detect inappropriate images and block them. * Minimize development effort. You need to recommend a computer vision endpoint for each requirement. What should you recommend? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "D",
+      "questionId": "Kr0tXN44ovjHPcXJpl8H",
+      "question": "DRAG DROP - You have a Language Understanding solution that runs in a Docker container. You download the Language Understanding container image from the Microsoft Container Registry (MCR). You need to deploy the container image to a host computer. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+      "userAnswer": "C",
       "correctAnswer": "A",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0010800001.png"
+        "https://img.examtopics.com/ai-102/image37.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image212.png"
+        "https://img.examtopics.com/ai-102/image38.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/83146-exam-ai-102-topic-2-question-19-discussion/",
-      "explanation": "Discussion highlights: I think it is vision/v3.2/analyze/?visualFeatures=Adult,Description for both | 1. https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Description 2. https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Description https://learn.micros",
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111250-exam-ai-102-topic-3-question-44-discussion/",
+      "explanation": "Discussion highlights: 1. From portal, export solution as package file. 2. From host computer, move package file to Docker input directory. 3. From host computer, run container and specify input directory. https://learn.microsoft.com/en-us/azu | export move run | Answer inferred from top upvoted discussion consensus.",
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution"
+    },
+    {
+      "questionId": "MzfIUXsxoAMUexLknZmK",
+      "question": "HOTSPOT - You are developing a text processing solution. You have the function shown below. For the second argument, you call the function and specify the following string. Our tour of Paris included a visit to the Eiffel Tower For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "userAnswer": "B",
+      "correctAnswer": "A",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image52.png",
+        "https://img.examtopics.com/ai-102/image53.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image220.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112136-exam-ai-102-topic-3-question-48-discussion/",
+      "explanation": "Discussion highlights: Should be NYN: https://learn.microsoft.com/en-us/dotnet/api/azure.ai.textanalytics.textanalyticsclient.recognizeentities?view=azure-dotnet Definition: Runs a predictive model to identify a collection of named entities in | NYY is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/named-entity-recognition/overview Named Entity Recognition (NER) is one of the features offered by Azure Cognitive Service fo",
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution"
+    },
+    {
+      "questionId": "VMHYZXsnql9NJTG2Vixd",
+      "question": "You are building a retail kiosk system that will use a custom neural voice. You acquire audio samples and consent from the voice talent. You need to create a voice talent profile. What should you upload to the profile?",
+      "userAnswer": "A",
+      "correctAnswer": "C",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108161-exam-ai-102-topic-3-question-43-discussion/",
+      "explanation": "Discussion highlights: Selected Answer: C The question is about the profile, not data. | Selected Answer: C C is correct answer.",
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution"
+    },
+    {
+      "questionId": "X3C2GHY19fpNu3kwMWZ1",
+      "question": "HOTSPOT - You are building content for a video training solution. You need to create narration to accompany the video content. The solution must use Custom Neural Voice. What should you use to create a custom neural voice, and which service should you use to generate the narration? To answer, select the appropriate options in the answer area. NOTE: Each correct answer is worth one point.",
+      "userAnswer": "A",
+      "correctAnswer": "C",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image9.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image10.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102572-exam-ai-102-topic-3-question-34-discussion/",
+      "explanation": "Discussion highlights: 1. Speech Studio portal 2. Text-to-speech https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/custom-neural-voice#how-does-it-work To create a custom neural voice, use Speech Studio to upload the re | For Creating a Custom Neural Voice: Use: The Speech Studio Portal Explanation: The Speech Studio portal is part of Microsoft Azure's Cognitive Services and is specifically designed for speech-related applications, includ",
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution"
     }
   ],
-  "skippedQuestions": [],
+  "skippedQuestions": [
+    "LrVoIFW7NYkqWJin5TGe",
+    "UR9i2oGHAMwESr4thHvy"
+  ],
   "allResults": [
-    {
-      "questionId": "AagodIBFPznYqH3RCQGv",
-      "question": "You are developing an app that will use the text-to-speech capability of the Azure AI Speech service. The app will be used in motor vehicles. You need to optimize the quality of the synthesized voice output. Which Speech Synthesis Markup Language (SSML) attribute should you configure?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Answer is correct: The audio effect processor that's used to optimize the quality of the synthesized speech output for specific scenarios on devices. For some scenarios in production environments, the auditory experience | Answer is correct The Microsoft guy read the following text: \"The audio effect processor that's used to optimize the quality of the synthesized speech output for specific scenarios on devices. For some scenarios in produ",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135068-exam-ai-102-topic-3-question-69-discussion/"
-    },
-    {
-      "questionId": "D55Rs3hlVca41j8BmjuH",
-      "question": "HOTSPOT - You are building an app that will automatically translate speech from English to French, German, and Spanish by using Azure AI service. You need to define the output languages and configure the Azure AI Speech service. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: 1. fr, de, es 2. TranslationRecognizer | Duplicate",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image132.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image133.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135148-exam-ai-102-topic-3-question-73-discussion/"
-    },
-    {
-      "questionId": "FNqXvBTpApS1GE0FHvY7",
-      "question": "You have an Azure subscription that contains a multi-service Azure Cognitive Services Translator resource named Translator1. You are building an app that will translate text and documents by using Translator1. You need to create the REST API request for the app. Which headers should you include in the request?",
-      "userAnswer": "D",
-      "correctAnswer": "D",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: D Answer is correct https://learn.microsoft.com/en-us/azure/ai-services/translator/reference/v3-0-translate content-type is required header https://learn.microsoft.com/en-us/azure/ai-services/translator/ | To create the REST API request for your app that will translate text and documents using the Azure Cognitive Services Translator resource (Translator1), you should include the following headers: Subscription Key: This ke",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134939-exam-ai-102-topic-3-question-64-discussion/"
-    },
-    {
-      "questionId": "EH8BmOGVUw2vc2YL9gd0",
-      "question": "HOTSPOT - You are building an app that will share user images. You need to configure the app to meet the following requirements: • Uploaded images must be scanned and any text must be extracted from the images. • Extracted text must be analyzed for the presence of profane language. • The solution must minimize development effort. What should you use for each requirement? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Text Extraction from Images: You can use an Optical Character Recognition (OCR) service to scan and extract text from the uploaded images. Computer Vision API are examples of services that provide OCR capabilities. Profa | Azure AI vision for me. Both Document Intelligence and AI vision have OCR, but document inte is more for structure and semi-structure files, like pdf doc, w-2, forms, etc. AI vision is easier to extract simple text from",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image95.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image96.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134929-exam-ai-102-topic-2-question-34-discussion/"
-    },
-    {
-      "questionId": "MTFOjEdBHLPDUkzh5tLy",
-      "question": "You have an Azure subscription that contains an AI enrichment pipeline in Azure Cognitive Search and an Azure Storage account that has 10 GB of scanned documents and images. You need to index the documents and images in the storage account. The solution must minimize how long it takes to build the index. What should you do?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/search/search-howto-large-index#run-indexers-in-parallel If you partition your data, you can create multiple indexer-data-source combinations th | Selected Answer: A A is correct.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108276-exam-ai-102-topic-2-question-25-discussion/"
-    },
-    {
-      "questionId": "PG5k7O7oULcHCyhigbIM",
-      "question": "DRAG DROP - You are developing an application that will recognize faults in components produced on a factory production line. The components are specific to your business. You need to use the Custom Vision API to help detect common faults. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Step 1: Create a project - Create a new project. Step 2: Upload and tag the images Choose training images. Then upload and tag the images. Step 3: Train the classifier model. Train the classifier - Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier | Discussion highlights: The anwser is correct Create a project Upload and tag images Train a classifier model https://learn.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/quickstarts/image-classification?tabs=visual-studio&p | The choice between Object Detection and Classification depends on the nature of your defect detection problem in the production line components. Here are some considerations: Classification: You use classification when y | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0009000001.jpg"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0009100001.jpg"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/74355-exam-ai-102-topic-2-question-8-discussion/"
-    },
-    {
-      "questionId": "biGTrsccoCIkhWC8AQzq",
-      "question": "You have a 20-GB video file named File1.avi that is stored on a local drive. You need to index File1.avi by using the Azure Video Indexer website. What should you do first?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: This question is part of free assessment given by Microsoft and the answer in that was C. | Selected Answer: C Upload file size and video duration If uploading a file from your device, the file size limit is 2 GB. If the video is uploaded from a URL, the file size limit is 30 GB. The URL must lead to an online",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122636-exam-ai-102-topic-2-question-33-discussion/"
-    },
-    {
-      "questionId": "mC3blqdCnayyXTHxfRjx",
-      "question": "You are building an app that will share user images. You need to configure the app to perform the following actions when a user uploads an image: • Categorize the image as either a photograph or a drawing. • Generate a caption for the image. The solution must minimize development effort. Which two services should you include in the solution? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "C, D",
-      "correctAnswer": "C, D",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: CD I think Categorize the image as either a photograph or a drawing should be Image type detection https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-detecting-image-types Image | Selected Answer: CE CE, Categorize instantly becomes Classification",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134935-exam-ai-102-topic-2-question-35-discussion/"
-    },
-    {
-      "questionId": "pXuYh0rkOhAEmlouUoKX",
-      "question": "HOTSPOT - You have a library that contains thousands of images. You need to tag the images as photographs, drawings, or clipart. Which service endpoint and response property should you use? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "D",
-      "correctAnswer": "C",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: I think that the answers are wrong. They should be: 1 - Computer Vision analyze image 2 - imageType According to https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-detecting-image-types Co | 1. Computer Vision analyze images 2. imageType https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-detecting-image-types With the Analyze Image API, Computer Vision can analyze the content",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image3.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image213.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102936-exam-ai-102-topic-2-question-22-discussion/"
-    },
-    {
-      "questionId": "wJsz2eoOtd9CfW1uz9zR",
-      "question": "HOTSPOT - You are building an app that will enable users to upload images. The solution must meet the following requirements: * Automatically suggest alt text for the images. * Detect inappropriate images and block them. * Minimize development effort. You need to recommend a computer vision endpoint for each requirement. What should you recommend? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "D",
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 2",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: I think it is vision/v3.2/analyze/?visualFeatures=Adult,Description for both | 1. https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Description 2. https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Description https://learn.micros",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0010800001.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image212.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/83146-exam-ai-102-topic-2-question-19-discussion/"
-    },
-    {
-      "questionId": "2fT4VARgeB04H2dLoTq6",
-      "question": "You have an Azure Cognitive Services model named Model1 that identifies the intent of text input. You develop an app in C# named App1. You need to configure App1 to use Model1. Which package should you add to App1?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C Azure Conversational Language Understanding is part of Azure Cognitive Services and is designed to understand the intent of text input. The Azure.AI.Language.Conversations package provides C# developer | Selected Answer: C C is the answer. https://learn.microsoft.com/en-us/dotnet/api/overview/azure/ai.language.conversations-readme?view=azure-dotnet Conversational Language Understanding - aka CLU for short - is a cloud-ba",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102571-exam-ai-102-topic-3-question-33-discussion/"
-    },
     {
       "questionId": "7sFQtADIFMcWg46v11aZ",
       "question": "You have the following Python function. You call the function by using the following code. my_function(text_analytics_client, \"the quick brown fox jumps over the lazy dog\") Following 'Key phrases', what output will you receive?",
@@ -329,6 +154,252 @@
       "questionImages": [],
       "answerImages": [],
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56454-exam-ai-102-topic-3-question-4-discussion/"
+    },
+    {
+      "questionId": "HMXIWeGlWtybmSxvX5FY",
+      "question": "You need to measure the public perception of your brand on social media by using natural language processing. Which Azure service should you use?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A Language Service to detect the sentiment | Selected Answer: A no doubt A",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/88194-exam-ai-102-topic-3-question-28-discussion/"
+    },
+    {
+      "questionId": "J6H7b5cSJAURakx6trDW",
+      "question": "You have an Azure AI service model named Model1 that identifies the intent of text input. You develop a Python app named App1. You need to configure App1 to use Model1. Which package should you add to App1?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: The correct package for working with Azure AI service for text intent identification, like Model1, is: A. azure-cognitiveservices-language-textanalytics Therefore, you should add the azure-cognitiveservices-language-text | answer is B. \"Conversation App: It's used in extracting intents and entities in conversations\" - https://learn.microsoft.com/ko-kr/python/api/overview/azure/ai-language-conversations-readme?view=azure-python \"The (Text A",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135048-exam-ai-102-topic-3-question-72-discussion/"
+    },
+    {
+      "questionId": "Kr0tXN44ovjHPcXJpl8H",
+      "question": "DRAG DROP - You have a Language Understanding solution that runs in a Docker container. You download the Language Understanding container image from the Microsoft Container Registry (MCR). You need to deploy the container image to a host computer. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+      "userAnswer": "C",
+      "correctAnswer": "A",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: 1. From portal, export solution as package file. 2. From host computer, move package file to Docker input directory. 3. From host computer, run container and specify input directory. https://learn.microsoft.com/en-us/azu | export move run | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image37.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image38.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111250-exam-ai-102-topic-3-question-44-discussion/"
+    },
+    {
+      "questionId": "LrVoIFW7NYkqWJin5TGe",
+      "question": "DRAG DROP - You are building a customer support chatbot. You need to configure the bot to identify the following: • Code names for internal product development • Messages that include credit card numbers The solution must minimize development effort. Which Azure Cognitive Service for Language feature should you use for each requirement? To answer, drag the appropriate features to the correct requirements. Each feature may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point.",
+      "userAnswer": null,
+      "correctAnswer": "A",
+      "correct": false,
+      "gradable": true,
+      "skipped": true,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: 1. Custom NER 2. PII detection https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/custom-named-entity-recognition/overview Custom NER enables users to build custom AI models to extract domain-spe | 1. Custom NER 2. PII detection",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image61.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image62.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112145-exam-ai-102-topic-3-question-53-discussion/"
+    },
+    {
+      "questionId": "MzfIUXsxoAMUexLknZmK",
+      "question": "HOTSPOT - You are developing a text processing solution. You have the function shown below. For the second argument, you call the function and specify the following string. Our tour of Paris included a visit to the Eiffel Tower For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "userAnswer": "B",
+      "correctAnswer": "A",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Should be NYN: https://learn.microsoft.com/en-us/dotnet/api/azure.ai.textanalytics.textanalyticsclient.recognizeentities?view=azure-dotnet Definition: Runs a predictive model to identify a collection of named entities in | NYY is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/named-entity-recognition/overview Named Entity Recognition (NER) is one of the features offered by Azure Cognitive Service fo",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image52.png",
+        "https://img.examtopics.com/ai-102/image53.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image220.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112136-exam-ai-102-topic-3-question-48-discussion/"
+    },
+    {
+      "questionId": "OhWUpZGbKALICpxFGKKI",
+      "question": "HOTSPOT - You are building a call handling system that will receive calls from French-speaking and German-speaking callers. The system must perform the following tasks: • Capture inbound voice messages as text. • Replay messages in English on demand. Which Azure Cognitive Services services should you use? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: 1. Speech-to-text 2. Text-to-speech and Translator https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-to-text With real-time speech to text, the audio is transcribed as speech is recognized | 1. Speech-to-text 2. Text-to-speech and Translator | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image11.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image12.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111618-exam-ai-102-topic-3-question-35-discussion/"
+    },
+    {
+      "questionId": "Raj8Orehh2zVqoCgy3K1",
+      "question": "You develop a custom question answering project in Azure Cognitive Service for Language. The project will be used by a chatbot. You need to configure the project to engage in multi-turn conversations. What should you do?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/overview#multi-turn-conversations Question answering provides multi-turn prompts and acti | Got this in the exam, Jun 2024.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102802-exam-ai-102-topic-3-question-37-discussion/"
+    },
+    {
+      "questionId": "S97WPPZCW5GDdXus0OwQ",
+      "question": "You are building a conversational language understanding model. You need to enable active learning. What should you do?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: C C is the correct answer. \"To enable active learning, you must log user queries. This is accomplished by calling the endpoint query with the log=true query string parameter and value.\" https://docs.micr | Selected Answer: C C is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/LUIS/how-to/improve-application#log-user-queries-to-enable-active-learning To enable active learning, you must log user queri",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75998-exam-ai-102-topic-3-question-10-discussion/"
+    },
+    {
+      "questionId": "UR9i2oGHAMwESr4thHvy",
+      "question": "DRAG DROP - You have a collection of Microsoft Word documents and PowerPoint presentations in German. You need to create a solution to translate the files to French. The solution must meet the following requirements: • Preserve the original formatting of the files. • Support the use of a custom glossary. You create a blob container for German files and a blob container for French files. You upload the original files to the container for German files. Which three actions should you perform in sequence to complete the solution? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+      "userAnswer": null,
+      "correctAnswer": "A",
+      "correct": false,
+      "gradable": true,
+      "skipped": true,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: IMHO the answer is: 1. Upload a Glossary file to the french files container 2. Define a document translation specification that has french target 3. Perform asynchronous translation by using the document specification As | I think that correct is the original response, Because the glossary file is to be in the source language. On the URL : https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/cre | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image74.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image75.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/123688-exam-ai-102-topic-3-question-55-discussion/"
+    },
+    {
+      "questionId": "URg3iik67Pte9LNkEHhu",
+      "question": "You are building an Azure AI Language Understanding solution. You discover that many intents have similar utterances containing airport names or airport codes. You need to minimize the number of utterances used to train the model. Which type of custom entity should you use?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: A. Pattern Any From: https://learn.microsoft.com/en-us/azure/ai-services/luis/concepts/patterns-features#patternany-entity For Airports this means: You can exrpess the Airport Name in Full as \"John F. Kennedy Internation | Selected Answer: D Copied entire question to Copilot, and Copilot says D. To minimize the number of utterances used to train the model, you should use a list entity. List entities allow you to define a list of values (su",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143420-exam-ai-102-topic-3-question-79-discussion/"
+    },
+    {
+      "questionId": "VMHYZXsnql9NJTG2Vixd",
+      "question": "You are building a retail kiosk system that will use a custom neural voice. You acquire audio samples and consent from the voice talent. You need to create a voice talent profile. What should you upload to the profile?",
+      "userAnswer": "A",
+      "correctAnswer": "C",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: C The question is about the profile, not data. | Selected Answer: C C is correct answer.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108161-exam-ai-102-topic-3-question-43-discussion/"
+    },
+    {
+      "questionId": "X3C2GHY19fpNu3kwMWZ1",
+      "question": "HOTSPOT - You are building content for a video training solution. You need to create narration to accompany the video content. The solution must use Custom Neural Voice. What should you use to create a custom neural voice, and which service should you use to generate the narration? To answer, select the appropriate options in the answer area. NOTE: Each correct answer is worth one point.",
+      "userAnswer": "A",
+      "correctAnswer": "C",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: 1. Speech Studio portal 2. Text-to-speech https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/custom-neural-voice#how-does-it-work To create a custom neural voice, use Speech Studio to upload the re | For Creating a Custom Neural Voice: Use: The Speech Studio Portal Explanation: The Speech Studio portal is part of Microsoft Azure's Cognitive Services and is specifically designed for speech-related applications, includ",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image9.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image10.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102572-exam-ai-102-topic-3-question-34-discussion/"
+    },
+    {
+      "questionId": "XVXLKy70MTcoDjhA2IfF",
+      "question": "You are building an internet-based training solution. The solution requires that a user's camera and microphone remain enabled. You need to monitor a video stream of the user and verify that the user is alone and is not collaborating with another user. The solution must minimize development effort. What should you include in the solution?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: C However, On 30 March 2025, Azure AI Vision Spatial Analysis will be retired. https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/spatial-analysis-operations | Selected Answer: C A speech solution makes no sense because you can collaborate and cheat visually without sound. Object detection requires a lot of effort and does not entirely meet the goal.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143318-exam-ai-102-topic-3-question-76-discussion/"
     }
   ]
 }

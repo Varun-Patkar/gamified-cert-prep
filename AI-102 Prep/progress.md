@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 10 / 32
-- Questions Answered: 144 / 313
-- Accuracy: 88.2%
-- Current Streak: 10 days
-- Next Session: Day 11 (2026-05-16)
+- Sessions Completed: 11 / 32
+- Questions Answered: 158 / 313
+- Accuracy: 87.7%
+- Current Streak: 11 days
+- Next Session: Day 12 (2026-05-17)
 
 ## Milestones
 
@@ -163,3 +163,21 @@
 - Topic 3: 7/7 (100%)
 - Notes: _fill in your own words_
 - Next action: Day 11
+
+### Day 11 (2026-05-16) - Domain 3: Agent Concepts
+
+- Status: Completed
+- Questions Attempted: 14 (graded) + 2 excluded (broken agent-generated options)
+- Correct: 12 / 14 (85.7% adjusted)
+- Raw Score: 10 / 14 (71.4%)
+- Time Spent: ~15.6 min quiz
+- Excluded Questions: 2 (MzfIUXsxoAMUexLknZmK — correct answer NYN not in options; UR9i2oGHAMwESr4thHvy — garbled action text, skipped)
+- Credited: 2 (LrVoIFW7NYkqWJin5TGe — user knew correct answer, skipped due to identical options; X3C2GHY19fpNu3kwMWZ1 — answer key was wrong, user's answer was correct)
+- Key Mistakes:
+  - LUIS container deploy order: export → move → run (not run first)
+  - Voice talent profile: upload consent recording (.wav/.mp3 of talent consenting), NOT training data (.zip of .wav samples)
+- Agent-option fixes applied: 6 questions corrected in questions.json
+- Domain 2 carryover: 3/3 (100%)
+- Domain 3 new: 9/11 adjusted (81.8%)
+- Notes: _fill in your own words_
+- Next action: Day 12 - Domain 3: Agent Framework Refresher

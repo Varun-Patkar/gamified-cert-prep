@@ -3718,9 +3718,9 @@
 					"question": "DRAG DROP - You have a Language Understanding solution that runs in a Docker container. You download the Language Understanding container image from the Microsoft Container Registry (MCR). You need to deploy the container image to a host computer. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
 					"options": [
 						"A. Box 1: From portal, export solution as package file; Box 2: From host computer, move package file to Docker input directory; Box 3: From host computer, run container and specify input directory",
+						"B. Box 1: From host computer, move package file to Docker input directory; Box 2: From host computer, run container and specify input directory; Box 3: From portal, export solution as package file",
 						"C. Box 1: From host computer, run container and specify input directory; Box 2: From host computer, move package file to Docker input directory; Box 3: From portal, export solution as package file",
-						"D. Box 1: From host computer, move package file to Docker input directory; Box 2: From portal, export solution as package file; Box 3: From host computer, run container and specify input directory",
-						"B. Box 1: From host computer, move package file to Docker input directory; Box 2: From host computer, run container and specify input directory; Box 3: From portal, export solution as package file"
+						"D. Box 1: From host computer, move package file to Docker input directory; Box 2: From portal, export solution as package file; Box 3: From host computer, run container and specify input directory"
 					],
 					"explanation": "Discussion highlights: 1. From portal, export solution as package file. 2. From host computer, move package file to Docker input directory. 3. From host computer, run container and specify input directory. https://learn.microsoft.com/en-us/azu | export move run | Answer inferred from top upvoted discussion consensus.",
 					"topic": "Topic 3",
@@ -3755,9 +3755,9 @@
 					"question": "DRAG DROP - You are building a customer support chatbot. You need to configure the bot to identify the following: • Code names for internal product development • Messages that include credit card numbers The solution must minimize development effort. Which Azure Cognitive Service for Language feature should you use for each requirement? To answer, drag the appropriate features to the correct requirements. Each feature may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point.",
 					"options": [
 						"A. Box 1: Custom NER; Box 2: PII detection",
-						"D. Box 1: Custom NER (alt); Box 2: PII detection",
-						"C. Box 1: Custom NER; Box 2: PII detection (v2)",
-						"B. Box 1: PII detection; Box 2: Custom NER"
+						"B. Box 1: PII detection; Box 2: Custom NER",
+						"C. Box 1: Named Entity Recognition (NER); Box 2: Key phrase extraction",
+						"D. Box 1: Sentiment analysis; Box 2: Language detection"
 					],
 					"explanation": "Discussion highlights: 1. Custom NER 2. PII detection https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/custom-named-entity-recognition/overview Custom NER enables users to build custom AI models to extract domain-spe | 1. Custom NER 2. PII detection",
 					"topic": "Topic 3",
@@ -3815,10 +3815,10 @@
 					"id": "MzfIUXsxoAMUexLknZmK",
 					"question": "HOTSPOT - You are developing a text processing solution. You have the function shown below. For the second argument, you call the function and specify the following string. Our tour of Paris included a visit to the Eiffel Tower For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
 					"options": [
-						"D. Yes, No, No",
-						"A. Yes, No, Yes",
+						"A. No, Yes, No",
+						"B. No, No, Yes",
 						"C. Yes, Yes, Yes",
-						"B. No, No, Yes"
+						"D. Yes, No, No"
 					],
 					"explanation": "Discussion highlights: Should be NYN: https://learn.microsoft.com/en-us/dotnet/api/azure.ai.textanalytics.textanalyticsclient.recognizeentities?view=azure-dotnet Definition: Runs a predictive model to identify a collection of named entities in | NYY is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/named-entity-recognition/overview Named Entity Recognition (NER) is one of the features offered by Azure Cognitive Service fo",
 					"topic": "Topic 3",
@@ -3830,7 +3830,7 @@
 						"https://img.examtopics.com/ai-102/image53.png"
 					],
 					"answerImages": ["https://img.examtopics.com/ai-102/image220.png"],
-					"answerStatus": "llm_offline_completion",
+					"answerStatus": "verified_from_image",
 					"type": "mc",
 					"correctAnswer": "A",
 					"ungraded": false,
@@ -3876,10 +3876,10 @@
 					"id": "OhWUpZGbKALICpxFGKKI",
 					"question": "HOTSPOT - You are building a call handling system that will receive calls from French-speaking and German-speaking callers. The system must perform the following tasks: • Capture inbound voice messages as text. • Replay messages in English on demand. Which Azure Cognitive Services services should you use? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
 					"options": [
+						"A. Box 1: Speech-to-text; Box 2: Text-to-speech and Translator",
 						"B. Box 1: Text-to-speech and Translator; Box 2: Speech-to-text",
-						"D. Box 1: Speech-to-text (alt); Box 2: Text-to-speech and Translator",
-						"C. Box 1: Speech-to-text; Box 2: Text-to-speech...",
-						"A. Box 1: Speech-to-text; Box 2: Text-to-speech and Translator"
+						"C. Box 1: Speech-to-text; Box 2: Text-to-speech and Language",
+						"D. Box 1: Speaker Recognition; Box 2: Speech-to-text and Language"
 					],
 					"explanation": "Discussion highlights: 1. Speech-to-text 2. Text-to-speech and Translator https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-to-text With real-time speech to text, the audio is transcribed as speech is recognized | 1. Speech-to-text 2. Text-to-speech and Translator | Answer inferred from top upvoted discussion consensus.",
 					"topic": "Topic 3",
@@ -4037,10 +4037,10 @@
 					"id": "UR9i2oGHAMwESr4thHvy",
 					"question": "DRAG DROP - You have a collection of Microsoft Word documents and PowerPoint presentations in German. You need to create a solution to translate the files to French. The solution must meet the following requirements: • Preserve the original formatting of the files. • Support the use of a custom glossary. You create a blob container for German files and a blob container for French files. You upload the original files to the container for German files. Which three actions should you perform in sequence to complete the solution? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
 					"options": [
-						"C. Box 1: Perform asynchronous translation by using the document specification As; Box 2: Define a document translation specification that has french target; Box 3: Upload a Glossary file to the french files container",
-						"D. Box 1: Define a document translation specification that has french target; Box 2: Upload a Glossary file to the french files container; Box 3: Perform asynchronous translation by using the document specification As",
-						"A. Box 1: Upload a Glossary file to the french files container; Box 2: Define a document translation specification that has french target; Box 3: Perform asynchronous translation by using the document specification As",
-						"B. Box 1: Define a document translation specification that has french target; Box 2: Perform asynchronous translation by using the document specification As; Box 3: Upload a Glossary file to the french files container"
+						"A. Box 1: Upload a glossary file to the container for French files; Box 2: Define a document translation specification that has a French target; Box 3: Action an asynchronous translation by using the document translation specification",
+						"B. Box 1: Define a document translation specification that has a French target; Box 2: Action an asynchronous translation by using the document translation specification; Box 3: Upload a glossary file to the container for French files",
+						"C. Box 1: Upload a glossary file to the container for German files; Box 2: Define a document translation specification that has a French target; Box 3: Action an asynchronous translation by using the document translation specification",
+						"D. Box 1: Generate a list of files to be translated; Box 2: Upload a glossary file to the container for French files; Box 3: Perform asynchronous translation by using the list of files to be translated"
 					],
 					"explanation": "Discussion highlights: IMHO the answer is: 1. Upload a Glossary file to the french files container 2. Define a document translation specification that has french target 3. Perform asynchronous translation by using the document specification As | I think that correct is the original response, Because the glossary file is to be in the source language. On the URL : https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/cre | Answer inferred from top upvoted discussion consensus.",
 					"topic": "Topic 3",
@@ -4184,10 +4184,10 @@
 					"id": "X3C2GHY19fpNu3kwMWZ1",
 					"question": "HOTSPOT - You are building content for a video training solution. You need to create narration to accompany the video content. The solution must use Custom Neural Voice. What should you use to create a custom neural voice, and which service should you use to generate the narration? To answer, select the appropriate options in the answer area. NOTE: Each correct answer is worth one point.",
 					"options": [
-						"C. Box 1: Speech Studio portal; Box 2: Text-to-speech (v2)",
-						"A. Box 1: Speech Studio portal; Box 2: Text-to-speech",
-						"B. Box 1: Text-to-speech; Box 2: Speech Studio portal",
-						"D. Box 1: Speech Studio portal (alt); Box 2: Text-to-speech"
+						"A. Box 1: The Speech Studio portal; Box 2: Text-to-speech",
+						"B. Box 1: Text-to-speech; Box 2: The Speech Studio portal",
+						"C. Box 1: The Azure portal; Box 2: Speaker Recognition",
+						"D. Box 1: Microsoft Bot Framework Composer; Box 2: Speech-to-text"
 					],
 					"explanation": "Discussion highlights: 1. Speech Studio portal 2. Text-to-speech https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/custom-neural-voice#how-does-it-work To create a custom neural voice, use Speech Studio to upload the re | For Creating a Custom Neural Voice: Use: The Speech Studio Portal Explanation: The Speech Studio portal is part of Microsoft Azure's Cognitive Services and is specifically designed for speech-related applications, includ",
 					"topic": "Topic 3",
@@ -4196,9 +4196,9 @@
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102572-exam-ai-102-topic-3-question-34-discussion/",
 					"questionImages": ["https://img.examtopics.com/ai-102/image9.png"],
 					"answerImages": ["https://img.examtopics.com/ai-102/image10.png"],
-					"answerStatus": "llm_offline_completion",
+					"answerStatus": "verified_from_image",
 					"type": "mc",
-					"correctAnswer": "C",
+					"correctAnswer": "A",
 					"ungraded": false,
 					"answerInferredFrom": "llm_offline_subagent",
 					"answerConfidence": "medium",
