@@ -82,9 +82,9 @@
 
 ### Day 10 (2026-05-15) - Domain 2: Fine-tuning and Orchestration
 
-- [ ] Study: Fine-tuning decisions, multi-model orchestration
-- [ ] Practice: 8 questions on Domain 2
-- [ ] Lab: Write decision tree for prompt-only vs fine-tune
+- [x] Study: Fine-tuning decisions, multi-model orchestration
+- [x] Practice: 8 questions on Domain 2
+- [x] Lab: Write decision tree for prompt-only vs fine-tune
 - Estimated time: 0.5 hrs
 
 ### Day 11 (2026-05-16) - Domain 3: Agent Concepts
@@ -96,9 +96,9 @@
 
 ### Day 12 (2026-05-17) - Domain 3: Agent Framework Refresher
 
-- [ ] Study: Foundry Agent Service and orchestration patterns
-- [ ] Practice: 15 questions on Domain 3 + Domain 2 crossover
-- [ ] Lab: Document safe multi-agent guardrails
+- [x] Study: Foundry Agent Service and orchestration patterns
+- [x] Practice: 15 questions on Domain 3 + Domain 2 crossover
+- [x] Lab: Document safe multi-agent guardrails
 - Estimated time: 1 hr
 
 ### Day 13 (2026-05-18) - Domain 4: Image Analysis

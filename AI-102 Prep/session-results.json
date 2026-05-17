@@ -1,180 +1,58 @@
 {
-  "timestamp": "2026-05-16T11:32:07.245531",
+  "timestamp": "2026-05-17T11:03:51.432788",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
-    "totalQuestions": 16,
+    "totalQuestions": 15,
     "gradedQuestions": 14,
-    "correct": 10,
-    "wrong": 4,
-    "skipped": 2,
+    "correct": 13,
+    "wrong": 1,
+    "skipped": 1,
     "ungraded": 0,
-    "accuracy": 71.4,
-    "timeSeconds": 936.5
+    "accuracy": 92.9,
+    "timeSeconds": 367.2
   },
   "domainBreakdown": {
-    "Implement generative AI solutions": {
-      "total": 3,
-      "correct": 3,
-      "wrong": 0,
-      "skipped": 0
-    },
     "Implement an agentic solution": {
-      "total": 13,
-      "correct": 7,
-      "wrong": 4,
-      "skipped": 2
+      "total": 15,
+      "correct": 13,
+      "wrong": 1,
+      "skipped": 1
     }
   },
   "topicBreakdown": {
     "Topic 3": {
-      "total": 16,
-      "correct": 10,
-      "wrong": 4,
-      "skipped": 2
+      "total": 15,
+      "correct": 13,
+      "wrong": 1,
+      "skipped": 1
     }
   },
   "wrongQuestions": [
     {
-      "questionId": "Kr0tXN44ovjHPcXJpl8H",
-      "question": "DRAG DROP - You have a Language Understanding solution that runs in a Docker container. You download the Language Understanding container image from the Microsoft Container Registry (MCR). You need to deploy the container image to a host computer. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
-      "userAnswer": "C",
+      "questionId": "UR9i2oGHAMwESr4thHvy",
+      "question": "DRAG DROP - You have a collection of Microsoft Word documents and PowerPoint presentations in German. You need to create a solution to translate the files to French. The solution must meet the following requirements: • Preserve the original formatting of the files. • Support the use of a custom glossary. You create a blob container for German files and a blob container for French files. You upload the original files to the container for German files. Which three actions should you perform in sequence to complete the solution? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+      "userAnswer": "D",
       "correctAnswer": "A",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image37.png"
+        "https://img.examtopics.com/ai-102/image74.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image38.png"
+        "https://img.examtopics.com/ai-102/image75.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111250-exam-ai-102-topic-3-question-44-discussion/",
-      "explanation": "Discussion highlights: 1. From portal, export solution as package file. 2. From host computer, move package file to Docker input directory. 3. From host computer, run container and specify input directory. https://learn.microsoft.com/en-us/azu | export move run | Answer inferred from top upvoted discussion consensus.",
-      "topic": "Topic 3",
-      "domainName": "Implement an agentic solution"
-    },
-    {
-      "questionId": "MzfIUXsxoAMUexLknZmK",
-      "question": "HOTSPOT - You are developing a text processing solution. You have the function shown below. For the second argument, you call the function and specify the following string. Our tour of Paris included a visit to the Eiffel Tower For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "userAnswer": "B",
-      "correctAnswer": "A",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image52.png",
-        "https://img.examtopics.com/ai-102/image53.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image220.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112136-exam-ai-102-topic-3-question-48-discussion/",
-      "explanation": "Discussion highlights: Should be NYN: https://learn.microsoft.com/en-us/dotnet/api/azure.ai.textanalytics.textanalyticsclient.recognizeentities?view=azure-dotnet Definition: Runs a predictive model to identify a collection of named entities in | NYY is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/named-entity-recognition/overview Named Entity Recognition (NER) is one of the features offered by Azure Cognitive Service fo",
-      "topic": "Topic 3",
-      "domainName": "Implement an agentic solution"
-    },
-    {
-      "questionId": "VMHYZXsnql9NJTG2Vixd",
-      "question": "You are building a retail kiosk system that will use a custom neural voice. You acquire audio samples and consent from the voice talent. You need to create a voice talent profile. What should you upload to the profile?",
-      "userAnswer": "A",
-      "correctAnswer": "C",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108161-exam-ai-102-topic-3-question-43-discussion/",
-      "explanation": "Discussion highlights: Selected Answer: C The question is about the profile, not data. | Selected Answer: C C is correct answer.",
-      "topic": "Topic 3",
-      "domainName": "Implement an agentic solution"
-    },
-    {
-      "questionId": "X3C2GHY19fpNu3kwMWZ1",
-      "question": "HOTSPOT - You are building content for a video training solution. You need to create narration to accompany the video content. The solution must use Custom Neural Voice. What should you use to create a custom neural voice, and which service should you use to generate the narration? To answer, select the appropriate options in the answer area. NOTE: Each correct answer is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "C",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image9.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image10.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102572-exam-ai-102-topic-3-question-34-discussion/",
-      "explanation": "Discussion highlights: 1. Speech Studio portal 2. Text-to-speech https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/custom-neural-voice#how-does-it-work To create a custom neural voice, use Speech Studio to upload the re | For Creating a Custom Neural Voice: Use: The Speech Studio Portal Explanation: The Speech Studio portal is part of Microsoft Azure's Cognitive Services and is specifically designed for speech-related applications, includ",
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/123688-exam-ai-102-topic-3-question-55-discussion/",
+      "explanation": "Discussion highlights: IMHO the answer is: 1. Upload a Glossary file to the french files container 2. Define a document translation specification that has french target 3. Perform asynchronous translation by using the document specification As | I think that correct is the original response, Because the glossary file is to be in the source language. On the URL : https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/cre | Answer inferred from top upvoted discussion consensus.",
       "topic": "Topic 3",
       "domainName": "Implement an agentic solution"
     }
   ],
   "skippedQuestions": [
-    "LrVoIFW7NYkqWJin5TGe",
-    "UR9i2oGHAMwESr4thHvy"
+    "SkdajNLBgXGawPLCy4Bj"
   ],
   "allResults": [
     {
-      "questionId": "7sFQtADIFMcWg46v11aZ",
-      "question": "You have the following Python function. You call the function by using the following code. my_function(text_analytics_client, \"the quick brown fox jumps over the lazy dog\") Following 'Key phrases', what output will you receive?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C Correct answer: C | Selected Answer: C repeat qn Answer is C",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image173.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/152249-exam-ai-102-topic-3-question-80-discussion/"
-    },
-    {
-      "questionId": "BGndDDffZvK9bNVU2oBN",
-      "question": "You train a Conversational Language Understanding model to understand the natural language input of users. You need to evaluate the accuracy of the model before deploying it. What are two methods you can use? Each correct answer presents a complete solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A, C",
-      "correctAnswer": "A, C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: AC agree with SmallFire: Active Learning cannot be initiated prior to the deployment of the model. The primary purpose of the 'Active Learning' feature is to leverage actual user interaction data to enha | Selected Answer: AC AC is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/conversational-language-understanding/how-to/view-model-evaluation?tabs=Language-studio%2Cmodel-performanc",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/110101-exam-ai-102-topic-3-question-39-discussion/"
-    },
-    {
-      "questionId": "D76miQugR8VC8r7pHszD",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You develop an application to identify species of flowers by training a Custom Vision model. You receive images of new flower species. You need to add the new images to the classifier. Solution: You create a new model, and then upload the new images and labels. Does this meet the goal?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement generative AI solutions",
-      "domainId": "2",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: To pass this exam, you will need to separate and memorise each of the following categories: ‘Yes/No questions that are presented in sequence and cannot be reversed once a decision has been made’, ‘Yes/No three-choice que | Answer is correct, no need to create a new model, the existing one should be extended and retrained",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56454-exam-ai-102-topic-3-question-4-discussion/"
-    },
-    {
-      "questionId": "HMXIWeGlWtybmSxvX5FY",
-      "question": "You need to measure the public perception of your brand on social media by using natural language processing. Which Azure service should you use?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement an agentic solution",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A Language Service to detect the sentiment | Selected Answer: A no doubt A",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/88194-exam-ai-102-topic-3-question-28-discussion/"
-    },
-    {
-      "questionId": "J6H7b5cSJAURakx6trDW",
-      "question": "You have an Azure AI service model named Model1 that identifies the intent of text input. You develop a Python app named App1. You need to configure App1 to use Model1. Which package should you add to App1?",
+      "questionId": "Rio7VK0CFCXSxBzqcGfd",
+      "question": "You are examining the Text Analytics output of an application. The text analyzed is: `Our tour guide took us up the Space Needle during our trip to Seattle last week.` The response contains the data shown in the following table. Which Text Analytics API is used to analyze the text?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
@@ -184,35 +62,16 @@
       "domainName": "Implement an agentic solution",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: The correct package for working with Azure AI service for text intent identification, like Model1, is: A. azure-cognitiveservices-language-textanalytics Therefore, you should add the azure-cognitiveservices-language-text | answer is B. \"Conversation App: It's used in extracting intents and entities in conversations\" - https://learn.microsoft.com/ko-kr/python/api/overview/azure/ai-language-conversations-readme?view=azure-python \"The (Text A",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135048-exam-ai-102-topic-3-question-72-discussion/"
-    },
-    {
-      "questionId": "Kr0tXN44ovjHPcXJpl8H",
-      "question": "DRAG DROP - You have a Language Understanding solution that runs in a Docker container. You download the Language Understanding container image from the Microsoft Container Registry (MCR). You need to deploy the container image to a host computer. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
-      "userAnswer": "C",
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement an agentic solution",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: 1. From portal, export solution as package file. 2. From host computer, move package file to Docker input directory. 3. From host computer, run container and specify input directory. https://learn.microsoft.com/en-us/azu | export move run | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "Discussion highlights: Selected Answer: B B. Named Entity Recognition Named Entity Recognition (NER) is a process in natural language processing that identifies and classifies named entities mentioned in text into predefined categories such as | Selected Answer: B B is answer.",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image37.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0015700001.png"
       ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image38.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111250-exam-ai-102-topic-3-question-44-discussion/"
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/87857-exam-ai-102-topic-3-question-24-discussion/"
     },
     {
-      "questionId": "LrVoIFW7NYkqWJin5TGe",
-      "question": "DRAG DROP - You are building a customer support chatbot. You need to configure the bot to identify the following: • Code names for internal product development • Messages that include credit card numbers The solution must minimize development effort. Which Azure Cognitive Service for Language feature should you use for each requirement? To answer, drag the appropriate features to the correct requirements. Each feature may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point.",
+      "questionId": "SkdajNLBgXGawPLCy4Bj",
+      "question": "HOTSPOT - You are developing a service that records lectures given in English (United Kingdom). You have a method named append_to_transcript_file that takes translated text and a language identifier. You need to develop code that will provide transcripts of the lectures to attendees in their respective language. The supported languages are English, French, Spanish, and German. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
       "userAnswer": null,
       "correctAnswer": "A",
       "correct": false,
@@ -222,40 +81,18 @@
       "domainName": "Implement an agentic solution",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: 1. Custom NER 2. PII detection https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/custom-named-entity-recognition/overview Custom NER enables users to build custom AI models to extract domain-spe | 1. Custom NER 2. PII detection",
+      "explanation": "Discussion highlights: The given answers are correct | fr,de,es TranslationRecognizer",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image61.png"
+        "https://img.examtopics.com/ai-102/image128.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image62.png"
+        "https://img.examtopics.com/ai-102/image129.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112145-exam-ai-102-topic-3-question-53-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/136760-exam-ai-102-topic-3-question-68-discussion/"
     },
     {
-      "questionId": "MzfIUXsxoAMUexLknZmK",
-      "question": "HOTSPOT - You are developing a text processing solution. You have the function shown below. For the second argument, you call the function and specify the following string. Our tour of Paris included a visit to the Eiffel Tower For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "userAnswer": "B",
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement an agentic solution",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Should be NYN: https://learn.microsoft.com/en-us/dotnet/api/azure.ai.textanalytics.textanalyticsclient.recognizeentities?view=azure-dotnet Definition: Runs a predictive model to identify a collection of named entities in | NYY is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/named-entity-recognition/overview Named Entity Recognition (NER) is one of the features offered by Azure Cognitive Service fo",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image52.png",
-        "https://img.examtopics.com/ai-102/image53.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image220.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112136-exam-ai-102-topic-3-question-48-discussion/"
-    },
-    {
-      "questionId": "OhWUpZGbKALICpxFGKKI",
-      "question": "HOTSPOT - You are building a call handling system that will receive calls from French-speaking and German-speaking callers. The system must perform the following tasks: • Capture inbound voice messages as text. • Replay messages in English on demand. Which Azure Cognitive Services services should you use? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "questionId": "XzR2ZH21uV0QLk0q1Skf",
+      "question": "HOTSPOT - You are developing a streaming Speech to Text solution that will use the Speech SDK and MP3 encoding. You need to develop a method to convert speech to text for streaming MP3 data. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
@@ -265,14 +102,69 @@
       "domainName": "Implement an agentic solution",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: 1. Speech-to-text 2. Text-to-speech and Translator https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-to-text With real-time speech to text, the audio is transcribed as speech is recognized | 1. Speech-to-text 2. Text-to-speech and Translator | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "Discussion highlights: first one has to configure the format as MP3, so \"AudioStreamFormat\" option is chosen. Second, since it is speech to text, the SpeechRecognition option is needed. The answer is CORRECT | 1. AudioStreamFormat 2. SpeechRecognizer | Answer inferred from top upvoted discussion consensus.",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image11.png"
+        "https://img.examtopics.com/ai-102/image81.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image12.png"
+        "https://img.examtopics.com/ai-102/image82.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111618-exam-ai-102-topic-3-question-35-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122496-exam-ai-102-topic-3-question-59-discussion/"
+    },
+    {
+      "questionId": "URfg207EIaavs2iJWBd4",
+      "question": "You are developing an app that will use the Speech and Language APIs. You need to provision resources for the app. The solution must ensure that each service is accessed by using a single endpoint and credential. Which type of resource should you create?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Azure AI Services since more than one services are used | Selected Answer: C Repeat Qn of You are developing an app that will use the Decision and Language APIs. You need to provision resources for the app. The solution must ensure that each service is accessed by using a singl",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/144085-exam-ai-102-topic-3-question-77-discussion/"
+    },
+    {
+      "questionId": "XVXLKy70MTcoDjhA2IfF",
+      "question": "You are building an internet-based training solution. The solution requires that a user's camera and microphone remain enabled. You need to monitor a video stream of the user and verify that the user is alone and is not collaborating with another user. The solution must minimize development effort. What should you include in the solution?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: C However, On 30 March 2025, Azure AI Vision Spatial Analysis will be retired. https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/spatial-analysis-operations | Selected Answer: C A speech solution makes no sense because you can collaborate and cheat visually without sound. Object detection requires a lot of effort and does not entirely meet the goal.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143318-exam-ai-102-topic-3-question-76-discussion/"
+    },
+    {
+      "questionId": "X3C2GHY19fpNu3kwMWZ1",
+      "question": "HOTSPOT - You are building content for a video training solution. You need to create narration to accompany the video content. The solution must use Custom Neural Voice. What should you use to create a custom neural voice, and which service should you use to generate the narration? To answer, select the appropriate options in the answer area. NOTE: Each correct answer is worth one point.",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: 1. Speech Studio portal 2. Text-to-speech https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/custom-neural-voice#how-does-it-work To create a custom neural voice, use Speech Studio to upload the re | For Creating a Custom Neural Voice: Use: The Speech Studio Portal Explanation: The Speech Studio portal is part of Microsoft Azure's Cognitive Services and is specifically designed for speech-related applications, includ",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image9.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image10.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102572-exam-ai-102-topic-3-question-34-discussion/"
     },
     {
       "questionId": "Raj8Orehh2zVqoCgy3K1",
@@ -292,10 +184,10 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102802-exam-ai-102-topic-3-question-37-discussion/"
     },
     {
-      "questionId": "S97WPPZCW5GDdXus0OwQ",
-      "question": "You are building a conversational language understanding model. You need to enable active learning. What should you do?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
+      "questionId": "VZ1ENZCeIG39OkRnhLeL",
+      "question": "You are building an Azure WebJob that will create knowledge bases from an array of URLs. You instantiate a QnAMakerClient object that has the relevant API keys and assign the object to a variable named client. You need to develop a method to create the knowledge bases. Which two actions should you include in the method? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B, D",
+      "correctAnswer": "B, D",
       "correct": true,
       "gradable": true,
       "skipped": false,
@@ -303,31 +195,27 @@
       "domainName": "Implement an agentic solution",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C C is the correct answer. \"To enable active learning, you must log user queries. This is accomplished by calling the endpoint query with the log=true query string parameter and value.\" https://docs.micr | Selected Answer: C C is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/LUIS/how-to/improve-application#log-user-queries-to-enable-active-learning To enable active learning, you must log user queri",
+      "explanation": "Discussion highlights: It should be BD. | Answer :: B & D A. Create a list of FileDTO objects that represents data from the WebJob. NO - as it is from URL - so optional B. Call the client.Knowledgebase.CreateAsync method. YES - Mandatory to Call the Method C. Cr",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75998-exam-ai-102-topic-3-question-10-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60238-exam-ai-102-topic-3-question-8-discussion/"
     },
     {
-      "questionId": "UR9i2oGHAMwESr4thHvy",
-      "question": "DRAG DROP - You have a collection of Microsoft Word documents and PowerPoint presentations in German. You need to create a solution to translate the files to French. The solution must meet the following requirements: • Preserve the original formatting of the files. • Support the use of a custom glossary. You create a blob container for German files and a blob container for French files. You upload the original files to the container for German files. Which three actions should you perform in sequence to complete the solution? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
+      "questionId": "OygR9CtlI2kY37Xk7tkw",
+      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You build a language model by using a Language Understanding service. The language model is used to search for information on a contact list by using an intent named FindContact. A conversational expert provides you with the following list of phrases to use for training. ✑ Find contacts in London. ✑ Who do I know in Seattle? ✑ Search for contacts in Ukraine. You need to implement the phrase list in Language Understanding. Solution: You create a new intent for location. Does this meet the goal?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
       "gradable": true,
-      "skipped": true,
+      "skipped": false,
       "topic": "Topic 3",
       "domainName": "Implement an agentic solution",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: IMHO the answer is: 1. Upload a Glossary file to the french files container 2. Define a document translation specification that has french target 3. Perform asynchronous translation by using the document specification As | I think that correct is the original response, Because the glossary file is to be in the source language. On the URL : https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/cre | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image74.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image75.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/123688-exam-ai-102-topic-3-question-55-discussion/"
+      "explanation": "Discussion highlights: This should be \"No\" | The answer should be NO. An utterance having wo intents? This is illogical. The model should have an Entity \"Location\" that will help in finding the contacts. Reference: https://docs.microsoft.com/en-us/azure/cognitive-s",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/54520-exam-ai-102-topic-3-question-18-discussion/"
     },
     {
       "questionId": "URg3iik67Pte9LNkEHhu",
@@ -347,11 +235,28 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143420-exam-ai-102-topic-3-question-79-discussion/"
     },
     {
+      "questionId": "UmzikKIYg708CGlhsBLy",
+      "question": "You have an Azure subscription that contains an Azure Cognitive Service for Language resource. You need to identify the URL of the REST interface for the Language service. Which blade should you use in the Azure portal?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: B It is B. | Selected Answer: B B. Keys and Endpoint blade in the Azure portal. This blade provides the endpoint URL needed to access the Cognitive Services API, along with the keys required for authentication. The endpoint URL is es",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111850-exam-ai-102-topic-3-question-41-discussion/"
+    },
+    {
       "questionId": "VMHYZXsnql9NJTG2Vixd",
       "question": "You are building a retail kiosk system that will use a custom neural voice. You acquire audio samples and consent from the voice talent. You need to create a voice talent profile. What should you upload to the profile?",
-      "userAnswer": "A",
+      "userAnswer": "C",
       "correctAnswer": "C",
-      "correct": false,
+      "correct": true,
       "gradable": true,
       "skipped": false,
       "topic": "Topic 3",
@@ -364,10 +269,10 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108161-exam-ai-102-topic-3-question-43-discussion/"
     },
     {
-      "questionId": "X3C2GHY19fpNu3kwMWZ1",
-      "question": "HOTSPOT - You are building content for a video training solution. You need to create narration to accompany the video content. The solution must use Custom Neural Voice. What should you use to create a custom neural voice, and which service should you use to generate the narration? To answer, select the appropriate options in the answer area. NOTE: Each correct answer is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "C",
+      "questionId": "UR9i2oGHAMwESr4thHvy",
+      "question": "DRAG DROP - You have a collection of Microsoft Word documents and PowerPoint presentations in German. You need to create a solution to translate the files to French. The solution must meet the following requirements: • Preserve the original formatting of the files. • Support the use of a custom glossary. You create a blob container for German files and a blob container for French files. You upload the original files to the container for German files. Which three actions should you perform in sequence to complete the solution? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+      "userAnswer": "D",
+      "correctAnswer": "A",
       "correct": false,
       "gradable": true,
       "skipped": false,
@@ -375,18 +280,39 @@
       "domainName": "Implement an agentic solution",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: 1. Speech Studio portal 2. Text-to-speech https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/custom-neural-voice#how-does-it-work To create a custom neural voice, use Speech Studio to upload the re | For Creating a Custom Neural Voice: Use: The Speech Studio Portal Explanation: The Speech Studio portal is part of Microsoft Azure's Cognitive Services and is specifically designed for speech-related applications, includ",
+      "explanation": "Discussion highlights: IMHO the answer is: 1. Upload a Glossary file to the french files container 2. Define a document translation specification that has french target 3. Perform asynchronous translation by using the document specification As | I think that correct is the original response, Because the glossary file is to be in the source language. On the URL : https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/cre | Answer inferred from top upvoted discussion consensus.",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image9.png"
+        "https://img.examtopics.com/ai-102/image74.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image10.png"
+        "https://img.examtopics.com/ai-102/image75.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102572-exam-ai-102-topic-3-question-34-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/123688-exam-ai-102-topic-3-question-55-discussion/"
     },
     {
-      "questionId": "XVXLKy70MTcoDjhA2IfF",
-      "question": "You are building an internet-based training solution. The solution requires that a user's camera and microphone remain enabled. You need to monitor a video stream of the user and verify that the user is alone and is not collaborating with another user. The solution must minimize development effort. What should you include in the solution?",
+      "questionId": "XJWvfBfjWXm5WiEIJj7g",
+      "question": "HOTSPOT - You are building an app that will automatically translate speech from English to French, German, and Spanish by using Azure AI service. You need to define the output languages and configure the Azure AI Speech service. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement an agentic solution",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Correct, rewording of a old question. | box1: 3 box2: 4",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image154.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image155.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/145783-exam-ai-102-topic-3-question-78-discussion/"
+    },
+    {
+      "questionId": "S97WPPZCW5GDdXus0OwQ",
+      "question": "You are building a conversational language understanding model. You need to enable active learning. What should you do?",
       "userAnswer": "C",
       "correctAnswer": "C",
       "correct": true,
@@ -396,10 +322,10 @@
       "domainName": "Implement an agentic solution",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C However, On 30 March 2025, Azure AI Vision Spatial Analysis will be retired. https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/spatial-analysis-operations | Selected Answer: C A speech solution makes no sense because you can collaborate and cheat visually without sound. Object detection requires a lot of effort and does not entirely meet the goal.",
+      "explanation": "Discussion highlights: Selected Answer: C C is the correct answer. \"To enable active learning, you must log user queries. This is accomplished by calling the endpoint query with the log=true query string parameter and value.\" https://docs.micr | Selected Answer: C C is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/LUIS/how-to/improve-application#log-user-queries-to-enable-active-learning To enable active learning, you must log user queri",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143318-exam-ai-102-topic-3-question-76-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75998-exam-ai-102-topic-3-question-10-discussion/"
     }
   ]
 }

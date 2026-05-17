@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 11 / 32
-- Questions Answered: 158 / 313
-- Accuracy: 87.7%
-- Current Streak: 11 days
-- Next Session: Day 12 (2026-05-17)
+- Sessions Completed: 12 / 32
+- Questions Answered: 172 / 313
+- Accuracy: 88.0%
+- Current Streak: 12 days
+- Next Session: Day 13 (2026-05-18)
 
 ## Milestones
 
@@ -181,3 +181,18 @@
 - Domain 3 new: 9/11 adjusted (81.8%)
 - Notes: _fill in your own words_
 - Next action: Day 12 - Domain 3: Agent Framework Refresher
+
+### Day 12 (2026-05-17) - Domain 3: Agent Framework Refresher
+
+- Status: Completed
+- Questions Attempted: 14 (graded) + 1 skipped (broken options, now fixed)
+- Correct: 13 / 14 (92.9%)
+- Time Spent: ~6.1 min quiz
+- Key Mistakes:
+  - Document Translation glossary placement: glossary goes in target (French) container, not source (German)
+- Skipped: SkdajNLBgXGawPLCy4Bj (Speech translation HOTSPOT — options were garbled, now fixed)
+- Fixed Questions: SkdajNLBgXGawPLCy4Bj (HOTSPOT dropdowns restructured), XzR2ZH21uV0QLk0q1Skf (duplicate options replaced with actual dropdown values)
+- Day-assignments.json remapped: all 313 questions now properly assigned by domain to matching study days
+- Domain 3: 13/14 (92.9%)
+- Notes: _fill in your own words_
+- Next action: Day 13 - Domain 4: Image Analysis
