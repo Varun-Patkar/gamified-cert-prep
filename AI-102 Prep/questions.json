@@ -4697,10 +4697,12 @@
           "id": "bg7ZNwoZiyLNsOYVGC6Q",
           "question": "HOTSPOT - You are developing an application that includes language translation. The application will translate text retrieved by using a function named getTextToBeTranslated. The text can be in one of many languages. The content of the text must remain within the Americas Azure geography. You need to develop code to translate the text to a single language. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
           "options": [
-            "B. Box 1: \"?to=en\"; Box 2: api-nam/translate ",
-            "D. Box 1: api-nam/translate  (alt); Box 2: \"?to=en\"",
-            "A. Box 1: api-nam/translate ; Box 2: \"?to=en\"",
-            "C. Box 1: api-nam/translate ; Box 2: \"?to=en\" (v2)"
+            "A. Box 1: api.cognitive.microsofttranslator.com/translate ; Box 2: \"?to=en\"",
+            "B. Box 1: api.cognitive.microsofttranslator.com/translate ; Box 2: \"?from=en\"",
+            "C. Box 1: api-nam.cognitive.microsofttranslator.com/translate ; Box 2: \"?to=en\"",
+            "D. Box 1: api-nam.cognitive.microsofttranslator.com/translate ; Box 2: \"?from=en\"",
+            "E. Box 1: api-nam.cognitive.microsofttranslator.com/detect ; Box 2: \"?suggestedFrom=en\"",
+            "F. Box 1: api-apc.cognitive.microsofttranslator.com/detect ; Box 2: \"?to=en\""
           ],
           "explanation": "Discussion highlights: Wrong , correct answer is both last option. api-nam.cognitive.microsofttranslator.com '?to=en' | Box 1: api-nam/translate : https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference#base-urls Box 2: \"?to=en\"; | Answer inferred from top upvoted discussion consensus.",
           "topic": "Topic 3",
@@ -4716,7 +4718,7 @@
           "answerStatus": "inferred_consensus",
           "answerInferredFrom": "discussion_top3_consensus",
           "type": "mc",
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "ungraded": false,
           "questionTypeInferredByAgent": "hotspot",
           "originalPlaceholderOptions": [
@@ -4738,10 +4740,12 @@
           "id": "bwWWpOkpYUh7Wo3xepka",
           "question": "HOTSPOT - You are building an Azure web app named App1 that will translate text from English to Spanish. You need to use the Text Translation REST API to perform the translation. The solution must ensure that you have data sovereignty in the United States. How should you complete the URI? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
           "options": [
-            "D. Box 1: api-nam.cognitive.mi...; Box 2: translate",
-            "B. Box 1: translate; Box 2: api-nam.cognitive.microsofttranslator.com",
-            "A. Box 1: api-nam.cognitive.microsofttranslator.com; Box 2: translate",
-            "C. Box 1: api-nam.cognitive.microsofttranslator.com; Box 2: translate (v2)"
+            "A. Box 1: api-nam.cognitive.microsofttranslator.com ; Box 2: translate",
+            "B. Box 1: api.cognitive.microsofttranslator.com ; Box 2: translate",
+            "C. Box 1: api-nam.cognitiveservices.azure.com ; Box 2: translate",
+            "D. Box 1: eastus.api.cognitive.microsoft.com ; Box 2: translate",
+            "E. Box 1: api-nam.cognitive.microsofttranslator.com ; Box 2: detect",
+            "F. Box 1: api.cognitive.microsofttranslator.com ; Box 2: languages"
           ],
           "explanation": "Discussion highlights: 1. api-nam.cognitive.microsofttranslator.com 2. translate https://learn.microsoft.com/en-us/azure/cognitive-services/Translator/reference/v3-0-reference#base-urls Requests to Translator are, in most cases, handled by the | api-nam.cognitive.microsofttranslator.com translate",
           "topic": "Topic 3",

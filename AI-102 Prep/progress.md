@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 12 / 32
-- Questions Answered: 172 / 313
-- Accuracy: 88.0%
-- Current Streak: 12 days
-- Next Session: Day 13 (2026-05-18)
+- Sessions Completed: 13 / 32
+- Questions Answered: 185 / 313
+- Accuracy: 87.6%
+- Current Streak: 13 days
+- Next Session: Day 14 (2026-05-19)
 
 ## Milestones
 
@@ -196,3 +196,18 @@
 - Domain 3: 13/14 (92.9%)
 - Notes: _fill in your own words_
 - Next action: Day 13 - Domain 4: Image Analysis
+
+### Day 13 (2026-05-18) - Domain 4: Image Analysis
+
+- Status: Completed
+- Questions Attempted: 13 (graded)
+- Correct: 11 / 13 (84.6%)
+- Time Spent: ~5.9 min quiz
+- Key Mistakes:
+  - Content Moderator Text Moderation API: response categories are top-level (Classification, Personal data) not sub-scores (adult/racy); picked B,E instead of A,C
+  - Custom Vision flower classifier: adding new images + labels → retrain → publish is correct (Yes, not No)
+- Fixed Questions: bg7ZNwoZiyLNsOYVGC6Q (Translator hotspot — options rewritten with actual dropdown values), bwWWpOkpYUh7Wo3xepka (Translator data sovereignty hotspot — options rewritten)
+- Domain 4 (Implement computer vision solutions): 8/10 (80.0%)
+- Domain 3 carryover: 3/3 (100%)
+- Notes: _fill in your own words_
+- Next action: Day 14
