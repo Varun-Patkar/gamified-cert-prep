@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 13 / 32
-- Questions Answered: 185 / 313
-- Accuracy: 87.6%
-- Current Streak: 13 days
-- Next Session: Day 14 (2026-05-19)
+- Sessions Completed: 14 / 32
+- Questions Answered: 196 / 313
+- Accuracy: 87.2%
+- Current Streak: 14 days
+- Next Session: Day 15 (2026-05-20)
 
 ## Milestones
 
@@ -211,3 +211,18 @@
 - Domain 3 carryover: 3/3 (100%)
 - Notes: _fill in your own words_
 - Next action: Day 14
+
+### Day 14 (2026-05-19) - Domain 4: Custom Vision Models
+
+- Status: Completed
+- Questions Attempted: 11 (graded) + 2 skipped (broken options, now fixed)
+- Correct: 9 / 11 (81.8%)
+- Time Spent: ~43.4 min quiz
+- Key Mistakes:
+  - Multi-service resource provisioning: Answer is C (Azure Cognitive Services / Azure AI Services multi-service), not D
+  - LUIS phrase list: Creating a new entity for domain does NOT meet the goal — need a pattern or phrase list feature, not an entity
+- Skipped: k5BQihvhdxhwndsQCqYm (key phrases hotspot — options fixed), pOzZ9dbpzU00CIH9hExI (SSML hotspot — options fixed)
+- Fixed Questions: 2 hotspot questions had duplicate/garbled agent-generated options; rewritten with actual dropdown values
+- Domain 4 (Topic 3 cross-domain): 9/11 (81.8%)
+- Notes: _fill in your own words_
+- Next action: Day 15 - Domain 4: Training and Publishing
