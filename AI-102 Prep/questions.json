@@ -4973,12 +4973,12 @@
 					"id": "t1V5ns251Fge7UiMBU84",
 					"question": "HOTSPOT - You are developing an application that includes language translation. The application will translate text retrieved by using a function named get_text_to_be_translated. The text can be in one of many languages. The content of the text must remain within the Americas Azure geography. You need to develop code to translate the text to a single language. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
 					"options": [
-						"B. Box 1: \"/translate?to=en\" Must specify the language which it is being translated to; Box 2: (\"api-nam.cognitive.microsofttranslator.com\") Geography USA: api-nam.cognitive.microsofttranslator.com Datacenters: East US, South Central US, West Ce",
-						"C. Box 1: (\"api-nam.cognitive.microsofttranslator.com\") Geography USA: api-nam.cognitive.microsofttranslator.com Datacenters: East US, South Central US, West Ce; Box 2: \"/translate?to=en\" Must specify the la...",
-						"A. Box 1: (\"api-nam.cognitive.microsofttranslator.com\") Geography USA: api-nam.cognitive.microsofttranslator.com Datacenters: East US, South Central US, West Ce; Box 2: \"/translate?to=en\" Must specify the language which it is being translated to",
-						"D. Box 1: (\"api-nam.cognitive.microsofttranslator.com\") Geography USA: api-nam.cognit...; Box 2: \"/translate?to=en\" Must specify the language which it is being translated to"
+						"A. Box 1: \"api-nam.cognitive.microsofttranslator.com\"; Box 2: \"/translate?to=en\"",
+						"B. Box 1: \"api.cognitive.microsofttranslator.com\"; Box 2: \"/translate?to=en\"",
+						"C. Box 1: \"api-nam.cognitive.microsofttranslator.com\"; Box 2: \"/translate?from=en\"",
+						"D. Box 1: \"api-apc.cognitive.microsofttranslator.com\"; Box 2: \"/translate?to=en\""
 					],
-					"explanation": "Box 1: (\"api-nam.cognitive.microsofttranslator.com\") Geography USA: api-nam.cognitive.microsofttranslator.com Datacenters: East US, South Central US, West Central US, and West US 2 Box 2: \"/translate?to=en\" Must specify the language which it is being translated to. The 'to' parameter is required Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate | Discussion highlights: 1.api-nam.cognitive.microsofttranslator.com 2. /translate?to=en https://learn.microsoft.com/en-us/azure/cognitive-services/Translator/reference/v3-0-reference#base-urls Requests to Translator are, in most cases, handled | The answer seems correct to me. api.nam would keep it within the US.",
+					"explanation": "Box 1: \"api-nam.cognitive.microsofttranslator.com\" — Geography USA (Americas): Datacenters East US, South Central US, West Central US, West US 2. The question requires content to remain within the Americas Azure geography, so use the api-nam endpoint. Box 2: \"/translate?to=en\" — The 'to' parameter is required and specifies the target language. '/translate?from=en' would set the source language (wrong direction). Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate",
 					"topic": "Topic 3",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
@@ -5040,12 +5040,12 @@
 					"id": "uQSZR2brZIclGwwo2gk9",
 					"question": "HOTSPOT - You are building an app that will answer customer calls about the status of an order. The app will query a database for the order details and provide the customers with a spoken response. You need to identify which Azure AI service APIs to use. The solution must minimize development effort. Which object should you use for each requirement? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
 					"options": [
-						"C. Box 1: VoiceProfileClient; Box 2: SpeechRecognizer; Box 3: VoiceProfileClient; Box 4: SpeechRecognizer",
-						"D. Box 1: VoiceProfileClient; Box 2: SpeechRecognizer; Box 3: SpeechRecognizer; Box 4: VoiceProfileClient",
-						"A. Box 1: SpeechRecognizer; Box 2: VoiceProfileClient; Box 3: SpeechRecognizer; Box 4: VoiceProfileClient",
-						"B. Box 1: VoiceProfileClient; Box 2: SpeechRecognizer; Box 3: VoiceProfileClient; Box 4: SpeechRecognizer"
+						"A. Box 1 (Convert calls to text): SpeechRecognizer; Box 2 (Provide spoken response): SpeechSynthesizer",
+						"B. Box 1 (Convert calls to text): SpeechSynthesizer; Box 2 (Provide spoken response): SpeechRecognizer",
+						"C. Box 1 (Convert calls to text): TranslationRecognizer; Box 2 (Provide spoken response): SpeechSynthesizer",
+						"D. Box 1 (Convert calls to text): SpeechRecognizer; Box 2 (Provide spoken response): VoiceProfileClient"
 					],
-					"explanation": "Discussion highlights: SpeechRecognizer / SpeechSynthesizer doesn't say anything about translation recognizer, which needs more code | To convert customer calls into text queries, you should use the SpeechRecognizer object. This is part of the Speech service in Azure Cognitive Services and it converts spoken language into written text. To provide custom | Answer inferred from top upvoted discussion consensus.",
+					"explanation": "Box 1: SpeechRecognizer — converts spoken customer calls into text (speech-to-text). Box 2: SpeechSynthesizer — converts text order details into spoken audio for the customer (text-to-speech). TranslationRecognizer is unnecessary since no translation is needed. VoiceProfileClient is for speaker verification/identification enrollment, not for STT/TTS.",
 					"topic": "Topic 3",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
@@ -5119,12 +5119,12 @@
 					"id": "wk672W3KbJLJW0OxVlK0",
 					"question": "HOTSPOT - You have a collection of press releases stored as PDF files. You need to extract text from the files and perform sentiment analysis. Which service should you use for each task? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
 					"options": [
-						"A. Box 1: Azure Al Vision; Box 2: Azure Al Computer Vision",
-						"D. Box 1: Azure A...; Box 2: Azure Al Computer Vision",
-						"B. Box 1: Azure Al Computer Vision; Box 2: Azure Al Vision",
-						"C. Box 1: Azure Al Vision; Box 2: Azure Al Com..."
+						"A. Box 1 (Extract text): Azure AI Document Intelligence; Box 2 (Sentiment analysis): Azure AI Language",
+						"B. Box 1 (Extract text): Azure AI Vision; Box 2 (Sentiment analysis): Azure AI Language",
+						"C. Box 1 (Extract text): Azure AI Document Intelligence; Box 2 (Sentiment analysis): Azure AI Computer Vision",
+						"D. Box 1 (Extract text): Azure AI Search; Box 2 (Sentiment analysis): Azure AI Document Intelligence"
 					],
-					"explanation": "Discussion highlights: AI Document Intelligence and AI Language | Updated version of topic 3 question 46. So according to the discussion in that question the correct answer is: AI Vision AI Language | Answer inferred from top upvoted discussion consensus.",
+					"explanation": "Box 1: Azure AI Document Intelligence — purpose-built for extracting text/structure from PDFs and documents (invoices, forms, press releases). Azure AI Vision is for image analysis (photos), not PDF text extraction. Box 2: Azure AI Language — provides sentiment analysis, key phrase extraction, entity recognition, etc. Computer Vision and Document Intelligence do not perform sentiment analysis.",
 					"topic": "Topic 3",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
@@ -5200,10 +5200,10 @@
 					"id": "0cOYKGwLV89rZ9aCIwRT",
 					"question": "HOTSPOT - You are building an Azure Cognitive Search custom skill. You have the following custom skill schema definition. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
 					"options": [
-						"B. Box 2: No - For each organization identified by entity recognition, this skill calls a web API to find the description of that organization; Box 3: Yes ",
-						"C. Box 2: Yes ; Box 3: No - For each organization identified by entity recognition, this ...",
-						"D. Box 2: Yes  (alt); Box 3: No - For each organization identified by entity recognition, this skill calls a web API to find the description of that organization",
-						"A. Box 2: Yes ; Box 3: No - For each organization identified by entity recognition, this skill calls a web API to find the description of that organization"
+						"A. Statement 1: Yes; Statement 2: Yes; Statement 3: No",
+						"B. Statement 1: Yes; Statement 2: No; Statement 3: No",
+						"C. Statement 1: No; Statement 2: Yes; Statement 3: Yes",
+						"D. Statement 1: Yes; Statement 2: Yes; Statement 3: Yes"
 					],
 					"explanation": "Box 1: Yes - Once you have defined a skillset, you must map the output fields of any skill that directly contributes values to a given field in your search index. Box 2: Yes - The definition is a custom skill that calls a web API as part of the enrichment process. Box 3: No - For each organization identified by entity recognition, this skill calls a web API to find the description of that organization. Reference: https://docs.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping | Discussion highlights: YYN is the answer. https://learn.microsoft.com/en-us/azure/search/cognitive-search-custom-skill-web-api#skill-outputs There are no predefined outputs for this skill. Be sure to define an output field mapping in the index | The first answer should be no: https://learn.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping?tabs=rest \"Output field mappings are required if your indexer has an attached skillset that creates new",
 					"topic": "Topic 4",

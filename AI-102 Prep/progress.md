@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 14 / 32
-- Questions Answered: 196 / 313
-- Accuracy: 87.2%
-- Current Streak: 14 days
-- Next Session: Day 15 (2026-05-20)
+- Sessions Completed: 15 / 32
+- Questions Answered: 206 / 313
+- Accuracy: 87.5%
+- Current Streak: 15 days
+- Next Session: Day 16 (2026-05-21)
 
 ## Milestones
 
@@ -226,3 +226,19 @@
 - Domain 4 (Topic 3 cross-domain): 9/11 (81.8%)
 - Notes: _fill in your own words_
 - Next action: Day 15 - Domain 4: Training and Publishing
+
+### Day 15 (2026-05-20) - Domain 4: Training and Publishing
+
+- Status: Completed
+- Questions Attempted: 10 (graded) + 2 skipped (broken options, now fixed) + 1 ungraded
+- Correct: 9 / 10 (90.0% adjusted; 2 credited — broken options before fix)
+- Raw Score: 7 / 10 (70.0%)
+- Time Spent: ~4.5 min quiz
+- Key Mistakes:
+  - Entity Linking hotspot (vHMvoWyXIGKpz5DgEIxQ): Picked NYN, correct is NNY — Entity Linking returns Wikipedia URLs (Statement 3 = Yes), does NOT return custom entity categories
+- Credited: 2 (t1V5ns251Fge7UiMBU84 — Translator options were near-identical before fix; wk672W3KbJLJW0OxVlK0 — correct service not in options before fix)
+- Skipped: uQSZR2brZIclGwwo2gk9 (SpeechRecognizer/Synthesizer — had 4 boxes instead of 2, now fixed), 0cOYKGwLV89rZ9aCIwRT (AI Search custom skill — garbled options, now fixed)
+- Fixed Questions: 4 hotspot questions rewritten with proper dropdown values (Translator, SpeechRecognizer, PDF extraction, AI Search custom skill)
+- Domain 4 + cross-domain: 9/10 adjusted (90.0%)
+- Notes: _fill in your own words_
+- Next action: Day 16 - Domain 4: Video and Spatial Analysis
