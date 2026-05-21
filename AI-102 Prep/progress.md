@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 15 / 32
-- Questions Answered: 206 / 313
-- Accuracy: 87.5%
-- Current Streak: 15 days
-- Next Session: Day 16 (2026-05-21)
+- Sessions Completed: 16 / 32
+- Questions Answered: 218 / 313
+- Accuracy: 86.7%
+- Current Streak: 16 days
+- Next Session: Day 17 (2026-05-22)
 
 ## Milestones
 
@@ -242,3 +242,22 @@
 - Domain 4 + cross-domain: 9/10 adjusted (90.0%)
 - Notes: _fill in your own words_
 - Next action: Day 16 - Domain 4: Video and Spatial Analysis
+
+### Day 16 (2026-05-21) - Domain 4: Video and Spatial Analysis (Doc Intelligence focus)
+
+- Status: Completed
+- Questions Attempted: 12 (graded) + 1 skipped (broken options)
+- Correct: 9 / 12 (75.0% adjusted)
+- Raw Score: 6 / 11 (54.5%)
+- Time Spent: ~9.2 min quiz
+- Credited: 3 (9FyXH8exsY5DWDAUUD9t — prebuilt-read not in options; 2uw9VHkHTDj5U3qXNcKK — all options identical/garbled; 3jzO8zUYBnRoAHI4tGQw — 6-value options for 3-statement hotspot)
+- Skipped: 5uq0tU3cFRatKHLoyhuH (correct answer not in options, now fixed)
+- Key Mistakes:
+  - prebuilt-read for handwriting (6Yhnv8wKOgYiJfdBwybv): picked prebuilt-contract instead of prebuilt-read — prebuilt-read is the only model with handwriting style detection
+  - QR code support (CfFks5HxPpiEE92s4r87): business card model never added QR support in any version — prebuilt-read is the only model with barcode/QR extraction
+  - AI Search custom skill schema (0cOYKGwLV89rZ9aCIwRT): YYN — output field mappings required for skillsets, custom skill = Web API, entity recognition feeds the skill
+- Fixed Questions: 5 hotspot questions rewritten with correct dropdown values (prebuilt-read+confidence, lesson plan services, doc intelligence response, doc model selection, expense forms)
+- Domain 4: 7/10 adjusted (70.0%)
+- Domain 3 carryover: 2/2 (100%)
+- Notes: _fill in your own words_
+- Next action: Day 17 - Domain 5: Text Analytics

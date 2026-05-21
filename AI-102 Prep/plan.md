@@ -103,30 +103,30 @@
 
 ### Day 13 (2026-05-18) - Domain 4: Image Analysis
 
-- [ ] Study: OCR, tags, object outputs, response interpretation
-- [ ] Practice: 15 questions on Domain 4
-- [ ] Lab: Compare OCR vs object detection use-cases
+- [x] Study: OCR, tags, object outputs, response interpretation
+- [x] Practice: 13 graded questions (11/13 = 84.6% adjusted)
+- [x] Lab: Compare OCR vs object detection use-cases
 - Estimated time: 1 hr
 
 ### Day 14 (2026-05-19) - Domain 4: Custom Vision Models
 
-- [ ] Study: Classification vs detection, labeling quality, metrics
-- [ ] Practice: 8 questions on Domain 4
-- [ ] Lab: Define labeling rules for dataset consistency
+- [x] Study: Classification vs detection, labeling quality, metrics
+- [x] Practice: 11 graded questions (9/11 = 81.8% adjusted)
+- [x] Lab: Define labeling rules for dataset consistency
 - Estimated time: 0.5 hrs
 
 ### Day 15 (2026-05-20) - Domain 4: Training and Publishing
 
-- [ ] Study: Train/evaluate/publish/consume custom models
-- [ ] Practice: 8 questions on Domain 4
-- [ ] Lab: Draft CI/CD flow for model publish
+- [x] Study: Train/evaluate/publish/consume custom models
+- [x] Practice: 10 graded questions (9/10 = 90.0% adjusted)
+- [x] Lab: Draft CI/CD flow for model publish
 - Estimated time: 0.5 hrs
 
 ### Day 16 (2026-05-21) - Domain 4: Video and Spatial Analysis
 
-- [ ] Study: Video Indexer and Spatial Analysis scenarios
-- [ ] Practice: 8 questions on Domain 4
-- [ ] Lab: Map video analytics requirements to service choices
+- [x] Study: Doc Intelligence models, AI Search keys, knowledge store projections
+- [x] Practice: 12 graded questions (9/12 = 75.0% adjusted; 5 hotspot fixes)
+- [x] Lab: Map video analytics requirements to service choices
 - Estimated time: 0.5 hrs
 
 ### Day 17 (2026-05-22) - Domain 5: Text Analytics

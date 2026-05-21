@@ -2,7 +2,10 @@
 	"examCode": "AI-102",
 	"examName": "Designing and Implementing a Microsoft Azure AI Solution",
 	"totalQuestions": 313,
-	"sources": ["ExamTopics community dump", "AI-generated normalization"],
+	"sources": [
+		"ExamTopics community dump",
+		"AI-generated normalization"
+	],
 	"domains": [
 		{
 			"domainId": "1",
@@ -22,8 +25,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134922-exam-ai-102-topic-1-question-58-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image89.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image90.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image89.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image90.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -187,8 +194,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112133-exam-ai-102-topic-1-question-54-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image45.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image204.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image45.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image204.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -215,7 +226,10 @@
 				{
 					"id": "4TQwVtvve90s7b25vP3W",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure Cognitive Search service. During the past 12 months, query volume steadily increased. You discover that some search query requests to the Cognitive Search service are being throttled. You need to reduce the likelihood that search query requests are throttled. Solution: You enable customer-managed key (CMK) encryption. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/search/search-performance-analysis#throttling-behaviors Throttling occurs when the search service is at capacity. Throttling can occur during qu | Selected Answer: B The best answer is: • B. No Reason for choosing this option: Enabling customer-managed key (CMK) encryption does not directly impact the throttling of search query requests in Azure Cognitive Search se",
 					"topic": "Topic 1",
 					"difficulty": "medium",
@@ -232,7 +246,10 @@
 				{
 					"id": "4ghohXt4y8yU4kP4onnx",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You create a web app named app1 that runs on an Azure virtual machine named vm1. Vm1 is on an Azure virtual network named vnet1. You plan to create a new Azure Cognitive Search service named service1. You need to ensure that app1 can connect directly to service1 without routing traffic over the public internet. Solution: You deploy service1 and a public endpoint, and you configure a network security group (NSG) for vnet1. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B Use a private endpoint instead of a public endpoint to prevent from routing traffic over the public internet. | appeared in august exam",
 					"topic": "Topic 1",
 					"difficulty": "medium",
@@ -300,8 +317,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102671-exam-ai-102-topic-1-question-47-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image1.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image2.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image1.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image2.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -326,7 +347,10 @@
 				{
 					"id": "5GIFjxU1yKRvyE5jGeGN",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure Cognitive Search service. During the past 12 months, query volume steadily increased. You discover that some search query requests to the Cognitive Search service are being throttled. You need to reduce the likelihood that search query requests are throttled. Solution: You add indexes. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B B is correct answer. \"How your search queries perform is directly connected to the size and complexity of your indexes. The smaller and more optimized your indexes, the fast Azure Cognitive Search can | Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/search/search-performance-analysis#throttling-behaviors Throttling occurs when the search service is at capacity. Throttling can occur during qu",
 					"topic": "Topic 1",
 					"difficulty": "medium",
@@ -354,8 +378,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/106252-exam-ai-102-topic-1-question-52-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image24.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image203.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image24.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image203.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -418,7 +446,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0001200003.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image200.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image200.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -445,7 +475,10 @@
 				{
 					"id": "CiKqj0Y73N7Lbf8SJ9TP",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure Cognitive Search service. During the past 12 months, query volume steadily increased. You discover that some search query requests to the Cognitive Search service are being throttled. You need to reduce the likelihood that search query requests are throttled. Solution: You add replicas. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/search/search-performance-analysis#throttling-behaviors Throttling occurs when the search service is at capacity. Throttling can occur during qu | Selected Answer: A From : https://learn.microsoft.com/en-us/azure/search/search-performance-tips#index-size-and-schema However, if the index is right-sized, the only other calibration you can make is to increase capacity",
 					"topic": "Topic 1",
 					"difficulty": "medium",
@@ -524,7 +557,12 @@
 				{
 					"id": "G9SeGxe4WWmgLfK4zAYL",
 					"question": "You have an Azure subscription that contains an Anomaly Detector resource. You deploy a Docker host server named Server1 to the on-premises network. You need to host an instance of the Anomaly Detector service on Server1. Which parameter should you include in the docker run command?",
-					"options": ["A. Fluentd", "B. Billing", "C. Http Proxy", "D. Mounts"],
+					"options": [
+						"A. Fluentd",
+						"B. Billing",
+						"C. Http Proxy",
+						"D. Mounts"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B The answer is correct. Important The Eula, Billing, and ApiKey options must be specified to run the container; otherwise, the container won't start. For more information, see Billing. The ApiKey value | Selected Answer: B docker run --rm -it -p 5000:5000 --memory 4g --cpus 1 \\ mcr.microsoft.com/azure-cognitive-services/decision/anomaly-detector:latest \\ Eula=accept \\ Billing={ENDPOINT_URI} \\ ApiKey={API_KEY} https://lea",
 					"topic": "Topic 1",
 					"difficulty": "medium",
@@ -555,7 +593,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0003500001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image202.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image202.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -596,7 +636,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["D", "E"],
+					"correctAnswers": [
+						"D",
+						"E"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -636,8 +679,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135060-exam-ai-102-topic-1-question-65-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image115.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image116.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image115.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image116.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "C",
@@ -787,7 +834,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "C"],
+					"correctAnswers": [
+						"B",
+						"C"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -805,8 +855,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150683-exam-ai-102-topic-1-question-71-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image167.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image168.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image167.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image168.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -875,7 +929,11 @@
 				{
 					"id": "Ur2GmJJc6Priqo605azQ",
 					"question": "You are building a solution that will detect anomalies in sensor data from the previous 24 hours. You need to ensure that the solution scans the entire dataset, at the same time, for anomalies. Which type of detection should you use?",
-					"options": ["A. batch", "B. streaming", "C. change points"],
+					"options": [
+						"A. batch",
+						"B. streaming",
+						"C. change points"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/anomaly-detector/overview#univariate-anomaly-detection Batch detection Use your time series to detect any anomalies that migh | Selected Answer: A A is the answer because batch detection processes the entire dataset at once to identify anomalies. This is suitable for scenarios where you need to analyze sensor data from the previous 24 hours in on",
 					"topic": "Topic 1",
 					"difficulty": "medium",
@@ -892,7 +950,10 @@
 				{
 					"id": "UsBC3XsDMhgBNJB7qzI3",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You create a web app named app1 that runs on an Azure virtual machine named vm1. Vm1 is on an Azure virtual network named vnet1. You plan to create a new Azure Cognitive Search service named service1. You need to ensure that app1 can connect directly to service1 without routing traffic over the public internet. Solution: You deploy service1 and a private endpoint to vnet1. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/search/service-create-private-endpoint#why-use-a-private-endpoint-for-secure-access Private Endpoints for Azure Cognitive Search allow a client | Selected Answer: A this is the right solution to the scenario",
 					"topic": "Topic 1",
 					"difficulty": "medium",
@@ -964,8 +1025,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135092-exam-ai-102-topic-1-question-59-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image91.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image205.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image91.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image205.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -1030,7 +1095,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["A", "E"],
+					"correctAnswers": [
+						"A",
+						"E"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -1048,8 +1116,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112134-exam-ai-102-topic-1-question-55-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image47.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image48.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image47.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image48.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -1090,7 +1162,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0002900001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image201.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image201.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -1177,7 +1251,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "D"],
+					"correctAnswers": [
+						"B",
+						"D"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -1225,7 +1302,11 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["A", "C", "F"],
+					"correctAnswers": [
+						"A",
+						"C",
+						"F"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -1249,7 +1330,11 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["A", "B", "F"],
+					"correctAnswers": [
+						"A",
+						"B",
+						"F"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -1359,7 +1444,9 @@
 						"https://www.examtopics.com/assets/media/exam-media/04271/0000300001.png",
 						"https://www.examtopics.com/assets/media/exam-media/04271/0000400001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image199.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image199.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -1408,7 +1495,10 @@
 				{
 					"id": "gOZs9g4kSF2A8JXcu2wE",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You create a web app named app1 that runs on an Azure virtual machine named vm1. Vm1 is on an Azure virtual network named vnet1. You plan to create a new Azure Cognitive Search service named service1. You need to ensure that app1 can connect directly to service1 without routing traffic over the public internet. Solution: You deploy service1 and a public endpoint to a new virtual network, and you configure Azure Private Link. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Answer is no. you should create a private link with private endpoint | Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/search/service-create-private-endpoint#why-use-a-private-endpoint-for-secure-access Private Endpoints for Azure Cognitive Search allow a client",
 					"topic": "Topic 1",
 					"difficulty": "medium",
@@ -1502,8 +1592,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135042-exam-ai-102-topic-1-question-60-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image93.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image206.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image93.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image206.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -1550,7 +1644,10 @@
 				{
 					"id": "urND3YDAbNE2XnFWJWk3",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure Cognitive Search service. During the past 12 months, query volume steadily increased. You discover that some search query requests to the Cognitive Search service are being throttled. You need to reduce the likelihood that search query requests are throttled. Solution: You migrate to a Cognitive Search service that uses a higher tier. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Using a higher tier does not imply scaling replicas or partitions. The answer should be no | Selected Answer: A answer is correct",
 					"topic": "Topic 1",
 					"difficulty": "medium",
@@ -1589,7 +1686,10 @@
 				{
 					"id": "y0sdIRaGx2ICrqHN54cD",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You create a web app named app1 that runs on an Azure virtual machine named vm1. Vm1 is on an Azure virtual network named vnet1. You plan to create a new Azure Cognitive Search service named service1. You need to ensure that app1 can connect directly to service1 without routing traffic over the public internet. Solution: You deploy service1 and a public endpoint, and you configure an IP firewall rule. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: appeared in august exam | Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/search/service-create-private-endpoint#why-use-a-private-endpoint-for-secure-access Private Endpoints for Azure Cognitive Search allow a client",
 					"topic": "Topic 1",
 					"difficulty": "medium",
@@ -1638,8 +1738,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108602-exam-ai-102-topic-2-question-30-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image31.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image32.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image31.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image32.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -1681,7 +1785,9 @@
 						"https://img.examtopics.com/ai-102/image49.png",
 						"https://img.examtopics.com/ai-102/image50.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image51.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image51.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -1723,7 +1829,9 @@
 						"https://www.examtopics.com/assets/media/exam-media/04271/0008000001.png",
 						"https://www.examtopics.com/assets/media/exam-media/04271/0008100001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image207.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image207.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -1786,7 +1894,9 @@
 						"https://img.examtopics.com/ai-102/image6.png",
 						"https://img.examtopics.com/ai-102/image7.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image8.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image8.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -1854,7 +1964,9 @@
 						"https://img.examtopics.com/ai-102/image28.png",
 						"https://img.examtopics.com/ai-102/image29.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image30.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image30.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -1893,7 +2005,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0009800001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image210.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image210.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -1953,8 +2067,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134929-exam-ai-102-topic-2-question-34-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image95.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image96.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image95.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image96.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -2084,7 +2202,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["A", "D"],
+					"correctAnswers": [
+						"A",
+						"D"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -2211,8 +2332,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/110625-exam-ai-102-topic-2-question-26-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image26.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image27.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image26.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image27.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -2340,7 +2465,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "D"],
+					"correctAnswers": [
+						"B",
+						"D"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -2362,7 +2490,9 @@
 						"https://img.examtopics.com/ai-102/image119.png",
 						"https://img.examtopics.com/ai-102/image120.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image121.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image121.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -2406,7 +2536,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "D"],
+					"correctAnswers": [
+						"B",
+						"D"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -2469,8 +2602,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135013-exam-ai-102-topic-2-question-37-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image117.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image214.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image117.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image214.png"
+					],
 					"answerStatus": "verified",
 					"type": "mcq",
 					"ungraded": false,
@@ -2494,8 +2631,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150068-exam-ai-102-topic-2-question-41-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image169.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image170.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image169.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image170.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -2580,7 +2721,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0008300001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image208.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image208.png"
+					],
 					"answerStatus": "verified_fixed",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -2621,7 +2764,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["C", "D"],
+					"correctAnswers": [
+						"C",
+						"D"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -2639,8 +2785,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/145640-exam-ai-102-topic-2-question-40-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image152.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image153.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image152.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image153.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "D",
@@ -2726,7 +2876,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0008600001.jpg"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image209.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image209.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -2764,8 +2916,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102936-exam-ai-102-topic-2-question-22-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image3.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image213.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image3.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image213.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -2792,7 +2948,12 @@
 				{
 					"id": "sn2Ay2bButbMMeLpTgKg",
 					"question": "You are building an app that will use the Azure AI Video Indexer service. You plan to train a language model to recognize industry-specific terms. You need to upload a file that contains the industry-specific terms. Which file format should you use?",
-					"options": ["A. XML", "B. TXT", "C. XLS", "D. PDF"],
+					"options": [
+						"A. XML",
+						"B. TXT",
+						"C. XLS",
+						"D. PDF"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B Answer is correct: As per https://learn.microsoft.com/en-us/azure/azure-video-indexer/customize-language-model-with-website This step creates the model and gives the option to upload text files to the | Selected Answer: B TXT because Azure AI Video Indexer supports uploading custom vocabulary files in plain text format for training language models to recognize industry-specific terms. This format is simple and widely us",
 					"topic": "Topic 2",
 					"difficulty": "medium",
@@ -2821,7 +2982,9 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150146-exam-ai-102-topic-2-question-42-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image171.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image171.png"
+					],
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "mc",
@@ -2886,11 +3049,16 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/145183-exam-ai-102-topic-2-question-39-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image151.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image151.png"
+					],
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "D"],
+					"correctAnswers": [
+						"B",
+						"D"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -2911,7 +3079,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0010800001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image212.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image212.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -2938,7 +3108,11 @@
 				{
 					"id": "y0WlKqr46BcLKj28zoJI",
 					"question": "You have a mobile app that manages printed forms. You need the app to send images of the forms directly to Forms Recognizer to extract relevant information. For compliance reasons, the image files must not be stored in the cloud. In which format should you send the images to the Form Recognizer API endpoint?",
-					"options": ["A. raw image binary", "B. form URL encoded", "C. JSON"],
+					"options": [
+						"A. raw image binary",
+						"B. form URL encoded",
+						"C. JSON"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A To send images to the Form Recognizer API endpoint without storing them in the cloud, you should send the images in the following format: A. raw image binary Sending the images as raw image binary data | Appeared on Oct/29/2023",
 					"topic": "Topic 2",
 					"difficulty": "medium",
@@ -2969,7 +3143,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0010200001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image211.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image211.png"
+					],
 					"answerStatus": "recovered_high",
 					"answerInferredFrom": "subagent_recovery_high",
 					"type": "mc",
@@ -3016,7 +3192,10 @@
 				{
 					"id": "0M8IwPG4SyDF0AKpNc9G",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You develop an application to identify species of flowers by training a Custom Vision model. You receive images of new flower species. You need to add the new images to the classifier. Solution: You add the new images, and then use the Smart Labeler tool. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: The answer is correct. | Selected Answer: B The answer is B is because the limitations of the smart labeler: You should only request suggested tags for images whose tags have already been trained on once. Don't get suggestions for a new tag that",
 					"topic": "Topic 3",
 					"difficulty": "medium",
@@ -3070,7 +3249,9 @@
 						"https://www.examtopics.com/assets/media/exam-media/04271/0013900001.png",
 						"https://www.examtopics.com/assets/media/exam-media/04271/0014000001.jpg"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image217.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image217.png"
+					],
 					"answerStatus": "verified",
 					"type": "mcq",
 					"correctAnswer": "A",
@@ -3123,7 +3304,9 @@
 						"https://img.examtopics.com/ai-102/image122.png",
 						"https://img.examtopics.com/ai-102/image123.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image222.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image222.png"
+					],
 					"answerStatus": "verified",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -3183,7 +3366,9 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/152249-exam-ai-102-topic-3-question-80-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image173.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image173.png"
+					],
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "mc",
@@ -3252,7 +3437,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["C", "E"],
+					"correctAnswers": [
+						"C",
+						"E"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -3318,7 +3506,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["A", "C"],
+					"correctAnswers": [
+						"A",
+						"C"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -3381,8 +3572,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112140-exam-ai-102-topic-3-question-50-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image57.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image58.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image57.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image58.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -3420,8 +3615,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135148-exam-ai-102-topic-3-question-73-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image132.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image133.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image132.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image133.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -3448,7 +3647,10 @@
 				{
 					"id": "D76miQugR8VC8r7pHszD",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You develop an application to identify species of flowers by training a Custom Vision model. You receive images of new flower species. You need to add the new images to the classifier. Solution: You create a new model, and then upload the new images and labels. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: To pass this exam, you will need to separate and memorise each of the following categories: ‘Yes/No questions that are presented in sequence and cannot be reversed once a decision has been made’, ‘Yes/No three-choice que | Answer is correct, no need to create a new model, the existing one should be extended and retrained",
 					"topic": "Topic 3",
 					"difficulty": "medium",
@@ -3476,8 +3678,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135056-exam-ai-102-topic-3-question-74-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image134.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image225.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image134.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image225.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -3516,8 +3722,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/123329-exam-ai-102-topic-3-question-54-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image72.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image73.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image72.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image73.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -3556,7 +3766,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0013400001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image215.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image215.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -3727,8 +3939,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111250-exam-ai-102-topic-3-question-44-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image37.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image38.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image37.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image38.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -3764,8 +3980,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112145-exam-ai-102-topic-3-question-53-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image61.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image62.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image61.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image62.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -3803,7 +4023,9 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/124687-exam-ai-102-topic-3-question-57-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image78.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image78.png"
+					],
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "mc",
@@ -3829,7 +4051,9 @@
 						"https://img.examtopics.com/ai-102/image52.png",
 						"https://img.examtopics.com/ai-102/image53.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image220.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image220.png"
+					],
 					"answerStatus": "verified_from_image",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -3856,7 +4080,12 @@
 				{
 					"id": "NTRTfewXSNb37oVwpT7S",
 					"question": "You build a Conversational Language Understanding model by using the Language Services portal. You export the model as a JSON file as shown in the following sample. To what does the Weather.Historic entity correspond in the utterance?",
-					"options": ["A. by month", "B. chicago", "C. rain", "D. location"],
+					"options": [
+						"A. by month",
+						"B. chicago",
+						"C. rain",
+						"D. location"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A on exam, by month | Selected Answer: A 23 to 30 is by month.",
 					"topic": "Topic 3",
 					"difficulty": "medium",
@@ -3886,8 +4115,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111618-exam-ai-102-topic-3-question-35-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image11.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image12.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image11.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image12.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -3912,7 +4145,10 @@
 				{
 					"id": "OygR9CtlI2kY37Xk7tkw",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You build a language model by using a Language Understanding service. The language model is used to search for information on a contact list by using an intent named FindContact. A conversational expert provides you with the following list of phrases to use for training. ✑ Find contacts in London. ✑ Who do I know in Seattle? ✑ Search for contacts in Ukraine. You need to implement the phrase list in Language Understanding. Solution: You create a new intent for location. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: This should be \"No\" | The answer should be NO. An utterance having wo intents? This is illogical. The model should have an Entity \"Location\" that will help in finding the contacts. Reference: https://docs.microsoft.com/en-us/azure/cognitive-s",
 					"topic": "Topic 3",
 					"difficulty": "medium",
@@ -4008,8 +4244,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/136760-exam-ai-102-topic-3-question-68-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image128.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image129.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image128.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image129.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -4047,8 +4287,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/123688-exam-ai-102-topic-3-question-55-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image74.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image75.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image74.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image75.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -4176,7 +4420,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "D"],
+					"correctAnswers": [
+						"B",
+						"D"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -4194,8 +4441,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102572-exam-ai-102-topic-3-question-34-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image9.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image10.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image9.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image10.png"
+					],
 					"answerStatus": "verified_from_image",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -4233,8 +4484,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/145783-exam-ai-102-topic-3-question-78-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image154.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image155.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image154.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image155.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "B",
@@ -4294,8 +4549,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122496-exam-ai-102-topic-3-question-59-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image81.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image82.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image81.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image82.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -4342,7 +4601,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["A", "C"],
+					"correctAnswers": [
+						"A",
+						"C"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -4371,7 +4633,10 @@
 				{
 					"id": "aCHdNf0PVlynzAYcV2ik",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You develop an application to identify species of flowers by training a Custom Vision model. You receive images of new flower species. You need to add the new images to the classifier. Solution: You add the new images and labels to the existing model. You retrain the model, and then publish the model. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Correct! uploading, tagging, retraining and publishing the model | Was on exam 7 Jun 2022",
 					"topic": "Topic 3",
 					"difficulty": "medium",
@@ -4447,7 +4712,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0013700001.jpg"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image216.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image216.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -4485,8 +4752,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112137-exam-ai-102-topic-3-question-49-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image55.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image56.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image55.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image56.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -4524,8 +4795,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111851-exam-ai-102-topic-3-question-42-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image35.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image36.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image35.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image36.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -4550,7 +4825,10 @@
 				{
 					"id": "fZ7ZKmvCNfsqYYE4RP5F",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You build a language model by using a Language Understanding service. The language model is used to search for information on a contact list by using an intent named FindContact. A conversational expert provides you with the following list of phrases to use for training. ✑ Find contacts in London. ✑ Who do I know in Seattle? Search for contacts in Ukraine. You need to implement the phrase list in Language Understanding. Solution: You create a new entity for the domain. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Wrong! We create a new location entity for domain to keep the location of FindContact intent. | B. No Creating a new entity for the domain does not directly address the goal of implementing the provided phrase list for the \"FindContact\" intent. Entities are typically used to extract specific pieces of information f",
 					"topic": "Topic 3",
 					"difficulty": "medium",
@@ -4569,7 +4847,10 @@
 				{
 					"id": "fz3fww1MUnrii1z8LheP",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You build a language model by using a Conversational Language Understanding. The language model is used to search for information on a contact list by using an intent named FindContact. A conversational expert provides you with the following list of phrases to use for training. • Find contacts in London. • Who do I know in Seattle? • Search for contacts in Ukraine. You need to implement the phrase list in Conversational Language Understanding. Solution: You create a new utterance for each phrase in the FindContact intent. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A A. Yes Creating a new utterance for each phrase in the FindContact intent is a correct approach to implement the phrase list in Conversational Language Understanding. This method trains the language mo | Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/luis/concepts/application-design#create-example-utterances-for-each-intent To start, avoid creating too many utterances for e",
 					"topic": "Topic 3",
 					"difficulty": "medium",
@@ -4597,7 +4878,9 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150739-exam-ai-102-topic-3-question-79-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image172.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image172.png"
+					],
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "mc",
@@ -4667,7 +4950,9 @@
 						"https://img.examtopics.com/ai-102/image125.png",
 						"https://img.examtopics.com/ai-102/image126.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image223.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image223.png"
+					],
 					"answerStatus": "verified_fixed",
 					"type": "hotspot",
 					"correctAnswer": "A",
@@ -4711,14 +4996,21 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["C", "D", "F"],
+					"correctAnswers": [
+						"C",
+						"D",
+						"F"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
 				{
 					"id": "lKgElUvJhfuCZCbui43E",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You build a language model by using a Language Understanding service. The language model is used to search for information on a contact list by using an intent named FindContact. A conversational expert provides you with the following list of phrases to use for training. ✑ Find contacts in London. ✑ Who do I know in Seattle? ✑ Search for contacts in Ukraine. You need to implement the phrase list in Language Understanding. Solution: You create a new pattern in the FindContact intent. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Using a pattern could be a good solution IMHO... ✑ Find contacts in London. ✑ Who do I know in Seattle? ✑ Search for contacts in Ukraine. Like Where is {FormName}[?] Who authored {FormName}[?] {FormName} is published in | Selected Answer: A According to MS learn, answer should be yes (A) https://learn.microsoft.com/en-us/training/modules/create-language-understanding-app/5-use-patterns-to-differentiate-similar-utterances This is a FindCon",
 					"topic": "Topic 3",
 					"difficulty": "medium",
@@ -4746,8 +5038,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112143-exam-ai-102-topic-3-question-52-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image59.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image60.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image59.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image60.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -4785,8 +5081,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134937-exam-ai-102-topic-3-question-60-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image97.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image98.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image97.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image98.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -4846,8 +5146,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108985-exam-ai-102-topic-3-question-45-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image39.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image40.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image39.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image40.png"
+					],
 					"answerStatus": "verified_fixed",
 					"type": "hotspot",
 					"ungraded": false,
@@ -4885,8 +5189,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108982-exam-ai-102-topic-3-question-40-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image33.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image219.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image33.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image219.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -4924,8 +5232,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122483-exam-ai-102-topic-3-question-58-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image79.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image221.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image79.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image221.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -5050,8 +5362,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135018-exam-ai-102-topic-3-question-71-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image130.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image224.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image130.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image224.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -5091,7 +5407,9 @@
 						"https://img.examtopics.com/ai-102/image13.png",
 						"https://img.examtopics.com/ai-102/image14.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image218.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image218.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "B",
@@ -5129,8 +5447,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135062-exam-ai-102-topic-3-question-75-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image136.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image137.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image136.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image137.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -5266,23 +5588,28 @@
 					"id": "2uw9VHkHTDj5U3qXNcKK",
 					"question": "HOTSPOT - You are building a language learning solution. You need to recommend which Azure services can be used to perform the following tasks: • Analyze lesson plans submitted by teachers and extract key fields, such as lesson times and required texts. • Analyze learning content and provide students with pictures that represent commonly used words or phrases in the text. The solution must minimize development effort. Which Azure service should you recommend for each task? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
 					"options": [
-						"C. Box 1: Azure Al Cu...; Box 2: Azure Al Custom Vision",
-						"B. Box 1: Azure Al Custom Vision; Box 2: Azure Al Cu...",
-						"A. Box 1: Azure Al Custom Vision; Box 2: Azure Al Custom Vision"
+						"A. Lesson plans: Azure AI Document Intelligence; Learning content: Immersive Reader",
+						"B. Lesson plans: Azure AI Custom Vision; Learning content: Azure AI Document Intelligence",
+						"C. Lesson plans: Azure Cognitive Search; Learning content: Azure AI Custom Vision",
+						"D. Lesson plans: Immersive Reader; Learning content: Azure AI Document Intelligence"
 					],
-					"explanation": "Discussion highlights: Answer is correct. Immersive Reader can indeed provide pictures for commonly used words in text: https://learn.microsoft.com/en-us/azure/ai-services/immersive-reader/overview#display-pictures-for-common-words | plans: Azure AI Document Intelligence content: Immersive Reader confirmed by ChatGPT | Inference was flagged as suspect by subagent audit and left ungraded.",
+					"explanation": "Azure AI Document Intelligence extracts key fields (lesson times, required texts) from lesson plan documents. Immersive Reader provides Picture Dictionary — displaying pictures for commonly used words in text, perfect for language learning. Ref: https://learn.microsoft.com/en-us/azure/ai-services/immersive-reader/overview#display-pictures-for-common-words",
 					"topic": "Topic 4",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143503-exam-ai-102-topic-4-question-24-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image156.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image157.png"],
-					"answerStatus": "llm_offline_completion",
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image156.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image157.png"
+					],
+					"answerStatus": "verified_from_image",
 					"type": "mc",
 					"correctAnswer": "A",
 					"ungraded": false,
 					"answerInferredFrom": "llm_offline_subagent",
-					"answerConfidence": "medium",
+					"answerConfidence": "high",
 					"answerRationale": "nearest graded-question semantic match",
 					"questionTypeInferredByAgent": "hotspot",
 					"originalPlaceholderOptions": [
@@ -5304,12 +5631,12 @@
 					"id": "3jzO8zUYBnRoAHI4tGQw",
 					"question": "HOTSPOT - You have an app named App1 that uses Azure AI Document Intelligence to analyze medical records and provide pharmaceutical dosage recommendations for patients. You send a request to App1 and receive the following response. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
 					"options": [
-						"D. Yes, No, No, No, No, No",
-						"B. No, No, Yes, No, No, No",
-						"A. Yes, No, Yes, No, No, No",
-						"C. Yes, Yes, Yes, No, No, No"
+						"A. No, Yes, No",
+						"B. No, No, No",
+						"C. Yes, Yes, No",
+						"D. Yes, No, Yes"
 					],
-					"explanation": "Discussion highlights: The form elements were recognized with greater than 70 percent confidence: No. The fields object in the response is empty, which suggests that no form elements were recognized. Therefore, we cannot say that they were rec | The chosen model is suitable for the intended use case: No. The model used here is “prebuilt-health InsuranceCard.us”, which is designed to extract information from health insurance cards in the US. However, the intended",
+					"explanation": "Statement 1 (Model suitable): No - prebuilt-healthInsuranceCard.us is for health insurance cards, not medical records. Statement 2 (Text >70% confidence): Yes - confidence is 1 (100%). Statement 3 (Form elements >70% confidence): No - fields object is empty {}, meaning no form elements were recognized at all.",
 					"topic": "Topic 4",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
@@ -5318,13 +5645,15 @@
 						"https://img.examtopics.com/ai-102/image102.png",
 						"https://img.examtopics.com/ai-102/image103.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image226.png"],
-					"answerStatus": "llm_offline_completion",
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image226.png"
+					],
+					"answerStatus": "verified_from_image",
 					"type": "mc",
 					"correctAnswer": "A",
 					"ungraded": false,
 					"answerInferredFrom": "llm_offline_subagent",
-					"answerConfidence": "low",
+					"answerConfidence": "high",
 					"answerRationale": "weak evidence; defaulted to strongest prior",
 					"questionTypeInferredByAgent": "mcq",
 					"originalPlaceholderOptions": [
@@ -5355,8 +5684,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150067-exam-ai-102-topic-4-question-25-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image174.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image175.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image174.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image175.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -5383,23 +5716,27 @@
 					"question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. You build an app named App1 that analyzes PDF files for handwritten content by using DI1. You need to ensure that App1 will recognize the handwritten content. How should you complete the code? To answer, select the appropriate options in the answer area.",
 					"options": [
 						"A. Box 1: prebuilt-document; Box 2: 1.0",
-						"B. Box 1: prebuilt-contract; Box 2: 0.8",
-						"C. Box 1: prebuilt-read; Box 2: 0.8",
+						"B. Box 1: prebuilt-contract; Box 2: 0.75",
+						"C. Box 1: prebuilt-read; Box 2: 0.75",
 						"D. Box 1: prebuilt-read; Box 2: 1.0"
 					],
-					"explanation": "Discussion highlights: The first answer should be read: Read OCR - Extract print and handwritten text including words, locations, and detected languages. https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-model-o | Prebuilt-read is correct which can classify the test extracted as handwrittern or printed",
+					"explanation": "prebuilt-read extracts printed and handwritten text, words, locations, and detected languages. It can classify text as handwritten or printed. Confidence threshold 0.75 is correct (from answer image dropdown: 0.1, 0.75, 1.0). Ref: https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/read",
 					"topic": "Topic 4",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134940-exam-ai-102-topic-4-question-18-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image105.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image227.png"],
-					"answerStatus": "llm_offline_completion",
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image105.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image227.png"
+					],
+					"answerStatus": "verified_from_image",
 					"type": "mc",
 					"correctAnswer": "C",
 					"ungraded": false,
 					"answerInferredFrom": "llm_offline_subagent",
-					"answerConfidence": "medium",
+					"answerConfidence": "high",
 					"answerRationale": "nearest graded-question semantic match",
 					"questionTypeInferredByAgent": "hotspot",
 					"originalPlaceholderOptions": [
@@ -5462,24 +5799,28 @@
 					"id": "9FyXH8exsY5DWDAUUD9t",
 					"question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. You build an app named App1 that analyzes PDF files for handwritten content by using DI1. You need to ensure that App1 will recognize the handwritten content. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
 					"options": [
-						"D. Box 1: document_analysis_client ...; Box 2: “prebuilt-contract’",
-						"A. Box 1: document_analysis_client = DocumentAnalysisClient(; Box 2: “prebuilt-contract’",
-						"C. Box 1: document_analysis_client = DocumentAnalysisClient(; Box 2: “prebuilt...",
-						"B. Box 1: “prebuilt-contract’; Box 2: document_analysis_client = DocumentAnalysisClient("
+						"A. Box 1: prebuilt-read; Box 2: 0.75",
+						"B. Box 1: prebuilt-document; Box 2: 0.75",
+						"C. Box 1: prebuilt-read; Box 2: 1.0",
+						"D. Box 1: prebuilt-contract; Box 2: 0.1"
 					],
-					"explanation": "Discussion highlights: I Think field one should be \"prebuilt-read\" as this is a model suitable for OCR with handwritten documents according to ChatGPT. | Prebuilt-read https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/read?view=doc-intel-4.0.0&tabs=sample-code",
+					"explanation": "The prebuilt-read model extracts printed and handwritten text. Confidence threshold 0.75 is correct (1.0 too strict, 0.1 too permissive).",
 					"topic": "Topic 4",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149783-exam-ai-102-topic-4-question-30-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image180.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image228.png"],
-					"answerStatus": "llm_offline_completion",
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image180.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image228.png"
+					],
+					"answerStatus": "verified_from_image",
 					"type": "mc",
 					"correctAnswer": "A",
 					"ungraded": false,
 					"answerInferredFrom": "llm_offline_subagent",
-					"answerConfidence": "medium",
+					"answerConfidence": "high",
 					"answerRationale": "nearest graded-question semantic match",
 					"questionTypeInferredByAgent": "hotspot",
 					"originalPlaceholderOptions": [
@@ -5545,24 +5886,28 @@
 					"id": "Fehdvw29Zl3poyyKYjCn",
 					"question": "HOTSPOT - You have an Azure subscription. You plan to build a solution that will analyze scanned documents and export relevant fields to a database. You need to recommend an Azure AI Document Intelligence model for the following types of documents: • Expenditure request authorization forms • Structured and unstructured survey forms • Structured employment application forms The solution must minimize development effort and costs. Which type of model should you recommend for each document type? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
 					"options": [
-						"A. Box 1: Prebuilt contract; Box 2: Custom neural; Box 3: Custom template",
-						"C. Box 1: Custom template; Box 2: Custom neural; Box 3: Prebuilt contract",
-						"D. Box 1: Custom neural; Box 2: Prebuilt contract; Box 3: Custom template",
-						"B. Box 1: Custom neural; Box 2: Custom template; Box 3: Prebuilt contract"
+						"A. Expenditure: Custom template; Employment: Prebuilt contract; Survey: Custom neural",
+						"B. Expenditure: Custom neural; Employment: Custom template; Survey: Prebuilt contract",
+						"C. Expenditure: Prebuilt contract; Employment: Custom neural; Survey: Custom template",
+						"D. Expenditure: Custom template; Employment: Custom neural; Survey: Prebuilt contract"
 					],
-					"explanation": "Discussion highlights: Microsoft copilot: For expenditure request authorization forms, you should choose the Prebuilt layout model. This model is designed to handle structured or semi-structured documents, making it suitable for forms with fie | Expenditure request authorization forms --> Custom template is CORRECT. Since you are dealing with specific document types like expenditure request authorization forms, a custom template model allows you to tailor the mo",
+					"explanation": "From answer image: Expenditure request authorization forms = Custom template (fixed layout, specific fields). Structured employment application forms = Prebuilt contract (structured docs with standard fields). Structured and unstructured survey forms = Custom neural (handles both structured and unstructured mixed content). Ref: https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-custom",
 					"topic": "Topic 4",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150443-exam-ai-102-topic-4-question-27-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image176.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image177.png"],
-					"answerStatus": "llm_offline_completion",
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image176.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image177.png"
+					],
+					"answerStatus": "verified_from_image",
 					"type": "mc",
 					"correctAnswer": "A",
 					"ungraded": false,
 					"answerInferredFrom": "llm_offline_subagent",
-					"answerConfidence": "medium",
+					"answerConfidence": "high",
 					"answerRationale": "nearest graded-question semantic match",
 					"questionTypeInferredByAgent": "hotspot",
 					"originalPlaceholderOptions": [
@@ -5691,7 +6036,11 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["C", "D", "F"],
+					"correctAnswers": [
+						"C",
+						"D",
+						"F"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -5751,8 +6100,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143504-exam-ai-102-topic-4-question-25-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image158.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image159.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image158.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image159.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "D",
@@ -5795,7 +6148,11 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["A", "B", "E"],
+					"correctAnswers": [
+						"A",
+						"B",
+						"E"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -5814,7 +6171,9 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149782-exam-ai-102-topic-4-question-29-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image179.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image179.png"
+					],
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "mc",
@@ -5836,8 +6195,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135063-exam-ai-102-topic-4-question-20-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image138.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image139.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image138.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image139.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -5877,7 +6240,9 @@
 						"https://img.examtopics.com/ai-102/image99.png",
 						"https://img.examtopics.com/ai-102/image100.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image101.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image101.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -5943,7 +6308,9 @@
 						"https://img.examtopics.com/ai-102/image16.png",
 						"https://img.examtopics.com/ai-102/image17.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image18.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image18.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -5986,7 +6353,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "E"],
+					"correctAnswers": [
+						"B",
+						"E"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -6004,8 +6374,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149767-exam-ai-102-topic-4-question-31-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image182.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image183.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image182.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image183.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -6042,7 +6416,9 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150257-exam-ai-102-topic-4-question-28-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image178.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image178.png"
+					],
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "mc",
@@ -6108,8 +6484,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150444-exam-ai-102-topic-4-question-32-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image184.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image185.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image184.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image185.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -6202,7 +6582,12 @@
 				{
 					"id": "0M5PUKWLHAhYbHt85jpV",
 					"question": "You are building a chatbot for a travel agent. The bot will ask users for a destination and must repeat the question until a valid input is received, or the user closes the conversation. Which type of dialog should you use?",
-					"options": ["A. prompt", "B. input", "C. adaptive", "D. QnA Maker"],
+					"options": [
+						"A. prompt",
+						"B. input",
+						"C. adaptive",
+						"D. QnA Maker"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types The dialogs library provides a few types of dialogs to make your | Selected Answer: A In this scenario, where a chatbot needs to ask users for a destination and must repeat the question until a valid input is received, the most appropriate type of dialog to use is a \"prompt\" dialog. Her",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -6234,7 +6619,9 @@
 						"https://img.examtopics.com/ai-102/image67.png",
 						"https://img.examtopics.com/ai-102/image68.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image69.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image69.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -6276,7 +6663,9 @@
 						"https://img.examtopics.com/ai-102/image86.png",
 						"https://img.examtopics.com/ai-102/image87.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image88.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image88.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -6312,8 +6701,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/105994-exam-ai-102-topic-5-question-25-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image21.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image22.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image21.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image22.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -6338,7 +6731,12 @@
 				{
 					"id": "5DxcrhiYuSg2Oy5b5dEj",
 					"question": "You are building a flight booking bot by using the Microsoft Bot Framework SDK. The bot will ask users for the departure date. The bot must repeat the question until a valid date is given, or the users cancel the transaction. Which type of dialog should you use?",
-					"options": ["A. prompt", "B. adaptive", "C. waterfall", "D. action"],
+					"options": [
+						"A. prompt",
+						"B. adaptive",
+						"C. waterfall",
+						"D. action"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types The dialogs library provides a few types of dialogs to make your | Selected Answer: A Prompts are used to ask the user for a specific piece of information and can include validation to ensure the response meets certain criteria. In this case, you can use a DateTimePrompt to ask for the",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -6418,7 +6816,10 @@
 				{
 					"id": "AFvclpbOQPqtWjA9XAeW",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have a chatbot that uses question answering in Azure Cognitive Service for Language. Users report that the responses of the chatbot lack formality when answering spurious questions. You need to ensure that the chatbot provides formal responses to spurious questions. Solution: From Language Studio, you change the chitchat source to qna_chitchat_professional.tsv, and then retrain and republish the model. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A Formal response, it is Personality = Professional, it is file qna_chitchat_professional.tsv . https://learn.microsoft.com/en-us/azure/ai-services/language-service/question-answering/concepts/best-pract | Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/how-to/chit-chat",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -6446,7 +6847,9 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111870-exam-ai-102-topic-5-question-33-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image23.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image23.png"
+					],
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "mc",
@@ -6471,7 +6874,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0023300001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image231.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image231.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -6670,7 +7075,10 @@
 				{
 					"id": "WaogPyLgZvcGJglpIziR",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are building a chatbot that will use question answering in Azure Cognitive Service for Language. You have a PDF named Doc1.pdf that contains a product catalogue and a price list. You upload Doc1.pdf and train the model. During testing, users report that the chatbot responds correctly to the following question: What is the price of ? The chatbot fails to respond to the following question: How much does cost? You need to ensure that the chatbot responds correctly to both questions. Solution: From Language Studio, you create an entity for price, and then retrain and republish the model. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: B. No Creating an entity for price and retraining the model in Language Studio is not the correct approach to solve the issue with Azure Cognitive Service for Language's question-answering capabilities. Instead, you shou | Selected Answer: B here the issue is not the price that could be an entity, but very different utterances that need to be considered",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -6698,8 +7106,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112146-exam-ai-102-topic-5-question-42-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image63.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image64.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image63.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image64.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -6726,7 +7138,10 @@
 				{
 					"id": "XGpVUml4yznLG6X83m5H",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are building a chatbot that will use question answering in Azure Cognitive Service for Language. You have a PDF named Doc1.pdf that contains a product catalogue and a price list. You upload Doc1.pdf and train the model. During testing, users report that the chatbot responds correctly to the following question: What is the price of ? The chatbot fails to respond to the following question: How much does cost? You need to ensure that the chatbot responds correctly to both questions. Solution: From Language Studio, you add alternative phrasing to the question and answer pair, and then retrain and republish the model. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/concepts/best-practices#when-should-you-add-alternate-questions-to-question-and-answer-pa | Selected Answer: A A from ChatGPT 3.5.",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -6782,7 +7197,11 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["A", "B", "C"],
+					"correctAnswers": [
+						"A",
+						"B",
+						"C"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -6805,7 +7224,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["C", "D"],
+					"correctAnswers": [
+						"C",
+						"D"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -6854,7 +7276,10 @@
 				{
 					"id": "hcBXSwi3vuBF6QwprWN2",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have a chatbot that uses question answering in Azure Cognitive Service for Language. Users report that the responses of the chatbot lack formality when answering spurious questions. You need to ensure that the chatbot provides formal responses to spurious questions. Solution: From Language Studio, you modify the question and answer pairs for the custom intents, and then retrain and republish the model. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B No, this solution does not meet the goal. The formality of responses to spurious questions is not controlled by modifying the question and answer pairs for the custom intents in Language Studio. These | Selected Answer: B Spurious questions are questions that are not relevant to the conversation or are not meant to be answered. In other words, these are chit-chat. So to make it professional, choose a professional chitch",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -6909,7 +7334,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["D", "E"],
+					"correctAnswers": [
+						"D",
+						"E"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -6933,7 +7361,11 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["A", "B", "E"],
+					"correctAnswers": [
+						"A",
+						"B",
+						"E"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -6954,7 +7386,9 @@
 					"questionImages": [
 						"https://www.examtopics.com/assets/media/exam-media/04271/0022800001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image229.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image229.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -7014,8 +7448,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112149-exam-ai-102-topic-5-question-45-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image65.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image66.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image65.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image66.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -7053,8 +7491,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111023-exam-ai-102-topic-5-question-23-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image19.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image20.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image19.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image20.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -7079,7 +7521,10 @@
 				{
 					"id": "oZVByU8caVl3GdfXXSqw",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are building a chatbot that will use question answering in Azure Cognitive Service for Language. You have a PDF named Doc1.pdf that contains a product catalogue and a price list. You upload Doc1.pdf and train the model. During testing, users report that the chatbot responds correctly to the following question: What is the price of ? The chatbot fails to respond to the following question: How much does cost? You need to ensure that the chatbot responds correctly to both questions. Solution: From Language Studio, you enable chit-chat, and then retrain and republish the model. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B clearly B, ChitChat is for pleasantries | Selected Answer: B No is CORRECT. Enabling chit-chat in Language Studio is designed to handle casual or informal conversations and is not specifically aimed at improving the chatbot's ability to understand different phra",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -7096,7 +7541,10 @@
 				{
 					"id": "pOKKg6429i76VKJAO00M",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have a chatbot that uses question answering in Azure Cognitive Service for Language. Users report that the responses of the chatbot lack formality when answering spurious questions. You need to ensure that the chatbot provides formal responses to spurious questions. Solution: From Language Studio, you remove all the chit-chat question and answer pairs, and then retrain and republish the model. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B The given answer Correct. Removing all chitchat QA pairs will not solve the problem of lack of formality. To solve the issue, change the chitchat source to qna_chitchat_professional.tsv Check out https | Selected Answer: B \"Professional personality\" refers to a specific conversational style or \"character\" chosen when designing a chatbot. This personality is typically more formal and suitable for use in corporate and offi",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -7241,7 +7689,9 @@
 						"https://www.examtopics.com/assets/media/exam-media/04271/0023100001.jpg",
 						"https://www.examtopics.com/assets/media/exam-media/04271/0023100002.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image230.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image230.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -7279,8 +7729,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/106151-exam-ai-102-topic-5-question-39-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image43.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image44.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image43.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image44.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -7318,8 +7772,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112152-exam-ai-102-topic-5-question-48-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image70.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image71.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image70.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image71.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -7362,7 +7820,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "D"],
+					"correctAnswers": [
+						"B",
+						"D"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -7384,7 +7845,9 @@
 						"https://www.examtopics.com/assets/media/exam-media/04271/0023700001.png",
 						"https://www.examtopics.com/assets/media/exam-media/04271/0023800001.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image232.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image232.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -7409,7 +7872,12 @@
 				{
 					"id": "w6j5wnsNOpRiUQOqSbRr",
 					"question": "You are building a chatbot by using the Microsoft Bot Framework Composer as shown in the exhibit. (Click the Exhibit tab.) The chatbot contains a dialog named GetUserDetails. GetUserDetails contains a TextInput control that prompts users for their name. The user input will be stored in a property named name. You need to ensure that you can dispose of the property when the last active dialog ends. Which scope should you assign to name?",
-					"options": ["A. dialog", "B. user", "C. turn", "D. conversation"],
+					"options": [
+						"A. dialog",
+						"B. user",
+						"C. turn",
+						"D. conversation"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/composer/ref-memory-variables?tabs=v2x#the-scopes - Dialog Properties associated with the active dialog. Properties in the dialog scope are kept until | Selected Answer: A https://learn.microsoft.com/en-us/composer/concept-memory?tabs=v1x",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -7428,7 +7896,10 @@
 				{
 					"id": "x0H5iHo7VyhU65lwCy3c",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are building a chatbot that will use question answering in Azure Cognitive Service for Language. You have a PDF named Doc1.pdf that contains a product catalogue and a price list. You upload Doc1.pdf and train the model. During testing, users report that the chatbot responds correctly to the following question: What is the price of ? The chatbot fails to respond to the following question: How much does cost? You need to ensure that the chatbot responds correctly to both questions. Solution: From Language Studio, you create an entity for cost, and then retrain and republish the model. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Solution: From Language Studio, you add alternative phrasing to the question and answer pair, and then retrain and republish the model. Choice is B | Selected Answer: B No is CORRECT. Creating an entity for \"cost\" and retraining the model is unlikely to resolve the issue of the chatbot failing to respond to variations in the phrasing of the question. The problem is li",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -7445,7 +7916,10 @@
 				{
 					"id": "xVjO016awwViRJcIZqc7",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have a chatbot that uses question answering in Azure Cognitive Service for Language. Users report that the responses of the chatbot lack formality when answering spurious questions. You need to ensure that the chatbot provides formal responses to spurious questions. Solution: From Language Studio, you change the chitchat source to qna_chitchat_friendly.tsv, and then retrain and republish the model. Does this meet the goal?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Had to Look up the Word \"spurious\" .. MSFT Should Not have used this Word .. Could have used a more common term .. \"Something false or inauthentic\" , For Some People around the World English is not their Primary Language | Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/how-to/chit-chat",
 					"topic": "Topic 5",
 					"difficulty": "medium",
@@ -7478,7 +7952,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["C", "E"],
+					"correctAnswers": [
+						"C",
+						"E"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -7502,7 +7979,11 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "C", "F"],
+					"correctAnswers": [
+						"B",
+						"C",
+						"F"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -7561,8 +8042,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135661-exam-ai-102-topic-6-question-1-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image107.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image108.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image107.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image108.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -7630,7 +8115,12 @@
 				{
 					"id": "0j6GKRoKuswn0kRX12b3",
 					"question": "You have an Azure subscription. You need to build an app that will compare documents for semantic similarity. The solution must meet the following requirements: • Return numeric vectors that represent the tokens of each document. • Minimize development effort. Which Azure OpenAI model should you use?",
-					"options": ["A. GPT-3.5", "B. GPT-4", "C. embeddings", "D. DALL-E"],
+					"options": [
+						"A. GPT-3.5",
+						"B. GPT-4",
+						"C. embeddings",
+						"D. DALL-E"
+					],
 					"explanation": "Discussion highlights: correct | embeddings correct",
 					"topic": "Topic 7",
 					"difficulty": "medium",
@@ -7662,7 +8152,9 @@
 						"https://img.examtopics.com/ai-102/image189.png",
 						"https://img.examtopics.com/ai-102/image190.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image191.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image191.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -7698,8 +8190,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143643-exam-ai-102-topic-7-question-15-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image164.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image165.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image164.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image165.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "A",
@@ -7781,8 +8277,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143505-exam-ai-102-topic-7-question-13-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image160.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image161.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image160.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image161.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -7840,8 +8340,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/136128-exam-ai-102-topic-7-question-11-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image147.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image148.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image147.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image148.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -7877,8 +8381,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149575-exam-ai-102-topic-7-question-22-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image187.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image188.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image187.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image188.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -7927,7 +8435,12 @@
 				{
 					"id": "RES6nlcOAb06feX7DCLJ",
 					"question": "You have an Azure OpenAI model. You have 500 prompt-completion pairs that will be used as training data to fine-tune the model. You need to prepare the training data. Which format should you use for the training data file?",
-					"options": ["A. CSV", "B. XML", "C. JSONL", "D. TSV"],
+					"options": [
+						"A. CSV",
+						"B. XML",
+						"C. JSONL",
+						"D. TSV"
+					],
 					"explanation": "Discussion highlights: Selected Answer: C SONL is CORRECT because Azure OpenAI requires training data for fine-tuning to be in JSON Lines (JSONL) format. Each line in the file represents a prompt-completion pair in JSON format, which is the re | key word is \"pair\" , you know that's a key value format so JSONL",
 					"topic": "Topic 7",
 					"difficulty": "medium",
@@ -7955,8 +8468,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143924-exam-ai-102-topic-7-question-14-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image162.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image163.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image162.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image163.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "C",
@@ -7994,8 +8511,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135487-exam-ai-102-topic-7-question-7-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image113.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image114.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image113.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image114.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -8031,8 +8552,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/136127-exam-ai-102-topic-7-question-10-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image145.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image146.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image145.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image146.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -8090,8 +8615,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135219-exam-ai-102-topic-7-question-12-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image149.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image150.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image149.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image150.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -8133,7 +8662,9 @@
 						"https://img.examtopics.com/ai-102/image142.png",
 						"https://img.examtopics.com/ai-102/image143.png"
 					],
-					"answerImages": ["https://img.examtopics.com/ai-102/image234.png"],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image234.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "C",
@@ -8215,8 +8746,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134944-exam-ai-102-topic-7-question-3-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image109.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image110.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image109.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image110.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"correctAnswer": "B",
@@ -8254,8 +8789,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135102-exam-ai-102-topic-7-question-8-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image140.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image141.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image140.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image141.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -8315,8 +8854,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135215-exam-ai-102-topic-7-question-6-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image111.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image233.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image111.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image233.png"
+					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
 					"ungraded": false,
@@ -8357,7 +8900,9 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149574-exam-ai-102-topic-7-question-18-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image186.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image186.png"
+					],
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "mc",
@@ -8384,14 +8929,20 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "C"],
+					"correctAnswers": [
+						"B",
+						"C"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
 				{
 					"id": "2rI4Ikz80dALOWvMdPcR",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Protected material detection feature to run the tests. Does this meet the requirement?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B No, using the Protected material detection feature from Content Safety Studio does not meet the requirement. The Protected material detection feature is designed to identify and manage sensitive or pro | Selected Answer: B But if using the true definition of objectionable (unpleasant or offensive) then the choice is No as this would be the text analyze api. Protected material is meant to block copyrighted material from b",
 					"topic": "Topic 8",
 					"difficulty": "medium",
@@ -8449,13 +9000,20 @@
 				{
 					"id": "8AyoQ3NA0S2HTGyKMKSy",
 					"question": "You have an Azure subscription that contains an Azure AI Content Safety resource named CS1. You create a test image that contains a circle. You submit the test image to CS1 by using the curl command and the following command-line parameters. What should you expect as the output?",
-					"options": ["A. 0", "B. 0.0", "C. 7", "D. 100"],
+					"options": [
+						"A. 0",
+						"B. 0.0",
+						"C. 7",
+						"D. 100"
+					],
 					"explanation": "Discussion highlights: Selected Answer: A The severity levels are from 0 - 7, with 0 being the lowest, if any form of offensive material, and 7 being very naughty/offensive. Given this, A is the answer. | Selected Answer: A A is correct.",
 					"topic": "Topic 8",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149577-exam-ai-102-topic-8-question-2-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image192.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image192.png"
+					],
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "mc",
@@ -8477,8 +9035,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149970-exam-ai-102-topic-8-question-9-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image195.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image196.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image195.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image196.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -8503,7 +9065,10 @@
 				{
 					"id": "HvqiyXrVHQh9iTubV6sS",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Monitor online activity feature to run the tests. Does this meet the requirement?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview#content-safety-studio-features | Selected Answer: B No is CORRECT. The Monitor online activity feature in Content Safety Studio is used for real-time monitoring and analyzing live content streams but is not designed for running tests on sample questions",
 					"topic": "Topic 8",
 					"difficulty": "medium",
@@ -8536,7 +9101,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["C", "D"],
+					"correctAnswers": [
+						"C",
+						"D"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -8576,8 +9144,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149922-exam-ai-102-topic-8-question-11-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image197.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image198.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image197.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image198.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -8602,7 +9174,10 @@
 				{
 					"id": "d2Lfd97PEuV5RTShywGy",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Safety metaprompt feature to run the tests. Does this meet the requirement?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: Selected Answer: B The answer is B. No. Explanation: The Safety metaprompt feature is generally used to enhance safety by adding specific guidance to the model’s responses. However, it is not designed for directly testin | Selected Answer: B The Safety metaprompt feature in Content Safety Studio is used to guide AI models in generating safer responses by providing safety-related instructions within prompts. However, it is not designed for",
 					"topic": "Topic 8",
 					"difficulty": "medium",
@@ -8630,8 +9205,12 @@
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
 					"sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149966-exam-ai-102-topic-8-question-4-discussion/",
-					"questionImages": ["https://img.examtopics.com/ai-102/image193.png"],
-					"answerImages": ["https://img.examtopics.com/ai-102/image194.png"],
+					"questionImages": [
+						"https://img.examtopics.com/ai-102/image193.png"
+					],
+					"answerImages": [
+						"https://img.examtopics.com/ai-102/image194.png"
+					],
 					"answerStatus": "inferred_consensus",
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
@@ -8678,7 +9257,10 @@
 				{
 					"id": "tEOMImYaPxAEXDebJATX",
 					"question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Moderate text content feature to run the tests. Does this meet the requirement?",
-					"options": ["A. Yes", "B. No"],
+					"options": [
+						"A. Yes",
+						"B. No"
+					],
 					"explanation": "Discussion highlights: The answer is A. Yes. Explanation: The Moderate text content feature in Content Safety Studio is designed to detect objectionable or harmful content in text. By using this feature, you can effectively test and optimize c | Selected Answer: A Using the Moderate text content feature from Content Safety Studio to run tests on sample questions does meet the requirement. This approach allows you to analyze and optimize the content filter config",
 					"topic": "Topic 8",
 					"difficulty": "medium",
@@ -8948,7 +9530,11 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["A", "B", "F"],
+					"correctAnswers": [
+						"A",
+						"B",
+						"F"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
@@ -8993,7 +9579,10 @@
 					"answerImages": [],
 					"answerStatus": "explicit",
 					"type": "multi",
-					"correctAnswers": ["B", "C"],
+					"correctAnswers": [
+						"B",
+						"C"
+					],
 					"ungraded": false,
 					"questionTypeInferredByAgent": "multi-select"
 				},
