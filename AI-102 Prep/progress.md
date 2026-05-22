@@ -2,18 +2,18 @@
 
 ## Overall
 
-- Sessions Completed: 16 / 32
-- Questions Answered: 218 / 313
-- Accuracy: 86.7%
-- Current Streak: 16 days
-- Next Session: Day 17 (2026-05-22)
+- Sessions Completed: 17 / 32
+- Questions Answered: 231 / 313
+- Accuracy: 87.0%
+- Current Streak: 17 days
+- Next Session: Day 18 (2026-05-23)
 
 ## Milestones
 
 - [x] Domain 1 completed (Days 1-5, avg 90.3%)
-- [ ] Domain 2 completed
-- [ ] Domain 3 completed
-- [ ] Domain 4 completed
+- [x] Domain 2 completed (Days 6-10, avg 84.8%)
+- [x] Domain 3 completed (Days 11-12, avg 89.3%)
+- [x] Domain 4 completed (Days 13-16, avg 82.9%)
 - [ ] Domain 5 completed
 - [ ] Domain 6 completed
 - [ ] Buffer day completed
@@ -261,3 +261,16 @@
 - Domain 3 carryover: 2/2 (100%)
 - Notes: _fill in your own words_
 - Next action: Day 17 - Domain 5: Text Analytics
+
+### Day 17 (2026-05-22) - Domain 5: Text Analytics
+
+- Status: Completed
+- Questions Attempted: 13 (graded)
+- Correct: 12 / 13 (92.3%)
+- Time Spent: ~6.8 min quiz
+- Key Mistakes:
+  - AI Search query key rotation: confused admin key rotation pattern with query key rotation — query keys: add new → switch app → delete old (no admin keys involved)
+- Domain 5 (NLP): 9/10 (90.0%)
+- Domain 4 carryover: 3/3 (100%)
+- Notes: _fill in your own words_
+- Next action: Day 18 - Domain 5: Translation Workloads

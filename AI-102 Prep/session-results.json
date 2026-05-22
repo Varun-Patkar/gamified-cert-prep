@@ -1,182 +1,59 @@
 {
-  "timestamp": "2026-05-21T12:19:24.199030",
+  "timestamp": "2026-05-22T11:22:56.077064",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
     "totalQuestions": 13,
-    "gradedQuestions": 11,
-    "correct": 6,
-    "wrong": 5,
-    "skipped": 2,
+    "gradedQuestions": 13,
+    "correct": 12,
+    "wrong": 1,
+    "skipped": 0,
     "ungraded": 0,
-    "accuracy": 54.5,
-    "timeSeconds": 552.9
+    "accuracy": 92.3,
+    "timeSeconds": 410.5
   },
   "domainBreakdown": {
     "Implement computer vision solutions": {
-      "total": 13,
-      "correct": 6,
-      "wrong": 5,
-      "skipped": 2
+      "total": 3,
+      "correct": 3,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Implement natural language processing solutions": {
+      "total": 10,
+      "correct": 9,
+      "wrong": 1,
+      "skipped": 0
     }
   },
   "topicBreakdown": {
     "Topic 4": {
-      "total": 11,
-      "correct": 4,
-      "wrong": 5,
-      "skipped": 2
-    },
-    "Topic 3": {
-      "total": 2,
-      "correct": 2,
-      "wrong": 0,
+      "total": 13,
+      "correct": 12,
+      "wrong": 1,
       "skipped": 0
     }
   },
   "wrongQuestions": [
     {
-      "questionId": "9FyXH8exsY5DWDAUUD9t",
-      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. You build an app named App1 that analyzes PDF files for handwritten content by using DI1. You need to ensure that App1 will recognize the handwritten content. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B",
-      "correctAnswer": "A",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image180.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image228.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149783-exam-ai-102-topic-4-question-30-discussion/",
-      "explanation": "Discussion highlights: I Think field one should be \"prebuilt-read\" as this is a model suitable for OCR with handwritten documents according to ChatGPT. | Prebuilt-read https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/read?view=doc-intel-4.0.0&tabs=sample-code",
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions"
-    },
-    {
-      "questionId": "6Yhnv8wKOgYiJfdBwybv",
-      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. You build an app named App1 that analyzes PDF files for handwritten content by using DI1. You need to ensure that App1 will recognize the handwritten content. How should you complete the code? To answer, select the appropriate options in the answer area.",
-      "userAnswer": "B",
+      "questionId": "PlHlnMEuTmwkUnvOuLE8",
+      "question": "DRAG DROP - You have a web app that uses Azure Cognitive Search. When reviewing billing for the app, you discover much higher than expected charges. You suspect that the query key is compromised. You need to prevent unauthorized access to the search endpoint and ensure that users only have read only access to the documents collection. The solution must minimize app downtime. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
+      "userAnswer": "A",
       "correctAnswer": "C",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image105.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0019800001.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image227.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0019900001.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134940-exam-ai-102-topic-4-question-18-discussion/",
-      "explanation": "Discussion highlights: The first answer should be read: Read OCR - Extract print and handwritten text including words, locations, and detected languages. https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-model-o | Prebuilt-read is correct which can classify the test extracted as handwrittern or printed",
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60820-exam-ai-102-topic-4-question-9-discussion/",
+      "explanation": "Reference: https://docs.microsoft.com/en-us/azure/search/search-security-api-keys | Discussion highlights: The answer is wrong regenerated secondary key update the app to use the secondary key regenarated the primary key | The answer is correct. The question specifically mentioned a read-only access to the documents which is achieved only through query keys. And it is a query key that was compromised. Any of the admin keys (primary and sec | Answer inferred from top upvoted discussion consensus.",
       "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions"
-    },
-    {
-      "questionId": "2uw9VHkHTDj5U3qXNcKK",
-      "question": "HOTSPOT - You are building a language learning solution. You need to recommend which Azure services can be used to perform the following tasks: • Analyze lesson plans submitted by teachers and extract key fields, such as lesson times and required texts. • Analyze learning content and provide students with pictures that represent commonly used words or phrases in the text. The solution must minimize development effort. Which Azure service should you recommend for each task? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B",
-      "correctAnswer": "A",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image156.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image157.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143503-exam-ai-102-topic-4-question-24-discussion/",
-      "explanation": "Discussion highlights: Answer is correct. Immersive Reader can indeed provide pictures for commonly used words in text: https://learn.microsoft.com/en-us/azure/ai-services/immersive-reader/overview#display-pictures-for-common-words | plans: Azure AI Document Intelligence content: Immersive Reader confirmed by ChatGPT | Inference was flagged as suspect by subagent audit and left ungraded.",
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions"
-    },
-    {
-      "questionId": "0cOYKGwLV89rZ9aCIwRT",
-      "question": "HOTSPOT - You are building an Azure Cognitive Search custom skill. You have the following custom skill schema definition. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "C",
-      "correctAnswer": "A",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019500001.jpg",
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019500002.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019600001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/78061-exam-ai-102-topic-4-question-6-discussion/",
-      "explanation": "Box 1: Yes - Once you have defined a skillset, you must map the output fields of any skill that directly contributes values to a given field in your search index. Box 2: Yes - The definition is a custom skill that calls a web API as part of the enrichment process. Box 3: No - For each organization identified by entity recognition, this skill calls a web API to find the description of that organization. Reference: https://docs.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping | Discussion highlights: YYN is the answer. https://learn.microsoft.com/en-us/azure/search/cognitive-search-custom-skill-web-api#skill-outputs There are no predefined outputs for this skill. Be sure to define an output field mapping in the index | The first answer should be no: https://learn.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping?tabs=rest \"Output field mappings are required if your indexer has an attached skillset that creates new",
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions"
-    },
-    {
-      "questionId": "CfFks5HxPpiEE92s4r87",
-      "question": "You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1. You have an app named App1 that uses AIdoc1. App1 analyzes business cards by calling business card model v2.1. You need to update App1 to ensure that the app can interpret QR codes. The solution must minimize administrative effort. What should you do first?",
-      "userAnswer": "A",
-      "correctAnswer": "B",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149785-exam-ai-102-topic-4-question-33-discussion/",
-      "explanation": "Discussion highlights: Selected Answer: A Correct according to ChatGPT. | Selected Answer: B B is the answer",
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions"
+      "domainName": "Implement natural language processing solutions"
     }
   ],
-  "skippedQuestions": [
-    "3jzO8zUYBnRoAHI4tGQw",
-    "5uq0tU3cFRatKHLoyhuH"
-  ],
+  "skippedQuestions": [],
   "allResults": [
-    {
-      "questionId": "8oGuS9x97g5BDmgktKrW",
-      "question": "HOTSPOT - You are creating an enrichment pipeline that will use Azure Cognitive Search. The knowledge store contains unstructured JSON data and scanned PDF documents that contain text. Which projection type should you use for each data type? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Box 1: Object projection - Object projections are JSON representations of the enrichment tree that can be sourced from any node. Box 2: File projection - File projections are similar to object projections and only act on the normalized_images collection. Reference: https://docs.microsoft.com/en-us/azure/search/knowledge-store-projection-overview | Discussion highlights: Correct! | 1. Object 2. File https://learn.microsoft.com/en-us/azure/search/knowledge-store-projections-examples#define-an-object-projection Object projections are JSON representations of the enrichment tree that can be sourced fro | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019300001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019400001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56510-exam-ai-102-topic-4-question-5-discussion/"
-    },
-    {
-      "questionId": "1wlFhtfttoGKYNuLRg5I",
-      "question": "You deploy a web app that is used as a management portal for indexing in Azure Cognitive Search. The app is configured to use the primary admin key. During a security review, you discover unauthorized changes to the search index. You suspect that the primary access key is compromised. You need to prevent unauthorized access to the index management endpoint. The solution must minimize downtime. What should you do next?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: logicly it should be C. A can not be the answer as you regenerated the secondry key after your already add to your app. the right order to minize downtime is to regenerate the secondary, add to your app and then regenera | If you change the application to use the secondary key and then you regenerate the key the application in not going to work. So C is the right one.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/54888-exam-ai-102-topic-4-question-2-discussion/"
-    },
-    {
-      "questionId": "9FyXH8exsY5DWDAUUD9t",
-      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. You build an app named App1 that analyzes PDF files for handwritten content by using DI1. You need to ensure that App1 will recognize the handwritten content. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B",
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: I Think field one should be \"prebuilt-read\" as this is a model suitable for OCR with handwritten documents according to ChatGPT. | Prebuilt-read https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/read?view=doc-intel-4.0.0&tabs=sample-code",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image180.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image228.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149783-exam-ai-102-topic-4-question-30-discussion/"
-    },
     {
       "questionId": "CEvHk7owhHHgTYSqzyTJ",
       "question": "You have an Azure AI Search resource named Search1. You have an app named App1 that uses Search1 to index content. You need to add a custom skill to App1 to ensure that the app can recognize and retrieve properties from invoices by using Search1. What should you include in the solution?",
@@ -195,118 +72,11 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150069-exam-ai-102-topic-4-question-26-discussion/"
     },
     {
-      "questionId": "Fehdvw29Zl3poyyKYjCn",
-      "question": "HOTSPOT - You have an Azure subscription. You plan to build a solution that will analyze scanned documents and export relevant fields to a database. You need to recommend an Azure AI Document Intelligence model for the following types of documents: • Expenditure request authorization forms • Structured and unstructured survey forms • Structured employment application forms The solution must minimize development effort and costs. Which type of model should you recommend for each document type? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Microsoft copilot: For expenditure request authorization forms, you should choose the Prebuilt layout model. This model is designed to handle structured or semi-structured documents, making it suitable for forms with fie | Expenditure request authorization forms --> Custom template is CORRECT. Since you are dealing with specific document types like expenditure request authorization forms, a custom template model allows you to tailor the mo",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image176.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image177.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150443-exam-ai-102-topic-4-question-27-discussion/"
-    },
-    {
-      "questionId": "3jzO8zUYBnRoAHI4tGQw",
-      "question": "HOTSPOT - You have an app named App1 that uses Azure AI Document Intelligence to analyze medical records and provide pharmaceutical dosage recommendations for patients. You send a request to App1 and receive the following response. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: The form elements were recognized with greater than 70 percent confidence: No. The fields object in the response is empty, which suggests that no form elements were recognized. Therefore, we cannot say that they were rec | The chosen model is suitable for the intended use case: No. The model used here is “prebuilt-health InsuranceCard.us”, which is designed to extract information from health insurance cards in the US. However, the intended",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image102.png",
-        "https://img.examtopics.com/ai-102/image103.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image226.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135946-exam-ai-102-topic-4-question-17-discussion/"
-    },
-    {
-      "questionId": "6Yhnv8wKOgYiJfdBwybv",
-      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. You build an app named App1 that analyzes PDF files for handwritten content by using DI1. You need to ensure that App1 will recognize the handwritten content. How should you complete the code? To answer, select the appropriate options in the answer area.",
-      "userAnswer": "B",
-      "correctAnswer": "C",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: The first answer should be read: Read OCR - Extract print and handwritten text including words, locations, and detected languages. https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-model-o | Prebuilt-read is correct which can classify the test extracted as handwrittern or printed",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image105.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image227.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134940-exam-ai-102-topic-4-question-18-discussion/"
-    },
-    {
-      "questionId": "2uw9VHkHTDj5U3qXNcKK",
-      "question": "HOTSPOT - You are building a language learning solution. You need to recommend which Azure services can be used to perform the following tasks: • Analyze lesson plans submitted by teachers and extract key fields, such as lesson times and required texts. • Analyze learning content and provide students with pictures that represent commonly used words or phrases in the text. The solution must minimize development effort. Which Azure service should you recommend for each task? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B",
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Answer is correct. Immersive Reader can indeed provide pictures for commonly used words in text: https://learn.microsoft.com/en-us/azure/ai-services/immersive-reader/overview#display-pictures-for-common-words | plans: Azure AI Document Intelligence content: Immersive Reader confirmed by ChatGPT | Inference was flagged as suspect by subagent audit and left ungraded.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image156.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image157.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143503-exam-ai-102-topic-4-question-24-discussion/"
-    },
-    {
-      "questionId": "0cOYKGwLV89rZ9aCIwRT",
-      "question": "HOTSPOT - You are building an Azure Cognitive Search custom skill. You have the following custom skill schema definition. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "C",
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Box 1: Yes - Once you have defined a skillset, you must map the output fields of any skill that directly contributes values to a given field in your search index. Box 2: Yes - The definition is a custom skill that calls a web API as part of the enrichment process. Box 3: No - For each organization identified by entity recognition, this skill calls a web API to find the description of that organization. Reference: https://docs.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping | Discussion highlights: YYN is the answer. https://learn.microsoft.com/en-us/azure/search/cognitive-search-custom-skill-web-api#skill-outputs There are no predefined outputs for this skill. Be sure to define an output field mapping in the index | The first answer should be no: https://learn.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping?tabs=rest \"Output field mappings are required if your indexer has an attached skillset that creates new",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019500001.jpg",
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019500002.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019600001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/78061-exam-ai-102-topic-4-question-6-discussion/"
-    },
-    {
       "questionId": "CfFks5HxPpiEE92s4r87",
       "question": "You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1. You have an app named App1 that uses AIdoc1. App1 analyzes business cards by calling business card model v2.1. You need to update App1 to ensure that the app can interpret QR codes. The solution must minimize administrative effort. What should you do first?",
-      "userAnswer": "A",
+      "userAnswer": "B",
       "correctAnswer": "B",
-      "correct": false,
+      "correct": true,
       "gradable": true,
       "skipped": false,
       "topic": "Topic 4",
@@ -319,59 +89,219 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149785-exam-ai-102-topic-4-question-33-discussion/"
     },
     {
-      "questionId": "z8Fz0EBbcclD3u3pNVRU",
-      "question": "You have an Azure subscription. You need to deploy an Azure AI Search resource that will recognize geographic locations. Which built-in skill should you include in the skillset for the resource?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C The correct answer is C. EntityRecognitionSkill. Explanation: The EntityRecognitionSkill in Azure Cognitive Search is a built-in skill designed to identify and recognize specific types of entities with | Entity Recognition skill",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150396-exam-ai-102-topic-3-question-81-discussion/"
-    },
-    {
-      "questionId": "z4yBLbMCvadmF1QSftq0",
-      "question": "You are building a chatbot. You need to ensure that the bot will recognize the names of your company’s products and codenames. The solution must minimize development effort. Which Azure Cognitive Service for Language service should you include in the solution?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C C. custom Named Entity Recognition (NER) Custom NER allows you to train a model to recognize specific terms relevant to your business, such as product names and codenames. https://learn.microsoft.com/e | Named Entity Recognition (NER) identifies and categorizes specific names or terms in text, such as names of people, organizations, places, and more. By customizing NER, you can tailor it to recognize your company-specifi",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135626-exam-ai-102-topic-3-question-62-discussion/"
-    },
-    {
-      "questionId": "5uq0tU3cFRatKHLoyhuH",
-      "question": "HOTSPOT - You have an Azure subscription. You plan to build a solution that will analyze scanned documents and export relevant fields to a database. You need to recommend which Azure AI service to deploy for the following types of documents: • Internal expenditure request authorization forms • Supplier invoices The solution must minimize development effort. What should you recommend for each document type? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": null,
+      "questionId": "ZAomwNtp8WZ7LTJMSFp0",
+      "question": "HOTSPOT - You have an Azure subscription. You need to deploy an Azure AI Document Intelligence resource. How should you complete the Azure Resource Manager (ARM) template? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A",
       "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Answer is correct. Validated. 1. Create a FormRecognizer resource 2. On the resource screen, click Export Template under automation 3. Check the template created | In the era of AI, and in an AI exam, they expect people to remember this useless information | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image138.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image139.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135063-exam-ai-102-topic-4-question-20-discussion/"
+    },
+    {
+      "questionId": "IN3ZdM82mBhxh1qHSZ6h",
+      "question": "You have an app named App1 that uses a custom Azure AI Document Intelligence model to recognize contract documents. You need to ensure that the model supports an additional contract format. The solution must minimize development effort. What should you do?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: C Given answer C is correct | Selected Answer: C It is obvious that C is the correct solution.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135947-exam-ai-102-topic-4-question-19-discussion/"
+    },
+    {
+      "questionId": "PlHlnMEuTmwkUnvOuLE8",
+      "question": "DRAG DROP - You have a web app that uses Azure Cognitive Search. When reviewing billing for the app, you discover much higher than expected charges. You suspect that the query key is compromised. You need to prevent unauthorized access to the search endpoint and ensure that users only have read only access to the documents collection. The solution must minimize app downtime. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
+      "userAnswer": "A",
+      "correctAnswer": "C",
       "correct": false,
       "gradable": true,
-      "skipped": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Reference: https://docs.microsoft.com/en-us/azure/search/search-security-api-keys | Discussion highlights: The answer is wrong regenerated secondary key update the app to use the secondary key regenarated the primary key | The answer is correct. The question specifically mentioned a read-only access to the documents which is achieved only through query keys. And it is a query key that was compromised. Any of the admin keys (primary and sec | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0019800001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0019900001.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60820-exam-ai-102-topic-4-question-9-discussion/"
+    },
+    {
+      "questionId": "RY5LC97H5trG6iDbaWMU",
+      "question": "You need to implement a table projection to generate a physical expression of an Azure Cognitive Search index. Which three properties should you specify in the skillset definition JSON configuration table node? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A, B, E",
+      "correctAnswer": "A, B, E",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: ABE Answer is correct. Below link shows the details https://docs.microsoft.com/en-us/azure/search/knowledge-store-projections-examples | Selected Answer: ABE Shinzo ABE!",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75329-exam-ai-102-topic-4-question-4-discussion/"
+    },
+    {
+      "questionId": "R32JsMZ7630oar4khD86",
+      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. You create a PDF document named Test.pdf that contains tabular data. You need to analyze Test.pdf by using DI1. How should you complete the command? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Should indeed be layout: https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-layout?view=doc-intel-4.0.0&tabs=sample-code#tables | Looks correct. ... each table cell is extracted with: Its content text. The size and position of its bounding box. If it's part of a header column. Indexes to indicate its row and column position in the table. https://le",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image158.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image159.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143504-exam-ai-102-topic-4-question-25-discussion/"
+    },
+    {
+      "questionId": "QSI1usinHgwraJUmnHGi",
+      "question": "HOTSPOT - You are developing a text processing solution. You develop the following method. You call the method by using the following code. GetKeyPhrases(textAnalyticsClient, \"the cat sat on the mat\"); For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Box 1: Yes - The Key Phrase Extraction API evaluates unstructured text, and for each JSON document, returns a list of key phrases. Box 2: No - 'the' is not a key phrase. This capability is useful if you need to quickly identify the main points in a collection of documents. For example, given input text \"The food was delicious and there were wonderful staff\", the service returns the main talking points: \"food\" and \"wonderful staff\". Box 3: No - Key phrase extraction does not have confidence levels. Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-keyword-extraction | Discussion highlights: I think the answer is correct | YNN is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/key-phrase-extraction/overview Key phrase extraction is one of the features offered by Azure Cognitive Service for Language, | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0018800001.jpg",
+        "https://www.examtopics.com/assets/media/exam-media/04271/0018800002.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0018900001.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/55451-exam-ai-102-topic-4-question-1-discussion/"
+    },
+    {
+      "questionId": "V53zHQhO3vu97NWJ9D7T",
+      "question": "You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. DI1 uses the Standard S0 pricing tier. You have the files shown in the following table. Which files can you analyze by using DI1?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: C File1 > 500 Mb so NO File 2 <50x50 pixels so NO File 3 YES | Selected Answer: C Have a look on any of the prebuilt models and you will see File3.tiff is the only one that fits. https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/contract?view=doc-int",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image179.png"
+      ],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149782-exam-ai-102-topic-4-question-29-discussion/"
+    },
+    {
+      "questionId": "QRGeQeq2XTdAsHivPurV",
+      "question": "You are developing an application that will use Azure Cognitive Search for internal documents. You need to implement document-level filtering for Azure Cognitive Search. Which three actions should you include in the solution? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "C, D, F",
+      "correctAnswer": "C, D, F",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: CDF D: Add allowed groups to each index entry. Your documents must include a field specifying which groups have access. Reference: https://docs.microsoft.com/en-us/azure/search/search-security-trimming-f | Selected Answer: CDF C, D and F are the correct answers",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77927-exam-ai-102-topic-4-question-10-discussion/"
+    },
+    {
+      "questionId": "Fehdvw29Zl3poyyKYjCn",
+      "question": "HOTSPOT - You have an Azure subscription. You plan to build a solution that will analyze scanned documents and export relevant fields to a database. You need to recommend an Azure AI Document Intelligence model for the following types of documents: • Expenditure request authorization forms • Structured and unstructured survey forms • Structured employment application forms The solution must minimize development effort and costs. Which type of model should you recommend for each document type? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
       "topic": "Topic 4",
       "domainName": "Implement computer vision solutions",
       "domainId": "4",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Correct answer, verified with ChatGPT Internal expenditure request authorization forms These forms are likely to be custom and specific to your organization, so a pre-built model might not accurately extract the fields y | Internal expenditure request authorization forms - An Azure AI Document Intelligence custom model is CORRECT because internal expenditure request authorization forms typically have unique structures and specific fields t | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "From answer image: Expenditure request authorization forms = Custom template (fixed layout, specific fields). Structured employment application forms = Prebuilt contract (structured docs with standard fields). Structured and unstructured survey forms = Custom neural (handles both structured and unstructured mixed content). Ref: https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-custom",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image174.png"
+        "https://img.examtopics.com/ai-102/image176.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image175.png"
+        "https://img.examtopics.com/ai-102/image177.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150067-exam-ai-102-topic-4-question-25-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150443-exam-ai-102-topic-4-question-27-discussion/"
+    },
+    {
+      "questionId": "ZKxLxYAb5wJfeCHuo1eA",
+      "question": "HOTSPOT - You plan to provision Azure Cognitive Services resources by using the following method. You need to create a Standard tier resource that will convert scanned receipts into text. How should you call the method? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: The current name for Form Recognizer (as of May 2024) is Document Intelligence. 1. Document Intelligence(Form Recognizer) 2. \"S0\", \"eastus\" https://azure.microsoft.com/en-us/pricing/details/ai-document-intelligence/ | Is it asking me to know it is eastus and not useast?? In this era this is important knowledge for Microsoft? What does knowing these things prove? Microsoft should do an internal audit and shutdown in shame",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image99.png",
+        "https://img.examtopics.com/ai-102/image100.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image101.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/136922-exam-ai-102-topic-4-question-16-discussion/"
+    },
+    {
+      "questionId": "OBCNx6MCuGv5NKM0cLGD",
+      "question": "You have the following data sources: • Finance: On-premises Microsoft SQL Server database • Sales: Azure Cosmos DB using the Core (SQL) API • Logs: Azure Table storage • HR: Azure SQL database You need to ensure that you can search all the data by using the Azure AI Search REST API. What should you do?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: C Another repeated qn Answer is C | Selected Answer: C C. migrate what is on-promises to Azure",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143493-exam-ai-102-topic-4-question-22-discussion/"
     }
   ]
 }

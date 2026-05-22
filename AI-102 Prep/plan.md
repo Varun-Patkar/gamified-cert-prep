@@ -131,9 +131,9 @@
 
 ### Day 17 (2026-05-22) - Domain 5: Text Analytics
 
-- [ ] Study: Entity extraction, sentiment, language detection, PII
-- [ ] Practice: 8 questions on Domain 5
-- [ ] Lab: Build compliance-oriented text processing checklist
+- [x] Study: Entity extraction, sentiment, language detection, PII + cross-domain DI/Search review
+- [x] Practice: 13 graded questions (12/13 = 92.3%)
+- [x] Lab: Build compliance-oriented text processing checklist
 - Estimated time: 0.5 hrs
 
 ### Day 18 (2026-05-23) - Domain 5: Translation Workloads
