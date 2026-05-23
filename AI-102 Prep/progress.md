@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 17 / 32
-- Questions Answered: 231 / 313
-- Accuracy: 87.0%
-- Current Streak: 17 days
-- Next Session: Day 18 (2026-05-23)
+- Sessions Completed: 18 / 32
+- Questions Answered: 243 / 313
+- Accuracy: 86.4%
+- Current Streak: 18 days
+- Next Session: Day 19 (2026-05-24)
 
 ## Milestones
 
@@ -274,3 +274,20 @@
 - Domain 4 carryover: 3/3 (100%)
 - Notes: _fill in your own words_
 - Next action: Day 18 - Domain 5: Translation Workloads
+
+### Day 18 (2026-05-23) - Domain 5: Translation / Knowledge Mining
+
+- Status: Completed
+- Questions Attempted: 12 (graded) + 1 skipped (broken options, now fixed)
+- Correct: 9 / 12 (75.0% adjusted)
+- Raw Score: 9 / 12 (75.0%)
+- Time Spent: ~6.9 min quiz
+- Credited: 1 (ZAomwNtp8WZ7LTJMSFp0 — ARM template HOTSPOT had 3-box workflow options for 2-dropdown question; user knew correct answer: CognitiveServices + FormRecognizer)
+- Key Mistakes:
+  - Knowledge store projections (aEglPFeC8t9sKQMqo0gH): Object projections store JSON, not binary images; `files: []` empty = no image projection. Picked "projected to Blob" instead of "not be projected"
+  - Knowledge store definition (aZOuG3d0QOgjERlaXN0m): Need `storageConnectionString` + `projections` — picked wrong second field
+  - Doc Intelligence S0 limits (V53zHQhO3vu97NWJ9D7T): Forgot 50×50 minimum pixel dimension — File2.jpg (25×25) rejected, only File3.tiff valid
+- Fixed Questions: ZAomwNtp8WZ7LTJMSFp0 (ARM template — options rewritten with actual dropdown values: CognitiveServices/FormRecognizer)
+- Domain 5 (Knowledge Mining/Doc Intelligence): 9/12 (75.0%)
+- Notes: _fill in your own words_
+- Next action: Day 19 - Domain 5: Speech Solutions

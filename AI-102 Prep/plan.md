@@ -138,9 +138,9 @@
 
 ### Day 18 (2026-05-23) - Domain 5: Translation Workloads
 
-- [ ] Study: Translator patterns for text and document translation
-- [ ] Practice: 15 questions on Domain 5
-- [ ] Lab: Design multilingual support flow
+- [x] Study: Translator patterns for text and document translation
+- [x] Practice: 15 questions on Domain 5
+- [x] Lab: Design multilingual support flow
 - Estimated time: 1 hr
 
 ### Day 19 (2026-05-24) - Domain 5: Speech Solutions

@@ -6185,12 +6185,12 @@
 					"id": "ZAomwNtp8WZ7LTJMSFp0",
 					"question": "HOTSPOT - You have an Azure subscription. You need to deploy an Azure AI Document Intelligence resource. How should you complete the Azure Resource Manager (ARM) template? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
 					"options": [
-						"B. Box 1: On the resource screen, click Export Template under automation; Box 2: Check the template created; Box 3: Create a FormRecognizer resource",
-						"A. Box 1: Create a FormRecognizer resource; Box 2: On the resource screen, click Export Template under automation; Box 3: Check the template created",
-						"D. Box 1: On the resource screen, click Export Template under automation; Box 2: Create a FormRecognizer resource; Box 3: Check the template created",
-						"C. Box 1: Check the template created; Box 2: On the resource screen, click Export Template under automation; Box 3: Create a FormRecognizer resource"
+						"A. Dropdown 1: Microsoft.CognitiveServices; Dropdown 2: FormRecognizer",
+						"B. Dropdown 1: Microsoft.CognitiveServices; Dropdown 2: CognitiveSearch",
+						"C. Dropdown 1: Microsoft.MachineLearning; Dropdown 2: FormRecognizer",
+						"D. Dropdown 1: Microsoft.CognitiveServices; Dropdown 2: OpenAI"
 					],
-					"explanation": "Discussion highlights: Answer is correct. Validated. 1. Create a FormRecognizer resource 2. On the resource screen, click Export Template under automation 3. Check the template created | In the era of AI, and in an AI exam, they expect people to remember this useless information | Answer inferred from top upvoted discussion consensus.",
+					"explanation": "ARM template for Document Intelligence: type = Microsoft.CognitiveServices/accounts (it's a Cognitive Services resource), kind = FormRecognizer (the API kind). Microsoft.MachineLearning and Microsoft.Search are different resource providers.",
 					"topic": "Topic 4",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
