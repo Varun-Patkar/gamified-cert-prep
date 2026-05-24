@@ -145,9 +145,9 @@
 
 ### Day 19 (2026-05-24) - Domain 5: Speech Solutions
 
-- [ ] Study: STT/TTS, SSML, custom speech, keyword/intent
-- [ ] Practice: 15 questions on Domain 5
-- [ ] Lab: Create a speech bot latency optimization checklist
+- [x] Study: STT/TTS, SSML, custom speech, keyword/intent
+- [x] Practice: 15 questions on Domain 5
+- [x] Lab: Create a speech bot latency optimization checklist
 - Estimated time: 1 hr
 
 ### Day 20 (2026-05-25) - Domain 5: Custom Language Models

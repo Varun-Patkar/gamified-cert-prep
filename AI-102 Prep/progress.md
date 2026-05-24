@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 18 / 32
-- Questions Answered: 243 / 313
-- Accuracy: 86.4%
-- Current Streak: 18 days
-- Next Session: Day 19 (2026-05-24)
+- Sessions Completed: 19 / 32
+- Questions Answered: 255 / 313
+- Accuracy: 86.7%
+- Current Streak: 19 days
+- Next Session: Day 20 (2026-05-25)
 
 ## Milestones
 
@@ -291,3 +291,18 @@
 - Domain 5 (Knowledge Mining/Doc Intelligence): 9/12 (75.0%)
 - Notes: _fill in your own words_
 - Next action: Day 19 - Domain 5: Speech Solutions
+
+### Day 19 (2026-05-24) - Domain 5: Speech Solutions (Bot Framework & NLP focus)
+
+- Status: Completed
+- Questions Attempted: 12 (graded) + 1 skipped (MemoryStorage hotspot — broken options, now fixed)
+- Correct: 11 / 12 (91.7%)
+- Time Spent: ~5.9 min quiz
+- Skipped: 3u0Lt2unUlTbrMRxGdRQ (MemoryStorage state — had garbled Box options instead of Y/N, now fixed)
+- Key Mistakes:
+  - Composer hotspot (19SuosyKaYI0KCnbj4Qe): Swapped entity extraction vs trigger type — Box 1 asks what bot *does* (identify entity), Box 2 asks *trigger type* (LU intent recognized)
+- Fixed Questions: 3 hotspot questions rewritten with distinct options (Composer entity/intent, bot deployment CLI, MemoryStorage Y/N)
+- Topic 5 (Bot Framework/NLP): 7/8 graded (87.5%)
+- Topic 4 (cross-domain): 4/4 (100%)
+- Notes: _fill in your own words_
+- Next action: Day 20 - Domain 5: Custom Language Models

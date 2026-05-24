@@ -1,102 +1,80 @@
 {
-  "timestamp": "2026-05-23T11:45:16.054473",
+  "timestamp": "2026-05-24T10:44:03.183929",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
     "totalQuestions": 13,
     "gradedQuestions": 12,
-    "correct": 9,
-    "wrong": 3,
+    "correct": 11,
+    "wrong": 1,
     "skipped": 1,
     "ungraded": 0,
-    "accuracy": 75.0,
-    "timeSeconds": 417.0
+    "accuracy": 91.7,
+    "timeSeconds": 355.4
   },
   "domainBreakdown": {
     "Implement natural language processing solutions": {
       "total": 13,
-      "correct": 9,
-      "wrong": 3,
+      "correct": 11,
+      "wrong": 1,
       "skipped": 1
     }
   },
   "topicBreakdown": {
-    "Topic 4": {
-      "total": 13,
-      "correct": 9,
-      "wrong": 3,
+    "Topic 5": {
+      "total": 9,
+      "correct": 7,
+      "wrong": 1,
       "skipped": 1
+    },
+    "Topic 4": {
+      "total": 4,
+      "correct": 4,
+      "wrong": 0,
+      "skipped": 0
     }
   },
   "wrongQuestions": [
     {
-      "questionId": "aEglPFeC8t9sKQMqo0gH",
-      "question": "HOTSPOT - You create a knowledge store for Azure Cognitive Search by using the following JSON. Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "D",
-      "correctAnswer": "B",
+      "questionId": "19SuosyKaYI0KCnbj4Qe",
+      "question": "HOTSPOT - You have a bot that was built by using the Microsoft Bot Framework composer as shown in the following exhibit. Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B",
+      "correctAnswer": "A",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image16.png",
-        "https://img.examtopics.com/ai-102/image17.png"
+        "https://img.examtopics.com/ai-102/image67.png",
+        "https://img.examtopics.com/ai-102/image68.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image18.png"
+        "https://img.examtopics.com/ai-102/image69.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112664-exam-ai-102-topic-4-question-13-discussion/",
-      "explanation": "Discussion highlights: The answer for the second question is wrong. There will be no projection for normalized images. You have to remember object projection is for JSON document not binary raw images. Both projections don’t have the files spe | The answer seems correct. https://learn.microsoft.com/en-us/azure/search/knowledge-store-projections-examples#define-a-table-projection | Answer inferred from top upvoted discussion consensus.",
-      "topic": "Topic 4",
-      "domainName": "Implement natural language processing solutions"
-    },
-    {
-      "questionId": "V53zHQhO3vu97NWJ9D7T",
-      "question": "You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. DI1 uses the Standard S0 pricing tier. You have the files shown in the following table. Which files can you analyze by using DI1?",
-      "userAnswer": "D",
-      "correctAnswer": "C",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image179.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149782-exam-ai-102-topic-4-question-29-discussion/",
-      "explanation": "Discussion highlights: Selected Answer: C File1 > 500 Mb so NO File 2 <50x50 pixels so NO File 3 YES | Selected Answer: C Have a look on any of the prebuilt models and you will see File3.tiff is the only one that fits. https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/contract?view=doc-int",
-      "topic": "Topic 4",
-      "domainName": "Implement natural language processing solutions"
-    },
-    {
-      "questionId": "aZOuG3d0QOgjERlaXN0m",
-      "question": "You have an Azure Cognitive Search solution and an enrichment pipeline that performs Sentiment Analysis on social media posts. You need to define a knowledge store that will include the social media posts and the Sentiment Analysis results. Which two fields should you include in the definition? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B, D",
-      "correctAnswer": "B, E",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/81122-exam-ai-102-topic-4-question-11-discussion/",
-      "explanation": "Discussion highlights: Selected Answer: BE Typo, BE is the answer. https://learn.microsoft.com/en-us/azure/search/knowledge-store-concept-intro?tabs=portal#knowledge-store-definition A knowledge store is defined inside a skillset definition an | Selected Answer: AB To define a knowledge store in Azure Cognitive Search that includes both the social media posts and the Sentiment Analysis results, you should include the following two fields in the definition: A. st",
-      "topic": "Topic 4",
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112150-exam-ai-102-topic-5-question-46-discussion/",
+      "explanation": "Discussion highlights: 1. identity New York as city entity 2. Language Understanding intent recognised https://learn.microsoft.com/en-us/composer/concept-language-understanding?tabs=v2x#entities Entities are a collection of objects, each consi | 1. identity New York as city entity 2. Language Understanding intent recognized",
+      "topic": "Topic 5",
       "domainName": "Implement natural language processing solutions"
     }
   ],
   "skippedQuestions": [
-    "ZAomwNtp8WZ7LTJMSFp0"
+    "3u0Lt2unUlTbrMRxGdRQ"
   ],
   "allResults": [
     {
-      "questionId": "cpForodyaZTfmVSs3DZ5",
-      "question": "DRAG DROP - You have an Azure subscription that contains a storage account named sa1 and an Azure AI Document Intelligence resource named DI1. You need to create and train a custom model in DI1 by using Document Intelligence Studio. The solution must minimize development effort. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
-      "userAnswer": "C",
-      "correctAnswer": "C",
+      "questionId": "AhkBEn8Ln1AnWFHPkYYk",
+      "question": "You have a Conversational Language Understanding model. You export the model as a JSON file. The following is a sample of the file. What represents the Weather.Historic entity in the sample utterance?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 4",
+      "topic": "Topic 5",
       "domainName": "Implement natural language processing solutions",
       "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: I think the answer is as follows. Create a custom model project and link the project to sa1 Upload five sample documents. Apply labels to the sample documents. Train and test the model. | If you did not create custom model project , where do you upload images ? so for me: Create a custom model project and link the project to sa1 Upload five sample documents. Apply labels to the sample documents. Train and | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "Discussion highlights: Gotten this in Jul 2023 exam. | Same as Topic 3 Question 23. https://www.examtopics.com/discussions/microsoft/view/77619-exam-ai-102-topic-3-question-23-discussion",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image182.png"
+        "https://img.examtopics.com/ai-102/image23.png"
       ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image183.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149767-exam-ai-102-topic-4-question-31-discussion/"
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111870-exam-ai-102-topic-5-question-33-discussion/"
     },
     {
       "questionId": "nX2cFe3YbUPnmwhQJhek",
@@ -120,64 +98,6 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150444-exam-ai-102-topic-4-question-32-discussion/"
     },
     {
-      "questionId": "ZRozOMC4CpeLhv863SbU",
-      "question": "You have the following data sources: ✑ Finance: On-premises Microsoft SQL Server database ✑ Sales: Azure Cosmos DB using the Core (SQL) API ✑ Logs: Azure Table storage HR: Azure SQL database - You need to ensure that you can search all the data by using the Azure Cognitive Search REST API. What should you do?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B B is correct answer : Mirror Finance to an Azure SQL database. https://docs.microsoft.com/en-us/azure/search/search-indexer-overview#supported-data-sources | A modified version of this was in the exam today.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019600005.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77620-exam-ai-102-topic-4-question-7-discussion/"
-    },
-    {
-      "questionId": "aEglPFeC8t9sKQMqo0gH",
-      "question": "HOTSPOT - You create a knowledge store for Azure Cognitive Search by using the following JSON. Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "D",
-      "correctAnswer": "B",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: The answer for the second question is wrong. There will be no projection for normalized images. You have to remember object projection is for JSON document not binary raw images. Both projections don’t have the files spe | The answer seems correct. https://learn.microsoft.com/en-us/azure/search/knowledge-store-projections-examples#define-a-table-projection | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image16.png",
-        "https://img.examtopics.com/ai-102/image17.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image18.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112664-exam-ai-102-topic-4-question-13-discussion/"
-    },
-    {
-      "questionId": "mZpBN9wd5zAvjgOrSxNI",
-      "question": "You are building an app that will process scanned expense claims and extract and label the following data: • Merchant information • Time of transaction • Date of transaction • Taxes paid • Total cost You need to recommend an Azure AI Document Intelligence model for the app. The solution must minimize development effort. What should you use?",
-      "userAnswer": "D",
-      "correctAnswer": "D",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: D D looks correct, Copilot confirms it | Selected Answer: D https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/overview?view=doc-intel-4.0.0 https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-receipt?view=do",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143494-exam-ai-102-topic-4-question-23-discussion/"
-    },
-    {
       "questionId": "uPwH0HTq4bH157ecIiRg",
       "question": "You are building an app named App1 that will use Azure AI Document Intelligence to extract the following data from scanned documents: • Shipping address • Billing address • Customer ID • Amount due • Due date • Total tax • Subtotal You need to identify which model to use for App1. The solution must minimize development effort. Which model should you use?",
       "userAnswer": "C",
@@ -193,6 +113,57 @@
       "questionImages": [],
       "answerImages": [],
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/136704-exam-ai-102-topic-4-question-21-discussion/"
+    },
+    {
+      "questionId": "5g7KxKmBySFvImPPTfsi",
+      "question": "You are building a chatbot. You need to configure the chatbot to query a knowledge base. Which dialog class should you use?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types The dialogs library provides a few types of dialogs to make your | Selected Answer: A A. QnAMakerDialog",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111875-exam-ai-102-topic-5-question-41-discussion/"
+    },
+    {
+      "questionId": "xyXJ5vbNduBnstJp4X1o",
+      "question": "You have an existing Azure Cognitive Search service. You have an Azure Blob storage account that contains millions of scanned documents stored as images and PDFs. You need to make the scanned documents available to search as quickly as possible. What should you do?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: D D is correct answer. Also marked correct on Udemy course practice test. | Selected Answer: D FOCUS \"virtual folders\" word.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56501-exam-ai-102-topic-4-question-3-discussion/"
+    },
+    {
+      "questionId": "0M5PUKWLHAhYbHt85jpV",
+      "question": "You are building a chatbot for a travel agent. The bot will ask users for a destination and must repeat the question until a valid input is received, or the user closes the conversation. Which type of dialog should you use?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types The dialogs library provides a few types of dialogs to make your | Selected Answer: A In this scenario, where a chatbot needs to ask users for a destination and must repeat the question until a valid input is received, the most appropriate type of dialog to use is a \"prompt\" dialog. Her",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111874-exam-ai-102-topic-5-question-40-discussion/"
     },
     {
       "questionId": "ukrDyL2qENKSnoxsY82M",
@@ -212,119 +183,124 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/109370-exam-ai-102-topic-4-question-14-discussion/"
     },
     {
-      "questionId": "ZKxLxYAb5wJfeCHuo1eA",
-      "question": "HOTSPOT - You plan to provision Azure Cognitive Services resources by using the following method. You need to create a Standard tier resource that will convert scanned receipts into text. How should you call the method? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: The current name for Form Recognizer (as of May 2024) is Document Intelligence. 1. Document Intelligence(Form Recognizer) 2. \"S0\", \"eastus\" https://azure.microsoft.com/en-us/pricing/details/ai-document-intelligence/ | Is it asking me to know it is eastus and not useast?? In this era this is important knowledge for Microsoft? What does knowing these things prove? Microsoft should do an internal audit and shutdown in shame",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image99.png",
-        "https://img.examtopics.com/ai-102/image100.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image101.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/136922-exam-ai-102-topic-4-question-16-discussion/"
-    },
-    {
-      "questionId": "cvkyVDbw7DNBg19NfNt0",
-      "question": "You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1 in the S0 tier. You have the files shown in the following table. You need to train a custom extraction model by using AIdoc1. Which files can you upload to Document Intelligence Studio?",
-      "userAnswer": "E",
-      "correctAnswer": "E",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: E Given the updated information that the S0 tier now supports files up to 500 MB, let’s re-evaluate each file's compatibility with Azure AI Document Intelligence: File1 (JPG, 400MB) - Supported format an | Selected Answer: E File1 and File2 only",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image178.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150257-exam-ai-102-topic-4-question-28-discussion/"
-    },
-    {
-      "questionId": "ZAomwNtp8WZ7LTJMSFp0",
-      "question": "HOTSPOT - You have an Azure subscription. You need to deploy an Azure AI Document Intelligence resource. How should you complete the Azure Resource Manager (ARM) template? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": null,
+      "questionId": "19SuosyKaYI0KCnbj4Qe",
+      "question": "HOTSPOT - You have a bot that was built by using the Microsoft Bot Framework composer as shown in the following exhibit. Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B",
       "correctAnswer": "A",
       "correct": false,
       "gradable": true,
-      "skipped": true,
-      "topic": "Topic 4",
+      "skipped": false,
+      "topic": "Topic 5",
       "domainName": "Implement natural language processing solutions",
       "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Answer is correct. Validated. 1. Create a FormRecognizer resource 2. On the resource screen, click Export Template under automation 3. Check the template created | In the era of AI, and in an AI exam, they expect people to remember this useless information | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "Discussion highlights: 1. identity New York as city entity 2. Language Understanding intent recognised https://learn.microsoft.com/en-us/composer/concept-language-understanding?tabs=v2x#entities Entities are a collection of objects, each consi | 1. identity New York as city entity 2. Language Understanding intent recognized",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image138.png"
+        "https://img.examtopics.com/ai-102/image67.png",
+        "https://img.examtopics.com/ai-102/image68.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image139.png"
+        "https://img.examtopics.com/ai-102/image69.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135063-exam-ai-102-topic-4-question-20-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112150-exam-ai-102-topic-5-question-46-discussion/"
     },
     {
-      "questionId": "V53zHQhO3vu97NWJ9D7T",
-      "question": "You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. DI1 uses the Standard S0 pricing tier. You have the files shown in the following table. Which files can you analyze by using DI1?",
-      "userAnswer": "D",
-      "correctAnswer": "C",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C File1 > 500 Mb so NO File 2 <50x50 pixels so NO File 3 YES | Selected Answer: C Have a look on any of the prebuilt models and you will see File3.tiff is the only one that fits. https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/contract?view=doc-int",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image179.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149782-exam-ai-102-topic-4-question-29-discussion/"
-    },
-    {
-      "questionId": "e8riRt8sYIs0SCr6nFOW",
-      "question": "You are developing a solution to generate a word cloud based on the reviews of a company's products. Which Text Analytics REST API endpoint should you use?",
+      "questionId": "43E19U5nxXX86VTG5oh9",
+      "question": "HOTSPOT - You build a bot named app1 by using the Microsoft Bot Framework. You prepare app1 for deployment. You need to deploy app1 to Azure. How should you complete the command? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 4",
+      "topic": "Topic 5",
       "domainName": "Implement natural language processing solutions",
       "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: I also thought it was B, but now I think given answer is correct: Extracted from here https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/key-phrase-extraction/tutorials/integrate-power-bi#create-t | Selected Answer: A correct",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60582-exam-ai-102-topic-4-question-8-discussion/"
+      "explanation": "Discussion highlights: webapp config-zip See command az webapp deployment source config-zip --resource-group \"<resource-group-name>\" --name \"<name-of-app-service>\" --src \"<project-zip-path>\" at https://learn.microsoft.com/en-us/azure/bot-servi | 1. webapp 2. config-zip https://learn.microsoft.com/en-us/azure/bot-service/provision-and-publish-a-bot?view=azure-bot-service-4.0&tabs=userassigned%2Ccsharp#publish-your-bot-to-azure | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image21.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image22.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/105994-exam-ai-102-topic-5-question-25-discussion/"
     },
     {
-      "questionId": "aZOuG3d0QOgjERlaXN0m",
-      "question": "You have an Azure Cognitive Search solution and an enrichment pipeline that performs Sentiment Analysis on social media posts. You need to define a knowledge store that will include the social media posts and the Sentiment Analysis results. Which two fields should you include in the definition? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B, D",
-      "correctAnswer": "B, E",
+      "questionId": "3u0Lt2unUlTbrMRxGdRQ",
+      "question": "HOTSPOT - You are building a chatbot by using the Microsoft Bot Framework SDK. You use an object named UserProfile to store user profile information and an object named ConversationData to store information related to a conversation. You create the following state accessors to store both objects in state. The state storage mechanism is set to Memory Storage. For each of the following statements, select Yes if the statement is true. Otherwise select No. NOTE: Each correct selection is worth one point.",
+      "userAnswer": null,
+      "correctAnswer": "A",
       "correct": false,
       "gradable": true,
-      "skipped": false,
-      "topic": "Topic 4",
+      "skipped": true,
+      "topic": "Topic 5",
       "domainName": "Implement natural language processing solutions",
       "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: BE Typo, BE is the answer. https://learn.microsoft.com/en-us/azure/search/knowledge-store-concept-intro?tabs=portal#knowledge-store-definition A knowledge store is defined inside a skillset definition an | Selected Answer: AB To define a knowledge store in Azure Cognitive Search that includes both the social media posts and the Sentiment Analysis results, you should include the following two fields in the definition: A. st",
+      "explanation": "Discussion highlights: Answer is correct and probably this is a repeated question. https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0 https://learn.microsoft.com/en-us/azure/bot-service/bot | In summary, while the bot can indeed create and maintain UserProfile and ConversationData objects in memory, these objects will not persist beyond the lifetime of the bot's current runtime session when using Memory Stora | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image86.png",
+        "https://img.examtopics.com/ai-102/image87.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image88.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/125686-exam-ai-102-topic-5-question-52-discussion/"
+    },
+    {
+      "questionId": "5DxcrhiYuSg2Oy5b5dEj",
+      "question": "You are building a flight booking bot by using the Microsoft Bot Framework SDK. The bot will ask users for the departure date. The bot must repeat the question until a valid date is given, or the users cancel the transaction. Which type of dialog should you use?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types The dialogs library provides a few types of dialogs to make your | Selected Answer: A Prompts are used to ask the user for a specific piece of information and can include validation to ensure the response meets certain criteria. In this case, you can use a DateTimePrompt to ask for the",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/81122-exam-ai-102-topic-4-question-11-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112151-exam-ai-102-topic-5-question-47-discussion/"
+    },
+    {
+      "questionId": "6HN37pZtROQh3f6AKP2L",
+      "question": "DRAG DROP - You plan to build a chatbot to support task tracking. You create a Language Understanding service named lu1. You need to build a Language Understanding model to integrate into the chatbot. The solution must minimize development time to build the model. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Step 1: Add a new application - Create a new app - 1. Sign in to the LUIS portal with the URL of https://www.luis.ai. 2. Select Create new app. 3. Etc. Step 2: Add example utterances. In order to classify an utterance, the intent needs examples of user utterances that should be classified with this intent. Step 3: Train the application - Step 4: Publish the application - In order to receive a LUIS prediction in a chat bot or other client application, you need to publish the app to the prediction endpoint. Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/luis/tutorial-intents-only | Discussion highlights: As per Udemy it is: - Add a new application. - Add the prebuilt domain ToDo. - Train the application. - Publish the application | Given answer is correct. (Taken from Udemy practice exam question) The order should be : 1. Add a new app, 2. Add example utterances, 3. Train the app, 4. Publish the app. | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0022500001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0022600001.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76495-exam-ai-102-topic-5-question-4-discussion/"
+    },
+    {
+      "questionId": "AFvclpbOQPqtWjA9XAeW",
+      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have a chatbot that uses question answering in Azure Cognitive Service for Language. Users report that the responses of the chatbot lack formality when answering spurious questions. You need to ensure that the chatbot provides formal responses to spurious questions. Solution: From Language Studio, you change the chitchat source to qna_chitchat_professional.tsv, and then retrain and republish the model. Does this meet the goal?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A Formal response, it is Personality = Professional, it is file qna_chitchat_professional.tsv . https://learn.microsoft.com/en-us/azure/ai-services/language-service/question-answering/concepts/best-pract | Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/how-to/chit-chat",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102922-exam-ai-102-topic-5-question-28-discussion/"
     }
   ]
 }
