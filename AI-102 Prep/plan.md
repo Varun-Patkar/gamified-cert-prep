@@ -152,9 +152,9 @@
 
 ### Day 20 (2026-05-25) - Domain 5: Custom Language Models
 
-- [ ] Study: intents/entities/utterances lifecycle
-- [ ] Practice: 8 questions on Domain 5
-- [ ] Lab: Plan train-test-publish cycle for one model
+- [x] Study: intents/entities/utterances lifecycle
+- [x] Practice: 9 graded questions on Domain 5 (8/9 = 88.9%; 3 skipped broken hotspots)
+- [x] Lab: Plan train-test-publish cycle for one model
 - Estimated time: 0.5 hrs
 
 ### Day 21 (2026-05-26) - Domain 5: Question Answering

@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 19 / 32
-- Questions Answered: 255 / 313
-- Accuracy: 86.7%
-- Current Streak: 19 days
-- Next Session: Day 20 (2026-05-25)
+- Sessions Completed: 20 / 32
+- Questions Answered: 264 / 313
+- Accuracy: 86.9%
+- Current Streak: 20 days
+- Next Session: Day 21 (2026-05-26)
 
 ## Milestones
 
@@ -300,9 +300,22 @@
 - Time Spent: ~5.9 min quiz
 - Skipped: 3u0Lt2unUlTbrMRxGdRQ (MemoryStorage state — had garbled Box options instead of Y/N, now fixed)
 - Key Mistakes:
-  - Composer hotspot (19SuosyKaYI0KCnbj4Qe): Swapped entity extraction vs trigger type — Box 1 asks what bot *does* (identify entity), Box 2 asks *trigger type* (LU intent recognized)
+  - Composer hotspot (19SuosyKaYI0KCnbj4Qe): Swapped entity extraction vs trigger type — Box 1 asks what bot _does_ (identify entity), Box 2 asks _trigger type_ (LU intent recognized)
 - Fixed Questions: 3 hotspot questions rewritten with distinct options (Composer entity/intent, bot deployment CLI, MemoryStorage Y/N)
 - Topic 5 (Bot Framework/NLP): 7/8 graded (87.5%)
 - Topic 4 (cross-domain): 4/4 (100%)
 - Notes: _fill in your own words_
 - Next action: Day 20 - Domain 5: Custom Language Models
+
+### Day 20 (2026-05-25) - Domain 5: Custom Language Models & Bot Framework
+
+- Status: Completed
+- Questions Attempted: 9 (graded) + 3 skipped (broken hotspot options, now fixed)
+- Correct: 8 / 9 (88.9%)
+- Time Spent: ~4.9 min quiz
+- Skipped: KvuCXGrJOarwyFY5DyRW (Composer dialog hotspot), VprGJ8eHIPUF8hd4HAb5 (bot state hotspot), WcGAS4FwpZ1lqcc2vF4z (conversation expiration hotspot) — all had duplicate/nonsensical agent-generated options, now fixed
+- Key Mistakes:
+  - Ck9BkhaLPagDJAlMcM4V (.lg file hotspot): Answered B (Yes,Yes,Yes) instead of A (No,Yes,Yes) — `${user.name}` is property access, NOT a prompt
+- Fixed Questions: 4 hotspot questions rewritten with proper Yes/No or dropdown options
+- Notes: _fill in your own words_
+- Next action: Day 21 - Domain 5: Question Answering
