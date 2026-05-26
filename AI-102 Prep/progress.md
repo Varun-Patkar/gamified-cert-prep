@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 20 / 32
-- Questions Answered: 264 / 313
-- Accuracy: 86.9%
-- Current Streak: 20 days
-- Next Session: Day 21 (2026-05-26)
+- Sessions Completed: 21 / 32
+- Questions Answered: 276 / 313
+- Accuracy: 87.5%
+- Current Streak: 21 days
+- Next Session: Day 22 (2026-05-27)
 
 ## Milestones
 
@@ -319,3 +319,15 @@
 - Fixed Questions: 4 hotspot questions rewritten with proper Yes/No or dropdown options
 - Notes: _fill in your own words_
 - Next action: Day 21 - Domain 5: Question Answering
+
+### Day 21 (2026-05-26) - Domain 5: Question Answering
+
+- Status: Completed
+- Questions Attempted: 12 (graded)
+- Correct: 12 / 12 (100%) — PERFECT SCORE!
+- Time Spent: ~4.5 min quiz
+- Key Mistakes: None — flawless run
+- Topics covered: Alternative phrasing, chit-chat personas, Bot Framework dialogs (waterfall/prompt/adaptive), Composer (adaptive cards, speech channels), .lu file format, LUIS export, bot state & conversation expiry
+- Carryover Qs: 3/3 (100%) — Day 20 topics (bot state hotspot, conversation expiry hotspot, food ordering dialogs)
+- Notes: _fill in your own words_
+- Next action: Day 22 - Domain 5: Consolidation

@@ -1,77 +1,39 @@
 {
-  "timestamp": "2026-05-25T14:20:17.308719",
+  "timestamp": "2026-05-26T10:43:56.158604",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
     "totalQuestions": 12,
-    "gradedQuestions": 9,
-    "correct": 8,
-    "wrong": 1,
-    "skipped": 3,
+    "gradedQuestions": 12,
+    "correct": 12,
+    "wrong": 0,
+    "skipped": 0,
     "ungraded": 0,
-    "accuracy": 88.9,
-    "timeSeconds": 291.7
+    "accuracy": 100.0,
+    "timeSeconds": 268.2
   },
   "domainBreakdown": {
     "Implement natural language processing solutions": {
       "total": 12,
-      "correct": 8,
-      "wrong": 1,
-      "skipped": 3
+      "correct": 12,
+      "wrong": 0,
+      "skipped": 0
     }
   },
   "topicBreakdown": {
     "Topic 5": {
       "total": 12,
-      "correct": 8,
-      "wrong": 1,
-      "skipped": 3
+      "correct": 12,
+      "wrong": 0,
+      "skipped": 0
     }
   },
-  "wrongQuestions": [
-    {
-      "questionId": "Ck9BkhaLPagDJAlMcM4V",
-      "question": "HOTSPOT - You are reviewing the design of a chatbot. The chatbot includes a language generation file that contains the following fragment. # Greet(user) - ${Greeting()}, ${user.name} For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "B",
-      "correctAnswer": "A",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0023300001.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image231.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/55006-exam-ai-102-topic-5-question-9-discussion/",
-      "explanation": "Discussion highlights: NYY is the answer. https://learn.microsoft.com/en-us/azure/bot-service/file-format/bot-builder-lg-file-format?view=azure-bot-service-4.0#template-names https://learn.microsoft.com/en-us/azure/bot-service/file-format/bot- | COrrect answer is : NYY why: ${user.name} retrieves the user's name using a prompt.-->No. In this context, ${user.name} directly retrieves the user's name from the incoming user object. It doesn't obtain the user's name | Answer inferred from top upvoted discussion consensus.",
-      "topic": "Topic 5",
-      "domainName": "Implement natural language processing solutions"
-    }
-  ],
-  "skippedQuestions": [
-    "KvuCXGrJOarwyFY5DyRW",
-    "VprGJ8eHIPUF8hd4HAb5",
-    "WcGAS4FwpZ1lqcc2vF4z"
-  ],
+  "wrongQuestions": [],
+  "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "AFvclpbOQPqtWjA9XAeW",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have a chatbot that uses question answering in Azure Cognitive Service for Language. Users report that the responses of the chatbot lack formality when answering spurious questions. You need to ensure that the chatbot provides formal responses to spurious questions. Solution: From Language Studio, you change the chitchat source to qna_chitchat_professional.tsv, and then retrain and republish the model. Does this meet the goal?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 5",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A Formal response, it is Personality = Professional, it is file qna_chitchat_professional.tsv . https://learn.microsoft.com/en-us/azure/ai-services/language-service/question-answering/concepts/best-pract | Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/how-to/chit-chat",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102922-exam-ai-102-topic-5-question-28-discussion/"
-    },
-    {
-      "questionId": "AhkBEn8Ln1AnWFHPkYYk",
-      "question": "You have a Conversational Language Understanding model. You export the model as a JSON file. The following is a sample of the file. What represents the Weather.Historic entity in the sample utterance?",
+      "questionId": "hcBXSwi3vuBF6QwprWN2",
+      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have a chatbot that uses question answering in Azure Cognitive Service for Language. Users report that the responses of the chatbot lack formality when answering spurious questions. You need to ensure that the chatbot provides formal responses to spurious questions. Solution: From Language Studio, you modify the question and answer pairs for the custom intents, and then retrain and republish the model. Does this meet the goal?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
@@ -81,16 +43,14 @@
       "domainName": "Implement natural language processing solutions",
       "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Gotten this in Jul 2023 exam. | Same as Topic 3 Question 23. https://www.examtopics.com/discussions/microsoft/view/77619-exam-ai-102-topic-3-question-23-discussion",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image23.png"
-      ],
+      "explanation": "Discussion highlights: Selected Answer: B No, this solution does not meet the goal. The formality of responses to spurious questions is not controlled by modifying the question and answer pairs for the custom intents in Language Studio. These | Selected Answer: B Spurious questions are questions that are not relevant to the conversation or are not meant to be answered. In other words, these are chit-chat. So to make it professional, choose a professional chitch",
+      "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111870-exam-ai-102-topic-5-question-33-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102921-exam-ai-102-topic-5-question-27-discussion/"
     },
     {
-      "questionId": "QlcXH2r0NShO6l7tuqI5",
-      "question": "You use the Microsoft Bot Framework Composer to build a chatbot that enables users to purchase items. You need to ensure that the users can cancel in-progress transactions. The solution must minimize development effort. What should you add to the bot?",
+      "questionId": "iZHphNNTh5Amwki7OFbS",
+      "question": "You are building a chatbot. You need to configure the bot to guide users through a product setup process. Which type of dialog should you use?",
       "userAnswer": "C",
       "correctAnswer": "C",
       "correct": true,
@@ -100,54 +60,16 @@
       "domainName": "Implement natural language processing solutions",
       "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: C. a dialog trigger Dialog triggers manage conversation flow and handle user inputs, allowing users to cancel in-progress transactions efficiently. | Selected Answer: C C is the answer. https://learn.microsoft.com/en-us/composer/concept-events-and-triggers?tabs=v2x In Bot Framework Composer, each dialog includes one or more event handlers called triggers. Each trigger",
+      "explanation": "Discussion highlights: bot should be out of syllabus | Selected Answer: C To me the most suitable Dialog is Waterfall https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/80793-exam-ai-102-topic-5-question-17-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111871-exam-ai-102-topic-5-question-35-discussion/"
     },
     {
-      "questionId": "KM22l5h6CUIc4zTvUXcv",
-      "question": "You are designing a conversational interface for an app that will be used to make vacation requests. The interface must gather the following data: • The start date of a vacation • The end date of a vacation • The amount of required paid time off The solution must minimize dialog complexity. Which type of dialog should you use?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 5",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C The answer is C: For designing a conversational interface that gathers data in a structured manner with minimal dialog complexity, you should use C. waterfall dialog. Waterfall dialogs are designed to | Selected Answer: C https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0#waterfall-dialogs",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102918-exam-ai-102-topic-5-question-22-discussion/"
-    },
-    {
-      "questionId": "Ck9BkhaLPagDJAlMcM4V",
-      "question": "HOTSPOT - You are reviewing the design of a chatbot. The chatbot includes a language generation file that contains the following fragment. # Greet(user) - ${Greeting()}, ${user.name} For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "B",
+      "questionId": "VprGJ8eHIPUF8hd4HAb5",
+      "question": "HOTSPOT - You are building a chatbot by using the Microsoft Bot Framework SDK. You use an object named UserProfile to store user profile information and an object named ConversationData to store information related to a conversation. You create the following state accessors to store both objects in state. var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile)); var conversationStateAccessors = _conversationState.CreateProperty<ConversationData>(nameof(ConversationData)); The state storage mechanism is set to Memory Storage. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": "A",
       "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 5",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: NYY is the answer. https://learn.microsoft.com/en-us/azure/bot-service/file-format/bot-builder-lg-file-format?view=azure-bot-service-4.0#template-names https://learn.microsoft.com/en-us/azure/bot-service/file-format/bot- | COrrect answer is : NYY why: ${user.name} retrieves the user's name using a prompt.-->No. In this context, ${user.name} directly retrieves the user's name from the incoming user object. It doesn't obtain the user's name | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0023300001.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image231.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/55006-exam-ai-102-topic-5-question-9-discussion/"
-    },
-    {
-      "questionId": "Gkv9gw6Uk6zpbgA0OhA3",
-      "question": "You have a chatbot that was built by using Microsoft Bot Framework and deployed to Azure. You need to configure the bot to support voice interactions. The solution must support multiple client apps. Which type of channel should you use?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
       "correct": true,
       "gradable": true,
       "skipped": false,
@@ -155,32 +77,142 @@
       "domainName": "Implement natural language processing solutions",
       "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C C is the answer. https://learn.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline?view=azure-bot-service-4.0 The Bot Framework offers multiple channels with the Direct Line branding. | Direct Line Speech is a robust, end-to-end solution for creating a flexible, extensible voice assistant. It is powered by the Bot Framework and its Direct Line Speech channel, that is optimized for voice-in, voice-out in",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/107302-exam-ai-102-topic-5-question-36-discussion/"
+      "explanation": "YYN is the answer. Statement 1 (Yes): CreateProperty creates state property accessors that manage the UserProfile object in the underlying storage layer. Statement 2 (Yes): Similarly, CreateProperty for ConversationData creates and maintains that object in storage. Statement 3 (No): Memory Storage is volatile — data does NOT persist when the Bot Framework runtime terminates. Use Azure Blob or Cosmos DB for persistence. Reference: https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-state",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0023500001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0023500002.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/66453-exam-ai-102-topic-5-question-10-discussion/"
     },
     {
-      "questionId": "KvuCXGrJOarwyFY5DyRW",
-      "question": "HOTSPOT - You are building a chatbot by using the Microsoft Bot Framework Composer. You have the dialog design shown in the following exhibit. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": null,
-      "correctAnswer": "C",
-      "correct": false,
+      "questionId": "ajyl3KWbwbjvBiQP9UGz",
+      "question": "You need to enable speech capabilities for a chatbot. Which three actions should you perform? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A, B, C",
+      "correctAnswer": "A, B, C",
+      "correct": true,
       "gradable": true,
-      "skipped": true,
+      "skipped": false,
       "topic": "Topic 5",
       "domainName": "Implement natural language processing solutions",
       "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Box 1: No - User.name is a property. Box 2: Yes - Box 3: Yes - The coalesce() function evaluates a list of expressions and returns the first non-null (or non-empty for string) expression. Reference: https://docs.microsoft.com/en-us/composer/concept-language-generation https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/coalescefunction | Discussion highlights: I am not sure if the correct answer for third is yes - the fields are showing examples, not the actual values typed in the boxes. | The answer is correct. | Inference was flagged as suspect by subagent audit and left ungraded.",
+      "explanation": "Discussion highlights: Selected Answer: ABC A, B and C are correct answers in order shown below. B. Create a Speech service https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/tutorial-voice-enable-your-bot-speech-sdk#crea | Selected Answer: ABC ABC is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/tutorial-voice-enable-your-bot-speech-sdk#create-a-speech-service-resource https://learn.microsoft.com/en-",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77634-exam-ai-102-topic-5-question-16-discussion/"
+    },
+    {
+      "questionId": "gjIfQfDBj6zGfJZamun4",
+      "question": "HOTSPOT - You are building a bot and that will use Language Understanding. You have a LUDown file that contains the following content. Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Reference: https://github.com/solliancenet/tech-immersion-data-ai/blob/master/ai-exp1/README.md | Discussion highlights: Answer is correct. From the link provided: SelectItem is the intent, and each item below it are example utterances that capture ways users can express this intent. Entities in .lu files are denoted using {<entityName>=<l | 1. intent 2. utterance https://learn.microsoft.com/en-us/azure/bot-service/file-format/bot-builder-lu-file-format?view=azure-bot-service-4.0#defining-intents-using-sample-utterances Intents with their sample utterances a | Answer inferred from top upvoted discussion consensus.",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0022200001.jpg",
-        "https://www.examtopics.com/assets/media/exam-media/04271/0022300001.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0024000001.png",
+        "https://www.examtopics.com/assets/media/exam-media/04271/0024100001.png"
       ],
       "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0022300002.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0024200001.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56834-exam-ai-102-topic-5-question-2-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/62325-exam-ai-102-topic-5-question-12-discussion/"
+    },
+    {
+      "questionId": "WcGAS4FwpZ1lqcc2vF4z",
+      "question": "HOTSPOT - You have a chatbot. You need to ensure that the bot conversation resets if a user fails to respond for 10 minutes. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Box 1: send_activity — notify the user that the conversation has expired ('Welcome back! Let's start over from the beginning.'). Box 2: clear_state — reset the conversation state so the bot starts fresh. Reference: https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-expire-conversation",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image63.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image64.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112146-exam-ai-102-topic-5-question-42-discussion/"
+    },
+    {
+      "questionId": "jKNuOZZE3xzofkH3S3JW",
+      "question": "You have a Speech resource and a bot that was built by using the Microsoft Bot Framework Composer. You need to add support for speech-based channels to the bot. Which three actions should you perform? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A, B, E",
+      "correctAnswer": "A, B, E",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Gotten this in Jul 2023 exam. | Selected Answer: ABE To add support for speech-based channels to a bot built with the Microsoft Bot Framework Composer, you should perform the following actions: Add the endpoint and key of the Speech resource to the bot",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112148-exam-ai-102-topic-5-question-44-discussion/"
+    },
+    {
+      "questionId": "ikF0utvJ29ypyqF28OS9",
+      "question": "You are building a chatbot by using Microsoft Bot Framework Composer. You need to configure the chatbot to present a list of available options. The solution must ensure that an image is provided for each option. Which two features should you use? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "D, E",
+      "correctAnswer": "D, E",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: DE To configure the chatbot to present a list of available options with images, you should use the following features: D. An adaptive card: Adaptive cards are a flexible, customizable way to present rich | Selected Answer: DE DE is the answer. https://learn.microsoft.com/en-us/composer/concept-dialog?tabs=v2x Modern conversational software has many different components. Bot Framework Composer integrates these pieces into d",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111027-exam-ai-102-topic-5-question-34-discussion/"
+    },
+    {
+      "questionId": "XGpVUml4yznLG6X83m5H",
+      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are building a chatbot that will use question answering in Azure Cognitive Service for Language. You have a PDF named Doc1.pdf that contains a product catalogue and a price list. You upload Doc1.pdf and train the model. During testing, users report that the chatbot responds correctly to the following question: What is the price of ? The chatbot fails to respond to the following question: How much does cost? You need to ensure that the chatbot responds correctly to both questions. Solution: From Language Studio, you add alternative phrasing to the question and answer pair, and then retrain and republish the model. Does this meet the goal?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/concepts/best-practices#when-should-you-add-alternate-questions-to-question-and-answer-pa | Selected Answer: A A from ChatGPT 3.5.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111868-exam-ai-102-topic-5-question-30-discussion/"
+    },
+    {
+      "questionId": "dzueUcN2Og6vc8zFTrkY",
+      "question": "You are building a chatbot by using the Microsoft Bot Framework SDK. The bot will be used to accept food orders from customers and allow the customers to customize each food item. You need to configure the bot to ask the user for additional input based on the type of item ordered. The solution must minimize development effort. Which two types of dialogs should you use? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "C, D",
+      "correctAnswer": "C, D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: CD =======Waterfall Dialogs===========: Guide users through a predefined, linear sequence of steps. Each step prompts the user for specific input, and the bot moves to the next step based on the user's r | Selected Answer: CD correct https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/125138-exam-ai-102-topic-5-question-51-discussion/"
     },
     {
       "questionId": "WaogPyLgZvcGJglpIziR",
@@ -200,31 +232,10 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111024-exam-ai-102-topic-5-question-32-discussion/"
     },
     {
-      "questionId": "VprGJ8eHIPUF8hd4HAb5",
-      "question": "HOTSPOT - You are building a chatbot by using the Microsoft Bot Framework SDK. You use an object named UserProfile to store user profile information and an object named ConversationData to store information related to a conversation. You create the following state accessors to store both objects in state. var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile)); var conversationStateAccessors = _conversationState.CreateProperty<ConversationData>(nameof(ConversationData)); The state storage mechanism is set to Memory Storage. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 5",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Box 1: Yes - You create property accessors using the CreateProperty method that provides a handle to the BotState object. Each state property accessor allows you to get or set the value of the associated state property. Box 2: Yes - Box 3: No - Before you exit the turn handler, you use the state management objects' SaveChangesAsync() method to write all state changes back to storage. Reference: https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-state | Discussion highlights: YYN is the answer. https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0#state-property-accessors State property accessors are used to actually read or write one of your | Looks correct",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0023500001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0023500002.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/66453-exam-ai-102-topic-5-question-10-discussion/"
-    },
-    {
-      "questionId": "MQsLu40oNYZKFpduR5jO",
-      "question": "You build a bot. You create an Azure Bot resource. You need to deploy the bot to Azure. What else should you create?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
+      "questionId": "XYy7E2wHLOB1n3TjBd1R",
+      "question": "You are building a bot on a local computer by using the Microsoft Bot Framework. The bot will use an existing Language Understanding model. You need to translate the Language Understanding model locally by using the Bot Framework CLI. What should you do first?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
@@ -232,52 +243,10 @@
       "domainName": "Implement natural language processing solutions",
       "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A To deploy a bot to Azure, at a minimum you need: An app registration in Azure AD to represent the bot identity An App Service instance to host the bot web service An App Service plan which defines the | Selected Answer: C When you create an Azure Bot resource in the portal, part of what that resource does under the hood is register an application for you in Azure Active Directory. In other words, the Bot resource itself",
+      "explanation": "Discussion highlights: Selected Answer: B \"B. Export the model as an .lu file. When you need to translate a Language Understanding (LUIS) model using the Microsoft Bot Framework CLI locally, the first step is to export the existing LUIS model | Save your time. Bot Framework is not part of AI-102 anymore https://trainingsupport.microsoft.com/en-us/mcp/forum/all/ai-102-practice-exam-questions/05c54cce-cd0d-42ae-8be2-b76fb41c60fa",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/125072-exam-ai-102-topic-5-question-50-discussion/"
-    },
-    {
-      "questionId": "WcGAS4FwpZ1lqcc2vF4z",
-      "question": "HOTSPOT - You have a chatbot. You need to ensure that the bot conversation resets if a user fails to respond for 10 minutes. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": null,
-      "correctAnswer": "C",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 5",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: 1. send_activity 2. clear_state https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-expire-conversation?view=azure-bot-service-4.0&tabs=python#user-interaction-expiration # Notify the user that the conv | In summary, send_activities is the standard method for sending messages to users. on_send_activities is not typically used for sending messages directly. send_trace_activity is for debugging, and update_activity is for m",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image63.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image64.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/112146-exam-ai-102-topic-5-question-42-discussion/"
-    },
-    {
-      "questionId": "6HN37pZtROQh3f6AKP2L",
-      "question": "DRAG DROP - You plan to build a chatbot to support task tracking. You create a Language Understanding service named lu1. You need to build a Language Understanding model to integrate into the chatbot. The solution must minimize development time to build the model. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 5",
-      "domainName": "Implement natural language processing solutions",
-      "domainId": "5",
-      "difficulty": "medium",
-      "explanation": "Step 1: Add a new application - Create a new app - 1. Sign in to the LUIS portal with the URL of https://www.luis.ai. 2. Select Create new app. 3. Etc. Step 2: Add example utterances. In order to classify an utterance, the intent needs examples of user utterances that should be classified with this intent. Step 3: Train the application - Step 4: Publish the application - In order to receive a LUIS prediction in a chat bot or other client application, you need to publish the app to the prediction endpoint. Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/luis/tutorial-intents-only | Discussion highlights: As per Udemy it is: - Add a new application. - Add the prebuilt domain ToDo. - Train the application. - Publish the application | Given answer is correct. (Taken from Udemy practice exam question) The order should be : 1. Add a new app, 2. Add example utterances, 3. Train the app, 4. Publish the app. | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0022500001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0022600001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76495-exam-ai-102-topic-5-question-4-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/56546-exam-ai-102-topic-5-question-5-discussion/"
     }
   ]
 }

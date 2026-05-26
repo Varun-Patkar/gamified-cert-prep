@@ -6763,10 +6763,10 @@
 					"id": "gjIfQfDBj6zGfJZamun4",
 					"question": "HOTSPOT - You are building a bot and that will use Language Understanding. You have a LUDown file that contains the following content. Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic. NOTE: Each correct selection is worth one point. Hot Area:",
 					"options": [
-						"D. Box 1: intent (alt); Box 2: utterance",
-						"A. Box 1: intent; Box 2: utterance",
-						"C. Box 1: intent; Box 2: utterance (v2)",
-						"B. Box 1: utterance; Box 2: intent"
+						"A. Box 1: an intent; Box 2: an utterance",
+						"B. Box 1: an utterance; Box 2: an intent",
+						"C. Box 1: an intent; Box 2: an entity",
+						"D. Box 1: an entity; Box 2: an utterance"
 					],
 					"explanation": "Reference: https://github.com/solliancenet/tech-immersion-data-ai/blob/master/ai-exp1/README.md | Discussion highlights: Answer is correct. From the link provided: SelectItem is the intent, and each item below it are example utterances that capture ways users can express this intent. Entities in .lu files are denoted using {<entityName>=<l | 1. intent 2. utterance https://learn.microsoft.com/en-us/azure/bot-service/file-format/bot-builder-lu-file-format?view=azure-bot-service-4.0#defining-intents-using-sample-utterances Intents with their sample utterances a | Answer inferred from top upvoted discussion consensus.",
 					"topic": "Topic 5",

@@ -159,9 +159,9 @@
 
 ### Day 21 (2026-05-26) - Domain 5: Question Answering
 
-- [ ] Study: Q&A sources, multi-turn, alternate phrasing, export
-- [ ] Practice: 8 questions on Domain 5
-- [ ] Lab: Draft knowledge base content strategy
+- [x] Study: Q&A sources, multi-turn, alternate phrasing, export
+- [x] Practice: 12 graded questions (12/12 = 100% — PERFECT!)
+- [x] Lab: Draft knowledge base content strategy
 - Estimated time: 0.5 hrs
 
 ### Day 22 (2026-05-27) - Domain 5: Consolidation
