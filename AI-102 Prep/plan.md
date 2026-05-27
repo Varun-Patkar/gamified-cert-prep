@@ -166,9 +166,9 @@
 
 ### Day 22 (2026-05-27) - Domain 5: Consolidation
 
-- [ ] Study: End-to-end NLP + speech + translation integration
-- [ ] Practice: 8 mixed questions on Domain 5
-- [ ] Lab: Rapid recap notes in your own words
+- [x] Study: End-to-end NLP + speech + translation integration
+- [x] Practice: 12 questions on Domain 5 (10/12, 83.3%)
+- [x] Lab: Rapid recap notes in your own words
 - Estimated time: 0.5 hrs
 
 ### Day 23 (2026-05-28) - Domain 6: AI Search Core

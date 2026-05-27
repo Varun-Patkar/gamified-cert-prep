@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 21 / 32
-- Questions Answered: 276 / 313
-- Accuracy: 87.5%
-- Current Streak: 21 days
-- Next Session: Day 22 (2026-05-27)
+- Sessions Completed: 22 / 32
+- Questions Answered: 288 / 313
+- Accuracy: 87.2%
+- Current Streak: 22 days
+- Next Session: Day 23 (2026-05-28)
 
 ## Milestones
 
@@ -331,3 +331,17 @@
 - Carryover Qs: 3/3 (100%) — Day 20 topics (bot state hotspot, conversation expiry hotspot, food ordering dialogs)
 - Notes: _fill in your own words_
 - Next action: Day 22 - Domain 5: Consolidation
+
+### Day 22 (2026-05-27) - Domain 5: Consolidation
+
+- Status: Completed
+- Questions Attempted: 12 (graded)
+- Correct: 10 / 12 (83.3%)
+- Time Spent: ~4.8 min quiz
+- Key Mistakes:
+  - Trace debugging order (nJTNqN5bDBZakbIleqz4): Picked Run→Send→Create instead of Create→Send→Run — code first, then run
+  - Emulator local testing order (nVQj8drAwKvfCH7t2iJ8): Picked Open Emulator first instead of Build & Run first — bot must be running before connecting
+- Pattern: Both misses = "code/build first, then tooling" ordering
+- Domain 5: 10/12 (83.3%) — consolidation round
+- Notes: _fill in your own words_
+- Next action: Day 23 - Domain 6: AI Search Core
