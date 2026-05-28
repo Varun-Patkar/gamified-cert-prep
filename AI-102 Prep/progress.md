@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 22 / 32
-- Questions Answered: 288 / 313
-- Accuracy: 87.2%
-- Current Streak: 22 days
-- Next Session: Day 23 (2026-05-28)
+- Sessions Completed: 23 / 32
+- Questions Answered: 300 / 313
+- Accuracy: 87.7%
+- Current Streak: 23 days
+- Next Session: Day 24 (2026-05-29)
 
 ## Milestones
 
@@ -14,7 +14,7 @@
 - [x] Domain 2 completed (Days 6-10, avg 84.8%)
 - [x] Domain 3 completed (Days 11-12, avg 89.3%)
 - [x] Domain 4 completed (Days 13-16, avg 82.9%)
-- [ ] Domain 5 completed
+- [x] Domain 5 completed (Days 17-22, avg 89.9%)
 - [ ] Domain 6 completed
 - [ ] Buffer day completed
 - [ ] Review days completed
@@ -345,3 +345,17 @@
 - Domain 5: 10/12 (83.3%) — consolidation round
 - Notes: _fill in your own words_
 - Next action: Day 23 - Domain 6: AI Search Core
+
+### Day 23 (2026-05-28) - Domain 6: AI Search Core (Bot Framework cross-domain quiz)
+
+- Status: Completed
+- Questions Attempted: 12 (graded) + 2 skipped (broken options, now fixed)
+- Correct: 12 / 12 (100%) — PERFECT SCORE!
+- Time Spent: ~10.3 min quiz
+- Skipped: tggEkigssu3zb844Wo2G (OnMembersAddedAsync hotspot — garbled options, now fixed), vWWq8vBrtX3SgSzR6PyZ (Adaptive Card hotspot — truncated options, now fixed)
+- Key Mistakes: None — flawless run
+- Topics covered: Content Moderator classification (Category 1), Bot Channels Registration (App ID + Password), Emulator settings (ngrok + v1.0 auth), Adaptive Cards, Composer dialog scope, Q&A alternative phrasing, Composer multi-bot dispatch (BCF), multilingual chatbot APIs (Sentiment + Detect Language)
+- Domain 6 (cross-domain Bot Framework): 9/9 graded (100%)
+- Domain 5 carryover: 3/3 (100%)
+- Notes: _fill in your own words_
+- Next action: Day 24 - Domain 6: Query and Enrichment
