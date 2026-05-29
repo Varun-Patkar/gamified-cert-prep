@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 23 / 32
-- Questions Answered: 300 / 313
-- Accuracy: 87.7%
-- Current Streak: 23 days
-- Next Session: Day 24 (2026-05-29)
+- Sessions Completed: 24 / 32
+- Questions Answered: 311 / 313
+- Accuracy: 87.8%
+- Current Streak: 24 days
+- Next Session: Day 25 (2026-05-30)
 
 ## Milestones
 
@@ -359,3 +359,19 @@
 - Domain 5 carryover: 3/3 (100%)
 - Notes: _fill in your own words_
 - Next action: Day 24 - Domain 6: Query and Enrichment
+
+### Day 24 (2026-05-29) - Domain 6: Query and Enrichment
+
+- Status: Completed
+- Questions Attempted: 11 (graded) + 3 skipped (garbled hotspot options, now fixed)
+- Correct: 10 / 11 (90.9%) — quiz scored 9/11 but travel chatbot Q had wrong answer key (was A, corrected to C; user answered C correctly)
+- Time Spent: ~8.1 min quiz
+- Skipped: NMI2S8rZcFiDHGEvawvI (OpenAI console app hotspot — options fixed), AGD750zD5ne6CzR1MRfD (Chat playground params hotspot — options fixed), 1sqHO0HzcRd1Nlv4wHaG (LLM definitions hotspot — options fixed to Yes/No format)
+- Key Mistakes:
+  - ICzikIAERFRO4FU8OhEA: Azure OpenAI "on your data" code — picked `AzureChatExtensionConfiguration` (B) instead of `AzureCognitiveSearchChatExtensionConfiguration` (C). The specific Search extension config class is needed, not the generic one.
+- Answer key fixes applied: IlpzdeGWFEkeTSU5mXzL corrected A→C (Temperature=0 for accuracy), NMI2S8rZcFiDHGEvawvI options rewritten, 1sqHO0HzcRd1Nlv4wHaG options rewritten to Yes/No, Pt3w9pCNGVFFUtiGLZf7 options expanded to 4 boxes
+- Topic 5 carryover: 4/4 (100%)
+- Topic 6: 2/2 (100%)
+- Topic 7: 4/5 graded answered (80%) + 3 skipped
+- Notes: _fill in your own words_
+- Next action: Day 25 - Domain 6: Semantic and Vector Search
