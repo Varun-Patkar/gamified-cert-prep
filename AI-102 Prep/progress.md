@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 24 / 32
-- Questions Answered: 311 / 313
-- Accuracy: 87.8%
-- Current Streak: 24 days
-- Next Session: Day 25 (2026-05-30)
+- Sessions Completed: 25 / 32
+- Questions Answered: 325 / 313
+- Accuracy: 87.4%
+- Current Streak: 25 days
+- Next Session: Day 26 (2026-05-31)
 
 ## Milestones
 
@@ -375,3 +375,22 @@
 - Topic 7: 4/5 graded answered (80%) + 3 skipped
 - Notes: _fill in your own words_
 - Next action: Day 25 - Domain 6: Semantic and Vector Search
+
+### Day 25 (2026-05-30) - Domain 6: Semantic and Vector Search
+
+- Status: Completed
+- Questions Attempted: 13 (graded) + 1 skipped (garbled options, credited)
+- Correct: 11 / 14 (78.6% adjusted)
+- Raw Score: 9 / 13 (69.2%)
+- Time Spent: ~7.3 min quiz
+- Credited: 2 (Q9yZaZRalGtQmWjHR8mI — answer key wrong, user's A was correct per Highly Voted discussion; b3dBtUm3v75h2gV0tVz5 — garbled 3-box options for 2-dropdown hotspot, user knew answer)
+- Key Mistakes:
+  - gwsIQSZPu8cibMgPdECI: Picked D (Cognitive Services OpenAI Contributor) instead of A (Cognitive Services OpenAI User) — User role is least privilege for view endpoints + view models + generate content
+  - PFarcFliASzPdwk45Nn1: Picked B (AzureDocumentIntelligence) instead of D (AzureCognitiveSearch) — "on your data" grounding uses Azure Cognitive Search as data source type, not Doc Intelligence
+  - ICzikIAERFRO4FU8OhEA: Repeat miss from Day 24 — picked `AzureChatExtensionConfiguration` (generic) instead of `AzureCognitiveSearchChatExtensionConfiguration` (specific Search class)
+- Answer key fixes applied: Q9yZaZRalGtQmWjHR8mI corrected C→A (Translator, not Orchestrator), b3dBtUm3v75h2gV0tVz5 options rewritten from garbled 3-box to correct 2-dropdown (ChatCompletion.create + response.choices[0].text)
+- Day 25 assigned: 8/11 adjusted (72.7%)
+- Day 24 carryover: 3/3 (100%) — NMI2S8rZcFiDHGEvawvI now correct, IlpzdeGWFEkeTSU5mXzL still correct
+- Weak pattern: Azure OpenAI "on your data" extension config classes — missed twice (Day 24 + Day 25)
+- Notes: _fill in your own words_
+- Next action: Day 26 - Domain 6: Document Intelligence

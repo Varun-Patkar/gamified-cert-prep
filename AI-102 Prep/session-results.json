@@ -1,55 +1,71 @@
 {
-  "timestamp": "2026-05-29T12:58:38.964008",
+  "timestamp": "2026-05-30T12:17:39.415141",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
     "totalQuestions": 14,
-    "gradedQuestions": 11,
+    "gradedQuestions": 13,
     "correct": 9,
-    "wrong": 2,
-    "skipped": 3,
+    "wrong": 4,
+    "skipped": 1,
     "ungraded": 0,
-    "accuracy": 81.8,
-    "timeSeconds": 484.0
+    "accuracy": 69.2,
+    "timeSeconds": 435.0
   },
   "domainBreakdown": {
     "Implement knowledge mining and information extraction solutions": {
       "total": 14,
       "correct": 9,
-      "wrong": 2,
-      "skipped": 3
+      "wrong": 4,
+      "skipped": 1
     }
   },
   "topicBreakdown": {
     "Topic 7": {
-      "total": 8,
-      "correct": 3,
-      "wrong": 2,
-      "skipped": 3
-    },
-    "Topic 6": {
-      "total": 2,
-      "correct": 2,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "Topic 5": {
-      "total": 4,
-      "correct": 4,
-      "wrong": 0,
-      "skipped": 0
+      "total": 14,
+      "correct": 9,
+      "wrong": 4,
+      "skipped": 1
     }
   },
   "wrongQuestions": [
     {
-      "questionId": "IlpzdeGWFEkeTSU5mXzL",
-      "question": "You are building a chatbot for a travel agent. The chatbot will use the Azure OpenAI GPT 3.5 model and will be used to make travel reservations. You need to maximize the accuracy of the responses from the chatbot. What should you do?",
-      "userAnswer": "C",
+      "questionId": "gwsIQSZPu8cibMgPdECI",
+      "question": "You have an Azure subscription that contains an Azure OpenAI resource named AI1 and a user named User1. You need to ensure that User1 can perform the following actions in Azure OpenAI Studio: • Identify resource endpoints. • View models that are available for deployment. • Generate text and images by using the deployed models. The solution must follow the principle of least privilege. Which role should you assign to User1?",
+      "userAnswer": "D",
       "correctAnswer": "A",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135146-exam-ai-102-topic-7-question-4-discussion/",
-      "explanation": "Discussion highlights: Selected Answer: A Could this not be A? Configuring the model to include data from the travel agent’s database would allow the chatbot to access a source of relevant and specific information, which can significantly impr | Selected Answer: C The question s about how to ensure the model responses are accurate and not randomly made up creatively Hence the answer is Option C to set the lower temperature that can ensure model is less creative",
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150033-exam-ai-102-topic-7-question-21-discussion/",
+      "explanation": "Discussion highlights: Selected Answer: A A. Cognitive Services OpenAI User Reasoning: The Cognitive Services OpenAI User role provides read-only access to the Azure OpenAI resource, allowing User1 to: Identify resource endpoints View availabl | Selected Answer: A Cognitive Services OpenAI User is CORRECT because this role grants users the minimum permissions needed to view and interact with Azure OpenAI resources. Specifically, it allows users to access resourc",
+      "topic": "Topic 7",
+      "domainName": "Implement knowledge mining and information extraction solutions"
+    },
+    {
+      "questionId": "PFarcFliASzPdwk45Nn1",
+      "question": "HOTSPOT - You have a chatbot that uses Azure OpenAI to generate responses. You need to upload company data by using Chat playground. The solution must ensure that the chatbot uses the data to answer user questions. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B",
+      "correctAnswer": "D",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image187.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image188.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149575-exam-ai-102-topic-7-question-22-discussion/",
+      "explanation": "Discussion highlights: ChatCompletion AzureCognitiveSearch https://learn.microsoft.com/en-us/azure/ai-services/openai/use-your-data-quickstart?tabs=command-line%2Cjavascript-keyless%2Ctypescript-keyless%2Cpython&pivots=programming-language-pyt | Azure Document Intelligence for second, imho",
+      "topic": "Topic 7",
+      "domainName": "Implement knowledge mining and information extraction solutions"
+    },
+    {
+      "questionId": "Q9yZaZRalGtQmWjHR8mI",
+      "question": "You are developing the chatbot. You create the following components: ✑ A QnA Maker resource ✑ A chatbot by using the Azure Bot Framework SDK You need to add an additional component to meet the technical requirements and the chatbot requirements. What should you add?",
+      "userAnswer": "A",
+      "correctAnswer": "C",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75955-exam-ai-102-topic-7-question-2-discussion/",
+      "explanation": "Discussion highlights: B. Language Understanding Explanation: To meet the requirement that the chatbot must support English, French, and Portuguese and provide other response options when the response confidence score is low, the Language Unde | Selected Answer: A A is correct answer. \"If you need to support a knowledge base system, which includes several languages, you can: 1) Use the Translator service to translate a question into a single language before send",
       "topic": "Topic 7",
       "domainName": "Implement knowledge mining and information extraction solutions"
     },
@@ -71,19 +87,17 @@
     }
   ],
   "skippedQuestions": [
-    "NMI2S8rZcFiDHGEvawvI",
-    "AGD750zD5ne6CzR1MRfD",
-    "1sqHO0HzcRd1Nlv4wHaG"
+    "b3dBtUm3v75h2gV0tVz5"
   ],
   "allResults": [
     {
       "questionId": "NMI2S8rZcFiDHGEvawvI",
       "question": "HOTSPOT - You have an Azure subscription that contains an Azure OpenAI resource named AI1. You plan to develop a console app that will answer user questions. You need to call AI1 and output the results to the console. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": null,
+      "userAnswer": "A",
       "correctAnswer": "A",
-      "correct": false,
+      "correct": true,
       "gradable": true,
-      "skipped": true,
+      "skipped": false,
       "topic": "Topic 7",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
@@ -98,28 +112,32 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/136128-exam-ai-102-topic-7-question-11-discussion/"
     },
     {
-      "questionId": "DqDWHYUiK2rmyAC0QnzZ",
-      "question": "You have an Azure subscription that contains an Azure OpenAI resource named OpenAI1 and a user named User1. You need to ensure that User1 can upload datasets to OpenAI1 and finetune the existing models. The solution must follow the principle of least privilege. Which role should you assign to User1?",
-      "userAnswer": "A",
+      "questionId": "b3dBtUm3v75h2gV0tVz5",
+      "question": "HOTSPOT - You have an Azure subscription that contains an Azure OpenAI resource named AI1. You plan to develop a console app that will answer user questions. You need to call AI1 and output the results to the console. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": null,
       "correctAnswer": "A",
-      "correct": true,
+      "correct": false,
       "gradable": true,
-      "skipped": false,
+      "skipped": true,
       "topic": "Topic 7",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A A, verified with chatGPT The correct answer is: A. Cognitive Services OpenAI Contributor Reasoning: The Cognitive Services OpenAI Contributor role provides the necessary permissions to manage the Azure | Selected Answer: A A is correct. Cognitive Services OpenAI Contributor permission: Upload datasets for fine-tuning. Ref：https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/role-based-access-control#cognitiv",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150032-exam-ai-102-topic-7-question-19-discussion/"
+      "explanation": "Discussion highlights: Given answer is correct 1) chatcompletion.create - this is the API for creating chat completion 2) response.choices[0].text - for picking the text with highest rated response choice | Correct. Under Completions > Example response https://learn.microsoft.com/en-us/azure/ai-services/openai/reference#completions | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image145.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image146.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/136127-exam-ai-102-topic-7-question-10-discussion/"
     },
     {
       "questionId": "IlpzdeGWFEkeTSU5mXzL",
       "question": "You are building a chatbot for a travel agent. The chatbot will use the Azure OpenAI GPT 3.5 model and will be used to make travel reservations. You need to maximize the accuracy of the responses from the chatbot. What should you do?",
       "userAnswer": "C",
-      "correctAnswer": "A",
-      "correct": false,
+      "correctAnswer": "C",
+      "correct": true,
       "gradable": true,
       "skipped": false,
       "topic": "Topic 7",
@@ -132,8 +150,29 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135146-exam-ai-102-topic-7-question-4-discussion/"
     },
     {
-      "questionId": "0j6GKRoKuswn0kRX12b3",
-      "question": "You have an Azure subscription. You need to build an app that will compare documents for semantic similarity. The solution must meet the following requirements: • Return numeric vectors that represent the tokens of each document. • Minimize development effort. Which Azure OpenAI model should you use?",
+      "questionId": "aplZECeO20Fhs9ciwlKT",
+      "question": "DRAG DROP - You have an Azure subscription that contains an Azure OpenAI resource named AI1. You plan to build an app named App1 that will write press releases by using AI1. You need to deploy an Azure OpenAI model for App1. The solution must minimize development effort. Which three actions should you perform in sequence in Azure OpenAI Studio? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 7",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: 1. Create deployment using GPT-3.5-Turbo 2. Apply Market Writing Assistant template 3. Deploy solution to a new web app | In the Setup panel, under Use a system message template, select the Marketing Writing Assistant template and confirm that you want to update the system message. https://microsoftlearning.github.io/mslearn-openai/Instruct | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image113.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image114.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135487-exam-ai-102-topic-7-question-7-discussion/"
+    },
+    {
+      "questionId": "RES6nlcOAb06feX7DCLJ",
+      "question": "You have an Azure OpenAI model. You have 500 prompt-completion pairs that will be used as training data to fine-tune the model. You need to prepare the training data. Which format should you use for the training data file?",
       "userAnswer": "C",
       "correctAnswer": "C",
       "correct": true,
@@ -143,86 +182,146 @@
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: correct | embeddings correct",
+      "explanation": "Discussion highlights: Selected Answer: C SONL is CORRECT because Azure OpenAI requires training data for fine-tuning to be in JSON Lines (JSONL) format. Each line in the file represents a prompt-completion pair in JSON format, which is the re | key word is \"pair\" , you know that's a key value format so JSONL",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143644-exam-ai-102-topic-7-question-16-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149920-exam-ai-102-topic-7-question-17-discussion/"
     },
     {
-      "questionId": "CKOb0dLaxqj4TbVz74zy",
-      "question": "You have an Azure subscription and 10,000 ASCII files. You need to identify files that contain specific phrases. The solution must use cosine similarity. Which Azure OpenAI model should you use?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A Answer is A, models that use mathematical-based searches are always related to embeddings. ChatGPT answer: The correct answer is: A. text-embedding-ada-002 Reasoning: To identify files that contain spe | Selected Answer: A https://learn.microsoft.com/en-us/azure/ai-services/openai/tutorials/embeddings?tabs=python-new%2Ccommand-line&pivots=programming-language-powershell https://learn.microsoft.com/en-us/azure/ai-services",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150420-exam-ai-102-topic-7-question-20-discussion/"
-    },
-    {
-      "questionId": "Pt3w9pCNGVFFUtiGLZf7",
-      "question": "DRAG DROP - You have a monitoring solution that uses the Azure AI Anomaly Detector service. You provision a server named Server1 that has intermittent internet access. You need to deploy the Azure AI Anomaly Detector to Server1. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 6",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: 1. Install 2. From pull 3. From run 4. Query Memorize flag words! | correct https://learn.microsoft.com/en-us/azure/ai-services/anomaly-detector/anomaly-detector-container-howto",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image107.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image108.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135661-exam-ai-102-topic-6-question-1-discussion/"
-    },
-    {
-      "questionId": "yqEfHvMsBeVx1CZL2jtI",
-      "question": "You create five bots by using Microsoft Bot Framework Composer. You need to make a single bot available to users that combines the bots. The solution must support dynamic routing to the bots based on user input. Which three actions should you perform? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B, C, F",
-      "correctAnswer": "B, C, F",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 5",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: BCF B. Change the Recognizer/Dispatch type: Adjusting the recognizer type to one that supports dispatching allows the bot to understand and route user input to the appropriate sub-bot. ================== | Selected Answer: BCF BCF is the answer. https://learn.microsoft.com/en-us/composer/how-to-create-orchestrator-bot",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102800-exam-ai-102-topic-5-question-29-discussion/"
-    },
-    {
-      "questionId": "AGD750zD5ne6CzR1MRfD",
-      "question": "HOTSPOT - In Azure OpenAI Studio, you are prototyping a chatbot by using Chat playground. You need to configure the chatbot to meet the following requirements: • Reduce the repetition of words in conversations. • Reduce the randomness of each response. Which two parameters should you modify? To answer, select the appropriate parameters in the answer area. NOTE: Each correct answer is worth one point.",
-      "userAnswer": null,
+      "questionId": "gwsIQSZPu8cibMgPdECI",
+      "question": "You have an Azure subscription that contains an Azure OpenAI resource named AI1 and a user named User1. You need to ensure that User1 can perform the following actions in Azure OpenAI Studio: • Identify resource endpoints. • View models that are available for deployment. • Generate text and images by using the deployed models. The solution must follow the principle of least privilege. Which role should you assign to User1?",
+      "userAnswer": "D",
       "correctAnswer": "A",
       "correct": false,
       "gradable": true,
-      "skipped": true,
+      "skipped": false,
       "topic": "Topic 7",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: -temperature -frequency penalty | Reduce repetition: Increase Frequency penalty to suppress repetition of words: Frequency Penalty modifies the probability of words seen frequently during training, making them less likely. NOT Presence Penalty: Presence",
+      "explanation": "Discussion highlights: Selected Answer: A A. Cognitive Services OpenAI User Reasoning: The Cognitive Services OpenAI User role provides read-only access to the Azure OpenAI resource, allowing User1 to: Identify resource endpoints View availabl | Selected Answer: A Cognitive Services OpenAI User is CORRECT because this role grants users the minimum permissions needed to view and interact with Azure OpenAI resources. Specifically, it allows users to access resourc",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150033-exam-ai-102-topic-7-question-21-discussion/"
+    },
+    {
+      "questionId": "fXlqR9VszBcmSZCwimj4",
+      "question": "HOTSPOT - You have an Azure subscription that contains an Azure OpenAI resource. You configure a model that has the following settings: • Temperature: 1 • Top probabilities: 0.5 • Max response tokens: 100 You ask the model a question and receive the following response. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 7",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: My answer is that No No No | No No No",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image164.png"
+        "https://img.examtopics.com/ai-102/image142.png",
+        "https://img.examtopics.com/ai-102/image143.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image165.png"
+        "https://img.examtopics.com/ai-102/image234.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143643-exam-ai-102-topic-7-question-15-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135064-exam-ai-102-topic-7-question-9-discussion/"
+    },
+    {
+      "questionId": "PFarcFliASzPdwk45Nn1",
+      "question": "HOTSPOT - You have a chatbot that uses Azure OpenAI to generate responses. You need to upload company data by using Chat playground. The solution must ensure that the chatbot uses the data to answer user questions. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B",
+      "correctAnswer": "D",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 7",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: ChatCompletion AzureCognitiveSearch https://learn.microsoft.com/en-us/azure/ai-services/openai/use-your-data-quickstart?tabs=command-line%2Cjavascript-keyless%2Ctypescript-keyless%2Cpython&pivots=programming-language-pyt | Azure Document Intelligence for second, imho",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image187.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image188.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149575-exam-ai-102-topic-7-question-22-discussion/"
+    },
+    {
+      "questionId": "laB97ovDapKAs5foUrWN",
+      "question": "You have an Azure subscription. The subscription contains an Azure OpenAI resource that hosts a GPT-4 model named Model1 and an app named App1. App1 uses Model1. You need to ensure that App1 will NOT return answers that include hate speech. What should you configure for Model1?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 7",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: C Correct. https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/content-filter?tabs=warning%2Cpython | Selected Answer: C C is correct",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134925-exam-ai-102-topic-7-question-1-discussion/"
+    },
+    {
+      "questionId": "eznqeAhzqbvYsIiba0Ir",
+      "question": "HOTSPOT - You have an Azure subscription. You need to create a new resource that will generate fictional stories in response to user prompts. The solution must ensure that the resource uses a customer-managed key to protect data. How should you complete the script? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 7",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: 1. OpenAI 2. --encryption | --encryption is correct: https://learn.microsoft.com/en-us/cli/azure/cognitiveservices/account?view=azure-cli-latest az cognitiveservices account create -n myresource -g myResourceGroup --assign-identity --kind TextAnaly",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image149.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image150.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135219-exam-ai-102-topic-7-question-12-discussion/"
+    },
+    {
+      "questionId": "Q9yZaZRalGtQmWjHR8mI",
+      "question": "You are developing the chatbot. You create the following components: ✑ A QnA Maker resource ✑ A chatbot by using the Azure Bot Framework SDK You need to add an additional component to meet the technical requirements and the chatbot requirements. What should you add?",
+      "userAnswer": "A",
+      "correctAnswer": "C",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 7",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: B. Language Understanding Explanation: To meet the requirement that the chatbot must support English, French, and Portuguese and provide other response options when the response confidence score is low, the Language Unde | Selected Answer: A A is correct answer. \"If you need to support a knowledge base system, which includes several languages, you can: 1) Use the Translator service to translate a question into a single language before send",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75955-exam-ai-102-topic-7-question-2-discussion/"
+    },
+    {
+      "questionId": "S3VBMnLRwbzhMoIkXng1",
+      "question": "HOTSPOT - You have an Azure subscription that is linked to a Microsoft Entra tenant. The subscription ID is x1xx11x1-x111-xxxx-xxxx-x1111xxx11x1 and the tenant ID is 1y1y1yyy-1y1y-y1y1-yy11-y1y1y11111y1. The subscription contains an Azure OpenAI resource named OpenAI1 that has a primary API key of 1111a111a11a111aaa11a1a1a11a11aa. OpenAI1 has a deployment named embeddings1 that uses the text-embedding-ada-002 model. You need to query OpenAI1 and retrieve embeddings for text input. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 7",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: 1 - API key 2 - deployment name see here: https://learn.microsoft.com/en-us/javascript/api/@azure/openai/openaiclient?view=azure-node-preview#@azure-openai-openaiclient-getembeddings | 1-APi key 2-deploymentname The name of the model deployment (when using Azure OpenAI) or model name (when using non-Azure OpenAI) to use for this request.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image162.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image163.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143924-exam-ai-102-topic-7-question-14-discussion/"
     },
     {
       "questionId": "ICzikIAERFRO4FU8OhEA",
@@ -246,102 +345,21 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/143505-exam-ai-102-topic-7-question-13-discussion/"
     },
     {
-      "questionId": "ZTLM4w1yBMNDQ8ZVvn3p",
-      "question": "DRAG DROP - You are developing the smart e-commerce project. You need to design the skillset to include the contents of PDFs in searches. How should you complete the skillset design diagram? To answer, drag the appropriate services to the correct stages. Each service may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point. Select and Place:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
+      "questionId": "dQW9QFpnTSXO3e9bGlKM",
+      "question": "You have an Azure subscription. The subscription contains an Azure OpenAI resource that hosts a GPT-3.5 Turbo model named Model1. You configure Model1 to use the following system message: “You are an AI assistant that helps people solve mathematical puzzles. Explain your answers as if the request is by a 4-year-old.” Which type of prompt engineering technique is this an example of?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 6",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Box 1: Azure Blob storage - At the start of the pipeline, you have unstructured text or non-text content (such as images, scanned documents, or JPEG files). Data must exist in an Azure data storage service that can be accessed by an indexer. Box 2: Computer Vision API - Scenario: Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products. The Computer Vision Read API is Azure's latest OCR technology (learn what's new) that extracts printed text (in several languages), handwritten text (English only), digits, and currency symbols from images and multi-page PDF documents. Box 3: Translator API - Scenario: Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese. Box 4: Azure Files - Scenario: Store all raw insight data that was generated, so the data can be processed later. Incorrect Answers: The custom vision API from Microsoft Azure learns to recognize specific content in imagery and becomes smarter with training and time. Reference: https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview-ocr | Discussion highlights: Source [Azure Blob Storage] https://learn.microsoft.com/en-us/azure/search/cognitive-search-concept-intro Import is the first step. Here, the indexer connects to a data source and pulls content (documents) into the searc | Given answer is correct | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0007100001.jpg"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0007100002.jpg"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/81465-exam-ai-102-topic-6-question-1-discussion/"
-    },
-    {
-      "questionId": "1sqHO0HzcRd1Nlv4wHaG",
-      "question": "HOTSPOT - You are building an app that will provide users with definitions of common AI terms. You create the following Python code. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
       "topic": "Topic 7",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: The given Answer is correct. Try it in Chat Playground => N,Y,Y | chat GPT : N,Y,Y MS copilot : Y,Y,Y Rider copilot : YYY Y,Y,Y democracy wins. | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image189.png",
-        "https://img.examtopics.com/ai-102/image190.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image191.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149739-exam-ai-102-topic-7-question-23-discussion/"
-    },
-    {
-      "questionId": "zwQBjm9u1hnxtKdieK3F",
-      "question": "DRAG DROP - You have a chatbot that uses a QnA Maker application. You enable active learning for the knowledge base used by the QnA Maker application. You need to integrate user input into the model. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 5",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Step 1: For the knowledge base, select Show active learning suggestions. In order to see the suggested questions, on the Edit knowledge base page, select View Options, then select Show active learning suggestions. Step 2: Approve and reject suggestions. Each QnA pair suggests the new question alternatives with a check mark, , to accept the question or an x to reject the suggestions. Select the check mark to ג\" add the question. Step 3: Save and train the knowledge base. Select Save and Train to save the changes to the knowledge base. Step 4: Publish the knowledge base. Select Publish to allow the changes to be available from the GenerateAnswer API. When 5 or more similar queries are clustered, every 30 minutes, QnA Maker suggests the alternate questions for you to accept or reject. Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/improve-knowledge-base | Discussion highlights: 1. From knowledge base, select show active learning suggestions. 2. Approve and reject the suggestions. 3. Save and train knowledge base. 4. Publish knowledge base. https://learn.microsoft.com/en-us/azure/cognitive-servi | Answer provided is correct. (Turn on active learning) - Done 1. Show active learning suggestions 2. Accept the question or reject the suggestions 3. Save and Train 4. Publish https://docs.microsoft.com/en-us/azure/cognit | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0024700001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0024800001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77633-exam-ai-102-topic-5-question-15-discussion/"
-    },
-    {
-      "questionId": "yp8jQkEl96qBXAb8Bg48",
-      "question": "You build a bot by using the Microsoft Bot Framework SDK and the Azure Bot Service. You plan to deploy the bot to Azure. You register the bot by using the Bot Channels Registration service. Which two values are required to complete the deployment? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "C, E",
-      "correctAnswer": "C, E",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 5",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: CE CE is the answer. https://learn.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-4.0&tabs=multitenant The identity information you need to add depends o | Selected Answer: CE C and E are correct answers. https://docs.microsoft.com/en-gb/learn/modules/design-bot-conversation-flow/5-deploy-bot",
+      "explanation": "Discussion highlights: Selected Answer: D Priming is utilised in this example because it involves setting up the context or role of the AI model explicitly in a system message. It instructs the model about its role (“You are an AI assistant th | Exam Question June 2024",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/61688-exam-ai-102-topic-5-question-1-discussion/"
-    },
-    {
-      "questionId": "xVjO016awwViRJcIZqc7",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have a chatbot that uses question answering in Azure Cognitive Service for Language. Users report that the responses of the chatbot lack formality when answering spurious questions. You need to ensure that the chatbot provides formal responses to spurious questions. Solution: From Language Studio, you change the chitchat source to qna_chitchat_friendly.tsv, and then retrain and republish the model. Does this meet the goal?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 5",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Had to Look up the Word \"spurious\" .. MSFT Should Not have used this Word .. Could have used a more common term .. \"Something false or inauthentic\" , For Some People around the World English is not their Primary Language | Selected Answer: B B is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/how-to/chit-chat",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/102920-exam-ai-102-topic-5-question-26-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134943-exam-ai-102-topic-7-question-2-discussion/"
     }
   ]
 }

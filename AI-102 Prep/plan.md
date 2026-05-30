@@ -187,9 +187,9 @@
 
 ### Day 25 (2026-05-30) - Domain 6: Semantic and Vector Search
 
-- [ ] Study: Semantic ranking, vector/hybrid retrieval patterns
-- [ ] Practice: 15 questions on Domain 6
-- [ ] Lab: Choose retrieval strategy for three scenarios
+- [x] Study: Semantic ranking, vector/hybrid retrieval patterns
+- [x] Practice: 15 questions on Domain 6 (11/14 = 78.6% adjusted; 2 credited, 3 genuine misses)
+- [x] Lab: Choose retrieval strategy for three scenarios
 - Estimated time: 1 hr
 
 ### Day 26 (2026-05-31) - Domain 6: Document Intelligence
