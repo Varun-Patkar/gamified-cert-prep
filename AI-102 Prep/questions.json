@@ -8730,9 +8730,9 @@
 					"question": "HOTSPOT - You have an Azure subscription that contains an Azure OpenAI resource named AI1. You build a chatbot that will use AI1 to provide generative answers to specific questions. You need to ensure that the responses are more creative and less deterministic. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
 					"options": [
 						"A. Box 1: user; Box 2: temperature",
-						"C. Box 1: user; Box 2: temperature (v2)",
-						"D. Box 1: user (alt); Box 2: temperature",
-						"B. Box 1: temperature; Box 2: user"
+						"B. Box 1: system; Box 2: Frequency_penalty",
+						"C. Box 1: assistant; Box 2: Presence_penalty",
+						"D. Box 1: function; Box 2: token_selection_biasses"
 					],
 					"explanation": "Discussion highlights: I think this must be user instead of system role. ChatRole.User identifies the text as coming from the user in the conversation. This is important because the AI model will use this information to understand the context | 1. user 2. temperature",
 					"topic": "Topic 7",
@@ -8794,10 +8794,10 @@
 					"id": "ySc713rLrB2m1vOp3N1F",
 					"question": "HOTSPOT - You have an Azure subscription that contains an Azure OpenAI resource named AI1. You build a chatbot that will use AI1 to provide generative answers to specific questions. You need to ensure that the responses are more creative and less deterministic. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
 					"options": [
-						"D. Box 1: user (alt); Box 2: temperature",
 						"A. Box 1: user; Box 2: temperature",
-						"C. Box 1: user; Box 2: temperature (v2)",
-						"B. Box 1: temperature; Box 2: user"
+						"B. Box 1: system; Box 2: Presence_penalty",
+						"C. Box 1: function; Box 2: Frequency_penalty",
+						"D. Box 1: assistant; Box 2: token_selection_biasses"
 					],
 					"explanation": "Discussion highlights: The ChatRole that should be used is ChatRole.User. This role is assigned to the messages that come from the user, which the chatbot is responding to. The Temperature setting can be adjusted to increase creativity in the | 1. user 2. temperature",
 					"topic": "Topic 7",
@@ -8845,7 +8845,7 @@
 						"F. File1.tsv, File2.xml and File4.xslx only",
 						"G. File1.tsv, File2.xml, File3.pdf and File4.xslx"
 					],
-					"explanation": "Discussion highlights: Selected Answer: A tsv or csv only | Selected Answer: E This tool accepts files in the following data formats, if they contain a prompt and a completion column/key: Comma-separated values (CSV) Tab-separated values (TSV) Microsoft Excel workbook (XLSX) Java",
+					"explanation": "Highly Voted Answer: A (10 upvotes). Supported formats: CSV, TSV, XLSX, JSON/JSONL. File1.tsv (80MB) = valid format + within 100MB limit. File2.xml = unsupported format. File3.pdf = unsupported format. File4.xlsx (200MB) = supported format BUT exceeds the 100MB per-file upload limit. Only File1.tsv can be uploaded.",
 					"topic": "Topic 7",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
@@ -8854,9 +8854,9 @@
 						"https://img.examtopics.com/ai-102/image186.png"
 					],
 					"answerImages": [],
-					"answerStatus": "explicit",
+					"answerStatus": "community_consensus",
 					"type": "mc",
-					"correctAnswer": "E",
+					"correctAnswer": "A",
 					"ungraded": false,
 					"questionTypeInferredByAgent": "mcq"
 				},
@@ -8910,10 +8910,10 @@
 					"id": "7U635sBPXBJl2yUHep7f",
 					"question": "HOTSPOT - You build a QnA Maker resource to meet the chatbot requirements. Which RBAC role should you assign to each group? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
 					"options": [
-						"A. Box 2: Cognitive Services QnA Maker Editor Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs. QnA Maker Editor: API permissions; Box 3: Cognitive Services QnA Maker Read Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs. QnA Maker Read: API Permissions",
-						"D. Box 2: Cognitive Services QnA Maker Editor Ensure that the members of a group named Consu...; Box 3: Cognitive Services QnA Maker Read Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs. QnA Maker Read: API Permissions",
-						"B. Box 2: Cognitive Services QnA Maker Read Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs. QnA Maker Read: API Permissions; Box 3: Cognitive Services QnA Maker Editor Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs. QnA Maker Editor: API permissions",
-						"C. Box 2: Cognitive Services QnA Maker Editor Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs. QnA Maker Editor: API permissions; Box 3: Cognitive Services QnA Maker Read Ensure that the members of a group named th..."
+						"A. Box 1: Cognitive Services User; Box 2: Cognitive Services QnA Maker Editor; Box 3: Cognitive Services QnA Maker Read",
+						"B. Box 1: Contributor; Box 2: Cognitive Services QnA Maker Read; Box 3: Cognitive Services QnA Maker Editor",
+						"C. Box 1: Owner; Box 2: Cognitive Services User; Box 3: Cognitive Services QnA Maker Read",
+						"D. Box 1: Cognitive Services QnA Maker Editor; Box 2: Cognitive Services User; Box 3: Contributor"
 					],
 					"explanation": "Box 1: Cognitive Service User - Ensure that the members of a group named Management-Accountants can approve the FAQs. Approve=publish. Cognitive Service User (read/write/publish): API permissions: All access to Cognitive Services resource except for ability to: 1. Add new members to roles. 2. Create new resources. Box 2: Cognitive Services QnA Maker Editor Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs. QnA Maker Editor: API permissions: 1. Create KB API 2. Update KB API 3. Replace KB API 4. Replace Alterations 5. \"Train API\" [in new service model v5] Box 3: Cognitive Services QnA Maker Read Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs. QnA Maker Read: API Permissions: 1. Download KB API 2. List KBs for user API 3. Get Knowledge base details 4. Download Alterations Generate Answer - Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/role-based-access-control | Discussion highlights: 1. Cognitive Service User 2. QnA Maker Editor 3. QnA Maker Read https://learn.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/role-based-access-control#access-is-provided-by-a-defined-role - Cognitive Serv | management account should use \"Cognitive Service User\" since only this role has permission to publish. Consultant should be able to edit and Agent should be only able to read | Answer inferred from top upvoted discussion consensus.",
 					"topic": "Topic 8",

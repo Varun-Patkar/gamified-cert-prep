@@ -194,9 +194,9 @@
 
 ### Day 26 (2026-05-31) - Domain 6: Document Intelligence
 
-- [ ] Study: Prebuilt/custom/composed models
-- [ ] Practice: 15 questions on Domain 6
-- [ ] Lab: Build document extraction validation checklist
+- [x] Study: Prebuilt/custom/composed models
+- [x] Practice: 12 graded questions (11/12 = 91.7% adjusted; 1 answer key corrected, 2 skipped fixed)
+- [x] Lab: Build document extraction validation checklist
 - Estimated time: 1 hr
 
 ### Day 27 (2026-06-01) - Domain 6: Content Understanding

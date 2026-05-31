@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 25 / 32
-- Questions Answered: 325 / 313
-- Accuracy: 87.4%
-- Current Streak: 25 days
-- Next Session: Day 26 (2026-05-31)
+- Sessions Completed: 26 / 32
+- Questions Answered: 337 / 313
+- Accuracy: 87.5%
+- Current Streak: 26 days
+- Next Session: Day 27 (2026-06-01)
 
 ## Milestones
 
@@ -394,3 +394,20 @@
 - Weak pattern: Azure OpenAI "on your data" extension config classes — missed twice (Day 24 + Day 25)
 - Notes: _fill in your own words_
 - Next action: Day 26 - Domain 6: Document Intelligence
+
+### Day 26 (2026-05-31) - Domain 6: Document Intelligence (OpenAI + Content Safety quiz)
+
+- Status: Completed
+- Questions Attempted: 12 (graded) + 2 skipped (broken options, fixed mid-session)
+- Correct: 11 / 12 (91.7% adjusted)
+- Raw Score: 10 / 12 (83.3%)
+- Time Spent: ~8.8 min quiz
+- Credited: 1 (yWTIgbDzuiXoM1HDn2SP — answer key corrected E→A during session; user answered A correctly, file size trap: XLSX 200MB exceeds 100MB limit)
+- Skipped: 2 (ySc713rLrB2m1vOp3N1F — duplicate user/temperature Q, options fixed; 7U635sBPXBJl2yUHep7f — QnA Maker RBAC, options fixed to actual dropdowns)
+- Key Mistakes:
+  - qB2JbI6mQxYp6LeEH510: Picked C (RankerType) instead of D (ScoreThreshold) — requirement says "confidence ≥ 70%", ScoreThreshold sets minimum confidence cutoff; RankerType switches ranking algorithm (unrelated)
+- Option fixes applied: 4 questions rewritten (q9xO + ySc7 user/temperature dropdowns, yWTIgbDzuiXoM1HDn2SP answer key E→A, 7U635sBPXBJl2yUHep7f RBAC 3-box dropdowns)
+- Topic 7 (OpenAI): 7/8 adjusted (87.5%)
+- Topic 8 (Content Safety/QnA): 4/4 (100%)
+- Notes: _fill in your own words_
+- Next action: Day 27 - Domain 6: Content Understanding
