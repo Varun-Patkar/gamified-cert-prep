@@ -173,16 +173,16 @@
 
 ### Day 23 (2026-05-28) - Domain 6: AI Search Core
 
-- [ ] Study: Index, data source, indexer, skillset fundamentals
-- [ ] Practice: 8 questions on Domain 6
-- [ ] Lab: Design index schema for RAG use-case
+- [x] Study: Index, data source, indexer, skillset fundamentals
+- [x] Practice: 12 graded questions (12/12 = 100% — PERFECT!)
+- [x] Lab: Design index schema for RAG use-case
 - Estimated time: 0.5 hrs
 
 ### Day 24 (2026-05-29) - Domain 6: Query and Enrichment
 
-- [ ] Study: Filters, sorting, wildcard, custom skills
-- [ ] Practice: 8 questions on Domain 6
-- [ ] Lab: Define enrichment pipeline and custom skill role
+- [x] Study: Filters, sorting, wildcard, custom skills
+- [x] Practice: 11 graded questions (10/11 = 90.9% adjusted; 3 skipped fixed)
+- [x] Lab: Define enrichment pipeline and custom skill role
 - Estimated time: 0.5 hrs
 
 ### Day 25 (2026-05-30) - Domain 6: Semantic and Vector Search
@@ -201,9 +201,9 @@
 
 ### Day 27 (2026-06-01) - Domain 6: Content Understanding
 
-- [ ] Study: OCR pipelines, multimodal extraction from docs/media
-- [ ] Practice: 8 questions on Domain 6
-- [ ] Lab: Map ingestion pipeline for mixed media content
+- [x] Study: OCR pipelines, multimodal extraction, Content Safety SDK/REST/Studio
+- [x] Practice: 14 graded questions (14/14 = 100% — PERFECT!)
+- [x] Lab: Map ingestion pipeline for mixed media content
 - Estimated time: 0.5 hrs
 
 ### Day 28 (2026-06-02) - Domain 6: Consolidation

@@ -1,247 +1,72 @@
 {
-  "timestamp": "2026-05-31T11:05:30.045062",
+  "timestamp": "2026-06-01T10:26:05.164359",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
     "totalQuestions": 14,
-    "gradedQuestions": 12,
-    "correct": 10,
-    "wrong": 2,
-    "skipped": 2,
+    "gradedQuestions": 14,
+    "correct": 14,
+    "wrong": 0,
+    "skipped": 0,
     "ungraded": 0,
-    "accuracy": 83.3,
-    "timeSeconds": 530.3
+    "accuracy": 100.0,
+    "timeSeconds": 319.1
   },
   "domainBreakdown": {
     "Implement knowledge mining and information extraction solutions": {
       "total": 14,
-      "correct": 10,
-      "wrong": 2,
-      "skipped": 2
+      "correct": 14,
+      "wrong": 0,
+      "skipped": 0
     }
   },
   "topicBreakdown": {
-    "Topic 7": {
-      "total": 9,
-      "correct": 6,
-      "wrong": 2,
-      "skipped": 1
-    },
     "Topic 8": {
-      "total": 5,
-      "correct": 4,
+      "total": 11,
+      "correct": 11,
       "wrong": 0,
-      "skipped": 1
+      "skipped": 0
+    },
+    "Topic 9": {
+      "total": 2,
+      "correct": 2,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Topic 10": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
     }
   },
-  "wrongQuestions": [
-    {
-      "questionId": "qB2JbI6mQxYp6LeEH510",
-      "question": "You are developing the chatbot. You create the following components: ✑ A QnA Maker resource ✑ A chatbot by using the Azure Bot Framework SDK You need to integrate the components to meet the chatbot requirements. Which property should you use?",
-      "userAnswer": "C",
-      "correctAnswer": "D",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75514-exam-ai-102-topic-7-question-1-discussion/",
-      "explanation": "Discussion highlights: Answer should be D. QnAMakerOptions.ScoreThreshold Technical Requirements says \"AI solution responses must have a confidence score that is equal to or greater than 70 percent\" and \"When the response confidence score is l | Selected Answer: D D 100%",
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions"
-    },
-    {
-      "questionId": "yWTIgbDzuiXoM1HDn2SP",
-      "question": "You have a custom Azure OpenAI model. You have the files shown in the following table. You need to prepare training data for the model by using the OpenAI CLI data preparation tool. Which files can you upload to the tool?",
-      "userAnswer": "A",
-      "correctAnswer": "E",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image186.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149574-exam-ai-102-topic-7-question-18-discussion/",
-      "explanation": "Discussion highlights: Selected Answer: A tsv or csv only | Selected Answer: E This tool accepts files in the following data formats, if they contain a prompt and a completion column/key: Comma-separated values (CSV) Tab-separated values (TSV) Microsoft Excel workbook (XLSX) Java",
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions"
-    }
-  ],
-  "skippedQuestions": [
-    "ySc713rLrB2m1vOp3N1F",
-    "7U635sBPXBJl2yUHep7f"
-  ],
+  "wrongQuestions": [],
+  "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "fXlqR9VszBcmSZCwimj4",
-      "question": "HOTSPOT - You have an Azure subscription that contains an Azure OpenAI resource. You configure a model that has the following settings: • Temperature: 1 • Top probabilities: 0.5 • Max response tokens: 100 You ask the model a question and receive the following response. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: My answer is that No No No | No No No",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image142.png",
-        "https://img.examtopics.com/ai-102/image143.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image234.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135064-exam-ai-102-topic-7-question-9-discussion/"
-    },
-    {
-      "questionId": "gwsIQSZPu8cibMgPdECI",
-      "question": "You have an Azure subscription that contains an Azure OpenAI resource named AI1 and a user named User1. You need to ensure that User1 can perform the following actions in Azure OpenAI Studio: • Identify resource endpoints. • View models that are available for deployment. • Generate text and images by using the deployed models. The solution must follow the principle of least privilege. Which role should you assign to User1?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A A. Cognitive Services OpenAI User Reasoning: The Cognitive Services OpenAI User role provides read-only access to the Azure OpenAI resource, allowing User1 to: Identify resource endpoints View availabl | Selected Answer: A Cognitive Services OpenAI User is CORRECT because this role grants users the minimum permissions needed to view and interact with Azure OpenAI resources. Specifically, it allows users to access resourc",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150033-exam-ai-102-topic-7-question-21-discussion/"
-    },
-    {
-      "questionId": "laB97ovDapKAs5foUrWN",
-      "question": "You have an Azure subscription. The subscription contains an Azure OpenAI resource that hosts a GPT-4 model named Model1 and an app named App1. App1 uses Model1. You need to ensure that App1 will NOT return answers that include hate speech. What should you configure for Model1?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C Correct. https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/content-filter?tabs=warning%2Cpython | Selected Answer: C C is correct",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134925-exam-ai-102-topic-7-question-1-discussion/"
-    },
-    {
-      "questionId": "mEVcvTytKZwXGRdPqtBa",
-      "question": "HOTSPOT - You build a chatbot by using Azure OpenAI Studio. You need to ensure that the responses are more deterministic and less creative. Which two parameters should you configure? To answer, select the appropriate parameters in the answer area. NOTE: Each correct answer is worth one point.",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Given answers are correct | temperature controls the \"creativity\" of the generated text, between 0 and 2. A higher temperature will result in more diverse and unexpected responses, while a lower temperature will result in more conservative and pred",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image109.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image110.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/134944-exam-ai-102-topic-7-question-3-discussion/"
-    },
-    {
-      "questionId": "q9xO7eM4Zny5B4Xy1zwc",
-      "question": "HOTSPOT - You have an Azure subscription that contains an Azure OpenAI resource named AI1. You build a chatbot that will use AI1 to provide generative answers to specific questions. You need to ensure that the responses are more creative and less deterministic. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: I think this must be user instead of system role. ChatRole.User identifies the text as coming from the user in the conversation. This is important because the AI model will use this information to understand the context | 1. user 2. temperature",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image140.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image141.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135102-exam-ai-102-topic-7-question-8-discussion/"
-    },
-    {
-      "questionId": "qB2JbI6mQxYp6LeEH510",
-      "question": "You are developing the chatbot. You create the following components: ✑ A QnA Maker resource ✑ A chatbot by using the Azure Bot Framework SDK You need to integrate the components to meet the chatbot requirements. Which property should you use?",
-      "userAnswer": "C",
+      "questionId": "mzc3MSEArUTAm82cYixA",
+      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Content Safety resource named CS1. You need to call CS1 to identify whether a user request contains hateful language. How should you complete the command? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "D",
       "correctAnswer": "D",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Answer should be D. QnAMakerOptions.ScoreThreshold Technical Requirements says \"AI solution responses must have a confidence score that is equal to or greater than 70 percent\" and \"When the response confidence score is l | Selected Answer: D D 100%",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75514-exam-ai-102-topic-7-question-1-discussion/"
-    },
-    {
-      "questionId": "ySc713rLrB2m1vOp3N1F",
-      "question": "HOTSPOT - You have an Azure subscription that contains an Azure OpenAI resource named AI1. You build a chatbot that will use AI1 to provide generative answers to specific questions. You need to ensure that the responses are more creative and less deterministic. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: The ChatRole that should be used is ChatRole.User. This role is assigned to the messages that come from the user, which the chatbot is responding to. The Temperature setting can be adjusted to increase creativity in the | 1. user 2. temperature",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image111.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image233.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135215-exam-ai-102-topic-7-question-6-discussion/"
-    },
-    {
-      "questionId": "yWTIgbDzuiXoM1HDn2SP",
-      "question": "You have a custom Azure OpenAI model. You have the files shown in the following table. You need to prepare training data for the model by using the OpenAI CLI data preparation tool. Which files can you upload to the tool?",
-      "userAnswer": "A",
-      "correctAnswer": "E",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 7",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A tsv or csv only | Selected Answer: E This tool accepts files in the following data formats, if they contain a prompt and a completion column/key: Comma-separated values (CSV) Tab-separated values (TSV) Microsoft Excel workbook (XLSX) Java",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image186.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149574-exam-ai-102-topic-7-question-18-discussion/"
-    },
-    {
-      "questionId": "z9c19TtPfhX4hjy6DFk3",
-      "question": "You build a chatbot that uses the Azure OpenAI GPT 3.5 model. You need to improve the quality of the responses from the chatbot. The solution must minimize development effort. What are two ways to achieve the goal? Each correct answer presents a complete solution. NOTE: Each correct answer is worth one point.",
-      "userAnswer": "B, C",
-      "correctAnswer": "B, C",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 7",
+      "topic": "Topic 8",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Here are two ways to improve the quality of the responses from the chatbot with minimal development effort: 1. Provide grounding content: This involves feeding the chatbot with relevant domain-specific information and da | Selected Answer: BC Remember that while fine-tuning (A) and custom models (E) can yield high-quality results, they often require significant development effort and computational resources. In contrast, grounding content",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135054-exam-ai-102-topic-7-question-5-discussion/"
+      "explanation": "Discussion highlights: Answer is correct to https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist?tabs=windows%2Crest Blocklist is used in the http body as blocklistnames | I think it's correct, contentsafety and then text:analyze | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image193.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image194.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149966-exam-ai-102-topic-8-question-4-discussion/"
     },
     {
-      "questionId": "2rI4Ikz80dALOWvMdPcR",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Protected material detection feature to run the tests. Does this meet the requirement?",
+      "questionId": "HvqiyXrVHQh9iTubV6sS",
+      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Monitor online activity feature to run the tests. Does this meet the requirement?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
@@ -251,50 +76,31 @@
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B No, using the Protected material detection feature from Content Safety Studio does not meet the requirement. The Protected material detection feature is designed to identify and manage sensitive or pro | Selected Answer: B But if using the true definition of objectionable (unpleasant or offensive) then the choice is No as this would be the text analyze api. Protected material is meant to block copyrighted material from b",
+      "explanation": "Discussion highlights: Selected Answer: B https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview#content-safety-studio-features | Selected Answer: B No is CORRECT. The Monitor online activity feature in Content Safety Studio is used for real-time monitoring and analyzing live content streams but is not designed for running tests on sample questions",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149967-exam-ai-102-topic-8-question-5-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149969-exam-ai-102-topic-8-question-7-discussion/"
     },
     {
-      "questionId": "7U635sBPXBJl2yUHep7f",
-      "question": "HOTSPOT - You build a QnA Maker resource to meet the chatbot requirements. Which RBAC role should you assign to each group? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 8",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Box 1: Cognitive Service User - Ensure that the members of a group named Management-Accountants can approve the FAQs. Approve=publish. Cognitive Service User (read/write/publish): API permissions: All access to Cognitive Services resource except for ability to: 1. Add new members to roles. 2. Create new resources. Box 2: Cognitive Services QnA Maker Editor Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs. QnA Maker Editor: API permissions: 1. Create KB API 2. Update KB API 3. Replace KB API 4. Replace Alterations 5. \"Train API\" [in new service model v5] Box 3: Cognitive Services QnA Maker Read Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs. QnA Maker Read: API Permissions: 1. Download KB API 2. List KBs for user API 3. Get Knowledge base details 4. Download Alterations Generate Answer - Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/role-based-access-control | Discussion highlights: 1. Cognitive Service User 2. QnA Maker Editor 3. QnA Maker Read https://learn.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/role-based-access-control#access-is-provided-by-a-defined-role - Cognitive Serv | management account should use \"Cognitive Service User\" since only this role has permission to publish. Consultant should be able to edit and Agent should be only able to read | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0007700003.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0007800001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/78040-exam-ai-102-topic-8-question-1-discussion/"
-    },
-    {
-      "questionId": "8AyoQ3NA0S2HTGyKMKSy",
-      "question": "You have an Azure subscription that contains an Azure AI Content Safety resource named CS1. You create a test image that contains a circle. You submit the test image to CS1 by using the curl command and the following command-line parameters. What should you expect as the output?",
+      "questionId": "6sKvXQJnlu00FLM7Y1fW",
+      "question": "DRAG DROP - You are planning the product creation project. You need to recommend a process for analyzing videos. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 8",
+      "topic": "Topic 9",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A The severity levels are from 0 - 7, with 0 being the lowest, if any form of offensive material, and 7 being very naughty/offensive. Given this, A is the answer. | Selected Answer: A A is correct.",
+      "explanation": "Scenario: All videos must have transcripts that are associated to the video and included in product descriptions. Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese. Step 1: Upload the video to blob storage Given a video or audio file, the file is first dropped into a Blob Storage. T Step 2: Index the video by using the Video Indexer API. When a video is indexed, Video Indexer produces the JSON content that contains details of the specified video insights. The insights include: transcripts, OCRs, faces, topics, blocks, etc. Step 3: Extract the transcript from the Video Indexer API. Step 4: Translate the transcript by using the Translator API. Reference: https://azure.microsoft.com/en-us/blog/get-video-insights-in-even-more-languages/ https://docs.microsoft.com/en-us/azure/media-services/video-indexer/video-indexer-output-json-v2 | Discussion highlights: 1. Upload video to blob storage. 2. Index video using Azure Video Indexer API. 3. Extract transcript from Azure Video Indexer API. 4. Translate transcript using Translator API. https://learn.microsoft.com/en-us/azure/azu | 1. Upload the video to blob storage. - choose blob over file 2. Index the video by using the Video Indexer API. - choose Video Indexer over Computer Vision API. 3. Extract the transcript from the Video Indexer API. 4. Tr | Answer inferred from top upvoted discussion consensus.",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image192.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0011600001.jpg"
       ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149577-exam-ai-102-topic-8-question-2-discussion/"
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0011700001.jpg"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/78075-exam-ai-102-topic-9-question-1-discussion/"
     },
     {
       "questionId": "BjIQLORvTg8FRrjRQpSL",
@@ -318,8 +124,29 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149970-exam-ai-102-topic-8-question-9-discussion/"
     },
     {
-      "questionId": "HvqiyXrVHQh9iTubV6sS",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Monitor online activity feature to run the tests. Does this meet the requirement?",
+      "questionId": "XuMpFyQ4xtBPPFSYd3Sg",
+      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Content Safety resource named CS1. You need to use the SDK to call CS1 to identify requests that contain harmful content. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 8",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Answer is ContentSafetyClient and AnalyzeTextOptions : https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist?tabs=windows%2Crest | ContentSafetyClient is CORRECT. This class is used to connect to the Azure AI Content Safety resource and perform operations such as analyzing text for harmful or objectionable content. By initializing the client with th | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image197.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image198.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149922-exam-ai-102-topic-8-question-11-discussion/"
+    },
+    {
+      "questionId": "rlGQ6A3tAYPB3kCynqv4",
+      "question": "You have an Azure subscription that contains an Azure OpenAI resource named AI1. You build a chatbot that uses AI1 to provide generative answers to specific questions. You need to ensure that questions intended to circumvent built-in safety features are blocked. Which Azure AI Content Safety feature should you implement?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
@@ -329,10 +156,156 @@
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview#content-safety-studio-features | Selected Answer: B No is CORRECT. The Monitor online activity feature in Content Safety Studio is used for real-time monitoring and analyzing live content streams but is not designed for running tests on sample questions",
+      "explanation": "Discussion highlights: Selected Answer: B Now called Prompt shields for user Prompts https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection#prompt-shields-for-user-prompts | Update to prompt shield",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149969-exam-ai-102-topic-8-question-7-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149971-exam-ai-102-topic-8-question-12-discussion/"
+    },
+    {
+      "questionId": "d2Lfd97PEuV5RTShywGy",
+      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Safety metaprompt feature to run the tests. Does this meet the requirement?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 8",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: B The answer is B. No. Explanation: The Safety metaprompt feature is generally used to enhance safety by adding specific guidance to the model’s responses. However, it is not designed for directly testin | Selected Answer: B The Safety metaprompt feature in Content Safety Studio is used to guide AI models in generating safer responses by providing safety-related instructions within prompts. However, it is not designed for",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150482-exam-ai-102-topic-8-question-8-discussion/"
+    },
+    {
+      "questionId": "v2XDKV89XA7UeNPTlwsa",
+      "question": "You have an Azure subscription that contains an Azure OpenAI resource named AI1. You build a chatbot that uses AI1 to provide generative answers to specific questions. You need to ensure that the chatbot checks all input and output for objectionable content. Which type of resource should you create first?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 8",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: B B is correct, chatGPT verified: The correct answer is: B. Azure AI Content Safety Reasoning: To ensure that your chatbot checks all input and output for objectionable content, you should create an Azur | Selected Answer: B B for sure",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150421-exam-ai-102-topic-8-question-1-discussion/"
+    },
+    {
+      "questionId": "JT8GGz0nm5SX8uXutZWq",
+      "question": "You have an Azure subscription. You are building a social media app that will enable users to share images. You need to ensure that inappropriate content uploaded by the users is blocked. The solution must minimize development effort. What are two tools that you can use? Each correct answer presents a complete solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "C, D",
+      "correctAnswer": "C, D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 8",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: CD The question mentions \"must minimize development effort\". That means you should lean away from anything custom. Answers are C and D. | Selected Answer: CD Correct answers are C and D, verified using CoPilot: The two tools you can use to ensure inappropriate content is blocked while minimizing development effort are: C. Azure AI Content Safety and D. Azu",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149674-exam-ai-102-topic-8-question-3-discussion/"
+    },
+    {
+      "questionId": "8AyoQ3NA0S2HTGyKMKSy",
+      "question": "You have an Azure subscription that contains an Azure AI Content Safety resource named CS1. You create a test image that contains a circle. You submit the test image to CS1 by using the curl command and the following command-line parameters. What should you expect as the output?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 8",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: A The severity levels are from 0 - 7, with 0 being the lowest, if any form of offensive material, and 7 being very naughty/offensive. Given this, A is the answer. | Selected Answer: A A is correct.",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image192.png"
+      ],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149577-exam-ai-102-topic-8-question-2-discussion/"
+    },
+    {
+      "questionId": "WBfcn6Ucs0yiLVWj62M7",
+      "question": "DRAG DROP - You are developing a solution for the Management-Bookkeepers group to meet the document processing requirements. The solution must contain the following components: ✑ A From Recognizer resource ✑ An Azure web app that hosts the Form Recognizer sample labeling tool The Management-Bookkeepers group needs to create a custom table extractor by using the sample labeling tool. Which three actions should the Management-Bookkeepers group perform in sequence? To answer, move the appropriate cmdlets from the list of cmdlets to the answer area and arrange them in the correct order. Select and Place:",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 10",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Step 1: Create a new project and load sample documents Create a new project. Projects store your configurations and settings. Step 2: Label the sample documents When you create or open a project, the main tag editor window opens. Step 3: Train a custom model. Finally, train a custom model. Reference: https://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/label-tool | Discussion highlights: Answer is correct. Create a project Label the sample docs Train the model | A modified version of this was in the exam today. | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0012500005.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0012500006.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77636-exam-ai-102-topic-10-question-1-discussion/"
+    },
+    {
+      "questionId": "tEOMImYaPxAEXDebJATX",
+      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Moderate text content feature to run the tests. Does this meet the requirement?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 8",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: The answer is A. Yes. Explanation: The Moderate text content feature in Content Safety Studio is designed to detect objectionable or harmful content in text. By using this feature, you can effectively test and optimize c | Selected Answer: A Using the Moderate text content feature from Content Safety Studio to run tests on sample questions does meet the requirement. This approach allows you to analyze and optimize the content filter config",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149968-exam-ai-102-topic-8-question-6-discussion/"
+    },
+    {
+      "questionId": "43LzztzOFv7nZMOSR9dB",
+      "question": "HOTSPOT - You need to develop code to upload images for the product creation project. The solution must meet the accessibility requirements. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 9",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Reference: https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/blob/master/documentation-samples/quickstarts/ComputerVision/Program.cs | Discussion highlights: 1. string 2. VisualFeatureTypes.Description 3. results.Description.Captions[0] https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-describing-images#use-the-api The image description featur | Was on exam 27/11/2021",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0011900001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0012000001.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/62731-exam-ai-102-topic-9-question-2-discussion/"
+    },
+    {
+      "questionId": "RnGP79KbQUm00tjg4HTi",
+      "question": "You have an Azure subscription that contains an Azure AI Content Safety resource named CS1. You plan to build an app that will analyze user-generated documents and identify obscure offensive terms. You need to create a dictionary that will contain the offensive terms. The solution must minimize development effort. What should you use?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 8",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: D Blocklist is what you would use: https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist?tabs=windows%2Crest | Selected Answer: D To handle a custom dictionary of offensive terms in Azure AI Content Safety, the blocklist feature is designed for exactly that scenario. You can supply your own list of obscure or custom offensive ter",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150483-exam-ai-102-topic-8-question-10-discussion/"
     }
   ]
 }

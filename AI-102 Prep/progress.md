@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 26 / 32
-- Questions Answered: 337 / 313
-- Accuracy: 87.5%
-- Current Streak: 26 days
-- Next Session: Day 27 (2026-06-01)
+- Sessions Completed: 27 / 32
+- Questions Answered: 351 / 313
+- Accuracy: 88.0%
+- Current Streak: 27 days
+- Next Session: Day 28 (2026-06-02)
 
 ## Milestones
 
@@ -411,3 +411,16 @@
 - Topic 8 (Content Safety/QnA): 4/4 (100%)
 - Notes: _fill in your own words_
 - Next action: Day 27 - Domain 6: Content Understanding
+
+### Day 27 (2026-06-01) - Domain 6: Content Understanding & Content Safety
+
+- Status: Completed
+- Questions Attempted: 14 (graded)
+- Correct: 14 / 14 (100%) — PERFECT SCORE!
+- Time Spent: ~5.3 min quiz
+- Key Mistakes: None — flawless run
+- Topics covered: Content Safety SDK (ContentSafetyClient, AnalyzeTextOptions), REST API (contentsafety/text:analyze), blocklists, jailbreak/prompt shields, Content Safety Studio features (Moderate text content vs Safety metaprompt vs Monitor online activity), image moderation (Content Safety + AI Vision)
+- Carryover: Topic 9 (Computer Vision captioning, Video Indexer pipeline) 2/2 (100%), Topic 10 (Form Recognizer labeling) 1/1 (100%)
+- Topic 8 (Content Safety): 11/11 (100%)
+- Notes: _fill in your own words_
+- Next action: Day 28 - Domain 6: Consolidation
