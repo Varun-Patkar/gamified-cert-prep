@@ -208,9 +208,9 @@
 
 ### Day 28 (2026-06-02) - Domain 6: Consolidation
 
-- [ ] Study: Full knowledge mining architecture recap
-- [ ] Practice: 8 mixed questions on Domain 6
-- [ ] Lab: Summarize key failure modes and mitigations
+- [x] Study: Full knowledge mining architecture recap
+- [x] Practice: 9 graded questions (8/9 = 88.9% adjusted; 5 skipped fixed live — broken hotspot options)
+- [x] Lab: Summarize key failure modes and mitigations
 - Estimated time: 0.5 hrs
 
 ### Day 29 (2026-06-03) - Buffer / Catch-up

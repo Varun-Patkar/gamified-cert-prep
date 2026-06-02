@@ -8712,10 +8712,10 @@
 					"id": "6sKvXQJnlu00FLM7Y1fW",
 					"question": "DRAG DROP - You are planning the product creation project. You need to recommend a process for analyzing videos. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
 					"options": [
-						"B. Box 1: Index the video by using the Video Indexer API. - choose Video Indexer over Computer Vision API; Box 2: Extract the transcript from the Video Indexer API; Box 3: Tr; Box 4: Upload the video to blob storage. - choose blob over file",
-						"C. Box 1: Tr; Box 2: Extract the transcript from the Video Indexer API; Box 3: Index the video by using the Video Indexer API. - choose Video Indexer over Computer Vision API; Box 4: Upload the video to blob storage. - choose blob over file",
-						"D. Box 1: Index the video by using the Video Indexer API. - choose Video Indexer over Computer Vision API; Box 2: Upload the video to blob storage. - choose blob over file; Box 3: Extract the transcript from the Video Indexer API; Box 4: Tr",
-						"A. Box 1: Upload the video to blob storage. - choose blob over file; Box 2: Index the video by using the Video Indexer API. - choose Video Indexer over Computer Vision API; Box 3: Extract the transcript from the Video Indexer API; Box 4: Tr"
+						"A. Step 1: Upload the video to blob storage; Step 2: Index the video by using the Video Indexer API; Step 3: Extract the transcript from the Video Indexer API; Step 4: Translate the transcript by using the Translator API",
+						"B. Step 1: Index the video by using the Video Indexer API; Step 2: Extract the transcript from the Video Indexer API; Step 3: Translate the transcript by using the Translator API; Step 4: Upload the video to blob storage",
+						"C. Step 1: Translate the transcript by using the Translator API; Step 2: Extract the transcript from the Video Indexer API; Step 3: Index the video by using the Video Indexer API; Step 4: Upload the video to blob storage",
+						"D. Step 1: Index the video by using the Video Indexer API; Step 2: Upload the video to blob storage; Step 3: Extract the transcript from the Video Indexer API; Step 4: Translate the transcript by using the Translator API"
 					],
 					"explanation": "Scenario: All videos must have transcripts that are associated to the video and included in product descriptions. Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese. Step 1: Upload the video to blob storage Given a video or audio file, the file is first dropped into a Blob Storage. T Step 2: Index the video by using the Video Indexer API. When a video is indexed, Video Indexer produces the JSON content that contains details of the specified video insights. The insights include: transcripts, OCRs, faces, topics, blocks, etc. Step 3: Extract the transcript from the Video Indexer API. Step 4: Translate the transcript by using the Translator API. Reference: https://azure.microsoft.com/en-us/blog/get-video-insights-in-even-more-languages/ https://docs.microsoft.com/en-us/azure/media-services/video-indexer/video-indexer-output-json-v2 | Discussion highlights: 1. Upload video to blob storage. 2. Index video using Azure Video Indexer API. 3. Extract transcript from Azure Video Indexer API. 4. Translate transcript using Translator API. https://learn.microsoft.com/en-us/azure/azu | 1. Upload the video to blob storage. - choose blob over file 2. Index the video by using the Video Indexer API. - choose Video Indexer over Computer Vision API. 3. Extract the transcript from the Video Indexer API. 4. Tr | Answer inferred from top upvoted discussion consensus.",
 					"topic": "Topic 9",
@@ -8816,12 +8816,12 @@
 					"id": "SR2xMgYCGQKsm6JNkKG3",
 					"question": "HOTSPOT - You are planning the product creation project. You need to build the REST endpoint to create the multilingual product descriptions. How should you complete the URI? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
 					"options": [
-						"C. Box 1: api.cognitive.microsofttranslator.com Translator 3.0: Translate. Send a POST request to; Box 2: /translate  (v2)",
-						"D. Box 1: api.cognitive.microsofttranslator.com Trans...; Box 2: /translate ",
-						"B. Box 1: /translate ; Box 2: api.cognitive.microsofttranslator.com Translator 3.0: Translate. Send a POST request to",
-						"A. Box 1: api.cognitive.microsofttranslator.com Translator 3.0: Translate. Send a POST request to; Box 2: /translate "
+						"A. Box 1: api-nam.cognitive.microsofttranslator.com; Box 2: /translate",
+						"B. Box 1: api.cognitive.microsofttranslator.com; Box 2: /translate",
+						"C. Box 1: westus.tts.speech.microsoft.com; Box 2: /text-to-speech",
+						"D. Box 1: wwics.cognitiveservices.azure.com/translator; Box 2: /languages"
 					],
-					"explanation": "Box 1: api.cognitive.microsofttranslator.com Translator 3.0: Translate. Send a POST request to: https://api.cognitive.microsofttranslator.com/translate?api-version=3.0 Box 2: /translate - Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate | Discussion highlights: first drop-down should instead be: api-nam.cognitive.microsofttranslator.com this is because the case study specifically states under Business Requirements \"Data storage and processing must occur in datacenters located i | 1. api-nam.cognitive.microsofttranslator.com 2. /translate https://learn.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference#base-urls Requests to Translator are, in most cases, handled by th",
+					"explanation": "Box 1: api-nam.cognitive.microsofttranslator.com — the Contoso case study mandates data residency in North America datacenters, so the regional NAM base URL must be used (global api.cognitive.microsofttranslator.com may route outside NAM). Box 2: /translate — the Translator 3.0 Translate endpoint path. Full URI: https://api-nam.cognitive.microsofttranslator.com/translate?api-version=3.0&to=es&to=pt. Reference: https://learn.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference#base-urls. Discussion consensus: api-nam + /translate (data sovereignty requirement).",
 					"topic": "Topic 11",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
@@ -8834,7 +8834,7 @@
 					],
 					"answerStatus": "llm_offline_completion",
 					"type": "mc",
-					"correctAnswer": "C",
+					"correctAnswer": "A",
 					"ungraded": false,
 					"answerInferredFrom": "llm_offline_subagent",
 					"answerConfidence": "medium",
@@ -8974,12 +8974,12 @@
 					"id": "y9Zi9GjzdrqTnPW8taVo",
 					"question": "HOTSPOT - You are developing the knowledgebase by using Azure Cognitive Search. You need to build a skill that will be used by indexers. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
 					"options": [
-						"B. Box 1: “includeTypelessEntities”: true; Box 2: {“name “categories” }; Box 3: “categories”: [ “Email”, “Persons”, “Organizations”]",
-						"C. Box 1: {“name “categories” }; Box 2: “includeTypelessEntities”: true; Box 3: “categories”: [ “Email”, “Persons”, “Organizations”]",
-						"A. Box 1: “categories”: [ “Email”, “Persons”, “Organizations”]; Box 2: “includeTypelessEntities”: true; Box 3: {“name “categories” }",
-						"D. Box 1: “includeTypelessEntities”: true; Box 2: “categories”: [ “Email”, “Persons”, “Organizations”]; Box 3: {“name “categories” }"
+						"A. Box 1: \"categories\": [\"Locations\", \"Persons\", \"Organizations\"]; Box 2: {\"name\": \"entities\"}",
+						"B. Box 1: \"categories\": [\"Email\", \"Persons\", \"Organizations\"]; Box 2: {\"name\": \"categories\"}",
+						"C. Box 1: \"categories\": []; Box 2: {\"name\": \"namedEntities\"}",
+						"D. Box 1: \"categories\": [\"Locations\", \"Persons\", \"Organizations\"]; Box 2: {\"name\": \"categories\"}"
 					],
-					"explanation": "Box 1: \"categories\": [\"Locations\", \"Persons\", \"Organizations\"], Locations, Persons, Organizations are in the outputs. Scenario: Contoso plans to develop a searchable knowledgebase of all the intellectual property Note: The categories parameter is an array of categories that should be extracted. Possible category types: \"Person\", \"Location\", \"Organization\", \"Quantity\", \"Datetime\", \"URL\", \"Email\". If no category is provided, all types are returned. Box 2: {\"name\": \" entities\"} The include wikis, so should include entities in the outputs. Note: entities is an array of complex types that contains rich information about the entities extracted from text, with the following fields name (the actual entity name. This represents a \"normalized\" form) wikipediaId wikipediaLanguage wikipediaUrl (a link to Wikipedia page for the entity) etc. Reference: https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-entity-recognition | Discussion highlights: Answer is correct however... the Entity Recognition skill is now discontinued replaced by Microsoft.Skills.Text.V3.EntityRecognitionSkill. Also categories will only allow \"Person\" as valid category type - not \"Persons\". | I also got this on July 3 2023 exam, but it's changed to Skills.Text.V3. | Answer inferred from top upvoted discussion consensus.",
+					"explanation": "Box 1: \"categories\": [\"Locations\", \"Persons\", \"Organizations\"] — the outputs map persons/locations/organizations, so the categories array must include all three. Email is not needed for the scenario. Box 2: {\"name\": \"entities\"} — the EntityRecognitionSkill outputs are named entities, languageCode, and namedEntities, but for the wiki knowledge mining use case, the rich entities output (which includes Wikipedia info) is appended via outputs. Reference: https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-entity-recognition. Note: Entity Recognition v1 is deprecated; use Microsoft.Skills.Text.V3.EntityRecognitionSkill (uses singular 'Person', 'Location', 'Organization').",
 					"topic": "Topic 14",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
@@ -9015,10 +9015,10 @@
 					"id": "MPgzeUdDCGnnoCGtkeGe",
 					"question": "HOTSPOT - You are developing the shopping on-the-go project. You are configuring access to the QnA Maker (classic) resources. Which role should you assign to AllUsers and LeadershipTeam? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
 					"options": [
-						"D. Box 1: QnA Maker Editor - Scenario: Provide all...; Box 2: Contributor - Scenario: Only senior managers must be able to publish updates. Contributor permission: All except ability to add new members to roles",
-						"A. Box 1: QnA Maker Editor - Scenario: Provide all employees with the ability to edit Q&As; Box 2: Contributor - Scenario: Only senior managers must be able to publish updates. Contributor permission: All except ability to add new members to roles",
-						"C. Box 1: QnA Maker Editor - Scenario: Provide all employees with the ability to edit Q&As; Box 2: Contributor - Scenario: Only senior managers must be able to publish updat...",
-						"B. Box 1: Contributor - Scenario: Only senior managers must be able to publish updates. Contributor permission: All except ability to add new members to roles; Box 2: QnA Maker Editor - Scenario: Provide all employees with the ability to edit Q&As"
+						"A. AllUsers: QnA Maker Editor; LeadershipTeam: Contributor",
+						"B. AllUsers: QnA Maker Read; LeadershipTeam: Owner",
+						"C. AllUsers: QnA Maker Editor; LeadershipTeam: Cognitive Service User",
+						"D. AllUsers: Contributor; LeadershipTeam: QnA Maker Editor"
 					],
 					"explanation": "Box 1: QnA Maker Editor - Scenario: Provide all employees with the ability to edit Q&As. The QnA Maker Editor (read/write) has the following permissions: ✑ Create KB API ✑ Update KB API ✑ Replace KB API ✑ Replace Alterations ✑ \"Train API\" [in new service model v5] Box 2: Contributor - Scenario: Only senior managers must be able to publish updates. Contributor permission: All except ability to add new members to roles Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/reference-role-based-access-control | Discussion highlights: How about Cognitive Service User? the link explicitly says publish is given to this role. https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/role-based-access-control#access-is-provided-by-a-defi | The Owner role would give the leadership team the ability to publish changes, but also the additional capability to give others access to QnA maker, which they do not require. security best practices (in case of a compro",
 					"topic": "Topic 15",
@@ -9058,12 +9058,12 @@
 					"id": "Z0bXFl0VstaAKFmiPykK",
 					"question": "HOTSPOT - You are developing the shopping on-the-go project. You need to build the Adaptive Card for the chatbot. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
 					"options": [
-						"B. Box 1: \"$when\": \"${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock; Box 2: image.altText.en; Box 3: name.en",
-						"C. Box 1: image.altText.en; Box 2: \"$when\": \"${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock; Box 3: name.en",
-						"D. Box 1: \"$when\": \"${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock; Box 2: name.en; Box 3: image.altText.en",
-						"A. Box 1: name.en; Box 2: \"$when\": \"${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock; Box 3: image.altText.en"
+						"A. Box 1: name[language]; Box 2: \"$when\": \"${stockLevel != 'OK'}\"; Box 3: image.altText[language]",
+						"B. Box 1: name.en; Box 2: \"$when\": \"${stockLevel == 'OK'}\"; Box 3: image.altText.en",
+						"C. Box 1: name; Box 2: \"$when\": \"${stockLevel.OK}\"; Box 3: image.altText.language",
+						"D. Box 1: if(language == 'en', 'en', name); Box 2: \"$when\": \"${stockLevel != 'OK'}\"; Box 3: image.altText[\"language\"]"
 					],
-					"explanation": "Box 1: name.en - Box 2: \"$when\": \"${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock. Box 3:image.altText.en | Discussion highlights: 1. name[language] 2. \"$when\": \"${stockLevel} != 'OK'\" 3. image.altText[language] | File JSON { \"sku\": \"b1\", \"name\": { \"en\": \"Bicycle\", \"es\": \"Bicicleta\", \"pt\": \"Bicicleta\" }, \"stocklevel\": \"Out of Stock\", \"description\": { \"en\": \"Bicycle\", \"es\": \"Bicicleta\", \"pt\": \"Bicicleta\" }, \"image\": { \"uri\": \"https",
+					"explanation": "Box 1: name[language] — chatbot must support en/es/pt, so use language variable interpolation, not hardcoded .en. Box 2: \"$when\": \"${stockLevel != 'OK'}\" — show warning when stock is NOT OK (low or out of stock). Box 3: image.altText[language] — multilingual alt text, same reasoning as Box 1. Discussion consensus: 1. name[language] 2. != 'OK' 3. image.altText[language]. Source JSON has name/description objects keyed by en/es/pt, confirming language-variable indexing pattern.",
 					"topic": "Topic 15",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
@@ -9101,12 +9101,12 @@
 					"id": "cmfzGsVPqHQibIyHSCyd",
 					"question": "HOTSPOT - You are developing the shopping on-the-go project. You need to build the Adaptive Card for the chatbot. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
 					"options": [
-						"D. Box 1: \"$when:${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock; Box 2: name [language] Chatbot must support interactions in English, Spanish, and Portuguese; Box 3: image.altText[language]",
-						"C. Box 1: image.altText[language]; Box 2: \"$when:${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock; Box 3: name [language] Chatbot must support interactions in English, Spanish, and Portuguese",
-						"A. Box 1: name [language] Chatbot must support interactions in English, Spanish, and Portuguese; Box 2: \"$when:${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock; Box 3: image.altText[language]",
-						"B. Box 1: \"$when:${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock; Box 2: image.altText[language]; Box 3: name [language] Chatbot must support interactions in English, Spanish, and Portuguese"
+						"A. Box 1: name[language]; Box 2: \"$when\": \"${stockLevel != 'OK'}\"; Box 3: image.altText[language]",
+						"B. Box 1: name.en; Box 2: \"$when\": \"${stockLevel == 'OK'}\"; Box 3: image.altText.en",
+						"C. Box 1: name; Box 2: \"$when\": \"${stockLevel.OK}\"; Box 3: image.altText.language",
+						"D. Box 1: if(language == 'en', 'en', name); Box 2: \"$when\": \"${stockLevel != 'OK'}\"; Box 3: image.altText[\"language\"]"
 					],
-					"explanation": "Box 1: name [language] Chatbot must support interactions in English, Spanish, and Portuguese. Box 2: \"$when:${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock. Box 3: image.altText[language] | Discussion highlights: on my exam. (2023-01-16 passed) My Answer: 1. name[language] 2. != OK 3. image.altText.[language] | answer seems to be correct",
+					"explanation": "Box 1: name[language] — chatbot must support en/es/pt, so use language variable interpolation, not hardcoded .en. Box 2: \"$when\": \"${stockLevel != 'OK'}\" — show warning when stock is NOT OK (low or out of stock). Box 3: image.altText[language] — multilingual alt text, same reasoning as Box 1. Discussion consensus: 1. name[language] 2. != 'OK' 3. image.altText[language].",
 					"topic": "Topic 15",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",

@@ -1,29 +1,59 @@
 {
-  "timestamp": "2026-06-01T10:26:05.164359",
+  "timestamp": "2026-06-02T12:44:02.591373",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
     "totalQuestions": 14,
-    "gradedQuestions": 14,
-    "correct": 14,
-    "wrong": 0,
-    "skipped": 0,
+    "gradedQuestions": 9,
+    "correct": 8,
+    "wrong": 1,
+    "skipped": 5,
     "ungraded": 0,
-    "accuracy": 100.0,
-    "timeSeconds": 319.1
+    "accuracy": 88.9,
+    "timeSeconds": 506.2
   },
   "domainBreakdown": {
     "Implement knowledge mining and information extraction solutions": {
       "total": 14,
-      "correct": 14,
-      "wrong": 0,
-      "skipped": 0
+      "correct": 8,
+      "wrong": 1,
+      "skipped": 5
     }
   },
   "topicBreakdown": {
-    "Topic 8": {
-      "total": 11,
-      "correct": 11,
+    "Topic 15": {
+      "total": 3,
+      "correct": 0,
+      "wrong": 0,
+      "skipped": 3
+    },
+    "Topic 13": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Topic 14": {
+      "total": 4,
+      "correct": 2,
+      "wrong": 1,
+      "skipped": 1
+    },
+    "Topic 11": {
+      "total": 1,
+      "correct": 0,
+      "wrong": 0,
+      "skipped": 1
+    },
+    "Topic 10": {
+      "total": 2,
+      "correct": 2,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Topic 12": {
+      "total": 1,
+      "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
@@ -32,204 +62,160 @@
       "correct": 2,
       "wrong": 0,
       "skipped": 0
-    },
-    "Topic 10": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
     }
   },
-  "wrongQuestions": [],
-  "skippedQuestions": [],
+  "wrongQuestions": [
+    {
+      "questionId": "P4nMr5NK2YJrJJeM7imu",
+      "question": "You are developing the document processing workflow. You need to identify which API endpoints to use to extract text from the financial documents. The solution must meet the document processing requirements. Which two API endpoints should you identify? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B, E",
+      "correctAnswer": "B, C",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76535-exam-ai-102-topic-14-question-1-discussion/",
+      "explanation": "Discussion highlights: guys so what is the correct answer | Selected Answer: B Contoso have a distinct standard for each office. Is the customized form recognizer more appropriate?",
+      "topic": "Topic 14",
+      "domainName": "Implement knowledge mining and information extraction solutions"
+    }
+  ],
+  "skippedQuestions": [
+    "MPgzeUdDCGnnoCGtkeGe",
+    "SR2xMgYCGQKsm6JNkKG3",
+    "Z0bXFl0VstaAKFmiPykK",
+    "cmfzGsVPqHQibIyHSCyd",
+    "y9Zi9GjzdrqTnPW8taVo"
+  ],
   "allResults": [
     {
-      "questionId": "mzc3MSEArUTAm82cYixA",
-      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Content Safety resource named CS1. You need to call CS1 to identify whether a user request contains hateful language. How should you complete the command? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "D",
-      "correctAnswer": "D",
-      "correct": true,
+      "questionId": "MPgzeUdDCGnnoCGtkeGe",
+      "question": "HOTSPOT - You are developing the shopping on-the-go project. You are configuring access to the QnA Maker (classic) resources. Which role should you assign to AllUsers and LeadershipTeam? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": null,
+      "correctAnswer": "A",
+      "correct": false,
       "gradable": true,
-      "skipped": false,
-      "topic": "Topic 8",
+      "skipped": true,
+      "topic": "Topic 15",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Answer is correct to https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist?tabs=windows%2Crest Blocklist is used in the http body as blocklistnames | I think it's correct, contentsafety and then text:analyze | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "Box 1: QnA Maker Editor - Scenario: Provide all employees with the ability to edit Q&As. The QnA Maker Editor (read/write) has the following permissions: ✑ Create KB API ✑ Update KB API ✑ Replace KB API ✑ Replace Alterations ✑ \"Train API\" [in new service model v5] Box 2: Contributor - Scenario: Only senior managers must be able to publish updates. Contributor permission: All except ability to add new members to roles Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/reference-role-based-access-control | Discussion highlights: How about Cognitive Service User? the link explicitly says publish is given to this role. https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/role-based-access-control#access-is-provided-by-a-defi | The Owner role would give the leadership team the ability to publish changes, but also the additional capability to give others access to QnA maker, which they do not require. security best practices (in case of a compro",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image193.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0027300001.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image194.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0027400001.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149966-exam-ai-102-topic-8-question-4-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/57607-exam-ai-102-topic-15-question-2-discussion/"
     },
     {
-      "questionId": "HvqiyXrVHQh9iTubV6sS",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Monitor online activity feature to run the tests. Does this meet the requirement?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
+      "questionId": "9f1dU6JmdvlbRkAZfqb6",
+      "question": "You are developing the smart e-commerce project. You need to implement autocompletion as part of the Cognitive Search solution. Which three actions should you perform? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A, B, F",
+      "correctAnswer": "A, B, F",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 8",
+      "topic": "Topic 13",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview#content-safety-studio-features | Selected Answer: B No is CORRECT. The Monitor online activity feature in Content Safety Studio is used for real-time monitoring and analyzing live content streams but is not designed for running tests on sample questions",
+      "explanation": "Discussion highlights: Selected Answer: ABF Let us eliminate the wrong answers: C. Make API queries to the search endpoint and include the product name fields in the searchFields query parameter. - as we need autocomplete endpoint, we rule thi | A , B , F B. Add a suggester that has the three product name fields as source fields F. Set the analyzer property for the three product name variants. A. Make API queries to the autocomplete endpoint and include suggeste",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149969-exam-ai-102-topic-8-question-7-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/66853-exam-ai-102-topic-13-question-1-discussion/"
     },
     {
-      "questionId": "6sKvXQJnlu00FLM7Y1fW",
-      "question": "DRAG DROP - You are planning the product creation project. You need to recommend a process for analyzing videos. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
+      "questionId": "MjSWjHmpS3B0PzzepA7t",
+      "question": "You are developing the knowledgebase by using Azure Cognitive Search. You need to meet the knowledgebase requirements for searching equivalent terms. What should you include in the solution?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 9",
+      "topic": "Topic 14",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Scenario: All videos must have transcripts that are associated to the video and included in product descriptions. Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese. Step 1: Upload the video to blob storage Given a video or audio file, the file is first dropped into a Blob Storage. T Step 2: Index the video by using the Video Indexer API. When a video is indexed, Video Indexer produces the JSON content that contains details of the specified video insights. The insights include: transcripts, OCRs, faces, topics, blocks, etc. Step 3: Extract the transcript from the Video Indexer API. Step 4: Translate the transcript by using the Translator API. Reference: https://azure.microsoft.com/en-us/blog/get-video-insights-in-even-more-languages/ https://docs.microsoft.com/en-us/azure/media-services/video-indexer/video-indexer-output-json-v2 | Discussion highlights: 1. Upload video to blob storage. 2. Index video using Azure Video Indexer API. 3. Extract transcript from Azure Video Indexer API. 4. Translate transcript using Translator API. https://learn.microsoft.com/en-us/azure/azu | 1. Upload the video to blob storage. - choose blob over file 2. Index the video by using the Video Indexer API. - choose Video Indexer over Computer Vision API. 3. Extract the transcript from the Video Indexer API. 4. Tr | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0011600001.jpg"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0011700001.jpg"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/78075-exam-ai-102-topic-9-question-1-discussion/"
+      "explanation": "Discussion highlights: Selected Answer: A I wrote this exam on 25 Dec 2024 No simulation and this was one for the question I got in Case study. Score 805 (all I did was study this and revise from number 1 to 333 for 6hours) memorize the case s | This question was in the test I took in August 2024",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77728-exam-ai-102-topic-14-question-4-discussion/"
     },
     {
-      "questionId": "BjIQLORvTg8FRrjRQpSL",
-      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Content Safety resource. You are building a social media app that will enable users to share images. You need to configure the app to moderate inappropriate content uploaded by the users. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "C",
+      "questionId": "SR2xMgYCGQKsm6JNkKG3",
+      "question": "HOTSPOT - You are planning the product creation project. You need to build the REST endpoint to create the multilingual product descriptions. How should you complete the URI? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": null,
       "correctAnswer": "C",
-      "correct": true,
+      "correct": false,
       "gradable": true,
-      "skipped": false,
-      "topic": "Topic 8",
+      "skipped": true,
+      "topic": "Topic 11",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Answer is ContentSafetyClient and client.AnalyzeImage(request); | ContentSafetyClient is CORRECT. This class is part of the Azure AI Content Safety SDK and is used to interact with the content moderation service to analyze and moderate content such as images or text for inappropriate m | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "Box 1: api.cognitive.microsofttranslator.com Translator 3.0: Translate. Send a POST request to: https://api.cognitive.microsofttranslator.com/translate?api-version=3.0 Box 2: /translate - Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate | Discussion highlights: first drop-down should instead be: api-nam.cognitive.microsofttranslator.com this is because the case study specifically states under Business Requirements \"Data storage and processing must occur in datacenters located i | 1. api-nam.cognitive.microsofttranslator.com 2. /translate https://learn.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference#base-urls Requests to Translator are, in most cases, handled by th",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image195.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0018000001.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image196.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0018000002.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149970-exam-ai-102-topic-8-question-9-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60817-exam-ai-102-topic-11-question-1-discussion/"
     },
     {
-      "questionId": "XuMpFyQ4xtBPPFSYd3Sg",
-      "question": "HOTSPOT - You have an Azure subscription that contains an Azure AI Content Safety resource named CS1. You need to use the SDK to call CS1 to identify requests that contain harmful content. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "questionId": "P4nMr5NK2YJrJJeM7imu",
+      "question": "You are developing the document processing workflow. You need to identify which API endpoints to use to extract text from the financial documents. The solution must meet the document processing requirements. Which two API endpoints should you identify? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "B, E",
+      "correctAnswer": "B, C",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 14",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: guys so what is the correct answer | Selected Answer: B Contoso have a distinct standard for each office. Is the customized form recognizer more appropriate?",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76535-exam-ai-102-topic-14-question-1-discussion/"
+    },
+    {
+      "questionId": "l2zlMTc56FgsfnTbf05H",
+      "question": "You are developing the knowledgebase. You use Azure Video Analyzer for Media (previously Video indexer) to obtain transcripts of webinars. You need to ensure that the solution meets the knowledgebase requirements. What should you do?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 8",
+      "topic": "Topic 10",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Answer is ContentSafetyClient and AnalyzeTextOptions : https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist?tabs=windows%2Crest | ContentSafetyClient is CORRECT. This class is used to connect to the Azure AI Content Safety resource and perform operations such as analyzing text for harmful or objectionable content. By initializing the client with th | Answer inferred from top upvoted discussion consensus.",
+      "explanation": "Discussion highlights: Selected Answer: A Keyword \"jargon\", so choose \"A. Create a custom language model\" . | Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/azure-video-indexer/customize-language-model-overview Azure Video Indexer supports automatic speech recognition through integration with the Mic",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76783-exam-ai-102-topic-10-question-2-discussion/"
+    },
+    {
+      "questionId": "Z0bXFl0VstaAKFmiPykK",
+      "question": "HOTSPOT - You are developing the shopping on-the-go project. You need to build the Adaptive Card for the chatbot. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": null,
+      "correctAnswer": "A",
+      "correct": false,
+      "gradable": true,
+      "skipped": true,
+      "topic": "Topic 15",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Box 1: name.en - Box 2: \"$when\": \"${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock. Box 3:image.altText.en | Discussion highlights: 1. name[language] 2. \"$when\": \"${stockLevel} != 'OK'\" 3. image.altText[language] | File JSON { \"sku\": \"b1\", \"name\": { \"en\": \"Bicycle\", \"es\": \"Bicicleta\", \"pt\": \"Bicicleta\" }, \"stocklevel\": \"Out of Stock\", \"description\": { \"en\": \"Bicycle\", \"es\": \"Bicicleta\", \"pt\": \"Bicicleta\" }, \"image\": { \"uri\": \"https",
       "questionImages": [
-        "https://img.examtopics.com/ai-102/image197.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0027600001.png"
       ],
       "answerImages": [
-        "https://img.examtopics.com/ai-102/image198.png"
+        "https://www.examtopics.com/assets/media/exam-media/04271/0027700001.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149922-exam-ai-102-topic-8-question-11-discussion/"
-    },
-    {
-      "questionId": "rlGQ6A3tAYPB3kCynqv4",
-      "question": "You have an Azure subscription that contains an Azure OpenAI resource named AI1. You build a chatbot that uses AI1 to provide generative answers to specific questions. You need to ensure that questions intended to circumvent built-in safety features are blocked. Which Azure AI Content Safety feature should you implement?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 8",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B Now called Prompt shields for user Prompts https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection#prompt-shields-for-user-prompts | Update to prompt shield",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149971-exam-ai-102-topic-8-question-12-discussion/"
-    },
-    {
-      "questionId": "d2Lfd97PEuV5RTShywGy",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Safety metaprompt feature to run the tests. Does this meet the requirement?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 8",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B The answer is B. No. Explanation: The Safety metaprompt feature is generally used to enhance safety by adding specific guidance to the model’s responses. However, it is not designed for directly testin | Selected Answer: B The Safety metaprompt feature in Content Safety Studio is used to guide AI models in generating safer responses by providing safety-related instructions within prompts. However, it is not designed for",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150482-exam-ai-102-topic-8-question-8-discussion/"
-    },
-    {
-      "questionId": "v2XDKV89XA7UeNPTlwsa",
-      "question": "You have an Azure subscription that contains an Azure OpenAI resource named AI1. You build a chatbot that uses AI1 to provide generative answers to specific questions. You need to ensure that the chatbot checks all input and output for objectionable content. Which type of resource should you create first?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 8",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B B is correct, chatGPT verified: The correct answer is: B. Azure AI Content Safety Reasoning: To ensure that your chatbot checks all input and output for objectionable content, you should create an Azur | Selected Answer: B B for sure",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150421-exam-ai-102-topic-8-question-1-discussion/"
-    },
-    {
-      "questionId": "JT8GGz0nm5SX8uXutZWq",
-      "question": "You have an Azure subscription. You are building a social media app that will enable users to share images. You need to ensure that inappropriate content uploaded by the users is blocked. The solution must minimize development effort. What are two tools that you can use? Each correct answer presents a complete solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "C, D",
-      "correctAnswer": "C, D",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 8",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: CD The question mentions \"must minimize development effort\". That means you should lean away from anything custom. Answers are C and D. | Selected Answer: CD Correct answers are C and D, verified using CoPilot: The two tools you can use to ensure inappropriate content is blocked while minimizing development effort are: C. Azure AI Content Safety and D. Azu",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149674-exam-ai-102-topic-8-question-3-discussion/"
-    },
-    {
-      "questionId": "8AyoQ3NA0S2HTGyKMKSy",
-      "question": "You have an Azure subscription that contains an Azure AI Content Safety resource named CS1. You create a test image that contains a circle. You submit the test image to CS1 by using the curl command and the following command-line parameters. What should you expect as the output?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 8",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A The severity levels are from 0 - 7, with 0 being the lowest, if any form of offensive material, and 7 being very naughty/offensive. Given this, A is the answer. | Selected Answer: A A is correct.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image192.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149577-exam-ai-102-topic-8-question-2-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77001-exam-ai-102-topic-15-question-3-discussion/"
     },
     {
       "questionId": "WBfcn6Ucs0yiLVWj62M7",
@@ -253,21 +239,82 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77636-exam-ai-102-topic-10-question-1-discussion/"
     },
     {
-      "questionId": "tEOMImYaPxAEXDebJATX",
-      "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1. You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content. You need to optimize the content filter configurations by running tests on sample questions. Solution: From Content Safety Studio, you use the Moderate text content feature to run the tests. Does this meet the requirement?",
+      "questionId": "cmfzGsVPqHQibIyHSCyd",
+      "question": "HOTSPOT - You are developing the shopping on-the-go project. You need to build the Adaptive Card for the chatbot. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": null,
+      "correctAnswer": "A",
+      "correct": false,
+      "gradable": true,
+      "skipped": true,
+      "topic": "Topic 15",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Box 1: name [language] Chatbot must support interactions in English, Spanish, and Portuguese. Box 2: \"$when:${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock. Box 3: image.altText[language] | Discussion highlights: on my exam. (2023-01-16 passed) My Answer: 1. name[language] 2. != OK 3. image.altText.[language] | answer seems to be correct",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0027000001.jpg"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0027100001.jpg"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/89941-exam-ai-102-topic-15-question-1-discussion/"
+    },
+    {
+      "questionId": "uuJ4GqKtlV57PuyfAbtb",
+      "question": "You need to develop an extract solution for the receipt images. The solution must meet the document processing requirements and the technical requirements. You upload the receipt images to the Form Recognizer API for analysis, and the API returns the following JSON. Which expression should you use to trigger a manual review of the extracted information by a member of the Consultant-Bookkeeper group?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 12",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: B Answer is B as I just did the exam and got 100% for the section :) | Gotten this in Jul 2023 exam.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0018600001.png"
+      ],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76784-exam-ai-102-topic-12-question-1-discussion/"
+    },
+    {
+      "questionId": "6sKvXQJnlu00FLM7Y1fW",
+      "question": "DRAG DROP - You are planning the product creation project. You need to recommend a process for analyzing videos. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 8",
+      "topic": "Topic 9",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: The answer is A. Yes. Explanation: The Moderate text content feature in Content Safety Studio is designed to detect objectionable or harmful content in text. By using this feature, you can effectively test and optimize c | Selected Answer: A Using the Moderate text content feature from Content Safety Studio to run tests on sample questions does meet the requirement. This approach allows you to analyze and optimize the content filter config",
+      "explanation": "Scenario: All videos must have transcripts that are associated to the video and included in product descriptions. Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese. Step 1: Upload the video to blob storage Given a video or audio file, the file is first dropped into a Blob Storage. T Step 2: Index the video by using the Video Indexer API. When a video is indexed, Video Indexer produces the JSON content that contains details of the specified video insights. The insights include: transcripts, OCRs, faces, topics, blocks, etc. Step 3: Extract the transcript from the Video Indexer API. Step 4: Translate the transcript by using the Translator API. Reference: https://azure.microsoft.com/en-us/blog/get-video-insights-in-even-more-languages/ https://docs.microsoft.com/en-us/azure/media-services/video-indexer/video-indexer-output-json-v2 | Discussion highlights: 1. Upload video to blob storage. 2. Index video using Azure Video Indexer API. 3. Extract transcript from Azure Video Indexer API. 4. Translate transcript using Translator API. https://learn.microsoft.com/en-us/azure/azu | 1. Upload the video to blob storage. - choose blob over file 2. Index the video by using the Video Indexer API. - choose Video Indexer over Computer Vision API. 3. Extract the transcript from the Video Indexer API. 4. Tr | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0011600001.jpg"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0011700001.jpg"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/78075-exam-ai-102-topic-9-question-1-discussion/"
+    },
+    {
+      "questionId": "TIRfo1NkZiPklmEauSnC",
+      "question": "You are developing the knowledgebase by using Azure Cognitive Search. You need to process wiki content to meet the technical requirements. What should you include in the solution?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 14",
+      "domainName": "Implement knowledge mining and information extraction solutions",
+      "domainId": "6",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: D The correct answer is D. Use an indexer connected to Azure Cosmos DB that includes language detection and text translation skills. This solution meets the requirement for handling multiple languages an | Selected Answer: D Document extraction skill only works for files. It's less likely to work with CosmoDB.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149968-exam-ai-102-topic-8-question-6-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75979-exam-ai-102-topic-14-question-3-discussion/"
     },
     {
       "questionId": "43LzztzOFv7nZMOSR9dB",
@@ -291,21 +338,25 @@
       "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/62731-exam-ai-102-topic-9-question-2-discussion/"
     },
     {
-      "questionId": "RnGP79KbQUm00tjg4HTi",
-      "question": "You have an Azure subscription that contains an Azure AI Content Safety resource named CS1. You plan to build an app that will analyze user-generated documents and identify obscure offensive terms. You need to create a dictionary that will contain the offensive terms. The solution must minimize development effort. What should you use?",
-      "userAnswer": "D",
-      "correctAnswer": "D",
-      "correct": true,
+      "questionId": "y9Zi9GjzdrqTnPW8taVo",
+      "question": "HOTSPOT - You are developing the knowledgebase by using Azure Cognitive Search. You need to build a skill that will be used by indexers. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": null,
+      "correctAnswer": "A",
+      "correct": false,
       "gradable": true,
-      "skipped": false,
-      "topic": "Topic 8",
+      "skipped": true,
+      "topic": "Topic 14",
       "domainName": "Implement knowledge mining and information extraction solutions",
       "domainId": "6",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: D Blocklist is what you would use: https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist?tabs=windows%2Crest | Selected Answer: D To handle a custom dictionary of offensive terms in Azure AI Content Safety, the blocklist feature is designed for exactly that scenario. You can supply your own list of obscure or custom offensive ter",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150483-exam-ai-102-topic-8-question-10-discussion/"
+      "explanation": "Box 1: \"categories\": [\"Locations\", \"Persons\", \"Organizations\"], Locations, Persons, Organizations are in the outputs. Scenario: Contoso plans to develop a searchable knowledgebase of all the intellectual property Note: The categories parameter is an array of categories that should be extracted. Possible category types: \"Person\", \"Location\", \"Organization\", \"Quantity\", \"Datetime\", \"URL\", \"Email\". If no category is provided, all types are returned. Box 2: {\"name\": \" entities\"} The include wikis, so should include entities in the outputs. Note: entities is an array of complex types that contains rich information about the entities extracted from text, with the following fields name (the actual entity name. This represents a \"normalized\" form) wikipediaId wikipediaLanguage wikipediaUrl (a link to Wikipedia page for the entity) etc. Reference: https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-entity-recognition | Discussion highlights: Answer is correct however... the Entity Recognition skill is now discontinued replaced by Microsoft.Skills.Text.V3.EntityRecognitionSkill. Also categories will only allow \"Person\" as valid category type - not \"Persons\". | I also got this on July 3 2023 exam, but it's changed to Skills.Text.V3. | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0021700001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0021800001.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77702-exam-ai-102-topic-14-question-2-discussion/"
     }
   ]
 }

@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 27 / 32
-- Questions Answered: 351 / 313
+- Sessions Completed: 28 / 32
+- Questions Answered: 360 / 313
 - Accuracy: 88.0%
-- Current Streak: 27 days
-- Next Session: Day 28 (2026-06-02)
+- Current Streak: 28 days
+- Next Session: Day 29 (2026-06-03) — Buffer / Catch-up
 
 ## Milestones
 
@@ -15,7 +15,7 @@
 - [x] Domain 3 completed (Days 11-12, avg 89.3%)
 - [x] Domain 4 completed (Days 13-16, avg 82.9%)
 - [x] Domain 5 completed (Days 17-22, avg 89.9%)
-- [ ] Domain 6 completed
+- [x] Domain 6 completed (Days 23-28, avg 91.7%)
 - [ ] Buffer day completed
 - [ ] Review days completed
 - [ ] Final mock completed
@@ -424,3 +424,24 @@
 - Topic 8 (Content Safety): 11/11 (100%)
 - Notes: _fill in your own words_
 - Next action: Day 28 - Domain 6: Consolidation
+
+### Day 28 (2026-06-02) - Domain 6: Consolidation
+
+- Status: Completed
+- Questions Attempted: 9 (graded) + 5 skipped (broken hotspot options, all fixed live during session)
+- Correct: 8 / 9 (88.9%)
+- Raw Score: 8 / 14 (57.1%) — depressed by skipped Qs
+- Time Spent: ~8.4 min quiz
+- Skipped (all fixed mid-session): MPgzeUdDCGnnoCGtkeGe (QnA Maker RBAC), SR2xMgYCGQKsm6JNkKG3 (Translator URI hotspot), Z0bXFl0VstaAKFmiPykK + cmfzGsVPqHQibIyHSCyd (Adaptive Card hotspots — duplicates), y9Zi9GjzdrqTnPW8taVo (Entity Recognition skill hotspot — 3rd box was invented; only 2 dropdowns exist)
+- Key Mistakes:
+  - P4nMr5NK2YJrJJeM7imu (Form Recognizer endpoints): picked B,E (custom model + Read v3.1 analyze) instead of B,C (custom model + prebuilt receipt) — for receipts use prebuilt-receipt endpoint, NOT generic /vision read; per-office customization confirms custom model + receipt prebuilt
+- Fixed Questions: 5 hotspot/dropdown questions rewritten with actual dropdown values from question images (QnA RBAC roles, Translator base URLs, Adaptive Card language interpolation x2, EntityRecognitionSkill JSON)
+- Bonus Fix: 6sKvXQJnlu00FLM7Y1fW (DRAG DROP video processing) — Step 4 was truncated to "Tr"; rewritten with full step labels
+- Topic 9 (Video processing): 2/2 (100%) — carryover
+- Topic 10 (Video Indexer, Form Recognizer): 2/2 (100%)
+- Topic 12 (Form Recognizer JSON): 1/1 (100%)
+- Topic 13 (AI Search autocomplete): 1/1 (100%)
+- Topic 14 (AI Search skillsets, synonym maps): 2/3 graded (66.7%) — missed Form Recognizer endpoint choice
+- Domain 6 final average (Days 23-28): 91.7%
+- Notes: _fill in your own words_
+- Next action: Day 29 - Buffer / Catch-up
