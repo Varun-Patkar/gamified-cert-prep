@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 28 / 32
-- Questions Answered: 360 / 313
-- Accuracy: 88.0%
-- Current Streak: 28 days
-- Next Session: Day 29 (2026-06-03) — Buffer / Catch-up
+- Sessions Completed: 29 / 32
+- Questions Answered: 367 / 313
+- Accuracy: 88.6%
+- Current Streak: 29 days
+- Next Session: Day 30 (2026-06-04) — Full Review 1
 
 ## Milestones
 
@@ -16,7 +16,7 @@
 - [x] Domain 4 completed (Days 13-16, avg 82.9%)
 - [x] Domain 5 completed (Days 17-22, avg 89.9%)
 - [x] Domain 6 completed (Days 23-28, avg 91.7%)
-- [ ] Buffer day completed
+- [x] Buffer day completed (Day 29, 100%)
 - [ ] Review days completed
 - [ ] Final mock completed
 
@@ -443,5 +443,17 @@
 - Topic 13 (AI Search autocomplete): 1/1 (100%)
 - Topic 14 (AI Search skillsets, synonym maps): 2/3 graded (66.7%) — missed Form Recognizer endpoint choice
 - Domain 6 final average (Days 23-28): 91.7%
+
+### Day 29 (2026-06-03) - Buffer / Catch-up
+
+- Status: Completed
+- Questions Attempted: 7 (graded) + 1 review-only (skipped)
+- Correct: 7 / 7 (100%)
+- Time Spent: ~5 min quiz + study
+- Key Mistakes: None — perfect remediation run!
+- Focus: Cross-domain drill on weakest areas (Domains 2, 4, 5)
+- Remediation topics: RAG fundamentals, Video/Spatial Analysis, Translation/Knowledge Mining
+- Notes: _fill in your own words_
+- Next action: Day 30 - Full Review 1 (Domains 1, 2, 5)
 - Notes: _fill in your own words_
 - Next action: Day 29 - Buffer / Catch-up

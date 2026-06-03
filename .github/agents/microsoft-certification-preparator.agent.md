@@ -9,9 +9,10 @@ tools:
     agent,
     edit,
     search,
-    web,
-    browser,
+    azure-mcp/search,
     "context-mode/*",
+    "webiq-mcp/*",
+    browser,
     todo,
   ]
 agents: [CertResearcher, CertSessionRunner]

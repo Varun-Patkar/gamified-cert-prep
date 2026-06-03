@@ -577,6 +577,18 @@ def run_web_quiz(questions, data, output_path, port, helpers):
             }
 
         q = current_question()
+        if q is None:
+            finalize_session()
+            elapsed = time.time() - state["startTime"]
+            return {
+                "completed": True,
+                "examName": data.get("examName", "Certification Prep"),
+                "total": len(questions),
+                "index": len(questions),
+                "summary": _summary_from_results(state["results"], elapsed),
+                "outputPath": state.get("savedPath") or state.get("outputPath"),
+                "mode": "Web quiz mode",
+            }
         return {
             "completed": False,
             "examName": data.get("examName", "Certification Prep"),

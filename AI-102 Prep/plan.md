@@ -215,9 +215,9 @@
 
 ### Day 29 (2026-06-03) - Buffer / Catch-up
 
-- [ ] Study: Revisit weakest two subdomains from Days 1-28
-- [ ] Practice: 8 targeted remediation questions
-- [ ] Lab: Fix notes gaps and unclear concepts
+- [x] Study: Revisit weakest two subdomains from Days 1-28
+- [x] Practice: 8 targeted remediation questions (7/7 graded = 100%)
+- [x] Lab: Fix notes gaps and unclear concepts
 - Estimated time: 0.5 hrs
 
 ### Day 30 (2026-06-04) - Full Review 1

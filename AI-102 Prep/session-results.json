@@ -1,362 +1,217 @@
 {
-  "timestamp": "2026-06-02T12:44:02.591373",
+  "timestamp": "2026-06-03T12:17:01.099460",
   "examCode": "AI-102",
   "examName": "Designing and Implementing a Microsoft Azure AI Solution",
   "summary": {
-    "totalQuestions": 14,
-    "gradedQuestions": 9,
-    "correct": 8,
-    "wrong": 1,
-    "skipped": 5,
-    "ungraded": 0,
-    "accuracy": 88.9,
-    "timeSeconds": 506.2
+    "totalQuestions": 8,
+    "gradedQuestions": 7,
+    "correct": 7,
+    "wrong": 0,
+    "skipped": 0,
+    "ungraded": 1,
+    "accuracy": 100.0,
+    "timeSeconds": 195.7
   },
   "domainBreakdown": {
-    "Implement knowledge mining and information extraction solutions": {
-      "total": 14,
-      "correct": 8,
+    "Implement natural language processing solutions": {
+      "total": 4,
+      "correct": 4,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Implement computer vision solutions": {
+      "total": 1,
+      "correct": 0,
       "wrong": 1,
-      "skipped": 5
+      "skipped": 0
+    },
+    "Implement generative AI solutions": {
+      "total": 3,
+      "correct": 3,
+      "wrong": 0,
+      "skipped": 0
     }
   },
   "topicBreakdown": {
-    "Topic 15": {
-      "total": 3,
-      "correct": 0,
-      "wrong": 0,
-      "skipped": 3
-    },
-    "Topic 13": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "Topic 14": {
-      "total": 4,
-      "correct": 2,
-      "wrong": 1,
-      "skipped": 1
-    },
-    "Topic 11": {
-      "total": 1,
-      "correct": 0,
-      "wrong": 0,
-      "skipped": 1
-    },
-    "Topic 10": {
+    "Topic 5": {
       "total": 2,
       "correct": 2,
       "wrong": 0,
       "skipped": 0
     },
-    "Topic 12": {
-      "total": 1,
+    "Topic 3": {
+      "total": 2,
       "correct": 1,
+      "wrong": 1,
+      "skipped": 0
+    },
+    "Topic 2": {
+      "total": 2,
+      "correct": 2,
       "wrong": 0,
       "skipped": 0
     },
-    "Topic 9": {
+    "Topic 4": {
       "total": 2,
       "correct": 2,
       "wrong": 0,
       "skipped": 0
     }
   },
-  "wrongQuestions": [
-    {
-      "questionId": "P4nMr5NK2YJrJJeM7imu",
-      "question": "You are developing the document processing workflow. You need to identify which API endpoints to use to extract text from the financial documents. The solution must meet the document processing requirements. Which two API endpoints should you identify? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B, E",
-      "correctAnswer": "B, C",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76535-exam-ai-102-topic-14-question-1-discussion/",
-      "explanation": "Discussion highlights: guys so what is the correct answer | Selected Answer: B Contoso have a distinct standard for each office. Is the customized form recognizer more appropriate?",
-      "topic": "Topic 14",
-      "domainName": "Implement knowledge mining and information extraction solutions"
-    }
-  ],
-  "skippedQuestions": [
-    "MPgzeUdDCGnnoCGtkeGe",
-    "SR2xMgYCGQKsm6JNkKG3",
-    "Z0bXFl0VstaAKFmiPykK",
-    "cmfzGsVPqHQibIyHSCyd",
-    "y9Zi9GjzdrqTnPW8taVo"
-  ],
+  "wrongQuestions": [],
+  "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "MPgzeUdDCGnnoCGtkeGe",
-      "question": "HOTSPOT - You are developing the shopping on-the-go project. You are configuring access to the QnA Maker (classic) resources. Which role should you assign to AllUsers and LeadershipTeam? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 15",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Box 1: QnA Maker Editor - Scenario: Provide all employees with the ability to edit Q&As. The QnA Maker Editor (read/write) has the following permissions: ✑ Create KB API ✑ Update KB API ✑ Replace KB API ✑ Replace Alterations ✑ \"Train API\" [in new service model v5] Box 2: Contributor - Scenario: Only senior managers must be able to publish updates. Contributor permission: All except ability to add new members to roles Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/reference-role-based-access-control | Discussion highlights: How about Cognitive Service User? the link explicitly says publish is given to this role. https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/role-based-access-control#access-is-provided-by-a-defi | The Owner role would give the leadership team the ability to publish changes, but also the additional capability to give others access to QnA maker, which they do not require. security best practices (in case of a compro",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0027300001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0027400001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/57607-exam-ai-102-topic-15-question-2-discussion/"
-    },
-    {
-      "questionId": "9f1dU6JmdvlbRkAZfqb6",
-      "question": "You are developing the smart e-commerce project. You need to implement autocompletion as part of the Cognitive Search solution. Which three actions should you perform? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A, B, F",
-      "correctAnswer": "A, B, F",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 13",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: ABF Let us eliminate the wrong answers: C. Make API queries to the search endpoint and include the product name fields in the searchFields query parameter. - as we need autocomplete endpoint, we rule thi | A , B , F B. Add a suggester that has the three product name fields as source fields F. Set the analyzer property for the three product name variants. A. Make API queries to the autocomplete endpoint and include suggeste",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/66853-exam-ai-102-topic-13-question-1-discussion/"
-    },
-    {
-      "questionId": "MjSWjHmpS3B0PzzepA7t",
-      "question": "You are developing the knowledgebase by using Azure Cognitive Search. You need to meet the knowledgebase requirements for searching equivalent terms. What should you include in the solution?",
+      "questionId": "6HN37pZtROQh3f6AKP2L",
+      "question": "DRAG DROP - You plan to build a chatbot to support task tracking. You create a Language Understanding service named lu1. You need to build a Language Understanding model to integrate into the chatbot. The solution must minimize development time to build the model. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 14",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A I wrote this exam on 25 Dec 2024 No simulation and this was one for the question I got in Case study. Score 805 (all I did was study this and revise from number 1 to 333 for 6hours) memorize the case s | This question was in the test I took in August 2024",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77728-exam-ai-102-topic-14-question-4-discussion/"
+      "explanation": "Step 1: Add a new application - Create a new app - 1. Sign in to the LUIS portal with the URL of https://www.luis.ai. 2. Select Create new app. 3. Etc. Step 2: Add example utterances. In order to classify an utterance, the intent needs examples of user utterances that should be classified with this intent. Step 3: Train the application - Step 4: Publish the application - In order to receive a LUIS prediction in a chat bot or other client application, you need to publish the app to the prediction endpoint. Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/luis/tutorial-intents-only | Discussion highlights: As per Udemy it is: - Add a new application. - Add the prebuilt domain ToDo. - Train the application. - Publish the application | Given answer is correct. (Taken from Udemy practice exam question) The order should be : 1. Add a new app, 2. Add example utterances, 3. Train the app, 4. Publish the app. | Answer inferred from top upvoted discussion consensus.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0022500001.png"
+      ],
+      "answerImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0022600001.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76495-exam-ai-102-topic-5-question-4-discussion/"
     },
     {
-      "questionId": "SR2xMgYCGQKsm6JNkKG3",
-      "question": "HOTSPOT - You are planning the product creation project. You need to build the REST endpoint to create the multilingual product descriptions. How should you complete the URI? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": null,
+      "questionId": "pOzZ9dbpzU00CIH9hExI",
+      "question": "HOTSPOT - You are building a text-to-speech app that will use a custom neural voice. You need to create an SSML file for the app. The solution must ensure that the voice profile meets the following requirements: • Expresses a calm tone • Imitates the voice of a young adult female How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Code: <mstts:express-as [Box 1]=\"YoungAdultFemale\" [Box 2]=\"gentle\"> How can I assist you? </mstts:express-as> Dropdown options for each box: role, style, styledegree, type, voice",
+      "userAnswer": "—",
+      "correctAnswer": "?",
+      "correct": false,
+      "gradable": false,
+      "skipped": false,
+      "topic": "Topic 3",
+      "domainName": "Implement computer vision solutions",
+      "domainId": "4",
+      "difficulty": "medium",
+      "explanation": "Box 1 = role, Box 2 = style. The 'role' attribute imitates a different age/gender (YoungAdultFemale). The 'style' attribute controls emotional tone (gentle = calm). See: https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-synthesis-markup-voice#speaking-styles-and-roles",
+      "questionImages": [
+        "https://img.examtopics.com/ai-102/image39.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image40.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108985-exam-ai-102-topic-3-question-45-discussion/"
+    },
+    {
+      "questionId": "lbvU8kjpmEBbth3PjpoY",
+      "question": "HOTSPOT - You have a Computer Vision resource named contoso1 that is hosted in the West US Azure region. You need to use contoso1 to make a different size of a product photo by using the smart cropping feature. How should you complete the API URL? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
+      "difficulty": "medium",
+      "explanation": "The resource is named contoso1, so the endpoint is https://contoso1.cognitiveservices.azure.com (custom subdomain format). Smart cropping is a parameter of the generateThumbnail API, not areaOfInterest or detect.",
+      "questionImages": [
+        "https://www.examtopics.com/assets/media/exam-media/04271/0008300001.png"
+      ],
+      "answerImages": [
+        "https://img.examtopics.com/ai-102/image208.png"
+      ],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60330-exam-ai-102-topic-2-question-3-discussion/"
+    },
+    {
+      "questionId": "IN3ZdM82mBhxh1qHSZ6h",
+      "question": "You have an app named App1 that uses a custom Azure AI Document Intelligence model to recognize contract documents. You need to ensure that the model supports an additional contract format. The solution must minimize development effort. What should you do?",
+      "userAnswer": "C",
       "correctAnswer": "C",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 11",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Box 1: api.cognitive.microsofttranslator.com Translator 3.0: Translate. Send a POST request to: https://api.cognitive.microsofttranslator.com/translate?api-version=3.0 Box 2: /translate - Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate | Discussion highlights: first drop-down should instead be: api-nam.cognitive.microsofttranslator.com this is because the case study specifically states under Business Requirements \"Data storage and processing must occur in datacenters located i | 1. api-nam.cognitive.microsofttranslator.com 2. /translate https://learn.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference#base-urls Requests to Translator are, in most cases, handled by th",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0018000001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0018000002.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/60817-exam-ai-102-topic-11-question-1-discussion/"
-    },
-    {
-      "questionId": "P4nMr5NK2YJrJJeM7imu",
-      "question": "You are developing the document processing workflow. You need to identify which API endpoints to use to extract text from the financial documents. The solution must meet the document processing requirements. Which two API endpoints should you identify? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B, E",
-      "correctAnswer": "B, C",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 14",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: guys so what is the correct answer | Selected Answer: B Contoso have a distinct standard for each office. Is the customized form recognizer more appropriate?",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76535-exam-ai-102-topic-14-question-1-discussion/"
-    },
-    {
-      "questionId": "l2zlMTc56FgsfnTbf05H",
-      "question": "You are developing the knowledgebase. You use Azure Video Analyzer for Media (previously Video indexer) to obtain transcripts of webinars. You need to ensure that the solution meets the knowledgebase requirements. What should you do?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 10",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A Keyword \"jargon\", so choose \"A. Create a custom language model\" . | Selected Answer: A A is the answer. https://learn.microsoft.com/en-us/azure/azure-video-indexer/customize-language-model-overview Azure Video Indexer supports automatic speech recognition through integration with the Mic",
+      "explanation": "Discussion highlights: Selected Answer: C Given answer C is correct | Selected Answer: C It is obvious that C is the correct solution.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76783-exam-ai-102-topic-10-question-2-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135947-exam-ai-102-topic-4-question-19-discussion/"
     },
     {
-      "questionId": "Z0bXFl0VstaAKFmiPykK",
-      "question": "HOTSPOT - You are developing the shopping on-the-go project. You need to build the Adaptive Card for the chatbot. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 15",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Box 1: name.en - Box 2: \"$when\": \"${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock. Box 3:image.altText.en | Discussion highlights: 1. name[language] 2. \"$when\": \"${stockLevel} != 'OK'\" 3. image.altText[language] | File JSON { \"sku\": \"b1\", \"name\": { \"en\": \"Bicycle\", \"es\": \"Bicicleta\", \"pt\": \"Bicicleta\" }, \"stocklevel\": \"Out of Stock\", \"description\": { \"en\": \"Bicycle\", \"es\": \"Bicicleta\", \"pt\": \"Bicicleta\" }, \"image\": { \"uri\": \"https",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0027600001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0027700001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77001-exam-ai-102-topic-15-question-3-discussion/"
-    },
-    {
-      "questionId": "WBfcn6Ucs0yiLVWj62M7",
-      "question": "DRAG DROP - You are developing a solution for the Management-Bookkeepers group to meet the document processing requirements. The solution must contain the following components: ✑ A From Recognizer resource ✑ An Azure web app that hosts the Form Recognizer sample labeling tool The Management-Bookkeepers group needs to create a custom table extractor by using the sample labeling tool. Which three actions should the Management-Bookkeepers group perform in sequence? To answer, move the appropriate cmdlets from the list of cmdlets to the answer area and arrange them in the correct order. Select and Place:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
+      "questionId": "Iha51tSuMiJqVnoezpGz",
+      "question": "You use the Custom Vision service to build a classifier. After training is complete, you need to evaluate the classifier. Which two metrics are available for review? Each correct answer presents a complete solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "A, D",
+      "correctAnswer": "A, D",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 10",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
+      "topic": "Topic 2",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Step 1: Create a new project and load sample documents Create a new project. Projects store your configurations and settings. Step 2: Label the sample documents When you create or open a project, the main tag editor window opens. Step 3: Train a custom model. Finally, train a custom model. Reference: https://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/label-tool | Discussion highlights: Answer is correct. Create a project Label the sample docs Train the model | A modified version of this was in the exam today. | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0012500005.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0012500006.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77636-exam-ai-102-topic-10-question-1-discussion/"
+      "explanation": "Discussion highlights: Selected Answer: AD AD is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier#evaluate-the-classifier After training has completed, the model's | Appeared on Oct/29/2023.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75223-exam-ai-102-topic-2-question-11-discussion/"
     },
     {
-      "questionId": "cmfzGsVPqHQibIyHSCyd",
-      "question": "HOTSPOT - You are developing the shopping on-the-go project. You need to build the Adaptive Card for the chatbot. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
+      "questionId": "cpForodyaZTfmVSs3DZ5",
+      "question": "DRAG DROP - You have an Azure subscription that contains a storage account named sa1 and an Azure AI Document Intelligence resource named DI1. You need to create and train a custom model in DI1 by using Document Intelligence Studio. The solution must minimize development effort. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
       "gradable": true,
-      "skipped": true,
-      "topic": "Topic 15",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
+      "skipped": false,
+      "topic": "Topic 4",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
       "difficulty": "medium",
-      "explanation": "Box 1: name [language] Chatbot must support interactions in English, Spanish, and Portuguese. Box 2: \"$when:${stockLevel != 'OK'}\" Product displays must include images and warnings when stock levels are low or out of stock. Box 3: image.altText[language] | Discussion highlights: on my exam. (2023-01-16 passed) My Answer: 1. name[language] 2. != OK 3. image.altText.[language] | answer seems to be correct",
+      "explanation": "Discussion highlights: I think the answer is as follows. Create a custom model project and link the project to sa1 Upload five sample documents. Apply labels to the sample documents. Train and test the model. | If you did not create custom model project , where do you upload images ? so for me: Create a custom model project and link the project to sa1 Upload five sample documents. Apply labels to the sample documents. Train and | Answer inferred from top upvoted discussion consensus.",
       "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0027000001.jpg"
+        "https://img.examtopics.com/ai-102/image182.png"
       ],
       "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0027100001.jpg"
+        "https://img.examtopics.com/ai-102/image183.png"
       ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/89941-exam-ai-102-topic-15-question-1-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/149767-exam-ai-102-topic-4-question-31-discussion/"
     },
     {
-      "questionId": "uuJ4GqKtlV57PuyfAbtb",
-      "question": "You need to develop an extract solution for the receipt images. The solution must meet the document processing requirements and the technical requirements. You upload the receipt images to the Form Recognizer API for analysis, and the API returns the following JSON. Which expression should you use to trigger a manual review of the extracted information by a member of the Consultant-Bookkeeper group?",
+      "questionId": "ikF0utvJ29ypyqF28OS9",
+      "question": "You are building a chatbot by using Microsoft Bot Framework Composer. You need to configure the chatbot to present a list of available options. The solution must ensure that an image is provided for each option. Which two features should you use? Each correct answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+      "userAnswer": "D, E",
+      "correctAnswer": "D, E",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Topic 5",
+      "domainName": "Implement natural language processing solutions",
+      "domainId": "5",
+      "difficulty": "medium",
+      "explanation": "Discussion highlights: Selected Answer: DE To configure the chatbot to present a list of available options with images, you should use the following features: D. An adaptive card: Adaptive cards are a flexible, customizable way to present rich | Selected Answer: DE DE is the answer. https://learn.microsoft.com/en-us/composer/concept-dialog?tabs=v2x Modern conversational software has many different components. Bot Framework Composer integrates these pieces into d",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/111027-exam-ai-102-topic-5-question-34-discussion/"
+    },
+    {
+      "questionId": "AKisF2X8uT2E19xxDoNl",
+      "question": "You need to upload speech samples to a Speech Studio project for use in training. How should you upload the samples?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 12",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
+      "topic": "Topic 3",
+      "domainName": "Implement generative AI solutions",
+      "domainId": "2",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B Answer is B as I just did the exam and got 100% for the section :) | Gotten this in Jul 2023 exam.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0018600001.png"
-      ],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/76784-exam-ai-102-topic-12-question-1-discussion/"
-    },
-    {
-      "questionId": "6sKvXQJnlu00FLM7Y1fW",
-      "question": "DRAG DROP - You are planning the product creation project. You need to recommend a process for analyzing videos. Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order. Select and Place:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 9",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Scenario: All videos must have transcripts that are associated to the video and included in product descriptions. Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese. Step 1: Upload the video to blob storage Given a video or audio file, the file is first dropped into a Blob Storage. T Step 2: Index the video by using the Video Indexer API. When a video is indexed, Video Indexer produces the JSON content that contains details of the specified video insights. The insights include: transcripts, OCRs, faces, topics, blocks, etc. Step 3: Extract the transcript from the Video Indexer API. Step 4: Translate the transcript by using the Translator API. Reference: https://azure.microsoft.com/en-us/blog/get-video-insights-in-even-more-languages/ https://docs.microsoft.com/en-us/azure/media-services/video-indexer/video-indexer-output-json-v2 | Discussion highlights: 1. Upload video to blob storage. 2. Index video using Azure Video Indexer API. 3. Extract transcript from Azure Video Indexer API. 4. Translate transcript using Translator API. https://learn.microsoft.com/en-us/azure/azu | 1. Upload the video to blob storage. - choose blob over file 2. Index the video by using the Video Indexer API. - choose Video Indexer over Computer Vision API. 3. Extract the transcript from the Video Indexer API. 4. Tr | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0011600001.jpg"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0011700001.jpg"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/78075-exam-ai-102-topic-9-question-1-discussion/"
-    },
-    {
-      "questionId": "TIRfo1NkZiPklmEauSnC",
-      "question": "You are developing the knowledgebase by using Azure Cognitive Search. You need to process wiki content to meet the technical requirements. What should you include in the solution?",
-      "userAnswer": "D",
-      "correctAnswer": "D",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 14",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: D The correct answer is D. Use an indexer connected to Azure Cosmos DB that includes language detection and text translation skills. This solution meets the requirement for handling multiple languages an | Selected Answer: D Document extraction skill only works for files. It's less likely to work with CosmoDB.",
+      "explanation": "Discussion highlights: Selected Answer: B , the best option is B. Upload a .zip file that contains a collection of audio files in the .wav format and a corresponding text transcript file. This method provides a balance of audio quality (with . | A modified version of this was in the exam today.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75979-exam-ai-102-topic-14-question-3-discussion/"
-    },
-    {
-      "questionId": "43LzztzOFv7nZMOSR9dB",
-      "question": "HOTSPOT - You need to develop code to upload images for the product creation project. The solution must meet the accessibility requirements. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 9",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Reference: https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/blob/master/documentation-samples/quickstarts/ComputerVision/Program.cs | Discussion highlights: 1. string 2. VisualFeatureTypes.Description 3. results.Description.Captions[0] https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-describing-images#use-the-api The image description featur | Was on exam 27/11/2021",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0011900001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0012000001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/62731-exam-ai-102-topic-9-question-2-discussion/"
-    },
-    {
-      "questionId": "y9Zi9GjzdrqTnPW8taVo",
-      "question": "HOTSPOT - You are developing the knowledgebase by using Azure Cognitive Search. You need to build a skill that will be used by indexers. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 14",
-      "domainName": "Implement knowledge mining and information extraction solutions",
-      "domainId": "6",
-      "difficulty": "medium",
-      "explanation": "Box 1: \"categories\": [\"Locations\", \"Persons\", \"Organizations\"], Locations, Persons, Organizations are in the outputs. Scenario: Contoso plans to develop a searchable knowledgebase of all the intellectual property Note: The categories parameter is an array of categories that should be extracted. Possible category types: \"Person\", \"Location\", \"Organization\", \"Quantity\", \"Datetime\", \"URL\", \"Email\". If no category is provided, all types are returned. Box 2: {\"name\": \" entities\"} The include wikis, so should include entities in the outputs. Note: entities is an array of complex types that contains rich information about the entities extracted from text, with the following fields name (the actual entity name. This represents a \"normalized\" form) wikipediaId wikipediaLanguage wikipediaUrl (a link to Wikipedia page for the entity) etc. Reference: https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-entity-recognition | Discussion highlights: Answer is correct however... the Entity Recognition skill is now discontinued replaced by Microsoft.Skills.Text.V3.EntityRecognitionSkill. Also categories will only allow \"Person\" as valid category type - not \"Persons\". | I also got this on July 3 2023 exam, but it's changed to Skills.Text.V3. | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0021700001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0021800001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77702-exam-ai-102-topic-14-question-2-discussion/"
+      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/77612-exam-ai-102-topic-3-question-13-discussion/"
     }
   ]
 }
