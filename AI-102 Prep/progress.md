@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 29 / 32
-- Questions Answered: 367 / 313
-- Accuracy: 88.6%
-- Current Streak: 29 days
-- Next Session: Day 30 (2026-06-04) — Full Review 1
+- Sessions Completed: 30 / 32
+- Questions Answered: 382 / 313
+- Accuracy: 88.2%
+- Current Streak: 30 days
+- Next Session: Day 31 (2026-06-05) — Full Review 2
 
 ## Milestones
 
@@ -456,4 +456,19 @@
 - Notes: _fill in your own words_
 - Next action: Day 30 - Full Review 1 (Domains 1, 2, 5)
 - Notes: _fill in your own words_
-- Next action: Day 29 - Buffer / Catch-up
+- Next action: Day 30 - Full Review 1 (Domains 1, 2, 5)
+
+### Day 30 (2026-06-04) - Full Review 1 (Domains 1, 2, 5)
+
+- Status: Completed
+- Questions Attempted: 15 (graded) + 5 skipped (4 garbled AI-generated options, 1 excluded from grading)
+- Correct: 12 / 15 (80.0%)
+- Time Spent: ~11.7 min quiz
+- Key Mistakes:
+  - ARM template capacity: Picked deployment-level capacity (B) instead of account-level (A). 1 TPM unit ≈ 6 RPM; need 600 RPM → capacity 100 on accounts resource
+  - PPE monitoring: Picked Computer Vision (B) instead of Face API (A). Face detection identifies masks/glasses removal with less dev effort
+  - QnA Maker auto-created resources: Picked C,D instead of D,E. QnA Maker auto-creates Azure Search + Azure Web App (not Cosmos DB)
+- Skipped (garbled options): Speech STT hotspot, Container sentiment hotspot, Search security hotspot, Language detection hotspot, Container on-prem deploy (excluded from grading)
+- Review Domains: D1 (Plan & Manage), D2 (Generative AI), D5 (NLP) — combined ~50-60% of exam
+- Notes: _fill in your own words_
+- Next action: Day 31 - Full Review 2 (Domains 3, 4, 6)
