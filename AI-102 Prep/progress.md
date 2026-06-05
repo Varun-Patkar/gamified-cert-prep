@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 30 / 32
-- Questions Answered: 382 / 313
-- Accuracy: 88.2%
-- Current Streak: 30 days
-- Next Session: Day 31 (2026-06-05) — Full Review 2
+- Sessions Completed: 31 / 32
+- Questions Answered: 402 / 313
+- Accuracy: 88.3%
+- Current Streak: 31 days
+- Next Session: Day 32 (2026-06-06) — Mock Simulation + Final Revision
 
 ## Milestones
 
@@ -472,3 +472,19 @@
 - Review Domains: D1 (Plan & Manage), D2 (Generative AI), D5 (NLP) — combined ~50-60% of exam
 - Notes: _fill in your own words_
 - Next action: Day 31 - Full Review 2 (Domains 3, 4, 6)
+
+### Day 31 (2026-06-05) - Full Review 2 (Domains 3, 4, 6)
+
+- Status: Completed
+- Questions Attempted: 20 (graded)
+- Correct: 18 / 20 (90.0%)
+- Time Spent: ~86.4 min quiz
+- Key Mistakes:
+  - OpenAI fine-tuning role (DqDWHYUiK2rmyAC0QnzZ): Picked C (Cognitive Services OpenAI User) instead of A (Cognitive Services OpenAI Contributor) — fine-tuning + dataset upload requires Contributor, User only covers inference
+  - Bot Framework Composer multi-bot dispatch (yqEfHvMsBeVx1CZL2jtI): Picked B,C,E instead of B,C,F — need Orchestrator recognizer for dynamic routing to sub-bots
+- Domain 3 (Agentic): 1/1 (100%)
+- Domain 4 (Computer Vision): 5/5 (100%)
+- Domain 6 (Knowledge Mining): 12/14 (85.7%)
+- Pattern: RBAC role confusion persists — User vs Contributor boundary: User = inference only; Contributor = fine-tune, deploy, manage
+- Notes: _fill in your own words_
+- Next action: Day 32 - Mock Simulation + Final Revision

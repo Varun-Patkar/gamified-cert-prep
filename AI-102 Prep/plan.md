@@ -220,18 +220,18 @@
 - [x] Lab: Fix notes gaps and unclear concepts
 - Estimated time: 0.5 hrs
 
-### Day 30 (2026-06-04) - Full Review 1
+### Day 30 (2026-06-04) - Full Review 1 ✅
 
-- [ ] Study: Rapid review Domains 1, 2, 5
-- [ ] Practice: 20 mixed questions (cross-domain)
-- [ ] Lab: 20-minute scenario drill
+- [x] Study: Rapid review Domains 1, 2, 5
+- [x] Practice: 20 mixed questions (cross-domain) — 12/15 (80.0%)
+- [x] Lab: 20-minute scenario drill
 - Estimated time: 0.5 hrs
 
-### Day 31 (2026-06-05) - Full Review 2
+### Day 31 (2026-06-05) - Full Review 2 ✅
 
-- [ ] Study: Rapid review Domains 3, 4, 6
-- [ ] Practice: 20 mixed questions (cross-domain)
-- [ ] Lab: 20-minute architecture reasoning drill
+- [x] Study: Rapid review Domains 3, 4, 6
+- [x] Practice: 20 mixed questions (cross-domain) — 18/20 (90.0%)
+- [x] Lab: 20-minute architecture reasoning drill
 - Estimated time: 0.5 hrs
 
 ### Day 32 (2026-06-06) - Mock Simulation + Final Revision
