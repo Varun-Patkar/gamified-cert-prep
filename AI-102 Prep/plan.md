@@ -236,9 +236,9 @@
 
 ### Day 32 (2026-06-06) - Mock Simulation + Final Revision
 
-- [ ] Study: Final formula sheet and service-selection heuristics
-- [ ] Practice: 35-question mock simulation under time pressure
-- [ ] Lab: Post-mock error analysis and last weak-point touch-up
+- [x] Study: Final formula sheet and service-selection heuristics
+- [x] Practice: 35-question mock simulation under time pressure
+- [x] Lab: Post-mock error analysis and last weak-point touch-up
 - Estimated time: 1 hr
 
 ## Execution Guidance

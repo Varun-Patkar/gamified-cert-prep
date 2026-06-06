@@ -7726,7 +7726,7 @@
 						"C. Box 1: ChatCompletionsOptions(); Box 2: AzureCognitiveSearchChatExtensionConfiguration",
 						"D. Box 1: StreamingChatCompletions(); Box 2: AzureCognitiveSearchChatExtensionConfiguration"
 					],
-					"explanation": "Discussion highlights: first one is chatCompletionsOptions() second one is AzureChatExtensionConfiguration - see link here https://learn.microsoft.com/en-us/java/api/com.azure.ai.openai.models.azurechatextensionconfiguration?view=azure-java-pr | answer is correct | Answer inferred from top upvoted discussion consensus.",
+					"explanation": "DISPUTED ITEM: This hotspot has agent-generated options and has shown mismatched grading/explanation behavior in quiz runs. Treat as review-only, not scored. Use official Azure OpenAI On Your Data SDK docs for final validation.",
 					"topic": "Topic 7",
 					"difficulty": "medium",
 					"source": "ExamTopics community dump",
@@ -7737,7 +7737,7 @@
 					"answerInferredFrom": "discussion_top3_consensus",
 					"type": "mc",
 					"correctAnswer": "C",
-					"ungraded": false,
+					"ungraded": true,
 					"questionTypeInferredByAgent": "hotspot",
 					"originalPlaceholderOptions": [
 						"A. [Inline placeholder option A; refer question/answer image and discussion context]",

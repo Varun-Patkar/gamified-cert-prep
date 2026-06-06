@@ -2,11 +2,11 @@
 
 ## Overall
 
-- Sessions Completed: 31 / 32
-- Questions Answered: 402 / 313
+- Sessions Completed: 32 / 32
+- Questions Answered: 437 / 313
 - Accuracy: 88.3%
-- Current Streak: 31 days
-- Next Session: Day 32 (2026-06-06) — Mock Simulation + Final Revision
+- Current Streak: 32 days
+- Next Session: Plan completed - exam readiness review only
 
 ## Milestones
 
@@ -17,8 +17,8 @@
 - [x] Domain 5 completed (Days 17-22, avg 89.9%)
 - [x] Domain 6 completed (Days 23-28, avg 91.7%)
 - [x] Buffer day completed (Day 29, 100%)
-- [ ] Review days completed
-- [ ] Final mock completed
+- [x] Review days completed
+- [x] Final mock completed
 
 ## Daily Log
 
@@ -488,3 +488,28 @@
 - Pattern: RBAC role confusion persists — User vs Contributor boundary: User = inference only; Contributor = fine-tune, deploy, manage
 - Notes: _fill in your own words_
 - Next action: Day 32 - Mock Simulation + Final Revision
+
+### Day 32 (2026-06-06) - Mock Simulation + Final Revision
+
+- Status: Completed
+- Questions Attempted: 35 total attempts (35 unique)
+- Correct: 28 / 34 (82.4% cleaned scoring)
+- Raw File Summary: 29 / 35 (82.9%)
+- Time Spent: ~45.0 min quiz
+- Scoring cleanup applied:
+  - Duplicate-submit artifacts in saved results: 0 (no dedupe adjustment needed)
+  - Disputed/ungraded question IDs excluded from scoring: 1
+- Key Mistakes:
+  - Topic 5 Composer hotspot: entity identification vs intent trigger type mapping
+  - Knowledge store projections: object/table/blob projection semantics and what is/not projected
+  - QnA Maker provisioning dependencies: Azure Search + Web App auto-created resources
+  - Face API hotspot logic: quotas and statement-level Y/N mapping discipline
+  - QnA integration thresholding: `ScoreThreshold` vs ranking algorithm property
+  - Multi-select endpoint question discipline: select exactly two valid API endpoints
+- Final weak-point patch list (pre-exam):
+  - RBAC boundary: OpenAI User (inference) vs OpenAI Contributor (fine-tune/deploy/manage)
+  - Hotspot method: solve each statement independently before choosing composite option
+  - Ordering questions: create/configure before run/connect patterns in Bot and deployment flows
+  - Search/Knowledge store: distinguish index, skillset, indexer, projections, and storage targets
+- Notes: _fill in your own words_
+- Next action: Light review + exam-day rest and confidence run
