@@ -2,6 +2,15 @@
 
 A VS Code agent-powered system for structured Microsoft certification exam preparation. Uses GitHub Copilot custom agents to orchestrate research, study planning, and daily drill sessions.
 
+## 🏆 Certifications Earned
+
+Exams passed using this prep system:
+
+| Exam | Certification | Credential | Score Report |
+|------|---------------|------------|--------------|
+| **DP-800** | Microsoft Certified: SQL AI Developer Associate | [View credential](https://learn.microsoft.com/api/credentials/share/en-gb/VarunPatkar/2EC3461E6479548?sharingId=255AC49FFD10B95B) | [View PDF](DP-800%20Prep/DP-800-score-report.pdf) |
+| **AI-102** | Microsoft Certified: Azure AI Engineer Associate | [View credential](https://learn.microsoft.com/api/credentials/share/en-gb/VarunPatkar/57E88FFE28157FDB?sharingId=255AC49FFD10B95B) | [View PDF](AI-102%20Prep/AI-102-score-report.pdf) |
+
 ## How It Works
 
 Three custom agents work together:
