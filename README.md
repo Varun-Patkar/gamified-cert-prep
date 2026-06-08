@@ -2,9 +2,9 @@
 
 A VS Code agent-powered system for structured Microsoft certification exam preparation. Uses GitHub Copilot custom agents to orchestrate research, study planning, and daily drill sessions.
 
-## 🏆 Certifications Earned
+## 🏆 Certifications Earned with Help of Agent
 
-Exams passed using this prep system:
+These exams were passed using this prep system:
 
 | Exam | Certification | Credential | Score Report |
 |------|---------------|------------|--------------|
