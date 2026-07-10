@@ -1,0 +1,22 @@
+{
+  "name": "post-quiz-commit",
+  "description": "Auto-commit exam prep progress after quiz completion with semantically meaningful commit message",
+  "event": "PostToolUse",
+  "trigger": {
+    "toolName": "run_in_terminal",
+    "commandPattern": "quiz_runner\\.py.*--day-lock"
+  },
+  "condition": {
+    "requireExitCode": 0,
+    "requireFile": "session-results.json"
+  },
+  "action": {
+    "type": "runScript",
+    "script": ".github/hooks/scripts/auto-commit-after-quiz.ps1",
+    "cwd": "."
+  },
+  "skipIf": {
+    "noGitRepo": true,
+    "noChanges": true
+  }
+}

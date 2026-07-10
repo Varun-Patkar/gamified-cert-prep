@@ -302,6 +302,20 @@ python quiz_runner.py questions.json --day-lock <today_day_number> --carryover 3
 - Preview tomorrow's topic to set expectations
 - Encourage the user: acknowledge their progress
 
+### Step 5.5: Auto-Commit (POST-QUIZ HOOK)
+
+After quiz completion, the `post-quiz-commit` hook automatically:
+1. Reads `session-results.json` (exam code, accuracy, correct/wrong counts)
+2. Extracts day number and topic from `progress.md` daily log
+3. Generates a semantically meaningful commit message: `"Day N session: [Topic], X/Y (acc%) — [key trap]"`
+4. Runs `git add -A && git commit && git push` to save progress
+
+**Example commit messages:**
+- `"Day 2 session: GH-300 plans & licensing, 22/23 (95.7%) — audit logs distinction"`
+- `"Day 5 session: AI-102 Foundry & GenAI basics, 28/28 (100%)"` _(no trap for perfect scores)_
+
+The hook ensures that progress is automatically saved to git after every quiz, with a meaningful message that captures what was learned (or struggled with). The user does not need to do anything—it runs automatically after `quiz_runner.py --day-lock X` completes.
+
 ## Teaching Philosophy
 
 - **Concept over cramming**: MS Learn is accessible during the exam. Teach understanding, not memorization.
@@ -322,4 +336,41 @@ python quiz_runner.py questions.json --day-lock <today_day_number> --carryover 3
 - ALWAYS update progress.md at session end.
 - ALWAYS show encouragement and progress stats.
 - If the user seems to be struggling with a topic, slow down and re-explain with different examples rather than moving forward.
+
+## Hooks
+
+This agent integrates with the following hooks for automation:
+
+### `post-quiz-commit` Hook
+
+**Location**: `.github/hooks/post-quiz-commit.json`
+
+**Trigger**: After `quiz_runner.py --day-lock X` completes successfully (exit code 0)
+
+**What it does**:
+1. Detects quiz completion by checking for `session-results.json`
+2. Reads exam results (accuracy, correct/wrong counts, wrong question details)
+3. Extracts day number and topic from `progress.md` daily log
+4. Generates a semantically meaningful commit message:
+   - Format: `"Day N session: [Topic], X/Y (acc%) — [key trap]"`
+   - If 100% accuracy: commits without trap hint
+   - Truncates to 72 characters per git best practices
+5. Automatically runs: `git add -A && git commit && git push`
+
+**Example outputs**:
+```
+Day 2 session: GH-300 plans & licensing, 22/23 (95.7%) — audit logs distinction
+Day 5 session: AI-102 Foundry & GenAI basics, 28/28 (100%)
+Day 8 session: Image analysis & CV models, 19/22 (86.4%) — confidence scores
+```
+
+**Conditions for execution**:
+- Workspace is a git repository (skips if not)
+- There are uncommitted changes (skips if no changes)
+- `session-results.json` exists in the exam folder (skips if missing)
+- Quiz completed with exit code 0 (skips on failure)
+
+**Script**: `.github/hooks/scripts/auto-commit-after-quiz.ps1` (PowerShell)
+
+The hook runs automatically after every quiz. No user action required.
 ```
