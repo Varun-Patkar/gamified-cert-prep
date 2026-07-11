@@ -20,11 +20,11 @@
 - [x] Practice: 29 questions on Domain 1 (--day-lock 1)
 - Note: q027 wrong — offensive/unsafe content → Reliability & Safety (not Reliability alone)
 
-### Day 2 (2026-07-10) — Domain 2: IDE & Inline Suggestions
-- [ ] Study: Enabling Copilot in IDE (VS Code, JetBrains, Visual Studio)
-- [ ] Study: Inline suggestions, keyboard shortcuts (Tab, Esc, Alt+\, Alt+[, Alt+])
-- [ ] Study: Chat panel vs. inline chat; Plan Mode
-- [ ] Practice: 23 questions (--day-lock 2)
+### ~~Day 2 (2026-07-10) — Domain 2: IDE & Inline Suggestions~~
+- [x] Study: Enabling Copilot in IDE (VS Code, JetBrains, Visual Studio)
+- [x] Study: Inline suggestions, keyboard shortcuts (Tab, Esc, Alt+\, Alt+[, Alt+])
+- [x] Study: Chat panel vs. inline chat; Plan Mode
+- [x] Practice: 23 questions (--day-lock 2)
 - Estimated time: 2 hrs
 
 ### Day 3 (2026-07-11) — Domain 2: GitHub Copilot CLI

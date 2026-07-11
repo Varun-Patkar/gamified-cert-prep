@@ -57,10 +57,15 @@ if (-not (Test-Path $progressFile)) {
 
 $progressContent = Get-Content $progressFile -Raw
 
-# Extract current day from daily log (last row)
-$dailyLogMatch = $progressContent -match '\|\s*(\d+)\s*\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*([^|]+)\s*\|'
-$dayNum = $matches[1] -as [int]
-$topic = $matches[3].Trim()
+# Extract current day from daily log (LAST data row, i.e. most recent session)
+$dayMatches = [regex]::Matches($progressContent, '\|\s*(\d+)\s*\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*([^|]+?)\s*\|')
+if ($dayMatches.Count -eq 0) {
+    Write-Warning "Could not extract day number from progress.md"
+    exit 0
+}
+$lastMatch = $dayMatches[$dayMatches.Count - 1]
+$dayNum = $lastMatch.Groups[1].Value -as [int]
+$topic = $lastMatch.Groups[3].Value.Trim()
 
 if (-not $dayNum) {
     Write-Warning "Could not extract day number from progress.md"

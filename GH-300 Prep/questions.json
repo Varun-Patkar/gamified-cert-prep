@@ -923,18 +923,19 @@
             "B. Visual Studio Code",
             "C. Visual Studio",
             "D. JetBrains IDEs",
-            "E. GitHub Desktop"
+            "E. GitHub Copilot app (desktop)"
           ],
-          "explanation": "**Copilot Chat** is supported on **GitHub.com** and inside major IDEs including **VS Code**, **Visual Studio**, and **JetBrains IDEs**. **GitHub Desktop** is **not** a supported Copilot Chat surface.\n\n**Tips:** - “Chatting about code in the **browser (GitHub.com)** or in **VS Code / Visual Studio / JetBrains**” means **Copilot Chat**.\n- References to **GitHub Desktop** are distractors.\n\n**Key Point:** Know the supported **surfaces**: **GitHub.com** and **IDE integrations**. This is a frequent exam discriminator.",
+          "explanation": "**Copilot Chat** is supported on **GitHub.com**, inside major IDEs (**VS Code**, **Visual Studio**, **JetBrains IDEs**), and in the standalone **GitHub Copilot app** for desktop (macOS/Windows/Linux, GA June 2026) — the native home for agent-driven sessions and chat-style prompts.\n\n**Tips:** - “Chatting about code in the **browser (GitHub.com)**, an **IDE (VS Code / Visual Studio / JetBrains)**, or the **GitHub Copilot desktop app**” all mean **Copilot Chat**.\n- Don't confuse the **GitHub Copilot app** (standalone desktop app, a full Copilot surface) with **GitHub Desktop** (the Git GUI, which only has Copilot *features* like commit-message generation and conflict resolution — **not** a full Chat panel).\n\n**Key Point:** Know the supported **surfaces**: **GitHub.com**, **IDE integrations**, and the **GitHub Copilot desktop app**. GitHub Desktop remains a common distractor.",
           "topic": "2.x",
           "difficulty": "medium",
-          "source": "ElmentorProgram/gh-300 (detailed)",
+          "source": "ElmentorProgram/gh-300 (detailed) — updated 2026-07 for GitHub Copilot app GA",
           "type": "multi",
           "correctAnswers": [
             "A",
             "B",
             "C",
-            "D"
+            "D",
+            "E"
           ]
         },
         {
