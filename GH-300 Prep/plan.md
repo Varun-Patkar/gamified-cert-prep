@@ -27,19 +27,21 @@
 - [x] Practice: 23 questions (--day-lock 2)
 - Estimated time: 2 hrs
 
-### Day 3 (2026-07-11) — Domain 2: GitHub Copilot CLI
-- [ ] Study: `gh copilot suggest`, `gh copilot explain` commands
-- [ ] Study: CLI installation steps; interactive vs. session mode
-- [ ] Study: Script generation and file management via CLI
-- [ ] Practice: 23 questions (--day-lock 3)
+### ~~Day 3 (2026-07-11) — Domain 2: GitHub Copilot CLI~~ ✅ 23/26 (88.5%)
+- [x] Study: `gh copilot suggest`, `gh copilot explain` commands
+- [x] Study: CLI installation steps; interactive vs. session mode
+- [x] Study: Script generation and file management via CLI
+- [x] Practice: 26 questions (--day-lock 3 with 3 carryover)
+- Note: Review q070 (GHEC does not bundle Copilot), q076 ("Copilot Premium" is not a plan), and q083 (code referencing has user and organization/enterprise scopes)
 - Estimated time: 2 hrs
 
-### Day 4 (2026-07-12) — Domain 2: Agent Mode, Edit Mode, MCP
-- [ ] Study: Agent Mode capabilities (multi-step, tool use, MCP servers)
-- [ ] Study: Edit Mode (multi-file edits; differences from Agent Mode)
-- [ ] Study: Model Context Protocol (MCP) — what it is, how Copilot uses it
-- [ ] Study: Sub-agents and agent session management
-- [ ] Practice: 23 questions (--day-lock 4)
+### ~~Day 4 (2026-07-12) — Domain 2: Agent Mode, Edit Mode, MCP~~ ✅ 24/26 (92.3%)
+- [x] Study: Agent Mode capabilities (multi-step, tool use, MCP servers)
+- [x] Study: Edit Mode (multi-file edits; differences from Agent Mode)
+- [x] Study: Model Context Protocol (MCP) — what it is, how Copilot uses it
+- [x] Study: Sub-agents and agent session management
+- [x] Practice: 26 questions (--day-lock 4 with 3 carryover)
+- Note: Review q133 (Business starts org-level governance; Enterprise inherits it) and q121 (safe secret prompts require explicit fail-fast and log-safe constraints)
 - Estimated time: 2.5 hrs
 
 ### Day 5 (2026-07-13) — Domain 2: Code Review, PR Summaries, Spaces
