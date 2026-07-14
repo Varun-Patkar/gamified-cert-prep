@@ -2,9 +2,9 @@
 
 ## Overall
 
-- Sessions Completed: 5 / 30
-- Questions Answered: 130 / 252
-- Accuracy: 93.8%
+- Sessions Completed: 6 / 30
+- Questions Answered: 156 / 252
+- Accuracy: 93.6%
 - Target Exam Date: 2026-08-08
 
 ## Domain Progress
@@ -12,7 +12,7 @@
 | Domain                               | Questions | Answered | Accuracy |
 | ------------------------------------ | --------- | -------- | -------- |
 | D1 - Responsible AI (15-20%)         | 29        | 29       | 100% ✅  |
-| D2 - Features (25-30%)               | 138       | 101      | 93.1%    |
+| D2 - Features (25-30%)               | 138       | 127      | 92.9%    |
 | D3 - Data & Architecture (10-15%)    | 7         | 0        | N/A      |
 | D4 - Prompt Engineering (10-15%)     | 21        | 0        | N/A      |
 | D5 - Developer Productivity (10-15%) | 30        | 0        | N/A      |
@@ -27,3 +27,4 @@
 | 3   | 2026-07-11 | D2 Copilot CLI, Plans & Governance           | 26  | 23      | 88.5%    | Wrong: q070 (GHEC does NOT bundle Copilot; 30-day trial only), q076 ("Copilot Premium" is not a real plan), q083 (code referencing = user + org/enterprise scopes) |
 | 4   | 2026-07-12 | D2 Agent Mode, Edit Mode & MCP               | 26  | 24      | 92.3%    | Wrong: q133 (Business is baseline for org controls; Enterprise inherits them), q121 (safe secret prompt: no hardcoding, fail fast, log-safe)                       |
 | 5   | 2026-07-13 | D2 Code Review, PR Summaries, Spaces & Spark | 26  | 25      | 96.2%    | Wrong: q160 (organization-wide repository/code controls start with Business; Enterprise inherits and extends them)                                                 |
+| 6   | 2026-07-14 | D2 Copilot Cloud Agent & Governance          | 26  | 24      | 92.3%    | Wrong: q196, q206 (Free includes IDE agent mode, not cloud/coding agent; cloud agent requires a paid Copilot plan)                                                 |

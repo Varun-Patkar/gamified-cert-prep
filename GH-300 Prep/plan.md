@@ -58,12 +58,13 @@
 - Note: Review q160 — organization-level repository/code access controls begin with Copilot Business; Enterprise inherits them and adds enterprise-level capabilities.
 - Estimated time: 2 hrs
 
-### Day 6 (2026-07-14) — Domain 2: Org Policies, REST API, Audit
+### ~~Day 6 (2026-07-14) — Domain 2: Org Policies, REST API, Audit~~ ✅ 24/26 (92.3%)
 
-- [ ] Study: Organization-wide Copilot policy management
-- [ ] Study: Enabling/disabling features by policy (business vs. enterprise)
-- [ ] Study: Audit log events for Copilot; REST API subscription management
-- [ ] Practice: 23 questions (--day-lock 6)
+- [x] Study: Organization-wide Copilot policy management
+- [x] Study: Enabling/disabling features by policy (business vs. enterprise)
+- [x] Study: Audit log events for Copilot; REST API subscription management
+- [x] Practice: 26 questions (--day-lock 6 with 3 carryover; 24/26 = 92.3%)
+- Note: Review q196 and q206 — Copilot Free includes IDE agent mode, but cloud/coding agent is available only with paid Copilot plans.
 - Estimated time: 2 hrs
 
 ### Day 7 (2026-07-15) — Domain 2: Catch-up & Overflow
