@@ -67,12 +67,13 @@
 - Note: Review q196 and q206 — Copilot Free includes IDE agent mode, but cloud/coding agent is available only with paid Copilot plans.
 - Estimated time: 2 hrs
 
-### Day 7 (2026-07-15) — Domain 2: Catch-up & Overflow
+### ~~Day 7 (2026-07-15) — Domain 2: Catch-up & Overflow~~ ✅ 25/26 (96.2%)
 
-- [ ] Study: Slash commands comprehensive review (/explain, /fix, /test, /doc, /new)
-- [ ] Study: Chat participants (@workspace, @github, @terminal, @vscode)
-- [ ] Study: Prompt file reuse (`.github/copilot-instructions.md`)
-- [ ] Practice: 23 questions (--day-lock 7)
+- [x] Study: Edit mode vs Agent mode vs coding agent decision matrix; coding-agent safety guardrails
+- [x] Study: PR summaries/review suggestions (advisory), branch protections & CODEOWNERS, policy hierarchy, repository-aware chat
+- [x] Study: Slash commands review (/explain, /fix, /test, /doc, /new), chat participants (@workspace, @github, @terminal, @vscode), `.github/copilot-instructions.md`
+- [x] Practice: 26 questions (--day-lock 7 with 3 carryover; 25/26 = 96.2%)
+- Note: Review q235 — **Edit mode** = targeted, reviewable diffs on a small, well-scoped change; multi-step edits + commands + PR = **Agent mode**.
 - Estimated time: 2 hrs
 
 ### Day 8 (2026-07-16) — Domain 3: Data & Architecture
