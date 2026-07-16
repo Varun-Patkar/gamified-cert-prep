@@ -76,13 +76,14 @@
 - Note: Review q235 — **Edit mode** = targeted, reviewable diffs on a small, well-scoped change; multi-step edits + commands + PR = **Agent mode**.
 - Estimated time: 2 hrs
 
-### Day 8 (2026-07-16) — Domain 3: Data & Architecture
+### ~~Day 8 (2026-07-16) — Domain 3: Data & Architecture~~ ✅ 9/10 (90%)
 
-- [ ] Study: How Copilot builds prompts (surrounding code, open files, cursor position)
-- [ ] Study: Proxy filtering and post-processing pipeline
-- [ ] Study: Data flow: user input → proxy → LLM → response → IDE
-- [ ] Study: LLM limitations; nondeterminism; token limits; hallucination
-- [ ] Practice: 7 questions (--day-lock 8) — light quiz, spend more time on concepts
+- [x] Study: How Copilot builds prompts (surrounding code, open files, cursor position)
+- [x] Study: Proxy filtering and post-processing pipeline
+- [x] Study: Data flow: user input → proxy → LLM → response → IDE
+- [x] Study: LLM limitations; nondeterminism; token limits; hallucination
+- [x] Practice: 10 questions (--day-lock 8 with 3 D2 carryover; 9/10 = 90%)
+- Note: Review q214 — Copilot prompts + allowed context are processed by the **Copilot cloud service**, which relays the request to the selected AI model (shaped by content-exclusion/policy) — **not** local-only, GHES-only, or CI-runner processing.
 - Lab: Read https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot-individual
 - Estimated time: 2 hrs
 
