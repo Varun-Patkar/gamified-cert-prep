@@ -87,12 +87,12 @@
 - Lab: Read https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot-individual
 - Estimated time: 2 hrs
 
-### Day 9 (2026-07-17) — Domain 4: Prompt Engineering Part 1
+### ~~Day 9 (2026-07-17) — Domain 4: Prompt Engineering Part 1~~ ✅ 14/14 (100%)
 
-- [ ] Study: Prompt structure (instruction, context, input data, output indicator)
-- [ ] Study: Zero-shot vs. few-shot vs. one-shot prompting
-- [ ] Study: How Copilot determines context (open tabs, file type, comments)
-- [ ] Practice: 11 questions (--day-lock 9)
+- [x] Study: Prompt structure (instruction, context, input data, output indicator)
+- [x] Study: Zero-shot vs. few-shot vs. one-shot prompting
+- [x] Study: How Copilot determines context (open tabs, file type, comments)
+- [x] Practice: 11 questions + 3 D3 carryover (--day-lock 9; 14/14 = 100%)
 - Estimated time: 1.5 hrs
 
 ### Day 10 (2026-07-18) — Domain 4: Prompt Engineering Part 2
