@@ -2,9 +2,9 @@
 
 ## Overall
 
-- Sessions Completed: 9 / 30
-- Questions Answered: 206 / 252
-- Accuracy: 94.2%
+- Sessions Completed: 10 / 30
+- Questions Answered: 219 / 252
+- Accuracy: 94.5%
 - Target Exam Date: 2026-08-08
 
 ## Domain Progress
@@ -14,7 +14,7 @@
 | D1 - Responsible AI (15-20%)         | 29        | 29       | 100% ✅  |
 | D2 - Features (25-30%)               | 138       | 156      | 93.6%    |
 | D3 - Data & Architecture (10-15%)    | 7         | 7        | 85.7%    |
-| D4 - Prompt Engineering (10-15%)     | 21        | 11       | 100% ✅  |
+| D4 - Prompt Engineering (10-15%)     | 21        | 24       | 100% ✅  |
 | D5 - Developer Productivity (10-15%) | 30        | 0        | N/A      |
 | D6 - Privacy & Config (10-15%)       | 27        | 0        | N/A      |
 
@@ -31,3 +31,4 @@
 | 7   | 2026-07-15 | D2 Catch-up & Overflow (Edit vs Agent, agent safety, PR review)    | 26  | 25      | 96.2%    | Wrong: q235 (chose Agent-mode description; Edit mode = targeted, reviewable diffs on a small, well-scoped change)                                                                      |
 | 8   | 2026-07-16 | D3 Data & Architecture (data flow, privacy, prompting, exclusions) | 10  | 9       | 90.0%    | Wrong: q214 (chose CI-runners; correct = Copilot cloud service relays prompts+context to the AI model — not local/GHES/CI)                                                             |
 | 9   | 2026-07-17 | D4 Prompt Engineering Part 1 (+3 D3 carryover)                     | 14  | 14      | 100%     | Perfect run. Reinforced q214 (cloud service processing), q215 (private code not used to train shared models by default), q232 (fix flaky tests at root — mocks/deterministic fixtures) |
+| 10  | 2026-07-18 | D4 Prompt Engineering Part 2 (+3 carryover)                        | 13  | 13      | 100%     | Perfect run in 3m 29s. Strong on precise constraints, bounded refactors, structured output, performance, security, privacy, and multi-turn prompting.                                  |

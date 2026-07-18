@@ -95,12 +95,13 @@
 - [x] Practice: 11 questions + 3 D3 carryover (--day-lock 9; 14/14 = 100%)
 - Estimated time: 1.5 hrs
 
-### Day 10 (2026-07-18) — Domain 4: Prompt Engineering Part 2
+### ~~Day 10 (2026-07-18) — Domain 4: Prompt Engineering Part 2~~ ✅ 13/13 (100%)
 
-- [ ] Study: Best practices (specific, contextual, iterative, divide complex tasks)
-- [ ] Study: Chat history usage in multi-turn conversations
-- [ ] Study: Prompt engineering principles for Copilot Chat vs. inline
-- [ ] Practice: 10 questions (--day-lock 10)
+- [x] Study: Best practices (specific, contextual, iterative, divide complex tasks)
+- [x] Study: Chat history usage in multi-turn conversations
+- [x] Study: Prompt engineering principles for Copilot Chat vs. inline
+- [x] Practice: 10 assigned questions + 3 carryover (--day-lock 10; 13/13 = 100%)
+- Note: Perfect run in 3m 29s; no weak areas identified.
 - Estimated time: 1.5 hrs
 
 ### Day 11 (2026-07-19) — Domain 5: Developer Productivity Part 1
