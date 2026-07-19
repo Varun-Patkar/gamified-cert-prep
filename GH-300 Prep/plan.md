@@ -104,12 +104,13 @@
 - Note: Perfect run in 3m 29s; no weak areas identified.
 - Estimated time: 1.5 hrs
 
-### Day 11 (2026-07-19) — Domain 5: Developer Productivity Part 1
+### ~~Day 11 (2026-07-19) — Domain 5: Developer Productivity Part 1~~ ✅ 17/18 (94.4%)
 
-- [ ] Study: Code generation patterns, refactoring with Copilot
-- [ ] Study: Documentation generation; inline docs vs. docstrings
-- [ ] Study: Legacy code modernization; sample data generation
-- [ ] Practice: 15 questions (--day-lock 11)
+- [x] Study: Code generation patterns, refactoring with Copilot
+- [x] Study: Documentation generation; inline docs vs. docstrings
+- [x] Study: Legacy code modernization; sample data generation
+- [x] Practice: 15 assigned questions + 3 D4 carryover (--day-lock 11; 17/18 = 94.4%)
+- Note: Review q138 — exploring unfamiliar APIs and libraries is an advanced developer use case; non-development HR, legal, and administrative workflows are outside Copilot's coding-assistant scope.
 - Estimated time: 2 hrs
 
 ### Day 12 (2026-07-20) — Domain 5: Developer Productivity Part 2

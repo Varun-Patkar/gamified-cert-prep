@@ -2,8 +2,8 @@
 
 ## Overall
 
-- Sessions Completed: 10 / 30
-- Questions Answered: 219 / 252
+- Sessions Completed: 11 / 30
+- Questions Answered: 237 / 252
 - Accuracy: 94.5%
 - Target Exam Date: 2026-08-08
 
@@ -14,8 +14,8 @@
 | D1 - Responsible AI (15-20%)         | 29        | 29       | 100% ✅  |
 | D2 - Features (25-30%)               | 138       | 156      | 93.6%    |
 | D3 - Data & Architecture (10-15%)    | 7         | 7        | 85.7%    |
-| D4 - Prompt Engineering (10-15%)     | 21        | 24       | 100% ✅  |
-| D5 - Developer Productivity (10-15%) | 30        | 0        | N/A      |
+| D4 - Prompt Engineering (10-15%)     | 21        | 27       | 100% ✅  |
+| D5 - Developer Productivity (10-15%) | 30        | 15       | 93.3%    |
 | D6 - Privacy & Config (10-15%)       | 27        | 0        | N/A      |
 
 ## Daily Log
@@ -32,3 +32,4 @@
 | 8   | 2026-07-16 | D3 Data & Architecture (data flow, privacy, prompting, exclusions) | 10  | 9       | 90.0%    | Wrong: q214 (chose CI-runners; correct = Copilot cloud service relays prompts+context to the AI model — not local/GHES/CI)                                                             |
 | 9   | 2026-07-17 | D4 Prompt Engineering Part 1 (+3 D3 carryover)                     | 14  | 14      | 100%     | Perfect run. Reinforced q214 (cloud service processing), q215 (private code not used to train shared models by default), q232 (fix flaky tests at root — mocks/deterministic fixtures) |
 | 10  | 2026-07-18 | D4 Prompt Engineering Part 2 (+3 carryover)                        | 13  | 13      | 100%     | Perfect run in 3m 29s. Strong on precise constraints, bounded refactors, structured output, performance, security, privacy, and multi-turn prompting.                                  |
+| 11  | 2026-07-19 | D5 Developer Productivity Part 1 (+3 D4 carryover)                 | 18  | 17      | 94.4%    | Wrong: q138 (advanced developer use case = exploring unfamiliar APIs/libraries; HR, legal, and administrative automation are outside Copilot's coding-assistant scope)                 |
