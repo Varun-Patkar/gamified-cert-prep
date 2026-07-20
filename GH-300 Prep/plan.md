@@ -113,12 +113,13 @@
 - Note: Review q138 — exploring unfamiliar APIs and libraries is an advanced developer use case; non-development HR, legal, and administrative workflows are outside Copilot's coding-assistant scope.
 - Estimated time: 2 hrs
 
-### Day 12 (2026-07-20) — Domain 5: Developer Productivity Part 2
+### ~~Day 12 (2026-07-20) — Domain 5: Developer Productivity Part 2~~ ✅ 17/18 (94.4%)
 
-- [ ] Study: Test generation (unit, integration); edge cases and assertions
-- [ ] Study: Security improvement suggestions; performance optimizations
-- [ ] Study: Accelerating learning, reducing context switching
-- [ ] Practice: 15 questions (--day-lock 12)
+- [x] Study: Test generation (unit, integration); edge cases and assertions
+- [x] Study: Security improvement suggestions; performance optimizations
+- [x] Study: Accelerating learning, reducing context switching
+- [x] Practice: 15 assigned questions + 3 carryover (--day-lock 12; 17/18 = 94.4%)
+- Note: Review q227 — Copilot can draft and refine test code, but CI/test execution is performed by the configured automation pipeline, such as GitHub Actions.
 - Estimated time: 2 hrs
 
 ### Day 13 (2026-07-21) — Domain 6: Privacy & Content Exclusions Part 1
