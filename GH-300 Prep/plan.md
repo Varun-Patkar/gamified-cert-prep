@@ -122,12 +122,13 @@
 - Note: Review q227 — Copilot can draft and refine test code, but CI/test execution is performed by the configured automation pipeline, such as GitHub Actions.
 - Estimated time: 2 hrs
 
-### Day 13 (2026-07-21) — Domain 6: Privacy & Content Exclusions Part 1
+### ~~Day 13 (2026-07-21) — Domain 6: Privacy & Content Exclusions Part 1~~ ✅ 16/17 (94.1%)
 
-- [ ] Study: Content exclusion configuration (repository vs. org level)
-- [ ] Study: `.copilotignore` file syntax and behavior
-- [ ] Study: Duplication detection ("Suggestions matching public code") — scopes
-- [ ] Practice: 14 questions (--day-lock 13)
+- [x] Study: Content exclusion configuration (repository vs. org level)
+- [x] Study: Current GitHub settings and REST API path rules (`fnmatch`); `.copilotignore` is not a documented exclusion mechanism
+- [x] Study: Duplication detection ("Suggestions matching public code") — scopes
+- [x] Practice: 14 assigned questions + 3 D5 carryover (--day-lock 13; 16/17 = 94.1%)
+- Note: Review q140 — similar or near-matching public-code output maps to code referencing / suggestions matching public code; content exclusion only bounds input context.
 - Estimated time: 2 hrs
 
 ### Day 14 (2026-07-22) — Domain 6: Privacy & Content Exclusions Part 2

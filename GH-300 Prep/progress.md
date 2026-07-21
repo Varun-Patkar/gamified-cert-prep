@@ -2,8 +2,8 @@
 
 ## Overall
 
-- Sessions Completed: 12 / 30
-- Questions Answered: 255 / 252
+- Sessions Completed: 13 / 30
+- Questions Answered: 272 / 252
 - Accuracy: 94.5%
 - Target Exam Date: 2026-08-08
 
@@ -15,8 +15,8 @@
 | D2 - Features (25-30%)               | 138       | 156      | 93.6%    |
 | D3 - Data & Architecture (10-15%)    | 7         | 7        | 85.7%    |
 | D4 - Prompt Engineering (10-15%)     | 21        | 27       | 100% ✅  |
-| D5 - Developer Productivity (10-15%) | 30        | 33       | 93.9%    |
-| D6 - Privacy & Config (10-15%)       | 27        | 0        | N/A      |
+| D5 - Developer Productivity (10-15%) | 30        | 36       | 94.4%    |
+| D6 - Privacy & Config (10-15%)       | 27        | 14       | 92.9%    |
 
 ## Daily Log
 
@@ -34,3 +34,4 @@
 | 10  | 2026-07-18 | D4 Prompt Engineering Part 2 (+3 carryover)                        | 13  | 13      | 100%     | Perfect run in 3m 29s. Strong on precise constraints, bounded refactors, structured output, performance, security, privacy, and multi-turn prompting.                                  |
 | 11  | 2026-07-19 | D5 Developer Productivity Part 1 (+3 D4 carryover)                 | 18  | 17      | 94.4%    | Wrong: q138 (advanced developer use case = exploring unfamiliar APIs/libraries; HR, legal, and administrative automation are outside Copilot's coding-assistant scope)                 |
 | 12  | 2026-07-20 | D5 Developer Productivity Part 2 (+3 carryover)                    | 18  | 17      | 94.4%    | Wrong: q227 (Copilot drafts and refines tests; CI/test execution belongs to the configured automation pipeline, such as GitHub Actions)                                                |
+| 13  | 2026-07-21 | D6 Privacy & Content Exclusions Part 1 (+3 D5 carryover)           | 17  | 16      | 94.1%    | Wrong: q140 (similar or near-matching public-code output is governed by code referencing / suggestions matching public code; content exclusion controls input context)                 |
