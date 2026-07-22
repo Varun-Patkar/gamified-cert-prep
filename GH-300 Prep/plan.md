@@ -131,12 +131,13 @@
 - Note: Review q140 — similar or near-matching public-code output maps to code referencing / suggestions matching public code; content exclusion only bounds input context.
 - Estimated time: 2 hrs
 
-### Day 14 (2026-07-22) — Domain 6: Privacy & Content Exclusions Part 2
+### ~~Day 14 (2026-07-22) — Domain 6: Privacy & Content Exclusions Part 2~~ ✅ 13/16 (81.3%)
 
-- [ ] Study: Output ownership and copyright considerations
-- [ ] Study: Telemetry settings (user-level vs. org-level opt-out)
-- [ ] Study: Data retention policies; Business vs. Enterprise privacy guarantees
-- [ ] Practice: 13 questions (--day-lock 14)
+- [x] Study: Output ownership and copyright considerations
+- [x] Study: Telemetry settings (user-level vs. org-level opt-out)
+- [x] Study: Data retention policies; Business vs. Enterprise privacy guarantees
+- [x] Practice: 13 assigned questions + 3 D6 carryover (--day-lock 14; 13/16 = 81.3%)
+- Note: Distracted workday (21m 51s). Review q150 — duplication detection handles exact long public-code matches; q165 — Copilot Business is the first plan with organization-admin public-code matching policy; q169 — repository-level content exclusions are available with Copilot Business and Enterprise.
 - Estimated time: 1.5 hrs
 
 ---
