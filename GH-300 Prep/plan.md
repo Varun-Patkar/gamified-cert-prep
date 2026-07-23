@@ -144,12 +144,13 @@
 
 ## Phase 2: Consolidation & Cross-Domain (Days 15–17)
 
-### Day 15 (2026-07-23) — D1 + D3 + D4 Consolidation
+### ~~Day 15 (2026-07-23) — D1 + D3 + D4 Consolidation~~ ✅ 21/22 (95.5%)
 
-- [ ] Review: Responsible AI principles cheat sheet
-- [ ] Review: Data flow diagram + architecture notes
-- [ ] Review: Prompt engineering patterns
-- [ ] Practice: 19 questions cross-domain D1/D3/D4 (--day-lock 15)
+- [x] Review: Responsible AI principles cheat sheet
+- [x] Review: Data flow diagram + architecture notes
+- [x] Review: Prompt engineering patterns
+- [x] Practice: 22 questions cross-domain D1/D3/D4 (--day-lock 15; 21/22 = 95.5%)
+- Note: Review q122 — best "explain a file" prompt fixes **audience** (new backend hire), **sections** (purpose, data flows, dependencies, risks), AND **length cap** (5 bullets). An unbounded "thorough explanation, no strict length limit" is weaker for onboarding.
 - Estimated time: 2 hrs
 
 ### Day 16 (2026-07-24) — D5 + D6 Consolidation

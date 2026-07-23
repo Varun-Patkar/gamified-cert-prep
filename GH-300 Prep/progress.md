@@ -2,21 +2,21 @@
 
 ## Overall
 
-- Sessions Completed: 14 / 30
-- Questions Answered: 288 / 252
-- Accuracy: 93.8%
+- Sessions Completed: 15 / 30
+- Questions Answered: 310 / 252
+- Accuracy: 93.9%
 - Target Exam Date: 2026-08-08
 
 ## Domain Progress
 
 | Domain                               | Questions | Answered | Accuracy |
 | ------------------------------------ | --------- | -------- | -------- |
-| D1 - Responsible AI (15-20%)         | 29        | 29       | 100% ✅  |
+| D1 - Responsible AI (15-20%)         | 29        | 37       | 100% ✅  |
 | D2 - Features (25-30%)               | 138       | 156      | 93.6%    |
-| D3 - Data & Architecture (10-15%)    | 7         | 7        | 85.7%    |
-| D4 - Prompt Engineering (10-15%)     | 21        | 27       | 100% ✅  |
+| D3 - Data & Architecture (10-15%)    | 7         | 11       | 90.9%    |
+| D4 - Prompt Engineering (10-15%)     | 21        | 34       | 97.1%    |
 | D5 - Developer Productivity (10-15%) | 30        | 36       | 94.4%    |
-| D6 - Privacy & Config (10-15%)       | 27        | 30       | 86.7%    |
+| D6 - Privacy & Config (10-15%)       | 27        | 33       | 87.9%    |
 
 ## Daily Log
 
@@ -36,3 +36,4 @@
 | 12  | 2026-07-20 | D5 Developer Productivity Part 2 (+3 carryover)                    | 18  | 17      | 94.4%    | Wrong: q227 (Copilot drafts and refines tests; CI/test execution belongs to the configured automation pipeline, such as GitHub Actions)                                                                                         |
 | 13  | 2026-07-21 | D6 Privacy & Content Exclusions Part 1 (+3 D5 carryover)           | 17  | 16      | 94.1%    | Wrong: q140 (similar or near-matching public-code output is governed by code referencing / suggestions matching public code; content exclusion controls input context)                                                          |
 | 14  | 2026-07-22 | D6 Privacy & Content Exclusions Part 2 (+3 D6 carryover)           | 16  | 13      | 81.3%    | Distracted workday (21m 51s). Wrong: q150 (exact long public-code matches use duplication detection), q165 (Business starts org-admin matching policy), q169 (Business/Enterprise support repository-level content exclusions). |
+| 15  | 2026-07-23 | D1+D3+D4 Consolidation (cross-domain)                             | 22  | 21      | 95.5%    | Strong run (12m 50s). D1 8/8, D3 4/4, D6 3/3, D4 6/7. Wrong: q122 (best explain-a-file prompt = D, which fixes audience + sections + length cap; picked C, which omits the length cap and audience scope).                       |
