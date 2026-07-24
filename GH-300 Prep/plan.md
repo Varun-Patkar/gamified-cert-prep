@@ -153,11 +153,12 @@
 - Note: Review q122 — best "explain a file" prompt fixes **audience** (new backend hire), **sections** (purpose, data flows, dependencies, risks), AND **length cap** (5 bullets). An unbounded "thorough explanation, no strict length limit" is weaker for onboarding.
 - Estimated time: 2 hrs
 
-### Day 16 (2026-07-24) — D5 + D6 Consolidation
+### ~~Day 16 (2026-07-24) — D1 + D3 + D4 Assignment Consolidation~~ ✅ 20/21 adjusted (95.2%)
 
-- [ ] Review: Productivity patterns; test gen; security hints
-- [ ] Review: Privacy settings comparison table (Free vs. Pro vs. Business vs. Enterprise)
-- [ ] Practice: 19 questions cross-domain D5/D6 (--day-lock 16)
+- [x] Review: Responsible AI principle selection and coding-agent boundaries
+- [x] Review: Content-exclusion plan scope and constrained prompt patterns
+- [x] Practice: 19 assigned questions + 3 carryover (--day-lock 16; raw 20/22, adjusted 20/21 after excluding q118 input glitch)
+- Note: The plan originally labeled Day 16 as D5+D6, but `day-assignments.json` supplied D1/D3/D4 questions. Genuine miss: q124 — CI-ready output requires format + schema + no prose.
 - Estimated time: 2 hrs
 
 ### Day 17 (2026-07-25) — D2 Deep Review
