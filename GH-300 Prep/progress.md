@@ -2,19 +2,19 @@
 
 ## Overall
 
-- Sessions Completed: 16 / 30
-- Questions Answered: 331 / 252
-- Accuracy: 94.0%
+- Sessions Completed: 17 / 30
+- Questions Answered: 353 / 252
+- Accuracy: 93.5%
 - Target Exam Date: 2026-08-08
 
 ## Domain Progress
 
 | Domain                               | Questions | Answered | Accuracy |
 | ------------------------------------ | --------- | -------- | -------- |
-| D1 - Responsible AI (15-20%)         | 29        | 49       | 100% ✅  |
+| D1 - Responsible AI (15-20%)         | 29        | 60       | 96.7%    |
 | D2 - Features (25-30%)               | 138       | 156      | 93.6%    |
-| D3 - Data & Architecture (10-15%)    | 7         | 13       | 92.3%    |
-| D4 - Prompt Engineering (10-15%)     | 21        | 41       | 95.1%    |
+| D3 - Data & Architecture (10-15%)    | 7         | 15       | 93.3%    |
+| D4 - Prompt Engineering (10-15%)     | 21        | 50       | 94.0%    |
 | D5 - Developer Productivity (10-15%) | 30        | 36       | 94.4%    |
 | D6 - Privacy & Config (10-15%)       | 27        | 33       | 87.9%    |
 
@@ -38,5 +38,6 @@
 | 14  | 2026-07-22 | D6 Privacy & Content Exclusions Part 2 (+3 D6 carryover)           | 16   | 13      | 81.3%    | Distracted workday (21m 51s). Wrong: q150 (exact long public-code matches use duplication detection), q165 (Business starts org-admin matching policy), q169 (Business/Enterprise support repository-level content exclusions). |
 | 15  | 2026-07-23 | D1+D3+D4 Consolidation (cross-domain)                              | 22   | 21      | 95.5%    | Strong run (12m 50s). D1 8/8, D3 4/4, D6 3/3, D4 6/7. Wrong: q122 (best explain-a-file prompt = D, which fixes audience + sections + length cap; picked C, which omits the length cap and audience scope).                      |
 | 16  | 2026-07-24 | D1+D3+D4 Assignment Consolidation                                  | 21\* | 20      | 95.2%\*  | Raw runner: 20/22 (90.9%) in 6m 55s. q118 excluded due to terminal input glitch; genuine miss: q124 (CI-ready output must specify machine-readable format + exact schema + no prose). D1 12/12, D3 2/2, D4 6/7 adjusted.        |
+| 17  | 2026-07-25 | D1+D4 Assignment Consolidation (plan said D2; assignment was D1/D4) | 22   | 19      | 86.4%    | 28m 42s (distracted). D1 9/11, D3 2/2, D4 8/9. Wrong: q009 + q019 (both Fairness — picked Transparency; "bias / representative data" = Fairness), q124 again (CI-ready output = format + schema + "no prose"). q124 is now a repeat miss — drill it.        |
 
 \* Adjusted grading excludes q118 only; the raw result remains unchanged in `session-results.json`.

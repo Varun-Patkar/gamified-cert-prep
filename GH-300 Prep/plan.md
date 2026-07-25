@@ -161,11 +161,13 @@
 - Note: The plan originally labeled Day 16 as D5+D6, but `day-assignments.json` supplied D1/D3/D4 questions. Genuine miss: q124 — CI-ready output requires format + schema + no prose.
 - Estimated time: 2 hrs
 
-### Day 17 (2026-07-25) — D2 Deep Review
+### ~~Day 17 (2026-07-25) — D1 + D4 Assignment Consolidation~~ ✅ 19/22 (86.4%)
 
-- [ ] Review: D2 is 25-30% of exam — revisit weak areas from days 2-7
-- [ ] Focus: MCP, Agent Mode, Edit Mode, org policies (most commonly tested)
-- [ ] Practice: 19 questions D2 focused (--day-lock 17)
+- Note: `plan.md` labeled this "D2 Deep Review," but `day-assignments.json` supplied D1 (11) + D4 (7) + D3 (1) questions. Strict quiz alignment takes precedence; the session taught the actual D1/D4/D3 assignment.
+- [x] Review: Responsible AI principle decision table (Fairness vs Inclusiveness vs Transparency)
+- [x] Review: Content-safety filters vs. code referencing; private-code training boundaries
+- [x] Practice: 19 assigned + 3 carryover (--day-lock 17; 19/22 = 86.4%)
+- Note: Distracted run (28m 42s). Wrong: q009 + q019 — "bias / representative data" = **Fairness**, not Transparency. q124 repeat miss — CI-ready output = format + schema + "no prose". **Drill q124 again.**
 - Estimated time: 2 hrs
 
 ---
