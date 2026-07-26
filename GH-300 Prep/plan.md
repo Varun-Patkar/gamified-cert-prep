@@ -174,10 +174,11 @@
 
 ## Phase 3: Mock Exam Rounds (Days 18–27)
 
-### Day 18 (2026-07-26) — Mock Round 1 (All Domains)
+### ~~Day 18 (2026-07-26) — Mock Round 1 (All Domains)~~ ✅ 26/27 (96.3%)
 
-- [ ] Practice: 25 questions mixed all domains (--day-lock 18)
-- [ ] Review wrong answers thoroughly
+- [x] Practice: 27 questions mixed all domains (--day-lock 18)
+- [x] Review wrong answers thoroughly
+- Note: Only miss was **q019 (Fairness)** — 3rd repeat miss. "Prevent discrimination / unbiased & representative training data" = **Fairness**, NOT Transparency. Drill before exam.
 - Estimated time: 2 hrs
 
 ### Day 19 (2026-07-27) — Mock Round 2 + Review
