@@ -2,9 +2,9 @@
 
 ## Overall
 
-- Sessions Completed: 19 / 30
-- Questions Answered: 408 / 252
-- Accuracy: 94.1%
+- Sessions Completed: 20 / 30
+- Questions Answered: 436 / 252
+- Accuracy: 94.0%
 - Target Exam Date: 2026-08-08
 
 ## Domain Progress
@@ -16,7 +16,7 @@
 | D3 - Data & Architecture (10-15%)    | 7         | 16       | 93.8%    |
 | D4 - Prompt Engineering (10-15%)     | 21        | 54       | 94.4%    |
 | D5 - Developer Productivity (10-15%) | 30        | 36       | 94.4%    |
-| D6 - Privacy & Config (10-15%)       | 27        | 34       | 88.2%    |
+| D6 - Privacy & Config (10-15%)       | 27        | 37       | 83.8%    |
 
 ## Daily Log
 
@@ -41,5 +41,6 @@
 | 17  | 2026-07-25 | D1+D4 Assignment Consolidation (plan said D2; assignment was D1/D4) | 22   | 19      | 86.4%    | 28m 42s (distracted). D1 9/11, D3 2/2, D4 8/9. Wrong: q009 + q019 (both Fairness — picked Transparency; "bias / representative data" = Fairness), q124 again (CI-ready output = format + schema + "no prose"). q124 is now a repeat miss — drill it.                                                           |
 | 18  | 2026-07-26 | Mock Round 1 — All Domains (D1–D6)                                  | 27   | 26      | 96.3%    | Fast, sharp run (4m 34s). D2 16/16, D4 1/1, D5 2/2, D6 2/2 all perfect; D1 5/6. Wrong: **q019 AGAIN** (Fairness — picked C Transparency, correct D Fairness). Now a **3rd repeat miss** on Fairness. HARD DRILL: "prevent discrimination / unbiased & representative data" = **Fairness**, never Transparency. |
 | 19  | 2026-07-27 | Mock Round 2 — All Domains (D1–D6)                                  | 28   | 28      | 100%     | 🏆 **PERFECT run** (11m 37s, razor-focused/well-rested Monday). D2 18/18, D4 4/4, D1 4/4, D3 1/1, D6 1/1. ✅ **q009 (Fairness) FINALLY correct** — broke the 4-miss Fairness streak. Keep force-correcting the Transparency instinct on exam day.                                                              |
+| 20  | 2026-07-28 | Mock Round 3 — All Domains (D1–D6) _(done early on 07-27)_           | 28   | 26      | 92.9%    | Fast run (8m 2s). ✅ Fairness/Transparency all correct this round. Both misses were the **"Business is the baseline" plan-tier trap** — picked Enterprise instead of Business: q169 (repo-level content exclusion = **Business**, not Enterprise) and q165 (org admin code-suggestion policy = **Business**, not Enterprise). **HARD DRILL: "org admin sets policy / repo-level exclusion" → Business.** Only pick Enterprise when stem says "enforce across multiple orgs / enterprise-wide."                              |
 
 \* Adjusted grading excludes q118 only; the raw result remains unchanged in `session-results.json`.

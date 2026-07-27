@@ -188,9 +188,11 @@
 - Note: 🏆 Perfect run (11m 37s). D2 18/18, D4 4/4, D1 4/4, D3 1/1, D6 1/1. **q009 (Fairness) finally correct** — broke the 4-miss Fairness streak. Keep force-correcting the Transparency instinct on exam day.
 - Estimated time: 2 hrs
 
-### Day 20 (2026-07-28) — Mock Round 3
+### ~~Day 20 (2026-07-28) — Mock Round 3~~ ✅ 26/28 (92.9%) _(completed early on 07-27)_
 
-- [ ] Practice: 25 questions (--day-lock 20)
+- [x] Practice: 28 questions (--day-lock 20)
+- [x] Review wrong answers
+- Note: Both misses = **"Business is the baseline" plan-tier trap** — chose Enterprise, correct = Business. q169 (repo-level content exclusion) and q165 (org-admin code-suggestion policy) both begin at **Copilot Business**; Enterprise only adds cross-org enforcement. Drill: "org admin sets policy / repo exclusion" → **Business**.
 - Estimated time: 1.5 hrs
 
 ### Day 21 (2026-07-29) — Mock Round 4
