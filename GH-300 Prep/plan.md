@@ -181,10 +181,11 @@
 - Note: Only miss was **q019 (Fairness)** — 3rd repeat miss. "Prevent discrimination / unbiased & representative training data" = **Fairness**, NOT Transparency. Drill before exam.
 - Estimated time: 2 hrs
 
-### Day 19 (2026-07-27) — Mock Round 2 + Review
+### ~~Day 19 (2026-07-27) — Mock Round 2 + Review~~ ✅ 28/28 (100%)
 
-- [ ] Practice: 25 questions (--day-lock 19)
-- [ ] Target weak areas from Day 18 results
+- [x] Practice: 28 questions (--day-lock 19)
+- [x] Target weak areas from Day 18 results
+- Note: 🏆 Perfect run (11m 37s). D2 18/18, D4 4/4, D1 4/4, D3 1/1, D6 1/1. **q009 (Fairness) finally correct** — broke the 4-miss Fairness streak. Keep force-correcting the Transparency instinct on exam day.
 - Estimated time: 2 hrs
 
 ### Day 20 (2026-07-28) — Mock Round 3
