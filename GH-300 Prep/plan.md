@@ -195,9 +195,10 @@
 - Note: Both misses = **"Business is the baseline" plan-tier trap** — chose Enterprise, correct = Business. q169 (repo-level content exclusion) and q165 (org-admin code-suggestion policy) both begin at **Copilot Business**; Enterprise only adds cross-org enforcement. Drill: "org admin sets policy / repo exclusion" → **Business**.
 - Estimated time: 1.5 hrs
 
-### Day 21 (2026-07-29) — Mock Round 4
+### ~~Day 21 (2026-07-29) — Mock Round 4~~ ✅ 26/28 adjusted (92.9%) _(done early on 07-28)_
 
-- [ ] Practice: 25 questions (--day-lock 21)
+- [x] Practice: 28 questions (--day-lock 21; raw 25/28, adjusted 26/28 crediting q177 finger-slip)
+- Note: Two genuine misses, both repeat traps. q160 — org control over which repos/code Copilot can access = **Copilot Business** (baseline), NOT Enterprise. q124 — CI-ready output prompt must specify **format + exact schema + "no prose"** (correct = JSON array with fields, no prose). Drill both hard before exam day.
 - Estimated time: 1.5 hrs
 
 ### Day 22 (2026-07-30) — Mock Round 5
