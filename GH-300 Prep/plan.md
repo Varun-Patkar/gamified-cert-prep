@@ -201,9 +201,11 @@
 - Note: Two genuine misses, both repeat traps. q160 — org control over which repos/code Copilot can access = **Copilot Business** (baseline), NOT Enterprise. q124 — CI-ready output prompt must specify **format + exact schema + "no prose"** (correct = JSON array with fields, no prose). Drill both hard before exam day.
 - Estimated time: 1.5 hrs
 
-### Day 22 (2026-07-30) — Mock Round 5
+### ~~Day 22 (2026-07-30) — Mock Round 5~~ ✅ 26/28 (92.9%) _(completed early on 07-29)_
 
-- [ ] Practice: 25 questions (--day-lock 22)
+- [x] Practice: 28 questions (--day-lock 22; 26/28 = 92.9% in 7m 34s)
+- [x] Review wrong answers
+- Note: D1 5/5, D3 1/1, D4 2/2, D5 3/3, D6 3/3 perfect; D2 12/14. Both misses were an **over-correction of the "Business is baseline" drill** — chose the lower tier when the stem pointed higher. q053 (2nd miss, also Day 2): "GHEC + advanced compliance/audit/identity + GitHub.com repo-aware Chat" = **Copilot Enterprise**. q050: the free 30-day GHEC trial **includes Copilot Business** (not Free, not "requires separate purchase"). **Tier rule is directional:** Business = org admin controls / policies / audit logs / repo-level exclusions; Enterprise = GHEC-scoped advanced compliance + identity + GitHub.com repo-aware Chat.
 - Estimated time: 1.5 hrs
 
 ### Day 23 (2026-07-31) — Responsible AI Focus Review
