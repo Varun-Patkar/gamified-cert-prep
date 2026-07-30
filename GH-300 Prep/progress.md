@@ -2,21 +2,21 @@
 
 ## Overall
 
-- Sessions Completed: 22 / 30
-- Questions Answered: 492 / 252
-- Accuracy: 93.9%
+- Sessions Completed: 23 / 30
+- Questions Answered: 520 / 252
+- Accuracy: 93.8%
 - Target Exam Date: 2026-08-08
 
 ## Domain Progress
 
 | Domain                               | Questions | Answered | Accuracy |
 | ------------------------------------ | --------- | -------- | -------- |
-| D1 - Responsible AI (15-20%)         | 29        | 75       | 96.0%    |
-| D2 - Features (25-30%)               | 138       | 188      | 93.6%    |
-| D3 - Data & Architecture (10-15%)    | 7         | 17       | 94.1%    |
-| D4 - Prompt Engineering (10-15%)     | 21        | 56       | 94.6%    |
-| D5 - Developer Productivity (10-15%) | 30        | 39       | 94.9%    |
-| D6 - Privacy & Config (10-15%)       | 27        | 40       | 85.0%    |
+| D1 - Responsible AI (15-20%)         | 29        | 76       | 96.1%    |
+| D2 - Features (25-30%)               | 138       | 205      | 93.2%    |
+| D3 - Data & Architecture (10-15%)    | 7         | 18       | 94.4%    |
+| D4 - Prompt Engineering (10-15%)     | 21        | 58       | 94.8%    |
+| D5 - Developer Productivity (10-15%) | 30        | 42       | 95.2%    |
+| D6 - Privacy & Config (10-15%)       | 27        | 44       | 86.4%    |
 
 ## Daily Log
 
@@ -44,5 +44,6 @@
 | 20  | 2026-07-28 | Mock Round 3 — All Domains (D1–D6) _(done early on 07-27)_          | 28   | 26      | 92.9%    | Fast run (8m 2s). ✅ Fairness/Transparency all correct this round. Both misses were the **"Business is the baseline" plan-tier trap** — picked Enterprise instead of Business: q169 (repo-level content exclusion = **Business**, not Enterprise) and q165 (org admin code-suggestion policy = **Business**, not Enterprise). **HARD DRILL: "org admin sets policy / repo-level exclusion" → Business.** Only pick Enterprise when stem says "enforce across multiple orgs / enterprise-wide."                                                                                                                                                                                                                                                 |
 | 21  | 2026-07-29 | Mock Round 4 — All Domains (D1–D6) _(done early on 07-28)_          | 28   | 26\*    | 92.9%\*  | Raw runner 25/28 (89%) in 10m 26s. q177 credited (finger-slip: selected C = marketing/non-dev use case, pressed D) → adjusted 26/28. Two GENUINE misses, both repeat traps: **q160 — "Business is the baseline" AGAIN** (org control over which repos/code Copilot can access = **Business** C, picked Enterprise D. 3rd occurrence in 2 days). **q124 — CI-ready output AGAIN** (correct **B** = JSON array + fields + "no prose"; picked D human-readable report. Now a ~4th repeat miss). **CRITICAL EXAM-DAY DRILLS: (1) org repo/code access control → Business, not Enterprise. (2) CI-ready = format + exact schema + "no prose".**                                                                                                     |
 | 22  | 2026-07-30 | Mock Round 5 — All Domains (D1–D6) _(done early on 07-29)_          | 28   | 26      | 92.9%    | Fast run (7m 34s). D1 5/5, D3 1/1, D4 2/2, D5 3/3, D6 3/3 all perfect; D2 12/14. Both misses are an **OVER-CORRECTION of the "Business is baseline" drill** — picked the lower tier when the stem actually pointed higher. **q053 (2nd miss, also missed Day 2)** — "GHEC + advanced compliance/audit/identity + GitHub.com repo-aware Chat" = **Copilot Enterprise (B)**, not Business. **q050** — the free 30-day GHEC trial **includes Copilot Business (C)**, not Free/none. **NEW DRILL: the tier rule is directional, not "always Business." Business = org admin controls, policies, audit logs, repo-level exclusions. Enterprise = GHEC-scoped advanced compliance/identity + GitHub.com repo-aware Chat + enterprise integrations.** |
+| 23  | 2026-07-31 | Responsible AI Focus Review (D1 deep dive + cross-domain) _(done early on 07-30)_ | 28   | 26      | 92.9%    | Solid run (12m 19s). D1 1/1, D3 1/1, D4 2/2, D5 3/3, D6 4/4 all perfect; D2 15/17. ✅ **Fairness/Transparency clean again** and no plan-tier control traps. Both misses were **plan-identity facts, not the tier-control rule**: **q031** — the free benefit for verified **students / teachers / OSS maintainers** is **Copilot Pro** (B), not Copilot Free (Free is a separate limited tier for everyone). **q154** — Copilot is **NOT supported on GHES** (B); it is a cloud service requiring GitHub.com or GHEC sign-in — there is no on-prem, GHES-only-Chat, or self-hosted Copilot. **NEW DRILLS: (1) verified student/teacher/maintainer → Copilot Pro free. (2) GHES / on-prem / air-gapped → Copilot not supported; Enterprise needs GHEC.** |
 
 \* Adjusted grading excludes q118 only; the raw result remains unchanged in `session-results.json`.

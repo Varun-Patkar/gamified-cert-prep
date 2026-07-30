@@ -208,10 +208,12 @@
 - Note: D1 5/5, D3 1/1, D4 2/2, D5 3/3, D6 3/3 perfect; D2 12/14. Both misses were an **over-correction of the "Business is baseline" drill** — chose the lower tier when the stem pointed higher. q053 (2nd miss, also Day 2): "GHEC + advanced compliance/audit/identity + GitHub.com repo-aware Chat" = **Copilot Enterprise**. q050: the free 30-day GHEC trial **includes Copilot Business** (not Free, not "requires separate purchase"). **Tier rule is directional:** Business = org admin controls / policies / audit logs / repo-level exclusions; Enterprise = GHEC-scoped advanced compliance + identity + GitHub.com repo-aware Chat.
 - Estimated time: 1.5 hrs
 
-### Day 23 (2026-07-31) — Responsible AI Focus Review
+### ~~Day 23 (2026-07-31) — Responsible AI Focus Review~~ ✅ 26/28 (92.9%) _(completed early on 07-30)_
 
-- [ ] Deep dive: All 6 AI principles with scenarios
-- [ ] Practice: 25 questions with D1 bias (--day-lock 23)
+- [x] Deep dive: All 6 AI principles with scenarios — `sessions/day-23-responsible-ai-focus-review.md`
+- [x] Practice: 28 questions (--day-lock 23; 26/28 = 92.9% in 12m 19s)
+- [x] Review wrong answers
+- Note: D1 1/1, D3 1/1, D4 2/2, D5 3/3, D6 4/4 perfect; D2 15/17. Fairness/Transparency and the Business-vs-Enterprise control rule both held clean. Misses were plan-identity facts: q031 — free access for **verified students/teachers/OSS maintainers = Copilot Pro**, not Copilot Free. q154 — **Copilot is not supported on GHES**; it is cloud-only and requires GitHub.com or GHEC (Enterprise = GHEC, never GHES).
 - Estimated time: 2 hrs
 
 ### Day 24 (2026-08-01) — D2/D3 Focus Review
