@@ -216,10 +216,12 @@
 - Note: D1 1/1, D3 1/1, D4 2/2, D5 3/3, D6 4/4 perfect; D2 15/17. Fairness/Transparency and the Business-vs-Enterprise control rule both held clean. Misses were plan-identity facts: q031 — free access for **verified students/teachers/OSS maintainers = Copilot Pro**, not Copilot Free. q154 — **Copilot is not supported on GHES**; it is cloud-only and requires GitHub.com or GHEC (Enterprise = GHEC, never GHES).
 - Estimated time: 2 hrs
 
-### Day 24 (2026-08-01) — D2/D3 Focus Review
+### ~~Day 24 (2026-08-01) — D2/D3 Focus Review~~ ✅ 26/28 (92.9%) _(completed early on 07-31)_
 
-- [ ] Review: Feature-heavy domain — Agent Mode, MCP, CLI specifics
-- [ ] Practice: 25 questions (--day-lock 24)
+- [x] Review: Feature-heavy domain — Agent Mode, MCP, CLI specifics — `sessions/day-24-d2-d3-focus-review.md`
+- [x] Practice: 28 questions (--day-lock 24; 26/28 = 92.9% in 6m 8s)
+- [x] Review wrong answers
+- Note: **Zero plan-tier misses** — the directional Business/Enterprise rule is holding two rounds running. Both misses were the same concept, the **duplication-detection filter**: q150 (2nd miss, also Day 14) — Copilot **blocks long exact matches** to public code; the "shows links, never blocks" option describes **code referencing**. q145 — a ~200-char exact match is **blocked**, and the filter does **no license analysis**. **Drill: exact + ~150 chars → duplication detection BLOCKS (length-based, license-blind); similar-but-not-exact → code referencing SHOWS references; which files Copilot may read → content exclusion (input-side).**
 - Estimated time: 2 hrs
 
 ### Day 25 (2026-08-02) — D4/D5 Focus Review
