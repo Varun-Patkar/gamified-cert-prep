@@ -226,8 +226,9 @@
 
 ### Day 25 (2026-08-02) — D4/D5 Focus Review
 
-- [ ] Review: Prompt engineering nuances; productivity patterns
-- [ ] Practice: 25 questions (--day-lock 25)
+- [x] Review: Prompt engineering nuances; productivity patterns — `sessions/day-25-d4-d5-focus-review.md`
+- [x] Practice: 28 questions (--day-lock 25; 28/28 = 100% in 4m 28s) 🏆
+- Note: **Second perfect run.** Every previously-missed trap held clean — CI-ready output prompts, duplication detection vs code referencing vs content exclusion, directional Business/Enterprise tier rule, Fairness vs Transparency. Fastest session so far. **Exam-day rule: stay locked in and read every option fully before selecting — that discipline, not speed, drives the score.**
 - Estimated time: 2 hrs
 
 ### Day 26 (2026-08-03) — D6 Focus + Config Review

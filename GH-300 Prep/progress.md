@@ -2,21 +2,21 @@
 
 ## Overall
 
-- Sessions Completed: 24 / 30
-- Questions Answered: 548 / 252
-- Accuracy: 93.8%
+- Sessions Completed: 25 / 30
+- Questions Answered: 576 / 252
+- Accuracy: 94.1%
 - Target Exam Date: 2026-08-08
 
 ## Domain Progress
 
 | Domain                               | Questions | Answered | Accuracy |
 | ------------------------------------ | --------- | -------- | -------- |
-| D1 - Responsible AI (15-20%)         | 29        | 76       | 96.1%    |
-| D2 - Features (25-30%)               | 138       | 205      | 93.2%    |
+| D1 - Responsible AI (15-20%)         | 29        | 82       | 96.3%    |
+| D2 - Features (25-30%)               | 138       | 220      | 93.6%    |
 | D3 - Data & Architecture (10-15%)    | 7         | 18       | 94.4%    |
-| D4 - Prompt Engineering (10-15%)     | 21        | 58       | 94.8%    |
-| D5 - Developer Productivity (10-15%) | 30        | 42       | 95.2%    |
-| D6 - Privacy & Config (10-15%)       | 27        | 50       | 85.6%    |
+| D4 - Prompt Engineering (10-15%)     | 21        | 60       | 95.0%    |
+| D5 - Developer Productivity (10-15%) | 30        | 46       | 95.7%    |
+| D6 - Privacy & Config (10-15%)       | 27        | 51       | 86.3%    |
 
 ## Daily Log
 
@@ -47,5 +47,7 @@
 | 23  | 2026-07-31 | Responsible AI Focus Review (D1 deep dive + cross-domain) _(done early on 07-30)_ | 28   | 26      | 92.9%    | Solid run (12m 19s). D1 1/1, D3 1/1, D4 2/2, D5 3/3, D6 4/4 all perfect; D2 15/17. ✅ **Fairness/Transparency clean again** and no plan-tier control traps. Both misses were **plan-identity facts, not the tier-control rule**: **q031** — the free benefit for verified **students / teachers / OSS maintainers** is **Copilot Pro** (B), not Copilot Free (Free is a separate limited tier for everyone). **q154** — Copilot is **NOT supported on GHES** (B); it is a cloud service requiring GitHub.com or GHEC sign-in — there is no on-prem, GHES-only-Chat, or self-hosted Copilot. **NEW DRILLS: (1) verified student/teacher/maintainer → Copilot Pro free. (2) GHES / on-prem / air-gapped → Copilot not supported; Enterprise needs GHEC.** |
 
 | 24 | 2026-08-01 | D2/D3 Focus Review (features, plans, data flow, MCP) _(done early on 07-31)_ | 28 | 26 | 92.9% | Fast run (6m 8s). ✅ **Zero plan-tier misses** — the directional tier rule has stuck. Both misses were the SAME concept, the **duplication-detection filter**: **q150 (2nd miss, also missed Day 14)** — Copilot **uses duplication-detection filters to block long exact matches** (C); picked B "shows with links, never blocks" which describes **code referencing**. **q145** — a ~200-char exact match to public code is **blocked by duplication-detection filters** (B); picked D "depends on the repo's license file" — the filter does **no license analysis**. **HARD DRILL: exact match ≈150+ chars → duplication detection BLOCKS (length-based, license-blind). Similar-but-not-exact → code referencing SHOWS references. Input context → content exclusion.**
+
+| 25 | 2026-08-02 | D4/D5 Focus Review (prompt engineering + productivity patterns) _(done early on 08-01)_ | 28 | 28 | 100% | 🏆 **PERFECT run** (4m 28s — fastest session yet). D2 15/15, D1 6/6, D4 2/2, D5 4/4, D6 1/1. ✅ All prior traps clean: CI-ready output prompts, duplication detection vs code referencing vs content exclusion, directional plan-tier rule, Fairness vs Transparency. **User insight: accuracy is highest when locked in and reading every question + all four options thoroughly — speed is not the problem, skimming is. Carry this into exam day: read all options before selecting.**
 
 \* Adjusted grading excludes q118 only; the raw result remains unchanged in `session-results.json`.
