@@ -233,8 +233,9 @@
 
 ### Day 26 (2026-08-03) — D6 Focus + Config Review
 
-- [ ] Review: Privacy settings matrix; content exclusion gotchas
-- [ ] Practice: 25 questions (--day-lock 26)
+- [x] Review: Privacy settings matrix; content exclusion gotchas — `sessions/day-26-d6-focus-config-review.md`
+- [x] Practice: 28 questions (--day-lock 26; 28/28 = 100% in 3m 41s) 🏆
+- Note: **Third perfect run, back-to-back with Day 25.** D6 — the weakest domain — went 4/4 clean and rose to 87.3%. The three-control split (exclusion = input, code referencing = similar output shown, duplication detection = exact output blocked), the directional Business/Enterprise rule, and enterprise-policy precedence all held under pressure. **Nothing left to fix here — carry the same read-every-option discipline into the Day 27 timed mock.**
 - Estimated time: 2 hrs
 
 ### Day 27 (2026-08-04) — Full Timed Mock
