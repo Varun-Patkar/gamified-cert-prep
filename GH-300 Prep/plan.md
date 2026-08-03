@@ -240,8 +240,9 @@
 
 ### Day 27 (2026-08-04) — Full Timed Mock
 
-- [ ] Mock exam: --all mode, timed 100 minutes, track score
-- [ ] Review: All wrong answers
+- [x] Mock exam: day-lock assignment run (27/28 = 96.4% in 4m 17s)
+- [x] Review: All wrong answers (q139 reviewed)
+- Note: Single miss was a plan-tier discriminator trap. **Copilot Business** is the baseline for org license management + content exclusion; reserve **Enterprise** for stems that explicitly require enterprise identity/compliance/network controls.
 - Estimated time: 2.5 hrs
 
 ---

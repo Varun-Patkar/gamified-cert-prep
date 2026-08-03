@@ -2,21 +2,21 @@
 
 ## Overall
 
-- Sessions Completed: 26 / 30
-- Questions Answered: 604 / 252
-- Accuracy: 94.4%
+- Sessions Completed: 27 / 30
+- Questions Answered: 632 / 252
+- Accuracy: 94.5%
 - Target Exam Date: 2026-08-08
 
 ## Domain Progress
 
 | Domain                               | Questions | Answered | Accuracy |
 | ------------------------------------ | --------- | -------- | -------- |
-| D1 - Responsible AI (15-20%)         | 29        | 85       | 96.5%    |
-| D2 - Features (25-30%)               | 138       | 233      | 94.0%    |
+| D1 - Responsible AI (15-20%)         | 29        | 86       | 96.5%    |
+| D2 - Features (25-30%)               | 138       | 250      | 94.0%    |
 | D3 - Data & Architecture (10-15%)    | 7         | 20       | 95.0%    |
-| D4 - Prompt Engineering (10-15%)     | 21        | 62       | 95.2%    |
-| D5 - Developer Productivity (10-15%) | 30        | 50       | 96.0%    |
-| D6 - Privacy & Config (10-15%)       | 27        | 55       | 87.3%    |
+| D4 - Prompt Engineering (10-15%)     | 21        | 67       | 95.5%    |
+| D5 - Developer Productivity (10-15%) | 30        | 53       | 96.2%    |
+| D6 - Privacy & Config (10-15%)       | 27        | 57       | 87.7%    |
 
 ## Daily Log
 
@@ -51,5 +51,7 @@
 | 25 | 2026-08-02 | D4/D5 Focus Review (prompt engineering + productivity patterns) _(done early on 08-01)_ | 28 | 28 | 100% | 🏆 **PERFECT run** (4m 28s — fastest session yet). D2 15/15, D1 6/6, D4 2/2, D5 4/4, D6 1/1. ✅ All prior traps clean: CI-ready output prompts, duplication detection vs code referencing vs content exclusion, directional plan-tier rule, Fairness vs Transparency. **User insight: accuracy is highest when locked in and reading every question + all four options thoroughly — speed is not the problem, skimming is. Carry this into exam day: read all options before selecting.**
 
 | 26 | 2026-08-03 | D6 Focus + Config Review (privacy matrix, content exclusion gotchas) _(done early on 08-02)_ | 28 | 28 | 100% | 🏆 **THIRD PERFECT run — and back-to-back** (3m 41s, a new fastest time). D2 13/13, D6 4/4, D5 4/4, D1 3/3, D3 2/2, D4 2/2. ✅ **D6 — the weakest domain — went clean**, lifting it 86.3% → 87.3%. Every historical trap held: the three-control split (content exclusion = INPUT, code referencing = similar OUTPUT shown with references, duplication detection = exact ~150+ char OUTPUT blocked), the directional Business/Enterprise tier rule (no over-correction on the GHEC/repo-aware-Chat/advanced-compliance stems), enterprise-enforced policy cannot be loosened downward, and exclusion targets = repos/paths/globs/file types (not branches). **Two perfect runs in a row with the "read every option fully" discipline — keep exactly this mode on exam day.**
+
+| 27 | 2026-08-03 | Full Timed Mock (assignment lock) | 28 | 27 | 96.4% | Strong run (4m 17s). Domain split: D2 16/17, D4 5/5, D5 3/3, D6 2/2, D1 1/1. Only miss: **q139** (picked Enterprise; correct = **Copilot Business** for org license management + content exclusion). **Directional tier drill stays active:** choose Enterprise only when the stem explicitly adds enterprise identity/compliance/network requirements.
 
 \* Adjusted grading excludes q118 only; the raw result remains unchanged in `session-results.json`.
