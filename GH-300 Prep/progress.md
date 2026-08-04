@@ -2,9 +2,9 @@
 
 ## Overall
 
-- Sessions Completed: 27 / 30
-- Questions Answered: 632 / 252
-- Accuracy: 94.5%
+- Sessions Completed: 28 / 30
+- Questions Answered: 657 / 252
+- Accuracy: 94.4%
 - Target Exam Date: 2026-08-08
 
 ## Domain Progress
@@ -53,5 +53,7 @@
 | 26 | 2026-08-03 | D6 Focus + Config Review (privacy matrix, content exclusion gotchas) _(done early on 08-02)_ | 28 | 28 | 100% | 🏆 **THIRD PERFECT run — and back-to-back** (3m 41s, a new fastest time). D2 13/13, D6 4/4, D5 4/4, D1 3/3, D3 2/2, D4 2/2. ✅ **D6 — the weakest domain — went clean**, lifting it 86.3% → 87.3%. Every historical trap held: the three-control split (content exclusion = INPUT, code referencing = similar OUTPUT shown with references, duplication detection = exact ~150+ char OUTPUT blocked), the directional Business/Enterprise tier rule (no over-correction on the GHEC/repo-aware-Chat/advanced-compliance stems), enterprise-enforced policy cannot be loosened downward, and exclusion targets = repos/paths/globs/file types (not branches). **Two perfect runs in a row with the "read every option fully" discipline — keep exactly this mode on exam day.**
 
 | 27 | 2026-08-03 | Full Timed Mock (assignment lock) | 28 | 27 | 96.4% | Strong run (4m 17s). Domain split: D2 16/17, D4 5/5, D5 3/3, D6 2/2, D1 1/1. Only miss: **q139** (picked Enterprise; correct = **Copilot Business** for org license management + content exclusion). **Directional tier drill stays active:** choose Enterprise only when the stem explicitly adds enterprise identity/compliance/network requirements.
+
+| 28 | 2026-08-04 | Targeted Weak Areas — D6 + D2 tier/three-control (--cross 6,2 --limit 25) | 25 | 23 | 92.0% | Strong run (4m 48s). Two misses, both classic traps: **q043** (picked Business; correct = **Copilot Pro** — stem said "individual developers WITHOUT organizational controls / policy management" → Pro. Directional tier trap firing UPWARD: no org controls named = individual tier). **q198** (a **negation** question — "when NOT to assign to the coding agent"; picked B "improve unit test coverage" which is a GOOD candidate; correct = **D**, the **live production incident with PII + auth failures** must stay human-led). **DRILLS: (1) "single dev / personal / no org controls" → Pro, not Business. (2) On "when NOT / least appropriate" stems, pick the highest-risk option — production incident / PII / auth / security → human-led.**
 
 \* Adjusted grading excludes q118 only; the raw result remains unchanged in `session-results.json`.

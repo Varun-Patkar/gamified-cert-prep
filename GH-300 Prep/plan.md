@@ -249,11 +249,12 @@
 
 ## Phase 4: Final Revision (Days 28–30)
 
-### Day 28 (2026-08-05) — Targeted Weak Areas
+### ~~Day 28 (2026-08-05) — Targeted Weak Areas~~ ✅ 23/25 (92%) _(completed early on 08-04)_
 
-- [ ] Identify lowest-scoring domains from Day 27 mock
-- [ ] Practice: 25 questions on those domains
-- [ ] Review final-last-minute-revision notes
+- [x] Identify lowest-scoring domains — D6 (weakest) + D2 tier/three-control
+- [x] Practice: 25 questions weak-area run (`--cross 6,2 --shuffle --limit 25`; 23/25 = 92% in 4m 48s) — `sessions/day-28-targeted-weak-areas.md`
+- [x] Review final last-minute-revision notes
+- Note: Two misses, both stem-direction slips (not knowledge gaps). **q043** — "individual dev, WITHOUT org controls/policy management" = **Copilot Pro**, not Business (directional tier trap firing upward). **q198** — a **negation** stem ("when NOT to assign to coding agent"); correct = **D**, the live production incident with PII + auth failures (human-led), not B (unit-test coverage is a fine agent task). **Drills: (1) "single dev / personal / no org controls" → Pro. (2) "when NOT / least appropriate" → pick highest-risk option (production incident / PII / auth / security → human-led).**
 - Estimated time: 2 hrs
 
 ### Day 29 (2026-08-06) — Light Review
