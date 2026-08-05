@@ -257,11 +257,12 @@
 - Note: Two misses, both stem-direction slips (not knowledge gaps). **q043** — "individual dev, WITHOUT org controls/policy management" = **Copilot Pro**, not Business (directional tier trap firing upward). **q198** — a **negation** stem ("when NOT to assign to coding agent"); correct = **D**, the live production incident with PII + auth failures (human-led), not B (unit-test coverage is a fine agent task). **Drills: (1) "single dev / personal / no org controls" → Pro. (2) "when NOT / least appropriate" → pick highest-risk option (production incident / PII / auth / security → human-led).**
 - Estimated time: 2 hrs
 
-### Day 29 (2026-08-06) — Light Review
+### ~~Day 29 (2026-08-06) — Light Review~~ ✅ 25/25 (100%) _(completed early on 08-05)_
 
-- [ ] Skim topics.md key facts table
-- [ ] Practice: 25 questions light run (--all, stop early if fatigued)
-- [ ] Prep exam logistics (ID, location, system check)
+- [x] Skim topics.md key facts table — consolidated into `sessions/day-29-light-review.md` (6 trap patterns + all-domain cheat sheet)
+- [x] Practice: 25 questions light run (`python quiz_runner.py questions.json --all --shuffle --limit 25`; 25/25 = 100% in 4m 53s) 🏆
+- [x] Prep exam logistics (ID, online proctor system check, allowed resources) — closed-book Pearson VUE; MS Learn NOT available. ⚠️ English GH-300 refreshed Aug 7, 2026 (day before exam) — prep already aligned to that study guide.
+- Note: **Fourth perfect run.** Full-pool shuffle across all domains held every historical trap clean (directional plan-tier rule, three-control split, Fairness vs Transparency, CI-ready output, negation stems, plan-identity facts). Nothing left to remediate — Day 30 is rest + logistics only.
 - Estimated time: 1.5 hrs
 
 ### Day 30 (2026-08-07) — Rest Day

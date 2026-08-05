@@ -2,9 +2,9 @@
 
 ## Overall
 
-- Sessions Completed: 28 / 30
-- Questions Answered: 657 / 252
-- Accuracy: 94.4%
+- Sessions Completed: 29 / 30
+- Questions Answered: 682 / 252
+- Accuracy: 94.6%
 - Target Exam Date: 2026-08-08
 
 ## Domain Progress
@@ -55,5 +55,9 @@
 | 27 | 2026-08-03 | Full Timed Mock (assignment lock) | 28 | 27 | 96.4% | Strong run (4m 17s). Domain split: D2 16/17, D4 5/5, D5 3/3, D6 2/2, D1 1/1. Only miss: **q139** (picked Enterprise; correct = **Copilot Business** for org license management + content exclusion). **Directional tier drill stays active:** choose Enterprise only when the stem explicitly adds enterprise identity/compliance/network requirements.
 
 | 28 | 2026-08-04 | Targeted Weak Areas — D6 + D2 tier/three-control (--cross 6,2 --limit 25) | 25 | 23 | 92.0% | Strong run (4m 48s). Two misses, both classic traps: **q043** (picked Business; correct = **Copilot Pro** — stem said "individual developers WITHOUT organizational controls / policy management" → Pro. Directional tier trap firing UPWARD: no org controls named = individual tier). **q198** (a **negation** question — "when NOT to assign to the coding agent"; picked B "improve unit test coverage" which is a GOOD candidate; correct = **D**, the **live production incident with PII + auth failures** must stay human-led). **DRILLS: (1) "single dev / personal / no org controls" → Pro, not Business. (2) On "when NOT / least appropriate" stems, pick the highest-risk option — production incident / PII / auth / security → human-led.**
+
+| 29 | 2026-08-06 | Light Review — Final Consolidation & Exam Logistics _(in progress; started early on 08-05)_ | — | — | — | Session file `sessions/day-29-light-review.md` created: 6 recurring trap patterns (directional plan-tier rule, three-control split, Fairness vs Transparency, CI-ready output, negation stems, plan-identity facts) + all-domain cheat sheet + exam-day logistics checklist. Study/logistics done; **quiz pending** (`--all --shuffle --limit 25`). ⚠️ English GH-300 refreshed Aug 7 2026 (day before exam) — prep aligned to that study guide. |
+
+| 29 | 2026-08-05 | Day 29 — Light Review (full-pool `--all --limit 25`) | 25 | 25 | 100% | 🏆 **FOURTH PERFECT run** (4m 53s, done a day early on 08-05). Full-pool shuffle across all domains: D2 Features 10/10, D1 Responsible AI 4/4, D5 Productivity 3/3, plus D3/D4/D6 all clean. ✅ Every historical trap held under a mixed-domain draw — directional plan-tier rule, three-control split, Fairness vs Transparency, CI-ready output, negation stems, plan-identity facts. Nothing left to fix. Remaining plan: Day 30 rest + logistics, exam 08-08. **Exam-day discipline: read all four options fully.**
 
 \* Adjusted grading excludes q118 only; the raw result remains unchanged in `session-results.json`.
