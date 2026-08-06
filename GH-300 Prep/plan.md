@@ -265,11 +265,11 @@
 - Note: **Fourth perfect run.** Full-pool shuffle across all domains held every historical trap clean (directional plan-tier rule, three-control split, Fairness vs Transparency, CI-ready output, negation stems, plan-identity facts). Nothing left to remediate — Day 30 is rest + logistics only.
 - Estimated time: 1.5 hrs
 
-### Day 30 (2026-08-07) — Rest Day
+### ~~Day 30 (2026-08-07) — Rest Day~~ ✅ _(completed early on 08-06)_
 
-- [ ] Light skim of topics.md cheat sheet (30 min max)
-- [ ] No new material — rest and confidence building
-- [ ] Ensure exam slot confirmed for tomorrow
+- [x] Light skim of topics.md cheat sheet — reused `sessions/day-29-light-review.md` cheat sheet
+- [x] No new material — rest and confidence building
+- [x] Exam slot confirmed — **test center** booking for 2026-08-08; Google Calendar reminder set 1 hr before to arrive on time
 - Estimated time: 30 min
 
 **EXAM DAY: 2026-08-08** — GitHub Copilot GH-300 🎯
