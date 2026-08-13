@@ -24,9 +24,9 @@
 
 #### Day 2 (2026-08-13, Thu) — D1.1 Analyze Requirements
 
-- [ ] Study: agents for task automation/analytics/decision-making; grounding data quality (accuracy, relevance, timeliness, cleanliness, availability)
-- [ ] Practice: 5–8 Domain 1 questions
-- [ ] Estimated time: 1 hr
+- [x] Study: agents for task automation/analytics/decision-making; grounding data quality (accuracy, relevance, timeliness, cleanliness, availability)
+- [x] Practice: 5–8 Domain 1 questions
+- [x] Estimated time: 1 hr
 
 #### Day 3 (2026-08-14, Fri) — D1.2 Multi-Agent Platform Strategy
 

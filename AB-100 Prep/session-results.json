@@ -1,0 +1,167 @@
+{
+  "timestamp": "2026-08-13T20:40:41.495626",
+  "examCode": "AB-100",
+  "examName": "Agentic AI Business Solutions Architect",
+  "summary": {
+    "totalQuestions": 6,
+    "gradedQuestions": 6,
+    "correct": 6,
+    "wrong": 0,
+    "skipped": 0,
+    "ungraded": 0,
+    "accuracy": 100.0,
+    "timeSeconds": 185.7
+  },
+  "domainBreakdown": {
+    "Agentic AI Business Solutions Architecture (Practice Quiz)": {
+      "total": 6,
+      "correct": 6,
+      "wrong": 0,
+      "skipped": 0
+    }
+  },
+  "topicBreakdown": {
+    "Grounding / Risk Assessment": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Cloud Adoption Framework / AI": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Knowledge Grounding / M365": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Grounding / Compliance": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Data Readiness": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Agent Design / Knowledge Grounding": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    }
+  },
+  "wrongQuestions": [],
+  "skippedQuestions": [],
+  "allResults": [
+    {
+      "questionId": "q054",
+      "question": "A retail company is deploying an AI agent for customer collections summaries in Dynamics 365 Finance. The CFO also wants the agent to answer general regulatory finance questions using LLM capabilities. The architect has not yet completed a risk assessment for LLM enablement in this regulated environment. How should the architect advise the CFO?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Grounding / Risk Assessment",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Delay general-knowledge enablement until risks are assessed/mitigated; keep to validated internal knowledge in the interim.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": ""
+    },
+    {
+      "questionId": "q040",
+      "question": "A healthcare organization is beginning its AI adoption journey using the Cloud Adoption Framework. Leadership agreed on high-level objectives (improve patient satisfaction, reduce administrative workload) but has not identified specific AI use cases or assessed data quality. What is the NEXT step the architect should take?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Cloud Adoption Framework / AI",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "After objectives are set, identify measurable AI scenarios with high feasibility and business impact.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": ""
+    },
+    {
+      "questionId": "q019",
+      "question": "An enterprise architect is designing a Teams-based AI agent to let team members retrieve project documents, summarize recent channel discussions, and automate task creation from messages. Which grounding approach should the architect establish FIRST?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Knowledge Grounding / M365",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Establish SharePoint as the primary, well-structured/tagged knowledge source first.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": ""
+    },
+    {
+      "questionId": "q038",
+      "question": "A financial services firm is deploying Copilot within Dynamics 365 Finance for regulatory audit workflows. The sponsor wants general LLM knowledge enabled; the CISO mandates all responses derive exclusively from validated, internally controlled content. What should the architect do?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Grounding / Compliance",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Restrict to validated internal knowledge sources to meet the CISO's regulatory mandate.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": ""
+    },
+    {
+      "questionId": "q049",
+      "question": "A retail enterprise wants to deploy an AI agent for product recommendations across 50,000 daily customers. The CTO demands a 3-week go-live. The data engineering team warns that product catalog data is outdated, inconsistently labeled, and spread across three legacy systems. As the architect, what is the FIRST action you should take?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Data Readiness",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Agent reliability depends on grounding data quality/freshness; defer launch and remediate data first.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": ""
+    },
+    {
+      "questionId": "q003",
+      "question": "According to agent design best practices, when a knowledge source has not yet finished processing, what should the architect do before publishing?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "Agent Design / Knowledge Grounding",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "easy",
+      "explanation": "Wait for the knowledge source to reach Ready, then do scenario-based testing before publishing.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": ""
+    }
+  ]
+}
