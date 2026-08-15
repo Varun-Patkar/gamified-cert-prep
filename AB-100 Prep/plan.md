@@ -30,14 +30,14 @@
 
 #### Day 3 (2026-08-14, Fri) — D1.2 Multi-Agent Platform Strategy
 
-- [ ] Study: when to use Microsoft 365 Copilot vs Copilot Studio vs Microsoft Foundry; prebuilt agent use cases
-- [ ] Estimated time: 1 hr
+- [x] Study: when to use Microsoft 365 Copilot vs Copilot Studio vs Microsoft Foundry; prebuilt agent use cases
+- [x] Estimated time: 1 hr
 
 #### Day 4 (2026-08-15, Sat) — D1.2 Custom vs Extend, SLMs, CoE
 
-- [ ] Study: build custom agents vs extend M365 Copilot; when to create custom models; SLM use cases; prompt library guidelines; AI Center of Excellence elements
-- [ ] Practice: 10 Domain 1 questions
-- [ ] Estimated time: 2 hrs
+- [x] Study: build custom agents vs extend M365 Copilot; when to create custom models; SLM use cases; prompt library guidelines; AI Center of Excellence elements
+- [x] Practice: 10 Domain 1 questions
+- [x] Estimated time: 2 hrs
 
 #### Day 5 (2026-08-16, Sun) — D1.3 ROI & Model Router + Domain 1 Quiz
 
