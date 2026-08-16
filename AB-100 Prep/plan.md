@@ -41,9 +41,9 @@
 
 #### Day 5 (2026-08-16, Sun) — D1.3 ROI & Model Router + Domain 1 Quiz
 
-- [ ] Study: ROI/TCO criteria; ROI analysis; model router (route requests to best model)
-- [ ] Quiz: Domain 1 (run quiz_runner.py filtered to Domain 1)
-- [ ] Estimated time: 2 hrs
+- [x] Study: ROI/TCO criteria; ROI analysis; model router (route requests to best model)
+- [x] Quiz: 44 remaining practice-bank questions (40/44 = 90.9%)
+- [x] Estimated time: 2 hrs
 
 ### Week 2 — Domain 2 (Design, lighter) + start Domain 3
 

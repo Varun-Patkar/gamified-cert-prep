@@ -3,16 +3,16 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 4 / 31
-- Questions Answered: 16 / 60 (practice bank)
-- Accuracy: 100%
-- Current Day: Day 5 (next: 2026-08-16)
+- Sessions Completed: 5 / 31
+- Questions Answered: 60 / 60 (practice bank)
+- Accuracy: 93.3% (56/60)
+- Current Day: Day 6 (next: 2026-08-17)
 
 ## Domain Confidence (self-rated 1–5)
 
 | Domain                                   | Weight | Confidence        | Notes                       |
 | ---------------------------------------- | ------ | ----------------- | --------------------------- |
-| D1: Plan AI-powered business solutions   | 25–30% | 4 (16/16 quiz) | Strong on requirements, platform choice, build/extend, SLM, AI CoE |
+| D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz) | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing |
 | D2: Design AI-powered business solutions | 25–30% | 3 (self-reported) | Confident area              |
 | D3: Deploy AI-powered business solutions | 40–45% | –                 | Highest weight — prioritize |
 
@@ -64,6 +64,19 @@
 - Weak spots: None on this set; keep reinforcing extend-vs-build boundaries and AI CoE operating model
 - Reference: sessions/day-04-custom-vs-extend-slm-coe.md
 - Time Spent: ~1 hr (study) + ~5 min (quiz)
+
+### Day 5 — 2026-08-16 — D1.3 ROI, TCO, Model Router & Domain 1 Quiz
+
+- Status: Completed
+- Covered: measurable ROI baselines; realized benefits and adoption factors; full-lifecycle TCO; scenario and sensitivity analysis; build/buy/extend economics; Microsoft Foundry Model Router modes, model subsets, limits, governance, and monitoring
+- Quiz: 44 remaining practice-bank questions completed in two segments
+- Accuracy: 40 / 44 (90.9%) — segment 1: 28/29 (96.6%); segment 2: 12/15 (80.0%)
+- Overall practice bank: 56 / 60 (93.3%)
+- Weak spots: complete and label source data before rollout; separate agents at security/trust boundaries while using sequential or parallel orchestration according to dependencies; prefer managed identities over stored service-principal secrets; distinguish where custom connectors can be created from whether governance permits their use
+- Missed questions: q024, q039, q052, q053
+- Reference: sessions/day-05-roi-tco-model-router.md
+- Quiz time: 21m 13s total
+- Next action: Day 6 — D2.1 Copilot in Dynamics 365 + Agent Types
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12
