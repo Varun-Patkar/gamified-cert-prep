@@ -1,0 +1,29 @@
+{
+	"examCode": "AB-100",
+	"description": "Distinct question assignments for AB-100 study sessions. New questions are researched and added before each study day; deliberate reuse is reserved for review and mock days.",
+	"totalDays": 31,
+	"studyDays": 29,
+	"dayTargets": {
+		"6": 10
+	},
+	"dayAssignments": {
+		"6": [
+			"q061",
+			"q062",
+			"q063",
+			"q064",
+			"q065",
+			"q066",
+			"q067",
+			"q068",
+			"q069",
+			"q070"
+		]
+	},
+	"generationPolicy": {
+		"studyDays": "Use newly researched questions that have not appeared on an earlier study day.",
+		"reviewDays": "Previously answered questions may be reused intentionally for weak-area review.",
+		"mockDays": "Previously answered questions may be reused in a weighted exam simulation.",
+		"sourcePolicy": "Prefer official or reputable sourced questions; otherwise use original AI-generated exam-style questions explicitly labeled and grounded in current Microsoft Learn URLs."
+	}
+}

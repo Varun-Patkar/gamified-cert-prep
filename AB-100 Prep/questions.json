@@ -1,1162 +1,1295 @@
 {
-  "examCode": "AB-100",
-  "examName": "Agentic AI Business Solutions Architect",
-  "totalQuestions": 60,
-  "sources": [
-    "Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)"
-  ],
-  "note": "Questions captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). No official domain mapping is available for this practice set, so all questions are grouped under a single practice domain.",
-  "caseStudies": [
-    {
-      "id": "chg",
-      "name": "Contoso HealthServices Group (CHG)",
-      "contextPlaceholder": "Mid-sized US healthcare services org, 12 states, ~8,500 employees. M365 E5 + Dynamics 365 Customer Service + Field Service. Azure Data Lake (basic) + Power Automate. Early AI maturity: no AI CoE, no prompt library. HR/claims data siloed in 3 legacy systems. Patient data subject to HIPAA. Challenges: data fragmentation & compliance, governance gap (shadow AI), ROI uncertainty & adoption risk (CTO wants 4 agents live in 90 days). Applies to Q13, Q15, Q21, Q33, Q39, Q56, Q59."
-    }
-  ],
-  "domains": [
-    {
-      "domainId": "1",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "questions": [
-        {
-          "id": "q001",
-          "originalId": "Q1",
-          "type": "mc",
-          "question": "An insurance company's Power Automate-based claims processing flow is experiencing intermittent failures when connecting to a downstream policy management system. The failures occur during peak load and cause incomplete claims records. The system has no retry logic or fallback path configured. Which Power Platform Well-Architected pillar is primarily being violated, and what should the architect recommend?",
-          "options": [
-            "A. Reliability — add retry policies and configure redundant connectors with failover paths",
-            "B. Operational Excellence — implement ALM with Azure DevOps",
-            "C. Security — apply DLP policies to prevent connector exposure",
-            "D. Performance Efficiency — offload tasks to Azure Functions"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Peak-load intermittent failures with no retry/fallback are a Reliability pillar concern. Add retry policies and redundant connectors with failover paths.",
-          "topic": "Well-Architected / Reliability",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q002",
-          "originalId": "Q2",
-          "type": "mc",
-          "question": "A business unit requests urgent deployment of a custom connector that integrates an external market intelligence vendor into Copilot for Dynamics 365 Sales. The connector is built and tested, but the legal team has not reviewed the third-party vendor's privacy policy or data terms. The business sponsor insists on a same-week launch. What should the architect recommend?",
-          "options": [
-            "A. Certify the connector organization-wide to streamline the compliance review process",
-            "B. Enable the connector in the dev environment only until legal review is complete",
-            "C. Delay deployment until legal and compliance review of the external data source is completed",
-            "D. Deploy the connector immediately and schedule the legal review for post-launch"
-          ],
-          "correctAnswer": "C",
-          "explanation": "External data source integrations require legal/compliance review of privacy terms before deployment, regardless of deadline pressure.",
-          "topic": "Governance / Compliance",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q003",
-          "originalId": "Q3",
-          "type": "mc",
-          "question": "According to agent design best practices, when a knowledge source has not yet finished processing, what should the architect do before publishing?",
-          "options": [
-            "A. Publish the agent immediately to meet the deadline and patch any knowledge issues post-deployment",
-            "B. Publish the agent with a disclaimer to users that knowledge may be incomplete",
-            "C. Wait for the knowledge source to show \"Ready,\" perform scenario-based testing, and then publish",
-            "D. Replace the new documents with an older version that already has a Ready status"
-          ],
-          "correctAnswer": "C",
-          "explanation": "Wait for the knowledge source to reach Ready, then do scenario-based testing before publishing.",
-          "topic": "Agent Design / Knowledge Grounding",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q004",
-          "originalId": "Q4",
-          "type": "mc",
-          "question": "TRUE or FALSE: \"Prompt injection vulnerabilities only affect public-facing AI agents and do not require mitigation controls in internal enterprise AI agents used by authenticated employees.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Prompt injection affects internal agents too; mitigation controls are required regardless of audience.",
-          "topic": "Security / Prompt Injection",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q005",
-          "originalId": "Q5",
-          "type": "mc",
-          "question": "A global pharmaceutical company needs a conversational AI agent to assist regulatory compliance officers. The process involves highly proprietary compound data, strict FDA-governed decision workflows, and internal IP that cannot be shared with any external vendor. The organization has a mature AI engineering team. Which AI development approach should the architect recommend?",
-          "options": [
-            "A. Build — Develop a fully custom AI solution to maintain data control and regulatory compliance",
-            "B. Buy — Use a prebuilt Microsoft 365 Copilot solution to accelerate time-to-value",
-            "C. Extend — Use Azure AI Foundry with a fine-tuned model connected to SharePoint",
-            "D. Extend — Customize Copilot Studio with grounding documents from SharePoint"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Highly proprietary IP that cannot leave the org, strict regulatory workflows, and a mature AI team favor Build (fully custom).",
-          "topic": "Build/Buy/Extend Decision",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q006",
-          "originalId": "Q6",
-          "type": "mc",
-          "question": "A government agency is deploying a Copilot Studio agent for benefits enrollment. All user questions follow predictable, structured patterns defined by a legal mandate. The agency requires deterministic responses with no generative behavior to meet audit requirements. Which language understanding approach should the architect configure?",
-          "options": [
-            "A. Generative AI orchestration — to handle open-ended user queries dynamically",
-            "B. Standard NLU — for strict intent matching with deterministic, non-generative responses",
-            "C. Azure CLU — to support multilingual intent recognition across varied phrasing",
-            "D. NLU Boost with generative answers — to answer questions from internal SharePoint knowledge"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Deterministic, non-generative, audit-friendly responses call for Standard NLU with strict intent matching.",
-          "topic": "Copilot Studio / Language Understanding",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q007",
-          "originalId": "Q7",
-          "type": "mc",
-          "question": "A public-facing AI customer support agent for a bank allows users to upload PDF attachments. During red team testing, attackers embedded hidden override instructions within uploaded PDFs, steering the agent to bypass its system-level safety instructions and return restricted account information. What is the MOST effective mitigation the architect should implement?",
-          "options": [
-            "A. Disable PDF upload support entirely to eliminate the attack vector",
-            "B. Add CAPTCHA verification to the upload form to ensure only human users can submit files",
-            "C. Strengthen input and output filtering — strip unsafe embedded content and HTML from inputs, limit accepted file types, apply safety filters on model outputs, and block code execution attempts",
-            "D. Enable daily manual review of all uploaded files by a security analyst"
-          ],
-          "correctAnswer": "C",
-          "explanation": "Layered input/output filtering (strip embedded content, limit file types, output safety filters, block code execution) is the most effective mitigation.",
-          "topic": "Security / Content Safety",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q008",
-          "originalId": "Q8",
-          "type": "mc",
-          "question": "An insurance company is designing a multi-agent claims processing solution. The workflow requires: (1) extracting claim details, (2) translating foreign-language documents, (3) running a QA validation on completeness, and (4) routing to the appropriate team. Each step must complete before the next begins, and any failure must halt the pipeline. Which orchestration pattern should the architect select?",
-          "options": [
-            "A. Handoff orchestration, so each agent decides independently who to route to next.",
-            "B. Concurrent orchestration, so all agents process in parallel to reduce latency.",
-            "C. Sequential orchestration, where each agent processes in a deterministic stage-by-stage pipeline.",
-            "D. Group chat orchestration, so agents negotiate the task sequence dynamically."
-          ],
-          "correctAnswer": "C",
-          "explanation": "Dependent stages that must complete in order and halt on failure map to Sequential orchestration.",
-          "topic": "Multi-Agent Orchestration",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q009",
-          "originalId": "Q9",
-          "type": "mc",
-          "question": "An enterprise AI agent in a legal firm operates in two modes: it retrieves case documents on behalf of a logged-in attorney during active sessions, and it performs overnight background batch analysis without user interaction. A developer proposes using a single elevated service account for both modes. What is the correct authorization architecture?",
-          "options": [
-            "A. Use a single managed identity scoped to the highest-permission level so both modes always succeed",
-            "B. Propagate the attorney's permissions when the agent acts on their behalf; use a narrowly scoped service role when the agent acts as itself for background batch processing",
-            "C. Use a single elevated service account with full permissions to cover both operating modes",
-            "D. Use OAuth client credentials for all modes to standardize authentication across both scenarios"
-          ],
-          "correctAnswer": "B",
-          "explanation": "On-behalf-of should propagate user permissions; autonomous background work should use a narrowly scoped service role (least privilege).",
-          "topic": "Identity / Authorization",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q010",
-          "originalId": "Q10",
-          "type": "mc",
-          "question": "A solution architect is beginning the ALM design for a new AI-powered sentiment detection feature in Dynamics 365 Customer Service. The development team is eager to start building prompts and configuring conversation boosters. What should the architect do FIRST?",
-          "options": [
-            "A. Build prompts for sentiment classification and configure conversation boosters in Copilot",
-            "B. Package and version the agent assets inside a solution file using semantic versioning",
-            "C. Define AI use cases, required data sources, customer data flows, sensitivity labels, and compliance constraints",
-            "D. Set up environment variables for connectors, API endpoints, and knowledge indices"
-          ],
-          "correctAnswer": "C",
-          "explanation": "Governance-first: define use cases, data sources, data flows, sensitivity labels, and compliance constraints before building.",
-          "topic": "ALM / Planning",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q011",
-          "originalId": "Q11",
-          "type": "mc",
-          "question": "An organization is designing a governance framework for a Copilot agent that handles sensitive HR compensation data. The HR Director proposes using a shared cloud identity across DEV, TEST, and PROD to reduce identity management overhead. What is the architect's correct guidance?",
-          "options": [
-            "A. Assign a unique cloud identity per agent per environment — DEV, PRE-PROD, and PROD — recording ownership, version, and lifecycle metadata for each",
-            "B. Use a shared identity but restrict its permissions to read-only in non-production environments",
-            "C. Accept the shared identity model and apply environment-specific DLP policies to compensate for the risk",
-            "D. Allow the shared identity between DEV and TEST only, with a separate identity for PROD"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Unique identity per agent per environment with ownership/version/lifecycle metadata; never share identities across environments.",
-          "topic": "Governance / Identity",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q012",
-          "originalId": "Q12",
-          "type": "mc",
-          "question": "TRUE or FALSE: \"In a governed enterprise Copilot for Service deployment, human review before sending externally generated content is unnecessary overhead when the model produces high-quality summaries.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Human review before external send remains required in governed deployments; it cannot be removed for speed.",
-          "topic": "Responsible AI / Human-in-the-Loop",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q013",
-          "originalId": "Q13",
-          "type": "mc",
-          "question": "[Case Study - CHG] A proposed Patient Intake Agent automatically commits patient records, uses generative responses, has no human approval checkpoints, and includes no content safety controls. Statement: \"This design is acceptable because built-in Copilot safeguards are sufficient for regulated healthcare workloads.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Built-in safeguards are not sufficient for regulated HIPAA workloads; auto-commit + generative + no human approval + no content safety is unacceptable.",
-          "topic": "Responsible AI / Regulated Workloads",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "casestudy"
-        },
-        {
-          "id": "q014",
-          "originalId": "Q14",
-          "type": "mc",
-          "question": "A financial services organization wants to automate 40% of its manual loan-processing data entry using a Copilot Studio agent. The sponsor estimates a 60% productivity gain, but there is no baseline of current processing time and no usage telemetry. What should you do FIRST before building a ROI business case?",
-          "options": [
-            "A. Proceed to design the agent and collect ROI data during the pilot phase",
-            "B. Establish a baseline by measuring current task time, volume, and error rates before modeling ROI",
-            "C. Request Copilot Studio licensing immediately to access ROI analytics dashboards",
-            "D. Submit the ROI projections using industry benchmark data since no internal data exists"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Establish a measured baseline (task time, volume, error rates) before modeling ROI.",
-          "topic": "Business Value / ROI",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q015",
-          "originalId": "Q15",
-          "type": "mc",
-          "question": "[Case Study - CHG] CHG has inconsistent AI outputs across departments due to fragmented data sources and lack of unified business definitions. A proposal suggests relying only on existing data models and Copilot capabilities. Statement: \"This approach will provide consistent and governed cross-domain reasoning for CHG.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Fragmented data and missing unified definitions cannot yield consistent, governed cross-domain reasoning by relying only on existing models.",
-          "topic": "Data Foundation / Governance",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "casestudy"
-        },
-        {
-          "id": "q016",
-          "originalId": "Q16",
-          "type": "mc",
-          "question": "A retail organization wants an autonomous agent in Copilot Studio to automatically process customer refund requests: access order records, calculate refund eligibility, and execute refund transactions in the ERP system — all without human approval. What is the MOST critical architectural risk the architect must address before deploying?",
-          "options": [
-            "A. The agent lacks sufficient trigger configuration for scheduled events",
-            "B. The agent cannot be published to Microsoft Teams without admin approval",
-            "C. The agent has unrestricted action permissions that violate the principle of least privilege",
-            "D. The agent may not support enough knowledge sources to ground responses"
-          ],
-          "correctAnswer": "C",
-          "explanation": "Autonomous financial actions with broad permissions violate least privilege — the most critical risk.",
-          "topic": "Security / Least Privilege",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q017",
-          "originalId": "Q17",
-          "type": "mc",
-          "question": "TRUE or FALSE: \"Once an AI agent reaches a high success rate, architects can safely reduce monitoring to ad-hoc reviews and focus improvement cycles only when issues are escalated by users.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Continuous monitoring is required even with high success rates; you cannot drop to ad-hoc reviews.",
-          "topic": "Operations / Monitoring",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q018",
-          "originalId": "Q18",
-          "type": "mc",
-          "question": "Statement: \"When building an executive ROI business case for an AI agent, a solution architect should present only the expected-case savings projection, since conservative and optimistic bands add unnecessary complexity for stakeholders.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "B",
-          "explanation": "ROI cases should present ranges (conservative/expected/optimistic), not only the expected case.",
-          "topic": "Business Value / ROI",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q019",
-          "originalId": "Q19",
-          "type": "mc",
-          "question": "An enterprise architect is designing a Teams-based AI agent to let team members retrieve project documents, summarize recent channel discussions, and automate task creation from messages. Which grounding approach should the architect establish FIRST?",
-          "options": [
-            "A. Use Microsoft Graph as the primary retrieval engine to maximize cross-tenant content coverage",
-            "B. Use Azure Blob Storage to host project documents and expose them via a custom connector",
-            "C. Enable external web search to supplement any missing project information gaps",
-            "D. Use SharePoint sites as the primary knowledge source, ensuring content is well-structured and tagged"
-          ],
-          "correctAnswer": "D",
-          "explanation": "Establish SharePoint as the primary, well-structured/tagged knowledge source first.",
-          "topic": "Knowledge Grounding / M365",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q020",
-          "originalId": "Q20",
-          "type": "mc",
-          "question": "An enterprise is deploying a generative AI agent using Microsoft Foundry. The agent must call three external APIs for product pricing, inventory, and shipping. Security mandates that no sensitive customer data is stored persistently and all API calls are restricted to approved domains. Which combination of constraints should the architect enforce?",
-          "options": [
-            "A. Define ephemeral memory policy, implement least-privilege permissions per tool, and restrict external tool calls to allow-listed domains.",
-            "B. Use public networking for all API calls to reduce latency, and set connector scoping to maximum to ensure comprehensive data retrieval.",
-            "C. Store all interactions in Dataverse for auditability and open API gateway access to all third-party domains.",
-            "D. Enable persistent message logging for audit purposes, grant broad API access to improve agent performance, and apply Azure Content Safety."
-          ],
-          "correctAnswer": "A",
-          "explanation": "Ephemeral memory (no persistent PII) + least privilege per tool + allow-listed domains satisfies all constraints.",
-          "topic": "Foundry / Security Constraints",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q021",
-          "originalId": "Q21",
-          "type": "dropdown",
-          "question": "[Case Study - CHG] You are aligning solution design decisions across CHG's AI use cases. Match each item to the correct choice.",
-          "explanation": "Regulated boundary crossing → multi-agent boundary separation; consistency across departments → centralized prompt governance; HIPAA processing/auditing → custom compliance platform; multiple dependent steps → sequential orchestration.",
-          "topic": "Solution Design / Matching",
-          "difficulty": "hard",
-          "source": "practice-quiz",
-          "section": "casestudy",
-          "dropdowns": [
-            {
-              "label": "Patient intake crosses regulated system boundaries:",
-              "options": [
-                "Multi-agent architecture with boundary separation",
-                "Centralized prompt governance and templates",
-                "Custom platform supporting compliance pipelines",
-                "Sequential orchestration for controlled execution"
-              ],
-              "correctIndex": 0,
-              "correctAnswer": "Multi-agent architecture with boundary separation"
-            },
-            {
-              "label": "HR agent requires consistent responses across departments:",
-              "options": [
-                "Multi-agent architecture with boundary separation",
-                "Centralized prompt governance and templates",
-                "Custom platform supporting compliance pipelines",
-                "Sequential orchestration for controlled execution"
-              ],
-              "correctIndex": 1,
-              "correctAnswer": "Centralized prompt governance and templates"
-            },
-            {
-              "label": "Claims agent needs HIPAA-compliant processing and auditing:",
-              "options": [
-                "Multi-agent architecture with boundary separation",
-                "Centralized prompt governance and templates",
-                "Custom platform supporting compliance pipelines",
-                "Sequential orchestration for controlled execution"
-              ],
-              "correctIndex": 2,
-              "correctAnswer": "Custom platform supporting compliance pipelines"
-            },
-            {
-              "label": "Routing agent must process multiple dependent steps:",
-              "options": [
-                "Multi-agent architecture with boundary separation",
-                "Centralized prompt governance and templates",
-                "Custom platform supporting compliance pipelines",
-                "Sequential orchestration for controlled execution"
-              ],
-              "correctIndex": 3,
-              "correctAnswer": "Sequential orchestration for controlled execution"
-            }
-          ]
-        },
-        {
-          "id": "q022",
-          "originalId": "Q22",
-          "type": "mc",
-          "question": "A logistics company asks its architect to build a multi-agent system with seven specialized agents in the first sprint. The team has moderate AI skills. The architect finds routing and dispatch can cover 80% of the business value independently. What is the most architecturally sound decision?",
-          "options": [
-            "A. Delay the full multi-agent design and first validate a single-agent or two-agent solution covering routing and dispatch, scaling only after validating complexity drivers.",
-            "B. Immediately deploy using Foundry with a sequential orchestration pipeline across all seven agents.",
-            "C. Use Copilot Studio for all seven agents simultaneously to benefit from rapid, low-code deployment.",
-            "D. Accept the seven-agent design, as multi-agent systems provide better modularity and future-proofing."
-          ],
-          "correctAnswer": "A",
-          "explanation": "Start small (routing+dispatch = 80% value), validate complexity drivers, then scale.",
-          "topic": "Solution Scoping",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q023",
-          "originalId": "Q23",
-          "type": "mc",
-          "question": "A manufacturing company has three Copilot agents in production. During review, the Analytics Coach shows an 88% success rate, 3.2-second average response time, and 21 logged issues — the lowest performer. The product owner requests an immediate fix. What should the architect do FIRST?",
-          "options": [
-            "A. Disable the Analytics Coach temporarily to prevent further issue accumulation",
-            "B. Escalate to the vendor and request model replacement",
-            "C. Review conversation transcripts and telemetry to identify root cause categories driving the failures",
-            "D. Immediately update the knowledge files and republish the agent"
-          ],
-          "correctAnswer": "C",
-          "explanation": "Root-cause via transcripts and telemetry before taking corrective action.",
-          "topic": "Operations / Diagnostics",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q024",
-          "originalId": "Q24",
-          "type": "mc",
-          "question": "A professional services firm wants to deploy Microsoft 365 Copilot for Sales. Pre-deployment validation reveals several CRM opportunity fields are incomplete and SharePoint sales documents lack sensitivity labels. The business owner wants to roll out within a week. What must the architect complete FIRST?",
-          "options": [
-            "A. Configure Power Automate flows to automate proposal drafting workflows",
-            "B. Ensure CRM fields are complete, standardized, and SharePoint documents have proper sensitivity labels applied",
-            "C. Enable Copilot for Sales licenses and proceed with a limited pilot",
-            "D. Map seller roles to Dynamics 365 opportunity records and test email summarization"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Data readiness first: complete/standardized CRM fields and sensitivity labels on documents.",
-          "topic": "Copilot for Sales / Data Readiness",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q025",
-          "originalId": "Q25",
-          "type": "mc",
-          "question": "(Repeat scenario) A manufacturing company's lowest-performing agent shows an 88% success rate and 21 logged issues. What should the architect do FIRST?",
-          "options": [
-            "A. Review conversation transcripts and telemetry to identify root cause categories driving the failures",
-            "B. Escalate to the vendor and request model replacement",
-            "C. Disable the Analytics Coach temporarily to prevent further issue accumulation",
-            "D. Immediately update the knowledge files and republish the agent"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Root-cause via transcripts and telemetry first (duplicate of Q23 with reordered options).",
-          "topic": "Operations / Diagnostics",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q026",
-          "originalId": "Q26",
-          "type": "mc",
-          "question": "A pharmaceutical company needs an AI model to classify drug interaction reports with high accuracy. Data is highly domain-specific, regulatory restrictions prevent data from leaving a sovereign region, and response latency must be under 200ms. IT budget is moderate. Which model architecture decision is most appropriate?",
-          "options": [
-            "A. Deploy a customized Small Language Model (SLM) trained on domain-specific data, hosted within the sovereign region.",
-            "B. Use a general-purpose LLM via Azure OpenAI, as it provides the best reasoning capability across complex documents.",
-            "C. Use Microsoft 365 Copilot with a custom knowledge base of drug interaction documents.",
-            "D. Build a multi-agent system where one agent retrieves documents and another classifies them using a general LLM."
-          ],
-          "correctAnswer": "A",
-          "explanation": "Domain-specific + sovereign residency + low latency + moderate budget favor a customized SLM hosted in-region.",
-          "topic": "Model Selection / SLM",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q027",
-          "originalId": "Q27",
-          "type": "mc",
-          "question": "After deploying an enterprise AI agent, the operations team reports severe alert fatigue. All logs — routine access, low-level debug traces, cost events, and critical security anomalies — route into a single alerting channel, and important security signals are being missed. What should the architect redesign?",
-          "options": [
-            "A. Move all logs to a third-party SIEM and let the security team manage all routing independently",
-            "B. Disable all non-critical alerts and retain only system downtime notifications",
-            "C. Reduce log verbosity to errors only and suppress informational and debug-level events",
-            "D. Build dedicated dashboards for quality, safety, and cost; configure alerts specifically for anomalies and budget thresholds; and route security alerts to SOC workflows for triage and escalation"
-          ],
-          "correctAnswer": "D",
-          "explanation": "Separate dashboards per concern, targeted alerts, and SOC routing for security signals.",
-          "topic": "Observability / Alerting",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q028",
-          "originalId": "Q28",
-          "type": "mc",
-          "question": "A government agency deploys an AI agent that assists officers in reviewing case files and producing preliminary recommendations. Governance mandates that no AI system makes final decisions autonomously. Which control best enforces the mandate?",
-          "options": [
-            "A. Use Azure AI Content Safety to block any output that contains decision language.",
-            "B. Add a disclaimer in the agent's welcome message stating it does not make final decisions.",
-            "C. Define explicit behavior envelopes in the agent configuration (\"Agent may summarize and recommend; Agent may not decide or execute case outcomes\"), combined with mandatory human-in-the-loop checkpoints for high-impact actions.",
-            "D. Configure the agent with lower model temperature to reduce confidence in outputs."
-          ],
-          "correctAnswer": "C",
-          "explanation": "Explicit behavior envelopes plus mandatory human-in-the-loop checkpoints enforce the no-autonomous-decision mandate.",
-          "topic": "Governance / Guardrails",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q029",
-          "originalId": "Q29",
-          "type": "mc",
-          "question": "TRUE or FALSE: \"Consolidating DEV and TEST into a single shared AI development environment is an acceptable cost-optimization strategy that does not compromise ALM governance integrity.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Consolidating DEV/TEST compromises ALM governance integrity; keep environments separate.",
-          "topic": "ALM / Environments",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q030",
-          "originalId": "Q30",
-          "type": "mc",
-          "question": "A manufacturing company wants a Copilot Studio autonomous agent to manage supplier follow-up workflows: send reminders to overdue suppliers, update ERP records, and escalate unresolved cases. According to agent design best practices, what should the architect do FIRST?",
-          "options": [
-            "A. Configure event triggers for all inbound supplier communications",
-            "B. Connect all ERP tables as knowledge sources to maximize agent context",
-            "C. Start with one high-value, well-scoped workflow before expanding agent scope",
-            "D. Deploy the agent to Microsoft Teams for user acceptance testing immediately"
-          ],
-          "correctAnswer": "C",
-          "explanation": "Start with one high-value, well-scoped workflow before expanding scope.",
-          "topic": "Agent Design / Scoping",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q031",
-          "originalId": "Q31",
-          "type": "mc",
-          "question": "A healthcare company's Copilot for Service agent generates case resolution summaries automatically sent to patients via Power Automate with no human review. Compliance flagged this as a violation. The business team argues removing review improves resolution speed by 40%. What action should the architect take?",
-          "options": [
-            "A. Restrict the Copilot model to reduce verbosity of summaries so risk exposure is minimized",
-            "B. Disable all automated flows until the vendor provides compliance certification for the Copilot model",
-            "C. Enable DLP policies to intercept outbound messages after they are generated",
-            "D. Require human review before any externally generated Copilot content is sent to patients, and update the automation governance guardrails accordingly"
-          ],
-          "correctAnswer": "D",
-          "explanation": "Require human review before external patient-facing content and update governance guardrails.",
-          "topic": "Responsible AI / Human-in-the-Loop",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q032",
-          "originalId": "Q32",
-          "type": "mc",
-          "question": "A financial services AI agent processing loan applications is flagged by the SOC for unusual inference patterns — returning unexpected data fragments and potentially exposing customer PII. The incident is unconfirmed but escalating rapidly. A business manager suggests waiting 24 hours. What should the architect do FIRST?",
-          "options": [
-            "A. Disable the compromised model endpoint, preserve inference logs and model artifacts for forensic analysis, and initiate rollback procedures to restore the prior model version",
-            "B. Notify the Data Protection Officer and wait for their formal guidance before taking any technical action",
-            "C. Re-run all recent prompts against the previous model version to compare output differences",
-            "D. Increase monitoring verbosity on the agent and wait 24 hours to determine whether the pattern stabilizes"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Contain first: disable endpoint, preserve forensic evidence, roll back to the prior model version.",
-          "topic": "Incident Response",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q033",
-          "originalId": "Q33",
-          "type": "dropdown",
-          "question": "[Case Study - CHG] You are establishing an AI operating model at CHG to support governance, deployment, and ongoing operations. Match each item to the responsible party.",
-          "explanation": "Landing zones/environments → platform engineering; governance/compliance policies → security and compliance; use cases/architecture → solution architect; monitoring/operations → shared responsibility.",
-          "topic": "Operating Model / Matching",
-          "difficulty": "hard",
-          "source": "practice-quiz",
-          "section": "casestudy",
-          "dropdowns": [
-            {
-              "label": "Establish secure landing zones and environments:",
-              "options": [
-                "Platform engineering team",
-                "Solution architect",
-                "Shared responsibility between architecture and platform teams",
-                "Security and compliance team"
-              ],
-              "correctIndex": 0,
-              "correctAnswer": "Platform engineering team"
-            },
-            {
-              "label": "Define governance and compliance policies:",
-              "options": [
-                "Platform engineering team",
-                "Solution architect",
-                "Shared responsibility between architecture and platform teams",
-                "Security and compliance team"
-              ],
-              "correctIndex": 3,
-              "correctAnswer": "Security and compliance team"
-            },
-            {
-              "label": "Define AI use cases and architecture approach:",
-              "options": [
-                "Platform engineering team",
-                "Solution architect",
-                "Shared responsibility between architecture and platform teams",
-                "Security and compliance team"
-              ],
-              "correctIndex": 1,
-              "correctAnswer": "Solution architect"
-            },
-            {
-              "label": "Monitor deployed agents and manage operations:",
-              "options": [
-                "Platform engineering team",
-                "Solution architect",
-                "Shared responsibility between architecture and platform teams",
-                "Security and compliance team"
-              ],
-              "correctIndex": 2,
-              "correctAnswer": "Shared responsibility between architecture and platform teams"
-            }
-          ]
-        },
-        {
-          "id": "q034",
-          "originalId": "Q34",
-          "type": "mc",
-          "question": "(Repeat scenario) A professional services firm deploying Microsoft 365 Copilot for Sales finds incomplete CRM fields and unlabeled SharePoint documents. What must the architect complete FIRST before enabling Copilot for Sales?",
-          "options": [
-            "A. Configure Power Automate flows to automate proposal drafting workflows",
-            "B. Enable Copilot for Sales licenses and proceed with a limited pilot",
-            "C. Ensure CRM fields are complete, standardized, and SharePoint documents have proper sensitivity labels applied",
-            "D. Map seller roles to Dynamics 365 opportunity records and test email summarization"
-          ],
-          "correctAnswer": "C",
-          "explanation": "Data readiness first (duplicate of Q24 with reordered options).",
-          "topic": "Copilot for Sales / Data Readiness",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q035",
-          "originalId": "Q35",
-          "type": "mc",
-          "question": "A bank deploys an autonomous Copilot agent that automatically approves or denies personal loan applications based on AI-generated credit assessments. After launch, compliance discovers the agent produces denial decisions without any explanation to applicants and with no human review. Which two Responsible AI principles are MOST directly violated?",
-          "options": [
-            "A. Security and Inclusiveness",
-            "B. Reliability and Privacy",
-            "C. Fairness and Inclusiveness",
-            "D. Transparency and Accountability"
-          ],
-          "correctAnswer": "D",
-          "explanation": "No explanation (Transparency) and no human review/ownership of decisions (Accountability).",
-          "topic": "Responsible AI / Principles",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q036",
-          "originalId": "Q36",
-          "type": "mc",
-          "question": "A large enterprise has 12 AI use case proposals submitted to the AI Center of Excellence. The CoE has limited capacity, and the executive sponsor wants to approve all 12 for simultaneous execution. According to Microsoft's AI CoE framework, what should the AI CoE do FIRST?",
-          "options": [
-            "A. Begin delivering all 12 using Copilot Studio to minimize risk through the platform's built-in safeguards.",
-            "B. Evaluate each use case for business value, technical feasibility, risk level, and organizational readiness before prioritizing a subset for execution.",
-            "C. Approve all 12 and assign a governance lead to each project to ensure oversight.",
-            "D. Escalate to the legal team to validate compliance for all 12 simultaneously."
-          ],
-          "correctAnswer": "B",
-          "explanation": "Evaluate and prioritize use cases by value, feasibility, risk, and readiness before execution.",
-          "topic": "AI CoE / Prioritization",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q037",
-          "originalId": "Q37",
-          "type": "mc",
-          "question": "A logistics company is building a multi-agent AI system in Azure AI Foundry handling three task types: simple package status lookups, moderately complex route optimization queries, and highly complex supply chain disruption analysis. How should the architect configure the model router to balance cost and performance?",
-          "options": [
-            "A. Use static routing rules: SLM for simple tasks, fine-tuned model for moderate tasks, LLM for complex tasks",
-            "B. Route all three task types to a single GPT-4 LLM for consistency",
-            "C. Route all tasks to an SLM to reduce token costs uniformly",
-            "D. Use weighted routing to distribute all tasks equally across all available models"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Match model capability to task complexity: SLM for simple, fine-tuned for moderate, LLM for complex.",
-          "topic": "Foundry / Model Routing",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q038",
-          "originalId": "Q38",
-          "type": "mc",
-          "question": "A financial services firm is deploying Copilot within Dynamics 365 Finance for regulatory audit workflows. The sponsor wants general LLM knowledge enabled; the CISO mandates all responses derive exclusively from validated, internally controlled content. What should the architect do?",
-          "options": [
-            "A. Restrict general knowledge and configure Copilot to use only validated internal knowledge sources",
-            "B. Deploy Copilot in pilot mode with general knowledge enabled and monitor for compliance violations",
-            "C. Escalate to the business sponsor to obtain executive approval before enabling LLM-based knowledge",
-            "D. Enable general knowledge to improve natural language flexibility for auditors"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Restrict to validated internal knowledge sources to meet the CISO's regulatory mandate.",
-          "topic": "Grounding / Compliance",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q039",
-          "originalId": "Q39",
-          "type": "multi",
-          "question": "[Case Study - CHG] You are designing a Field Service Routing solution that retrieves technician data from Dynamics 365, uses HIPAA-sensitive patient location data, triggers workflows via Power Automate, and escalates complex cases to supervisors. Which design decisions are appropriate? (Select ALL that apply)",
-          "options": [
-            "A. Separate agents based on security boundaries (patient data vs operations)",
-            "B. Host all models in isolated compute environments by default",
-            "C. Design a sequential workflow for controlled end-to-end processing",
-            "D. Use parallel processing where independent data retrieval tasks exist",
-            "E. Use a single agent to manage all operations and simplify architecture"
-          ],
-          "correctAnswers": [
-            "A",
-            "C",
-            "D"
-          ],
-          "explanation": "Separate by security boundary, use sequential control flow, and parallelize independent retrieval. Isolating all models by default is over-engineering; a single agent for everything violates boundary separation.",
-          "topic": "Solution Design / Multi-Agent",
-          "difficulty": "hard",
-          "source": "practice-quiz",
-          "section": "casestudy"
-        },
-        {
-          "id": "q040",
-          "originalId": "Q40",
-          "type": "mc",
-          "question": "A healthcare organization is beginning its AI adoption journey using the Cloud Adoption Framework. Leadership agreed on high-level objectives (improve patient satisfaction, reduce administrative workload) but has not identified specific AI use cases or assessed data quality. What is the NEXT step the architect should take?",
-          "options": [
-            "A. Establish program governance and Responsible AI standards before proceeding",
-            "B. Assess AI feasibility by evaluating data quality, security, and model appropriateness",
-            "C. Immediately begin configuring Copilot Studio agents for appointment scheduling",
-            "D. Identify measurable AI scenarios with high feasibility and high business impact"
-          ],
-          "correctAnswer": "D",
-          "explanation": "After objectives are set, identify measurable AI scenarios with high feasibility and business impact.",
-          "topic": "Cloud Adoption Framework / AI",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q041",
-          "originalId": "Q41",
-          "type": "mc",
-          "question": "A new AI Copilot agent for case summarization in Dynamics 365 Customer Service has passed DEV and TEST validation. The product owner pushes for direct PROD deployment to meet a customer launch deadline. The UAT/PRE-PROD environment has not been used in this release cycle. What should the architect do FIRST?",
-          "options": [
-            "A. Export the managed solution package and push it to PROD via Azure DevOps with monitoring alerts enabled",
-            "B. Deploy to PROD immediately and use post-deployment telemetry to catch issues",
-            "C. Re-run regression tests in the DEV environment using production data to save time",
-            "D. Stage the agent in PRE-PROD for final business acceptance, performance, safety, and compliance validation before deploying to PROD"
-          ],
-          "correctAnswer": "D",
-          "explanation": "Stage in PRE-PROD for final acceptance/performance/safety/compliance validation before PROD.",
-          "topic": "ALM / Release Pipeline",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q042",
-          "originalId": "Q42",
-          "type": "mc",
-          "question": "A healthcare organization in the EU plans to deploy a patient-facing AI assistant for appointment booking and health FAQs. Legal flags GDPR obligations and the EU AI Act as potentially applicable. The sponsor wants to skip the regulatory review to accelerate the timeline. What should the architect do FIRST?",
-          "options": [
-            "A. Deploy to a non-EU region to avoid EU AI Act compliance obligations.",
-            "B. Conduct a regulatory evaluation across applicable jurisdictions before finalizing the architecture.",
-            "C. Implement Azure AI Content Safety and assume it covers all regulatory requirements.",
-            "D. Proceed with deployment since the agent only retrieves public FAQs and poses minimal risk."
-          ],
-          "correctAnswer": "B",
-          "explanation": "Conduct a regulatory evaluation across applicable jurisdictions before finalizing architecture.",
-          "topic": "Compliance / Regulatory",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q043",
-          "originalId": "Q43",
-          "type": "mc",
-          "question": "TRUE or FALSE: \"Microsoft 365 agents can be configured with elevated admin-level access to override SharePoint security boundaries and retrieve content on behalf of all users, regardless of their individual permissions.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Agents cannot override SharePoint security boundaries; they honor the requesting user's permissions.",
-          "topic": "Security / Permissions",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q044",
-          "originalId": "Q44",
-          "type": "mc",
-          "question": "A financial services firm needs an AI agent that executes multi-step loan approval workflows, integrates with three internal APIs, and enforces strict separation of duties between teams. Compliance requires full auditability of every agent action, and IT has strong developer expertise. Which platform architecture decision best satisfies all constraints?",
-          "options": [
-            "A. Use GPUs and containers to host a custom model for maximum compliance isolation.",
-            "B. Build using Microsoft Foundry with role-scoped agents, explicit action boundaries, evaluation pipelines, and audit trails.",
-            "C. Use Microsoft 365 Copilot (SaaS) as a productivity-first approach, minimizing customization effort.",
-            "D. Deploy using Copilot Studio with prebuilt connectors, relying on its built-in safety filters for compliance."
-          ],
-          "correctAnswer": "B",
-          "explanation": "Microsoft Foundry with role-scoped agents, explicit action boundaries, eval pipelines, and audit trails meets separation-of-duties and auditability.",
-          "topic": "Platform Selection / Foundry",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q045",
-          "originalId": "Q45",
-          "type": "mc",
-          "question": "A global enterprise deploys a SharePoint-based Copilot agent for cross-departmental policy guidance. Each department maintains its own SharePoint site with restricted access. A business leader requests the agent be granted global read permissions via a service account so it can serve all employees regardless of their access levels. What architectural boundary must the architect enforce?",
-          "options": [
-            "A. Enable agent-level admin override so the agent can bypass SharePoint permission boundaries",
-            "B. Use a custom API connector to route all content queries through a centralized knowledge repository with elevated access",
-            "C. Configure a service account with global read permissions to enable uniform cross-department access",
-            "D. Enforce that agents inherit the requesting user's permissions and cannot access content the user cannot access"
-          ],
-          "correctAnswer": "D",
-          "explanation": "Agents must inherit the requesting user's permissions and cannot access content the user cannot access.",
-          "topic": "Security / Permissions",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q046",
-          "originalId": "Q46",
-          "type": "mc",
-          "question": "(Restrict-to-internal-knowledge scenario; full option set was not captured during the attempt.) The selected answer during the attempt was to restrict general knowledge to validated internal sources.",
-          "options": [
-            "A. Restrict general knowledge and configure Copilot to use only validated internal knowledge sources"
-          ],
-          "correctAnswer": "A",
-          "explanation": "NOTE: Options for Q46 were not fully captured during the attempt; only the selected answer is recorded. Verify against the source. The answer aligns with the internal-only grounding guidance seen in Q38/Q54.",
-          "topic": "Grounding / Compliance",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q047",
-          "originalId": "Q47",
-          "type": "mc",
-          "question": "An organization's AI CoE was established 18 months ago with a centralized model, approving every AI project and owning all delivery. Business units now complain about delays. The CoE has successfully standardized governance frameworks and published reusable AI templates that product teams have adopted. What is the most appropriate NEXT step for the CoE's operating model evolution?",
-          "options": [
-            "A. Transition to a hybrid or advisory CoE model, where product teams take ownership of delivery while the CoE maintains standards and acts as a consultant.",
-            "B. Dissolve the CoE entirely, as product teams are now self-sufficient.",
-            "C. Expand the CoE team to handle the increased demand from business units.",
-            "D. Maintain the centralized model — it ensures consistent governance and prevents ungoverned AI adoption."
-          ],
-          "correctAnswer": "A",
-          "explanation": "Evolve from centralized to hybrid/advisory: product teams own delivery, CoE maintains standards and consults.",
-          "topic": "AI CoE / Operating Model",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q048",
-          "originalId": "Q48",
-          "type": "mc",
-          "question": "A retail organization wants to give warehouse staff access to demand planning insights through Copilot. Staff rarely leave the operational workspace view. Two options are under discussion: a sidecar Copilot experience or an embedded AI approach. Which AI experience model best fits this scenario, and why?",
-          "options": [
-            "A. Sidecar Copilot — because it supports natural language chat and is easier to configure",
-            "B. Embedded AI — because it surfaces insights directly within the workspace, reducing navigation overhead",
-            "C. External orchestration — because it allows cross-application automation",
-            "D. Sidecar Copilot — because it supports workflow summaries across modules using standardized entity metadata"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Embedded AI surfaces insights within the operational workspace, reducing navigation overhead for staff who rarely leave that view.",
-          "topic": "AI Experience Model",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q049",
-          "originalId": "Q49",
-          "type": "mc",
-          "question": "A retail enterprise wants to deploy an AI agent for product recommendations across 50,000 daily customers. The CTO demands a 3-week go-live. The data engineering team warns that product catalog data is outdated, inconsistently labeled, and spread across three legacy systems. As the architect, what is the FIRST action you should take?",
-          "options": [
-            "A. Defer the agent launch and mandate a data quality remediation effort, as agent reliability depends on grounding data quality and freshness.",
-            "B. Deploy the agent using Azure AI Foundry with private networking to handle the complexity of multiple data sources.",
-            "C. Build a custom SLM trained on historical product data to compensate for data quality gaps.",
-            "D. Begin building the agent in Copilot Studio immediately, as it supports rapid deployment and can be refined post-launch."
-          ],
-          "correctAnswer": "A",
-          "explanation": "Agent reliability depends on grounding data quality/freshness; defer launch and remediate data first.",
-          "topic": "Data Readiness",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q050",
-          "originalId": "Q50",
-          "type": "mc",
-          "question": "Statement: \"For a high-volume enterprise workflow automation scenario that requires dynamic AI-driven insights, developer extensibility, and automated suggestions, combining generative pages, agent feed, and code-first enhancements is a recommended architectural pattern.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Combining generative pages, agent feed, and code-first enhancements is a recommended pattern for this scenario.",
-          "topic": "Architecture Patterns",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q051",
-          "originalId": "Q51",
-          "type": "mc",
-          "question": "During a monthly operations review, the architect notices a significant spike in guardrail intervention events for a deployed customer service agent over the past two weeks. User satisfaction scores have declined, and several conversations were abandoned after the guardrail blocked responses. The operations manager recommends temporarily disabling guardrails. What is the MOST appropriate diagnostic step?",
-          "options": [
-            "A. Expand the knowledge base by adding more documents to broaden agent response coverage",
-            "B. Roll back the agent to its previous release version immediately",
-            "C. Disable guardrails temporarily to resume normal service and restore satisfaction scores quickly",
-            "D. Analyze telemetry for guardrail trigger patterns and review conversation transcripts to identify whether guardrails are misconfigured or legitimately blocking risk"
-          ],
-          "correctAnswer": "D",
-          "explanation": "Analyze telemetry and transcripts to determine whether guardrails are misconfigured or correctly blocking risk before acting.",
-          "topic": "Operations / Guardrails",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q052",
-          "originalId": "Q52",
-          "type": "mc",
-          "question": "A retail enterprise is deploying a production Copilot agent connecting to multiple Azure-hosted backend services. The dev team embedded service principal credentials directly into the agent's configuration files. The security architect raises concerns about credential rotation and secret exposure; the team argues encrypting the config files is sufficient. What is the best approach?",
-          "options": [
-            "A. Encrypt the configuration files using AES-256 and restrict file access to production admins only",
-            "B. Store credentials in Azure Key Vault and reference them dynamically from the agent configuration",
-            "C. Replace embedded secrets with managed identities for agent-to-Azure authentication to remove secrets entirely and simplify rotation",
-            "D. Rotate the embedded credentials every 30 days using an automated Key Vault script"
-          ],
-          "correctAnswer": "C",
-          "explanation": "Managed identities remove stored secrets entirely and simplify rotation — the most secure option.",
-          "topic": "Security / Identity",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q053",
-          "originalId": "Q53",
-          "type": "mc",
-          "question": "Statement: \"A custom connector built in Power Automate can be created in any Power Platform environment, including the default environment, as long as the correct OpenAPI definition and OAuth 2.0 authentication are configured.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Custom connectors can be created in any environment (including the default) with a valid OpenAPI definition and OAuth 2.0 auth.",
-          "topic": "Power Platform / Connectors",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q054",
-          "originalId": "Q54",
-          "type": "mc",
-          "question": "A retail company is deploying an AI agent for customer collections summaries in Dynamics 365 Finance. The CFO also wants the agent to answer general regulatory finance questions using LLM capabilities. The architect has not yet completed a risk assessment for LLM enablement in this regulated environment. How should the architect advise the CFO?",
-          "options": [
-            "A. Delay general knowledge enablement until risks are formally assessed and mitigated; keep the agent restricted to validated internal knowledge in the interim",
-            "B. Build a custom Azure OpenAI model to handle regulatory questions separately and bypass the governance review",
-            "C. Enable general knowledge immediately — the productivity gains outweigh the risk",
-            "D. Enable general knowledge in production and configure a compliance review process post-deployment"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Delay general-knowledge enablement until risks are assessed/mitigated; keep to validated internal knowledge in the interim.",
-          "topic": "Grounding / Risk Assessment",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q055",
-          "originalId": "Q55",
-          "type": "mc",
-          "question": "TRUE or FALSE: \"Storing encrypted service principal credentials in Azure Key Vault is an acceptable substitute for managed identities when securing AI agent-to-Azure authentication in an enterprise AI deployment.\"",
-          "options": [
-            "A. True",
-            "B. False"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Managed identities (no stored secrets) are the preferred practice; Key Vault-stored credentials are not an equivalent substitute.",
-          "topic": "Security / Identity",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q056",
-          "originalId": "Q56",
-          "type": "mc",
-          "question": "[Case Study - CHG] You are designing the Claims Summarization Agent. The solution requires transformation of inconsistent data from Azure Data Lake, HIPAA-compliant audit logging at the data level, and integration with custom data pipelines. The team suggests Copilot Studio for faster delivery. Which is the best platform choice to accomplish all requirements?",
-          "options": [
-            "A. Microsoft Foundry to support custom pipelines and compliance controls",
-            "B. Copilot Studio with Azure AI Search for faster deployment",
-            "C. Containerized model deployment to isolate workloads",
-            "D. Microsoft 365 Copilot because it provides built-in retrieval"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Custom pipelines + data-level HIPAA audit logging + data transformation require Microsoft Foundry.",
-          "topic": "Platform Selection / Foundry",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "casestudy"
-        },
-        {
-          "id": "q057",
-          "originalId": "Q57",
-          "type": "mc",
-          "question": "(Repeat scenario) Warehouse staff rarely leave the operational workspace view and need demand planning insights through Copilot. Which AI experience model best fits, and why?",
-          "options": [
-            "A. Sidecar Copilot — because it supports workflow summaries across modules using standardized entity metadata",
-            "B. Embedded AI — because it surfaces insights directly within the workspace, reducing navigation overhead",
-            "C. Sidecar Copilot — because it supports natural language chat and is easier to configure",
-            "D. External orchestration — because it allows cross-application automation"
-          ],
-          "correctAnswer": "B",
-          "explanation": "Embedded AI surfaces insights in-workspace (duplicate of Q48 with reordered options).",
-          "topic": "AI Experience Model",
-          "difficulty": "easy",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q058",
-          "originalId": "Q58",
-          "type": "mc",
-          "question": "A financial services firm is scheduled for a production go-live of a new AI loan advisory agent. Reviewing the AI Release Readiness Checklist, the architect discovers prompts have not been regression tested and monitoring dashboards have not been configured. The CTO demands deployment by end of day to support a high-visibility client demo. What should the architect do?",
-          "options": [
-            "A. Delay the production release until prompts are regression tested and monitoring dashboards are operational, regardless of the demo deadline",
-            "B. Deploy to PROD since the demo is read-only and production data will not be modified",
-            "C. Deploy to PROD and manually shadow-monitor the agent session live during the demo",
-            "D. Deploy to PROD with the demo user operating under restricted permissions and complete the checklist next week"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Delay release until regression testing and monitoring dashboards are complete, regardless of the demo deadline.",
-          "topic": "Release Readiness",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        },
-        {
-          "id": "q059",
-          "originalId": "Q59",
-          "type": "mc",
-          "question": "[Case Study - CHG] The CTO requests deployment of four AI agents within 90 days. CHG lacks an AI CoE, has no governance framework, and handles HIPAA-regulated patient data. You must recommend the first agent to deploy to demonstrate measurable business value while minimizing implementation and compliance risk. Which agent should you prioritize?",
-          "options": [
-            "A. Claims Summarization Agent, because it processes the highest volume of data",
-            "B. Field Service Routing Agent, because it introduces multi-agent orchestration capabilities",
-            "C. HR Policy Q&A Agent, because it uses existing Microsoft 365 data with minimal compliance risk",
-            "D. Patient Intake Orchestration Agent, because it directly impacts patient operations"
-          ],
-          "correctAnswer": "C",
-          "explanation": "HR Policy Q&A uses existing M365 data with minimal compliance risk — best first agent to show value while minimizing risk.",
-          "topic": "Use Case Prioritization",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "casestudy"
-        },
-        {
-          "id": "q060",
-          "originalId": "Q60",
-          "type": "mc",
-          "question": "An insurance company preparing to launch an AI agent for claims triage discovers during a Responsible AI review that the fairness assessment reveals statistically different outcomes for similar claim profiles from different demographic groups. The product owner wants to launch on schedule and address the bias in a post-launch patch. What should the architect recommend?",
-          "options": [
-            "A. Delay the launch until the fairness issue is identified, root-caused, and mitigated — Fairness is a core Responsible AI principle that must be satisfied before deployment",
-            "B. Launch to a limited pilot group and use production telemetry to quantify the bias before patching",
-            "C. Launch on schedule but add a disclaimer that the agent's recommendations are AI-generated and subject to change",
-            "D. Replace the AI agent with a manual rules-based triage system to eliminate bias risk entirely"
-          ],
-          "correctAnswer": "A",
-          "explanation": "Fairness must be satisfied before deployment; delay until the bias is root-caused and mitigated.",
-          "topic": "Responsible AI / Fairness",
-          "difficulty": "medium",
-          "source": "practice-quiz",
-          "section": "standalone"
-        }
-      ]
-    }
-  ]
+	"examCode": "AB-100",
+	"examName": "Agentic AI Business Solutions Architect",
+	"totalQuestions": 70,
+	"sources": [
+		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)"
+	],
+	"note": "Questions captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). No official domain mapping is available for this practice set, so all questions are grouped under a single practice domain.",
+	"caseStudies": [
+		{
+			"id": "chg",
+			"name": "Contoso HealthServices Group (CHG)",
+			"contextPlaceholder": "Mid-sized US healthcare services org, 12 states, ~8,500 employees. M365 E5 + Dynamics 365 Customer Service + Field Service. Azure Data Lake (basic) + Power Automate. Early AI maturity: no AI CoE, no prompt library. HR/claims data siloed in 3 legacy systems. Patient data subject to HIPAA. Challenges: data fragmentation & compliance, governance gap (shadow AI), ROI uncertainty & adoption risk (CTO wants 4 agents live in 90 days). Applies to Q13, Q15, Q21, Q33, Q39, Q56, Q59."
+		}
+	],
+	"domains": [
+		{
+			"domainId": "1",
+			"domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+			"questions": [
+				{
+					"id": "q001",
+					"originalId": "Q1",
+					"type": "mc",
+					"question": "An insurance company's Power Automate-based claims processing flow is experiencing intermittent failures when connecting to a downstream policy management system. The failures occur during peak load and cause incomplete claims records. The system has no retry logic or fallback path configured. Which Power Platform Well-Architected pillar is primarily being violated, and what should the architect recommend?",
+					"options": [
+						"A. Reliability — add retry policies and configure redundant connectors with failover paths",
+						"B. Operational Excellence — implement ALM with Azure DevOps",
+						"C. Security — apply DLP policies to prevent connector exposure",
+						"D. Performance Efficiency — offload tasks to Azure Functions"
+					],
+					"correctAnswer": "A",
+					"explanation": "Peak-load intermittent failures with no retry/fallback are a Reliability pillar concern. Add retry policies and redundant connectors with failover paths.",
+					"topic": "Well-Architected / Reliability",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q002",
+					"originalId": "Q2",
+					"type": "mc",
+					"question": "A business unit requests urgent deployment of a custom connector that integrates an external market intelligence vendor into Copilot for Dynamics 365 Sales. The connector is built and tested, but the legal team has not reviewed the third-party vendor's privacy policy or data terms. The business sponsor insists on a same-week launch. What should the architect recommend?",
+					"options": [
+						"A. Certify the connector organization-wide to streamline the compliance review process",
+						"B. Enable the connector in the dev environment only until legal review is complete",
+						"C. Delay deployment until legal and compliance review of the external data source is completed",
+						"D. Deploy the connector immediately and schedule the legal review for post-launch"
+					],
+					"correctAnswer": "C",
+					"explanation": "External data source integrations require legal/compliance review of privacy terms before deployment, regardless of deadline pressure.",
+					"topic": "Governance / Compliance",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q003",
+					"originalId": "Q3",
+					"type": "mc",
+					"question": "According to agent design best practices, when a knowledge source has not yet finished processing, what should the architect do before publishing?",
+					"options": [
+						"A. Publish the agent immediately to meet the deadline and patch any knowledge issues post-deployment",
+						"B. Publish the agent with a disclaimer to users that knowledge may be incomplete",
+						"C. Wait for the knowledge source to show \"Ready,\" perform scenario-based testing, and then publish",
+						"D. Replace the new documents with an older version that already has a Ready status"
+					],
+					"correctAnswer": "C",
+					"explanation": "Wait for the knowledge source to reach Ready, then do scenario-based testing before publishing.",
+					"topic": "Agent Design / Knowledge Grounding",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q004",
+					"originalId": "Q4",
+					"type": "mc",
+					"question": "TRUE or FALSE: \"Prompt injection vulnerabilities only affect public-facing AI agents and do not require mitigation controls in internal enterprise AI agents used by authenticated employees.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "B",
+					"explanation": "Prompt injection affects internal agents too; mitigation controls are required regardless of audience.",
+					"topic": "Security / Prompt Injection",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q005",
+					"originalId": "Q5",
+					"type": "mc",
+					"question": "A global pharmaceutical company needs a conversational AI agent to assist regulatory compliance officers. The process involves highly proprietary compound data, strict FDA-governed decision workflows, and internal IP that cannot be shared with any external vendor. The organization has a mature AI engineering team. Which AI development approach should the architect recommend?",
+					"options": [
+						"A. Build — Develop a fully custom AI solution to maintain data control and regulatory compliance",
+						"B. Buy — Use a prebuilt Microsoft 365 Copilot solution to accelerate time-to-value",
+						"C. Extend — Use Azure AI Foundry with a fine-tuned model connected to SharePoint",
+						"D. Extend — Customize Copilot Studio with grounding documents from SharePoint"
+					],
+					"correctAnswer": "A",
+					"explanation": "Highly proprietary IP that cannot leave the org, strict regulatory workflows, and a mature AI team favor Build (fully custom).",
+					"topic": "Build/Buy/Extend Decision",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q006",
+					"originalId": "Q6",
+					"type": "mc",
+					"question": "A government agency is deploying a Copilot Studio agent for benefits enrollment. All user questions follow predictable, structured patterns defined by a legal mandate. The agency requires deterministic responses with no generative behavior to meet audit requirements. Which language understanding approach should the architect configure?",
+					"options": [
+						"A. Generative AI orchestration — to handle open-ended user queries dynamically",
+						"B. Standard NLU — for strict intent matching with deterministic, non-generative responses",
+						"C. Azure CLU — to support multilingual intent recognition across varied phrasing",
+						"D. NLU Boost with generative answers — to answer questions from internal SharePoint knowledge"
+					],
+					"correctAnswer": "B",
+					"explanation": "Deterministic, non-generative, audit-friendly responses call for Standard NLU with strict intent matching.",
+					"topic": "Copilot Studio / Language Understanding",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q007",
+					"originalId": "Q7",
+					"type": "mc",
+					"question": "A public-facing AI customer support agent for a bank allows users to upload PDF attachments. During red team testing, attackers embedded hidden override instructions within uploaded PDFs, steering the agent to bypass its system-level safety instructions and return restricted account information. What is the MOST effective mitigation the architect should implement?",
+					"options": [
+						"A. Disable PDF upload support entirely to eliminate the attack vector",
+						"B. Add CAPTCHA verification to the upload form to ensure only human users can submit files",
+						"C. Strengthen input and output filtering — strip unsafe embedded content and HTML from inputs, limit accepted file types, apply safety filters on model outputs, and block code execution attempts",
+						"D. Enable daily manual review of all uploaded files by a security analyst"
+					],
+					"correctAnswer": "C",
+					"explanation": "Layered input/output filtering (strip embedded content, limit file types, output safety filters, block code execution) is the most effective mitigation.",
+					"topic": "Security / Content Safety",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q008",
+					"originalId": "Q8",
+					"type": "mc",
+					"question": "An insurance company is designing a multi-agent claims processing solution. The workflow requires: (1) extracting claim details, (2) translating foreign-language documents, (3) running a QA validation on completeness, and (4) routing to the appropriate team. Each step must complete before the next begins, and any failure must halt the pipeline. Which orchestration pattern should the architect select?",
+					"options": [
+						"A. Handoff orchestration, so each agent decides independently who to route to next.",
+						"B. Concurrent orchestration, so all agents process in parallel to reduce latency.",
+						"C. Sequential orchestration, where each agent processes in a deterministic stage-by-stage pipeline.",
+						"D. Group chat orchestration, so agents negotiate the task sequence dynamically."
+					],
+					"correctAnswer": "C",
+					"explanation": "Dependent stages that must complete in order and halt on failure map to Sequential orchestration.",
+					"topic": "Multi-Agent Orchestration",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q009",
+					"originalId": "Q9",
+					"type": "mc",
+					"question": "An enterprise AI agent in a legal firm operates in two modes: it retrieves case documents on behalf of a logged-in attorney during active sessions, and it performs overnight background batch analysis without user interaction. A developer proposes using a single elevated service account for both modes. What is the correct authorization architecture?",
+					"options": [
+						"A. Use a single managed identity scoped to the highest-permission level so both modes always succeed",
+						"B. Propagate the attorney's permissions when the agent acts on their behalf; use a narrowly scoped service role when the agent acts as itself for background batch processing",
+						"C. Use a single elevated service account with full permissions to cover both operating modes",
+						"D. Use OAuth client credentials for all modes to standardize authentication across both scenarios"
+					],
+					"correctAnswer": "B",
+					"explanation": "On-behalf-of should propagate user permissions; autonomous background work should use a narrowly scoped service role (least privilege).",
+					"topic": "Identity / Authorization",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q010",
+					"originalId": "Q10",
+					"type": "mc",
+					"question": "A solution architect is beginning the ALM design for a new AI-powered sentiment detection feature in Dynamics 365 Customer Service. The development team is eager to start building prompts and configuring conversation boosters. What should the architect do FIRST?",
+					"options": [
+						"A. Build prompts for sentiment classification and configure conversation boosters in Copilot",
+						"B. Package and version the agent assets inside a solution file using semantic versioning",
+						"C. Define AI use cases, required data sources, customer data flows, sensitivity labels, and compliance constraints",
+						"D. Set up environment variables for connectors, API endpoints, and knowledge indices"
+					],
+					"correctAnswer": "C",
+					"explanation": "Governance-first: define use cases, data sources, data flows, sensitivity labels, and compliance constraints before building.",
+					"topic": "ALM / Planning",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q011",
+					"originalId": "Q11",
+					"type": "mc",
+					"question": "An organization is designing a governance framework for a Copilot agent that handles sensitive HR compensation data. The HR Director proposes using a shared cloud identity across DEV, TEST, and PROD to reduce identity management overhead. What is the architect's correct guidance?",
+					"options": [
+						"A. Assign a unique cloud identity per agent per environment — DEV, PRE-PROD, and PROD — recording ownership, version, and lifecycle metadata for each",
+						"B. Use a shared identity but restrict its permissions to read-only in non-production environments",
+						"C. Accept the shared identity model and apply environment-specific DLP policies to compensate for the risk",
+						"D. Allow the shared identity between DEV and TEST only, with a separate identity for PROD"
+					],
+					"correctAnswer": "A",
+					"explanation": "Unique identity per agent per environment with ownership/version/lifecycle metadata; never share identities across environments.",
+					"topic": "Governance / Identity",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q012",
+					"originalId": "Q12",
+					"type": "mc",
+					"question": "TRUE or FALSE: \"In a governed enterprise Copilot for Service deployment, human review before sending externally generated content is unnecessary overhead when the model produces high-quality summaries.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "B",
+					"explanation": "Human review before external send remains required in governed deployments; it cannot be removed for speed.",
+					"topic": "Responsible AI / Human-in-the-Loop",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q013",
+					"originalId": "Q13",
+					"type": "mc",
+					"question": "[Case Study - CHG] A proposed Patient Intake Agent automatically commits patient records, uses generative responses, has no human approval checkpoints, and includes no content safety controls. Statement: \"This design is acceptable because built-in Copilot safeguards are sufficient for regulated healthcare workloads.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "B",
+					"explanation": "Built-in safeguards are not sufficient for regulated HIPAA workloads; auto-commit + generative + no human approval + no content safety is unacceptable.",
+					"topic": "Responsible AI / Regulated Workloads",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "casestudy"
+				},
+				{
+					"id": "q014",
+					"originalId": "Q14",
+					"type": "mc",
+					"question": "A financial services organization wants to automate 40% of its manual loan-processing data entry using a Copilot Studio agent. The sponsor estimates a 60% productivity gain, but there is no baseline of current processing time and no usage telemetry. What should you do FIRST before building a ROI business case?",
+					"options": [
+						"A. Proceed to design the agent and collect ROI data during the pilot phase",
+						"B. Establish a baseline by measuring current task time, volume, and error rates before modeling ROI",
+						"C. Request Copilot Studio licensing immediately to access ROI analytics dashboards",
+						"D. Submit the ROI projections using industry benchmark data since no internal data exists"
+					],
+					"correctAnswer": "B",
+					"explanation": "Establish a measured baseline (task time, volume, error rates) before modeling ROI.",
+					"topic": "Business Value / ROI",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q015",
+					"originalId": "Q15",
+					"type": "mc",
+					"question": "[Case Study - CHG] CHG has inconsistent AI outputs across departments due to fragmented data sources and lack of unified business definitions. A proposal suggests relying only on existing data models and Copilot capabilities. Statement: \"This approach will provide consistent and governed cross-domain reasoning for CHG.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "B",
+					"explanation": "Fragmented data and missing unified definitions cannot yield consistent, governed cross-domain reasoning by relying only on existing models.",
+					"topic": "Data Foundation / Governance",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "casestudy"
+				},
+				{
+					"id": "q016",
+					"originalId": "Q16",
+					"type": "mc",
+					"question": "A retail organization wants an autonomous agent in Copilot Studio to automatically process customer refund requests: access order records, calculate refund eligibility, and execute refund transactions in the ERP system — all without human approval. What is the MOST critical architectural risk the architect must address before deploying?",
+					"options": [
+						"A. The agent lacks sufficient trigger configuration for scheduled events",
+						"B. The agent cannot be published to Microsoft Teams without admin approval",
+						"C. The agent has unrestricted action permissions that violate the principle of least privilege",
+						"D. The agent may not support enough knowledge sources to ground responses"
+					],
+					"correctAnswer": "C",
+					"explanation": "Autonomous financial actions with broad permissions violate least privilege — the most critical risk.",
+					"topic": "Security / Least Privilege",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q017",
+					"originalId": "Q17",
+					"type": "mc",
+					"question": "TRUE or FALSE: \"Once an AI agent reaches a high success rate, architects can safely reduce monitoring to ad-hoc reviews and focus improvement cycles only when issues are escalated by users.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "B",
+					"explanation": "Continuous monitoring is required even with high success rates; you cannot drop to ad-hoc reviews.",
+					"topic": "Operations / Monitoring",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q018",
+					"originalId": "Q18",
+					"type": "mc",
+					"question": "Statement: \"When building an executive ROI business case for an AI agent, a solution architect should present only the expected-case savings projection, since conservative and optimistic bands add unnecessary complexity for stakeholders.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "B",
+					"explanation": "ROI cases should present ranges (conservative/expected/optimistic), not only the expected case.",
+					"topic": "Business Value / ROI",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q019",
+					"originalId": "Q19",
+					"type": "mc",
+					"question": "An enterprise architect is designing a Teams-based AI agent to let team members retrieve project documents, summarize recent channel discussions, and automate task creation from messages. Which grounding approach should the architect establish FIRST?",
+					"options": [
+						"A. Use Microsoft Graph as the primary retrieval engine to maximize cross-tenant content coverage",
+						"B. Use Azure Blob Storage to host project documents and expose them via a custom connector",
+						"C. Enable external web search to supplement any missing project information gaps",
+						"D. Use SharePoint sites as the primary knowledge source, ensuring content is well-structured and tagged"
+					],
+					"correctAnswer": "D",
+					"explanation": "Establish SharePoint as the primary, well-structured/tagged knowledge source first.",
+					"topic": "Knowledge Grounding / M365",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q020",
+					"originalId": "Q20",
+					"type": "mc",
+					"question": "An enterprise is deploying a generative AI agent using Microsoft Foundry. The agent must call three external APIs for product pricing, inventory, and shipping. Security mandates that no sensitive customer data is stored persistently and all API calls are restricted to approved domains. Which combination of constraints should the architect enforce?",
+					"options": [
+						"A. Define ephemeral memory policy, implement least-privilege permissions per tool, and restrict external tool calls to allow-listed domains.",
+						"B. Use public networking for all API calls to reduce latency, and set connector scoping to maximum to ensure comprehensive data retrieval.",
+						"C. Store all interactions in Dataverse for auditability and open API gateway access to all third-party domains.",
+						"D. Enable persistent message logging for audit purposes, grant broad API access to improve agent performance, and apply Azure Content Safety."
+					],
+					"correctAnswer": "A",
+					"explanation": "Ephemeral memory (no persistent PII) + least privilege per tool + allow-listed domains satisfies all constraints.",
+					"topic": "Foundry / Security Constraints",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q021",
+					"originalId": "Q21",
+					"type": "dropdown",
+					"question": "[Case Study - CHG] You are aligning solution design decisions across CHG's AI use cases. Match each item to the correct choice.",
+					"explanation": "Regulated boundary crossing → multi-agent boundary separation; consistency across departments → centralized prompt governance; HIPAA processing/auditing → custom compliance platform; multiple dependent steps → sequential orchestration.",
+					"topic": "Solution Design / Matching",
+					"difficulty": "hard",
+					"source": "practice-quiz",
+					"section": "casestudy",
+					"dropdowns": [
+						{
+							"label": "Patient intake crosses regulated system boundaries:",
+							"options": [
+								"Multi-agent architecture with boundary separation",
+								"Centralized prompt governance and templates",
+								"Custom platform supporting compliance pipelines",
+								"Sequential orchestration for controlled execution"
+							],
+							"correctIndex": 0,
+							"correctAnswer": "Multi-agent architecture with boundary separation"
+						},
+						{
+							"label": "HR agent requires consistent responses across departments:",
+							"options": [
+								"Multi-agent architecture with boundary separation",
+								"Centralized prompt governance and templates",
+								"Custom platform supporting compliance pipelines",
+								"Sequential orchestration for controlled execution"
+							],
+							"correctIndex": 1,
+							"correctAnswer": "Centralized prompt governance and templates"
+						},
+						{
+							"label": "Claims agent needs HIPAA-compliant processing and auditing:",
+							"options": [
+								"Multi-agent architecture with boundary separation",
+								"Centralized prompt governance and templates",
+								"Custom platform supporting compliance pipelines",
+								"Sequential orchestration for controlled execution"
+							],
+							"correctIndex": 2,
+							"correctAnswer": "Custom platform supporting compliance pipelines"
+						},
+						{
+							"label": "Routing agent must process multiple dependent steps:",
+							"options": [
+								"Multi-agent architecture with boundary separation",
+								"Centralized prompt governance and templates",
+								"Custom platform supporting compliance pipelines",
+								"Sequential orchestration for controlled execution"
+							],
+							"correctIndex": 3,
+							"correctAnswer": "Sequential orchestration for controlled execution"
+						}
+					]
+				},
+				{
+					"id": "q022",
+					"originalId": "Q22",
+					"type": "mc",
+					"question": "A logistics company asks its architect to build a multi-agent system with seven specialized agents in the first sprint. The team has moderate AI skills. The architect finds routing and dispatch can cover 80% of the business value independently. What is the most architecturally sound decision?",
+					"options": [
+						"A. Delay the full multi-agent design and first validate a single-agent or two-agent solution covering routing and dispatch, scaling only after validating complexity drivers.",
+						"B. Immediately deploy using Foundry with a sequential orchestration pipeline across all seven agents.",
+						"C. Use Copilot Studio for all seven agents simultaneously to benefit from rapid, low-code deployment.",
+						"D. Accept the seven-agent design, as multi-agent systems provide better modularity and future-proofing."
+					],
+					"correctAnswer": "A",
+					"explanation": "Start small (routing+dispatch = 80% value), validate complexity drivers, then scale.",
+					"topic": "Solution Scoping",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q023",
+					"originalId": "Q23",
+					"type": "mc",
+					"question": "A manufacturing company has three Copilot agents in production. During review, the Analytics Coach shows an 88% success rate, 3.2-second average response time, and 21 logged issues — the lowest performer. The product owner requests an immediate fix. What should the architect do FIRST?",
+					"options": [
+						"A. Disable the Analytics Coach temporarily to prevent further issue accumulation",
+						"B. Escalate to the vendor and request model replacement",
+						"C. Review conversation transcripts and telemetry to identify root cause categories driving the failures",
+						"D. Immediately update the knowledge files and republish the agent"
+					],
+					"correctAnswer": "C",
+					"explanation": "Root-cause via transcripts and telemetry before taking corrective action.",
+					"topic": "Operations / Diagnostics",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q024",
+					"originalId": "Q24",
+					"type": "mc",
+					"question": "A professional services firm wants to deploy Microsoft 365 Copilot for Sales. Pre-deployment validation reveals several CRM opportunity fields are incomplete and SharePoint sales documents lack sensitivity labels. The business owner wants to roll out within a week. What must the architect complete FIRST?",
+					"options": [
+						"A. Configure Power Automate flows to automate proposal drafting workflows",
+						"B. Ensure CRM fields are complete, standardized, and SharePoint documents have proper sensitivity labels applied",
+						"C. Enable Copilot for Sales licenses and proceed with a limited pilot",
+						"D. Map seller roles to Dynamics 365 opportunity records and test email summarization"
+					],
+					"correctAnswer": "B",
+					"explanation": "Data readiness first: complete/standardized CRM fields and sensitivity labels on documents.",
+					"topic": "Copilot for Sales / Data Readiness",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q025",
+					"originalId": "Q25",
+					"type": "mc",
+					"question": "(Repeat scenario) A manufacturing company's lowest-performing agent shows an 88% success rate and 21 logged issues. What should the architect do FIRST?",
+					"options": [
+						"A. Review conversation transcripts and telemetry to identify root cause categories driving the failures",
+						"B. Escalate to the vendor and request model replacement",
+						"C. Disable the Analytics Coach temporarily to prevent further issue accumulation",
+						"D. Immediately update the knowledge files and republish the agent"
+					],
+					"correctAnswer": "A",
+					"explanation": "Root-cause via transcripts and telemetry first (duplicate of Q23 with reordered options).",
+					"topic": "Operations / Diagnostics",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q026",
+					"originalId": "Q26",
+					"type": "mc",
+					"question": "A pharmaceutical company needs an AI model to classify drug interaction reports with high accuracy. Data is highly domain-specific, regulatory restrictions prevent data from leaving a sovereign region, and response latency must be under 200ms. IT budget is moderate. Which model architecture decision is most appropriate?",
+					"options": [
+						"A. Deploy a customized Small Language Model (SLM) trained on domain-specific data, hosted within the sovereign region.",
+						"B. Use a general-purpose LLM via Azure OpenAI, as it provides the best reasoning capability across complex documents.",
+						"C. Use Microsoft 365 Copilot with a custom knowledge base of drug interaction documents.",
+						"D. Build a multi-agent system where one agent retrieves documents and another classifies them using a general LLM."
+					],
+					"correctAnswer": "A",
+					"explanation": "Domain-specific + sovereign residency + low latency + moderate budget favor a customized SLM hosted in-region.",
+					"topic": "Model Selection / SLM",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q027",
+					"originalId": "Q27",
+					"type": "mc",
+					"question": "After deploying an enterprise AI agent, the operations team reports severe alert fatigue. All logs — routine access, low-level debug traces, cost events, and critical security anomalies — route into a single alerting channel, and important security signals are being missed. What should the architect redesign?",
+					"options": [
+						"A. Move all logs to a third-party SIEM and let the security team manage all routing independently",
+						"B. Disable all non-critical alerts and retain only system downtime notifications",
+						"C. Reduce log verbosity to errors only and suppress informational and debug-level events",
+						"D. Build dedicated dashboards for quality, safety, and cost; configure alerts specifically for anomalies and budget thresholds; and route security alerts to SOC workflows for triage and escalation"
+					],
+					"correctAnswer": "D",
+					"explanation": "Separate dashboards per concern, targeted alerts, and SOC routing for security signals.",
+					"topic": "Observability / Alerting",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q028",
+					"originalId": "Q28",
+					"type": "mc",
+					"question": "A government agency deploys an AI agent that assists officers in reviewing case files and producing preliminary recommendations. Governance mandates that no AI system makes final decisions autonomously. Which control best enforces the mandate?",
+					"options": [
+						"A. Use Azure AI Content Safety to block any output that contains decision language.",
+						"B. Add a disclaimer in the agent's welcome message stating it does not make final decisions.",
+						"C. Define explicit behavior envelopes in the agent configuration (\"Agent may summarize and recommend; Agent may not decide or execute case outcomes\"), combined with mandatory human-in-the-loop checkpoints for high-impact actions.",
+						"D. Configure the agent with lower model temperature to reduce confidence in outputs."
+					],
+					"correctAnswer": "C",
+					"explanation": "Explicit behavior envelopes plus mandatory human-in-the-loop checkpoints enforce the no-autonomous-decision mandate.",
+					"topic": "Governance / Guardrails",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q029",
+					"originalId": "Q29",
+					"type": "mc",
+					"question": "TRUE or FALSE: \"Consolidating DEV and TEST into a single shared AI development environment is an acceptable cost-optimization strategy that does not compromise ALM governance integrity.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "B",
+					"explanation": "Consolidating DEV/TEST compromises ALM governance integrity; keep environments separate.",
+					"topic": "ALM / Environments",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q030",
+					"originalId": "Q30",
+					"type": "mc",
+					"question": "A manufacturing company wants a Copilot Studio autonomous agent to manage supplier follow-up workflows: send reminders to overdue suppliers, update ERP records, and escalate unresolved cases. According to agent design best practices, what should the architect do FIRST?",
+					"options": [
+						"A. Configure event triggers for all inbound supplier communications",
+						"B. Connect all ERP tables as knowledge sources to maximize agent context",
+						"C. Start with one high-value, well-scoped workflow before expanding agent scope",
+						"D. Deploy the agent to Microsoft Teams for user acceptance testing immediately"
+					],
+					"correctAnswer": "C",
+					"explanation": "Start with one high-value, well-scoped workflow before expanding scope.",
+					"topic": "Agent Design / Scoping",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q031",
+					"originalId": "Q31",
+					"type": "mc",
+					"question": "A healthcare company's Copilot for Service agent generates case resolution summaries automatically sent to patients via Power Automate with no human review. Compliance flagged this as a violation. The business team argues removing review improves resolution speed by 40%. What action should the architect take?",
+					"options": [
+						"A. Restrict the Copilot model to reduce verbosity of summaries so risk exposure is minimized",
+						"B. Disable all automated flows until the vendor provides compliance certification for the Copilot model",
+						"C. Enable DLP policies to intercept outbound messages after they are generated",
+						"D. Require human review before any externally generated Copilot content is sent to patients, and update the automation governance guardrails accordingly"
+					],
+					"correctAnswer": "D",
+					"explanation": "Require human review before external patient-facing content and update governance guardrails.",
+					"topic": "Responsible AI / Human-in-the-Loop",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q032",
+					"originalId": "Q32",
+					"type": "mc",
+					"question": "A financial services AI agent processing loan applications is flagged by the SOC for unusual inference patterns — returning unexpected data fragments and potentially exposing customer PII. The incident is unconfirmed but escalating rapidly. A business manager suggests waiting 24 hours. What should the architect do FIRST?",
+					"options": [
+						"A. Disable the compromised model endpoint, preserve inference logs and model artifacts for forensic analysis, and initiate rollback procedures to restore the prior model version",
+						"B. Notify the Data Protection Officer and wait for their formal guidance before taking any technical action",
+						"C. Re-run all recent prompts against the previous model version to compare output differences",
+						"D. Increase monitoring verbosity on the agent and wait 24 hours to determine whether the pattern stabilizes"
+					],
+					"correctAnswer": "A",
+					"explanation": "Contain first: disable endpoint, preserve forensic evidence, roll back to the prior model version.",
+					"topic": "Incident Response",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q033",
+					"originalId": "Q33",
+					"type": "dropdown",
+					"question": "[Case Study - CHG] You are establishing an AI operating model at CHG to support governance, deployment, and ongoing operations. Match each item to the responsible party.",
+					"explanation": "Landing zones/environments → platform engineering; governance/compliance policies → security and compliance; use cases/architecture → solution architect; monitoring/operations → shared responsibility.",
+					"topic": "Operating Model / Matching",
+					"difficulty": "hard",
+					"source": "practice-quiz",
+					"section": "casestudy",
+					"dropdowns": [
+						{
+							"label": "Establish secure landing zones and environments:",
+							"options": [
+								"Platform engineering team",
+								"Solution architect",
+								"Shared responsibility between architecture and platform teams",
+								"Security and compliance team"
+							],
+							"correctIndex": 0,
+							"correctAnswer": "Platform engineering team"
+						},
+						{
+							"label": "Define governance and compliance policies:",
+							"options": [
+								"Platform engineering team",
+								"Solution architect",
+								"Shared responsibility between architecture and platform teams",
+								"Security and compliance team"
+							],
+							"correctIndex": 3,
+							"correctAnswer": "Security and compliance team"
+						},
+						{
+							"label": "Define AI use cases and architecture approach:",
+							"options": [
+								"Platform engineering team",
+								"Solution architect",
+								"Shared responsibility between architecture and platform teams",
+								"Security and compliance team"
+							],
+							"correctIndex": 1,
+							"correctAnswer": "Solution architect"
+						},
+						{
+							"label": "Monitor deployed agents and manage operations:",
+							"options": [
+								"Platform engineering team",
+								"Solution architect",
+								"Shared responsibility between architecture and platform teams",
+								"Security and compliance team"
+							],
+							"correctIndex": 2,
+							"correctAnswer": "Shared responsibility between architecture and platform teams"
+						}
+					]
+				},
+				{
+					"id": "q034",
+					"originalId": "Q34",
+					"type": "mc",
+					"question": "(Repeat scenario) A professional services firm deploying Microsoft 365 Copilot for Sales finds incomplete CRM fields and unlabeled SharePoint documents. What must the architect complete FIRST before enabling Copilot for Sales?",
+					"options": [
+						"A. Configure Power Automate flows to automate proposal drafting workflows",
+						"B. Enable Copilot for Sales licenses and proceed with a limited pilot",
+						"C. Ensure CRM fields are complete, standardized, and SharePoint documents have proper sensitivity labels applied",
+						"D. Map seller roles to Dynamics 365 opportunity records and test email summarization"
+					],
+					"correctAnswer": "C",
+					"explanation": "Data readiness first (duplicate of Q24 with reordered options).",
+					"topic": "Copilot for Sales / Data Readiness",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q035",
+					"originalId": "Q35",
+					"type": "mc",
+					"question": "A bank deploys an autonomous Copilot agent that automatically approves or denies personal loan applications based on AI-generated credit assessments. After launch, compliance discovers the agent produces denial decisions without any explanation to applicants and with no human review. Which two Responsible AI principles are MOST directly violated?",
+					"options": [
+						"A. Security and Inclusiveness",
+						"B. Reliability and Privacy",
+						"C. Fairness and Inclusiveness",
+						"D. Transparency and Accountability"
+					],
+					"correctAnswer": "D",
+					"explanation": "No explanation (Transparency) and no human review/ownership of decisions (Accountability).",
+					"topic": "Responsible AI / Principles",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q036",
+					"originalId": "Q36",
+					"type": "mc",
+					"question": "A large enterprise has 12 AI use case proposals submitted to the AI Center of Excellence. The CoE has limited capacity, and the executive sponsor wants to approve all 12 for simultaneous execution. According to Microsoft's AI CoE framework, what should the AI CoE do FIRST?",
+					"options": [
+						"A. Begin delivering all 12 using Copilot Studio to minimize risk through the platform's built-in safeguards.",
+						"B. Evaluate each use case for business value, technical feasibility, risk level, and organizational readiness before prioritizing a subset for execution.",
+						"C. Approve all 12 and assign a governance lead to each project to ensure oversight.",
+						"D. Escalate to the legal team to validate compliance for all 12 simultaneously."
+					],
+					"correctAnswer": "B",
+					"explanation": "Evaluate and prioritize use cases by value, feasibility, risk, and readiness before execution.",
+					"topic": "AI CoE / Prioritization",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q037",
+					"originalId": "Q37",
+					"type": "mc",
+					"question": "A logistics company is building a multi-agent AI system in Azure AI Foundry handling three task types: simple package status lookups, moderately complex route optimization queries, and highly complex supply chain disruption analysis. How should the architect configure the model router to balance cost and performance?",
+					"options": [
+						"A. Use static routing rules: SLM for simple tasks, fine-tuned model for moderate tasks, LLM for complex tasks",
+						"B. Route all three task types to a single GPT-4 LLM for consistency",
+						"C. Route all tasks to an SLM to reduce token costs uniformly",
+						"D. Use weighted routing to distribute all tasks equally across all available models"
+					],
+					"correctAnswer": "A",
+					"explanation": "Match model capability to task complexity: SLM for simple, fine-tuned for moderate, LLM for complex.",
+					"topic": "Foundry / Model Routing",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q038",
+					"originalId": "Q38",
+					"type": "mc",
+					"question": "A financial services firm is deploying Copilot within Dynamics 365 Finance for regulatory audit workflows. The sponsor wants general LLM knowledge enabled; the CISO mandates all responses derive exclusively from validated, internally controlled content. What should the architect do?",
+					"options": [
+						"A. Restrict general knowledge and configure Copilot to use only validated internal knowledge sources",
+						"B. Deploy Copilot in pilot mode with general knowledge enabled and monitor for compliance violations",
+						"C. Escalate to the business sponsor to obtain executive approval before enabling LLM-based knowledge",
+						"D. Enable general knowledge to improve natural language flexibility for auditors"
+					],
+					"correctAnswer": "A",
+					"explanation": "Restrict to validated internal knowledge sources to meet the CISO's regulatory mandate.",
+					"topic": "Grounding / Compliance",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q039",
+					"originalId": "Q39",
+					"type": "multi",
+					"question": "[Case Study - CHG] You are designing a Field Service Routing solution that retrieves technician data from Dynamics 365, uses HIPAA-sensitive patient location data, triggers workflows via Power Automate, and escalates complex cases to supervisors. Which design decisions are appropriate? (Select ALL that apply)",
+					"options": [
+						"A. Separate agents based on security boundaries (patient data vs operations)",
+						"B. Host all models in isolated compute environments by default",
+						"C. Design a sequential workflow for controlled end-to-end processing",
+						"D. Use parallel processing where independent data retrieval tasks exist",
+						"E. Use a single agent to manage all operations and simplify architecture"
+					],
+					"correctAnswers": ["A", "C", "D"],
+					"explanation": "Separate by security boundary, use sequential control flow, and parallelize independent retrieval. Isolating all models by default is over-engineering; a single agent for everything violates boundary separation.",
+					"topic": "Solution Design / Multi-Agent",
+					"difficulty": "hard",
+					"source": "practice-quiz",
+					"section": "casestudy"
+				},
+				{
+					"id": "q040",
+					"originalId": "Q40",
+					"type": "mc",
+					"question": "A healthcare organization is beginning its AI adoption journey using the Cloud Adoption Framework. Leadership agreed on high-level objectives (improve patient satisfaction, reduce administrative workload) but has not identified specific AI use cases or assessed data quality. What is the NEXT step the architect should take?",
+					"options": [
+						"A. Establish program governance and Responsible AI standards before proceeding",
+						"B. Assess AI feasibility by evaluating data quality, security, and model appropriateness",
+						"C. Immediately begin configuring Copilot Studio agents for appointment scheduling",
+						"D. Identify measurable AI scenarios with high feasibility and high business impact"
+					],
+					"correctAnswer": "D",
+					"explanation": "After objectives are set, identify measurable AI scenarios with high feasibility and business impact.",
+					"topic": "Cloud Adoption Framework / AI",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q041",
+					"originalId": "Q41",
+					"type": "mc",
+					"question": "A new AI Copilot agent for case summarization in Dynamics 365 Customer Service has passed DEV and TEST validation. The product owner pushes for direct PROD deployment to meet a customer launch deadline. The UAT/PRE-PROD environment has not been used in this release cycle. What should the architect do FIRST?",
+					"options": [
+						"A. Export the managed solution package and push it to PROD via Azure DevOps with monitoring alerts enabled",
+						"B. Deploy to PROD immediately and use post-deployment telemetry to catch issues",
+						"C. Re-run regression tests in the DEV environment using production data to save time",
+						"D. Stage the agent in PRE-PROD for final business acceptance, performance, safety, and compliance validation before deploying to PROD"
+					],
+					"correctAnswer": "D",
+					"explanation": "Stage in PRE-PROD for final acceptance/performance/safety/compliance validation before PROD.",
+					"topic": "ALM / Release Pipeline",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q042",
+					"originalId": "Q42",
+					"type": "mc",
+					"question": "A healthcare organization in the EU plans to deploy a patient-facing AI assistant for appointment booking and health FAQs. Legal flags GDPR obligations and the EU AI Act as potentially applicable. The sponsor wants to skip the regulatory review to accelerate the timeline. What should the architect do FIRST?",
+					"options": [
+						"A. Deploy to a non-EU region to avoid EU AI Act compliance obligations.",
+						"B. Conduct a regulatory evaluation across applicable jurisdictions before finalizing the architecture.",
+						"C. Implement Azure AI Content Safety and assume it covers all regulatory requirements.",
+						"D. Proceed with deployment since the agent only retrieves public FAQs and poses minimal risk."
+					],
+					"correctAnswer": "B",
+					"explanation": "Conduct a regulatory evaluation across applicable jurisdictions before finalizing architecture.",
+					"topic": "Compliance / Regulatory",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q043",
+					"originalId": "Q43",
+					"type": "mc",
+					"question": "TRUE or FALSE: \"Microsoft 365 agents can be configured with elevated admin-level access to override SharePoint security boundaries and retrieve content on behalf of all users, regardless of their individual permissions.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "B",
+					"explanation": "Agents cannot override SharePoint security boundaries; they honor the requesting user's permissions.",
+					"topic": "Security / Permissions",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q044",
+					"originalId": "Q44",
+					"type": "mc",
+					"question": "A financial services firm needs an AI agent that executes multi-step loan approval workflows, integrates with three internal APIs, and enforces strict separation of duties between teams. Compliance requires full auditability of every agent action, and IT has strong developer expertise. Which platform architecture decision best satisfies all constraints?",
+					"options": [
+						"A. Use GPUs and containers to host a custom model for maximum compliance isolation.",
+						"B. Build using Microsoft Foundry with role-scoped agents, explicit action boundaries, evaluation pipelines, and audit trails.",
+						"C. Use Microsoft 365 Copilot (SaaS) as a productivity-first approach, minimizing customization effort.",
+						"D. Deploy using Copilot Studio with prebuilt connectors, relying on its built-in safety filters for compliance."
+					],
+					"correctAnswer": "B",
+					"explanation": "Microsoft Foundry with role-scoped agents, explicit action boundaries, eval pipelines, and audit trails meets separation-of-duties and auditability.",
+					"topic": "Platform Selection / Foundry",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q045",
+					"originalId": "Q45",
+					"type": "mc",
+					"question": "A global enterprise deploys a SharePoint-based Copilot agent for cross-departmental policy guidance. Each department maintains its own SharePoint site with restricted access. A business leader requests the agent be granted global read permissions via a service account so it can serve all employees regardless of their access levels. What architectural boundary must the architect enforce?",
+					"options": [
+						"A. Enable agent-level admin override so the agent can bypass SharePoint permission boundaries",
+						"B. Use a custom API connector to route all content queries through a centralized knowledge repository with elevated access",
+						"C. Configure a service account with global read permissions to enable uniform cross-department access",
+						"D. Enforce that agents inherit the requesting user's permissions and cannot access content the user cannot access"
+					],
+					"correctAnswer": "D",
+					"explanation": "Agents must inherit the requesting user's permissions and cannot access content the user cannot access.",
+					"topic": "Security / Permissions",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q046",
+					"originalId": "Q46",
+					"type": "mc",
+					"question": "(Restrict-to-internal-knowledge scenario; full option set was not captured during the attempt.) The selected answer during the attempt was to restrict general knowledge to validated internal sources.",
+					"options": [
+						"A. Restrict general knowledge and configure Copilot to use only validated internal knowledge sources"
+					],
+					"correctAnswer": "A",
+					"explanation": "NOTE: Options for Q46 were not fully captured during the attempt; only the selected answer is recorded. Verify against the source. The answer aligns with the internal-only grounding guidance seen in Q38/Q54.",
+					"topic": "Grounding / Compliance",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q047",
+					"originalId": "Q47",
+					"type": "mc",
+					"question": "An organization's AI CoE was established 18 months ago with a centralized model, approving every AI project and owning all delivery. Business units now complain about delays. The CoE has successfully standardized governance frameworks and published reusable AI templates that product teams have adopted. What is the most appropriate NEXT step for the CoE's operating model evolution?",
+					"options": [
+						"A. Transition to a hybrid or advisory CoE model, where product teams take ownership of delivery while the CoE maintains standards and acts as a consultant.",
+						"B. Dissolve the CoE entirely, as product teams are now self-sufficient.",
+						"C. Expand the CoE team to handle the increased demand from business units.",
+						"D. Maintain the centralized model — it ensures consistent governance and prevents ungoverned AI adoption."
+					],
+					"correctAnswer": "A",
+					"explanation": "Evolve from centralized to hybrid/advisory: product teams own delivery, CoE maintains standards and consults.",
+					"topic": "AI CoE / Operating Model",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q048",
+					"originalId": "Q48",
+					"type": "mc",
+					"question": "A retail organization wants to give warehouse staff access to demand planning insights through Copilot. Staff rarely leave the operational workspace view. Two options are under discussion: a sidecar Copilot experience or an embedded AI approach. Which AI experience model best fits this scenario, and why?",
+					"options": [
+						"A. Sidecar Copilot — because it supports natural language chat and is easier to configure",
+						"B. Embedded AI — because it surfaces insights directly within the workspace, reducing navigation overhead",
+						"C. External orchestration — because it allows cross-application automation",
+						"D. Sidecar Copilot — because it supports workflow summaries across modules using standardized entity metadata"
+					],
+					"correctAnswer": "B",
+					"explanation": "Embedded AI surfaces insights within the operational workspace, reducing navigation overhead for staff who rarely leave that view.",
+					"topic": "AI Experience Model",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q049",
+					"originalId": "Q49",
+					"type": "mc",
+					"question": "A retail enterprise wants to deploy an AI agent for product recommendations across 50,000 daily customers. The CTO demands a 3-week go-live. The data engineering team warns that product catalog data is outdated, inconsistently labeled, and spread across three legacy systems. As the architect, what is the FIRST action you should take?",
+					"options": [
+						"A. Defer the agent launch and mandate a data quality remediation effort, as agent reliability depends on grounding data quality and freshness.",
+						"B. Deploy the agent using Azure AI Foundry with private networking to handle the complexity of multiple data sources.",
+						"C. Build a custom SLM trained on historical product data to compensate for data quality gaps.",
+						"D. Begin building the agent in Copilot Studio immediately, as it supports rapid deployment and can be refined post-launch."
+					],
+					"correctAnswer": "A",
+					"explanation": "Agent reliability depends on grounding data quality/freshness; defer launch and remediate data first.",
+					"topic": "Data Readiness",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q050",
+					"originalId": "Q50",
+					"type": "mc",
+					"question": "Statement: \"For a high-volume enterprise workflow automation scenario that requires dynamic AI-driven insights, developer extensibility, and automated suggestions, combining generative pages, agent feed, and code-first enhancements is a recommended architectural pattern.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "A",
+					"explanation": "Combining generative pages, agent feed, and code-first enhancements is a recommended pattern for this scenario.",
+					"topic": "Architecture Patterns",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q051",
+					"originalId": "Q51",
+					"type": "mc",
+					"question": "During a monthly operations review, the architect notices a significant spike in guardrail intervention events for a deployed customer service agent over the past two weeks. User satisfaction scores have declined, and several conversations were abandoned after the guardrail blocked responses. The operations manager recommends temporarily disabling guardrails. What is the MOST appropriate diagnostic step?",
+					"options": [
+						"A. Expand the knowledge base by adding more documents to broaden agent response coverage",
+						"B. Roll back the agent to its previous release version immediately",
+						"C. Disable guardrails temporarily to resume normal service and restore satisfaction scores quickly",
+						"D. Analyze telemetry for guardrail trigger patterns and review conversation transcripts to identify whether guardrails are misconfigured or legitimately blocking risk"
+					],
+					"correctAnswer": "D",
+					"explanation": "Analyze telemetry and transcripts to determine whether guardrails are misconfigured or correctly blocking risk before acting.",
+					"topic": "Operations / Guardrails",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q052",
+					"originalId": "Q52",
+					"type": "mc",
+					"question": "A retail enterprise is deploying a production Copilot agent connecting to multiple Azure-hosted backend services. The dev team embedded service principal credentials directly into the agent's configuration files. The security architect raises concerns about credential rotation and secret exposure; the team argues encrypting the config files is sufficient. What is the best approach?",
+					"options": [
+						"A. Encrypt the configuration files using AES-256 and restrict file access to production admins only",
+						"B. Store credentials in Azure Key Vault and reference them dynamically from the agent configuration",
+						"C. Replace embedded secrets with managed identities for agent-to-Azure authentication to remove secrets entirely and simplify rotation",
+						"D. Rotate the embedded credentials every 30 days using an automated Key Vault script"
+					],
+					"correctAnswer": "C",
+					"explanation": "Managed identities remove stored secrets entirely and simplify rotation — the most secure option.",
+					"topic": "Security / Identity",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q053",
+					"originalId": "Q53",
+					"type": "mc",
+					"question": "Statement: \"A custom connector built in Power Automate can be created in any Power Platform environment, including the default environment, as long as the correct OpenAPI definition and OAuth 2.0 authentication are configured.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "A",
+					"explanation": "Custom connectors can be created in any environment (including the default) with a valid OpenAPI definition and OAuth 2.0 auth.",
+					"topic": "Power Platform / Connectors",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q054",
+					"originalId": "Q54",
+					"type": "mc",
+					"question": "A retail company is deploying an AI agent for customer collections summaries in Dynamics 365 Finance. The CFO also wants the agent to answer general regulatory finance questions using LLM capabilities. The architect has not yet completed a risk assessment for LLM enablement in this regulated environment. How should the architect advise the CFO?",
+					"options": [
+						"A. Delay general knowledge enablement until risks are formally assessed and mitigated; keep the agent restricted to validated internal knowledge in the interim",
+						"B. Build a custom Azure OpenAI model to handle regulatory questions separately and bypass the governance review",
+						"C. Enable general knowledge immediately — the productivity gains outweigh the risk",
+						"D. Enable general knowledge in production and configure a compliance review process post-deployment"
+					],
+					"correctAnswer": "A",
+					"explanation": "Delay general-knowledge enablement until risks are assessed/mitigated; keep to validated internal knowledge in the interim.",
+					"topic": "Grounding / Risk Assessment",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q055",
+					"originalId": "Q55",
+					"type": "mc",
+					"question": "TRUE or FALSE: \"Storing encrypted service principal credentials in Azure Key Vault is an acceptable substitute for managed identities when securing AI agent-to-Azure authentication in an enterprise AI deployment.\"",
+					"options": ["A. True", "B. False"],
+					"correctAnswer": "B",
+					"explanation": "Managed identities (no stored secrets) are the preferred practice; Key Vault-stored credentials are not an equivalent substitute.",
+					"topic": "Security / Identity",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q056",
+					"originalId": "Q56",
+					"type": "mc",
+					"question": "[Case Study - CHG] You are designing the Claims Summarization Agent. The solution requires transformation of inconsistent data from Azure Data Lake, HIPAA-compliant audit logging at the data level, and integration with custom data pipelines. The team suggests Copilot Studio for faster delivery. Which is the best platform choice to accomplish all requirements?",
+					"options": [
+						"A. Microsoft Foundry to support custom pipelines and compliance controls",
+						"B. Copilot Studio with Azure AI Search for faster deployment",
+						"C. Containerized model deployment to isolate workloads",
+						"D. Microsoft 365 Copilot because it provides built-in retrieval"
+					],
+					"correctAnswer": "A",
+					"explanation": "Custom pipelines + data-level HIPAA audit logging + data transformation require Microsoft Foundry.",
+					"topic": "Platform Selection / Foundry",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "casestudy"
+				},
+				{
+					"id": "q057",
+					"originalId": "Q57",
+					"type": "mc",
+					"question": "(Repeat scenario) Warehouse staff rarely leave the operational workspace view and need demand planning insights through Copilot. Which AI experience model best fits, and why?",
+					"options": [
+						"A. Sidecar Copilot — because it supports workflow summaries across modules using standardized entity metadata",
+						"B. Embedded AI — because it surfaces insights directly within the workspace, reducing navigation overhead",
+						"C. Sidecar Copilot — because it supports natural language chat and is easier to configure",
+						"D. External orchestration — because it allows cross-application automation"
+					],
+					"correctAnswer": "B",
+					"explanation": "Embedded AI surfaces insights in-workspace (duplicate of Q48 with reordered options).",
+					"topic": "AI Experience Model",
+					"difficulty": "easy",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q058",
+					"originalId": "Q58",
+					"type": "mc",
+					"question": "A financial services firm is scheduled for a production go-live of a new AI loan advisory agent. Reviewing the AI Release Readiness Checklist, the architect discovers prompts have not been regression tested and monitoring dashboards have not been configured. The CTO demands deployment by end of day to support a high-visibility client demo. What should the architect do?",
+					"options": [
+						"A. Delay the production release until prompts are regression tested and monitoring dashboards are operational, regardless of the demo deadline",
+						"B. Deploy to PROD since the demo is read-only and production data will not be modified",
+						"C. Deploy to PROD and manually shadow-monitor the agent session live during the demo",
+						"D. Deploy to PROD with the demo user operating under restricted permissions and complete the checklist next week"
+					],
+					"correctAnswer": "A",
+					"explanation": "Delay release until regression testing and monitoring dashboards are complete, regardless of the demo deadline.",
+					"topic": "Release Readiness",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q059",
+					"originalId": "Q59",
+					"type": "mc",
+					"question": "[Case Study - CHG] The CTO requests deployment of four AI agents within 90 days. CHG lacks an AI CoE, has no governance framework, and handles HIPAA-regulated patient data. You must recommend the first agent to deploy to demonstrate measurable business value while minimizing implementation and compliance risk. Which agent should you prioritize?",
+					"options": [
+						"A. Claims Summarization Agent, because it processes the highest volume of data",
+						"B. Field Service Routing Agent, because it introduces multi-agent orchestration capabilities",
+						"C. HR Policy Q&A Agent, because it uses existing Microsoft 365 data with minimal compliance risk",
+						"D. Patient Intake Orchestration Agent, because it directly impacts patient operations"
+					],
+					"correctAnswer": "C",
+					"explanation": "HR Policy Q&A uses existing M365 data with minimal compliance risk — best first agent to show value while minimizing risk.",
+					"topic": "Use Case Prioritization",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "casestudy"
+				},
+				{
+					"id": "q060",
+					"originalId": "Q60",
+					"type": "mc",
+					"question": "An insurance company preparing to launch an AI agent for claims triage discovers during a Responsible AI review that the fairness assessment reveals statistically different outcomes for similar claim profiles from different demographic groups. The product owner wants to launch on schedule and address the bias in a post-launch patch. What should the architect recommend?",
+					"options": [
+						"A. Delay the launch until the fairness issue is identified, root-caused, and mitigated — Fairness is a core Responsible AI principle that must be satisfied before deployment",
+						"B. Launch to a limited pilot group and use production telemetry to quantify the bias before patching",
+						"C. Launch on schedule but add a disclaimer that the agent's recommendations are AI-generated and subject to change",
+						"D. Replace the AI agent with a manual rules-based triage system to eliminate bias risk entirely"
+					],
+					"correctAnswer": "A",
+					"explanation": "Fairness must be satisfied before deployment; delay until the bias is root-caused and mitigated.",
+					"topic": "Responsible AI / Fairness",
+					"difficulty": "medium",
+					"source": "practice-quiz",
+					"section": "standalone"
+				},
+				{
+					"id": "q061",
+					"type": "mc",
+					"question": "A service organization uses the term \"red account\" for a customer that has a critical service tier and at least one unresolved priority case. Representatives want Customer Service Copilot summaries to use this term consistently. What should the solution architect recommend?",
+					"options": [
+						"A. Add the phrase to the agent instructions without identifying the underlying records",
+						"B. Define the term in business language, map it to the authoritative fields and relationships, and test it with representative records",
+						"C. Rename the Account table to Red Account so Copilot can recognize the term",
+						"D. Give Copilot access to every Dataverse table so it can infer the meaning"
+					],
+					"correctAnswer": "B",
+					"explanation": "Define organization-specific terms precisely and map them to authoritative records, fields, and relationships. Summary configuration supports natural-language descriptions and explicit field selection while preserving existing access controls.",
+					"topic": "D2.1 / Dynamics 365 business terms and grounding",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/copilot-enable-custom-record-summaries"
+				},
+				{
+					"id": "q062",
+					"type": "mc",
+					"question": "Customer service representatives need case summaries with separate Issue, Actions Taken, and Next Step sections. Empty sections must not appear when a case lacks the corresponding data. Which configuration best meets the requirement?",
+					"options": [
+						"A. Select Paragraph format and increase summary verbosity",
+						"B. Select Structured format, configure custom headers, and enable removal of information that cannot be found",
+						"C. Add all case fields to a paragraph summary and ask representatives to ignore missing values",
+						"D. Create a separate custom table for each summary section"
+					],
+					"correctAnswer": "B",
+					"explanation": "Structured format supports custom headers, and removing information that cannot be found prevents empty sections or placeholder text when source data is unavailable.",
+					"topic": "D2.1 / Customer Service summary customization",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields"
+				},
+				{
+					"id": "q063",
+					"type": "mc",
+					"question": "Representatives viewing a case should see summaries of its related work orders, with the most recently modified work order first and its work-order number displayed as the heading. What should the architect configure?",
+					"options": [
+						"A. Add Work Order as an unrelated knowledge source and sort the generated text afterward",
+						"B. Include related records, use the Work Order field that references the parent case, prioritize by Modified Date, and display Work Order Number",
+						"C. Copy every work order into the case description through a nightly batch process",
+						"D. Configure only a 1-to-1 relationship between Case and Work Order"
+					],
+					"correctAnswer": "B",
+					"explanation": "Related-record summaries require the related record type, parent-reference field, summary configuration, ordering field, and heading field.",
+					"topic": "D2.1 / Related-record summary design",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields"
+				},
+				{
+					"id": "q064",
+					"type": "mc",
+					"question": "An administrator includes Product in a case-summary configuration, but summaries generated for service representatives omit product information. The field is populated on the cases. What should the architect verify first?",
+					"options": [
+						"A. Whether representatives have the required read privilege for Product and the related entities",
+						"B. Whether the representatives have System Administrator access to the entire environment",
+						"C. Whether Product was copied into an unauthenticated public knowledge source",
+						"D. Whether the summary uses Paragraph rather than Structured format"
+					],
+					"correctAnswer": "A",
+					"explanation": "Customer Service summaries respect Dataverse privileges. Verify the required read access to Product and related entities rather than granting broad administrative access.",
+					"topic": "D2.1 / Customer Service permissions and summaries",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields"
+				},
+				{
+					"id": "q065",
+					"type": "mc",
+					"question": "A company wants sellers to view opportunity summaries in Outlook and Teams. One division uses Dynamics 365 Sales and another uses Salesforce Sales Cloud. Which packaged experience is the best fit under current Microsoft naming?",
+					"options": [
+						"A. Service Agent",
+						"B. Sales Agent",
+						"C. Dynamics 365 Contact Center voice agent",
+						"D. A custom Customer Service record-summary control"
+					],
+					"correctAnswer": "B",
+					"explanation": "Sales Agent brings CRM insights into Outlook, Teams, and Microsoft 365 apps and supports connections to Dynamics 365 Sales and Salesforce Sales Cloud.",
+					"topic": "D2.1 / Sales Agent and CRM connections",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-sales-copilot/functional-overview"
+				},
+				{
+					"id": "q066",
+					"type": "mc",
+					"question": "A seller was granted permission in the CRM to update opportunities, but Sales Agent in Outlook still prevents the update immediately after the role change. What is the most appropriate next step?",
+					"options": [
+						"A. Configure Sales Agent to bypass CRM authorization",
+						"B. Assign a shared system-administrator identity to all sellers",
+						"C. Have the seller sign out of Sales Agent in Outlook and sign in again so the changed CRM permissions are reflected",
+						"D. Replace the CRM connection with an anonymous custom connector"
+					],
+					"correctAnswer": "C",
+					"explanation": "Sales Agent applies CRM access controls. After CRM permission or security-role changes, the Outlook user should sign out of Sales Agent and sign in again.",
+					"topic": "D2.1 / Sales Agent permissions",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-sales-copilot/privileges"
+				},
+				{
+					"id": "q067",
+					"type": "mc",
+					"question": "An architecture document written in 2025 refers to \"Microsoft 365 Copilot for Sales.\" A current implementation guide refers to \"Sales Agent.\" How should the architect interpret the terms for an AB-100 scenario?",
+					"options": [
+						"A. They always identify unrelated products with incompatible CRM sources",
+						"B. Sales Agent is the current documentation name for the seller-focused experience formerly described as Microsoft 365 Copilot for Sales",
+						"C. Sales Agent refers only to an autonomous agent built in Copilot Studio",
+						"D. Microsoft 365 Copilot for Sales is the current name, and Sales Agent is retired terminology"
+					],
+					"correctAnswer": "B",
+					"explanation": "Current Microsoft Learn documentation uses Sales Agent for the seller-focused Microsoft 365 experience. Older exam material can use Microsoft 365 Copilot for Sales or similar legacy names.",
+					"topic": "D2.1 / Product terminology",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-sales-copilot/introduction"
+				},
+				{
+					"id": "q068",
+					"type": "mc",
+					"question": "A seller asks an agent, \"Summarize this opportunity and identify the documented risks.\" The agent retrieves permitted CRM data, returns an answer, and makes no record changes. Which agent type best describes the design?",
+					"options": [
+						"A. Prompt and response agent",
+						"B. Task agent",
+						"C. Autonomous agent",
+						"D. Event-processing agent flow"
+					],
+					"correctAnswer": "A",
+					"explanation": "The interaction begins with a user prompt and produces an informational response without carrying out a bounded operational workflow.",
+					"topic": "D2.1 / Prompt and response agents",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100"
+				},
+				{
+					"id": "q069",
+					"type": "mc",
+					"question": "A seller selects Prepare Meeting Brief. The agent retrieves the account and opportunity, summarizes recent meetings, drafts an agenda, and creates a follow-up task. It runs only when the seller invokes this bounded operation. Which classification is most appropriate?",
+					"options": [
+						"A. Prompt and response agent, because all agents receive some input",
+						"B. Task agent, because it completes an explicitly invoked multistep goal with tools",
+						"C. Autonomous agent, because it uses more than one tool",
+						"D. Knowledge-only agent, because the first step retrieves records"
+					],
+					"correctAnswer": "B",
+					"explanation": "A task agent completes a bounded goal and can invoke multiple tools. Tool use alone does not make an agent autonomous.",
+					"topic": "D2.1 / Task agents",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-orchestration"
+				},
+				{
+					"id": "q070",
+					"type": "mc",
+					"question": "A new high-priority Customer Service case should automatically start triage when its Dataverse record is created. The agent may collect context and recommend an escalation, but changing a customer's contractual service level requires manager approval. Which design is best?",
+					"options": [
+						"A. Use a prompt and response agent and rely on a representative to notice every new case",
+						"B. Use an autonomous event trigger for triage and place the contractual change behind a deterministic approval boundary",
+						"C. Give the autonomous agent unrestricted write access so the workflow never pauses",
+						"D. Use a task agent with a scheduled prompt entered manually by an administrator"
+					],
+					"correctAnswer": "B",
+					"explanation": "A record-created event can start autonomous work without a user message, while consequential changes should remain behind deterministic controls or human approval.",
+					"topic": "D2.1 / Autonomous agents and approval boundaries",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-orchestration"
+				}
+			]
+		}
+	]
 }

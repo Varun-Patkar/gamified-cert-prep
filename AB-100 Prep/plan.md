@@ -49,8 +49,9 @@
 
 #### Day 6 (2026-08-17, Mon) — D2.1 Copilot in Dynamics 365 + Agent Types
 
-- [ ] Study: Copilot business terms/customizations for D365 CE & Service; Sales connectors; task/autonomous/prompt-response agents
-- [ ] Estimated time: 1 hr
+- [x] Study: Copilot business terms/customizations for D365 CE & Service; Sales connectors; task/autonomous/prompt-response agents
+- [x] Practice: 10 new sourced questions (q061–q070; 10/10 = 100%; no reuse from the completed Day 1–5 bank)
+- [x] Estimated time: 1 hr
 
 #### Day 7 (2026-08-18, Tue) — D2.1 Copilot Studio Design
 

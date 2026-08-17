@@ -3,18 +3,18 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 5 / 31
-- Questions Answered: 60 / 60 (practice bank)
-- Accuracy: 93.3% (56/60)
-- Current Day: Day 6 (next: 2026-08-17)
+- Sessions Completed: 6 / 31
+- Questions Answered: 70 / 70 (completed bank plus new daily questions)
+- Accuracy: 94.3% (66/70)
+- Current Day: Day 7 (next: 2026-08-18)
 
 ## Domain Confidence (self-rated 1–5)
 
-| Domain                                   | Weight | Confidence        | Notes                       |
-| ---------------------------------------- | ------ | ----------------- | --------------------------- |
-| D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz) | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing |
-| D2: Design AI-powered business solutions | 25–30% | 3 (self-reported) | Confident area              |
-| D3: Deploy AI-powered business solutions | 40–45% | –                 | Highest weight — prioritize |
+| Domain                                   | Weight | Confidence           | Notes                                                                                                                |
+| ---------------------------------------- | ------ | -------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)       | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing |
+| D2: Design AI-powered business solutions | 25–30% | 4 (10/10 Day 6 quiz) | Strong start; continue with Copilot Studio orchestration boundaries                                                  |
+| D3: Deploy AI-powered business solutions | 40–45% | –                    | Highest weight — prioritize                                                                                          |
 
 ## Daily Log
 
@@ -77,6 +77,17 @@
 - Reference: sessions/day-05-roi-tco-model-router.md
 - Quiz time: 21m 13s total
 - Next action: Day 6 — D2.1 Copilot in Dynamics 365 + Agent Types
+
+### Day 6 — 2026-08-17 — D2.1 Copilot in Dynamics 365 + Agent Types
+
+- Status: Completed
+- Covered: Dynamics 365 Sales and Customer Service product boundaries; current Sales Agent and Service Agent terminology; Customer Service business-term and summary customization; CRM connectors, permissions, and data readiness; prompt-response, task, and autonomous agent selection; approval boundaries for consequential autonomous actions
+- Quiz: 10 newly researched, Microsoft Learn-grounded questions — q061 through q070
+- Accuracy: 10 / 10 (100%) — perfect score
+- Time: 3m 57s
+- Weak spots: None observed in this set; retain the distinction between multistep task agents and event-triggered autonomous agents
+- Reference: sessions/day-06-copilot-dynamics-agent-types.md
+- Next action: Day 7 — D2.1 Copilot Studio Design
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12
