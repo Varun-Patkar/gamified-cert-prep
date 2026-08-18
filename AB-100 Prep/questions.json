@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 70,
+	"totalQuestions": 80,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)"
 	],
@@ -1288,6 +1288,176 @@
 					"difficulty": "hard",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-orchestration"
+				},
+				{
+					"id": "q071",
+					"type": "mc",
+					"question": "A customer enters an utterance that matches no enabled topic in a classic-orchestration agent. The architect wants the standard unknown-intent behavior with a bounded retry before handoff. Which design should be used?",
+					"options": [
+						"A. Add broad trigger phrases to every business topic and let the highest-priority topic guess the intent",
+						"B. Use the Fallback system topic with On Unknown Intent, ask for rephrasing no more than twice, and then redirect to Escalate",
+						"C. Create a prompt action that always generates an answer from unrestricted public knowledge",
+						"D. Configure Multiple Topics Matched to run whenever no topic is eligible"
+					],
+					"correctAnswer": "B",
+					"explanation": "The Fallback system topic catches unrecognized input through On Unknown Intent. Its documented default path asks the user to rephrase no more than twice and then redirects to the Escalate system topic.",
+					"topic": "D2.1 / Fallback and escalation",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-fallback-topic"
+				},
+				{
+					"id": "q072",
+					"type": "mc",
+					"question": "An architect adds a topic named General Help with trigger phrases such as help, problem, and question. Analytics then show that specific billing and order topics rarely run. What is the best correction?",
+					"options": [
+						"A. Give General Help the highest trigger priority so its behavior is consistent",
+						"B. Add more generic phrases to General Help to improve its recognition coverage",
+						"C. Remove the catchall trigger phrases and let the Fallback system topic handle unmatched input before bounded clarification or escalation",
+						"D. Disable the specific topics and implement all conversations in General Help"
+					],
+					"correctAnswer": "C",
+					"explanation": "Fallback already captures unknown content without trigger phrases. A broad catchall topic can steal traffic from valid topics and conceal recognition gaps instead of exposing them for correction.",
+					"topic": "D2.1 / Topic design and fallback traps",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-fallback-topic"
+				},
+				{
+					"id": "q073",
+					"type": "mc",
+					"question": "A benefits agent has 12 stable intents, must present approved wording, and must follow an authored sequence for each intent. Which orchestration design best fits?",
+					"options": [
+						"A. Classic orchestration with User says a phrase triggers and semantically varied phrases for each topic",
+						"B. Generative orchestration with overlapping topic descriptions so the planner can choose several paths",
+						"C. CLU solely because the agent contains more than ten intents",
+						"D. A scheduled agent flow with no conversational topics"
+					],
+					"correctAnswer": "A",
+					"explanation": "Classic orchestration selects topics by matching user input to trigger phrases and is the better fit for a small, stable intent set that requires predictable authored dialogue and ordering.",
+					"topic": "D2.1 / Classic orchestration and standard NLU",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-triggers"
+				},
+				{
+					"id": "q074",
+					"type": "mc",
+					"question": "An employee asks, 'Find my leave balance, explain the carryover policy, and draft a message to my manager.' The solution has a balance tool, an approved policy knowledge source, and a drafting prompt. Which design best supports the request?",
+					"options": [
+						"A. Classic orchestration with one trigger phrase and no explicit tool inputs",
+						"B. Generative orchestration with distinct capability descriptions and input/output contracts so the agent can select and sequence the tool, knowledge, and prompt",
+						"C. CLU with one intent named EmployeeRequest and no mapped entities",
+						"D. Fallback that sends the entire request directly to an escalation queue"
+					],
+					"correctAnswer": "B",
+					"explanation": "Generative orchestration can combine topics, tools, knowledge, and other capabilities for a multi-intent request. Clear descriptions and parameter contracts help the planner select and sequence the correct capabilities.",
+					"topic": "D2.1 / Generative orchestration and capability contracts",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
+				},
+				{
+					"id": "q075",
+					"type": "mc",
+					"question": "A telecom support team has hundreds of labeled utterances, a controlled taxonomy of contract and product intents, domain-specific entities, and an ML team that must measure and version recognition performance. Which recognition approach is most appropriate?",
+					"options": [
+						"A. Continue adding generic trigger phrases indefinitely because external models cannot provide entities",
+						"B. Integrate a trained and deployed Azure AI Language CLU model, map its intents to topics, and use its imported entities",
+						"C. Replace intent recognition with a prompt that writes directly to the billing system",
+						"D. Use the Fallback topic as the primary recognizer for all supported requests"
+					],
+					"correctAnswer": "B",
+					"explanation": "CLU is appropriate when a specialized domain needs a trained intent and entity model with labeled data, measurable recognition, deployment, and version management. Copilot Studio can map CLU intents to topics and use imported entities.",
+					"topic": "D2.1 / CLU selection and lifecycle",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-clu-integration"
+				},
+				{
+					"id": "q076",
+					"type": "mc",
+					"question": "A generatively orchestrated topic requires a value that must match a custom regex entity for an internal asset tag. The maker tries to define that custom entity directly as the topic input parameter. What should the architect recommend?",
+					"options": [
+						"A. Keep the custom entity as a direct parameter because all entity types are supported by generative orchestration",
+						"B. Collect the asset tag with a Question node that uses the custom entity, then pass the validated value onward",
+						"C. Remove validation and let the planner infer any missing asset tag",
+						"D. Convert the regex entity into a broad fallback trigger phrase"
+					],
+					"correctAnswer": "B",
+					"explanation": "Generative topic and tool input parameters don't directly support custom closed-list or regex entities. The documented approach is to collect the value with a Question node in a topic.",
+					"topic": "D2.1 / Generative orchestration input limitations",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
+				},
+				{
+					"id": "q077",
+					"type": "mc",
+					"question": "A refund process must check eligibility, branch on amount, retry a transient ERP call, obtain manager approval above a threshold, and then update the ERP. A model may summarize the case but must not decide the threshold. Where should the core process be implemented?",
+					"options": [
+						"A. In one prompt action whose natural-language instructions describe all approval rules",
+						"B. In an agent flow with deterministic branches, retries, connectors, and approval actions; use a prompt only as a bounded summarization step",
+						"C. In the Fallback system topic so unknown refund requests can write to the ERP",
+						"D. In overlapping generative topic descriptions so the planner can choose the approval threshold"
+					],
+					"correctAnswer": "B",
+					"explanation": "Agent flows are the appropriate boundary for deterministic process logic, connectors, retries, approvals, and side effects. A prompt can assist with semantic transformation but should not own consequential business rules.",
+					"topic": "D2.1 / Agent flows and deterministic control",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-overview"
+				},
+				{
+					"id": "q078",
+					"type": "mc",
+					"question": "A maker builds an agent flow that looks up shipment status. The flow must be available for a generatively orchestrated agent to select as a tool and must return a typed status result. Which configuration is required?",
+					"options": [
+						"A. Use When an agent calls the flow, define clear inputs and outputs, and add the flow as an agent tool with a precise description",
+						"B. Use only a recurrence trigger and infer the requesting user's order from flow run history",
+						"C. Use On Unknown Intent and omit outputs because the planner reads connector logs",
+						"D. Use User says a phrase inside the flow and store the result in a global variable"
+					],
+					"correctAnswer": "A",
+					"explanation": "Agent flows with the When an agent calls the flow trigger can be added as tools. Clear input/output contracts and a precise description enable reliable selection and data exchange.",
+					"topic": "D2.1 / Agent flow tool contracts",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-overview"
+				},
+				{
+					"id": "q079",
+					"type": "mc",
+					"question": "An agent must retrieve an approved email, extract category and urgency into a strict schema, validate the result, and create a Dataverse case only after a representative confirms it. Which architecture is best?",
+					"options": [
+						"A. A prompt performs extraction and writes the case immediately because structured output guarantees correctness",
+						"B. An agent flow retrieves the email, runs a prompt for bounded extraction, validates the output, obtains confirmation, and then writes the case",
+						"C. A classic topic stores the unvalidated model response directly in Dataverse without a flow",
+						"D. CLU performs the connector write because entity recognition includes transaction handling"
+					],
+					"correctAnswer": "B",
+					"explanation": "The prompt is suited to semantic extraction, while the agent flow owns retrieval, validation, confirmation, persistence, and failure handling. Structured model output still requires validation before a consequential write.",
+					"topic": "D2.1 / Prompt actions composed with agent flows",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node"
+				},
+				{
+					"id": "q080",
+					"type": "mc",
+					"question": "A custom prompt classifies incoming complaints and returns valid JSON during testing. The product owner argues that temperature 0 and valid JSON make further controls unnecessary. What should the architect recommend?",
+					"options": [
+						"A. Accept the design because temperature 0 guarantees identical and factual output",
+						"B. Validate the schema and allowed values, test representative and adversarial inputs, handle insufficient information, and require review before high-impact actions",
+						"C. Increase temperature so incorrect classifications are easier to detect",
+						"D. Move the classification into fallback because fallback output is deterministic"
+					],
+					"correctAnswer": "B",
+					"explanation": "Prompt output remains probabilistic even with low temperature and structured formatting. Validate the output contract, test edge cases, define an insufficient-information path, and keep human or deterministic controls around consequential actions.",
+					"topic": "D2.1 / Prompt action validation and safety",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node"
 				}
 			]
 		}

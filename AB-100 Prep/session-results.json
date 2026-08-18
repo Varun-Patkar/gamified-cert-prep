@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-17T09:04:42.781939",
+  "timestamp": "2026-08-18T08:59:16.950707",
   "examCode": "AB-100",
   "examName": "Agentic AI Business Solutions Architect",
   "summary": {
@@ -10,7 +10,7 @@
     "skipped": 0,
     "ungraded": 0,
     "accuracy": 100.0,
-    "timeSeconds": 237.6
+    "timeSeconds": 131.6
   },
   "domainBreakdown": {
     "Agentic AI Business Solutions Architecture (Practice Quiz)": {
@@ -21,61 +21,61 @@
     }
   },
   "topicBreakdown": {
-    "D2.1 / Customer Service summary customization": {
+    "D2.1 / Generative orchestration and capability contracts": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Related-record summary design": {
+    "D2.1 / Prompt action validation and safety": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Prompt and response agents": {
+    "D2.1 / Classic orchestration and standard NLU": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Sales Agent permissions": {
+    "D2.1 / Topic design and fallback traps": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Product terminology": {
+    "D2.1 / Agent flows and deterministic control": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Autonomous agents and approval boundaries": {
+    "D2.1 / Prompt actions composed with agent flows": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Customer Service permissions and summaries": {
+    "D2.1 / Generative orchestration input limitations": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Task agents": {
+    "D2.1 / Fallback and escalation": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Sales Agent and CRM connections": {
+    "D2.1 / CLU selection and lifecycle": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Dynamics 365 business terms and grounding": {
+    "D2.1 / Agent flow tool contracts": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
@@ -86,174 +86,174 @@
   "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "q062",
-      "question": "Customer service representatives need case summaries with separate Issue, Actions Taken, and Next Step sections. Empty sections must not appear when a case lacks the corresponding data. Which configuration best meets the requirement?",
+      "questionId": "q074",
+      "question": "An employee asks, 'Find my leave balance, explain the carryover policy, and draft a message to my manager.' The solution has a balance tool, an approved policy knowledge source, and a drafting prompt. Which design best supports the request?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D2.1 / Customer Service summary customization",
+      "topic": "D2.1 / Generative orchestration and capability contracts",
       "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Structured format supports custom headers, and removing information that cannot be found prevents empty sections or placeholder text when source data is unavailable.",
+      "explanation": "Generative orchestration can combine topics, tools, knowledge, and other capabilities for a multi-intent request. Clear descriptions and parameter contracts help the planner select and sequence the correct capabilities.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
     },
     {
-      "questionId": "q063",
-      "question": "Representatives viewing a case should see summaries of its related work orders, with the most recently modified work order first and its work-order number displayed as the heading. What should the architect configure?",
+      "questionId": "q080",
+      "question": "A custom prompt classifies incoming complaints and returns valid JSON during testing. The product owner argues that temperature 0 and valid JSON make further controls unnecessary. What should the architect recommend?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D2.1 / Related-record summary design",
+      "topic": "D2.1 / Prompt action validation and safety",
       "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
       "domainId": "1",
-      "difficulty": "hard",
-      "explanation": "Related-record summaries require the related record type, parent-reference field, summary configuration, ordering field, and heading field.",
+      "difficulty": "medium",
+      "explanation": "Prompt output remains probabilistic even with low temperature and structured formatting. Validate the output contract, test edge cases, define an insufficient-information path, and keep human or deterministic controls around consequential actions.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node"
     },
     {
-      "questionId": "q068",
-      "question": "A seller asks an agent, \"Summarize this opportunity and identify the documented risks.\" The agent retrieves permitted CRM data, returns an answer, and makes no record changes. Which agent type best describes the design?",
+      "questionId": "q073",
+      "question": "A benefits agent has 12 stable intents, must present approved wording, and must follow an authored sequence for each intent. Which orchestration design best fits?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D2.1 / Prompt and response agents",
+      "topic": "D2.1 / Classic orchestration and standard NLU",
       "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
       "domainId": "1",
       "difficulty": "easy",
-      "explanation": "The interaction begins with a user prompt and produces an informational response without carrying out a bounded operational workflow.",
+      "explanation": "Classic orchestration selects topics by matching user input to trigger phrases and is the better fit for a small, stable intent set that requires predictable authored dialogue and ordering.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-triggers"
     },
     {
-      "questionId": "q066",
-      "question": "A seller was granted permission in the CRM to update opportunities, but Sales Agent in Outlook still prevents the update immediately after the role change. What is the most appropriate next step?",
+      "questionId": "q072",
+      "question": "An architect adds a topic named General Help with trigger phrases such as help, problem, and question. Analytics then show that specific billing and order topics rarely run. What is the best correction?",
       "userAnswer": "C",
       "correctAnswer": "C",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D2.1 / Sales Agent permissions",
+      "topic": "D2.1 / Topic design and fallback traps",
       "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Sales Agent applies CRM access controls. After CRM permission or security-role changes, the Outlook user should sign out of Sales Agent and sign in again.",
+      "explanation": "Fallback already captures unknown content without trigger phrases. A broad catchall topic can steal traffic from valid topics and conceal recognition gaps instead of exposing them for correction.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-sales-copilot/privileges"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-fallback-topic"
     },
     {
-      "questionId": "q067",
-      "question": "An architecture document written in 2025 refers to \"Microsoft 365 Copilot for Sales.\" A current implementation guide refers to \"Sales Agent.\" How should the architect interpret the terms for an AB-100 scenario?",
+      "questionId": "q077",
+      "question": "A refund process must check eligibility, branch on amount, retry a transient ERP call, obtain manager approval above a threshold, and then update the ERP. A model may summarize the case but must not decide the threshold. Where should the core process be implemented?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D2.1 / Product terminology",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "easy",
-      "explanation": "Current Microsoft Learn documentation uses Sales Agent for the seller-focused Microsoft 365 experience. Older exam material can use Microsoft 365 Copilot for Sales or similar legacy names.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-sales-copilot/introduction"
-    },
-    {
-      "questionId": "q070",
-      "question": "A new high-priority Customer Service case should automatically start triage when its Dataverse record is created. The agent may collect context and recommend an escalation, but changing a customer's contractual service level requires manager approval. Which design is best?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Autonomous agents and approval boundaries",
+      "topic": "D2.1 / Agent flows and deterministic control",
       "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
       "domainId": "1",
       "difficulty": "hard",
-      "explanation": "A record-created event can start autonomous work without a user message, while consequential changes should remain behind deterministic controls or human approval.",
+      "explanation": "Agent flows are the appropriate boundary for deterministic process logic, connectors, retries, approvals, and side effects. A prompt can assist with semantic transformation but should not own consequential business rules.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-orchestration"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-overview"
     },
     {
-      "questionId": "q064",
-      "question": "An administrator includes Product in a case-summary configuration, but summaries generated for service representatives omit product information. The field is populated on the cases. What should the architect verify first?",
+      "questionId": "q079",
+      "question": "An agent must retrieve an approved email, extract category and urgency into a strict schema, validate the result, and create a Dataverse case only after a representative confirms it. Which architecture is best?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / Prompt actions composed with agent flows",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "The prompt is suited to semantic extraction, while the agent flow owns retrieval, validation, confirmation, persistence, and failure handling. Structured model output still requires validation before a consequential write.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node"
+    },
+    {
+      "questionId": "q076",
+      "question": "A generatively orchestrated topic requires a value that must match a custom regex entity for an internal asset tag. The maker tries to define that custom entity directly as the topic input parameter. What should the architect recommend?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / Generative orchestration input limitations",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "Generative topic and tool input parameters don't directly support custom closed-list or regex entities. The documented approach is to collect the value with a Question node in a topic.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
+    },
+    {
+      "questionId": "q071",
+      "question": "A customer enters an utterance that matches no enabled topic in a classic-orchestration agent. The architect wants the standard unknown-intent behavior with a bounded retry before handoff. Which design should be used?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / Fallback and escalation",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "easy",
+      "explanation": "The Fallback system topic catches unrecognized input through On Unknown Intent. Its documented default path asks the user to rephrase no more than twice and then redirects to the Escalate system topic.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-fallback-topic"
+    },
+    {
+      "questionId": "q075",
+      "question": "A telecom support team has hundreds of labeled utterances, a controlled taxonomy of contract and product intents, domain-specific entities, and an ML team that must measure and version recognition performance. Which recognition approach is most appropriate?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / CLU selection and lifecycle",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "CLU is appropriate when a specialized domain needs a trained intent and entity model with labeled data, measurable recognition, deployment, and version management. Copilot Studio can map CLU intents to topics and use imported entities.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-clu-integration"
+    },
+    {
+      "questionId": "q078",
+      "question": "A maker builds an agent flow that looks up shipment status. The flow must be available for a generatively orchestrated agent to select as a tool and must return a typed status result. Which configuration is required?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D2.1 / Customer Service permissions and summaries",
+      "topic": "D2.1 / Agent flow tool contracts",
       "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Customer Service summaries respect Dataverse privileges. Verify the required read access to Product and related entities rather than granting broad administrative access.",
+      "explanation": "Agent flows with the When an agent calls the flow trigger can be added as tools. Clear input/output contracts and a precise description enable reliable selection and data exchange.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields"
-    },
-    {
-      "questionId": "q069",
-      "question": "A seller selects Prepare Meeting Brief. The agent retrieves the account and opportunity, summarizes recent meetings, drafts an agenda, and creates a follow-up task. It runs only when the seller invokes this bounded operation. Which classification is most appropriate?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Task agents",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "A task agent completes a bounded goal and can invoke multiple tools. Tool use alone does not make an agent autonomous.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-orchestration"
-    },
-    {
-      "questionId": "q065",
-      "question": "A company wants sellers to view opportunity summaries in Outlook and Teams. One division uses Dynamics 365 Sales and another uses Salesforce Sales Cloud. Which packaged experience is the best fit under current Microsoft naming?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Sales Agent and CRM connections",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "easy",
-      "explanation": "Sales Agent brings CRM insights into Outlook, Teams, and Microsoft 365 apps and supports connections to Dynamics 365 Sales and Salesforce Sales Cloud.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-sales-copilot/functional-overview"
-    },
-    {
-      "questionId": "q061",
-      "question": "A service organization uses the term \"red account\" for a customer that has a critical service tier and at least one unresolved priority case. Representatives want Customer Service Copilot summaries to use this term consistently. What should the solution architect recommend?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Dynamics 365 business terms and grounding",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Define organization-specific terms precisely and map them to authoritative records, fields, and relationships. Summary configuration supports natural-language descriptions and explicit field selection while preserving existing access controls.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/copilot-enable-custom-record-summaries"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-overview"
     }
   ]
 }

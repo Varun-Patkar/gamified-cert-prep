@@ -55,8 +55,9 @@
 
 #### Day 7 (2026-08-18, Tue) — D2.1 Copilot Studio Design
 
-- [ ] Study: topics + fallback; standard NLP vs conversational language understanding vs generative orchestration; agent flows; prompt actions
-- [ ] Estimated time: 1 hr
+- [x] Study: topics + fallback; standard NLP vs conversational language understanding vs generative orchestration; agent flows; prompt actions
+- [x] Practice: 10 new sourced questions (q071–q080; 10/10 = 100%; no reuse from earlier study days)
+- [x] Estimated time: 1 hr
 
 #### Day 8 (2026-08-19, Wed) — D2.2 Extensibility
 

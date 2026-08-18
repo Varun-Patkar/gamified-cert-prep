@@ -3,18 +3,18 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 6 / 31
-- Questions Answered: 70 / 70 (completed bank plus new daily questions)
-- Accuracy: 94.3% (66/70)
-- Current Day: Day 7 (next: 2026-08-18)
+- Sessions Completed: 7 / 31
+- Questions Answered: 80 / 80 (completed bank plus new daily questions)
+- Accuracy: 95.0% (76/80)
+- Current Day: Day 8 (next: 2026-08-19)
 
 ## Domain Confidence (self-rated 1–5)
 
-| Domain                                   | Weight | Confidence           | Notes                                                                                                                |
-| ---------------------------------------- | ------ | -------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)       | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing |
-| D2: Design AI-powered business solutions | 25–30% | 4 (10/10 Day 6 quiz) | Strong start; continue with Copilot Studio orchestration boundaries                                                  |
-| D3: Deploy AI-powered business solutions | 40–45% | –                    | Highest weight — prioritize                                                                                          |
+| Domain                                   | Weight | Confidence         | Notes                                                                                                                |
+| ---------------------------------------- | ------ | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)     | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing |
+| D2: Design AI-powered business solutions | 25–30% | 4 (20/20 Days 6–7) | Strong on agent types, Copilot Studio orchestration, fallback, CLU, flows, and prompt-action boundaries              |
+| D3: Deploy AI-powered business solutions | 40–45% | –                  | Highest weight — prioritize                                                                                          |
 
 ## Daily Log
 
@@ -88,6 +88,17 @@
 - Weak spots: None observed in this set; retain the distinction between multistep task agents and event-triggered autonomous agents
 - Reference: sessions/day-06-copilot-dynamics-agent-types.md
 - Next action: Day 7 — D2.1 Copilot Studio Design
+
+### Day 7 — 2026-08-18 — D2.1 Copilot Studio Design
+
+- Status: Completed
+- Covered: classic topic orchestration and trigger phrases; fallback and escalation; standard NLU vs Azure AI Language CLU vs generative orchestration; capability descriptions and contracts; agent flows; prompt actions; deterministic approval and validation boundaries
+- Quiz: 10 newly researched, Microsoft Learn-grounded questions — q071 through q080
+- Accuracy: 10 / 10 (100%) — perfect score
+- Time: 2m 11s
+- Weak spots: None observed in this set; retain the custom regex entity input limitation and the distinction between probabilistic prompt transformation and deterministic flow control
+- Reference: sessions/day-07-copilot-studio-design.md
+- Next action: Day 8 — D2.2 Extensibility
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12
