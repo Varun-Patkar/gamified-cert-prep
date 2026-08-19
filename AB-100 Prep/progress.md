@@ -3,17 +3,17 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 7 / 31
-- Questions Answered: 80 / 80 (completed bank plus new daily questions)
-- Accuracy: 95.0% (76/80)
-- Current Day: Day 8 (next: 2026-08-19)
+- Sessions Completed: 8 / 31
+- Questions Answered: 90 / 90 (completed bank plus new daily questions)
+- Accuracy: 95.6% (86/90)
+- Current Day: Day 9 (next: 2026-08-20)
 
 ## Domain Confidence (self-rated 1–5)
 
 | Domain                                   | Weight | Confidence         | Notes                                                                                                                |
 | ---------------------------------------- | ------ | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)     | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing |
-| D2: Design AI-powered business solutions | 25–30% | 4 (20/20 Days 6–7) | Strong on agent types, Copilot Studio orchestration, fallback, CLU, flows, and prompt-action boundaries              |
+| D2: Design AI-powered business solutions | 25–30% | 4 (30/30 Days 6–8) | Strong on agent types, orchestration, extensibility, MCP, Computer Use, reasoning/voice, and channel boundaries      |
 | D3: Deploy AI-powered business solutions | 40–45% | –                  | Highest weight — prioritize                                                                                          |
 
 ## Daily Log
@@ -99,6 +99,17 @@
 - Weak spots: None observed in this set; retain the custom regex entity input limitation and the distinction between probabilistic prompt transformation and deterministic flow control
 - Reference: sessions/day-07-copilot-studio-design.md
 - Next action: Day 8 — D2.2 Extensibility
+
+### Day 8 — 2026-08-19 — D2.2 Extensibility
+
+- Status: Completed
+- Covered: Foundry fine-tuning versus grounding and tools; Copilot Studio extensibility with MCP; Computer Use selection, identity, security, and supervision; deep reasoning and real-time voice; Microsoft 365 Copilot, Teams, and SharePoint publishing and permission boundaries
+- Quiz: 10 newly researched, Microsoft Learn-grounded questions — q081 through q090
+- Accuracy: 10 / 10 (100%) — perfect score
+- Time: 4m 29s
+- Weak spots: None observed in this set; retain MCP's generative-orchestration requirement and the distinction between publishing, sharing, admin approval, and underlying data permissions
+- Reference: sessions/day-08-extensibility.md
+- Next action: Day 9 — D2.3 Orchestrate Prebuilt Agents
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12

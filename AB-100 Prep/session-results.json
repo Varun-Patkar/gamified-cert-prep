@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-18T08:59:16.950707",
+  "timestamp": "2026-08-19T09:08:57.958310",
   "examCode": "AB-100",
   "examName": "Agentic AI Business Solutions Architect",
   "summary": {
@@ -10,7 +10,7 @@
     "skipped": 0,
     "ungraded": 0,
     "accuracy": 100.0,
-    "timeSeconds": 131.6
+    "timeSeconds": 269.8
   },
   "domainBreakdown": {
     "Agentic AI Business Solutions Architecture (Practice Quiz)": {
@@ -21,61 +21,61 @@
     }
   },
   "topicBreakdown": {
-    "D2.1 / Generative orchestration and capability contracts": {
+    "D2.2 / Foundry model customization versus RAG": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Prompt action validation and safety": {
+    "D2.2 / Fine-tuning decision boundaries": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Classic orchestration and standard NLU": {
+    "D2.2 / Tools versus grounding and fine-tuning": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Topic design and fallback traps": {
+    "D2.2 / Copilot Studio MCP and generative orchestration": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Agent flows and deterministic control": {
+    "D2.2 / Computer Use selection": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Prompt actions composed with agent flows": {
+    "D2.2 / Computer Use identity, security, and supervision": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Generative orchestration input limitations": {
+    "D2.2 / Deep reasoning model selection": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Fallback and escalation": {
+    "D2.2 / Realtime voice selection and limitations": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / CLU selection and lifecycle": {
+    "D2.2 / Teams and Microsoft 365 Copilot distribution": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D2.1 / Agent flow tool contracts": {
+    "D2.2 / SharePoint grounding and permission boundaries": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
@@ -86,174 +86,174 @@
   "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "q074",
-      "question": "An employee asks, 'Find my leave balance, explain the carryover policy, and draft a message to my manager.' The solution has a balance tool, an approved policy knowledge source, and a drafting prompt. Which design best supports the request?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Generative orchestration and capability contracts",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Generative orchestration can combine topics, tools, knowledge, and other capabilities for a multi-intent request. Clear descriptions and parameter contracts help the planner select and sequence the correct capabilities.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
-    },
-    {
-      "questionId": "q080",
-      "question": "A custom prompt classifies incoming complaints and returns valid JSON during testing. The product owner argues that temperature 0 and valid JSON make further controls unnecessary. What should the architect recommend?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Prompt action validation and safety",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Prompt output remains probabilistic even with low temperature and structured formatting. Validate the output contract, test edge cases, define an insufficient-information path, and keep human or deterministic controls around consequential actions.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node"
-    },
-    {
-      "questionId": "q073",
-      "question": "A benefits agent has 12 stable intents, must present approved wording, and must follow an authored sequence for each intent. Which orchestration design best fits?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Classic orchestration and standard NLU",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "easy",
-      "explanation": "Classic orchestration selects topics by matching user input to trigger phrases and is the better fit for a small, stable intent set that requires predictable authored dialogue and ordering.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-triggers"
-    },
-    {
-      "questionId": "q072",
-      "question": "An architect adds a topic named General Help with trigger phrases such as help, problem, and question. Analytics then show that specific billing and order topics rarely run. What is the best correction?",
+      "questionId": "q081",
+      "question": "A company is building an employee policy agent. Policy documents change every week, responses must reflect the latest approved version, and users should receive citations. The base model already follows instructions adequately. Which approach should the architect recommend?",
       "userAnswer": "C",
       "correctAnswer": "C",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D2.1 / Topic design and fallback traps",
+      "topic": "D2.2 / Foundry model customization versus RAG",
       "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Fallback already captures unknown content without trigger phrases. A broad catchall topic can steal traffic from valid topics and conceal recognition gaps instead of exposing them for correction.",
+      "explanation": "Retrieval grounding is appropriate when authoritative knowledge changes frequently and must be cited. It supplies current information at run time without changing model weights. Fine-tuning is better suited to changing behavior, style, format, or task performance.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-fallback-topic"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/fine-tuning-considerations"
     },
     {
-      "questionId": "q077",
-      "question": "A refund process must check eligibility, branch on amount, retry a transient ERP call, obtain manager approval above a threshold, and then update the ERP. A model may summarize the case but must not decide the threshold. Where should the core process be implemented?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Agent flows and deterministic control",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "hard",
-      "explanation": "Agent flows are the appropriate boundary for deterministic process logic, connectors, retries, approvals, and side effects. A prompt can assist with semantic transformation but should not own consequential business rules.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-overview"
-    },
-    {
-      "questionId": "q079",
-      "question": "An agent must retrieve an approved email, extract category and urgency into a strict schema, validate the result, and create a Dataverse case only after a representative confirms it. Which architecture is best?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Prompt actions composed with agent flows",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "hard",
-      "explanation": "The prompt is suited to semantic extraction, while the agent flow owns retrieval, validation, confirmation, persistence, and failure handling. Structured model output still requires validation before a consequential write.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node"
-    },
-    {
-      "questionId": "q076",
-      "question": "A generatively orchestrated topic requires a value that must match a custom regex entity for an internal asset tag. The maker tries to define that custom entity directly as the topic input parameter. What should the architect recommend?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Generative orchestration input limitations",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "hard",
-      "explanation": "Generative topic and tool input parameters don't directly support custom closed-list or regex entities. The documented approach is to collect the value with a Question node in a topic.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
-    },
-    {
-      "questionId": "q071",
-      "question": "A customer enters an utterance that matches no enabled topic in a classic-orchestration agent. The architect wants the standard unknown-intent behavior with a bounded retry before handoff. Which design should be used?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / Fallback and escalation",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "easy",
-      "explanation": "The Fallback system topic catches unrecognized input through On Unknown Intent. Its documented default path asks the user to rephrase no more than twice and then redirects to the Escalate system topic.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-fallback-topic"
-    },
-    {
-      "questionId": "q075",
-      "question": "A telecom support team has hundreds of labeled utterances, a controlled taxonomy of contract and product intents, domain-specific entities, and an ML team that must measure and version recognition performance. Which recognition approach is most appropriate?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.1 / CLU selection and lifecycle",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "CLU is appropriate when a specialized domain needs a trained intent and entity model with labeled data, measurable recognition, deployment, and version management. Copilot Studio can map CLU intents to topics and use imported entities.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-clu-integration"
-    },
-    {
-      "questionId": "q078",
-      "question": "A maker builds an agent flow that looks up shipment status. The flow must be available for a generatively orchestrated agent to select as a tool and must return a typed status result. Which configuration is required?",
+      "questionId": "q082",
+      "question": "A claims team has optimized its prompts, but the model still produces inconsistent JSON for numerous edge cases. The team has 2,000 reviewed prompt-response examples that demonstrate the required schema and behavior. The underlying business facts are supplied separately at run time. What is the best next step?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D2.1 / Agent flow tool contracts",
+      "topic": "D2.2 / Fine-tuning decision boundaries",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "Fine-tuning is suitable when a high-quality task-specific dataset is available and the objective is more consistent behavior, formatting, or handling of many edge cases. Retrieval supplies knowledge but does not by itself train consistent schema behavior.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/fine-tuning-considerations"
+    },
+    {
+      "questionId": "q083",
+      "question": "A support agent can explain return policies correctly, but it must now create a return authorization in a line-of-business system that exposes a secured API. Which extension should the architect select?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / Tools versus grounding and fine-tuning",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "easy",
+      "explanation": "Creating a record in an external system is an action with side effects, so the agent needs an authenticated tool that invokes the API. Grounding and fine-tuning do not independently provide authority or connectivity to perform the transaction.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent"
+    },
+    {
+      "questionId": "q084",
+      "question": "A Copilot Studio agent must use a standards-based server that exposes several tools and resources. The available operations will evolve over time, and the agent should select the appropriate operation from the user's intent. Which design best meets the requirement?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / Copilot Studio MCP and generative orchestration",
       "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
       "domainId": "1",
       "difficulty": "medium",
-      "explanation": "Agent flows with the When an agent calls the flow trigger can be added as tools. Clear input/output contracts and a precise description enable reliable selection and data exchange.",
+      "explanation": "Copilot Studio can connect to an MCP server to access dynamically advertised tools and resources. MCP requires generative orchestration so the agent can select the appropriate capability.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-overview"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent"
+    },
+    {
+      "questionId": "q085",
+      "question": "An agent must enter data into a legacy desktop application. The application has no API or supported connector, and completing the process requires clicking controls and typing into visible fields. Which capability and prerequisite should the architect identify?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / Computer Use selection",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "easy",
+      "explanation": "Computer Use is intended for web or desktop GUI automation when an API is unavailable. It interacts through visible controls using mouse and keyboard actions and requires generative orchestration.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use"
+    },
+    {
+      "questionId": "q086",
+      "question": "A Computer Use agent will be shared with employees whose permissions in the target application differ by role. The organization must avoid having every execution inherit the maker's access and wants execution to stop for review when potentially harmful instructions are detected. What should the architect configure?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / Computer Use identity, security, and supervision",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "End-user credentials preserve each user's access boundary instead of running with the maker's permissions. Human supervision can stop potentially harmful instructions for review, with a configured response time limit.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use"
+    },
+    {
+      "questionId": "q087",
+      "question": "An agent must compare several complex contract documents, reconcile conflicting clauses, and construct a defensible recommendation. Interactive latency is less important than analytical quality. Which model choice is most appropriate?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / Deep reasoning model selection",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Reasoning models are suited to advanced problem solving and complex document comparison. They can spend additional time and reasoning tokens processing a request, so they fit when analytical quality matters more than immediate latency.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/reasoning"
+    },
+    {
+      "questionId": "q088",
+      "question": "A company is designing a browser-based voice assistant that must listen and respond with low latency during a live conversation. Which architecture best aligns with the Microsoft Foundry Realtime API guidance?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / Realtime voice selection and limitations",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "The Realtime API supports low-latency speech-in, speech-out interaction. WebRTC is recommended for most client-side realtime audio scenarios, with a client integration terminating and relaying the user's audio stream.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/realtime-audio"
+    },
+    {
+      "questionId": "q089",
+      "question": "A Copilot Studio maker publishes an agent and connects it to Teams and Microsoft 365 Copilot. The business now wants every employee to discover it in the Teams app store under Built for your org. What additional step is required?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / Teams and Microsoft 365 Copilot distribution",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Publishing and connecting channels do not automatically place the agent in the organization-wide store. An agent intended for Built for your org must be submitted for administrator approval.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams"
+    },
+    {
+      "questionId": "q090",
+      "question": "An Agent Builder agent in Microsoft 365 Copilot is grounded in a SharePoint site containing both general procedures and restricted legal documents. The owner enables organization-wide chat access. What should the architect expect when an employee without permission to the legal documents uses the agent?",
+      "userAnswer": "D",
+      "correctAnswer": "D",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / SharePoint grounding and permission boundaries",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "Sharing or making an agent discoverable does not grant access to its underlying SharePoint content. SharePoint and OneDrive knowledge sources continue to respect existing permissions and sensitivity labels.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge"
     }
   ]
 }

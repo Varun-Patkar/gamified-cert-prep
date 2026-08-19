@@ -61,8 +61,9 @@
 
 #### Day 8 (2026-08-19, Wed) — D2.2 Extensibility
 
-- [ ] Study: custom models in Foundry; agent extensibility (Copilot Studio + MCP); Computer Use; reasoning & voice mode; M365/Teams/SharePoint agents
-- [ ] Estimated time: 1 hr
+- [x] Study: custom models in Foundry; agent extensibility (Copilot Studio + MCP); Computer Use; reasoning & voice mode; M365/Teams/SharePoint agents
+- [x] Practice: 10 new sourced questions (q081–q090; 10/10 = 100%; no reuse from earlier study days)
+- [x] Estimated time: 1 hr
 
 #### Day 9 (2026-08-20, Thu) — D2.3 Orchestrate Prebuilt Agents
 

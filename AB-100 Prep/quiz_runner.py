@@ -24,10 +24,12 @@ from datetime import datetime
 
 # ── ANSI color helpers (works on Windows 10+ and all Unix terminals) ──
 
+
 def _enable_ansi_windows():
     """Enable ANSI escape sequences on Windows terminal."""
     try:
         import ctypes
+
         kernel32 = ctypes.windll.kernel32
         # STD_OUTPUT_HANDLE = -11, ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004
         handle = kernel32.GetStdHandle(-11)
@@ -36,6 +38,7 @@ def _enable_ansi_windows():
         kernel32.SetConsoleMode(handle, mode.value | 0x0004)
     except Exception:
         pass
+
 
 if os.name == "nt":
     _enable_ansi_windows()
@@ -54,6 +57,7 @@ CASE_STUDY_HEADER_RE = re.compile(
     r"^\[Case Study - (?P<name>.+?) - Q(?P<order>\d+) of (?P<total>\d+)\]\s*",
     re.IGNORECASE,
 )
+
 
 def _load_day_assignments(questions_filepath):
     """
@@ -100,6 +104,9 @@ def _flatten_with_domain(data):
 
 def _pick_recent_unique(source_ids, count):
     """Pick up to count most-recent unique question ids preserving recency."""
+    if count <= 0:
+        return []
+
     picked = []
     seen = set()
     for qid in reversed(source_ids):
@@ -138,7 +145,9 @@ def build_day_locked_questions(data, day, carryover_count=3, questions_filepath=
         - Review days exceed the study-days range in day-assignments.json.
     """
     if questions_filepath is None:
-        raise ValueError("--day-lock requires questions_filepath to locate day-assignments.json")
+        raise ValueError(
+            "--day-lock requires questions_filepath to locate day-assignments.json"
+        )
 
     config = _load_day_assignments(questions_filepath)
     study_days = int(config.get("studyDays", 28))
@@ -158,12 +167,16 @@ def build_day_locked_questions(data, day, carryover_count=3, questions_filepath=
     for d in range(1, day):
         asked_history_flat.extend(day_assignments.get(d, []))
 
-    carry_ids = [] if day == 1 else _pick_recent_unique(asked_history_flat, carryover_count)
+    carry_ids = (
+        [] if day == 1 else _pick_recent_unique(asked_history_flat, carryover_count)
+    )
     carry_set = set(carry_ids)
 
     if day <= study_days:
         # Study day: serve the pre-assigned questions for this day plus carryover.
-        primary_ids = [qid for qid in day_assignments.get(day, []) if qid not in carry_set]
+        primary_ids = [
+            qid for qid in day_assignments.get(day, []) if qid not in carry_set
+        ]
         selected_ids = carry_ids + primary_ids
 
     else:
@@ -174,8 +187,6 @@ def build_day_locked_questions(data, day, carryover_count=3, questions_filepath=
         selected_ids = carry_ids + pool[:fill_count]
 
     return [by_id[qid] for qid in selected_ids if qid in by_id]
-
-
 
 
 def load_questions(filepath):
@@ -221,12 +232,19 @@ def normalize_dataset(raw, audit=None):
                 q["ungraded"] = not has_answer_key(q)
         return raw
 
-    raise ValueError("Unsupported questions schema. Expected canonical dict or array-based dump.")
+    raise ValueError(
+        "Unsupported questions schema. Expected canonical dict or array-based dump."
+    )
 
 
 def clean_question_text(text):
     """Normalize whitespace and remove image placeholders from question text."""
-    cleaned = (text or "").replace("//IMG//", "").replace("\u2028", " ").replace("\u2029", " ")
+    cleaned = (
+        (text or "")
+        .replace("//IMG//", "")
+        .replace("\u2028", " ")
+        .replace("\u2029", " ")
+    )
     cleaned = re.sub(r"\s+", " ", cleaned).strip()
     return cleaned
 
@@ -360,7 +378,9 @@ def infer_answer_from_discussion(discussion, valid_letters, top_n=3):
     if not votes:
         return ""
 
-    best = sorted(votes.items(), key=lambda item: (-item[1], first_seen_rank[item[0]], item[0]))[0][0]
+    best = sorted(
+        votes.items(), key=lambda item: (-item[1], first_seen_rank[item[0]], item[0])
+    )[0][0]
     return best
 
 
@@ -417,7 +437,7 @@ def _build_weighted_domain_groups(normalized_questions):
     grouped = {d[0]: [] for d in DOMAIN_BLUEPRINT}
     cursor = 0
     for domain_id, count in quotas:
-        grouped[domain_id] = normalized_questions[cursor: cursor + count]
+        grouped[domain_id] = normalized_questions[cursor : cursor + count]
         cursor += count
     return grouped
 
@@ -469,7 +489,9 @@ def convert_examtopics_array(raw_questions, audit=None):
                 q["answerStatus"] = "recovered_high"
 
         if not answer_letters:
-            inferred = infer_answer_from_discussion(src.get("discussion"), valid_letters, top_n=3)
+            inferred = infer_answer_from_discussion(
+                src.get("discussion"), valid_letters, top_n=3
+            )
             if inferred:
                 answer_letters = inferred
                 q["answerInferredFrom"] = "discussion_top3_consensus"
@@ -479,7 +501,10 @@ def convert_examtopics_array(raw_questions, audit=None):
             if any(letter not in valid_letters for letter in answer_letters):
                 answer_letters = ""
 
-        if qid in suspect_ids and q.get("answerInferredFrom") == "discussion_top3_consensus":
+        if (
+            qid in suspect_ids
+            and q.get("answerInferredFrom") == "discussion_top3_consensus"
+        ):
             answer_letters = ""
             q.pop("answerInferredFrom", None)
             q["answerStatus"] = "inference_blocked_by_audit"
@@ -502,7 +527,9 @@ def convert_examtopics_array(raw_questions, audit=None):
         if q.get("answerInferredFrom"):
             parts.append("Answer inferred from top upvoted discussion consensus.")
         if q.get("answerStatus") == "inference_blocked_by_audit":
-            parts.append("Inference was flagged as suspect by subagent audit and left ungraded.")
+            parts.append(
+                "Inference was flagged as suspect by subagent audit and left ungraded."
+            )
         q["explanation"] = re.sub(r"\s+", " ", " | ".join(parts)).strip()
         q["ungraded"] = not has_answer_key(q)
         if q["ungraded"] and q.get("answerStatus") == "explicit":
@@ -518,11 +545,13 @@ def convert_examtopics_array(raw_questions, audit=None):
         questions = grouped.get(domain_id, [])
         for q in questions:
             q.pop("topicOrder", None)
-        domains.append({
-            "domainId": domain_id,
-            "domainName": domain_name,
-            "questions": questions,
-        })
+        domains.append(
+            {
+                "domainId": domain_id,
+                "domainName": domain_name,
+                "questions": questions,
+            }
+        )
 
     return {
         "examCode": "AI-102",
@@ -582,29 +611,47 @@ def enrich_case_study_metadata(selected_questions, data):
     for q in selected_questions:
         q_copy = dict(q)
         header = _parse_case_study_header(q_copy.get("question", ""))
-        is_case = q_copy.get("section") == "casestudy" or header is not None or bool(q_copy.get("caseStudyId"))
+        is_case = (
+            q_copy.get("section") == "casestudy"
+            or header is not None
+            or bool(q_copy.get("caseStudyId"))
+        )
 
         if is_case:
             explicit_case_id = str(q_copy.get("caseStudyId", "")).strip()
-            case_name = str(q_copy.get("caseStudyName", "")).strip() or (header["name"] if header else "Case Study")
+            case_name = str(q_copy.get("caseStudyName", "")).strip() or (
+                header["name"] if header else "Case Study"
+            )
             normalized_case_id = _slugify(explicit_case_id or case_name)
 
             if header:
-                q_copy["caseStudyOrder"] = int(q_copy.get("caseStudyOrder") or header["order"])
-                q_copy["caseStudyTotal"] = int(q_copy.get("caseStudyTotal") or header["total"])
+                q_copy["caseStudyOrder"] = int(
+                    q_copy.get("caseStudyOrder") or header["order"]
+                )
+                q_copy["caseStudyTotal"] = int(
+                    q_copy.get("caseStudyTotal") or header["total"]
+                )
 
             q_copy["caseStudyId"] = normalized_case_id
             q_copy["caseStudyName"] = case_name
 
-            case_meta = case_lookup.get(normalized_case_id) or case_lookup.get(case_name.lower()) or {}
-            q_copy["caseStudyContext"] = q_copy.get("caseStudyContext") or case_meta.get("context")
+            case_meta = (
+                case_lookup.get(normalized_case_id)
+                or case_lookup.get(case_name.lower())
+                or {}
+            )
+            q_copy["caseStudyContext"] = q_copy.get(
+                "caseStudyContext"
+            ) or case_meta.get("context")
             q_copy["caseStudyContextPlaceholder"] = (
                 q_copy.get("caseStudyContextPlaceholder")
                 or case_meta.get("contextPlaceholder")
                 or f"Use the shared context for '{case_name}' before answering this case-study sequence."
             )
 
-            q_copy["displayQuestion"] = _strip_case_study_header(q_copy.get("question", ""))
+            q_copy["displayQuestion"] = _strip_case_study_header(
+                q_copy.get("question", "")
+            )
         else:
             q_copy["displayQuestion"] = q_copy.get("question", "")
 
@@ -628,7 +675,9 @@ def deduplicate_questions(questions):
         unique.append(q)
 
     if duplicates:
-        print(f"{YELLOW}Removed {duplicates} duplicate question(s) by ID before starting quiz.{RESET}")
+        print(
+            f"{YELLOW}Removed {duplicates} duplicate question(s) by ID before starting quiz.{RESET}"
+        )
 
     return unique
 
@@ -683,7 +732,12 @@ def _build_case_study_blocks_for_shuffle(questions):
             standalone.append([q])
 
     for case_id, group in case_groups.items():
-        group.sort(key=lambda item: (int(item.get("caseStudyOrder") or 10**9), item.get("_selectedOrder", 10**9)))
+        group.sort(
+            key=lambda item: (
+                int(item.get("caseStudyOrder") or 10**9),
+                item.get("_selectedOrder", 10**9),
+            )
+        )
         blocks.append(group)
 
     blocks.extend(standalone)
@@ -750,7 +804,14 @@ def limit_preserving_case_studies(questions, limit):
     return selected
 
 
-def filter_questions(data, domain_id=None, topic_prefix=None, question_ids=None, cross_domains=None, all_mode=False):
+def filter_questions(
+    data,
+    domain_id=None,
+    topic_prefix=None,
+    question_ids=None,
+    cross_domains=None,
+    all_mode=False,
+):
     """
     Filter questions from the dataset based on criteria.
 
@@ -799,16 +860,24 @@ def display_question(q, index, total, open_images=False):
     """Display a single question with formatted options. Handles mc, dropdown, yesno, multi types."""
     qtype = q.get("type", "mc")
     print(f"\n{'─' * 60}")
-    print(f"{CYAN}{BOLD}Question {index}/{total}{RESET}  {DIM}[{q['domainName']}]{RESET}")
-    print(f"{DIM}Topic: {q.get('topic', 'N/A')} | Difficulty: {q.get('difficulty', 'N/A')} | ID: {q['id']}{RESET}")
+    print(
+        f"{CYAN}{BOLD}Question {index}/{total}{RESET}  {DIM}[{q['domainName']}]{RESET}"
+    )
+    print(
+        f"{DIM}Topic: {q.get('topic', 'N/A')} | Difficulty: {q.get('difficulty', 'N/A')} | ID: {q['id']}{RESET}"
+    )
     print(f"{'─' * 60}")
     print(f"\n{q.get('displayQuestion', q['question'])}\n")
-    render_image_links("Question image links", q.get("questionImages"), open_images=open_images)
+    render_image_links(
+        "Question image links", q.get("questionImages"), open_images=open_images
+    )
     if q.get("sourceUrl"):
         print(f"{DIM}Source: {q.get('sourceUrl')}{RESET}\n")
 
     if not q.get("options") and q.get("type", "mc") in ("mc", "multi"):
-        print(f"{YELLOW}No inline options were captured for this item. Review the explanation/discussion context.{RESET}\n")
+        print(
+            f"{YELLOW}No inline options were captured for this item. Review the explanation/discussion context.{RESET}\n"
+        )
 
     if qtype == "mc":
         for opt in q["options"]:
@@ -839,7 +908,13 @@ def _get_mc_answer(valid_options):
     """Get single-choice answer (mc type). Returns (answer, skipped, quit)."""
     while True:
         try:
-            raw = input(f"{YELLOW}Your answer ({'/'.join(valid_options)}) [s=skip, q=quit]: {RESET}").strip().upper()
+            raw = (
+                input(
+                    f"{YELLOW}Your answer ({'/'.join(valid_options)}) [s=skip, q=quit]: {RESET}"
+                )
+                .strip()
+                .upper()
+            )
         except (EOFError, KeyboardInterrupt):
             return None, False, True
         if raw == "Q":
@@ -848,14 +923,22 @@ def _get_mc_answer(valid_options):
             return None, True, False
         if raw in valid_options:
             return raw, False, False
-        print(f"{RED}  Invalid. Enter one of: {', '.join(valid_options)}, s, or q{RESET}")
+        print(
+            f"{RED}  Invalid. Enter one of: {', '.join(valid_options)}, s, or q{RESET}"
+        )
 
 
 def _get_multi_answer(valid_options, num_required):
     """Get multi-select answer. Returns (sorted list of letters, skipped, quit)."""
     while True:
         try:
-            raw = input(f"{YELLOW}Your answers (comma-separated, e.g. A,C) [s=skip, q=quit]: {RESET}").strip().upper()
+            raw = (
+                input(
+                    f"{YELLOW}Your answers (comma-separated, e.g. A,C) [s=skip, q=quit]: {RESET}"
+                )
+                .strip()
+                .upper()
+            )
         except (EOFError, KeyboardInterrupt):
             return None, False, True
         if raw == "Q":
@@ -865,7 +948,9 @@ def _get_multi_answer(valid_options, num_required):
         parts = sorted(set(p.strip() for p in raw.split(",")))
         if all(p in valid_options for p in parts) and len(parts) == num_required:
             return parts, False, False
-        print(f"{RED}  Enter exactly {num_required} valid options from {', '.join(valid_options)}, comma-separated.{RESET}")
+        print(
+            f"{RED}  Enter exactly {num_required} valid options from {', '.join(valid_options)}, comma-separated.{RESET}"
+        )
 
 
 def _get_dropdown_answers(dropdowns):
@@ -875,7 +960,13 @@ def _get_dropdown_answers(dropdowns):
         num_opts = len(dd["options"])
         while True:
             try:
-                raw = input(f"{YELLOW}  Slot {di} — {dd['label']} (1-{num_opts}) [s=skip, q=quit]: {RESET}").strip().upper()
+                raw = (
+                    input(
+                        f"{YELLOW}  Slot {di} — {dd['label']} (1-{num_opts}) [s=skip, q=quit]: {RESET}"
+                    )
+                    .strip()
+                    .upper()
+                )
             except (EOFError, KeyboardInterrupt):
                 return None, False, True
             if raw == "Q":
@@ -895,7 +986,13 @@ def _get_yesno_answers(statements):
     for si, stmt in enumerate(statements, 1):
         while True:
             try:
-                raw = input(f"{YELLOW}  Statement {si} — Yes or No? [s=skip, q=quit]: {RESET}").strip().upper()
+                raw = (
+                    input(
+                        f"{YELLOW}  Statement {si} — Yes or No? [s=skip, q=quit]: {RESET}"
+                    )
+                    .strip()
+                    .upper()
+                )
             except (EOFError, KeyboardInterrupt):
                 return None, False, True
             if raw == "Q":
@@ -916,7 +1013,13 @@ def _get_review_ack():
     """Acknowledge review-only question that has no structured answer key."""
     while True:
         try:
-            raw = input(f"{YELLOW}Review-only item. Press Enter to continue [s=skip, q=quit]: {RESET}").strip().upper()
+            raw = (
+                input(
+                    f"{YELLOW}Review-only item. Press Enter to continue [s=skip, q=quit]: {RESET}"
+                )
+                .strip()
+                .upper()
+            )
         except (EOFError, KeyboardInterrupt):
             return None, False, True
         if raw == "Q":
@@ -1063,21 +1166,29 @@ def show_result(q, user_answer, skipped, open_images=False):
     correct_display = get_correct_display(q)
 
     if skipped:
-        print(f"{YELLOW}  ⏭  SKIPPED{RESET} — Correct answer: {GREEN}{correct_display}{RESET}")
+        print(
+            f"{YELLOW}  ⏭  SKIPPED{RESET} — Correct answer: {GREEN}{correct_display}{RESET}"
+        )
     else:
         verdict = check_correct(q, user_answer)
         if verdict is None:
-            print(f"{CYAN}  ℹ  REVIEW MODE{RESET} — This question has no structured answer key.")
+            print(
+                f"{CYAN}  ℹ  REVIEW MODE{RESET} — This question has no structured answer key."
+            )
         elif verdict:
             print(f"{GREEN}{BOLD}  ✓  CORRECT!  Nice one!{RESET}")
         else:
             user_display = get_user_display(q, user_answer)
-            print(f"{RED}{BOLD}  ✗  WRONG.{RESET}  You chose {RED}{user_display}{RESET}")
+            print(
+                f"{RED}{BOLD}  ✗  WRONG.{RESET}  You chose {RED}{user_display}{RESET}"
+            )
             print(f"  Correct: {GREEN}{correct_display}{RESET}")
             print(f"{YELLOW}  📝  Note this one down — review it later!{RESET}")
 
     if q.get("answerImages"):
-        render_image_links("Answer image links", q.get("answerImages"), open_images=open_images)
+        render_image_links(
+            "Answer image links", q.get("answerImages"), open_images=open_images
+        )
 
     # Show explanation
     explanation = q.get("explanation", "")
@@ -1088,9 +1199,15 @@ def show_result(q, user_answer, skipped, open_images=False):
 def show_summary(results, total_time_sec):
     """Print final score summary."""
     total = len(results)
-    graded_attempted = sum(1 for r in results if r.get("gradable", True) and not r["skipped"])
+    graded_attempted = sum(
+        1 for r in results if r.get("gradable", True) and not r["skipped"]
+    )
     correct = sum(1 for r in results if r["correct"])
-    wrong = sum(1 for r in results if r.get("gradable", True) and not r["correct"] and not r["skipped"])
+    wrong = sum(
+        1
+        for r in results
+        if r.get("gradable", True) and not r["correct"] and not r["skipped"]
+    )
     skipped = sum(1 for r in results if r["skipped"])
     ungraded = sum(1 for r in results if not r.get("gradable", True))
     pct = (correct / graded_attempted * 100) if graded_attempted > 0 else 0
@@ -1106,30 +1223,54 @@ def show_summary(results, total_time_sec):
     filled = int(bar_len * pct / 100)
     bar = "█" * filled + "░" * (bar_len - filled)
     color = GREEN if pct >= 70 else YELLOW if pct >= 50 else RED
-    print(f"  Score: {color}{BOLD}{correct}/{graded_attempted} ({pct:.0f}%){RESET}  [{color}{bar}{RESET}]")
+    print(
+        f"  Score: {color}{BOLD}{correct}/{graded_attempted} ({pct:.0f}%){RESET}  [{color}{bar}{RESET}]"
+    )
     print(f"  Time:  {minutes}m {seconds}s")
-    print(f"  {GREEN}✓ Correct: {correct}{RESET}  |  {RED}✗ Wrong: {wrong}{RESET}  |  {YELLOW}⏭ Skipped: {skipped}{RESET}  |  {CYAN}ℹ Ungraded: {ungraded}{RESET}")
+    print(
+        f"  {GREEN}✓ Correct: {correct}{RESET}  |  {RED}✗ Wrong: {wrong}{RESET}  |  {YELLOW}⏭ Skipped: {skipped}{RESET}  |  {CYAN}ℹ Ungraded: {ungraded}{RESET}"
+    )
 
     # Encouragement based on score
     print()
     if pct >= 90:
-        print(f"  {GREEN}{BOLD}🏆  Outstanding! You're exam-ready on these topics!{RESET}")
+        print(
+            f"  {GREEN}{BOLD}🏆  Outstanding! You're exam-ready on these topics!{RESET}"
+        )
     elif pct >= 70:
-        print(f"  {GREEN}👍  Solid performance! Review the ones you missed and you'll nail it.{RESET}")
+        print(
+            f"  {GREEN}👍  Solid performance! Review the ones you missed and you'll nail it.{RESET}"
+        )
     elif pct >= 50:
-        print(f"  {YELLOW}💪  Getting there! Focus on the wrong answers — understanding WHY helps most.{RESET}")
+        print(
+            f"  {YELLOW}💪  Getting there! Focus on the wrong answers — understanding WHY helps most.{RESET}"
+        )
     else:
-        print(f"  {RED}📚  Needs more study. Re-read the topic explanations and try again tomorrow.{RESET}")
+        print(
+            f"  {RED}📚  Needs more study. Re-read the topic explanations and try again tomorrow.{RESET}"
+        )
 
     # Show wrong/skipped questions for review
-    missed = [r for r in results if (r.get("gradable", True) and not r["correct"]) or r["skipped"]]
+    missed = [
+        r
+        for r in results
+        if (r.get("gradable", True) and not r["correct"]) or r["skipped"]
+    ]
     if missed:
         print(f"\n{'─' * 60}")
         print(f"{BOLD}  Questions to review:{RESET}\n")
         for r in missed:
-            status = f"{YELLOW}SKIPPED{RESET}" if r["skipped"] else f"{RED}WRONG (you: {r['userAnswer']}, correct: {r['correctAnswer']}){RESET}"
+            status = (
+                f"{YELLOW}SKIPPED{RESET}"
+                if r["skipped"]
+                else f"{RED}WRONG (you: {r['userAnswer']}, correct: {r['correctAnswer']}){RESET}"
+            )
             print(f"  • {r['questionId']}: {status}")
-            print(f"    {DIM}{r['question'][:80]}...{RESET}" if len(r["question"]) > 80 else f"    {DIM}{r['question']}{RESET}")
+            print(
+                f"    {DIM}{r['question'][:80]}...{RESET}"
+                if len(r["question"]) > 80
+                else f"    {DIM}{r['question']}{RESET}"
+            )
 
     print(f"\n{'═' * 60}\n")
     print(f"\n{'═' * 60}\n")
@@ -1146,7 +1287,9 @@ def save_results(results, data, total_time_sec, output_path="session-results.jso
         output_path: Where to save results
     """
     total = len(results)
-    graded_attempted = sum(1 for r in results if r.get("gradable", True) and not r["skipped"])
+    graded_attempted = sum(
+        1 for r in results if r.get("gradable", True) and not r["skipped"]
+    )
     correct = sum(1 for r in results if r["correct"])
     skipped = sum(1 for r in results if r["skipped"])
     ungraded = sum(1 for r in results if not r.get("gradable", True))
@@ -1190,8 +1333,12 @@ def save_results(results, data, total_time_sec, output_path="session-results.jso
             "wrong": graded_attempted - correct,
             "skipped": skipped,
             "ungraded": ungraded,
-            "accuracy": round(correct / graded_attempted * 100, 1) if graded_attempted > 0 else 0,
-            "timeSeconds": round(total_time_sec, 1)
+            "accuracy": (
+                round(correct / graded_attempted * 100, 1)
+                if graded_attempted > 0
+                else 0
+            ),
+            "timeSeconds": round(total_time_sec, 1),
         },
         "domainBreakdown": domain_stats,
         "topicBreakdown": topic_stats,
@@ -1206,12 +1353,13 @@ def save_results(results, data, total_time_sec, output_path="session-results.jso
                 "sourceUrl": r.get("sourceUrl", ""),
                 "explanation": r.get("explanation", ""),
                 "topic": r.get("topic", ""),
-                "domainName": r.get("domainName", "")
+                "domainName": r.get("domainName", ""),
             }
-            for r in results if r.get("gradable", True) and not r["correct"] and not r["skipped"]
+            for r in results
+            if r.get("gradable", True) and not r["correct"] and not r["skipped"]
         ],
         "skippedQuestions": [r["questionId"] for r in results if r["skipped"]],
-        "allResults": results
+        "allResults": results,
     }
 
     with open(output_path, "w", encoding="utf-8") as f:
@@ -1238,8 +1386,12 @@ def run_quiz(questions, data, open_images=False, output_path="session-results.js
         sys.exit(1)
 
     print(f"\n{BOLD}{CYAN}{'═' * 60}{RESET}")
-    print(f"{BOLD}{CYAN}  QUIZ SESSION — {data.get('examName', 'Certification Prep')}{RESET}")
-    print(f"{BOLD}{CYAN}  {total} questions | Type answer letter | 's' to skip | 'q' to quit{RESET}")
+    print(
+        f"{BOLD}{CYAN}  QUIZ SESSION — {data.get('examName', 'Certification Prep')}{RESET}"
+    )
+    print(
+        f"{BOLD}{CYAN}  {total} questions | Type answer letter | 's' to skip | 'q' to quit{RESET}"
+    )
     print(f"{BOLD}{CYAN}{'═' * 60}{RESET}")
 
     results = []
@@ -1250,8 +1402,12 @@ def run_quiz(questions, data, open_images=False, output_path="session-results.js
             prev_case_id = questions[i - 2].get("caseStudyId") if i > 1 else None
             if q.get("caseStudyId") != prev_case_id:
                 print(f"\n{BOLD}{CYAN}{'=' * 60}{RESET}")
-                print(f"{BOLD}{CYAN}  CASE STUDY: {q.get('caseStudyName', 'Case Study')}{RESET}")
-                case_context = q.get("caseStudyContext") or q.get("caseStudyContextPlaceholder")
+                print(
+                    f"{BOLD}{CYAN}  CASE STUDY: {q.get('caseStudyName', 'Case Study')}{RESET}"
+                )
+                case_context = q.get("caseStudyContext") or q.get(
+                    "caseStudyContextPlaceholder"
+                )
                 if case_context:
                     print(f"{DIM}  {case_context}{RESET}")
                 print(f"{BOLD}{CYAN}{'=' * 60}{RESET}")
@@ -1269,23 +1425,25 @@ def run_quiz(questions, data, open_images=False, output_path="session-results.js
 
         show_result(q, user_answer, skipped, open_images=open_images)
 
-        results.append({
-            "questionId": q["id"],
-            "question": q["question"],
-            "userAnswer": get_user_display(q, user_answer) if not skipped else None,
-            "correctAnswer": get_correct_display(q),
-            "correct": is_correct,
-            "gradable": has_answer_key(q),
-            "skipped": skipped,
-            "topic": q.get("topic", ""),
-            "domainName": q.get("domainName", ""),
-            "domainId": q.get("domainId", ""),
-            "difficulty": q.get("difficulty", ""),
-            "explanation": q.get("explanation", ""),
-            "questionImages": q.get("questionImages", []),
-            "answerImages": q.get("answerImages", []),
-            "sourceUrl": q.get("sourceUrl", ""),
-        })
+        results.append(
+            {
+                "questionId": q["id"],
+                "question": q["question"],
+                "userAnswer": get_user_display(q, user_answer) if not skipped else None,
+                "correctAnswer": get_correct_display(q),
+                "correct": is_correct,
+                "gradable": has_answer_key(q),
+                "skipped": skipped,
+                "topic": q.get("topic", ""),
+                "domainName": q.get("domainName", ""),
+                "domainId": q.get("domainId", ""),
+                "difficulty": q.get("difficulty", ""),
+                "explanation": q.get("explanation", ""),
+                "questionImages": q.get("questionImages", []),
+                "answerImages": q.get("answerImages", []),
+                "sourceUrl": q.get("sourceUrl", ""),
+            }
+        )
 
     elapsed = time.time() - start_time
 
@@ -1303,19 +1461,57 @@ def main():
         description="Interactive quiz runner for Microsoft certification exam prep"
     )
     parser.add_argument("questions_file", help="Path to questions.json")
-    parser.add_argument("--domain", type=str, help="Filter by domain ID (e.g., 1, 2, 3)")
-    parser.add_argument("--topic", type=str, help="Filter by topic prefix (e.g., '1.1', '2.3')")
-    parser.add_argument("--ids", type=str, help="Comma-separated question IDs (e.g., q001,q005,q010)")
-    parser.add_argument("--cross", type=str, help="Cross-topic: comma-separated domain IDs to mix (e.g., 1,2)")
-    parser.add_argument("--all", action="store_true", help="All questions (mock exam mode)")
-    parser.add_argument("--day-lock", type=int, help="Strict day lock by plan day (1-32); blocks future questions")
-    parser.add_argument("--carryover", type=int, default=3, help="Questions from previous sessions to include with --day-lock (0-3)")
-    parser.add_argument("--shuffle", action="store_true", help="Randomize question order")
+    parser.add_argument(
+        "--domain", type=str, help="Filter by domain ID (e.g., 1, 2, 3)"
+    )
+    parser.add_argument(
+        "--topic", type=str, help="Filter by topic prefix (e.g., '1.1', '2.3')"
+    )
+    parser.add_argument(
+        "--ids", type=str, help="Comma-separated question IDs (e.g., q001,q005,q010)"
+    )
+    parser.add_argument(
+        "--cross",
+        type=str,
+        help="Cross-topic: comma-separated domain IDs to mix (e.g., 1,2)",
+    )
+    parser.add_argument(
+        "--all", action="store_true", help="All questions (mock exam mode)"
+    )
+    parser.add_argument(
+        "--day-lock",
+        type=int,
+        help="Strict day lock by plan day (1-32); blocks future questions",
+    )
+    parser.add_argument(
+        "--carryover",
+        type=int,
+        default=3,
+        help="Questions from previous sessions to include with --day-lock (0-3)",
+    )
+    parser.add_argument(
+        "--shuffle", action="store_true", help="Randomize question order"
+    )
     parser.add_argument("--limit", type=int, help="Limit number of questions")
-    parser.add_argument("--output", type=str, default="session-results.json", help="Output results file path")
-    parser.add_argument("--open-images", action="store_true", help="Open image URLs in browser as questions are shown")
-    parser.add_argument("--web", action="store_true", help="Launch local web UI instead of terminal prompts")
-    parser.add_argument("--port", type=int, default=8765, help="Port for --web mode (default 8765)")
+    parser.add_argument(
+        "--output",
+        type=str,
+        default="session-results.json",
+        help="Output results file path",
+    )
+    parser.add_argument(
+        "--open-images",
+        action="store_true",
+        help="Open image URLs in browser as questions are shown",
+    )
+    parser.add_argument(
+        "--web",
+        action="store_true",
+        help="Launch local web UI instead of terminal prompts",
+    )
+    parser.add_argument(
+        "--port", type=int, default=8765, help="Port for --web mode (default 8765)"
+    )
 
     args = parser.parse_args()
 
@@ -1327,11 +1523,20 @@ def main():
     cross = args.cross.split(",") if args.cross else None
 
     if args.day_lock is not None:
-        questions = build_day_locked_questions(data, args.day_lock, carryover_count=args.carryover, questions_filepath=args.questions_file)
+        questions = build_day_locked_questions(
+            data,
+            args.day_lock,
+            carryover_count=args.carryover,
+            questions_filepath=args.questions_file,
+        )
         if not questions:
-            print(f"{RED}Day-lock selected zero questions. Check day or dataset content.{RESET}")
+            print(
+                f"{RED}Day-lock selected zero questions. Check day or dataset content.{RESET}"
+            )
             sys.exit(1)
-        print(f"{CYAN}Day-lock mode active: Day {args.day_lock} with carryover={max(0, min(args.carryover, 3))}.{RESET}")
+        print(
+            f"{CYAN}Day-lock mode active: Day {args.day_lock} with carryover={max(0, min(args.carryover, 3))}.{RESET}"
+        )
     else:
         questions = filter_questions(
             data,
@@ -1339,7 +1544,7 @@ def main():
             topic_prefix=args.topic,
             question_ids=q_ids,
             cross_domains=cross,
-            all_mode=args.all
+            all_mode=args.all,
         )
 
     questions = enrich_case_study_metadata(questions, data)
@@ -1356,7 +1561,9 @@ def main():
         try:
             from quiz_web import run_web_quiz
         except ImportError:
-            print(f"{YELLOW}--web requested but quiz_web.py was not found next to quiz_runner.py.{RESET}")
+            print(
+                f"{YELLOW}--web requested but quiz_web.py was not found next to quiz_runner.py.{RESET}"
+            )
             print(f"{YELLOW}Falling back to terminal mode for this run.{RESET}")
             run_web_quiz = None
 
@@ -1375,9 +1582,13 @@ def main():
                 },
             )
         else:
-            result_path = run_quiz(questions, data, open_images=args.open_images, output_path=args.output)
+            result_path = run_quiz(
+                questions, data, open_images=args.open_images, output_path=args.output
+            )
     else:
-        result_path = run_quiz(questions, data, open_images=args.open_images, output_path=args.output)
+        result_path = run_quiz(
+            questions, data, open_images=args.open_images, output_path=args.output
+        )
 
     if result_path:
         # Print path for agent to pick up

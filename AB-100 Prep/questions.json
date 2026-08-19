@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 80,
+	"totalQuestions": 90,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)"
 	],
@@ -1458,6 +1458,196 @@
 					"difficulty": "medium",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node"
+				},
+				{
+					"id": "q081",
+					"originalId": "DAY8-01",
+					"type": "mc",
+					"question": "A company is building an employee policy agent. Policy documents change every week, responses must reflect the latest approved version, and users should receive citations. The base model already follows instructions adequately. Which approach should the architect recommend?",
+					"options": [
+						"A. Fine-tune the model whenever a policy document changes",
+						"B. Train a new foundation model on the complete policy archive",
+						"C. Ground the agent through retrieval over the approved policy repository",
+						"D. Add more policy excerpts permanently to the system prompt"
+					],
+					"correctAnswer": "C",
+					"explanation": "Retrieval grounding is appropriate when authoritative knowledge changes frequently and must be cited. It supplies current information at run time without changing model weights. Fine-tuning is better suited to changing behavior, style, format, or task performance.",
+					"topic": "D2.2 / Foundry model customization versus RAG",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/fine-tuning-considerations",
+					"section": "standalone"
+				},
+				{
+					"id": "q082",
+					"originalId": "DAY8-02",
+					"type": "mc",
+					"question": "A claims team has optimized its prompts, but the model still produces inconsistent JSON for numerous edge cases. The team has 2,000 reviewed prompt-response examples that demonstrate the required schema and behavior. The underlying business facts are supplied separately at run time. What is the best next step?",
+					"options": [
+						"A. Fine-tune a supported model with the reviewed examples and evaluate it against a held-out test set",
+						"B. Replace the reviewed examples with a larger retrieval index",
+						"C. Add a Computer Use tool so the model can learn the output schema",
+						"D. Move every example into the system prompt for each request"
+					],
+					"correctAnswer": "A",
+					"explanation": "Fine-tuning is suitable when a high-quality task-specific dataset is available and the objective is more consistent behavior, formatting, or handling of many edge cases. Retrieval supplies knowledge but does not by itself train consistent schema behavior.",
+					"topic": "D2.2 / Fine-tuning decision boundaries",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/fine-tuning-considerations",
+					"section": "standalone"
+				},
+				{
+					"id": "q083",
+					"originalId": "DAY8-03",
+					"type": "mc",
+					"question": "A support agent can explain return policies correctly, but it must now create a return authorization in a line-of-business system that exposes a secured API. Which extension should the architect select?",
+					"options": [
+						"A. Fine-tune the model with examples of successful return authorizations",
+						"B. Add the system's API as a tool or action with appropriate authentication",
+						"C. Index historical return authorizations as a knowledge source",
+						"D. Use a deep reasoning model without adding an integration"
+					],
+					"correctAnswer": "B",
+					"explanation": "Creating a record in an external system is an action with side effects, so the agent needs an authenticated tool that invokes the API. Grounding and fine-tuning do not independently provide authority or connectivity to perform the transaction.",
+					"topic": "D2.2 / Tools versus grounding and fine-tuning",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent",
+					"section": "standalone"
+				},
+				{
+					"id": "q084",
+					"originalId": "DAY8-04",
+					"type": "mc",
+					"question": "A Copilot Studio agent must use a standards-based server that exposes several tools and resources. The available operations will evolve over time, and the agent should select the appropriate operation from the user's intent. Which design best meets the requirement?",
+					"options": [
+						"A. Connect the MCP server as an agent tool and use generative orchestration",
+						"B. Copy every MCP resource into a static prompt and use classic orchestration",
+						"C. Create one hard-coded topic for every possible natural-language request",
+						"D. Fine-tune a model on the MCP server's tool names"
+					],
+					"correctAnswer": "A",
+					"explanation": "Copilot Studio can connect to an MCP server to access dynamically advertised tools and resources. MCP requires generative orchestration so the agent can select the appropriate capability.",
+					"topic": "D2.2 / Copilot Studio MCP and generative orchestration",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent",
+					"section": "standalone"
+				},
+				{
+					"id": "q085",
+					"originalId": "DAY8-05",
+					"type": "mc",
+					"question": "An agent must enter data into a legacy desktop application. The application has no API or supported connector, and completing the process requires clicking controls and typing into visible fields. Which capability and prerequisite should the architect identify?",
+					"options": [
+						"A. Computer Use with generative orchestration enabled",
+						"B. An MCP resource with classic orchestration enabled",
+						"C. SharePoint grounding with semantic search enabled",
+						"D. Model fine-tuning with desktop screenshots as training data"
+					],
+					"correctAnswer": "A",
+					"explanation": "Computer Use is intended for web or desktop GUI automation when an API is unavailable. It interacts through visible controls using mouse and keyboard actions and requires generative orchestration.",
+					"topic": "D2.2 / Computer Use selection",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use",
+					"section": "standalone"
+				},
+				{
+					"id": "q086",
+					"originalId": "DAY8-06",
+					"type": "mc",
+					"question": "A Computer Use agent will be shared with employees whose permissions in the target application differ by role. The organization must avoid having every execution inherit the maker's access and wants execution to stop for review when potentially harmful instructions are detected. What should the architect configure?",
+					"options": [
+						"A. Maker-provided credentials and disable supervision to prevent timeouts",
+						"B. One shared administrator account stored directly in the agent instructions",
+						"C. End-user credentials and human supervision with an appropriate response time limit",
+						"D. Anonymous access combined with a SharePoint sensitivity label"
+					],
+					"correctAnswer": "C",
+					"explanation": "End-user credentials preserve each user's access boundary instead of running with the maker's permissions. Human supervision can stop potentially harmful instructions for review, with a configured response time limit.",
+					"topic": "D2.2 / Computer Use identity, security, and supervision",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use",
+					"section": "standalone"
+				},
+				{
+					"id": "q087",
+					"originalId": "DAY8-07",
+					"type": "mc",
+					"question": "An agent must compare several complex contract documents, reconcile conflicting clauses, and construct a defensible recommendation. Interactive latency is less important than analytical quality. Which model choice is most appropriate?",
+					"options": [
+						"A. A realtime audio model because it minimizes speech latency",
+						"B. A reasoning model, while allowing for additional processing time and reasoning-token usage",
+						"C. A Computer Use model because contracts are unstructured",
+						"D. A text-to-speech model with a longer system prompt"
+					],
+					"correctAnswer": "B",
+					"explanation": "Reasoning models are suited to advanced problem solving and complex document comparison. They can spend additional time and reasoning tokens processing a request, so they fit when analytical quality matters more than immediate latency.",
+					"topic": "D2.2 / Deep reasoning model selection",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/reasoning",
+					"section": "standalone"
+				},
+				{
+					"id": "q088",
+					"originalId": "DAY8-08",
+					"type": "mc",
+					"question": "A company is designing a browser-based voice assistant that must listen and respond with low latency during a live conversation. Which architecture best aligns with the Microsoft Foundry Realtime API guidance?",
+					"options": [
+						"A. Use a realtime audio model over WebRTC and provide a client integration that terminates the user's audio stream",
+						"B. Upload the completed recording to a reasoning model after each conversation",
+						"C. Connect the Realtime API directly to the user's microphone without a client integration",
+						"D. Fine-tune a text model and poll it periodically for synthesized audio"
+					],
+					"correctAnswer": "A",
+					"explanation": "The Realtime API supports low-latency speech-in, speech-out interaction. WebRTC is recommended for most client-side realtime audio scenarios, with a client integration terminating and relaying the user's audio stream.",
+					"topic": "D2.2 / Realtime voice selection and limitations",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/realtime-audio",
+					"section": "standalone"
+				},
+				{
+					"id": "q089",
+					"originalId": "DAY8-09",
+					"type": "mc",
+					"question": "A Copilot Studio maker publishes an agent and connects it to Teams and Microsoft 365 Copilot. The business now wants every employee to discover it in the Teams app store under Built for your org. What additional step is required?",
+					"options": [
+						"A. Add the publishing link to a SharePoint page",
+						"B. Fine-tune the agent before organizational distribution",
+						"C. Submit the agent for administrator approval for organizational availability",
+						"D. Assign every employee as a co-owner of the agent"
+					],
+					"correctAnswer": "C",
+					"explanation": "Publishing and connecting channels do not automatically place the agent in the organization-wide store. An agent intended for Built for your org must be submitted for administrator approval.",
+					"topic": "D2.2 / Teams and Microsoft 365 Copilot distribution",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams",
+					"section": "standalone"
+				},
+				{
+					"id": "q090",
+					"originalId": "DAY8-10",
+					"type": "mc",
+					"question": "An Agent Builder agent in Microsoft 365 Copilot is grounded in a SharePoint site containing both general procedures and restricted legal documents. The owner enables organization-wide chat access. What should the architect expect when an employee without permission to the legal documents uses the agent?",
+					"options": [
+						"A. The employee can receive content from every file because organization-wide sharing overrides SharePoint permissions",
+						"B. The employee can receive restricted content if the agent owner can access it",
+						"C. The employee can access restricted content after accepting the agent's sharing link",
+						"D. The agent continues to respect the employee's existing SharePoint permissions and sensitivity-label boundaries"
+					],
+					"correctAnswer": "D",
+					"explanation": "Sharing or making an agent discoverable does not grant access to its underlying SharePoint content. SharePoint and OneDrive knowledge sources continue to respect existing permissions and sensitivity labels.",
+					"topic": "D2.2 / SharePoint grounding and permission boundaries",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge",
+					"section": "standalone"
 				}
 			]
 		}
