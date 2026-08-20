@@ -67,8 +67,9 @@
 
 #### Day 9 (2026-08-20, Thu) — D2.3 Orchestrate Prebuilt Agents
 
-- [ ] Study: AI in D365 finance & supply chain and CE/service; Copilot for Sales & Copilot for Service config; Power Platform AI hub; knowledge sources in F&O agent chats
-- [ ] Estimated time: 1 hr
+- [x] Study: AI in D365 finance & supply chain and CE/service; Copilot for Sales & Copilot for Service config; Power Platform AI hub; knowledge sources in F&O agent chats
+- [x] Practice: 10 new Microsoft Learn-grounded questions (q091–q100; 10/10 = 100%; 1m 0.8s)
+- [x] Estimated time: 1 hr
 
 #### Day 10 (2026-08-21, Fri) — Domain 2 Quiz + Review
 

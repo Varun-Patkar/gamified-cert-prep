@@ -3,17 +3,17 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 8 / 31
-- Questions Answered: 90 / 90 (completed bank plus new daily questions)
-- Accuracy: 95.6% (86/90)
-- Current Day: Day 9 (next: 2026-08-20)
+- Sessions Completed: 9 / 31
+- Questions Answered: 100 / 100 (completed bank plus new daily questions)
+- Accuracy: 96.0% (96/100)
+- Current Day: Day 10 (next: 2026-08-21)
 
 ## Domain Confidence (self-rated 1–5)
 
 | Domain                                   | Weight | Confidence         | Notes                                                                                                                |
 | ---------------------------------------- | ------ | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)     | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing |
-| D2: Design AI-powered business solutions | 25–30% | 4 (30/30 Days 6–8) | Strong on agent types, orchestration, extensibility, MCP, Computer Use, reasoning/voice, and channel boundaries      |
+| D2: Design AI-powered business solutions | 25–30% | 4 (40/40 Days 6–9) | Strong on agent types, extensibility, prebuilt Dynamics 365 agents, ERP knowledge, AI Builder, and action boundaries |
 | D3: Deploy AI-powered business solutions | 40–45% | –                  | Highest weight — prioritize                                                                                          |
 
 ## Daily Log
@@ -110,6 +110,17 @@
 - Weak spots: None observed in this set; retain MCP's generative-orchestration requirement and the distinction between publishing, sharing, admin approval, and underlying data permissions
 - Reference: sessions/day-08-extensibility.md
 - Next action: Day 9 — D2.3 Orchestrate Prebuilt Agents
+
+### Day 9 — 2026-08-20 — D2.3 Orchestrate Prebuilt Agents
+
+- Status: Completed
+- Covered: Dynamics 365 finance and operations generative help; custom and structured ERP knowledge sources; Microsoft 365 declarative agents for ERP scenarios; Supplier Communications Agent; Collections coordinator summary; Power Apps AI capabilities in Dynamics 365; Copilot for Sales versus Copilot for Service; Power Platform AI hub and AI Builder; knowledge versus transactional authority
+- Quiz: 10 newly researched, Microsoft Learn-grounded questions — q091 through q100
+- Accuracy: 10 / 10 (100%) — perfect score
+- Time: 1m 0.8s
+- Weak spots: None observed in this set; retain the distinction between knowledge-grounded Q&A and authenticated transactional actions
+- Reference: sessions/day-09-orchestrate-prebuilt-agents.md
+- Next action: Day 10 — Domain 2 Quiz + Review
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12

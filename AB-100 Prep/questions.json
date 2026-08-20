@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 90,
+	"totalQuestions": 100,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)"
 	],
@@ -1647,6 +1647,196 @@
 					"difficulty": "hard",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge",
+					"section": "standalone"
+				},
+				{
+					"id": "q091",
+					"originalId": "DAY9-01",
+					"type": "mc",
+					"question": "Finance users need contextual in-app guidance based on Microsoft's current public documentation, plus the company's approved operating procedures in SharePoint. What should the architect recommend?",
+					"options": [
+						"A. Replace the finance and operations Copilot sidecar with a fine-tuned model",
+						"B. Use generative help and guidance, then extend its knowledge in Copilot Studio with the approved SharePoint source",
+						"C. Copy all procedures into each user's personal prompt library",
+						"D. Use Supplier Communications Agent because it indexes all finance documentation"
+					],
+					"correctAnswer": "B",
+					"explanation": "Generative help and guidance provides the contextual finance and operations sidecar grounded in Microsoft public documentation. Administrators can extend it in Copilot Studio with files or sources such as SharePoint.",
+					"topic": "D2.3 / Finance and operations generative help knowledge",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/copilot/copilot-generative-help",
+					"section": "standalone"
+				},
+				{
+					"id": "q092",
+					"originalId": "DAY9-02",
+					"type": "mc",
+					"question": "A custom Copilot Studio agent must answer questions about live structured purchase-order data in finance and operations apps while respecting the data available to the user. Which design is appropriate?",
+					"options": [
+						"A. Add finance and operations virtual entities as a knowledge source",
+						"B. Export monthly screenshots and add them as image knowledge",
+						"C. Fine-tune the model on old purchase orders",
+						"D. Enable unrestricted general model knowledge"
+					],
+					"correctAnswer": "A",
+					"explanation": "Finance and operations virtual entities can expose structured ERP data as a Copilot Studio knowledge source. A native Dataverse table populated through a synchronization mechanism such as dual-write is another supported pattern.",
+					"topic": "D2.3 / Structured finance and operations knowledge",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/chat-with-fno-data",
+					"section": "standalone"
+				},
+				{
+					"id": "q093",
+					"originalId": "DAY9-03",
+					"type": "mc",
+					"question": "Employees want to ask questions about approved ERP data directly from Microsoft 365 Copilot rather than opening Dynamics 365. What should the architect propose?",
+					"options": [
+						"A. Create a declarative agent with the finance and operations knowledge and required actions, then publish it to Microsoft 365 Copilot",
+						"B. Grant Microsoft 365 Copilot direct database-owner access",
+						"C. Add ERP records to every employee's mailbox",
+						"D. Use only the default public-documentation grounding in the finance sidecar"
+					],
+					"correctAnswer": "A",
+					"explanation": "Microsoft Learn recommends a declarative agent when extending Microsoft 365 Copilot with finance and operations knowledge. The agent packages the approved knowledge and actions and is then published to Microsoft 365 Copilot.",
+					"topic": "D2.3 / Microsoft 365 agent for ERP scenarios",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/chat-with-fno-data",
+					"section": "standalone"
+				},
+				{
+					"id": "q094",
+					"originalId": "DAY9-04",
+					"type": "mc",
+					"question": "A procurement team spends significant time following up with vendors, updating purchase orders, and managing change requests according to user-defined rules. Which prebuilt capability is the closest fit?",
+					"options": [
+						"A. Collections coordinator summary",
+						"B. Supplier Communications Agent in Dynamics 365 Supply Chain Management",
+						"C. Microsoft 365 Agent Builder coaching agent",
+						"D. Dynamics 365 Customer Service case summary"
+					],
+					"correctAnswer": "B",
+					"explanation": "Supplier Communications Agent targets repetitive procure-to-pay collaboration, including vendor follow-up, purchase-order updates, and change-request handling based on configured rules.",
+					"topic": "D2.3 / Supply Chain prebuilt agents",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/supply-chain/procurement/supplier-com-agent-setup",
+					"section": "standalone"
+				},
+				{
+					"id": "q095",
+					"originalId": "DAY9-05",
+					"type": "mc",
+					"question": "A collections manager wants AI-generated customer context in the Collections coordinator workspace and assistance drafting reminder letters. Which Dynamics 365 capability should be evaluated first?",
+					"options": [
+						"A. Collections coordinator summary in Dynamics 365 Finance",
+						"B. Supplier Communications Agent",
+						"C. Computer Use in Copilot Studio",
+						"D. Dynamics 365 Sales relationship intelligence"
+					],
+					"correctAnswer": "A",
+					"explanation": "Collections coordinator summary provides AI-generated summary text in the Collections coordinator workspace and can generate reminder letters containing AI-generated text.",
+					"topic": "D2.3 / Dynamics 365 Finance AI features",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/finance/accounts-receivable/collectionscoordinatorsummary",
+					"section": "standalone"
+				},
+				{
+					"id": "q096",
+					"originalId": "DAY9-06",
+					"type": "mc",
+					"question": "An architect needs the same model-driven AI capability, such as record summaries, across Dynamics 365 Sales and Customer Service. Why should Power Apps capabilities be considered?",
+					"options": [
+						"A. Sales and Customer Service are model-driven apps built on Power Apps and can inherit supported Power Apps AI capabilities",
+						"B. Power Apps automatically replaces all Dynamics 365 security roles",
+						"C. Power Apps converts every CRM record into public web knowledge",
+						"D. Power Apps is required only for finance and operations batch jobs"
+					],
+					"correctAnswer": "A",
+					"explanation": "Dynamics 365 Sales and Customer Service are model-driven Power Apps. Supported Power Apps capabilities such as record summaries, form-fill assistance, data discovery, and visualization can therefore surface in those apps.",
+					"topic": "D2.3 / Power Apps AI in Dynamics 365 customer apps",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/copilot/ai-get-started",
+					"section": "standalone"
+				},
+				{
+					"id": "q097",
+					"originalId": "DAY9-07",
+					"type": "mc",
+					"question": "A seller needs CRM-aware assistance in Outlook and Teams, while a service representative needs case and knowledge assistance for resolving customer issues. What is the correct product alignment?",
+					"options": [
+						"A. Microsoft 365 Copilot for Sales for the seller, and Microsoft 365 Copilot for Service for the service representative",
+						"B. Copilot for Service for the seller, and Supplier Communications Agent for the service representative",
+						"C. Collections coordinator summary for both users",
+						"D. Power BI Copilot for the seller, and Microsoft 365 Agent Builder for all case management"
+					],
+					"correctAnswer": "A",
+					"explanation": "Copilot for Sales connects the seller's Microsoft 365 workflow with CRM context. Copilot for Service is aimed at service representatives and brings CRM and knowledge assistance into their flow of work.",
+					"topic": "D2.3 / Copilot for Sales and Copilot for Service selection",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/copilot/ai-get-started",
+					"section": "standalone"
+				},
+				{
+					"id": "q098",
+					"originalId": "DAY9-08",
+					"type": "mc",
+					"question": "A maker wants to add document processing, prediction, and a bounded generative prompt to a Power Platform solution without building and hosting separate custom AI services. Which capability family should the architect propose?",
+					"options": [
+						"A. AI Builder and the Power Platform AI capabilities surfaced through the AI hub",
+						"B. Dynamics 365 Finance collections summary only",
+						"C. Microsoft 365 Copilot public web grounding only",
+						"D. A custom foundation model for every task"
+					],
+					"correctAnswer": "A",
+					"explanation": "Power Platform AI capabilities and AI Builder provide low-code access to prebuilt or custom models and prompts that can be composed into Power Apps and Power Automate solutions.",
+					"topic": "D2.3 / Power Platform AI hub and AI Builder",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-apps/copilot-landing-page",
+					"section": "standalone"
+				},
+				{
+					"id": "q099",
+					"originalId": "DAY9-09",
+					"type": "mc",
+					"question": "A finance agent can answer questions about purchase orders from a Dataverse knowledge source. The business now wants it to approve and update purchase orders. What additional design is required?",
+					"options": [
+						"A. Add authenticated actions or tools with authorization, validation, and approval controls",
+						"B. Increase the number of indexed purchase orders",
+						"C. Enable general model knowledge",
+						"D. Fine-tune the model on approval emails"
+					],
+					"correctAnswer": "A",
+					"explanation": "Knowledge sources support retrieval and Q&A; they do not grant transactional authority. Updates require authenticated actions or tools plus deterministic authorization, validation, and approval controls.",
+					"topic": "D2.3 / Knowledge versus transactional actions",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/chat-with-fno-data",
+					"section": "standalone"
+				},
+				{
+					"id": "q100",
+					"originalId": "DAY9-10",
+					"type": "mc",
+					"question": "An administrator enables custom knowledge and optional general-question answering for finance and operations generative help. In what order does Copilot use these sources?",
+					"options": [
+						"A. It uses general model and web content first, then checks custom knowledge",
+						"B. It uses custom knowledge first and can use general model, Bing web, and other enabled sources after custom knowledge is exhausted",
+						"C. It randomly chooses one source for every request",
+						"D. Enabling general questions permanently disables public documentation grounding"
+					],
+					"correctAnswer": "B",
+					"explanation": "Microsoft Learn states that optional general content is used after Copilot exhausts the configured custom knowledge sources. General content can include model knowledge, Bing-identified web content, and other sources.",
+					"topic": "D2.3 / Finance generative-help source precedence",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/copilot/copilot-generative-help",
 					"section": "standalone"
 				}
 			]
