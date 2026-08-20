@@ -1,68 +1,26 @@
 {
-  "timestamp": "2026-08-20T08:40:51.067147",
+  "timestamp": "2026-08-20T21:15:15.875683",
   "examCode": "AB-100",
   "examName": "Agentic AI Business Solutions Architect",
   "summary": {
     "totalQuestions": 10,
     "gradedQuestions": 10,
-    "correct": 10,
-    "wrong": 0,
+    "correct": 9,
+    "wrong": 1,
     "skipped": 0,
     "ungraded": 0,
-    "accuracy": 100.0,
-    "timeSeconds": 60.8
+    "accuracy": 90.0,
+    "timeSeconds": 43.7
   },
   "domainBreakdown": {
     "Agentic AI Business Solutions Architecture (Practice Quiz)": {
       "total": 10,
-      "correct": 10,
-      "wrong": 0,
+      "correct": 9,
+      "wrong": 1,
       "skipped": 0
     }
   },
   "topicBreakdown": {
-    "D2.3 / Finance and operations generative help knowledge": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D2.3 / Structured finance and operations knowledge": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D2.3 / Microsoft 365 agent for ERP scenarios": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D2.3 / Supply Chain prebuilt agents": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D2.3 / Dynamics 365 Finance AI features": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D2.3 / Power Apps AI in Dynamics 365 customer apps": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D2.3 / Copilot for Sales and Copilot for Service selection": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
     "D2.3 / Power Platform AI hub and AI Builder": {
       "total": 1,
       "correct": 1,
@@ -80,130 +38,66 @@
       "correct": 1,
       "wrong": 0,
       "skipped": 0
+    },
+    "D2.1 / Autonomous agents and approval boundaries": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D2.1 / Generative orchestration and capability contracts": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D2.1 / Generative orchestration input limitations": {
+      "total": 1,
+      "correct": 0,
+      "wrong": 1,
+      "skipped": 0
+    },
+    "D2.1 / Agent flows and deterministic control": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D2.1 / Prompt action validation and safety": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D2.2 / Copilot Studio MCP and generative orchestration": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D2.2 / Computer Use identity, security, and supervision": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
     }
   },
-  "wrongQuestions": [],
+  "wrongQuestions": [
+    {
+      "questionId": "q076",
+      "question": "A generatively orchestrated topic requires a value that must match a custom regex entity for an internal asset tag. The maker tries to define that custom entity directly as the topic input parameter. What should the architect recommend?",
+      "userAnswer": "A",
+      "correctAnswer": "B",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions",
+      "explanation": "Generative topic and tool input parameters don't directly support custom closed-list or regex entities. The documented approach is to collect the value with a Question node in a topic.",
+      "topic": "D2.1 / Generative orchestration input limitations",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)"
+    }
+  ],
   "skippedQuestions": [],
   "allResults": [
-    {
-      "questionId": "q091",
-      "question": "Finance users need contextual in-app guidance based on Microsoft's current public documentation, plus the company's approved operating procedures in SharePoint. What should the architect recommend?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.3 / Finance and operations generative help knowledge",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Generative help and guidance provides the contextual finance and operations sidecar grounded in Microsoft public documentation. Administrators can extend it in Copilot Studio with files or sources such as SharePoint.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/copilot/copilot-generative-help"
-    },
-    {
-      "questionId": "q092",
-      "question": "A custom Copilot Studio agent must answer questions about live structured purchase-order data in finance and operations apps while respecting the data available to the user. Which design is appropriate?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.3 / Structured finance and operations knowledge",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Finance and operations virtual entities can expose structured ERP data as a Copilot Studio knowledge source. A native Dataverse table populated through a synchronization mechanism such as dual-write is another supported pattern.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/chat-with-fno-data"
-    },
-    {
-      "questionId": "q093",
-      "question": "Employees want to ask questions about approved ERP data directly from Microsoft 365 Copilot rather than opening Dynamics 365. What should the architect propose?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.3 / Microsoft 365 agent for ERP scenarios",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Microsoft Learn recommends a declarative agent when extending Microsoft 365 Copilot with finance and operations knowledge. The agent packages the approved knowledge and actions and is then published to Microsoft 365 Copilot.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/chat-with-fno-data"
-    },
-    {
-      "questionId": "q094",
-      "question": "A procurement team spends significant time following up with vendors, updating purchase orders, and managing change requests according to user-defined rules. Which prebuilt capability is the closest fit?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.3 / Supply Chain prebuilt agents",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "easy",
-      "explanation": "Supplier Communications Agent targets repetitive procure-to-pay collaboration, including vendor follow-up, purchase-order updates, and change-request handling based on configured rules.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/supply-chain/procurement/supplier-com-agent-setup"
-    },
-    {
-      "questionId": "q095",
-      "question": "A collections manager wants AI-generated customer context in the Collections coordinator workspace and assistance drafting reminder letters. Which Dynamics 365 capability should be evaluated first?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.3 / Dynamics 365 Finance AI features",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "easy",
-      "explanation": "Collections coordinator summary provides AI-generated summary text in the Collections coordinator workspace and can generate reminder letters containing AI-generated text.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/finance/accounts-receivable/collectionscoordinatorsummary"
-    },
-    {
-      "questionId": "q096",
-      "question": "An architect needs the same model-driven AI capability, such as record summaries, across Dynamics 365 Sales and Customer Service. Why should Power Apps capabilities be considered?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.3 / Power Apps AI in Dynamics 365 customer apps",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Dynamics 365 Sales and Customer Service are model-driven Power Apps. Supported Power Apps capabilities such as record summaries, form-fill assistance, data discovery, and visualization can therefore surface in those apps.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/copilot/ai-get-started"
-    },
-    {
-      "questionId": "q097",
-      "question": "A seller needs CRM-aware assistance in Outlook and Teams, while a service representative needs case and knowledge assistance for resolving customer issues. What is the correct product alignment?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D2.3 / Copilot for Sales and Copilot for Service selection",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "easy",
-      "explanation": "Copilot for Sales connects the seller's Microsoft 365 workflow with CRM context. Copilot for Service is aimed at service representatives and brings CRM and knowledge assistance into their flow of work.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/copilot/ai-get-started"
-    },
     {
       "questionId": "q098",
       "question": "A maker wants to add document processing, prediction, and a bounded generative prompt to a Power Platform solution without building and hosting separate custom AI services. Which capability family should the architect propose?",
@@ -254,6 +148,125 @@
       "questionImages": [],
       "answerImages": [],
       "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/copilot/copilot-generative-help"
+    },
+    {
+      "questionId": "q070",
+      "question": "A new high-priority Customer Service case should automatically start triage when its Dataverse record is created. The agent may collect context and recommend an escalation, but changing a customer's contractual service level requires manager approval. Which design is best?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / Autonomous agents and approval boundaries",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "A record-created event can start autonomous work without a user message, while consequential changes should remain behind deterministic controls or human approval.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-orchestration"
+    },
+    {
+      "questionId": "q074",
+      "question": "An employee asks, 'Find my leave balance, explain the carryover policy, and draft a message to my manager.' The solution has a balance tool, an approved policy knowledge source, and a drafting prompt. Which design best supports the request?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / Generative orchestration and capability contracts",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Generative orchestration can combine topics, tools, knowledge, and other capabilities for a multi-intent request. Clear descriptions and parameter contracts help the planner select and sequence the correct capabilities.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
+    },
+    {
+      "questionId": "q076",
+      "question": "A generatively orchestrated topic requires a value that must match a custom regex entity for an internal asset tag. The maker tries to define that custom entity directly as the topic input parameter. What should the architect recommend?",
+      "userAnswer": "A",
+      "correctAnswer": "B",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / Generative orchestration input limitations",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "Generative topic and tool input parameters don't directly support custom closed-list or regex entities. The documented approach is to collect the value with a Question node in a topic.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
+    },
+    {
+      "questionId": "q077",
+      "question": "A refund process must check eligibility, branch on amount, retry a transient ERP call, obtain manager approval above a threshold, and then update the ERP. A model may summarize the case but must not decide the threshold. Where should the core process be implemented?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / Agent flows and deterministic control",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "Agent flows are the appropriate boundary for deterministic process logic, connectors, retries, approvals, and side effects. A prompt can assist with semantic transformation but should not own consequential business rules.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-overview"
+    },
+    {
+      "questionId": "q080",
+      "question": "A custom prompt classifies incoming complaints and returns valid JSON during testing. The product owner argues that temperature 0 and valid JSON make further controls unnecessary. What should the architect recommend?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / Prompt action validation and safety",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Prompt output remains probabilistic even with low temperature and structured formatting. Validate the output contract, test edge cases, define an insufficient-information path, and keep human or deterministic controls around consequential actions.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node"
+    },
+    {
+      "questionId": "q084",
+      "question": "A Copilot Studio agent must use a standards-based server that exposes several tools and resources. The available operations will evolve over time, and the agent should select the appropriate operation from the user's intent. Which design best meets the requirement?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / Copilot Studio MCP and generative orchestration",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Copilot Studio can connect to an MCP server to access dynamically advertised tools and resources. MCP requires generative orchestration so the agent can select the appropriate capability.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent"
+    },
+    {
+      "questionId": "q086",
+      "question": "A Computer Use agent will be shared with employees whose permissions in the target application differ by role. The organization must avoid having every execution inherit the maker's access and wants execution to stop for review when potentially harmful instructions are detected. What should the architect configure?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / Computer Use identity, security, and supervision",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "End-user credentials preserve each user's access boundary instead of running with the maker's permissions. Human supervision can stop potentially harmful instructions for review, with a configured response time limit.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use"
     }
   ]
 }

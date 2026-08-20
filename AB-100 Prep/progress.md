@@ -3,17 +3,17 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 9 / 31
-- Questions Answered: 100 / 100 (completed bank plus new daily questions)
-- Accuracy: 96.0% (96/100)
-- Current Day: Day 10 (next: 2026-08-21)
+- Sessions Completed: 10 / 31
+- Questions Answered: 110 / 100 (completed bank plus new daily and review questions)
+- Accuracy: 95.5% (105/110)
+- Current Day: Day 11 (next: 2026-08-22)
 
 ## Domain Confidence (self-rated 1–5)
 
 | Domain                                   | Weight | Confidence         | Notes                                                                                                                |
 | ---------------------------------------- | ------ | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)     | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing |
-| D2: Design AI-powered business solutions | 25–30% | 4 (40/40 Days 6–9) | Strong on agent types, extensibility, prebuilt Dynamics 365 agents, ERP knowledge, AI Builder, and action boundaries |
+| D2: Design AI-powered business solutions | 25–30% | 4 (49/50 Days 6–10) | Strong overall; review custom regex and closed-list entity collection for generative topic inputs                         |
 | D3: Deploy AI-powered business solutions | 40–45% | –                  | Highest weight — prioritize                                                                                          |
 
 ## Daily Log
@@ -121,6 +121,19 @@
 - Weak spots: None observed in this set; retain the distinction between knowledge-grounded Q&A and authenticated transactional actions
 - Reference: sessions/day-09-orchestrate-prebuilt-agents.md
 - Next action: Day 10 — Domain 2 Quiz + Review
+
+### Day 10 — 2026-08-20 — Domain 2 Quiz + Review
+
+- Status: Completed
+- Covered: Domain 2 review of autonomous-agent approval boundaries, generative orchestration and capability contracts, agent flows, prompt validation, MCP, Computer Use, source permissions, finance knowledge precedence, and transactional authority
+- Quiz: 10 assigned Domain 2 review questions — q070, q074, q076, q077, q080, q084, q086, q090, q099, q100
+- Accuracy: 9 / 10 (90%)
+- Time: 43.7s
+- Missed question: q076 (answered A; correct B)
+- Weak spot: Generative topic and tool inputs do not directly support custom regex or closed-list entities; collect and validate the value with a Question node in the topic
+- Skipped/ungraded: 0 / 0
+- Reference: sessions/day-10-domain2-review.md
+- Next action: Day 11 — D3.1 Monitor & Tune
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12

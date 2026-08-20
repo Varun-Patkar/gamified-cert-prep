@@ -73,8 +73,8 @@
 
 #### Day 10 (2026-08-21, Fri) — Domain 2 Quiz + Review
 
-- [ ] Quiz: Domain 2; review misses
-- [ ] Estimated time: 1 hr
+- [x] Quiz: Domain 2; review misses (9/10 = 90%; q076 reviewed; 43.7s)
+- [x] Estimated time: 1 hr
 
 #### Day 11 (2026-08-22, Sat) — D3.1 Monitor & Tune
 
