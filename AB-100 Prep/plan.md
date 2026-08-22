@@ -78,9 +78,9 @@
 
 #### Day 11 (2026-08-22, Sat) — D3.1 Monitor & Tune
 
-- [ ] Study: monitoring tools/process; backlog & user feedback analysis; AI-based tuning; agent performance metrics; telemetry interpretation
-- [ ] Practice: 10 Domain 3 questions
-- [ ] Estimated time: 2 hrs
+- [x] Study: monitoring tools/process; backlog & user feedback analysis; AI-based tuning; agent performance metrics; telemetry interpretation
+- [x] Practice: 10 Domain 3 questions (q101–q110; 10/10 = 100%; 47.2s)
+- [x] Estimated time: 2 hrs
 
 #### Day 12 (2026-08-23, Sun) — D3.2 Testing
 

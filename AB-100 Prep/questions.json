@@ -1,11 +1,17 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 100,
+	"totalQuestions": 110,
 	"sources": [
-		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)"
+		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)",
+		"Microsoft Learn: Copilot Studio analytics overview and conversational-agent effectiveness",
+		"Microsoft Learn: Copilot Studio user questions, sessions, feedback, and themes analytics",
+		"Microsoft Learn: Copilot Studio autonomous-agent analytics",
+		"Microsoft Learn: Copilot Studio agent-level telemetry with Application Insights",
+		"Microsoft Learn: Microsoft Foundry observability and evaluation cluster analysis",
+		"Microsoft Learn: Microsoft Foundry Prompt Optimizer"
 	],
-	"note": "Questions captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). No official domain mapping is available for this practice set, so all questions are grouped under a single practice domain.",
+	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q110 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). No official domain mapping is available for the original practice set, so all questions remain grouped under a single practice domain.",
 	"caseStudies": [
 		{
 			"id": "chg",
@@ -1837,6 +1843,196 @@
 					"difficulty": "hard",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/copilot/copilot-generative-help",
+					"section": "standalone"
+				},
+				{
+					"id": "q101",
+					"originalId": "DAY11-01",
+					"type": "mc",
+					"question": "A customer-service agent is entering production. The sponsor wants a single generic dashboard, but the architect must establish a monitoring process that can show both user experience and business value. What should the architect recommend first?",
+					"options": [
+						"A. Define business-specific custom metrics and review them alongside conversation outcomes, answer quality, usage, and savings over an agreed baseline and cadence",
+						"B. Track only total conversations because higher volume proves that the agent is effective",
+						"C. Export every transcript and use manual reading as the sole production-monitoring process",
+						"D. Monitor token consumption only because it combines quality, adoption, and business outcomes into one measure"
+					],
+					"correctAnswer": "A",
+					"explanation": "Copilot Studio separates business-specific custom metrics from built-in views of effectiveness, use, and savings. A defensible monitoring process defines the outcomes that matter, establishes a baseline and review cadence, and then interprets experience, operational, and value signals together. Conversation volume or token use alone can rise while resolution quality or business outcomes deteriorate, and transcript review alone does not provide a scalable trend view.",
+					"topic": "D3.1 / Monitoring process and KPI selection",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-effectiveness",
+					"section": "standalone"
+				},
+				{
+					"id": "q102",
+					"originalId": "DAY11-02",
+					"type": "mc",
+					"question": "After an intensive maker test session, Application Insights shows a large spike in Copilot Studio events, but the built-in Analytics page does not show a matching increase. The team wants a production-only Kusto query. What should the architect advise?",
+					"options": [
+						"A. Treat the mismatch as data loss and disable Application Insights",
+						"B. Filter Application Insights events where the designMode custom dimension is False",
+						"C. Filter only on channelId because test and production events never use the same channel",
+						"D. Add test-panel sessions manually to the built-in Analytics page"
+					],
+					"correctAnswer": "B",
+					"explanation": "The built-in Copilot Studio Analytics page excludes activity performed in the test panel, while connected Application Insights telemetry includes test conversations. Copilot Studio records the designMode custom dimension on events, so a production-only Kusto query should filter for designMode equal to False. Channel alone is not a reliable substitute for this explicit test-mode signal.",
+					"topic": "D3.1 / Telemetry interpretation and test-data filtering",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry",
+					"section": "standalone"
+				},
+				{
+					"id": "q103",
+					"originalId": "DAY11-03",
+					"type": "mc",
+					"question": "A support agent's aggregate CSAT is stable, but a growing backlog contains vague reports that some answers are unhelpful. Which investigation best converts the user feedback into an actionable tuning backlog?",
+					"options": [
+						"A. Increase the model temperature to make every response more varied",
+						"B. Give analysts the Bot Transcript Viewer role, drill into negative reactions and comments with their questions, responses, outcomes, and knowledge sources, then group recurring root causes",
+						"C. Ignore comments until the average CSAT falls below a fixed threshold",
+						"D. Grant all makers environment-admin access so they can read feedback"
+					],
+					"correctAnswer": "B",
+					"explanation": "Aggregate satisfaction can hide concentrated failures. Copilot Studio drill-down views connect reactions and comments to the underlying questions, responses, sessions, outcomes, and knowledge sources, allowing recurring issues to become prioritized backlog items. Viewing this detail requires the Bot Transcript Viewer security role; least-privilege transcript access is preferable to broad environment administration.",
+					"topic": "D3.1 / Backlog and user-feedback analysis",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-questions-sessions",
+					"section": "standalone"
+				},
+				{
+					"id": "q104",
+					"originalId": "DAY11-04",
+					"type": "mc",
+					"question": "Thousands of unclassified questions trigger generative answers each week, and the product owner cannot identify which knowledge gaps deserve attention first. Which capability is the best fit, with what architectural caveat?",
+					"options": [
+						"A. Use Themes to cluster related questions and compare theme-level performance, but treat the feature as preview and validate its suggestions before production decisions",
+						"B. Use total session count to infer the subject of every unanswered question",
+						"C. Fine-tune the base model on all transcripts without reviewing privacy or failure categories",
+						"D. Create one topic per transcript because Themes analyzes only manually classified questions"
+					],
+					"correctAnswer": "A",
+					"explanation": "Copilot Studio Themes uses AI to group related unclassified questions that triggered generative answers, making frequent intents and weak-performing areas easier to identify and prioritize. Microsoft documents the capability as preview, with weekly theme suggestions and daily classification of new questions, so an architect should use it as decision support and validate the resulting categories rather than treat them as an unquestionable production control.",
+					"topic": "D3.1 / AI-based issue identification and backlog prioritization",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-themes",
+					"section": "standalone"
+				},
+				{
+					"id": "q105",
+					"originalId": "DAY11-05",
+					"type": "mc",
+					"question": "A conversational agent has a high generated-answer rate, yet Copilot Studio labels a significant sampled share as poor quality because responses are insufficiently grounded. What is the most appropriate tuning action?",
+					"options": [
+						"A. Declare success because answer rate is the only relevant metric",
+						"B. Drill into the affected questions and knowledge sources, improve grounding coverage or instructions, and then reassess answer quality",
+						"C. Remove all knowledge sources so the model can answer from general knowledge",
+						"D. Increase traffic until the poor-quality percentage is diluted"
+					],
+					"correctAnswer": "B",
+					"explanation": "Answer rate measures whether the agent answered, not whether the answer was complete, relevant, or grounded. Copilot Studio uses AI on sampled answers to assign quality labels and reasons, and its question drill-down shows the response and supporting knowledge sources. The architect should diagnose the poor-groundedness cohort, tune the relevant knowledge or instructions, and compare the quality metric again instead of optimizing for response volume.",
+					"topic": "D3.1 / Answer-quality metrics and grounding tuning",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-effectiveness",
+					"section": "standalone"
+				},
+				{
+					"id": "q106",
+					"originalId": "DAY11-06",
+					"type": "mc",
+					"question": "An autonomous order agent has acceptable overall usage, but workflow delays and failed runs have increased. The failures appear after one event type. Which Copilot Studio analysis should the architect perform first?",
+					"options": [
+						"A. Review run outcomes and session durations, then use Trigger use details to identify the event producing failed runs and tune its trigger or agent instructions",
+						"B. Review conversational CSAT only because autonomous sessions use the same success model as surveys",
+						"C. Increase every trigger's frequency so successful runs outnumber failures",
+						"D. Replace all event triggers with manual user conversations before investigating"
+					],
+					"correctAnswer": "A",
+					"explanation": "For agents with event triggers, Copilot Studio provides run outcomes, duration breakdowns, and Trigger use details, including the events associated with the most failed runs. Long sessions can delay downstream workflows, and Microsoft recommends more specific trigger- or agent-level instructions as a possible speed improvement. Conversational survey metrics do not isolate an autonomous trigger failure.",
+					"topic": "D3.1 / Autonomous-agent run and trigger metrics",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-health",
+					"section": "standalone"
+				},
+				{
+					"id": "q107",
+					"originalId": "DAY11-07",
+					"type": "mc",
+					"question": "A returns agent answers policy questions well, but completion rates drop whenever it calls the refund action. Tool use analytics show frequent calls and a falling success percentage for that action. What should the architect prioritize?",
+					"options": [
+						"A. Tune the refund tool integration, inputs, authentication, and error handling before changing the language model",
+						"B. Remove the refund action and tell users that high question-answering quality is sufficient",
+						"C. Fine-tune the model on successful refunds because tool failures always originate in model weights",
+						"D. Measure only how often the tool is called, not whether calls succeed"
+					],
+					"correctAnswer": "A",
+					"explanation": "Tool use analytics distinguish tool demand from tool success. Frequent invocation indicates the action is relevant, while a declining success percentage points to the action path rather than general answer generation. The tuning backlog should first address the tool contract and operational dependencies, then verify that tool success and end-to-end completion improve.",
+					"topic": "D3.1 / Tool performance metrics and root-cause tuning",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-health",
+					"section": "standalone"
+				},
+				{
+					"id": "q108",
+					"originalId": "DAY11-08",
+					"type": "mc",
+					"question": "A Microsoft Foundry multi-agent solution shows rising end-to-end latency and intermittent errors, while token consumption remains stable. The team must identify which agent decision, model call, tool invocation, or dependency is responsible. Which observability capability should it use?",
+					"options": [
+						"A. Distributed tracing integrated with Application Insights",
+						"B. Model benchmarking on public datasets only",
+						"C. A monthly count of active users",
+						"D. Prompt optimization without execution evidence"
+					],
+					"correctAnswer": "A",
+					"explanation": "Foundry distributed tracing captures the execution flow across LLM calls, tool invocations, agent decisions, and inter-service dependencies. That span-level evidence is designed to reveal bottlenecks and faults in complex multi-step behavior. Aggregate dashboards expose the latency and error trend, but stable token use does not identify the failing execution step, and prompt changes should not precede root-cause evidence.",
+					"topic": "D3.1 / Foundry tracing and telemetry interpretation",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/observability",
+					"section": "standalone"
+				},
+				{
+					"id": "q109",
+					"originalId": "DAY11-09",
+					"type": "mc",
+					"question": "A production Foundry agent still meets latency and availability targets, but reviewers suspect groundedness is drifting as user traffic changes. Which monitoring design best detects the issue?",
+					"options": [
+						"A. Rely on operational uptime because quality drift necessarily causes an outage",
+						"B. Combine sampled continuous quality evaluation of production traffic with scheduled evaluation on representative datasets and alerts on quality thresholds",
+						"C. Run a base-model benchmark once and reuse that result for the life of the solution",
+						"D. Wait for users to report harmful or ungrounded outputs before collecting evaluation signals"
+					],
+					"correctAnswer": "B",
+					"explanation": "Operational health and response quality are different dimensions. Foundry post-production observability includes sampled continuous evaluation, scheduled evaluation with test datasets to detect drift, and Azure Monitor alerts when quality or safety thresholds fail. Combining live and controlled signals catches changes that latency and availability dashboards alone cannot reveal.",
+					"topic": "D3.1 / Continuous evaluation and production quality drift",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/observability",
+					"section": "standalone"
+				},
+				{
+					"id": "q110",
+					"originalId": "DAY11-10",
+					"type": "mc",
+					"question": "Cluster analysis groups repeated evaluation failures around ambiguous fallback instructions. A maker uses Microsoft Foundry Prompt Optimizer and receives revised instructions with paragraph-level reasoning. What should happen before production deployment?",
+					"options": [
+						"A. Accept the optimized prompt automatically because LLM-generated reasoning guarantees improvement",
+						"B. Review the reasoning, apply targeted refinements, test the agent, and run a full evaluation on the organization's dataset to verify improvement",
+						"C. Skip evaluation and monitor only token consumption after deployment",
+						"D. Use Prompt Optimizer to rewrite tool definitions and knowledge sources as part of the same operation"
+					],
+					"correctAnswer": "B",
+					"explanation": "Cluster analysis identifies recurring failure patterns and recommended improvement areas; it does not prove that a proposed fix works. Prompt Optimizer is a preview tool for text instructions, supplies reasoning that still requires human review, and does not optimize tool definitions or knowledge sources. Microsoft recommends testing after optimization and running a full evaluation with your own dataset before relying on the revised prompt.",
+					"topic": "D3.1 / AI-based tuning and evaluation feedback loop",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/prompt-optimizer",
 					"section": "standalone"
 				}
 			]
