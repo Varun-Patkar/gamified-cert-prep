@@ -84,8 +84,9 @@
 
 #### Day 12 (2026-08-23, Sun) — D3.2 Testing
 
-- [ ] Study: agent testing process/metrics; custom model validation criteria; Copilot prompt best practices; end-to-end multi-app test scenarios; test cases with Copilot
-- [ ] Estimated time: 2 hrs
+- [x] Study: agent testing process/metrics; custom model validation criteria; Copilot prompt best practices; end-to-end multi-app test scenarios; test cases with Copilot
+- [x] Practice: 10 new Domain 3 questions (q111–q120) plus 3 D3.1 carryover questions (13/13 = 100%; 56.2s)
+- [x] Estimated time: 2 hrs
 
 ### Week 3 — Domain 3 (Deploy) heavy
 

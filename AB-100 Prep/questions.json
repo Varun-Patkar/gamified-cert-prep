@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 110,
+	"totalQuestions": 120,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)",
 		"Microsoft Learn: Copilot Studio analytics overview and conversational-agent effectiveness",
@@ -9,9 +9,14 @@
 		"Microsoft Learn: Copilot Studio autonomous-agent analytics",
 		"Microsoft Learn: Copilot Studio agent-level telemetry with Application Insights",
 		"Microsoft Learn: Microsoft Foundry observability and evaluation cluster analysis",
-		"Microsoft Learn: Microsoft Foundry Prompt Optimizer"
+		"Microsoft Learn: Microsoft Foundry Prompt Optimizer",
+		"Microsoft Learn: Manage testing AI-powered business solutions",
+		"Microsoft Learn: Copilot Studio agent evaluation and evaluation methods",
+		"Microsoft Learn: Copilot Studio prompt batch testing",
+		"Microsoft Learn: AI Builder prediction model performance",
+		"Microsoft Learn: Dynamics 365 testing strategy and Playwright automation"
 	],
-	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q110 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). No official domain mapping is available for the original practice set, so all questions remain grouped under a single practice domain.",
+	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q120 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120 are mapped to Domain 3, Deploy AI-powered business solutions.",
 	"caseStudies": [
 		{
 			"id": "chg",
@@ -2033,6 +2038,202 @@
 					"difficulty": "hard",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/prompt-optimizer",
+					"section": "standalone"
+				}
+			]
+		},
+		{
+			"domainId": "3",
+			"domainName": "Deploy AI-powered business solutions",
+			"questions": [
+				{
+					"id": "q111",
+					"originalId": "DAY12-01",
+					"type": "mc",
+					"question": "A company is preparing a Copilot Studio service agent for production. The sponsor asks the architect to begin by running many prompts and decide later what success means. What should the architect recommend instead?",
+					"options": [
+						"A. Define business outcomes, representative scenarios, roles, test data, measurable quality, safety, latency, and task-success thresholds, then execute and retain repeatable results",
+						"B. Track only response time because it is the only objective agent metric",
+						"C. Publish first and use production complaints as the initial test set",
+						"D. Test only happy-path questions because guardrails are validated by the platform"
+					],
+					"correctAnswer": "A",
+					"explanation": "A structured agent test process starts by defining the intended business outcome, scope, representative data and scenarios, owners, and measurable success criteria. It then combines scenario, performance, reliability, safety, compliance, and usability testing, retains a baseline, and uses results as deployment gates. Latency alone cannot establish answer quality, safety, or business completion.",
+					"topic": "D3.2 / Agent testing process and balanced metrics",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/2-recommend-process-metrics-test-agents",
+					"section": "standalone"
+				},
+				{
+					"id": "q112",
+					"originalId": "DAY12-02",
+					"type": "mc",
+					"question": "A maker has used Copilot Studio test chat to inspect topic routing and variables while debugging. The release manager now needs repeatable regression evidence across many scenarios. What should the team do?",
+					"options": [
+						"A. Replace test chat with production monitoring because preproduction regression is unnecessary",
+						"B. Use agent evaluation test sets in addition to test chat, and automate evaluation runs through supported APIs or connectors when integrating with CI/CD",
+						"C. Continue manual test chat only and use screenshots as the release gate",
+						"D. Use an exact-match test for every generative response regardless of acceptable wording variation"
+					],
+					"correctAnswer": "B",
+					"explanation": "Test chat is useful for interactive debugging and inspecting behavior, while agent evaluation provides structured, repeatable scoring across test sets. Microsoft recommends using both for a full picture, and evaluations can be triggered through Power Platform REST APIs or connectors for automated workflows and CI/CD.",
+					"topic": "D3.2 / Test chat, agent evaluation, and automation",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-intro",
+					"section": "standalone"
+				},
+				{
+					"id": "q113",
+					"originalId": "DAY12-03",
+					"type": "mc",
+					"question": "A support agent must retain context, ask a clarifying question, and complete a three-step return workflow. Which Copilot Studio evaluation design is the best fit?",
+					"options": [
+						"A. A conversational test set because later turns depend on earlier context and the test must assess multi-step behavior",
+						"B. A single-response test set because each question must always be evaluated without prior context",
+						"C. An exact-match test of the first response only",
+						"D. A production CSAT survey with no predeployment test cases"
+					],
+					"correctAnswer": "A",
+					"explanation": "Conversational evaluation is designed for longer interactions in which responses depend on prior context. It tests context retention, clarification, and multi-step task completion. Single-response evaluation is better for independent questions, specific capability calls, or exact response wording.",
+					"topic": "D3.2 / Single-response versus conversational evaluation",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-multi-turn",
+					"section": "standalone"
+				},
+				{
+					"id": "q114",
+					"originalId": "DAY12-04",
+					"type": "multi",
+					"question": "An architect is selecting Copilot Studio evaluation methods. Which pairings are appropriate? (Select ALL that apply)",
+					"options": [
+						"A. Compare meaning when correct answers can use different wording but must preserve the expected intent",
+						"B. Tool use when the test must verify that an expected tool or topic was invoked",
+						"C. Exact match for a long generative explanation that permits many equivalent phrasings",
+						"D. General quality as a replacement for responsible AI review and content safety controls"
+					],
+					"correctAnswers": ["A", "B"],
+					"explanation": "Compare meaning evaluates semantic alignment where wording can vary, and Tool use verifies invocation of expected capabilities. Exact match is intended for short fixed answers where character-for-character equality matters. Copilot Studio evaluation measures correctness and performance; it does not replace responsible AI reviews or content safety filters.",
+					"topic": "D3.2 / Copilot Studio evaluation method selection",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q115",
+					"originalId": "DAY12-05",
+					"type": "mc",
+					"question": "A custom claims-risk model has high aggregate accuracy, but false negatives can expose the company to major losses. Which release criterion is most defensible?",
+					"options": [
+						"A. Publish whenever aggregate accuracy exceeds a generic threshold, regardless of error type",
+						"B. Define a held-out representative test set and business-specific thresholds for false negatives, relevant subgroup performance, safety, latency, and operational reliability before approval",
+						"C. Validate only on the training rows because the model has already learned them",
+						"D. Replace quantitative criteria with a single stakeholder demonstration"
+					],
+					"correctAnswer": "B",
+					"explanation": "Validation criteria should reflect the business cost of each error, not rely on aggregate accuracy alone. A release gate should use representative held-out data and combine task-specific quality, subgroup, safety, operational, and business thresholds. Training-set performance is optimistic and a demonstration is not repeatable evidence.",
+					"topic": "D3.2 / Custom model validation and business error costs",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/3-create-validation-criteria-custom-ai-models",
+					"section": "standalone"
+				},
+				{
+					"id": "q116",
+					"originalId": "DAY12-06",
+					"type": "mc",
+					"question": "An AI Builder prediction model receives a near-perfect performance result. One input column is populated only after the actual business outcome is known. What should the architect do?",
+					"options": [
+						"A. Publish immediately because near-perfect performance always proves generalization",
+						"B. Remove the outcome-correlated column, retrain, and reevaluate on the test dataset because it likely causes target leakage or overfitting",
+						"C. Duplicate the correlated column to reinforce the signal",
+						"D. Ignore the test result and validate only response latency"
+					],
+					"correctAnswer": "B",
+					"explanation": "AI Builder warns that perfect or near-perfect results can indicate overfitting and that columns highly correlated with the prediction outcome should be removed. Because the value is available only after the outcome, it leaks the target. Retraining and evaluation on the separated test dataset are required before release consideration.",
+					"topic": "D3.2 / Model leakage, overfitting, and held-out evaluation",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/ai-builder/prediction-performance",
+					"section": "standalone"
+				},
+				{
+					"id": "q117",
+					"originalId": "DAY12-07",
+					"type": "mc",
+					"question": "A reusable executive-summary prompt often exceeds the requested length and omits risk items for some reports. What is the best validation and refinement approach?",
+					"options": [
+						"A. Add more unrelated examples and judge one successful output manually",
+						"B. State the goal, context, output constraints, audience, inclusions, and exclusions explicitly; batch test representative inputs with criteria for accuracy, relevance, format, tone, safety, and consistency; then compare runs",
+						"C. Remove all constraints so the model can infer the desired format",
+						"D. Test only the shortest report because long inputs are production concerns"
+					],
+					"correctAnswer": "B",
+					"explanation": "Effective prompts are clear, specific, contextual, and relevant, with explicit goals and constraints. Prompt validation must use varied representative inputs and measurable criteria rather than one favorable example. Copilot Studio batch testing supports datasets, evaluation criteria, run history, and regression comparison, though the feature is currently documented as preview.",
+					"topic": "D3.2 / Prompt best practices and batch validation",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/batch-testing-prompts",
+					"section": "standalone"
+				},
+				{
+					"id": "q118",
+					"originalId": "DAY12-08",
+					"type": "mc",
+					"question": "An AI-assisted order-to-cash process spans Dynamics 365 Sales, Finance, Supply Chain Management, and Customer Service. What is the strongest end-to-end test design?",
+					"options": [
+						"A. Test each app independently with demo data and infer that integration will work",
+						"B. Exercise the complete business process in an integrated environment with realistic migrated data, role-based personas, handoffs, synchronization timing, AI decisions, exception paths, downstream records, and business outcomes across multiple cycles",
+						"C. Test only the AI-generated text because application transactions are outside the AI solution",
+						"D. Run one happy-path cycle immediately before cutover"
+					],
+					"correctAnswer": "B",
+					"explanation": "Dynamics 365 end-to-end testing validates the whole solution and its external integrations in an integrated environment. It requires realistic migrated data, the latest solution version, role-based participants, process handoffs and postconditions, negative paths, and multiple cycles. Isolated component success does not prove cross-app orchestration or business outcomes.",
+					"topic": "D3.2 / Multi-app Dynamics 365 end-to-end testing",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/testing-strategy-test-types",
+					"section": "standalone"
+				},
+				{
+					"id": "q119",
+					"originalId": "DAY12-09",
+					"type": "mc",
+					"question": "A team asks Copilot Studio to generate evaluation questions solely from the agent's connected knowledge and topics. Which limitation must the architect address?",
+					"options": [
+						"A. Generated cases are useful for testing existing knowledge and topics but are poor at discovering missing information, so add requirement-derived, negative, boundary, adversarial, and real-user cases",
+						"B. AI-generated cases automatically cover every missing requirement and require no review",
+						"C. Generated cases can test only response latency and cannot inspect quality",
+						"D. SharePoint folders are the only supported source for generated test sets"
+					],
+					"correctAnswer": "A",
+					"explanation": "Microsoft Learn states that generation from existing knowledge or topics is good for testing how the agent uses what it already has, but not for finding information gaps. A sound strategy combines generated cases with independent cases derived from requirements, risks, boundaries, failures, adversarial behavior, production themes, and human review. Individual SharePoint files, not folders, are supported for this generation path.",
+					"topic": "D3.2 / AI-generated test coverage limitations",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create",
+					"section": "standalone"
+				},
+				{
+					"id": "q120",
+					"originalId": "DAY12-10",
+					"type": "mc",
+					"question": "An organization wants Copilot to generate and maintain tests from requirements as the solution evolves. Which governance strategy is best?",
+					"options": [
+						"A. Give Copilot a versioned test blueprint with IDs, purpose, preconditions, inputs, steps, measurable expected results, edge cases, and dependencies; trace cases to requirements and risks; require SME review; and run approved regression suites in CI/CD",
+						"B. Accept all generated cases unchanged because generation removes the need for subject-matter experts",
+						"C. Store only natural-language test titles so implementation details can be inferred at runtime",
+						"D. Regenerate the entire suite after every change without preserving versions or prior results"
+					],
+					"correctAnswer": "A",
+					"explanation": "Copilot accelerates translation of requirements into cases, edge-case suggestions, and data variations, but architects must define the blueprint, constraints, quality gates, and governance. Traceability, version control, review for completeness and correctness, measurable expectations, and automated regression preserve auditability and prevent plausible but invalid generated tests from becoming release evidence.",
+					"topic": "D3.2 / Governed Copilot-assisted test case strategy",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/6-build-strategy-creating-test-cases-using-copilot",
 					"section": "standalone"
 				}
 			]

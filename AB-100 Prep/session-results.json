@@ -1,19 +1,25 @@
 {
-  "timestamp": "2026-08-22T10:40:47.912346",
+  "timestamp": "2026-08-23T11:14:00.089999",
   "examCode": "AB-100",
   "examName": "Agentic AI Business Solutions Architect",
   "summary": {
-    "totalQuestions": 10,
-    "gradedQuestions": 10,
-    "correct": 10,
+    "totalQuestions": 13,
+    "gradedQuestions": 13,
+    "correct": 13,
     "wrong": 0,
     "skipped": 0,
     "ungraded": 0,
     "accuracy": 100.0,
-    "timeSeconds": 47.2
+    "timeSeconds": 56.2
   },
   "domainBreakdown": {
     "Agentic AI Business Solutions Architecture (Practice Quiz)": {
+      "total": 3,
+      "correct": 3,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "Deploy AI-powered business solutions": {
       "total": 10,
       "correct": 10,
       "wrong": 0,
@@ -21,48 +27,6 @@
     }
   },
   "topicBreakdown": {
-    "D3.1 / Monitoring process and KPI selection": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.1 / Telemetry interpretation and test-data filtering": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.1 / Backlog and user-feedback analysis": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.1 / AI-based issue identification and backlog prioritization": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.1 / Answer-quality metrics and grounding tuning": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.1 / Autonomous-agent run and trigger metrics": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.1 / Tool performance metrics and root-cause tuning": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
     "D3.1 / Foundry tracing and telemetry interpretation": {
       "total": 1,
       "correct": 1,
@@ -80,130 +44,71 @@
       "correct": 1,
       "wrong": 0,
       "skipped": 0
+    },
+    "D3.2 / Agent testing process and balanced metrics": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.2 / Test chat, agent evaluation, and automation": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.2 / Single-response versus conversational evaluation": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.2 / Copilot Studio evaluation method selection": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.2 / Custom model validation and business error costs": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.2 / Model leakage, overfitting, and held-out evaluation": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.2 / Prompt best practices and batch validation": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.2 / Multi-app Dynamics 365 end-to-end testing": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.2 / AI-generated test coverage limitations": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.2 / Governed Copilot-assisted test case strategy": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
     }
   },
   "wrongQuestions": [],
   "skippedQuestions": [],
   "allResults": [
-    {
-      "questionId": "q101",
-      "question": "A customer-service agent is entering production. The sponsor wants a single generic dashboard, but the architect must establish a monitoring process that can show both user experience and business value. What should the architect recommend first?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / Monitoring process and KPI selection",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Copilot Studio separates business-specific custom metrics from built-in views of effectiveness, use, and savings. A defensible monitoring process defines the outcomes that matter, establishes a baseline and review cadence, and then interprets experience, operational, and value signals together. Conversation volume or token use alone can rise while resolution quality or business outcomes deteriorate, and transcript review alone does not provide a scalable trend view.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-effectiveness"
-    },
-    {
-      "questionId": "q102",
-      "question": "After an intensive maker test session, Application Insights shows a large spike in Copilot Studio events, but the built-in Analytics page does not show a matching increase. The team wants a production-only Kusto query. What should the architect advise?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / Telemetry interpretation and test-data filtering",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "hard",
-      "explanation": "The built-in Copilot Studio Analytics page excludes activity performed in the test panel, while connected Application Insights telemetry includes test conversations. Copilot Studio records the designMode custom dimension on events, so a production-only Kusto query should filter for designMode equal to False. Channel alone is not a reliable substitute for this explicit test-mode signal.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry"
-    },
-    {
-      "questionId": "q103",
-      "question": "A support agent's aggregate CSAT is stable, but a growing backlog contains vague reports that some answers are unhelpful. Which investigation best converts the user feedback into an actionable tuning backlog?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / Backlog and user-feedback analysis",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Aggregate satisfaction can hide concentrated failures. Copilot Studio drill-down views connect reactions and comments to the underlying questions, responses, sessions, outcomes, and knowledge sources, allowing recurring issues to become prioritized backlog items. Viewing this detail requires the Bot Transcript Viewer security role; least-privilege transcript access is preferable to broad environment administration.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-questions-sessions"
-    },
-    {
-      "questionId": "q104",
-      "question": "Thousands of unclassified questions trigger generative answers each week, and the product owner cannot identify which knowledge gaps deserve attention first. Which capability is the best fit, with what architectural caveat?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / AI-based issue identification and backlog prioritization",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Copilot Studio Themes uses AI to group related unclassified questions that triggered generative answers, making frequent intents and weak-performing areas easier to identify and prioritize. Microsoft documents the capability as preview, with weekly theme suggestions and daily classification of new questions, so an architect should use it as decision support and validate the resulting categories rather than treat them as an unquestionable production control.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-themes"
-    },
-    {
-      "questionId": "q105",
-      "question": "A conversational agent has a high generated-answer rate, yet Copilot Studio labels a significant sampled share as poor quality because responses are insufficiently grounded. What is the most appropriate tuning action?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / Answer-quality metrics and grounding tuning",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "hard",
-      "explanation": "Answer rate measures whether the agent answered, not whether the answer was complete, relevant, or grounded. Copilot Studio uses AI on sampled answers to assign quality labels and reasons, and its question drill-down shows the response and supporting knowledge sources. The architect should diagnose the poor-groundedness cohort, tune the relevant knowledge or instructions, and compare the quality metric again instead of optimizing for response volume.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-effectiveness"
-    },
-    {
-      "questionId": "q106",
-      "question": "An autonomous order agent has acceptable overall usage, but workflow delays and failed runs have increased. The failures appear after one event type. Which Copilot Studio analysis should the architect perform first?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / Autonomous-agent run and trigger metrics",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "For agents with event triggers, Copilot Studio provides run outcomes, duration breakdowns, and Trigger use details, including the events associated with the most failed runs. Long sessions can delay downstream workflows, and Microsoft recommends more specific trigger- or agent-level instructions as a possible speed improvement. Conversational survey metrics do not isolate an autonomous trigger failure.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-health"
-    },
-    {
-      "questionId": "q107",
-      "question": "A returns agent answers policy questions well, but completion rates drop whenever it calls the refund action. Tool use analytics show frequent calls and a falling success percentage for that action. What should the architect prioritize?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / Tool performance metrics and root-cause tuning",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Tool use analytics distinguish tool demand from tool success. Frequent invocation indicates the action is relevant, while a declining success percentage points to the action path rather than general answer generation. The tuning backlog should first address the tool contract and operational dependencies, then verify that tool success and end-to-end completion improve.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-health"
-    },
     {
       "questionId": "q108",
       "question": "A Microsoft Foundry multi-agent solution shows rising end-to-end latency and intermittent errors, while token consumption remains stable. The team must identify which agent decision, model call, tool invocation, or dependency is responsible. Which observability capability should it use?",
@@ -254,6 +159,176 @@
       "questionImages": [],
       "answerImages": [],
       "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/prompt-optimizer"
+    },
+    {
+      "questionId": "q111",
+      "question": "A company is preparing a Copilot Studio service agent for production. The sponsor asks the architect to begin by running many prompts and decide later what success means. What should the architect recommend instead?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / Agent testing process and balanced metrics",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "A structured agent test process starts by defining the intended business outcome, scope, representative data and scenarios, owners, and measurable success criteria. It then combines scenario, performance, reliability, safety, compliance, and usability testing, retains a baseline, and uses results as deployment gates. Latency alone cannot establish answer quality, safety, or business completion.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/2-recommend-process-metrics-test-agents"
+    },
+    {
+      "questionId": "q112",
+      "question": "A maker has used Copilot Studio test chat to inspect topic routing and variables while debugging. The release manager now needs repeatable regression evidence across many scenarios. What should the team do?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / Test chat, agent evaluation, and automation",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Test chat is useful for interactive debugging and inspecting behavior, while agent evaluation provides structured, repeatable scoring across test sets. Microsoft recommends using both for a full picture, and evaluations can be triggered through Power Platform REST APIs or connectors for automated workflows and CI/CD.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-intro"
+    },
+    {
+      "questionId": "q113",
+      "question": "A support agent must retain context, ask a clarifying question, and complete a three-step return workflow. Which Copilot Studio evaluation design is the best fit?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / Single-response versus conversational evaluation",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Conversational evaluation is designed for longer interactions in which responses depend on prior context. It tests context retention, clarification, and multi-step task completion. Single-response evaluation is better for independent questions, specific capability calls, or exact response wording.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-multi-turn"
+    },
+    {
+      "questionId": "q114",
+      "question": "An architect is selecting Copilot Studio evaluation methods. Which pairings are appropriate? (Select ALL that apply)",
+      "userAnswer": "A, B",
+      "correctAnswer": "A, B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / Copilot Studio evaluation method selection",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Compare meaning evaluates semantic alignment where wording can vary, and Tool use verifies invocation of expected capabilities. Exact match is intended for short fixed answers where character-for-character equality matters. Copilot Studio evaluation measures correctness and performance; it does not replace responsible AI reviews or content safety filters.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview"
+    },
+    {
+      "questionId": "q115",
+      "question": "A custom claims-risk model has high aggregate accuracy, but false negatives can expose the company to major losses. Which release criterion is most defensible?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / Custom model validation and business error costs",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Validation criteria should reflect the business cost of each error, not rely on aggregate accuracy alone. A release gate should use representative held-out data and combine task-specific quality, subgroup, safety, operational, and business thresholds. Training-set performance is optimistic and a demonstration is not repeatable evidence.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/3-create-validation-criteria-custom-ai-models"
+    },
+    {
+      "questionId": "q116",
+      "question": "An AI Builder prediction model receives a near-perfect performance result. One input column is populated only after the actual business outcome is known. What should the architect do?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / Model leakage, overfitting, and held-out evaluation",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "AI Builder warns that perfect or near-perfect results can indicate overfitting and that columns highly correlated with the prediction outcome should be removed. Because the value is available only after the outcome, it leaks the target. Retraining and evaluation on the separated test dataset are required before release consideration.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/ai-builder/prediction-performance"
+    },
+    {
+      "questionId": "q117",
+      "question": "A reusable executive-summary prompt often exceeds the requested length and omits risk items for some reports. What is the best validation and refinement approach?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / Prompt best practices and batch validation",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Effective prompts are clear, specific, contextual, and relevant, with explicit goals and constraints. Prompt validation must use varied representative inputs and measurable criteria rather than one favorable example. Copilot Studio batch testing supports datasets, evaluation criteria, run history, and regression comparison, though the feature is currently documented as preview.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/batch-testing-prompts"
+    },
+    {
+      "questionId": "q118",
+      "question": "An AI-assisted order-to-cash process spans Dynamics 365 Sales, Finance, Supply Chain Management, and Customer Service. What is the strongest end-to-end test design?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / Multi-app Dynamics 365 end-to-end testing",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Dynamics 365 end-to-end testing validates the whole solution and its external integrations in an integrated environment. It requires realistic migrated data, the latest solution version, role-based participants, process handoffs and postconditions, negative paths, and multiple cycles. Isolated component success does not prove cross-app orchestration or business outcomes.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/testing-strategy-test-types"
+    },
+    {
+      "questionId": "q119",
+      "question": "A team asks Copilot Studio to generate evaluation questions solely from the agent's connected knowledge and topics. Which limitation must the architect address?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / AI-generated test coverage limitations",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Microsoft Learn states that generation from existing knowledge or topics is good for testing how the agent uses what it already has, but not for finding information gaps. A sound strategy combines generated cases with independent cases derived from requirements, risks, boundaries, failures, adversarial behavior, production themes, and human review. Individual SharePoint files, not folders, are supported for this generation path.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create"
+    },
+    {
+      "questionId": "q120",
+      "question": "An organization wants Copilot to generate and maintain tests from requirements as the solution evolves. Which governance strategy is best?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / Governed Copilot-assisted test case strategy",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Copilot accelerates translation of requirements into cases, edge-case suggestions, and data variations, but architects must define the blueprint, constraints, quality gates, and governance. Traceability, version control, review for completeness and correctness, measurable expectations, and automated regression preserve auditability and prevent plausible but invalid generated tests from becoming release evidence.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/6-build-strategy-creating-test-cases-using-copilot"
     }
   ]
 }

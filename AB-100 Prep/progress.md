@@ -3,10 +3,10 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 11 / 31
-- Questions Answered: 120 / 110 (completed bank plus review questions)
-- Accuracy: 95.8% (115/120)
-- Current Day: Day 12 (next: 2026-08-23)
+- Sessions Completed: 12 / 31
+- Questions Answered: 133 / 120 (completed bank plus review and carryover questions)
+- Accuracy: 96.2% (128/133)
+- Current Day: Day 13 (next: 2026-08-24)
 
 ## Domain Confidence (self-rated 1–5)
 
@@ -14,7 +14,7 @@
 | ---------------------------------------- | ------ | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)     | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing |
 | D2: Design AI-powered business solutions | 25–30% | 4 (49/50 Days 6–10) | Strong overall; review custom regex and closed-list entity collection for generative topic inputs                         |
-| D3: Deploy AI-powered business solutions | 40–45% | 4 (10/10 Day 11)   | Strong start on monitoring and tuning; continue with testing, ALM, security, governance, and compliance              |
+| D3: Deploy AI-powered business solutions | 40–45% | 4 (23/23 Days 11–12) | Strong on monitoring, tuning, and testing; continue with ALM, security, governance, and compliance                   |
 
 ## Daily Log
 
@@ -146,6 +146,18 @@
 - Skipped/ungraded: 0 / 0
 - Reference: sessions/day-11-monitor-tune.md
 - Next action: Day 12 — D3.2 Testing
+
+### Day 12 — 2026-08-23 — D3.2 Testing
+
+- Status: Completed
+- Covered: structured agent testing processes and balanced metrics; Copilot Studio test chat versus repeatable agent evaluation; single-response versus conversational evaluation; custom-model validation with held-out data and business error costs; leakage and overfitting controls; prompt batch validation; multi-app Dynamics 365 end-to-end testing; governed Copilot-assisted test-case creation
+- Quiz: 10 newly researched D3.2 questions (q111 through q120) plus 3 D3.1 carryover questions (q108 through q110)
+- Accuracy: 13 / 13 (100%) — perfect score
+- Time: 56.2s
+- Weak spots: None observed; retain the distinction between interactive debugging and regression evaluation, and never treat aggregate model scores or AI-generated tests as sufficient release evidence
+- Skipped/ungraded: 0 / 0
+- Reference: sessions/day-12-testing.md
+- Next action: Day 13 — D3.3 ALM (Data + Copilot Studio)
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12
