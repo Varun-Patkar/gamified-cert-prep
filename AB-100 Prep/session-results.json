@@ -1,24 +1,18 @@
 {
-  "timestamp": "2026-08-23T11:14:00.089999",
+  "timestamp": "2026-08-24T09:00:45.220333",
   "examCode": "AB-100",
   "examName": "Agentic AI Business Solutions Architect",
   "summary": {
-    "totalQuestions": 13,
-    "gradedQuestions": 13,
-    "correct": 13,
+    "totalQuestions": 10,
+    "gradedQuestions": 10,
+    "correct": 10,
     "wrong": 0,
     "skipped": 0,
     "ungraded": 0,
     "accuracy": 100.0,
-    "timeSeconds": 56.2
+    "timeSeconds": 165.6
   },
   "domainBreakdown": {
-    "Agentic AI Business Solutions Architecture (Practice Quiz)": {
-      "total": 3,
-      "correct": 3,
-      "wrong": 0,
-      "skipped": 0
-    },
     "Deploy AI-powered business solutions": {
       "total": 10,
       "correct": 10,
@@ -27,79 +21,61 @@
     }
   },
   "topicBreakdown": {
-    "D3.1 / Foundry tracing and telemetry interpretation": {
+    "D3.3 / AI grounding data configuration across environments": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.1 / Continuous evaluation and production quality drift": {
+    "D3.3 / Shared AI data configuration and secret separation": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.1 / AI-based tuning and evaluation feedback loop": {
+    "D3.3 / Environment variable servicing for AI data sources": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.2 / Agent testing process and balanced metrics": {
+    "D3.3 / Connection references for data-access actions": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.2 / Test chat, agent evaluation, and automation": {
+    "D3.3 / Governed validation of AI solution data dependencies": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.2 / Single-response versus conversational evaluation": {
+    "D3.3 / Copilot Studio agent solution lifecycle": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.2 / Copilot Studio evaluation method selection": {
+    "D3.3 / Agent action components and solution dependencies": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.2 / Custom model validation and business error costs": {
+    "D3.3 / Custom connector and agent action deployment order": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.2 / Model leakage, overfitting, and held-out evaluation": {
+    "D3.3 / Agent solution dependency failure diagnosis": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.2 / Prompt best practices and batch validation": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.2 / Multi-app Dynamics 365 end-to-end testing": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.2 / AI-generated test coverage limitations": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.2 / Governed Copilot-assisted test case strategy": {
+    "D3.3 / Post-import agent configuration and publishing": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
@@ -110,225 +86,174 @@
   "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "q108",
-      "question": "A Microsoft Foundry multi-agent solution shows rising end-to-end latency and intermittent errors, while token consumption remains stable. The team must identify which agent decision, model call, tool invocation, or dependency is responsible. Which observability capability should it use?",
+      "questionId": "q121",
+      "question": "An agent uses a SharePoint grounding site in development and a different approved site in production. The team wants to promote the same solution without editing the app or flow in each environment. What should the architect recommend?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.1 / Foundry tracing and telemetry interpretation",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "hard",
-      "explanation": "Foundry distributed tracing captures the execution flow across LLM calls, tool invocations, agent decisions, and inter-service dependencies. That span-level evidence is designed to reveal bottlenecks and faults in complex multi-step behavior. Aggregate dashboards expose the latency and error trend, but stable token use does not identify the failing execution step, and prompt changes should not precede root-cause evidence.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/observability"
-    },
-    {
-      "questionId": "q109",
-      "question": "A production Foundry agent still meets latency and availability targets, but reviewers suspect groundedness is drifting as user traffic changes. Which monitoring design best detects the issue?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / Continuous evaluation and production quality drift",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "hard",
-      "explanation": "Operational health and response quality are different dimensions. Foundry post-production observability includes sampled continuous evaluation, scheduled evaluation with test datasets to detect drift, and Azure Monitor alerts when quality or safety thresholds fail. Combining live and controlled signals catches changes that latency and availability dashboards alone cannot reveal.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/observability"
-    },
-    {
-      "questionId": "q110",
-      "question": "Cluster analysis groups repeated evaluation failures around ambiguous fallback instructions. A maker uses Microsoft Foundry Prompt Optimizer and receives revised instructions with paragraph-level reasoning. What should happen before production deployment?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / AI-based tuning and evaluation feedback loop",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "hard",
-      "explanation": "Cluster analysis identifies recurring failure patterns and recommended improvement areas; it does not prove that a proposed fix works. Prompt Optimizer is a preview tool for text instructions, supplies reasoning that still requires human review, and does not optimize tool definitions or knowledge sources. Microsoft recommends testing after optimization and running a full evaluation with your own dataset before relying on the revised prompt.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/prompt-optimizer"
-    },
-    {
-      "questionId": "q111",
-      "question": "A company is preparing a Copilot Studio service agent for production. The sponsor asks the architect to begin by running many prompts and decide later what success means. What should the architect recommend instead?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.2 / Agent testing process and balanced metrics",
+      "topic": "D3.3 / AI grounding data configuration across environments",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "A structured agent test process starts by defining the intended business outcome, scope, representative data and scenarios, owners, and measurable success criteria. It then combines scenario, performance, reliability, safety, compliance, and usability testing, retains a baseline, and uses results as deployment gates. Latency alone cannot establish answer quality, safety, or business completion.",
+      "explanation": "Power Platform environment variables let solution components use different data-source parameters in each environment without modifying the components. Microsoft specifically documents SharePoint site and list parameters as an example. Credentials and other secrets should be packaged and transported separately rather than embedded as ordinary environment-variable configuration.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/2-recommend-process-metrics-test-agents"
+      "sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables"
     },
     {
-      "questionId": "q112",
-      "question": "A maker has used Copilot Studio test chat to inspect topic routing and variables while debugging. The release manager now needs repeatable regression evidence across many scenarios. What should the team do?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.2 / Test chat, agent evaluation, and automation",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "Test chat is useful for interactive debugging and inspecting behavior, while agent evaluation provides structured, repeatable scoring across test sets. Microsoft recommends using both for a full picture, and evaluations can be triggered through Power Platform REST APIs or connectors for automated workflows and CI/CD.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-intro"
-    },
-    {
-      "questionId": "q113",
-      "question": "A support agent must retain context, ask a clarifying question, and complete a three-step return workflow. Which Copilot Studio evaluation design is the best fit?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.2 / Single-response versus conversational evaluation",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "Conversational evaluation is designed for longer interactions in which responses depend on prior context. It tests context retention, clarification, and multi-step task completion. Single-response evaluation is better for independent questions, specific capability calls, or exact response wording.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-multi-turn"
-    },
-    {
-      "questionId": "q114",
-      "question": "An architect is selecting Copilot Studio evaluation methods. Which pairings are appropriate? (Select ALL that apply)",
+      "questionId": "q122",
+      "question": "A solution contains an AI prompt, a flow, and a canvas app that all access the same environment-specific knowledge endpoint. Which ALM choices are appropriate? (Select ALL that apply)",
       "userAnswer": "A, B",
       "correctAnswer": "A, B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.2 / Copilot Studio evaluation method selection",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Compare meaning evaluates semantic alignment where wording can vary, and Tool use verifies invocation of expected capabilities. Exact match is intended for short fixed answers where character-for-character equality matters. Copilot Studio evaluation measures correctness and performance; it does not replace responsible AI reviews or content safety filters.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview"
-    },
-    {
-      "questionId": "q115",
-      "question": "A custom claims-risk model has high aggregate accuracy, but false negatives can expose the company to major losses. Which release criterion is most defensible?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.2 / Custom model validation and business error costs",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Validation criteria should reflect the business cost of each error, not rely on aggregate accuracy alone. A release gate should use representative held-out data and combine task-specific quality, subgroup, safety, operational, and business thresholds. Training-set performance is optimistic and a demonstration is not repeatable evidence.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/3-create-validation-criteria-custom-ai-models"
-    },
-    {
-      "questionId": "q116",
-      "question": "An AI Builder prediction model receives a near-perfect performance result. One input column is populated only after the actual business outcome is known. What should the architect do?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.2 / Model leakage, overfitting, and held-out evaluation",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "AI Builder warns that perfect or near-perfect results can indicate overfitting and that columns highly correlated with the prediction outcome should be removed. Because the value is available only after the outcome, it leaks the target. Retraining and evaluation on the separated test dataset are required before release consideration.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/ai-builder/prediction-performance"
-    },
-    {
-      "questionId": "q117",
-      "question": "A reusable executive-summary prompt often exceeds the requested length and omits risk items for some reports. What is the best validation and refinement approach?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.2 / Prompt best practices and batch validation",
+      "topic": "D3.3 / Shared AI data configuration and secret separation",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Effective prompts are clear, specific, contextual, and relevant, with explicit goals and constraints. Prompt validation must use varied representative inputs and measurable criteria rather than one favorable example. Copilot Studio batch testing supports datasets, evaluation criteria, run history, and regression comparison, though the feature is currently documented as preview.",
+      "explanation": "A single environment variable can be reused across different solution component types, so changing one target value updates their shared configuration. Microsoft also directs teams to package and transport secrets, such as credentials, separately from the components that use them. Hard-coded duplication creates configuration drift, and exported defaults are not an appropriate secret store.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/batch-testing-prompts"
+      "sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables"
     },
     {
-      "questionId": "q118",
-      "question": "An AI-assisted order-to-cash process spans Dynamics 365 Sales, Finance, Supply Chain Management, and Customer Service. What is the strongest end-to-end test design?",
+      "questionId": "q123",
+      "question": "A publisher ships an updated managed solution containing the definition and default value of an environment variable used for an AI data source. The customer has already set a production current value. Which behavior should the release design rely on?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.2 / Multi-app Dynamics 365 end-to-end testing",
+      "topic": "D3.3 / Environment variable servicing for AI data sources",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "hard",
-      "explanation": "Dynamics 365 end-to-end testing validates the whole solution and its external integrations in an integrated environment. It requires realistic migrated data, the latest solution version, role-based participants, process handoffs and postconditions, negative paths, and multiple cycles. Isolated component success does not prove cross-app orchestration or business outcomes.",
+      "explanation": "Power Platform separates an environment variable's definition and default value from its current value. This permits a publisher to service solution metadata and defaults while preserving a customer-supplied target-environment value. Components continue resolving configuration through the variable instead of requiring direct edits.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/testing-strategy-test-types"
+      "sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables"
     },
     {
-      "questionId": "q119",
-      "question": "A team asks Copilot Studio to generate evaluation questions solely from the agent's connected knowledge and topics. Which limitation must the architect address?",
+      "questionId": "q124",
+      "question": "A solution-aware flow used as an agent action reads governed business data through a connector. The solution is moving from test to production, where a different authenticated connection must be used. What is the correct design?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Connection references for data-access actions",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "A connection reference is a solution component that points to a connection for a connector. Solution-aware flows bind to connection references rather than directly to connections. During import, the target environment supplies a connection for each reference, allowing referencing flows to use target-specific authentication without transporting the development credential.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-connection-reference"
+    },
+    {
+      "questionId": "q125",
+      "question": "A release frequently fails because an AI solution reaches the target environment with missing dependencies and unresolved data-source settings. Which deployment approach best addresses the problem before import begins?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.2 / AI-generated test coverage limitations",
+      "topic": "D3.3 / Governed validation of AI solution data dependencies",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Microsoft Learn states that generation from existing knowledge or topics is good for testing how the agent uses what it already has, but not for finding information gaps. A sound strategy combines generated cases with independent cases derived from requirements, risks, boundaries, failures, adversarial behavior, production themes, and human review. Individual SharePoint files, not folders, are supported for this generation path.",
+      "difficulty": "medium",
+      "explanation": "Power Platform pipelines provide governed ALM and prevalidate solution deployments against the target environment. Microsoft documents that missing dependencies are detected before deployment and that connections and environment variables are supplied and validated up front, reducing manual post-processing and incorrect data-source bindings.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create"
+      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/alm/pipelines"
     },
     {
-      "questionId": "q120",
-      "question": "An organization wants Copilot to generate and maintain tests from requirements as the solution evolves. Which governance strategy is best?",
+      "questionId": "q126",
+      "question": "A team must promote a Copilot Studio agent through development, test, and production using standard Power Platform ALM. What is the recommended starting sequence?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.2 / Governed Copilot-assisted test case strategy",
+      "topic": "D3.3 / Copilot Studio agent solution lifecycle",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "easy",
+      "explanation": "Copilot Studio uses Power Platform solutions as the carrier for agents across environments and for pipeline-based ALM. Microsoft instructs makers to create a custom solution, add the agent, export that solution, and import it into the target environment, while also accounting for required components and dependencies.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
+    },
+    {
+      "questionId": "q127",
+      "question": "After an agent was first added to an unmanaged custom solution, a maker adds a new topic and a Power Automate flow action in Copilot Studio. What must happen before the next export?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Agent action components and solution dependencies",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "hard",
-      "explanation": "Copilot accelerates translation of requirements into cases, edge-case suggestions, and data variations, but architects must define the blueprint, constraints, quality gates, and governance. Traceability, version control, review for completeness and correctness, measurable expectations, and automated regression preserve auditability and prevent plausible but invalid generated tests from becoming release evidence.",
+      "explanation": "Microsoft states that components added to an agent, including topics or flows, must also be added to the agent's unmanaged solution before export. Required flow and environment-variable objects must be included so the solution contains its dependencies. Assuming every linked resource is automatically packaged can produce an incomplete import.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/6-build-strategy-creating-test-cases-using-copilot"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
+    },
+    {
+      "questionId": "q128",
+      "question": "A Copilot Studio agent action uses a custom connector and a connection reference. The components are being deployed to a new target environment. Which import sequence is required?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Custom connector and agent action deployment order",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Copilot Studio's solution guidance explicitly requires custom connectors to be imported first, followed by the connection reference with the agent solution. A connection reference points to a connection for a connector; it does not contain the custom connector implementation, so reversing the dependency order risks import failure.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
+    },
+    {
+      "questionId": "q129",
+      "question": "An imported Copilot Studio agent solution fails in the target environment. The release team suspects a missing topic, flow, or other required object. What should it do first?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Agent solution dependency failure diagnosis",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Microsoft identifies missing required components as the most common reason an agent solution import fails and provides an XML import log for diagnosis. The defensible ALM response is to correct dependency packaging in the source solution and redeploy, rather than making untracked target edits or exposing an incomplete agent.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
+    },
+    {
+      "questionId": "q130",
+      "question": "A Copilot Studio agent solution imports successfully into production. The agent uses user authentication, but users still cannot receive it through the intended channel. Which release steps remain?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Post-import agent configuration and publishing",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Copilot Studio's import guidance requires user authentication to be configured again for the imported agent and states that an imported agent must be published before it can be shared. Target-specific connections, variables, and channel details should also be validated because successful solution import alone is not the complete release gate.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
     }
   ]
 }

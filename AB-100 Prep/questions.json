@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 120,
+	"totalQuestions": 130,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)",
 		"Microsoft Learn: Copilot Studio analytics overview and conversational-agent effectiveness",
@@ -14,9 +14,12 @@
 		"Microsoft Learn: Copilot Studio agent evaluation and evaluation methods",
 		"Microsoft Learn: Copilot Studio prompt batch testing",
 		"Microsoft Learn: AI Builder prediction model performance",
-		"Microsoft Learn: Dynamics 365 testing strategy and Playwright automation"
+		"Microsoft Learn: Dynamics 365 testing strategy and Playwright automation",
+		"Microsoft Learn: Copilot Studio custom solutions and agent import/export",
+		"Microsoft Learn: Power Platform environment variables and connection references",
+		"Microsoft Learn: Power Platform pipelines"
 	],
-	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q120 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120 are mapped to Domain 3, Deploy AI-powered business solutions.",
+	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q130 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120 and Day 13 questions q121-q130 are mapped to Domain 3, Deploy AI-powered business solutions.",
 	"caseStudies": [
 		{
 			"id": "chg",
@@ -2234,6 +2237,196 @@
 					"difficulty": "hard",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/6-build-strategy-creating-test-cases-using-copilot",
+					"section": "standalone"
+				},
+				{
+					"id": "q121",
+					"originalId": "DAY13-01",
+					"type": "mc",
+					"question": "An agent uses a SharePoint grounding site in development and a different approved site in production. The team wants to promote the same solution without editing the app or flow in each environment. What should the architect recommend?",
+					"options": [
+						"A. Store the site and list parameters in solution environment variables and provide target-environment values during deployment",
+						"B. Hard-code the production URL in every component before exporting from development",
+						"C. Put the production credentials in the environment variable default value",
+						"D. Copy the development data source into production and preserve its URL"
+					],
+					"correctAnswer": "A",
+					"explanation": "Power Platform environment variables let solution components use different data-source parameters in each environment without modifying the components. Microsoft specifically documents SharePoint site and list parameters as an example. Credentials and other secrets should be packaged and transported separately rather than embedded as ordinary environment-variable configuration.",
+					"topic": "D3.3 / AI grounding data configuration across environments",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables",
+					"section": "standalone"
+				},
+				{
+					"id": "q122",
+					"originalId": "DAY13-02",
+					"type": "multi",
+					"question": "A solution contains an AI prompt, a flow, and a canvas app that all access the same environment-specific knowledge endpoint. Which ALM choices are appropriate? (Select ALL that apply)",
+					"options": [
+						"A. Use one shared environment variable for the endpoint when the components require the same value",
+						"B. Keep credentials or secrets separate from the components and their ordinary configuration values",
+						"C. Duplicate and hard-code the endpoint independently in every component",
+						"D. Store a production secret as the environment variable's default value in the exported solution"
+					],
+					"correctAnswers": ["A", "B"],
+					"explanation": "A single environment variable can be reused across different solution component types, so changing one target value updates their shared configuration. Microsoft also directs teams to package and transport secrets, such as credentials, separately from the components that use them. Hard-coded duplication creates configuration drift, and exported defaults are not an appropriate secret store.",
+					"topic": "D3.3 / Shared AI data configuration and secret separation",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables",
+					"section": "standalone"
+				},
+				{
+					"id": "q123",
+					"originalId": "DAY13-03",
+					"type": "mc",
+					"question": "A publisher ships an updated managed solution containing the definition and default value of an environment variable used for an AI data source. The customer has already set a production current value. Which behavior should the release design rely on?",
+					"options": [
+						"A. The publisher update must overwrite the customer's current value",
+						"B. The current value remains separate, allowing the definition and default to be serviced without overwriting the customer's value",
+						"C. Environment variables cannot be included in solutions",
+						"D. The customer must modify every app and flow after each solution update"
+					],
+					"correctAnswer": "B",
+					"explanation": "Power Platform separates an environment variable's definition and default value from its current value. This permits a publisher to service solution metadata and defaults while preserving a customer-supplied target-environment value. Components continue resolving configuration through the variable instead of requiring direct edits.",
+					"topic": "D3.3 / Environment variable servicing for AI data sources",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables",
+					"section": "standalone"
+				},
+				{
+					"id": "q124",
+					"originalId": "DAY13-04",
+					"type": "mc",
+					"question": "A solution-aware flow used as an agent action reads governed business data through a connector. The solution is moving from test to production, where a different authenticated connection must be used. What is the correct design?",
+					"options": [
+						"A. Bind the flow directly to the maker's test connection and export that credential",
+						"B. Bind the flow to a connection reference and provide an appropriate production connection for that reference during import",
+						"C. Replace the connector with an environment variable that contains a password",
+						"D. Rebuild the flow manually in production so it is no longer solution-aware"
+					],
+					"correctAnswer": "B",
+					"explanation": "A connection reference is a solution component that points to a connection for a connector. Solution-aware flows bind to connection references rather than directly to connections. During import, the target environment supplies a connection for each reference, allowing referencing flows to use target-specific authentication without transporting the development credential.",
+					"topic": "D3.3 / Connection references for data-access actions",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-connection-reference",
+					"section": "standalone"
+				},
+				{
+					"id": "q125",
+					"originalId": "DAY13-05",
+					"type": "mc",
+					"question": "A release frequently fails because an AI solution reaches the target environment with missing dependencies and unresolved data-source settings. Which deployment approach best addresses the problem before import begins?",
+					"options": [
+						"A. Use a governed Power Platform pipeline that prevalidates the target, dependencies, connections, and environment variables",
+						"B. Export components individually and resolve every dependency after production import",
+						"C. Allow each maker to edit production configuration without a deployment record",
+						"D. Remove connection references so validation has fewer components to inspect"
+					],
+					"correctAnswer": "A",
+					"explanation": "Power Platform pipelines provide governed ALM and prevalidate solution deployments against the target environment. Microsoft documents that missing dependencies are detected before deployment and that connections and environment variables are supplied and validated up front, reducing manual post-processing and incorrect data-source bindings.",
+					"topic": "D3.3 / Governed validation of AI solution data dependencies",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-platform/alm/pipelines",
+					"section": "standalone"
+				},
+				{
+					"id": "q126",
+					"originalId": "DAY13-06",
+					"type": "mc",
+					"question": "A team must promote a Copilot Studio agent through development, test, and production using standard Power Platform ALM. What is the recommended starting sequence?",
+					"options": [
+						"A. Create a custom solution, add the agent and required components, export the solution, and import it into the target environment",
+						"B. Copy the published website embed code between environments",
+						"C. Re-create the agent manually in every environment",
+						"D. Export the agent's conversation transcripts as the deployment package"
+					],
+					"correctAnswer": "A",
+					"explanation": "Copilot Studio uses Power Platform solutions as the carrier for agents across environments and for pipeline-based ALM. Microsoft instructs makers to create a custom solution, add the agent, export that solution, and import it into the target environment, while also accounting for required components and dependencies.",
+					"topic": "D3.3 / Copilot Studio agent solution lifecycle",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export",
+					"section": "standalone"
+				},
+				{
+					"id": "q127",
+					"originalId": "DAY13-07",
+					"type": "mc",
+					"question": "After an agent was first added to an unmanaged custom solution, a maker adds a new topic and a Power Automate flow action in Copilot Studio. What must happen before the next export?",
+					"options": [
+						"A. Add the new topic, flow, and required dependent objects to the unmanaged solution",
+						"B. Export only the agent because all later components are always included automatically",
+						"C. Delete the original agent from the solution and import it again",
+						"D. Convert the solution to managed in the development environment before adding components"
+					],
+					"correctAnswer": "A",
+					"explanation": "Microsoft states that components added to an agent, including topics or flows, must also be added to the agent's unmanaged solution before export. Required flow and environment-variable objects must be included so the solution contains its dependencies. Assuming every linked resource is automatically packaged can produce an incomplete import.",
+					"topic": "D3.3 / Agent action components and solution dependencies",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export",
+					"section": "standalone"
+				},
+				{
+					"id": "q128",
+					"originalId": "DAY13-08",
+					"type": "mc",
+					"question": "A Copilot Studio agent action uses a custom connector and a connection reference. The components are being deployed to a new target environment. Which import sequence is required?",
+					"options": [
+						"A. Import the agent solution first, then create the custom connector if the action fails",
+						"B. Import the custom connector first, then import the connection reference with the agent solution",
+						"C. Import the connection reference first without its connector, then delete it after agent import",
+						"D. Import order is irrelevant because connection references contain the connector implementation"
+					],
+					"correctAnswer": "B",
+					"explanation": "Copilot Studio's solution guidance explicitly requires custom connectors to be imported first, followed by the connection reference with the agent solution. A connection reference points to a connection for a connector; it does not contain the custom connector implementation, so reversing the dependency order risks import failure.",
+					"topic": "D3.3 / Custom connector and agent action deployment order",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export",
+					"section": "standalone"
+				},
+				{
+					"id": "q129",
+					"originalId": "DAY13-09",
+					"type": "mc",
+					"question": "An imported Copilot Studio agent solution fails in the target environment. The release team suspects a missing topic, flow, or other required object. What should it do first?",
+					"options": [
+						"A. Download the import log, identify missing required components, add the dependencies to the source solution, and retry through the release process",
+						"B. Edit unmanaged agent components directly in the target solution until the import is ignored",
+						"C. Publish the partially imported agent to discover dependencies from users",
+						"D. Delete connection references because dependency checks do not apply to actions"
+					],
+					"correctAnswer": "A",
+					"explanation": "Microsoft identifies missing required components as the most common reason an agent solution import fails and provides an XML import log for diagnosis. The defensible ALM response is to correct dependency packaging in the source solution and redeploy, rather than making untracked target edits or exposing an incomplete agent.",
+					"topic": "D3.3 / Agent solution dependency failure diagnosis",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export",
+					"section": "standalone"
+				},
+				{
+					"id": "q130",
+					"originalId": "DAY13-10",
+					"type": "mc",
+					"question": "A Copilot Studio agent solution imports successfully into production. The agent uses user authentication, but users still cannot receive it through the intended channel. Which release steps remain?",
+					"options": [
+						"A. Configure user authentication for the imported agent as needed, validate target bindings, and publish the imported agent before sharing it",
+						"B. Share the imported agent immediately because import automatically publishes and preserves all authentication settings",
+						"C. Convert the production solution to unmanaged and edit every topic directly",
+						"D. Export the production connection credentials back to development"
+					],
+					"correctAnswer": "A",
+					"explanation": "Copilot Studio's import guidance requires user authentication to be configured again for the imported agent and states that an imported agent must be published before it can be shared. Target-specific connections, variables, and channel details should also be validated because successful solution import alone is not the complete release gate.",
+					"topic": "D3.3 / Post-import agent configuration and publishing",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export",
 					"section": "standalone"
 				}
 			]

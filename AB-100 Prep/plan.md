@@ -92,8 +92,9 @@
 
 #### Day 13 (2026-08-24, Mon) — D3.3 ALM (Data + Copilot Studio)
 
-- [ ] Study: ALM for AI data; ALM for Copilot Studio agents, connectors, actions
-- [ ] Estimated time: 1 hr
+- [x] Study: ALM for AI data; ALM for Copilot Studio agents, connectors, actions
+- [x] Practice: 10 new Domain 3 questions (q121–q130; 10/10 = 100%; 2m 45.6s)
+- [x] Estimated time: 1 hr
 
 #### Day 14 (2026-08-25, Tue) — D3.3 ALM (Foundry + Models + D365)
 
