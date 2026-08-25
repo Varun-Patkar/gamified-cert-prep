@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 130,
+	"totalQuestions": 140,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)",
 		"Microsoft Learn: Copilot Studio analytics overview and conversational-agent effectiveness",
@@ -17,9 +17,13 @@
 		"Microsoft Learn: Dynamics 365 testing strategy and Playwright automation",
 		"Microsoft Learn: Copilot Studio custom solutions and agent import/export",
 		"Microsoft Learn: Power Platform environment variables and connection references",
-		"Microsoft Learn: Power Platform pipelines"
+		"Microsoft Learn: Power Platform pipelines",
+		"Microsoft Learn: Microsoft Foundry Agent Service deployment, versioning, and identity",
+		"Microsoft Learn: Microsoft Foundry Models and fine-tuned model deployment",
+		"Microsoft Learn: AI Builder model distribution with solutions",
+		"Microsoft Learn: Dynamics 365 AI feature management across environments"
 	],
-	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q130 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120 and Day 13 questions q121-q130 are mapped to Domain 3, Deploy AI-powered business solutions.",
+	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q140 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, and Day 14 questions q131-q140 are mapped to Domain 3, Deploy AI-powered business solutions.",
 	"caseStudies": [
 		{
 			"id": "chg",
@@ -2427,6 +2431,196 @@
 					"difficulty": "hard",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export",
+					"section": "standalone"
+				},
+				{
+					"id": "q131",
+					"originalId": "DAY14-01",
+					"type": "mc",
+					"question": "A Foundry agent version passes the production release gate. Two days later, its task-completion score falls sharply. The previous version met all thresholds. Which recovery design best uses Foundry Agent Service lifecycle capabilities?",
+					"options": [
+						"A. Edit the failing production version in place so the version history remains unchanged",
+						"B. Roll back to the previously validated agent version, compare the versions, and investigate the regression before promoting another version",
+						"C. Delete every earlier version before deploying a fix",
+						"D. Keep the failing version live because Foundry versions cannot be rolled back"
+					],
+					"correctAnswer": "B",
+					"explanation": "Foundry Agent Service provides built-in versioning and publishing for moving agents from development to production. Microsoft documents that teams can compare changes between versions and roll back to a previous version. A release design should preserve a known-good validated version as the recovery point instead of relying on an untracked production edit.",
+					"topic": "D3.3 / Foundry agent versioning and rollback",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q132",
+					"originalId": "DAY14-02",
+					"type": "mc",
+					"question": "A hosted Foundry agent works in development but receives authorization failures when deployed to production and calling a protected Azure service. The project managed identity already has access. What should the architect verify first?",
+					"options": [
+						"A. Grant the production agent's dedicated Microsoft Entra identity the required downstream permissions",
+						"B. Reuse the developer's interactive credentials as the production runtime identity",
+						"C. Grant more permissions only to the project managed identity because it is always the agent runtime identity",
+						"D. Make the downstream service anonymous because hosted agents cannot use managed identity"
+					],
+					"correctAnswer": "A",
+					"explanation": "Each hosted agent receives a dedicated Microsoft Entra agent identity at deployment, and that identity is used by the agent container at runtime. The project managed identity is project-wide and supports platform infrastructure operations; it isn't the hosted agent's runtime identity. Target-environment ALM must therefore provision RBAC for the production agent identity on every protected downstream dependency.",
+					"topic": "D3.3 / Foundry hosted-agent identity dependencies",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents",
+					"section": "standalone"
+				},
+				{
+					"id": "q133",
+					"originalId": "DAY14-03",
+					"type": "mc",
+					"question": "A team plans to promote a changed Foundry agent directly from development after a few successful playground conversations. Which release gate is most appropriate?",
+					"options": [
+						"A. Run pre-production evaluation on representative organizational data, measure task, quality, groundedness, safety, and robustness criteria, and promote only when approved thresholds pass",
+						"B. Promote when latency passes because operational speed proves response quality and safety",
+						"C. Skip evaluation until production because test datasets cannot be used with Foundry evaluators",
+						"D. Promote when the agent compiles because tool-call and task-completion behavior cannot be evaluated"
+					],
+					"correctAnswer": "A",
+					"explanation": "Microsoft Foundry's pre-production evaluation stage uses evaluation datasets to identify edge cases, assess robustness, and measure task adherence, groundedness, relevance, quality, and safety. These results can act as automated CI/CD quality gates. A few playground conversations or a latency-only check do not provide defensible promotion evidence.",
+					"topic": "D3.3 / Foundry pre-production evaluation gate",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/observability",
+					"section": "standalone"
+				},
+				{
+					"id": "q134",
+					"originalId": "DAY14-04",
+					"type": "mc",
+					"question": "A release runbook for a hosted Foundry agent says that programmatic testing cannot begin until the agent is published to a sharing channel. What correction should the architect make?",
+					"options": [
+						"A. A hosted agent receives a dedicated endpoint at deployment, so programmatic target-environment validation can begin before channel publishing",
+						"B. Hosted agents receive endpoints only after Teams publishing",
+						"C. The project managed identity URL should be used as the invocation endpoint",
+						"D. Every new agent version requires clients to discover a developer workstation URL"
+					],
+					"correctAnswer": "A",
+					"explanation": "Foundry Agent Service creates a dedicated endpoint and agent identity when a hosted agent is deployed. The current hosted-agent guidance states that the endpoint is immediately available for programmatic access and publishing isn't required for that access. The endpoint protocols still depend on the deployed agent version definition, so the release test must validate the intended protocol and configuration in the target project.",
+					"topic": "D3.3 / Foundry hosted-agent deployment endpoint",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents",
+					"section": "standalone"
+				},
+				{
+					"id": "q135",
+					"originalId": "DAY14-05",
+					"type": "mc",
+					"question": "A fine-tuning job completes successfully, but the production application cannot invoke the resulting model. The team configured the application with the fine-tuning job ID. What is missing?",
+					"options": [
+						"A. Create an inference deployment for the fine-tuned model and configure the application to reference its deployment name",
+						"B. Use the training file name as the production endpoint",
+						"C. Wait for every completed fine-tuning job to become an endpoint automatically",
+						"D. Publish the training dataset as a Power Platform solution"
+					],
+					"correctAnswer": "A",
+					"explanation": "Completing fine-tuning creates a custom model, but deployment is the step that makes it available for inferencing. The deployment requires a deployment name, which applications use to reference the model. The release must therefore treat the custom model artifact, inference deployment, endpoint configuration, and application binding as separate lifecycle concerns.",
+					"topic": "D3.3 / Fine-tuned model inference deployment",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/fine-tuning-deploy",
+					"section": "standalone"
+				},
+				{
+					"id": "q136",
+					"originalId": "DAY14-06",
+					"type": "mc",
+					"question": "A validated fine-tuned model must be deployed by automation from a development subscription into a production subscription in another region. Which prerequisite is required?",
+					"options": [
+						"A. The destination region must support fine-tuning, and the identity obtaining the deployment token must have access to both source and destination subscriptions",
+						"B. The source and destination must use the same subscription because cross-subscription deployment is unsupported",
+						"C. The production deployment can use Azure virtual machine quota even when the selected Foundry deployment quota is unavailable",
+						"D. The model must be retrained from scratch in production because checkpoints cannot be deployed"
+					],
+					"correctAnswer": "A",
+					"explanation": "Microsoft documents cross-region and cross-subscription deployment of fine-tuned models. The destination region must support fine-tuning, and for cross-subscription deployment the account generating the authorization token needs access to both subscriptions. The release pipeline must validate regional support, target quota, authorization, and target deployment configuration rather than assuming development settings transfer automatically.",
+					"topic": "D3.3 / Cross-environment custom model deployment prerequisites",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/fine-tuning-deploy",
+					"section": "standalone"
+				},
+				{
+					"id": "q137",
+					"originalId": "DAY14-07",
+					"type": "mc",
+					"question": "An AI Builder model is being packaged for promotion to a test environment. The release manager assumes that adding the draft model to a solution will also transport its training data. Which statement is correct?",
+					"options": [
+						"A. Only a model with a published version can be added, and the solution carries the published model executable but not its training data",
+						"B. Every draft checkpoint and all training records are always included automatically",
+						"C. AI Builder models cannot be solution components",
+						"D. The solution transports only the training data, so the target must rebuild the executable"
+					],
+					"correctAnswer": "A",
+					"explanation": "AI Builder supports distributing a model as a solution component, but the model must have a published version. Only that published version is installed in the target environment, and the solution contains the model executable rather than the training data. Training-data governance and reproducibility therefore require a separate ALM design.",
+					"topic": "D3.3 / AI Builder model artifact and training data ALM",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/ai-builder/distribute-model",
+					"section": "standalone"
+				},
+				{
+					"id": "q138",
+					"originalId": "DAY14-08",
+					"type": "mc",
+					"question": "A company wants repeatable promotion of an AI Builder model from development to production and clean servicing of later releases. Which approach should the architect recommend?",
+					"options": [
+						"A. Develop and publish in a development or sandbox environment, package the model in a solution, promote a managed solution, and avoid editing the imported model in production",
+						"B. Train and edit the model directly in production for every release",
+						"C. Export the model outside a solution and let each administrator reconstruct it manually",
+						"D. Import an unmanaged copy and make target-only changes as the primary release history"
+					],
+					"correctAnswer": "A",
+					"explanation": "Microsoft recommends developing AI Builder models in a sandbox or development environment and deploying them to production with managed solutions. Imported-model edits are generally discouraged because they create unmanaged customizations. Keeping changes in source and promoting a new managed version preserves a repeatable, serviceable release path.",
+					"topic": "D3.3 / Managed solution lifecycle for custom AI models",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/ai-builder/distribute-model",
+					"section": "standalone"
+				},
+				{
+					"id": "q139",
+					"originalId": "DAY14-09",
+					"type": "mc",
+					"question": "A Dynamics 365 Finance AI capability was validated in sandbox, but after the application update reaches production the intended users still cannot access it. What should the target-environment validation check?",
+					"options": [
+						"A. Confirm the feature's production Feature management status and lifecycle state, then verify that the users' security roles grant access",
+						"B. Assume application deployment automatically enables every optional feature for every user",
+						"C. Grant users access by changing the feature's source code directly in production",
+						"D. Validate only the model's development endpoint because Dynamics feature state is global across environments"
+					],
+					"correctAnswer": "A",
+					"explanation": "The Finance and Operations Feature management workspace records whether a feature is off, on, scheduled, mandatory, requires attention, or unavailable in that environment. Microsoft also states that enabling a feature doesn't bypass security; users still need access through their security roles. Production validation must therefore cover both target feature state and authorization instead of treating package deployment as automatic enablement.",
+					"topic": "D3.3 / Dynamics 365 finance AI feature validation",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/get-started/feature-management/feature-management-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q140",
+					"originalId": "DAY14-10",
+					"type": "mc",
+					"question": "Customer Service Copilot works in test, but a newly provisioned production environment isn't ready for representatives. Which release checklist is most appropriate?",
+					"options": [
+						"A. In the Power Platform admin center, enable the Customer Service Copilot setting for the production environment and validate administrator role, licensing, region or data-movement requirements, app availability, and representative access",
+						"B. Assume the test environment setting is tenant-global and automatically applies to production",
+						"C. Export the test users' credentials as the production configuration",
+						"D. Skip regional and licensing checks because enabling any Dynamics 365 AI feature overrides them"
+					],
+					"correctAnswer": "A",
+					"explanation": "Customer Service Copilot is enabled by selecting and editing a specific environment in the Power Platform admin center. Microsoft lists System Administrator access and licensing prerequisites and documents region and data-movement conditions. A successful test release doesn't configure another environment, so production enablement and representative access require explicit target-environment validation.",
+					"topic": "D3.3 / Dynamics 365 Customer Service Copilot environment promotion",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/configure-copilot-features",
 					"section": "standalone"
 				}
 			]

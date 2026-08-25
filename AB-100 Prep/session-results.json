@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-24T09:00:45.220333",
+  "timestamp": "2026-08-25T09:06:21.106918",
   "examCode": "AB-100",
   "examName": "Agentic AI Business Solutions Architect",
   "summary": {
@@ -10,7 +10,7 @@
     "skipped": 0,
     "ungraded": 0,
     "accuracy": 100.0,
-    "timeSeconds": 165.6
+    "timeSeconds": 16.5
   },
   "domainBreakdown": {
     "Deploy AI-powered business solutions": {
@@ -21,61 +21,61 @@
     }
   },
   "topicBreakdown": {
-    "D3.3 / AI grounding data configuration across environments": {
+    "D3.3 / Foundry agent versioning and rollback": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Shared AI data configuration and secret separation": {
+    "D3.3 / Foundry hosted-agent identity dependencies": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Environment variable servicing for AI data sources": {
+    "D3.3 / Foundry pre-production evaluation gate": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Connection references for data-access actions": {
+    "D3.3 / Foundry hosted-agent deployment endpoint": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Governed validation of AI solution data dependencies": {
+    "D3.3 / Fine-tuned model inference deployment": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Copilot Studio agent solution lifecycle": {
+    "D3.3 / Cross-environment custom model deployment prerequisites": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Agent action components and solution dependencies": {
+    "D3.3 / AI Builder model artifact and training data ALM": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Custom connector and agent action deployment order": {
+    "D3.3 / Managed solution lifecycle for custom AI models": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Agent solution dependency failure diagnosis": {
+    "D3.3 / Dynamics 365 finance AI feature validation": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Post-import agent configuration and publishing": {
+    "D3.3 / Dynamics 365 Customer Service Copilot environment promotion": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
@@ -86,174 +86,174 @@
   "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "q121",
-      "question": "An agent uses a SharePoint grounding site in development and a different approved site in production. The team wants to promote the same solution without editing the app or flow in each environment. What should the architect recommend?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / AI grounding data configuration across environments",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "Power Platform environment variables let solution components use different data-source parameters in each environment without modifying the components. Microsoft specifically documents SharePoint site and list parameters as an example. Credentials and other secrets should be packaged and transported separately rather than embedded as ordinary environment-variable configuration.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables"
-    },
-    {
-      "questionId": "q122",
-      "question": "A solution contains an AI prompt, a flow, and a canvas app that all access the same environment-specific knowledge endpoint. Which ALM choices are appropriate? (Select ALL that apply)",
-      "userAnswer": "A, B",
-      "correctAnswer": "A, B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Shared AI data configuration and secret separation",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "A single environment variable can be reused across different solution component types, so changing one target value updates their shared configuration. Microsoft also directs teams to package and transport secrets, such as credentials, separately from the components that use them. Hard-coded duplication creates configuration drift, and exported defaults are not an appropriate secret store.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables"
-    },
-    {
-      "questionId": "q123",
-      "question": "A publisher ships an updated managed solution containing the definition and default value of an environment variable used for an AI data source. The customer has already set a production current value. Which behavior should the release design rely on?",
+      "questionId": "q131",
+      "question": "A Foundry agent version passes the production release gate. Two days later, its task-completion score falls sharply. The previous version met all thresholds. Which recovery design best uses Foundry Agent Service lifecycle capabilities?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.3 / Environment variable servicing for AI data sources",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Power Platform separates an environment variable's definition and default value from its current value. This permits a publisher to service solution metadata and defaults while preserving a customer-supplied target-environment value. Components continue resolving configuration through the variable instead of requiring direct edits.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables"
-    },
-    {
-      "questionId": "q124",
-      "question": "A solution-aware flow used as an agent action reads governed business data through a connector. The solution is moving from test to production, where a different authenticated connection must be used. What is the correct design?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Connection references for data-access actions",
+      "topic": "D3.3 / Foundry agent versioning and rollback",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "A connection reference is a solution component that points to a connection for a connector. Solution-aware flows bind to connection references rather than directly to connections. During import, the target environment supplies a connection for each reference, allowing referencing flows to use target-specific authentication without transporting the development credential.",
+      "explanation": "Foundry Agent Service provides built-in versioning and publishing for moving agents from development to production. Microsoft documents that teams can compare changes between versions and roll back to a previous version. A release design should preserve a known-good validated version as the recovery point instead of relying on an untracked production edit.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-connection-reference"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/overview"
     },
     {
-      "questionId": "q125",
-      "question": "A release frequently fails because an AI solution reaches the target environment with missing dependencies and unresolved data-source settings. Which deployment approach best addresses the problem before import begins?",
+      "questionId": "q132",
+      "question": "A hosted Foundry agent works in development but receives authorization failures when deployed to production and calling a protected Azure service. The project managed identity already has access. What should the architect verify first?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.3 / Governed validation of AI solution data dependencies",
+      "topic": "D3.3 / Foundry hosted-agent identity dependencies",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Each hosted agent receives a dedicated Microsoft Entra agent identity at deployment, and that identity is used by the agent container at runtime. The project managed identity is project-wide and supports platform infrastructure operations; it isn't the hosted agent's runtime identity. Target-environment ALM must therefore provision RBAC for the production agent identity on every protected downstream dependency.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents"
+    },
+    {
+      "questionId": "q133",
+      "question": "A team plans to promote a changed Foundry agent directly from development after a few successful playground conversations. Which release gate is most appropriate?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Foundry pre-production evaluation gate",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Power Platform pipelines provide governed ALM and prevalidate solution deployments against the target environment. Microsoft documents that missing dependencies are detected before deployment and that connections and environment variables are supplied and validated up front, reducing manual post-processing and incorrect data-source bindings.",
+      "explanation": "Microsoft Foundry's pre-production evaluation stage uses evaluation datasets to identify edge cases, assess robustness, and measure task adherence, groundedness, relevance, quality, and safety. These results can act as automated CI/CD quality gates. A few playground conversations or a latency-only check do not provide defensible promotion evidence.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/alm/pipelines"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/observability"
     },
     {
-      "questionId": "q126",
-      "question": "A team must promote a Copilot Studio agent through development, test, and production using standard Power Platform ALM. What is the recommended starting sequence?",
+      "questionId": "q134",
+      "question": "A release runbook for a hosted Foundry agent says that programmatic testing cannot begin until the agent is published to a sharing channel. What correction should the architect make?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.3 / Copilot Studio agent solution lifecycle",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "easy",
-      "explanation": "Copilot Studio uses Power Platform solutions as the carrier for agents across environments and for pipeline-based ALM. Microsoft instructs makers to create a custom solution, add the agent, export that solution, and import it into the target environment, while also accounting for required components and dependencies.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
-    },
-    {
-      "questionId": "q127",
-      "question": "After an agent was first added to an unmanaged custom solution, a maker adds a new topic and a Power Automate flow action in Copilot Studio. What must happen before the next export?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Agent action components and solution dependencies",
+      "topic": "D3.3 / Foundry hosted-agent deployment endpoint",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "hard",
-      "explanation": "Microsoft states that components added to an agent, including topics or flows, must also be added to the agent's unmanaged solution before export. Required flow and environment-variable objects must be included so the solution contains its dependencies. Assuming every linked resource is automatically packaged can produce an incomplete import.",
+      "explanation": "Foundry Agent Service creates a dedicated endpoint and agent identity when a hosted agent is deployed. The current hosted-agent guidance states that the endpoint is immediately available for programmatic access and publishing isn't required for that access. The endpoint protocols still depend on the deployed agent version definition, so the release test must validate the intended protocol and configuration in the target project.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents"
     },
     {
-      "questionId": "q128",
-      "question": "A Copilot Studio agent action uses a custom connector and a connection reference. The components are being deployed to a new target environment. Which import sequence is required?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Custom connector and agent action deployment order",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Copilot Studio's solution guidance explicitly requires custom connectors to be imported first, followed by the connection reference with the agent solution. A connection reference points to a connection for a connector; it does not contain the custom connector implementation, so reversing the dependency order risks import failure.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
-    },
-    {
-      "questionId": "q129",
-      "question": "An imported Copilot Studio agent solution fails in the target environment. The release team suspects a missing topic, flow, or other required object. What should it do first?",
+      "questionId": "q135",
+      "question": "A fine-tuning job completes successfully, but the production application cannot invoke the resulting model. The team configured the application with the fine-tuning job ID. What is missing?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.3 / Agent solution dependency failure diagnosis",
+      "topic": "D3.3 / Fine-tuned model inference deployment",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Microsoft identifies missing required components as the most common reason an agent solution import fails and provides an XML import log for diagnosis. The defensible ALM response is to correct dependency packaging in the source solution and redeploy, rather than making untracked target edits or exposing an incomplete agent.",
+      "explanation": "Completing fine-tuning creates a custom model, but deployment is the step that makes it available for inferencing. The deployment requires a deployment name, which applications use to reference the model. The release must therefore treat the custom model artifact, inference deployment, endpoint configuration, and application binding as separate lifecycle concerns.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/fine-tuning-deploy"
     },
     {
-      "questionId": "q130",
-      "question": "A Copilot Studio agent solution imports successfully into production. The agent uses user authentication, but users still cannot receive it through the intended channel. Which release steps remain?",
+      "questionId": "q136",
+      "question": "A validated fine-tuned model must be deployed by automation from a development subscription into a production subscription in another region. Which prerequisite is required?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.3 / Post-import agent configuration and publishing",
+      "topic": "D3.3 / Cross-environment custom model deployment prerequisites",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "hard",
-      "explanation": "Copilot Studio's import guidance requires user authentication to be configured again for the imported agent and states that an imported agent must be published before it can be shared. Target-specific connections, variables, and channel details should also be validated because successful solution import alone is not the complete release gate.",
+      "explanation": "Microsoft documents cross-region and cross-subscription deployment of fine-tuned models. The destination region must support fine-tuning, and for cross-subscription deployment the account generating the authorization token needs access to both subscriptions. The release pipeline must validate regional support, target quota, authorization, and target deployment configuration rather than assuming development settings transfer automatically.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/fine-tuning-deploy"
+    },
+    {
+      "questionId": "q137",
+      "question": "An AI Builder model is being packaged for promotion to a test environment. The release manager assumes that adding the draft model to a solution will also transport its training data. Which statement is correct?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / AI Builder model artifact and training data ALM",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "AI Builder supports distributing a model as a solution component, but the model must have a published version. Only that published version is installed in the target environment, and the solution contains the model executable rather than the training data. Training-data governance and reproducibility therefore require a separate ALM design.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/ai-builder/distribute-model"
+    },
+    {
+      "questionId": "q138",
+      "question": "A company wants repeatable promotion of an AI Builder model from development to production and clean servicing of later releases. Which approach should the architect recommend?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Managed solution lifecycle for custom AI models",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Microsoft recommends developing AI Builder models in a sandbox or development environment and deploying them to production with managed solutions. Imported-model edits are generally discouraged because they create unmanaged customizations. Keeping changes in source and promoting a new managed version preserves a repeatable, serviceable release path.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/ai-builder/distribute-model"
+    },
+    {
+      "questionId": "q139",
+      "question": "A Dynamics 365 Finance AI capability was validated in sandbox, but after the application update reaches production the intended users still cannot access it. What should the target-environment validation check?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Dynamics 365 finance AI feature validation",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "The Finance and Operations Feature management workspace records whether a feature is off, on, scheduled, mandatory, requires attention, or unavailable in that environment. Microsoft also states that enabling a feature doesn't bypass security; users still need access through their security roles. Production validation must therefore cover both target feature state and authorization instead of treating package deployment as automatic enablement.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/get-started/feature-management/feature-management-overview"
+    },
+    {
+      "questionId": "q140",
+      "question": "Customer Service Copilot works in test, but a newly provisioned production environment isn't ready for representatives. Which release checklist is most appropriate?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Dynamics 365 Customer Service Copilot environment promotion",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Customer Service Copilot is enabled by selecting and editing a specific environment in the Power Platform admin center. Microsoft lists System Administrator access and licensing prerequisites and documents region and data-movement conditions. A successful test release doesn't configure another environment, so production enablement and representative access require explicit target-environment validation.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/configure-copilot-features"
     }
   ]
 }

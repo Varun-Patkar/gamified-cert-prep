@@ -98,8 +98,9 @@
 
 #### Day 14 (2026-08-25, Tue) — D3.3 ALM (Foundry + Models + D365)
 
-- [ ] Study: ALM for Foundry Agents service, custom AI models, and AI in D365 apps
-- [ ] Estimated time: 1 hr
+- [x] Study: ALM for Foundry Agents service, custom AI models, and AI in D365 apps
+- [x] Practice: 10 new Domain 3 questions (q131–q140; 10/10 = 100%; 16.5s)
+- [x] Estimated time: 1 hr
 
 #### Day 15 (2026-08-26, Wed) — D3.4 Agent & Model Security
 

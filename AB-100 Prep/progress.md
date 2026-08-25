@@ -3,18 +3,18 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 13 / 31
-- Questions Answered: 143 / 130 (completed bank plus review and carryover questions)
-- Accuracy: 96.5% (138/143)
-- Current Day: Day 14 (next: 2026-08-25)
+- Sessions Completed: 14 / 31
+- Questions Answered: 153 / 140 (completed bank plus review and carryover questions)
+- Accuracy: 96.7% (148/153)
+- Current Day: Day 15 (next: 2026-08-26)
 
 ## Domain Confidence (self-rated 1–5)
 
-| Domain                                   | Weight | Confidence           | Notes                                                                                                                                       |
-| ---------------------------------------- | ------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)       | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing                        |
-| D2: Design AI-powered business solutions | 25–30% | 4 (49/50 Days 6–10)  | Strong overall; review custom regex and closed-list entity collection for generative topic inputs                                           |
-| D3: Deploy AI-powered business solutions | 40–45% | 4 (33/33 Days 11–13) | Strong on monitoring, testing, and Power Platform/Copilot Studio ALM; continue with Foundry/model ALM, security, governance, and compliance |
+| Domain                                   | Weight | Confidence           | Notes                                                                                                                                                                      |
+| ---------------------------------------- | ------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)       | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing                                                       |
+| D2: Design AI-powered business solutions | 25–30% | 4 (49/50 Days 6–10)  | Strong overall; review custom regex and closed-list entity collection for generative topic inputs                                                                          |
+| D3: Deploy AI-powered business solutions | 40–45% | 4 (43/43 Days 11–14) | Strong on monitoring, testing, and ALM across Power Platform, Copilot Studio, Foundry, custom models, and Dynamics 365; continue with security, governance, and compliance |
 
 ## Daily Log
 
@@ -170,6 +170,18 @@
 - Skipped/ungraded: 0 / 0
 - Reference: sessions/day-13-alm-data-copilot-studio.md
 - Next action: Day 14 — D3.3 ALM (Foundry + Models + D365)
+
+### Day 14 — 2026-08-25 — D3.3 ALM (Foundry + Models + D365)
+
+- Status: Completed
+- Covered: Foundry agent versioning, evaluation gates, rollback, hosted-agent endpoints and runtime identities; fine-tuned model inference deployment and cross-environment prerequisites; AI Builder solution packaging and managed promotion; Dynamics 365 Finance feature and role validation; Customer Service Copilot per-environment enablement
+- Quiz: 10 newly researched D3.3 questions — q131 through q140
+- Accuracy: 10 / 10 (100%) — perfect score
+- Time: 16.5s
+- Weak spots: None observed; retain the separation between artifacts, deployment endpoints, target configuration, runtime identity/RBAC, and release evidence
+- Skipped/ungraded: 0 / 0
+- Reference: sessions/day-14-alm-foundry-models-d365.md
+- Next action: Day 15 — D3.4 Agent & Model Security
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12
