@@ -104,8 +104,9 @@
 
 #### Day 15 (2026-08-26, Wed) — D3.4 Agent & Model Security
 
-- [ ] Study: security for agents; model security; access controls on grounding data & tuning
-- [ ] Estimated time: 1 hr
+- [x] Study: security for agents; model security; access controls on grounding data & tuning
+- [x] Practice: 10 new D3.4 questions (q141–q150) plus 3 D3.3 carryover questions (13/13 = 100%; 14.0s)
+- [x] Estimated time: 1 hr
 
 #### Day 16 (2026-08-27, Thu) — D3.4 Governance & Responsible AI
 

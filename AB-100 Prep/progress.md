@@ -3,18 +3,18 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 14 / 31
-- Questions Answered: 153 / 140 (completed bank plus review and carryover questions)
-- Accuracy: 96.7% (148/153)
-- Current Day: Day 15 (next: 2026-08-26)
+- Sessions Completed: 15 / 31
+- Questions Answered: 166 / 150 (completed bank plus review and carryover questions)
+- Accuracy: 97.0% (161/166)
+- Current Day: Day 16 (next: 2026-08-27)
 
 ## Domain Confidence (self-rated 1–5)
 
-| Domain                                   | Weight | Confidence           | Notes                                                                                                                                                                      |
-| ---------------------------------------- | ------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)       | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing                                                       |
-| D2: Design AI-powered business solutions | 25–30% | 4 (49/50 Days 6–10)  | Strong overall; review custom regex and closed-list entity collection for generative topic inputs                                                                          |
-| D3: Deploy AI-powered business solutions | 40–45% | 4 (43/43 Days 11–14) | Strong on monitoring, testing, and ALM across Power Platform, Copilot Studio, Foundry, custom models, and Dynamics 365; continue with security, governance, and compliance |
+| Domain                                   | Weight | Confidence           | Notes                                                                                                                                                                                    |
+| ---------------------------------------- | ------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)       | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing                                                                     |
+| D2: Design AI-powered business solutions | 25–30% | 4 (49/50 Days 6–10)  | Strong overall; review custom regex and closed-list entity collection for generative topic inputs                                                                                        |
+| D3: Deploy AI-powered business solutions | 40–45% | 4 (56/56 Days 11–15) | Strong on monitoring, testing, ALM, agent/model identity boundaries, least privilege, grounding security trimming, DLP, and security validation; continue with governance and compliance |
 
 ## Daily Log
 
@@ -182,6 +182,18 @@
 - Skipped/ungraded: 0 / 0
 - Reference: sessions/day-14-alm-foundry-models-d365.md
 - Next action: Day 15 — D3.4 Agent & Model Security
+
+### Day 15 — 2026-08-26 — D3.4 Agent & Model Security
+
+- Status: Completed
+- Covered: author, runtime agent, end-user, and underlying-data identity boundaries; delegated access versus maker credentials; managed identity and least-privilege RBAC; deterministic tool authorization; Copilot Studio DLP; grounding security trimming; Foundry control-plane and data-plane access; model endpoint defense in depth; fine-tuning data isolation; negative security tests and audit evidence
+- Quiz: 10 new D3.4 questions (q141 through q150) plus 3 D3.3 carryover questions (q138 through q140)
+- Accuracy: 13 / 13 (100%) — perfect score
+- Time: 14.0s
+- Weak spots: None observed; retain that agent sharing, authentication, tool identity, and source authorization are separate gates, and that private networking or managed identity does not replace least-privilege authorization
+- Skipped/ungraded: 0 / 0
+- Reference: sessions/day-15-agent-model-security.md
+- Next action: Day 16 — D3.4 Governance & Responsible AI
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12

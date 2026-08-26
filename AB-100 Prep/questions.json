@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 140,
+	"totalQuestions": 150,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)",
 		"Microsoft Learn: Copilot Studio analytics overview and conversational-agent effectiveness",
@@ -21,9 +21,16 @@
 		"Microsoft Learn: Microsoft Foundry Agent Service deployment, versioning, and identity",
 		"Microsoft Learn: Microsoft Foundry Models and fine-tuned model deployment",
 		"Microsoft Learn: AI Builder model distribution with solutions",
-		"Microsoft Learn: Dynamics 365 AI feature management across environments"
+		"Microsoft Learn: Dynamics 365 AI feature management across environments",
+		"Microsoft Learn: Copilot Studio user and tool authentication",
+		"Microsoft Learn: Copilot Studio maker-provided credential controls and data policies",
+		"Microsoft Learn: Copilot Studio SharePoint knowledge source authorization",
+		"Microsoft Learn: Microsoft Foundry authentication, authorization, and role-based access control",
+		"Microsoft Learn: Microsoft Foundry private networking and network isolation",
+		"Microsoft Learn: Microsoft Foundry model data privacy and fine-tuning security",
+		"Microsoft Learn: Copilot Studio automatic security scan"
 	],
-	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q140 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, and Day 14 questions q131-q140 are mapped to Domain 3, Deploy AI-powered business solutions.",
+	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q150 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, and Day 15 questions q141-q150 are mapped to Domain 3, Deploy AI-powered business solutions.",
 	"caseStudies": [
 		{
 			"id": "chg",
@@ -2621,6 +2628,196 @@
 					"difficulty": "medium",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/configure-copilot-features",
+					"section": "standalone"
+				},
+				{
+					"id": "q141",
+					"originalId": "DAY15-01",
+					"type": "mc",
+					"question": "A maker publishes an authenticated Copilot Studio agent and shares it with the entire finance department. A user can open the agent but cannot retrieve a restricted ledger record. The maker claims that sharing should grant access. Which security interpretation is correct?",
+					"options": [
+						"A. Agent access, runtime identity, tool authorization, and source-record permissions are separate gates, so sharing the agent must not grant ledger access",
+						"B. Agent sharing should copy the maker's source permissions to every authenticated user",
+						"C. Successful conversation authentication proves authorization to every configured data source",
+						"D. The model endpoint should decide record access from the user's natural-language request"
+					],
+					"correctAnswer": "A",
+					"explanation": "Copilot Studio distinguishes access to the agent from authentication for tools and authorization in the underlying service. A secure design evaluates the author, runtime workload, end user, and source-system permission boundaries independently; neither publishing nor sharing transfers the maker's ledger privileges.",
+					"topic": "D3.4 / Identity boundary separation",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-end-user-authentication",
+					"section": "standalone"
+				},
+				{
+					"id": "q142",
+					"originalId": "DAY15-02",
+					"type": "mc",
+					"question": "A Copilot Studio agent uses a connector to read each employee's own compensation records and submit a correction on that employee's behalf. Which credential design best prevents the maker's permissions from becoming a shared authorization ceiling?",
+					"options": [
+						"A. Configure user authentication for the tool so the downstream service evaluates the signed-in employee's access",
+						"B. Use the maker's connection because the agent itself already requires Microsoft authentication",
+						"C. Store a shared administrator API key in the agent instructions",
+						"D. Use an anonymous connector and ask the model to reject requests for other employees"
+					],
+					"correctAnswer": "A",
+					"explanation": "Microsoft recommends user authentication when a tool retrieves information that only the user can access or performs work on the user's behalf. Agent sign-in and tool credentials are separate settings; a maker-provided connection could let callers exercise the maker's broader authority.",
+					"topic": "D3.4 / Delegated end-user authorization versus maker identity",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication",
+					"section": "standalone"
+				},
+				{
+					"id": "q143",
+					"originalId": "DAY15-03",
+					"type": "mc",
+					"question": "A nightly autonomous agent must read approved invoices from one storage account and create payment-review records in one Dataverse environment. Security policy prohibits stored secrets. What should the architect implement?",
+					"options": [
+						"A. A dedicated managed identity with only the required storage data role and narrowly scoped Dataverse permissions for those operations",
+						"B. The solution maker's delegated token, refreshed interactively before every nightly run",
+						"C. A managed identity with Owner at subscription scope so dependency authorization cannot fail",
+						"D. A storage account key shared with the agent and every downstream tool"
+					],
+					"correctAnswer": "A",
+					"explanation": "An unattended workload needs its own nonhuman identity. Managed identity removes credential storage but grants no permissions by itself, so each dependency still requires the minimum role or application permission at the narrowest practical scope; subscription Owner would create severe excess privilege.",
+					"topic": "D3.4 / Managed identity and least-privilege RBAC",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/rbac-foundry",
+					"section": "standalone"
+				},
+				{
+					"id": "q144",
+					"originalId": "DAY15-04",
+					"type": "mc",
+					"question": "An agent can close customer accounts through a tool that uses a shared service identity. A prompt-injected document causes the model to select another customer's account ID. Which design most directly prevents privilege amplification at execution time?",
+					"options": [
+						"A. Reauthorize the caller and target account in deterministic server-side code, allowlist the operation, and require confirmation or approval before the close",
+						"B. Add an instruction telling the model never to close an unauthorized account",
+						"C. Give the shared identity access to every account so tool calls behave consistently",
+						"D. Rely on content filters to determine whether the caller owns the selected account"
+					],
+					"correctAnswer": "A",
+					"explanation": "The model and retrieved content are not authorization authorities. Sensitive actions must validate structured parameters, ownership, and caller rights outside the model at execution time, with tightly scoped tools and confirmation or approval for high-impact changes. Prompt instructions and content filters cannot enforce business permissions.",
+					"topic": "D3.4 / Tool authorization and privilege amplification",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication",
+					"section": "standalone"
+				},
+				{
+					"id": "q145",
+					"originalId": "DAY15-05",
+					"type": "mc",
+					"question": "A Copilot Studio agent reads regulated case data through a business connector and can send tool output to an arbitrary external HTTP endpoint. The organization also wants each user's source permissions enforced. Which configuration addresses both requirements?",
+					"options": [
+						"A. Use end-user credentials for the case connector and apply a data policy that blocks or separates the HTTP connector from the business data group",
+						"B. Use maker-provided credentials and place both connectors in the Non-business group",
+						"C. Enable conversation authentication only; it automatically applies record authorization and connector DLP",
+						"D. Add a content filter because it replaces connector credential and data-policy controls"
+					],
+					"correctAnswer": "A",
+					"explanation": "End-user credentials preserve user-specific downstream permissions, while Power Platform data policies govern which connectors and data paths may coexist. These controls solve different problems: DLP limits exfiltration paths but doesn't provide record authorization, and conversation authentication doesn't choose the tool identity.",
+					"topic": "D3.4 / Copilot Studio connector credentials and DLP",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-data-loss-prevention",
+					"section": "standalone"
+				},
+				{
+					"id": "q146",
+					"originalId": "DAY15-06",
+					"type": "mc",
+					"question": "A custom RAG agent copies documents from SharePoint sites with different ACLs into one Azure AI Search index. The team proposes retrieving broadly and instructing the model to omit anything the current user should not see. What should the architect require instead?",
+					"options": [
+						"A. Ingest authorization metadata and apply a server-enforced filter derived from trusted user claims before authorized chunks are added to the prompt",
+						"B. Retrieve all matching chunks and remove unauthorized citations after response generation",
+						"C. Give all users index-reader access because SharePoint checked permissions during ingestion",
+						"D. Use a system prompt as the sole security-trimming mechanism"
+					],
+					"correctAnswer": "A",
+					"explanation": "Security trimming must occur during retrieval, before restricted text, metadata, or filenames enter the model prompt. A custom index needs authoritative ACL metadata and a filter built from trusted identity context. Post-generation filtering and model instructions act too late because the unauthorized content has already crossed the boundary.",
+					"topic": "D3.4 / Grounding security trimming before prompt construction",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-sharepoint",
+					"section": "standalone"
+				},
+				{
+					"id": "q147",
+					"originalId": "DAY15-07",
+					"type": "mc",
+					"question": "A platform engineer must configure Foundry networking and deploy models, while a production application only needs to invoke one approved agent. Which authorization design best applies separation of duties?",
+					"options": [
+						"A. Give the engineer scoped management permissions and give the application a least-privilege data-plane consumer role without deployment or role-assignment authority",
+						"B. Give both identities subscription Contributor because control-plane access always includes every data-plane operation",
+						"C. Give the application an account key because keys can restrict access to one operation per user",
+						"D. Give the application deployment permissions and rely on its endpoint name to prevent configuration changes"
+					],
+					"correctAnswer": "A",
+					"explanation": "Foundry management operations and runtime data operations have distinct authorization surfaces. Microsoft recommends Entra ID with scoped RBAC; an inference-only application should receive a consumer role rather than permissions to configure resources, deploy models, or assign roles. Resource keys grant broad static authority rather than granular per-principal access.",
+					"topic": "D3.4 / Foundry control-plane and data-plane authorization",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/authentication-authorization-foundry",
+					"section": "standalone"
+				},
+				{
+					"id": "q148",
+					"originalId": "DAY15-08",
+					"type": "mc",
+					"question": "A regulated workload exposes a Foundry model deployment only through a private endpoint. The team plans to remove Entra role checks because the endpoint is no longer reachable from the public internet. What should the architect recommend?",
+					"options": [
+						"A. Keep Entra authentication and least-privilege RBAC, disable or restrict public access, validate private DNS, and restrict approved outbound dependencies",
+						"B. Remove identity controls because private network reachability is equivalent to authorization",
+						"C. Publish an administrator key to every workload in the virtual network",
+						"D. Replace network isolation and RBAC with content filters on model responses"
+					],
+					"correctAnswer": "A",
+					"explanation": "Private endpoints reduce network exposure but don't decide which principal may invoke or administer a model. Defense in depth retains Entra ID and scoped RBAC, controls public network access, configures private DNS correctly, and constrains outbound connectivity to approved storage, search, Key Vault, and other dependencies.",
+					"topic": "D3.4 / Model endpoint private-network defense in depth",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/how-to/configure-private-link",
+					"section": "standalone"
+				},
+				{
+					"id": "q149",
+					"originalId": "DAY15-09",
+					"type": "mc",
+					"question": "A team will fine-tune a support model from transcripts that contain customer identifiers, obsolete access tokens, and internal escalation instructions. Data scientists also currently have permission to deploy any resulting model to production. Which change best protects the lifecycle?",
+					"options": [
+						"A. Curate and sanitize the dataset, restrict and version the data and model artifacts, and separate training permission from production deployment and invocation permission",
+						"B. Upload the transcripts unchanged because platform encryption removes the need for data minimization",
+						"C. Give every production caller access to the training files so model provenance is transparent",
+						"D. Allow trainers to deploy directly because fine-tuning authorization automatically proves production approval"
+					],
+					"correctAnswer": "A",
+					"explanation": "Service privacy guarantees don't replace customer governance. Training data should be purpose-limited, sanitized of secrets and unnecessary personal data, access-restricted, versioned, and retained only as approved. Separating dataset curation, training, deployment, and invocation prevents one permission from exposing sensitive data or an unapproved custom model.",
+					"topic": "D3.4 / Fine-tuning data and model access separation",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+					"section": "standalone"
+				},
+				{
+					"id": "q150",
+					"originalId": "DAY15-10",
+					"type": "mc",
+					"question": "A Copilot Studio agent passes functional tests using an administrator account, and its automatic security scan reports no blocking issue. Which final release evidence best demonstrates that authorization controls fail closed?",
+					"options": [
+						"A. Negative tests for missing, revoked, wrong-tenant, and low-privilege identities plus audit records that correlate principal, target, authorization decision, outcome, and trace ID",
+						"B. More successful administrator conversations without reviewing denied operations",
+						"C. A screenshot showing that the agent was published to its channel",
+						"D. A content-filter report without tool, connector, identity, or source-access tests"
+					],
+					"correctAnswer": "A",
+					"explanation": "A prepublish scan checks important configuration risks but isn't complete security validation. Release testing should include unauthorized and degraded identity cases, inaccessible resources, blocked connectors, and exfiltration attempts, while audit evidence records who attempted which protected operation and why it was allowed or denied without logging secrets.",
+					"topic": "D3.4 / Negative security testing and authorization auditing",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-scan",
 					"section": "standalone"
 				}
 			]

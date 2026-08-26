@@ -1,68 +1,26 @@
 {
-  "timestamp": "2026-08-25T09:06:21.106918",
+  "timestamp": "2026-08-26T08:54:07.896452",
   "examCode": "AB-100",
   "examName": "Agentic AI Business Solutions Architect",
   "summary": {
-    "totalQuestions": 10,
-    "gradedQuestions": 10,
-    "correct": 10,
+    "totalQuestions": 13,
+    "gradedQuestions": 13,
+    "correct": 13,
     "wrong": 0,
     "skipped": 0,
     "ungraded": 0,
     "accuracy": 100.0,
-    "timeSeconds": 16.5
+    "timeSeconds": 14.0
   },
   "domainBreakdown": {
     "Deploy AI-powered business solutions": {
-      "total": 10,
-      "correct": 10,
+      "total": 13,
+      "correct": 13,
       "wrong": 0,
       "skipped": 0
     }
   },
   "topicBreakdown": {
-    "D3.3 / Foundry agent versioning and rollback": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.3 / Foundry hosted-agent identity dependencies": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.3 / Foundry pre-production evaluation gate": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.3 / Foundry hosted-agent deployment endpoint": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.3 / Fine-tuned model inference deployment": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.3 / Cross-environment custom model deployment prerequisites": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.3 / AI Builder model artifact and training data ALM": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
     "D3.3 / Managed solution lifecycle for custom AI models": {
       "total": 1,
       "correct": 1,
@@ -80,130 +38,71 @@
       "correct": 1,
       "wrong": 0,
       "skipped": 0
+    },
+    "D3.4 / Identity boundary separation": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Delegated end-user authorization versus maker identity": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Managed identity and least-privilege RBAC": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Tool authorization and privilege amplification": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Copilot Studio connector credentials and DLP": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Grounding security trimming before prompt construction": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Foundry control-plane and data-plane authorization": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Model endpoint private-network defense in depth": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Fine-tuning data and model access separation": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Negative security testing and authorization auditing": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
     }
   },
   "wrongQuestions": [],
   "skippedQuestions": [],
   "allResults": [
-    {
-      "questionId": "q131",
-      "question": "A Foundry agent version passes the production release gate. Two days later, its task-completion score falls sharply. The previous version met all thresholds. Which recovery design best uses Foundry Agent Service lifecycle capabilities?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Foundry agent versioning and rollback",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "Foundry Agent Service provides built-in versioning and publishing for moving agents from development to production. Microsoft documents that teams can compare changes between versions and roll back to a previous version. A release design should preserve a known-good validated version as the recovery point instead of relying on an untracked production edit.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/overview"
-    },
-    {
-      "questionId": "q132",
-      "question": "A hosted Foundry agent works in development but receives authorization failures when deployed to production and calling a protected Azure service. The project managed identity already has access. What should the architect verify first?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Foundry hosted-agent identity dependencies",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Each hosted agent receives a dedicated Microsoft Entra agent identity at deployment, and that identity is used by the agent container at runtime. The project managed identity is project-wide and supports platform infrastructure operations; it isn't the hosted agent's runtime identity. Target-environment ALM must therefore provision RBAC for the production agent identity on every protected downstream dependency.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents"
-    },
-    {
-      "questionId": "q133",
-      "question": "A team plans to promote a changed Foundry agent directly from development after a few successful playground conversations. Which release gate is most appropriate?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Foundry pre-production evaluation gate",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "Microsoft Foundry's pre-production evaluation stage uses evaluation datasets to identify edge cases, assess robustness, and measure task adherence, groundedness, relevance, quality, and safety. These results can act as automated CI/CD quality gates. A few playground conversations or a latency-only check do not provide defensible promotion evidence.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/observability"
-    },
-    {
-      "questionId": "q134",
-      "question": "A release runbook for a hosted Foundry agent says that programmatic testing cannot begin until the agent is published to a sharing channel. What correction should the architect make?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Foundry hosted-agent deployment endpoint",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Foundry Agent Service creates a dedicated endpoint and agent identity when a hosted agent is deployed. The current hosted-agent guidance states that the endpoint is immediately available for programmatic access and publishing isn't required for that access. The endpoint protocols still depend on the deployed agent version definition, so the release test must validate the intended protocol and configuration in the target project.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents"
-    },
-    {
-      "questionId": "q135",
-      "question": "A fine-tuning job completes successfully, but the production application cannot invoke the resulting model. The team configured the application with the fine-tuning job ID. What is missing?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Fine-tuned model inference deployment",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "Completing fine-tuning creates a custom model, but deployment is the step that makes it available for inferencing. The deployment requires a deployment name, which applications use to reference the model. The release must therefore treat the custom model artifact, inference deployment, endpoint configuration, and application binding as separate lifecycle concerns.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/fine-tuning-deploy"
-    },
-    {
-      "questionId": "q136",
-      "question": "A validated fine-tuned model must be deployed by automation from a development subscription into a production subscription in another region. Which prerequisite is required?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Cross-environment custom model deployment prerequisites",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Microsoft documents cross-region and cross-subscription deployment of fine-tuned models. The destination region must support fine-tuning, and for cross-subscription deployment the account generating the authorization token needs access to both subscriptions. The release pipeline must validate regional support, target quota, authorization, and target deployment configuration rather than assuming development settings transfer automatically.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/fine-tuning-deploy"
-    },
-    {
-      "questionId": "q137",
-      "question": "An AI Builder model is being packaged for promotion to a test environment. The release manager assumes that adding the draft model to a solution will also transport its training data. Which statement is correct?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / AI Builder model artifact and training data ALM",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "AI Builder supports distributing a model as a solution component, but the model must have a published version. Only that published version is installed in the target environment, and the solution contains the model executable rather than the training data. Training-data governance and reproducibility therefore require a separate ALM design.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/ai-builder/distribute-model"
-    },
     {
       "questionId": "q138",
       "question": "A company wants repeatable promotion of an AI Builder model from development to production and clean servicing of later releases. Which approach should the architect recommend?",
@@ -254,6 +153,176 @@
       "questionImages": [],
       "answerImages": [],
       "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/configure-copilot-features"
+    },
+    {
+      "questionId": "q141",
+      "question": "A maker publishes an authenticated Copilot Studio agent and shares it with the entire finance department. A user can open the agent but cannot retrieve a restricted ledger record. The maker claims that sharing should grant access. Which security interpretation is correct?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Identity boundary separation",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Copilot Studio distinguishes access to the agent from authentication for tools and authorization in the underlying service. A secure design evaluates the author, runtime workload, end user, and source-system permission boundaries independently; neither publishing nor sharing transfers the maker's ledger privileges.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-end-user-authentication"
+    },
+    {
+      "questionId": "q142",
+      "question": "A Copilot Studio agent uses a connector to read each employee's own compensation records and submit a correction on that employee's behalf. Which credential design best prevents the maker's permissions from becoming a shared authorization ceiling?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Delegated end-user authorization versus maker identity",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Microsoft recommends user authentication when a tool retrieves information that only the user can access or performs work on the user's behalf. Agent sign-in and tool credentials are separate settings; a maker-provided connection could let callers exercise the maker's broader authority.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication"
+    },
+    {
+      "questionId": "q143",
+      "question": "A nightly autonomous agent must read approved invoices from one storage account and create payment-review records in one Dataverse environment. Security policy prohibits stored secrets. What should the architect implement?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Managed identity and least-privilege RBAC",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "An unattended workload needs its own nonhuman identity. Managed identity removes credential storage but grants no permissions by itself, so each dependency still requires the minimum role or application permission at the narrowest practical scope; subscription Owner would create severe excess privilege.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/rbac-foundry"
+    },
+    {
+      "questionId": "q144",
+      "question": "An agent can close customer accounts through a tool that uses a shared service identity. A prompt-injected document causes the model to select another customer's account ID. Which design most directly prevents privilege amplification at execution time?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Tool authorization and privilege amplification",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "The model and retrieved content are not authorization authorities. Sensitive actions must validate structured parameters, ownership, and caller rights outside the model at execution time, with tightly scoped tools and confirmation or approval for high-impact changes. Prompt instructions and content filters cannot enforce business permissions.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication"
+    },
+    {
+      "questionId": "q145",
+      "question": "A Copilot Studio agent reads regulated case data through a business connector and can send tool output to an arbitrary external HTTP endpoint. The organization also wants each user's source permissions enforced. Which configuration addresses both requirements?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Copilot Studio connector credentials and DLP",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "End-user credentials preserve user-specific downstream permissions, while Power Platform data policies govern which connectors and data paths may coexist. These controls solve different problems: DLP limits exfiltration paths but doesn't provide record authorization, and conversation authentication doesn't choose the tool identity.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-data-loss-prevention"
+    },
+    {
+      "questionId": "q146",
+      "question": "A custom RAG agent copies documents from SharePoint sites with different ACLs into one Azure AI Search index. The team proposes retrieving broadly and instructing the model to omit anything the current user should not see. What should the architect require instead?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Grounding security trimming before prompt construction",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Security trimming must occur during retrieval, before restricted text, metadata, or filenames enter the model prompt. A custom index needs authoritative ACL metadata and a filter built from trusted identity context. Post-generation filtering and model instructions act too late because the unauthorized content has already crossed the boundary.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-sharepoint"
+    },
+    {
+      "questionId": "q147",
+      "question": "A platform engineer must configure Foundry networking and deploy models, while a production application only needs to invoke one approved agent. Which authorization design best applies separation of duties?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Foundry control-plane and data-plane authorization",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "Foundry management operations and runtime data operations have distinct authorization surfaces. Microsoft recommends Entra ID with scoped RBAC; an inference-only application should receive a consumer role rather than permissions to configure resources, deploy models, or assign roles. Resource keys grant broad static authority rather than granular per-principal access.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/concepts/authentication-authorization-foundry"
+    },
+    {
+      "questionId": "q148",
+      "question": "A regulated workload exposes a Foundry model deployment only through a private endpoint. The team plans to remove Entra role checks because the endpoint is no longer reachable from the public internet. What should the architect recommend?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Model endpoint private-network defense in depth",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Private endpoints reduce network exposure but don't decide which principal may invoke or administer a model. Defense in depth retains Entra ID and scoped RBAC, controls public network access, configures private DNS correctly, and constrains outbound connectivity to approved storage, search, Key Vault, and other dependencies.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/how-to/configure-private-link"
+    },
+    {
+      "questionId": "q149",
+      "question": "A team will fine-tune a support model from transcripts that contain customer identifiers, obsolete access tokens, and internal escalation instructions. Data scientists also currently have permission to deploy any resulting model to production. Which change best protects the lifecycle?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Fine-tuning data and model access separation",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Service privacy guarantees don't replace customer governance. Training data should be purpose-limited, sanitized of secrets and unnecessary personal data, access-restricted, versioned, and retained only as approved. Separating dataset curation, training, deployment, and invocation prevents one permission from exposing sensitive data or an unapproved custom model.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy"
+    },
+    {
+      "questionId": "q150",
+      "question": "A Copilot Studio agent passes functional tests using an administrator account, and its automatic security scan reports no blocking issue. Which final release evidence best demonstrates that authorization controls fail closed?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Negative security testing and authorization auditing",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "A prepublish scan checks important configuration risks but isn't complete security validation. Release testing should include unauthorized and degraded identity cases, inaccessible resources, blocked connectors, and exfiltration attempts, while audit evidence records who attempted which protected operation and why it was allowed or denied without logging secrets.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-scan"
     }
   ]
 }
