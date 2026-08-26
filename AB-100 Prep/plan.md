@@ -110,8 +110,9 @@
 
 #### Day 16 (2026-08-27, Thu) — D3.4 Governance & Responsible AI
 
-- [ ] Study: governance for agents; Responsible AI principles; vulnerabilities & mitigations (prompt manipulation/injection)
-- [ ] Estimated time: 1 hr
+- [x] Study: governance for agents; Responsible AI principles; vulnerabilities & mitigations (prompt manipulation/injection)
+- [x] Practice: 10 new D3.4 questions (q151–q160; 10/10 = 100%; 1m 2.7s)
+- [x] Estimated time: 1 hr
 
 #### Day 17 (2026-08-28, Fri) — D3.4 Compliance & Audit
 

@@ -3,10 +3,10 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 15 / 31
-- Questions Answered: 166 / 150 (completed bank plus review and carryover questions)
-- Accuracy: 97.0% (161/166)
-- Current Day: Day 16 (next: 2026-08-27)
+- Sessions Completed: 16 / 31
+- Questions Answered: 176 / 160 (completed bank plus review and carryover questions)
+- Accuracy: 97.2% (171/176)
+- Current Day: Day 17 (next: 2026-08-28)
 
 ## Domain Confidence (self-rated 1–5)
 
@@ -14,7 +14,7 @@
 | ---------------------------------------- | ------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)       | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing                                                                     |
 | D2: Design AI-powered business solutions | 25–30% | 4 (49/50 Days 6–10)  | Strong overall; review custom regex and closed-list entity collection for generative topic inputs                                                                                        |
-| D3: Deploy AI-powered business solutions | 40–45% | 4 (56/56 Days 11–15) | Strong on monitoring, testing, ALM, agent/model identity boundaries, least privilege, grounding security trimming, DLP, and security validation; continue with governance and compliance |
+| D3: Deploy AI-powered business solutions | 40–45% | 4 (66/66 Days 11–16) | Strong on monitoring, testing, ALM, security, agent governance, Responsible AI, layered prompt-attack defenses, human oversight, red teaming, and incident accountability; continue with compliance and audit |
 
 ## Daily Log
 
@@ -194,6 +194,18 @@
 - Skipped/ungraded: 0 / 0
 - Reference: sessions/day-15-agent-model-security.md
 - Next action: Day 16 — D3.4 Governance & Responsible AI
+
+### Day 16 — 2026-08-27 — D3.4 Governance & Responsible AI
+
+- Status: Completed
+- Covered: centralized agent inventory, ownership, connector dependencies, lifecycle review and retirement; Microsoft's six Responsible AI principles; direct and indirect prompt attacks; layered prompt-injection defenses; Content Safety scope; deterministic approval gates; representative and adversarial evaluation; iterative red teaming; incident recovery; versioned governance evidence
+- Quiz: 10 new D3.4 questions — q151 through q160
+- Accuracy: 10 / 10 (100%) — perfect score
+- Time: 1m 2.7s
+- Weak spots: None observed; retain that content filters and system prompts do not replace authorization, least privilege, deterministic tool controls, human approval, and repeatable adversarial testing
+- Skipped/ungraded: 0 / 0
+- Reference: sessions/day-16-governance-responsible-ai.md
+- Next action: Day 17 — D3.4 Compliance & Audit
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12
