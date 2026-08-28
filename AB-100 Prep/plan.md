@@ -116,8 +116,9 @@
 
 #### Day 17 (2026-08-28, Fri) — D3.4 Compliance & Audit
 
-- [ ] Study: data residency & movement compliance; audit trails for model/data changes
-- [ ] Estimated time: 1 hr
+- [x] Study: data residency & movement compliance; audit trails for model/data changes
+- [x] Practice: 10 new D3.4 questions (q161–q170; 10/10 = 100%; 14.2s)
+- [x] Estimated time: 1 hr
 
 #### Day 18 (2026-08-29, Sat) — Domain 3 Full Quiz + Review
 

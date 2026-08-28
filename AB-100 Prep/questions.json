@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 160,
+	"totalQuestions": 170,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)",
 		"Microsoft Learn: Copilot Studio analytics overview and conversational-agent effectiveness",
@@ -35,9 +35,24 @@
 		"Microsoft Learn: Harm categories in Azure AI Content Safety",
 		"Microsoft Learn: Responsible AI practices for Azure OpenAI in Microsoft Foundry",
 		"Microsoft Learn: Observability in generative AI",
-		"Microsoft Learn: AI Red Teaming Agent in Microsoft Foundry"
+		"Microsoft Learn: AI Red Teaming Agent in Microsoft Foundry",
+		"https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100",
+		"https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot",
+		"https://learn.microsoft.com/en-us/power-platform/admin/environments-overview",
+		"https://learn.microsoft.com/en-us/power-platform/alm/pipelines",
+		"https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+		"https://learn.microsoft.com/en-us/power-platform/admin/manage-dataverse-auditing",
+		"https://learn.microsoft.com/en-us/purview/audit-solutions-overview",
+		"https://learn.microsoft.com/en-us/purview/audit-log-enable-disable",
+		"https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-and-governance",
+		"https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview",
+		"https://learn.microsoft.com/en-us/power-platform/alm/git-integration/overview",
+		"https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview",
+		"https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview",
+		"https://learn.microsoft.com/en-us/azure/machine-learning/how-to-create-data-assets?view=azureml-api-2",
+		"https://learn.microsoft.com/en-us/azure/machine-learning/how-to-manage-models?view=azureml-api-2"
 	],
-	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q160 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, Day 15 questions q141-q150, and Day 16 questions q151-q160 are mapped to Domain 3, Deploy AI-powered business solutions.",
+	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q170 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, Day 15 questions q141-q150, Day 16 questions q151-q160, and Day 17 questions q161-q170 are mapped to Domain 3, Deploy AI-powered business solutions.",
 	"caseStudies": [
 		{
 			"id": "chg",
@@ -3016,6 +3031,196 @@
 					"difficulty": "hard",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-and-governance",
+					"section": "standalone"
+				},
+				{
+					"id": "q161",
+					"originalId": "DAY17-01",
+					"type": "mc",
+					"question": "A company creates a production Power Platform environment in Germany and assumes every AI feature used by an agent will keep prompts and responses in Germany. What should the architect do before approving the residency design?",
+					"options": [
+						"A. Verify the environment's macro-region binding and separately review the documented processing location and dependencies of each enabled AI feature",
+						"B. Accept the assumption because every resource used by a Power Platform environment is always processed in the environment's exact country",
+						"C. Check only the maker's sign-in location because it determines where all service data is processed",
+						"D. Check only the tenant display name because environment geography doesn't affect routing"
+					],
+					"correctAnswer": "A",
+					"explanation": "This is an original scenario grounded in Microsoft Learn. A Power Platform environment is bound to a geographic location, and resources created in it are bound to that environment location. That fact alone doesn't establish the processing boundary of every dependent AI feature. The compliance review must inventory each feature and validate its current, product-specific processing and storage commitments.",
+					"topic": "D3.4 / Environment geography and service-specific residency validation",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/environments-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q162",
+					"originalId": "DAY17-02",
+					"type": "mc",
+					"question": "A Power Platform administrator enables Move data across regions so a Copilot Studio generative feature can run. The administrator later clears the setting and states that all earlier cross-region movement has been reversed. Which assessment is correct?",
+					"options": [
+						"A. Clearing the setting prevents all past and future Copilot features from processing any data",
+						"B. The setting affects eligible future processing, but data movement that occurred while it was allowed can't be reversed by clearing it",
+						"C. The setting moves the entire Dataverse database permanently to the feature's host region",
+						"D. The setting applies only to UI language packs and never to prompts or outputs"
+					],
+					"correctAnswer": "B",
+					"explanation": "This is original exam-style wording. Microsoft documents that allowing cross-region movement means prompts and outputs might move to the location where the generative feature is hosted. It also states that movement that occurred while the setting was allowed can't be reversed by clearing the setting. Disallowing movement doesn't necessarily turn off every Copilot or generative feature; availability depends on regional capacity and the feature.",
+					"topic": "D3.4 / Cross-region generative AI data movement consent",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot",
+					"section": "standalone"
+				},
+				{
+					"id": "q163",
+					"originalId": "DAY17-03",
+					"type": "mc",
+					"question": "A regulated workload requires prompts and responses to be processed only within the customer-specified Azure geography. Which Foundry Models deployment review is essential?",
+					"options": [
+						"A. Confirm that the deployment type and model support the required geography; avoid assuming Global or DataZone has the same processing boundary as a standard regional deployment",
+						"B. Use a Global deployment because Global guarantees processing only in the resource's region",
+						"C. Use any DataZone because every data zone is limited to a single Azure region",
+						"D. Review only where stored data rests because deployment type never changes prompt and response processing location"
+					],
+					"correctAnswer": "A",
+					"explanation": "This original question follows Microsoft's documented deployment distinctions. For models sold by Azure, prompts and responses normally process within the customer-specified geography, though processing can occur between regions in that geography. Global deployments can process in any geography where the model is deployed, while DataZone deployments can process within the specified data zone. Storage-at-rest and processing-location analyses must therefore be kept distinct.",
+					"topic": "D3.4 / Foundry Global, DataZone, and geography processing boundaries",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+					"section": "standalone"
+				},
+				{
+					"id": "q164",
+					"originalId": "DAY17-04",
+					"type": "mc",
+					"question": "An architect approves cross-region processing for one Power Platform generative feature and records that approval as proof that every connected Microsoft 365 service and Bing-backed feature has identical residency terms. What is wrong with this evidence?",
+					"options": [
+						"A. Nothing; one Power Platform consent establishes one universal Microsoft cloud residency contract",
+						"B. Connected services can have different hosting, processing, and residency commitments, so the data-flow inventory must map each feature to its own current terms",
+						"C. Residency reviews apply only to Dataverse tables and never to prompts, outputs, or search queries",
+						"D. Microsoft 365 terms always override every Power Platform environment setting"
+					],
+					"correctAnswer": "B",
+					"explanation": "This is an original architecture trap. Microsoft Learn explicitly notes that some generative features depend on other Microsoft services, that prompts and outputs might move to where a feature is hosted, and that features powered by Microsoft 365 services store data according to Microsoft 365 terms and residency commitments. Compliance evidence must therefore be service- and feature-specific rather than inferred from one toggle.",
+					"topic": "D3.4 / Service-specific residency commitments and data-flow inventory",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot",
+					"section": "standalone"
+				},
+				{
+					"id": "q165",
+					"originalId": "DAY17-05",
+					"type": "mc",
+					"question": "A Power Platform pipeline host is in Germany and its target environment is in Canada. The team says the deployment is compliant because pipelines always permit cross-geo deployment and because moving a solution proves that no business data crosses a boundary. Which recommendation is best?",
+					"options": [
+						"A. Enable Cross-Geo Solution Deployments if approved, then separately analyze solution artifacts, connection configuration, seed data, and runtime data flows against policy",
+						"B. Proceed without review because pipeline hosts ignore geographic location",
+						"C. Copy the production Dataverse database into the solution so the pipeline records all data movement",
+						"D. Disable pipeline run history because retaining deployment evidence creates a residency violation"
+					],
+					"correctAnswer": "A",
+					"explanation": "This original scenario separates deployment mechanics from data compliance. Microsoft documents that cross-region pipeline deployment is available only when the Cross-Geo Solution Deployments setting is enabled; otherwise the host and associated environments must share a geography. That setting concerns solution deployment. It doesn't by itself prove the compliance of connection endpoints, configuration, seed data, or runtime business-data movement, which require their own flow review.",
+					"topic": "D3.4 / Cross-geo solution deployment versus runtime data movement",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-platform/alm/pipelines",
+					"section": "standalone"
+				},
+				{
+					"id": "q166",
+					"originalId": "DAY17-06",
+					"type": "mc",
+					"question": "A compliance officer must determine who changed an audited Dataverse customer's risk rating, when it changed, and the prior value. What configuration and evidence should the architect use?",
+					"options": [
+						"A. Enable Dataverse auditing at the environment, table, and risk-rating column levels, then use the record Audit History or environment Audit Summary",
+						"B. Enable only browser page-view telemetry in Application Insights",
+						"C. Export the current customer row after each release without preserving audit records",
+						"D. Enable auditing only on an unrelated table because environment auditing automatically audits every column"
+					],
+					"correctAnswer": "A",
+					"explanation": "This is original exam-style wording. Dataverse auditing can answer who created or updated a record and when, which fields changed, and the previous field value. Microsoft requires auditing at the environment level and, for table data changes, at the relevant table and column levels. Audit History is record-specific, while Audit Summary covers audited operations in the environment.",
+					"topic": "D3.4 / Dataverse field-change attribution and audit configuration",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/manage-dataverse-auditing",
+					"section": "standalone"
+				},
+				{
+					"id": "q167",
+					"originalId": "DAY17-07",
+					"type": "mc",
+					"question": "A team enables Dataverse row auditing and claims it now captures table-definition changes, data reads, exports, and Copilot Studio maker configuration activity. How should the architect correct the design?",
+					"options": [
+						"A. Keep Dataverse auditing for supported record changes, and add the documented activity, maker, solution, or source-control audit surfaces needed for the other event types",
+						"B. Accept the claim because Dataverse row auditing records every possible platform event",
+						"C. Disable all auditing and rely on users to document changes in email",
+						"D. Turn on auditing for one column to capture every schema, read, export, and maker event in the tenant"
+					],
+					"correctAnswer": "A",
+					"explanation": "This original question tests audit-surface boundaries. Microsoft documents that Dataverse auditing doesn't support table or column definition changes, authentication, retrieve operations, or export operations. Dataverse and model-driven app activity logging can cover reads and exports, while Copilot Studio maker audit logs are available to admins in Microsoft Purview. Solution history and source control provide additional configuration-change traceability; no single row-audit switch covers all layers.",
+					"topic": "D3.4 / Layered Power Platform and Purview audit coverage",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/manage-dataverse-auditing",
+					"section": "standalone"
+				},
+				{
+					"id": "q168",
+					"originalId": "DAY17-08",
+					"type": "mc",
+					"question": "A custom AI model is retrained monthly. Auditors must reproduce the approved run and identify who changed the training data and when. Which evidence design is strongest?",
+					"options": [
+						"A. Reference an immutable, versioned Azure Machine Learning data asset and a registered model version, and correlate them with the training run, code revision, identity, timestamp, evaluation, and approval",
+						"B. Overwrite the same training folder and model file after every run to keep names simple",
+						"C. Preserve only the latest accuracy screenshot without the data or model version",
+						"D. Record the model's display name but omit the training job and source revision"
+					],
+					"correctAnswer": "A",
+					"explanation": "This is an original traceability scenario. Microsoft documents that Azure Machine Learning data asset versions are immutable, support reproducibility and auditability, identify who updated a version and when, and expose consuming job or pipeline lineage. Registered models are also versioned assets. Correlating those asset versions with the run, code, evaluation, approver, and deployment produces a reviewable model-and-data change chain; overwriting artifacts breaks it.",
+					"topic": "D3.4 / Versioned model and training-data lineage",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/machine-learning/how-to-create-data-assets?view=azureml-api-2",
+					"section": "standalone"
+				},
+				{
+					"id": "q169",
+					"originalId": "DAY17-09",
+					"type": "mc",
+					"question": "A regulator requires selected model and data change evidence to be protected from alteration for seven years. The team exports Purview and deployment records to an ordinary writable container and grants administrators delete access. What should the architect recommend?",
+					"options": [
+						"A. Keep the writable container because an exported CSV is inherently immutable",
+						"B. Place the required evidence in approved immutable Blob Storage with a locked time-based retention policy or applicable legal hold, while retaining searchable source audit records according to licensing and policy",
+						"C. Shorten every source audit retention period to one day after export",
+						"D. Store only screenshots of the latest configuration and discard identities and timestamps"
+					],
+					"correctAnswer": "B",
+					"explanation": "This original scenario distinguishes search from preservation. Microsoft Purview Audit provides searchable records and retention capabilities that vary by licensing and policy. Microsoft documents that Azure immutable Blob Storage can keep data in a WORM state; a locked time-based retention policy prevents modification or deletion during the effective period, and legal holds address applicable hold scenarios. An ordinary export remains mutable and isn't automatically compliant evidence.",
+					"topic": "D3.4 / Audit retention and immutable evidence preservation",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q170",
+					"originalId": "DAY17-10",
+					"type": "mc",
+					"question": "An AI application sends requests, dependencies, exceptions, latency, and custom events to Application Insights. The owner claims this telemetry alone is a complete compliance audit trail for every model and data change. What is the best response?",
+					"options": [
+						"A. Agree because application performance telemetry automatically proves approvals, prior values, actor attribution, retention, and immutability for every change",
+						"B. Use Application Insights for observability, but add authoritative change and audit records that capture actor, timestamp, old and new state or version, approval, deployment correlation, retention, and tamper protection",
+						"C. Remove audit records because request latency is the only evidence a regulator needs",
+						"D. Disable telemetry and preserve only the current production model name"
+					],
+					"correctAnswer": "B",
+					"explanation": "This is an original audit-design trap. Microsoft defines Application Insights as an application performance monitoring feature used to collect and analyze telemetry for health, runtime behavior, failures, performance, and usage. Those signals are valuable for correlation, but they don't automatically supply the complete, governed change history that a compliance audit requires. Use product audit logs, versioned assets or source control, deployment records, approvals, and policy-based retention alongside telemetry.",
+					"topic": "D3.4 / Observability telemetry versus compliance audit evidence",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview",
 					"section": "standalone"
 				}
 			]

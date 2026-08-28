@@ -3,10 +3,10 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 16 / 31
-- Questions Answered: 176 / 160 (completed bank plus review and carryover questions)
-- Accuracy: 97.2% (171/176)
-- Current Day: Day 17 (next: 2026-08-28)
+- Sessions Completed: 17 / 31
+- Questions Answered: 186 / 170 (completed bank plus review and carryover questions)
+- Accuracy: 97.3% (181/186)
+- Current Day: Day 18 (next: 2026-08-29)
 
 ## Domain Confidence (self-rated 1–5)
 
@@ -14,7 +14,7 @@
 | ---------------------------------------- | ------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)       | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing                                                                     |
 | D2: Design AI-powered business solutions | 25–30% | 4 (49/50 Days 6–10)  | Strong overall; review custom regex and closed-list entity collection for generative topic inputs                                                                                        |
-| D3: Deploy AI-powered business solutions | 40–45% | 4 (66/66 Days 11–16) | Strong on monitoring, testing, ALM, security, agent governance, Responsible AI, layered prompt-attack defenses, human oversight, red teaming, and incident accountability; continue with compliance and audit |
+| D3: Deploy AI-powered business solutions | 40–45% | 4 (76/76 Days 11–17) | Strong on monitoring, testing, ALM, security, agent governance, Responsible AI, compliance, residency boundaries, layered audit evidence, model/data lineage, and immutable retention; continue with full-domain review |
 
 ## Daily Log
 
@@ -206,6 +206,18 @@
 - Skipped/ungraded: 0 / 0
 - Reference: sessions/day-16-governance-responsible-ai.md
 - Next action: Day 17 — D3.4 Compliance & Audit
+
+### Day 17 — 2026-08-28 — D3.4 Compliance & Audit
+
+- Status: Completed
+- Covered: end-to-end residency validation; Power Platform cross-region consent; Foundry regional, DataZone, and Global processing boundaries; cross-geo solution deployment versus runtime data movement; Dataverse and Purview audit coverage; model/data lineage; immutable evidence retention; observability versus compliance audit trails
+- Quiz: 10 new D3.4 questions — q161 through q170
+- Accuracy: 10 / 10 (100%) — perfect score
+- Time: 14.2s
+- Weak spots: None observed; retain the distinctions between processing and storage location, consent and historical movement, row auditing and platform activity, and telemetry and authoritative change evidence
+- Skipped/ungraded: 0 / 0
+- Reference: sessions/day-17-compliance-audit.md
+- Next action: Day 18 — Domain 3 Full Quiz + Review
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12
