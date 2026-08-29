@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-28T11:54:17.532492",
+  "timestamp": "2026-08-29T11:26:20.345563",
   "examCode": "AB-100",
   "examName": "Agentic AI Business Solutions Architect",
   "summary": {
@@ -10,36 +10,72 @@
     "skipped": 0,
     "ungraded": 0,
     "accuracy": 100.0,
-    "timeSeconds": 14.2
+    "timeSeconds": 13.7
   },
   "domainBreakdown": {
+    "Agentic AI Business Solutions Architecture (Practice Quiz)": {
+      "total": 2,
+      "correct": 2,
+      "wrong": 0,
+      "skipped": 0
+    },
     "Deploy AI-powered business solutions": {
-      "total": 10,
-      "correct": 10,
+      "total": 8,
+      "correct": 8,
       "wrong": 0,
       "skipped": 0
     }
   },
   "topicBreakdown": {
-    "D3.4 / Environment geography and service-specific residency validation": {
+    "D3.1 / Monitoring process and KPI selection": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Cross-region generative AI data movement consent": {
+    "D3.1 / Tool performance metrics and root-cause tuning": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Foundry Global, DataZone, and geography processing boundaries": {
+    "D3.2 / Agent testing process and balanced metrics": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Service-specific residency commitments and data-flow inventory": {
+    "D3.2 / Multi-app Dynamics 365 end-to-end testing": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.3 / Environment variable servicing for AI data sources": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.3 / Post-import agent configuration and publishing": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.3 / Foundry hosted-agent deployment endpoint": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Copilot Studio connector credentials and DLP": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D3.4 / Content safety guardrail scope and limitations": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
@@ -50,108 +86,163 @@
       "correct": 1,
       "wrong": 0,
       "skipped": 0
-    },
-    "D3.4 / Dataverse field-change attribution and audit configuration": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.4 / Layered Power Platform and Purview audit coverage": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.4 / Versioned model and training-data lineage": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.4 / Audit retention and immutable evidence preservation": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.4 / Observability telemetry versus compliance audit evidence": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
     }
   },
   "wrongQuestions": [],
   "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "q161",
-      "question": "A company creates a production Power Platform environment in Germany and assumes every AI feature used by an agent will keep prompts and responses in Germany. What should the architect do before approving the residency design?",
+      "questionId": "q101",
+      "question": "A customer-service agent is entering production. The sponsor wants a single generic dashboard, but the architect must establish a monitoring process that can show both user experience and business value. What should the architect recommend first?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.4 / Environment geography and service-specific residency validation",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
+      "topic": "D3.1 / Monitoring process and KPI selection",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
       "difficulty": "medium",
-      "explanation": "This is an original scenario grounded in Microsoft Learn. A Power Platform environment is bound to a geographic location, and resources created in it are bound to that environment location. That fact alone doesn't establish the processing boundary of every dependent AI feature. The compliance review must inventory each feature and validate its current, product-specific processing and storage commitments.",
+      "explanation": "Copilot Studio separates business-specific custom metrics from built-in views of effectiveness, use, and savings. A defensible monitoring process defines the outcomes that matter, establishes a baseline and review cadence, and then interprets experience, operational, and value signals together. Conversation volume or token use alone can rise while resolution quality or business outcomes deteriorate, and transcript review alone does not provide a scalable trend view.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/environments-overview"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-effectiveness"
     },
     {
-      "questionId": "q162",
-      "question": "A Power Platform administrator enables Move data across regions so a Copilot Studio generative feature can run. The administrator later clears the setting and states that all earlier cross-region movement has been reversed. Which assessment is correct?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Cross-region generative AI data movement consent",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "This is original exam-style wording. Microsoft documents that allowing cross-region movement means prompts and outputs might move to the location where the generative feature is hosted. It also states that movement that occurred while the setting was allowed can't be reversed by clearing the setting. Disallowing movement doesn't necessarily turn off every Copilot or generative feature; availability depends on regional capacity and the feature.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot"
-    },
-    {
-      "questionId": "q163",
-      "question": "A regulated workload requires prompts and responses to be processed only within the customer-specified Azure geography. Which Foundry Models deployment review is essential?",
+      "questionId": "q107",
+      "question": "A returns agent answers policy questions well, but completion rates drop whenever it calls the refund action. Tool use analytics show frequent calls and a falling success percentage for that action. What should the architect prioritize?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.4 / Foundry Global, DataZone, and geography processing boundaries",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "This original question follows Microsoft's documented deployment distinctions. For models sold by Azure, prompts and responses normally process within the customer-specified geography, though processing can occur between regions in that geography. Global deployments can process in any geography where the model is deployed, while DataZone deployments can process within the specified data zone. Storage-at-rest and processing-location analyses must therefore be kept distinct.",
+      "topic": "D3.1 / Tool performance metrics and root-cause tuning",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Tool use analytics distinguish tool demand from tool success. Frequent invocation indicates the action is relevant, while a declining success percentage points to the action path rather than general answer generation. The tuning backlog should first address the tool contract and operational dependencies, then verify that tool success and end-to-end completion improve.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-health"
     },
     {
-      "questionId": "q164",
-      "question": "An architect approves cross-region processing for one Power Platform generative feature and records that approval as proof that every connected Microsoft 365 service and Bing-backed feature has identical residency terms. What is wrong with this evidence?",
+      "questionId": "q111",
+      "question": "A company is preparing a Copilot Studio service agent for production. The sponsor asks the architect to begin by running many prompts and decide later what success means. What should the architect recommend instead?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.2 / Agent testing process and balanced metrics",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "A structured agent test process starts by defining the intended business outcome, scope, representative data and scenarios, owners, and measurable success criteria. It then combines scenario, performance, reliability, safety, compliance, and usability testing, retains a baseline, and uses results as deployment gates. Latency alone cannot establish answer quality, safety, or business completion.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/2-recommend-process-metrics-test-agents"
+    },
+    {
+      "questionId": "q118",
+      "question": "An AI-assisted order-to-cash process spans Dynamics 365 Sales, Finance, Supply Chain Management, and Customer Service. What is the strongest end-to-end test design?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.4 / Service-specific residency commitments and data-flow inventory",
+      "topic": "D3.2 / Multi-app Dynamics 365 end-to-end testing",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "hard",
-      "explanation": "This is an original architecture trap. Microsoft Learn explicitly notes that some generative features depend on other Microsoft services, that prompts and outputs might move to where a feature is hosted, and that features powered by Microsoft 365 services store data according to Microsoft 365 terms and residency commitments. Compliance evidence must therefore be service- and feature-specific rather than inferred from one toggle.",
+      "explanation": "Dynamics 365 end-to-end testing validates the whole solution and its external integrations in an integrated environment. It requires realistic migrated data, the latest solution version, role-based participants, process handoffs and postconditions, negative paths, and multiple cycles. Isolated component success does not prove cross-app orchestration or business outcomes.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot"
+      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/testing-strategy-test-types"
+    },
+    {
+      "questionId": "q123",
+      "question": "A publisher ships an updated managed solution containing the definition and default value of an environment variable used for an AI data source. The customer has already set a production current value. Which behavior should the release design rely on?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Environment variable servicing for AI data sources",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Power Platform separates an environment variable's definition and default value from its current value. This permits a publisher to service solution metadata and defaults while preserving a customer-supplied target-environment value. Components continue resolving configuration through the variable instead of requiring direct edits.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables"
+    },
+    {
+      "questionId": "q130",
+      "question": "A Copilot Studio agent solution imports successfully into production. The agent uses user authentication, but users still cannot receive it through the intended channel. Which release steps remain?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Post-import agent configuration and publishing",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Copilot Studio's import guidance requires user authentication to be configured again for the imported agent and states that an imported agent must be published before it can be shared. Target-specific connections, variables, and channel details should also be validated because successful solution import alone is not the complete release gate.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
+    },
+    {
+      "questionId": "q134",
+      "question": "A release runbook for a hosted Foundry agent says that programmatic testing cannot begin until the agent is published to a sharing channel. What correction should the architect make?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.3 / Foundry hosted-agent deployment endpoint",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Foundry Agent Service creates a dedicated endpoint and agent identity when a hosted agent is deployed. The current hosted-agent guidance states that the endpoint is immediately available for programmatic access and publishing isn't required for that access. The endpoint protocols still depend on the deployed agent version definition, so the release test must validate the intended protocol and configuration in the target project.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents"
+    },
+    {
+      "questionId": "q145",
+      "question": "A Copilot Studio agent reads regulated case data through a business connector and can send tool output to an arbitrary external HTTP endpoint. The organization also wants each user's source permissions enforced. Which configuration addresses both requirements?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Copilot Studio connector credentials and DLP",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "End-user credentials preserve user-specific downstream permissions, while Power Platform data policies govern which connectors and data paths may coexist. These controls solve different problems: DLP limits exfiltration paths but doesn't provide record authorization, and conversation authentication doesn't choose the tool identity.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-data-loss-prevention"
+    },
+    {
+      "questionId": "q155",
+      "question": "A team enables hate, sexual, violence, and self-harm filtering and concludes that the agent is now protected from prompt injection, unauthorized tool use, and disclosure of confidential grounding data. What should the architect explain?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Content safety guardrail scope and limitations",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "This is original exam-style wording. Azure AI Content Safety defines severity-based harm categories for hate and unfairness, sexual content, violence, and self-harm. Those guardrails address content risk; they don't authorize callers, secure grounding data, validate tools, or cover every adversarial prompt. The solution needs layered controls matched to each risk.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/harm-categories"
     },
     {
       "questionId": "q165",
@@ -169,91 +260,6 @@
       "questionImages": [],
       "answerImages": [],
       "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/alm/pipelines"
-    },
-    {
-      "questionId": "q166",
-      "question": "A compliance officer must determine who changed an audited Dataverse customer's risk rating, when it changed, and the prior value. What configuration and evidence should the architect use?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Dataverse field-change attribution and audit configuration",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "This is original exam-style wording. Dataverse auditing can answer who created or updated a record and when, which fields changed, and the previous field value. Microsoft requires auditing at the environment level and, for table data changes, at the relevant table and column levels. Audit History is record-specific, while Audit Summary covers audited operations in the environment.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/manage-dataverse-auditing"
-    },
-    {
-      "questionId": "q167",
-      "question": "A team enables Dataverse row auditing and claims it now captures table-definition changes, data reads, exports, and Copilot Studio maker configuration activity. How should the architect correct the design?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Layered Power Platform and Purview audit coverage",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "This original question tests audit-surface boundaries. Microsoft documents that Dataverse auditing doesn't support table or column definition changes, authentication, retrieve operations, or export operations. Dataverse and model-driven app activity logging can cover reads and exports, while Copilot Studio maker audit logs are available to admins in Microsoft Purview. Solution history and source control provide additional configuration-change traceability; no single row-audit switch covers all layers.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/manage-dataverse-auditing"
-    },
-    {
-      "questionId": "q168",
-      "question": "A custom AI model is retrained monthly. Auditors must reproduce the approved run and identify who changed the training data and when. Which evidence design is strongest?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Versioned model and training-data lineage",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "This is an original traceability scenario. Microsoft documents that Azure Machine Learning data asset versions are immutable, support reproducibility and auditability, identify who updated a version and when, and expose consuming job or pipeline lineage. Registered models are also versioned assets. Correlating those asset versions with the run, code, evaluation, approver, and deployment produces a reviewable model-and-data change chain; overwriting artifacts breaks it.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/machine-learning/how-to-create-data-assets?view=azureml-api-2"
-    },
-    {
-      "questionId": "q169",
-      "question": "A regulator requires selected model and data change evidence to be protected from alteration for seven years. The team exports Purview and deployment records to an ordinary writable container and grants administrators delete access. What should the architect recommend?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Audit retention and immutable evidence preservation",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "This original scenario distinguishes search from preservation. Microsoft Purview Audit provides searchable records and retention capabilities that vary by licensing and policy. Microsoft documents that Azure immutable Blob Storage can keep data in a WORM state; a locked time-based retention policy prevents modification or deletion during the effective period, and legal holds address applicable hold scenarios. An ordinary export remains mutable and isn't automatically compliant evidence.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview"
-    },
-    {
-      "questionId": "q170",
-      "question": "An AI application sends requests, dependencies, exceptions, latency, and custom events to Application Insights. The owner claims this telemetry alone is a complete compliance audit trail for every model and data change. What is the best response?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Observability telemetry versus compliance audit evidence",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "This is an original audit-design trap. Microsoft defines Application Insights as an application performance monitoring feature used to collect and analyze telemetry for health, runtime behavior, failures, performance, and usage. Those signals are valuable for correlation, but they don't automatically supply the complete, governed change history that a compliance audit requires. Use product audit logs, versioned assets or source control, deployment records, approvals, and policy-based retention alongside telemetry.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview"
     }
   ]
 }

@@ -122,8 +122,8 @@
 
 #### Day 18 (2026-08-29, Sat) — Domain 3 Full Quiz + Review
 
-- [ ] Quiz: Domain 3; deep review of weak subtopics
-- [ ] Estimated time: 2 hrs
+- [x] Quiz: 10-question Domain 3 review (10/10 = 100%; 13.7s); no weak subtopics identified
+- [x] Estimated time: 2 hrs
 
 #### Day 19 (2026-08-30, Sun) — Responsible AI & Governance Deep Dive
 

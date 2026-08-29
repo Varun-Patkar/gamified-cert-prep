@@ -3,10 +3,10 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 17 / 31
-- Questions Answered: 186 / 170 (completed bank plus review and carryover questions)
-- Accuracy: 97.3% (181/186)
-- Current Day: Day 18 (next: 2026-08-29)
+- Sessions Completed: 18 / 31
+- Questions Answered: 196 / 170 (completed bank plus review and carryover questions)
+- Accuracy: 97.4% (191/196)
+- Current Day: Day 19 (next: 2026-08-30)
 
 ## Domain Confidence (self-rated 1–5)
 
@@ -14,7 +14,7 @@
 | ---------------------------------------- | ------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | D1: Plan AI-powered business solutions   | 25–30% | 4 (56/60 quiz)       | Strong overall; review multi-agent boundaries, managed identity, connector governance, and data-readiness sequencing                                                                     |
 | D2: Design AI-powered business solutions | 25–30% | 4 (49/50 Days 6–10)  | Strong overall; review custom regex and closed-list entity collection for generative topic inputs                                                                                        |
-| D3: Deploy AI-powered business solutions | 40–45% | 4 (76/76 Days 11–17) | Strong on monitoring, testing, ALM, security, agent governance, Responsible AI, compliance, residency boundaries, layered audit evidence, model/data lineage, and immutable retention; continue with full-domain review |
+| D3: Deploy AI-powered business solutions | 40–45% | 5 (86/86 Days 11–18) | Strong across monitoring, testing, ALM, security, agent governance, Responsible AI, compliance, residency boundaries, layered audit evidence, model/data lineage, and immutable retention; full-domain review completed without misses |
 
 ## Daily Log
 
@@ -218,6 +218,18 @@
 - Skipped/ungraded: 0 / 0
 - Reference: sessions/day-17-compliance-audit.md
 - Next action: Day 18 — Domain 3 Full Quiz + Review
+
+### Day 18 — 2026-08-29 — Domain 3 Full Quiz + Review
+
+- Status: Completed
+- Covered: balanced monitoring and root-cause diagnosis; structured release testing and integrated Dynamics 365 end-to-end validation; environment-variable servicing; Copilot Studio post-import release steps; Foundry hosted-agent endpoints; connector identity and DLP; layered content safety; cross-geo deployment versus runtime data compliance
+- Quiz: 10 assigned Domain 3 review questions — q101, q107, q111, q118, q123, q130, q134, q145, q155, q165
+- Accuracy: 10 / 10 (100%) — perfect score
+- Time: 13.7s
+- Weak spots: None observed; continue reinforcing that monitoring, testing, deployment, identity, authorization, DLP, safety, and compliance are separate controls and evidence layers
+- Skipped/ungraded: 0 / 0
+- Reference: sessions/day-18-domain3-full-quiz-review.md
+- Next action: Day 19 — Responsible AI & Governance Deep Dive
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12
