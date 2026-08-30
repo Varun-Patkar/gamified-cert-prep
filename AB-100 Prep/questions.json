@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 170,
+	"totalQuestions": 180,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)",
 		"Microsoft Learn: Copilot Studio analytics overview and conversational-agent effectiveness",
@@ -50,9 +50,12 @@
 		"https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview",
 		"https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview",
 		"https://learn.microsoft.com/en-us/azure/machine-learning/how-to-create-data-assets?view=azureml-api-2",
-		"https://learn.microsoft.com/en-us/azure/machine-learning/how-to-manage-models?view=azureml-api-2"
+		"https://learn.microsoft.com/en-us/azure/machine-learning/how-to-manage-models?view=azureml-api-2",
+		"https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview",
+		"https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices",
+		"https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"
 	],
-	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q170 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, Day 15 questions q141-q150, Day 16 questions q151-q160, and Day 17 questions q161-q170 are mapped to Domain 3, Deploy AI-powered business solutions.",
+	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q180 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, Day 15 questions q141-q150, Day 16 questions q151-q160, Day 17 questions q161-q170, and Day 19 questions q171-q180 are mapped to Domain 3, Deploy AI-powered business solutions.",
 	"caseStudies": [
 		{
 			"id": "chg",
@@ -3221,6 +3224,196 @@
 					"difficulty": "medium",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q171",
+					"originalId": "DAY19-01",
+					"type": "mc",
+					"question": "A benefits-eligibility agent meets its overall accuracy target, but evaluation shows a materially higher false-negative rate for one age group with otherwise comparable cases. The product team argues that protected attributes were excluded from the prompt, so the solution is fair. What should the architect recommend?",
+					"options": [
+						"A. Treat aggregate accuracy as sufficient because the model never receives age directly",
+						"B. Measure outcomes across relevant groups and intersectional slices, investigate proxy features and process effects, mitigate the disparity, and require fairness thresholds before release",
+						"C. Remove all demographic data from evaluation so the disparity is no longer visible",
+						"D. Release immediately and address fairness only if an individual user files a complaint"
+					],
+					"correctAnswer": "B",
+					"explanation": "This original scenario applies Microsoft's fairness principle to measured outcomes. Excluding a protected attribute does not prove fairness because correlated features and business processes can still produce group disparities. Representative, disaggregated evaluation, mitigation, documented thresholds, and ongoing monitoring provide decision evidence that aggregate accuracy cannot.",
+					"topic": "D3.4 / Fairness measurement and release decisions",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q172",
+					"originalId": "DAY19-02",
+					"type": "mc",
+					"question": "An employee-facing agent ranks benefit options from policy documents. The team wants transparency but proposes publishing the complete system prompt and model chain-of-thought to every user. Which design better supports transparency without creating unnecessary security and privacy risk?",
+					"options": [
+						"A. Provide no notice because users can infer that the interface uses AI",
+						"B. Explain that AI is being used, its intended purpose and material limitations, the information and citations supporting the result, and how users can correct or escalate an outcome",
+						"C. Publish hidden instructions, credentials, and private reasoning traces as the only form of explanation",
+						"D. Display only the model's product name because technical identity fully explains each recommendation"
+					],
+					"correctAnswer": "B",
+					"explanation": "This original question distinguishes useful transparency from disclosure of sensitive implementation details. People should know when AI is involved, what the system is intended to do, its consequential limitations, what grounds a result, and how to seek correction or human help. Transparency does not require exposing secrets or private internal reasoning.",
+					"topic": "D3.4 / Actionable transparency and user recourse",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q173",
+					"originalId": "DAY19-03",
+					"type": "mc",
+					"question": "A company deploys a third-party model through an agent that recommends whether suppliers should be suspended. The sponsor says the model provider is accountable for every business outcome because it built the model. What governance design should the architect require?",
+					"options": [
+						"A. Assign an internal accountable owner, document intended use and impact, define approval and escalation authority, monitor outcomes, and retain evidence of risk and release decisions",
+						"B. Transfer all accountability to the model provider and omit internal controls",
+						"C. Let the agent assign accountability dynamically after each recommendation",
+						"D. Make individual end users solely accountable even when they cannot inspect, override, or appeal the recommendation"
+					],
+					"correctAnswer": "A",
+					"explanation": "This original scenario applies accountability to the organization that designs and deploys the complete business solution. Supplier contracts and provider controls are inputs, but they don't replace named internal ownership, impact assessment, decision authority, operational monitoring, incident handling, and auditable approvals.",
+					"topic": "D3.4 / Organizational accountability for third-party AI",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q174",
+					"originalId": "DAY19-04",
+					"type": "mc",
+					"question": "A claims agent routes high-impact denial recommendations to a human reviewer, but the interface hides supporting evidence and uncertainty, allows ten seconds per case, and provides no reject or escalation action. The team calls this human-in-the-loop. What should change?",
+					"options": [
+						"A. Remove review because a fast approval screen already proves accountability",
+						"B. Give reviewers relevant evidence, limitations, sufficient time, and authority to reject, override, or escalate; then monitor review quality and automation bias",
+						"C. Keep the interface and count every timeout as reviewer approval",
+						"D. Replace the reviewer with a second call to the same model"
+					],
+					"correctAnswer": "B",
+					"explanation": "This original human-oversight scenario tests whether intervention is meaningful rather than ceremonial. Effective review requires context, time, competence, and real authority to stop or change a consequential action. Monitoring overrides, escalations, and reviewer behavior helps detect rubber-stamping and automation bias.",
+					"topic": "D3.4 / Meaningful human oversight and automation bias",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q175",
+					"originalId": "DAY19-05",
+					"type": "mc",
+					"question": "A production support agent's content guardrail blocks too many benign technical answers. Operations proposes disabling the guardrail globally to restore completion rates. What is the best response?",
+					"options": [
+						"A. Disable every guardrail because business metrics take priority after launch",
+						"B. Evaluate representative benign and harmful cases, identify the triggering policy and business risk, make the smallest justified configuration change, stage the rollout, and monitor safety and quality",
+						"C. Ask the model to ignore blocked responses while leaving the configuration unchanged",
+						"D. Raise every threshold to its least restrictive value without recording the decision"
+					],
+					"correctAnswer": "B",
+					"explanation": "This original scenario treats guardrail tuning as a governed risk decision. False positives should be measured against representative and harmful test cases, traced to the relevant control, and addressed with the narrowest justified change. Staging, documentation, and post-change monitoring protect both utility and safety.",
+					"topic": "D3.4 / Risk-based guardrail tuning",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q176",
+					"originalId": "DAY19-06",
+					"type": "mc",
+					"question": "When a high-risk request is blocked by a configured guardrail, an agent flow automatically rephrases the request repeatedly until one variant passes. What should the architect recommend?",
+					"options": [
+						"A. Keep retrying because a later pass proves the original request was safe",
+						"B. Treat the policy block as a governed outcome, stop evasive retries, return an approved safe response or escalation path, and log the event for monitoring and review",
+						"C. Remove the event from telemetry so users cannot infer the guardrail policy",
+						"D. Grant the agent more tool permissions so it can complete the blocked request another way"
+					],
+					"correctAnswer": "B",
+					"explanation": "This original scenario distinguishes a safety-policy decision from a transient technical failure. Automatically mutating blocked input until it passes can circumvent the configured control. The orchestration should fail safely, provide an approved fallback or review path, and preserve telemetry for governance and tuning.",
+					"topic": "D3.4 / Guardrail enforcement and safe fallback",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q177",
+					"originalId": "DAY19-07",
+					"type": "mc",
+					"question": "A single Azure-hosted agent needs a credential-free identity that should be created and deleted with that compute resource. The identity will not be shared with other resources. Which identity type best matches the lifecycle requirement?",
+					"options": [
+						"A. A system-assigned managed identity",
+						"B. A user-assigned managed identity shared across the subscription",
+						"C. A client secret stored in the agent instructions",
+						"D. An administrator's interactive refresh token"
+					],
+					"correctAnswer": "A",
+					"explanation": "This original selection question uses the documented managed-identity lifecycle distinction. A system-assigned identity is enabled directly on one Azure resource and is deleted with that resource. It is appropriate when the identity should not outlive or be shared by the host.",
+					"topic": "D3.4 / System-assigned managed identity lifecycle",
+					"difficulty": "easy",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q178",
+					"originalId": "DAY19-08",
+					"type": "mc",
+					"question": "A team uses blue-green deployments for an Azure-hosted agent. Both deployment slots need the same Azure identity and downstream role assignments, and the identity must survive when either compute resource is replaced. What should the architect use?",
+					"options": [
+						"A. A separate system-assigned identity for each slot and manual permission copying after every replacement",
+						"B. A user-assigned managed identity attached to both approved hosts",
+						"C. A shared storage account key embedded in both deployments",
+						"D. The release engineer's personal identity at runtime"
+					],
+					"correctAnswer": "B",
+					"explanation": "This original scenario uses the independent lifecycle and shareability of a user-assigned managed identity. The identity can be created separately, attached to multiple approved Azure resources, and retain its role assignments as hosts are replaced, without introducing application-managed credentials.",
+					"topic": "D3.4 / User-assigned managed identity for replaceable hosts",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q179",
+					"originalId": "DAY19-09",
+					"type": "mc",
+					"question": "An autonomous agent only reads invoice blobs from one container. Its managed identity currently has Storage Blob Data Contributor at subscription scope. Which change best follows least privilege?",
+					"options": [
+						"A. Replace the assignment with the read-only data role at the narrowest scope that contains the required blobs",
+						"B. Add Owner at management-group scope so all authorization paths are covered",
+						"C. Keep write and delete permissions because managed identities are trusted by definition",
+						"D. Remove RBAC and use the subscription's billing role for blob access"
+					],
+					"correctAnswer": "A",
+					"explanation": "This original least-privilege question requires both the minimum actions and the minimum scope. A read-only workload should not receive write or delete data actions, and access to one container does not justify a subscription-wide assignment. Managed identity authenticates the workload but doesn't make excess authorization safe.",
+					"topic": "D3.4 / Least-privilege role and scope selection",
+					"difficulty": "medium",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices",
+					"section": "standalone"
+				},
+				{
+					"id": "q180",
+					"originalId": "DAY19-10",
+					"type": "mc",
+					"question": "A read-only reporting agent and a remediation agent that can delete secrets are attached to the same user-assigned managed identity for convenience. What is the primary governance problem, and how should it be corrected?",
+					"options": [
+						"A. User-assigned identities cannot be attached to multiple Azure resources, so both agents need shared API keys",
+						"B. Both agents inherit the identity's combined authorization; use separate workload identities and narrowly scoped roles when their duties and risk differ",
+						"C. Managed identities bypass Azure RBAC, so role assignments have no effect",
+						"D. The reporting agent should receive subscription Owner directly in addition to the shared identity"
+					],
+					"correctAnswer": "B",
+					"explanation": "This original cross-domain scenario exposes a reuse trap. Every host using a user-assigned identity can act with that identity's permissions. Sharing one identity across workloads with materially different duties creates privilege aggregation, weakens attribution, and lets the low-risk workload exercise high-impact authority. Separate identities preserve least privilege and clearer accountability.",
+					"topic": "D3.4 / Managed identity reuse and privilege aggregation",
+					"difficulty": "hard",
+					"source": "ai-generated-from-microsoft-learn",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices",
 					"section": "standalone"
 				}
 			]

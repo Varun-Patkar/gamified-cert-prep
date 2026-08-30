@@ -127,9 +127,9 @@
 
 #### Day 19 (2026-08-30, Sun) — Responsible AI & Governance Deep Dive
 
-- [ ] Study: RAI decision patterns (fairness, transparency, accountability, human-in-the-loop); guardrails; least privilege; managed identities
-- [ ] Practice: mixed security/governance questions
-- [ ] Estimated time: 2 hrs
+- [x] Study: RAI decision patterns (fairness, transparency, accountability, human-in-the-loop); guardrails; least privilege; managed identities
+- [x] Practice: 10 mixed security/governance questions (q171–q180; 10/10 = 100%; 1m 11.5s)
+- [x] Estimated time: 2 hrs
 
 ### Week 4 — Consolidation + Practice
 

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-29T11:26:20.345563",
+  "timestamp": "2026-08-30T09:42:29.927651",
   "examCode": "AB-100",
   "examName": "Agentic AI Business Solutions Architect",
   "summary": {
@@ -10,78 +10,72 @@
     "skipped": 0,
     "ungraded": 0,
     "accuracy": 100.0,
-    "timeSeconds": 13.7
+    "timeSeconds": 71.5
   },
   "domainBreakdown": {
-    "Agentic AI Business Solutions Architecture (Practice Quiz)": {
-      "total": 2,
-      "correct": 2,
-      "wrong": 0,
-      "skipped": 0
-    },
     "Deploy AI-powered business solutions": {
-      "total": 8,
-      "correct": 8,
+      "total": 10,
+      "correct": 10,
       "wrong": 0,
       "skipped": 0
     }
   },
   "topicBreakdown": {
-    "D3.1 / Monitoring process and KPI selection": {
+    "D3.4 / Fairness measurement and release decisions": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.1 / Tool performance metrics and root-cause tuning": {
+    "D3.4 / Actionable transparency and user recourse": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.2 / Agent testing process and balanced metrics": {
+    "D3.4 / Organizational accountability for third-party AI": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.2 / Multi-app Dynamics 365 end-to-end testing": {
+    "D3.4 / Meaningful human oversight and automation bias": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Environment variable servicing for AI data sources": {
+    "D3.4 / Risk-based guardrail tuning": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Post-import agent configuration and publishing": {
+    "D3.4 / Guardrail enforcement and safe fallback": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.3 / Foundry hosted-agent deployment endpoint": {
+    "D3.4 / System-assigned managed identity lifecycle": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Copilot Studio connector credentials and DLP": {
+    "D3.4 / User-assigned managed identity for replaceable hosts": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Content safety guardrail scope and limitations": {
+    "D3.4 / Least-privilege role and scope selection": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Cross-geo solution deployment versus runtime data movement": {
+    "D3.4 / Managed identity reuse and privilege aggregation": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
@@ -92,174 +86,174 @@
   "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "q101",
-      "question": "A customer-service agent is entering production. The sponsor wants a single generic dashboard, but the architect must establish a monitoring process that can show both user experience and business value. What should the architect recommend first?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / Monitoring process and KPI selection",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Copilot Studio separates business-specific custom metrics from built-in views of effectiveness, use, and savings. A defensible monitoring process defines the outcomes that matter, establishes a baseline and review cadence, and then interprets experience, operational, and value signals together. Conversation volume or token use alone can rise while resolution quality or business outcomes deteriorate, and transcript review alone does not provide a scalable trend view.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-effectiveness"
-    },
-    {
-      "questionId": "q107",
-      "question": "A returns agent answers policy questions well, but completion rates drop whenever it calls the refund action. Tool use analytics show frequent calls and a falling success percentage for that action. What should the architect prioritize?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.1 / Tool performance metrics and root-cause tuning",
-      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
-      "domainId": "1",
-      "difficulty": "medium",
-      "explanation": "Tool use analytics distinguish tool demand from tool success. Frequent invocation indicates the action is relevant, while a declining success percentage points to the action path rather than general answer generation. The tuning backlog should first address the tool contract and operational dependencies, then verify that tool success and end-to-end completion improve.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-health"
-    },
-    {
-      "questionId": "q111",
-      "question": "A company is preparing a Copilot Studio service agent for production. The sponsor asks the architect to begin by running many prompts and decide later what success means. What should the architect recommend instead?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.2 / Agent testing process and balanced metrics",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "A structured agent test process starts by defining the intended business outcome, scope, representative data and scenarios, owners, and measurable success criteria. It then combines scenario, performance, reliability, safety, compliance, and usability testing, retains a baseline, and uses results as deployment gates. Latency alone cannot establish answer quality, safety, or business completion.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/training/modules/manage-testing-ai-powered-business-solutions/2-recommend-process-metrics-test-agents"
-    },
-    {
-      "questionId": "q118",
-      "question": "An AI-assisted order-to-cash process spans Dynamics 365 Sales, Finance, Supply Chain Management, and Customer Service. What is the strongest end-to-end test design?",
+      "questionId": "q171",
+      "question": "A benefits-eligibility agent meets its overall accuracy target, but evaluation shows a materially higher false-negative rate for one age group with otherwise comparable cases. The product team argues that protected attributes were excluded from the prompt, so the solution is fair. What should the architect recommend?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.2 / Multi-app Dynamics 365 end-to-end testing",
+      "topic": "D3.4 / Fairness measurement and release decisions",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "hard",
-      "explanation": "Dynamics 365 end-to-end testing validates the whole solution and its external integrations in an integrated environment. It requires realistic migrated data, the latest solution version, role-based participants, process handoffs and postconditions, negative paths, and multiple cycles. Isolated component success does not prove cross-app orchestration or business outcomes.",
+      "explanation": "This original scenario applies Microsoft's fairness principle to measured outcomes. Excluding a protected attribute does not prove fairness because correlated features and business processes can still produce group disparities. Representative, disaggregated evaluation, mitigation, documented thresholds, and ongoing monitoring provide decision evidence that aggregate accuracy cannot.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/testing-strategy-test-types"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview"
     },
     {
-      "questionId": "q123",
-      "question": "A publisher ships an updated managed solution containing the definition and default value of an environment variable used for an AI data source. The customer has already set a production current value. Which behavior should the release design rely on?",
+      "questionId": "q172",
+      "question": "An employee-facing agent ranks benefit options from policy documents. The team wants transparency but proposes publishing the complete system prompt and model chain-of-thought to every user. Which design better supports transparency without creating unnecessary security and privacy risk?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.3 / Environment variable servicing for AI data sources",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Power Platform separates an environment variable's definition and default value from its current value. This permits a publisher to service solution metadata and defaults while preserving a customer-supplied target-environment value. Components continue resolving configuration through the variable instead of requiring direct edits.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables"
-    },
-    {
-      "questionId": "q130",
-      "question": "A Copilot Studio agent solution imports successfully into production. The agent uses user authentication, but users still cannot receive it through the intended channel. Which release steps remain?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Post-import agent configuration and publishing",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Copilot Studio's import guidance requires user authentication to be configured again for the imported agent and states that an imported agent must be published before it can be shared. Target-specific connections, variables, and channel details should also be validated because successful solution import alone is not the complete release gate.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-import-export"
-    },
-    {
-      "questionId": "q134",
-      "question": "A release runbook for a hosted Foundry agent says that programmatic testing cannot begin until the agent is published to a sharing channel. What correction should the architect make?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.3 / Foundry hosted-agent deployment endpoint",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "Foundry Agent Service creates a dedicated endpoint and agent identity when a hosted agent is deployed. The current hosted-agent guidance states that the endpoint is immediately available for programmatic access and publishing isn't required for that access. The endpoint protocols still depend on the deployed agent version definition, so the release test must validate the intended protocol and configuration in the target project.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents"
-    },
-    {
-      "questionId": "q145",
-      "question": "A Copilot Studio agent reads regulated case data through a business connector and can send tool output to an arbitrary external HTTP endpoint. The organization also wants each user's source permissions enforced. Which configuration addresses both requirements?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Copilot Studio connector credentials and DLP",
+      "topic": "D3.4 / Actionable transparency and user recourse",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "End-user credentials preserve user-specific downstream permissions, while Power Platform data policies govern which connectors and data paths may coexist. These controls solve different problems: DLP limits exfiltration paths but doesn't provide record authorization, and conversation authentication doesn't choose the tool identity.",
+      "explanation": "This original question distinguishes useful transparency from disclosure of sensitive implementation details. People should know when AI is involved, what the system is intended to do, its consequential limitations, what grounds a result, and how to seek correction or human help. Transparency does not require exposing secrets or private internal reasoning.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-data-loss-prevention"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview"
     },
     {
-      "questionId": "q155",
-      "question": "A team enables hate, sexual, violence, and self-harm filtering and concludes that the agent is now protected from prompt injection, unauthorized tool use, and disclosure of confidential grounding data. What should the architect explain?",
+      "questionId": "q173",
+      "question": "A company deploys a third-party model through an agent that recommends whether suppliers should be suspended. The sponsor says the model provider is accountable for every business outcome because it built the model. What governance design should the architect require?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.4 / Content safety guardrail scope and limitations",
+      "topic": "D3.4 / Organizational accountability for third-party AI",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "medium",
-      "explanation": "This is original exam-style wording. Azure AI Content Safety defines severity-based harm categories for hate and unfairness, sexual content, violence, and self-harm. Those guardrails address content risk; they don't authorize callers, secure grounding data, validate tools, or cover every adversarial prompt. The solution needs layered controls matched to each risk.",
+      "explanation": "This original scenario applies accountability to the organization that designs and deploys the complete business solution. Supplier contracts and provider controls are inputs, but they don't replace named internal ownership, impact assessment, decision authority, operational monitoring, incident handling, and auditable approvals.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/harm-categories"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview"
     },
     {
-      "questionId": "q165",
-      "question": "A Power Platform pipeline host is in Germany and its target environment is in Canada. The team says the deployment is compliant because pipelines always permit cross-geo deployment and because moving a solution proves that no business data crosses a boundary. Which recommendation is best?",
+      "questionId": "q174",
+      "question": "A claims agent routes high-impact denial recommendations to a human reviewer, but the interface hides supporting evidence and uncertainty, allows ten seconds per case, and provides no reject or escalation action. The team calls this human-in-the-loop. What should change?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Meaningful human oversight and automation bias",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "This original human-oversight scenario tests whether intervention is meaningful rather than ceremonial. Effective review requires context, time, competence, and real authority to stop or change a consequential action. Monitoring overrides, escalations, and reviewer behavior helps detect rubber-stamping and automation bias.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview"
+    },
+    {
+      "questionId": "q175",
+      "question": "A production support agent's content guardrail blocks too many benign technical answers. Operations proposes disabling the guardrail globally to restore completion rates. What is the best response?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Risk-based guardrail tuning",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "This original scenario treats guardrail tuning as a governed risk decision. False positives should be measured against representative and harmful test cases, traced to the relevant control, and addressed with the narrowest justified change. Staging, documentation, and post-change monitoring protect both utility and safety.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview"
+    },
+    {
+      "questionId": "q176",
+      "question": "When a high-risk request is blocked by a configured guardrail, an agent flow automatically rephrases the request repeatedly until one variant passes. What should the architect recommend?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Guardrail enforcement and safe fallback",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "This original scenario distinguishes a safety-policy decision from a transient technical failure. Automatically mutating blocked input until it passes can circumvent the configured control. The orchestration should fail safely, provide an approved fallback or review path, and preserve telemetry for governance and tuning.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview"
+    },
+    {
+      "questionId": "q177",
+      "question": "A single Azure-hosted agent needs a credential-free identity that should be created and deleted with that compute resource. The identity will not be shared with other resources. Which identity type best matches the lifecycle requirement?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.4 / Cross-geo solution deployment versus runtime data movement",
+      "topic": "D3.4 / System-assigned managed identity lifecycle",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "easy",
+      "explanation": "This original selection question uses the documented managed-identity lifecycle distinction. A system-assigned identity is enabled directly on one Azure resource and is deleted with that resource. It is appropriate when the identity should not outlive or be shared by the host.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"
+    },
+    {
+      "questionId": "q178",
+      "question": "A team uses blue-green deployments for an Azure-hosted agent. Both deployment slots need the same Azure identity and downstream role assignments, and the identity must survive when either compute resource is replaced. What should the architect use?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / User-assigned managed identity for replaceable hosts",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "This original scenario uses the independent lifecycle and shareability of a user-assigned managed identity. The identity can be created separately, attached to multiple approved Azure resources, and retain its role assignments as hosts are replaced, without introducing application-managed credentials.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"
+    },
+    {
+      "questionId": "q179",
+      "question": "An autonomous agent only reads invoice blobs from one container. Its managed identity currently has Storage Blob Data Contributor at subscription scope. Which change best follows least privilege?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Least-privilege role and scope selection",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "This original least-privilege question requires both the minimum actions and the minimum scope. A read-only workload should not receive write or delete data actions, and access to one container does not justify a subscription-wide assignment. Managed identity authenticates the workload but doesn't make excess authorization safe.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices"
+    },
+    {
+      "questionId": "q180",
+      "question": "A read-only reporting agent and a remediation agent that can delete secrets are attached to the same user-assigned managed identity for convenience. What is the primary governance problem, and how should it be corrected?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D3.4 / Managed identity reuse and privilege aggregation",
       "domainName": "Deploy AI-powered business solutions",
       "domainId": "3",
       "difficulty": "hard",
-      "explanation": "This original scenario separates deployment mechanics from data compliance. Microsoft documents that cross-region pipeline deployment is available only when the Cross-Geo Solution Deployments setting is enabled; otherwise the host and associated environments must share a geography. That setting concerns solution deployment. It doesn't by itself prove the compliance of connection endpoints, configuration, seed data, or runtime business-data movement, which require their own flow review.",
+      "explanation": "This original cross-domain scenario exposes a reuse trap. Every host using a user-assigned identity can act with that identity's permissions. Sharing one identity across workloads with materially different duties creates privilege aggregation, weakens attribution, and lets the low-risk workload exercise high-impact authority. Separate identities preserve least privilege and clearer accountability.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/alm/pipelines"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices"
     }
   ]
 }
