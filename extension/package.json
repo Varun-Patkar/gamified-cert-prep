@@ -24,13 +24,74 @@
     "onStartupFinished"
   ],
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "certPrep",
+          "title": "Cert Prep",
+          "icon": "media/activity-bar.svg"
+        }
+      ]
+    },
+    "views": {
+      "certPrep": [
+        {
+          "type": "webview",
+          "id": "certPrep.welcome",
+          "name": "Get started",
+          "when": "!certPrep.bound"
+        },
+        {
+          "type": "webview",
+          "id": "certPrep.sidebar",
+          "name": "Campaign",
+          "when": "certPrep.bound"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "certPrep.diagnostics.languageModel",
         "title": "Cert Prep: Run Language Model Diagnostics",
         "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.bindRepo",
+        "title": "Bind Prep Repository",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.refresh",
+        "title": "Refresh",
+        "category": "Cert Prep",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "certPrep.commitNow",
+        "title": "Commit Progress Now",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.newExam",
+        "title": "Prepare for a New Exam",
+        "category": "Cert Prep",
+        "icon": "$(add)"
       }
     ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "certPrep.newExam",
+          "when": "view == certPrep.sidebar",
+          "group": "navigation@1"
+        },
+        {
+          "command": "certPrep.refresh",
+          "when": "view == certPrep.sidebar",
+          "group": "navigation@2"
+        }
+      ]
+    },
     "configuration": {
       "title": "Gamified Cert Prep",
       "properties": {

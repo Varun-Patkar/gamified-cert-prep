@@ -8,3 +8,6 @@ esbuild.js
 tsconfig.json
 **/*.map
 **/*.ts
+
+# Every webview loads its CSS/JS/icons from disk, so media/** must ship in the VSIX.
+!media/**

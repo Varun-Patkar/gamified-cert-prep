@@ -2,6 +2,10 @@ import * as vscode from "vscode";
 import * as os from "os";
 import * as path from "path";
 import { runLanguageModelDiagnostics } from "./lm/diagnostics";
+import { ExtensionState, findBoundFolder } from "./state/extensionState";
+import { RepoStore } from "./store/repoStore";
+import { SIDEBAR_VIEW_ID, SidebarView } from "./views/sidebarView";
+import { WELCOME_VIEW_ID, WelcomeView } from "./views/welcomeView";
 
 /** Env vars don't reach a dev host spawned by an already-running VS Code, so the spike signals via a file. */
 const DIAGNOSTICS_REQUEST_FILE = path.join(os.tmpdir(), "certprep-diagnostics-request.json");
@@ -10,13 +14,62 @@ export function activate(context: vscode.ExtensionContext): void {
 	const channel = vscode.window.createOutputChannel("Cert Prep");
 	context.subscriptions.push(channel);
 
+	const state = new ExtensionState({ log: (message) => channel.appendLine(message) });
+	context.subscriptions.push(state);
+
+	const sidebar = new SidebarView(context.extensionUri, state);
+	const welcome = new WelcomeView(context.extensionUri, state, (message) => channel.appendLine(message));
+
+	context.subscriptions.push(
+		vscode.window.registerWebviewViewProvider(SIDEBAR_VIEW_ID, sidebar, {
+			webviewOptions: { retainContextWhenHidden: true },
+		}),
+		vscode.window.registerWebviewViewProvider(WELCOME_VIEW_ID, welcome),
+		state.onDidChange(() => {
+			void vscode.commands.executeCommand("setContext", "certPrep.bound", state.bound);
+			sidebar.push();
+		})
+	);
+
 	context.subscriptions.push(
 		vscode.commands.registerCommand("certPrep.diagnostics.languageModel", () =>
 			runLanguageModelDiagnostics(channel)
+		),
+		vscode.commands.registerCommand("certPrep.refresh", () => state.refresh()),
+		vscode.commands.registerCommand("certPrep.commitNow", () => state.commitNow()),
+		vscode.commands.registerCommand("certPrep.bindRepo", () => bindRepo(state)),
+		vscode.commands.registerCommand("certPrep.newExam", () =>
+			vscode.window.showInformationMessage(
+				"Exam setup lands in the next update — your campaign builder is on its way!"
+			)
 		)
 	);
 
+	void vscode.commands.executeCommand("setContext", "certPrep.bound", false);
+	void bindOnStartup(state);
 	void maybeRunUnattendedDiagnostics(channel);
+}
+
+async function bindOnStartup(state: ExtensionState): Promise<void> {
+	const root = await findBoundFolder();
+	if (root) {
+		await state.bind(root);
+	}
+}
+
+async function bindRepo(state: ExtensionState): Promise<void> {
+	const picked = await vscode.window.showOpenDialog({
+		canSelectFiles: false,
+		canSelectFolders: true,
+		canSelectMany: false,
+		openLabel: "Use as prep repo",
+	});
+	const root = picked?.[0]?.fsPath;
+	if (!root) {
+		return;
+	}
+	await new RepoStore(root).initRepo();
+	await state.bind(root);
 }
 
 async function maybeRunUnattendedDiagnostics(channel: vscode.OutputChannel): Promise<void> {
