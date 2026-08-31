@@ -111,6 +111,34 @@ export interface UserProfile {
 	createdAt: string;
 }
 
+/** Mirrors the on-disk `questions.json` written by the quiz runner; unknown extra keys are preserved. */
+export interface Question {
+	id: string;
+	question: string;
+	options: string[];
+	correctAnswer: string | string[];
+	explanation?: string;
+	topic?: string;
+	difficulty?: string;
+	type?: string;
+	ungraded?: boolean;
+	[key: string]: unknown;
+}
+
+export interface QuestionDomain {
+	domainId: string;
+	domainName: string;
+	questions: Question[];
+}
+
+export interface QuestionBank {
+	examCode: string;
+	examName?: string;
+	totalQuestions?: number;
+	sources?: string[];
+	domains: QuestionDomain[];
+}
+
 export interface SourceRef {
 	id: string;
 	title: string;
