@@ -3,6 +3,7 @@ import * as os from "os";
 import * as path from "path";
 import { CertificateService } from "./certificates/certificateService";
 import { runLanguageModelDiagnostics } from "./lm/diagnostics";
+import { startNewExam } from "./pipeline/newExamCommand";
 import { ExtensionState, findBoundFolder } from "./state/extensionState";
 import { RepoStore } from "./store/repoStore";
 import { BattlePassView } from "./views/battlePassView";
@@ -10,6 +11,7 @@ import { DashboardView } from "./views/dashboardView";
 import { QuizView } from "./views/quizView";
 import { SessionView } from "./views/sessionView";
 import { SIDEBAR_VIEW_ID, SidebarView } from "./views/sidebarView";
+import { SourcesView } from "./views/sourcesView";
 import { WELCOME_VIEW_ID, WelcomeView } from "./views/welcomeView";
 
 /** Env vars don't reach a dev host spawned by an already-running VS Code, so the spike signals via a file. */
@@ -31,17 +33,23 @@ export function activate(context: vscode.ExtensionContext): void {
 	};
 
 	const certificates = new CertificateService(state);
+	const sources = new SourcesView(context.extensionUri);
+	context.subscriptions.push(sources);
+
+	const newExam = (): Promise<void> =>
+		startNewExam({
+			state,
+			sources,
+			openDashboard: (examId) => views.dashboard?.open(examId),
+			log: (message) => channel.appendLine(message),
+		});
 
 	const dashboard = new DashboardView(context.extensionUri, state, {
 		openSession: (examId, day) => views.session?.open(examId, day),
 		startQuiz: (examId, day) => views.quiz?.open(examId, day),
 		openBattlePass: (examId) => views.battlePass?.open(examId),
 		openCertificate: (examId, domainId) => certificates.open(examId, domainId),
-		buildPlan: () => {
-			void vscode.window.showInformationMessage(
-				"The plan builder lands in the next update — your campaign generator is on its way!"
-			);
-		},
+		buildPlan: () => void newExam(),
 	});
 	const session = new SessionView(context.extensionUri, state, {
 		startQuiz: (examId, day) => views.quiz?.open(examId, day),
@@ -98,11 +106,7 @@ export function activate(context: vscode.ExtensionContext): void {
 		vscode.commands.registerCommand("certPrep.openCertificate", (examId: string, domainId: string) =>
 			certificates.open(resolveExamId(state, examId), String(domainId))
 		),
-		vscode.commands.registerCommand("certPrep.newExam", () =>
-			vscode.window.showInformationMessage(
-				"Exam setup lands in the next update — your campaign builder is on its way!"
-			)
-		)
+		vscode.commands.registerCommand("certPrep.newExam", () => newExam())
 	);
 
 	void vscode.commands.executeCommand("setContext", "certPrep.bound", false);

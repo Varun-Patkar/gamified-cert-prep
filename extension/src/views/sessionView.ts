@@ -1,6 +1,8 @@
 /** The full-tab session reader. Markdown is rendered host-side by markdown/render.ts. */
 
 import * as vscode from "vscode";
+import { createLmService } from "../lm/lmService";
+import { ensureSessionMaterial, topUpQuestions } from "../pipeline/newExamPipeline";
 import { normalizeBank } from "../quiz/quizEngine";
 import type { ExtensionState } from "../state/extensionState";
 import { PanelHost } from "./panelHost";
@@ -15,6 +17,7 @@ export class SessionView implements vscode.Disposable {
 	private readonly host: PanelHost;
 	private examId?: string;
 	private day = 0;
+	private readonly preparing = new Set<string>();
 
 	constructor(
 		extensionUri: vscode.Uri,
@@ -40,6 +43,7 @@ export class SessionView implements vscode.Disposable {
 			}
 		);
 		await this.refresh();
+		await this.prepare(examId, day);
 	}
 
 	async refresh(): Promise<void> {
@@ -51,6 +55,58 @@ export class SessionView implements vscode.Disposable {
 
 	dispose(): void {
 		this.host.dispose();
+	}
+
+	/** First open of a day writes its teaching notes and tops the question bank up. */
+	private async prepare(examId: string, day: number): Promise<void> {
+		const store = this.state.store;
+		const snapshot = this.state.findSnapshot(examId);
+		const planDay = snapshot?.plan?.days.find((entry) => entry.day === day);
+		if (!store || !snapshot || !planDay || snapshot.meta.legacy) {
+			return;
+		}
+		const existing = await store.readSessionMaterial(snapshot.meta.folder, day);
+		const bank = await store.readQuestions(snapshot.meta.folder);
+		const shortOnQuestions = normalizeBank(bank).length < planDay.questionCount;
+		if ((existing && existing.trim() && !shortOnQuestions) || (snapshot.meta.domains ?? []).length === 0) {
+			return;
+		}
+
+		const key = `${examId}:${day}`;
+		if (this.preparing.has(key)) {
+			return;
+		}
+		this.preparing.add(key);
+		try {
+			const lm = await createLmService({
+				justification: `Cert Prep is writing your Day ${day} study notes.`,
+			});
+			if (!lm.ok) {
+				void vscode.window.showWarningMessage(lm.message);
+				return;
+			}
+			const deps = {
+				store,
+				lm: lm.service,
+				checkpoint: (message: string) => this.state.sync?.enqueue(message),
+			};
+			await vscode.window.withProgress(
+				{ location: vscode.ProgressLocation.Notification, title: `Writing your Day ${day} session…` },
+				async () => {
+					await ensureSessionMaterial(snapshot.meta, planDay, deps);
+					if (shortOnQuestions) {
+						await topUpQuestions(snapshot.meta, planDay, deps);
+					}
+				}
+			);
+			await this.refresh();
+		} catch (error) {
+			void vscode.window.showWarningMessage(
+				`Day ${day} notes could not be written: ${error instanceof Error ? error.message : String(error)}`
+			);
+		} finally {
+			this.preparing.delete(key);
+		}
 	}
 
 	private async model(): Promise<SessionModel | undefined> {

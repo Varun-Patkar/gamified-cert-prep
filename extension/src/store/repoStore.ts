@@ -122,6 +122,21 @@ export class RepoStore {
 		await writeJson(examPaths(this.root, folder).sources, sources);
 	}
 
+	async readTopics(folder: string): Promise<string | undefined> {
+		return readText(examPaths(this.root, folder).topics);
+	}
+
+	async writeTopics(folder: string, markdown: string): Promise<void> {
+		await writeText(examPaths(this.root, folder).topics, markdown.endsWith("\n") ? markdown : `${markdown}\n`);
+	}
+
+	async writePlanMarkdown(folder: string, markdown: string): Promise<void> {
+		await writeText(
+			examPaths(this.root, folder).planMarkdown,
+			markdown.endsWith("\n") ? markdown : `${markdown}\n`
+		);
+	}
+
 	async readQuestions(folder: string): Promise<QuestionBank | undefined> {
 		const bank = await readJson<QuestionBank>(examPaths(this.root, folder).questions);
 		return bank && Array.isArray(bank.domains) ? bank : undefined;

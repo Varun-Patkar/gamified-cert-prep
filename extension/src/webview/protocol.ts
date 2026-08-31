@@ -5,6 +5,7 @@ import type { BattlePassViewModel } from "../views/battlePassModel";
 import type { DashboardModel } from "../views/dashboardModel";
 import type { SessionModel } from "../views/sessionModel";
 import type { SidebarModel } from "../views/sidebarModel";
+import type { SourcesModel } from "../views/sourcesModel";
 
 export type SyncIndicatorState = "idle" | "syncing" | "pending" | "offline";
 
@@ -19,7 +20,8 @@ export type WebviewState =
 	| DashboardModel
 	| SessionModel
 	| QuizViewModel
-	| BattlePassViewModel;
+	| BattlePassViewModel
+	| SourcesModel;
 
 export type ExtensionToWebview =
 	| { type: "state/update"; state: WebviewState }
@@ -43,6 +45,12 @@ export type WebviewToExtension =
 	| { type: "command/openBattlePass"; examId: string }
 	| { type: "command/openCertificate"; examId: string; domainId: string }
 	| { type: "command/openSource"; url: string }
+	| { type: "command/toggleSource"; id: string }
+	| { type: "command/removeSource"; id: string }
+	| { type: "command/addSourceUrl"; url: string; title?: string }
+	| { type: "command/pickSourceFile" }
+	| { type: "command/approveSources" }
+	| { type: "command/rediscoverSources" }
 	| { type: "quiz/answer"; questionId: string; response: string[] }
 	| { type: "quiz/next" }
 	| { type: "quiz/finish" }
@@ -73,6 +81,9 @@ export function parseWebviewMessage(value: unknown): WebviewToExtension | undefi
 		case "command/cloneRepo":
 		case "command/useThisFolder":
 		case "command/commitNow":
+		case "command/pickSourceFile":
+		case "command/approveSources":
+		case "command/rediscoverSources":
 		case "quiz/next":
 		case "quiz/finish":
 		case "quiz/retryMissed":
@@ -90,6 +101,19 @@ export function parseWebviewMessage(value: unknown): WebviewToExtension | undefi
 				: undefined;
 		case "command/openSource":
 			return typeof message.url === "string" ? { type: "command/openSource", url: message.url } : undefined;
+		case "command/addSourceUrl":
+			return typeof message.url === "string"
+				? {
+						type: "command/addSourceUrl",
+						url: message.url,
+						title: typeof message.title === "string" ? message.title : undefined,
+					}
+				: undefined;
+		case "command/toggleSource":
+		case "command/removeSource":
+			return typeof message.id === "string"
+				? ({ type: message.type, id: message.id } as WebviewToExtension)
+				: undefined;
 		case "quiz/answer": {
 			const response = Array.isArray(message.response)
 				? message.response.filter((entry): entry is string => typeof entry === "string")

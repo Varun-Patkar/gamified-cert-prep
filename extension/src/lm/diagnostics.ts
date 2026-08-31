@@ -1,39 +1,5 @@
 import * as vscode from "vscode";
-
-const WEB_TOOL_HINTS = ["fetch", "web", "browser", "search", "playwright", "url", "page"];
-
-function looksLikeWebTool(tool: vscode.LanguageModelToolInformation): boolean {
-	const haystack = `${tool.name} ${tool.description}`.toLowerCase();
-	return WEB_TOOL_HINTS.some((hint) => haystack.includes(hint));
-}
-
-/** `selectChatModels()` can lead with unusable stubs (maxInputTokens 0), so pick deliberately. */
-export function pickModel(models: readonly vscode.LanguageModelChat[]): vscode.LanguageModelChat | undefined {
-	const usable = models.filter((m) => m.maxInputTokens > 0);
-	const preferred = ["gpt-4o", "gpt-4.1", "claude-sonnet"];
-	for (const family of preferred) {
-		const hit = usable.find((m) => m.vendor === "copilot" && m.family.startsWith(family));
-		if (hit) {
-			return hit;
-		}
-	}
-	return usable.find((m) => m.vendor === "copilot") ?? usable[0];
-}
-
-/** 93 loose matches is too many to offer; put actual page-fetchers first. */
-function rankWebTools(
-	tools: readonly vscode.LanguageModelToolInformation[]
-): vscode.LanguageModelToolInformation[] {
-	const score = (tool: vscode.LanguageModelToolInformation): number => {
-		const name = tool.name.toLowerCase();
-		if (name.includes("fetch") && name.includes("webpage")) return 0;
-		if (name.includes("fetch")) return 1;
-		if (name.includes("web") && name.includes("search")) return 2;
-		if (name.includes("navigate")) return 3;
-		return 4;
-	};
-	return [...tools].sort((a, b) => score(a) - score(b));
-}
+import { looksLikeWebTool, pickModel, rankWebTools } from "./lmService";
 
 /**
  * Answers the one question the whole research pipeline depends on: can the extension

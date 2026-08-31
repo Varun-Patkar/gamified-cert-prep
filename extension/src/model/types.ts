@@ -18,6 +18,10 @@ export interface ExamMeta {
 	completedAt?: string;
 	result?: ExamResult;
 	planConfig?: PlanConfig;
+	/** Free-text the user typed when starting setup; kept so research can be re-run. */
+	examQuery?: string;
+	/** Written by topic extraction; weights sum to 100. */
+	domains?: Domain[];
 }
 
 export interface ExamResult {
@@ -195,5 +199,7 @@ export interface SourceRef {
 	kind: "official-objectives" | "official-docs" | "official-practice" | "community" | "user-supplied";
 	/** User-supplied and official sources are used verbatim; community content is only paraphrased. */
 	trusted: boolean;
+	/** One line on why this source earned its place, shown on the approval card. */
+	rationale?: string;
 	approvedAt?: string;
 }
