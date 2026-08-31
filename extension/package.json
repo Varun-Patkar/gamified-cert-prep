@@ -1,0 +1,74 @@
+{
+  "name": "gamified-cert-prep",
+  "displayName": "Gamified Cert Prep",
+  "description": "Turn any certification exam into a gamified, day-by-day study campaign backed by your own git repo.",
+  "version": "0.0.1",
+  "publisher": "varun-patkar",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Education",
+    "Other"
+  ],
+  "keywords": [
+    "certification",
+    "exam",
+    "study",
+    "quiz",
+    "gamification"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "certPrep.diagnostics.languageModel",
+        "title": "Cert Prep: Run Language Model Diagnostics",
+        "category": "Cert Prep"
+      }
+    ],
+    "configuration": {
+      "title": "Gamified Cert Prep",
+      "properties": {
+        "certPrep.gamification.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show XP, levels, streaks, battle pass and celebration screens."
+        },
+        "certPrep.sync.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically commit and push study progress to the bound repository."
+        },
+        "certPrep.sync.pullIntervalMinutes": {
+          "type": "number",
+          "default": 15,
+          "minimum": 0,
+          "description": "How often to pull from the remote. Set to 0 to disable periodic pulls."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "npm run check-types && node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "npm run check-types && node esbuild.js --production",
+    "check-types": "tsc --noEmit",
+    "test": "vscode-test",
+    "pretest": "npm run check-types && node esbuild.js && tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.2",
+    "@types/vscode": "^1.104.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.24.2",
+    "mocha": "^11.0.1",
+    "typescript": "^5.7.2"
+  }
+}
