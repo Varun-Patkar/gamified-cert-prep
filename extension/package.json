@@ -58,8 +58,8 @@
     "watch": "node esbuild.js --watch",
     "package": "npm run check-types && node esbuild.js --production",
     "check-types": "tsc --noEmit",
-    "test": "vscode-test",
-    "pretest": "npm run check-types && node esbuild.js && tsc -p tsconfig.json"
+    "compile-tests": "tsc -p tsconfig.json",
+    "test": "npm run compile-tests && mocha \"out/test/**/*.test.js\""
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
