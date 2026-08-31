@@ -1,351 +1,259 @@
 {
-  "timestamp": "2026-05-20T11:25:39.519401",
-  "examCode": "AI-102",
-  "examName": "Designing and Implementing a Microsoft Azure AI Solution",
+  "timestamp": "2026-08-31T09:08:09.901040",
+  "examCode": "AB-100",
+  "examName": "Agentic AI Business Solutions Architect",
   "summary": {
-    "totalQuestions": 13,
+    "totalQuestions": 10,
     "gradedQuestions": 10,
-    "correct": 7,
-    "wrong": 3,
-    "skipped": 2,
-    "ungraded": 1,
-    "accuracy": 70.0,
-    "timeSeconds": 269.6
+    "correct": 10,
+    "wrong": 0,
+    "skipped": 0,
+    "ungraded": 0,
+    "accuracy": 100.0,
+    "timeSeconds": 68.1
   },
   "domainBreakdown": {
-    "Implement computer vision solutions": {
-      "total": 13,
-      "correct": 7,
-      "wrong": 4,
-      "skipped": 2
+    "Deploy AI-powered business solutions": {
+      "total": 10,
+      "correct": 10,
+      "wrong": 0,
+      "skipped": 0
     }
   },
   "topicBreakdown": {
-    "Topic 3": {
-      "total": 12,
-      "correct": 7,
-      "wrong": 4,
-      "skipped": 1
-    },
-    "Topic 4": {
+    "D1.1 / Data-readiness sequencing and sensitivity labels": {
       "total": 1,
-      "correct": 0,
+      "correct": 1,
       "wrong": 0,
-      "skipped": 1
+      "skipped": 0
+    },
+    "D1.2 / Multi-agent separation at trust boundaries": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D1.2 / Sequential and parallel orchestration dependencies": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D1.2 / Managed identity instead of stored workload secrets": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D1.2 / Custom connector capability versus DLP governance": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D1.3 / ROI baselines, realized value, and lifecycle TCO": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D1.2 / Build-buy-extend selection": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D1.2 / Platform selection for a low-code business agent": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D1.2 / SLM selection and custom-model justification": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
+    },
+    "D1.2 / Federated AI Center of Excellence governance": {
+      "total": 1,
+      "correct": 1,
+      "wrong": 0,
+      "skipped": 0
     }
   },
-  "wrongQuestions": [
-    {
-      "questionId": "t1V5ns251Fge7UiMBU84",
-      "question": "HOTSPOT - You are developing an application that includes language translation. The application will translate text retrieved by using a function named get_text_to_be_translated. The text can be in one of many languages. The content of the text must remain within the Americas Azure geography. You need to develop code to translate the text to a single language. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "D",
-      "correctAnswer": "A",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0016800001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0016900001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/83483-exam-ai-102-topic-3-question-29-discussion/",
-      "explanation": "Box 1: (\"api-nam.cognitive.microsofttranslator.com\") Geography USA: api-nam.cognitive.microsofttranslator.com Datacenters: East US, South Central US, West Central US, and West US 2 Box 2: \"/translate?to=en\" Must specify the language which it is being translated to. The 'to' parameter is required Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate | Discussion highlights: 1.api-nam.cognitive.microsofttranslator.com 2. /translate?to=en https://learn.microsoft.com/en-us/azure/cognitive-services/Translator/reference/v3-0-reference#base-urls Requests to Translator are, in most cases, handled | The answer seems correct to me. api.nam would keep it within the US.",
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions"
-    },
-    {
-      "questionId": "vHMvoWyXIGKpz5DgEIxQ",
-      "question": "HOTSPOT - You are building a solution that students will use to find references for essays. You use the following code to start building the solution. For each of the following statements, select Yes is the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "C",
-      "correctAnswer": "B",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image13.png",
-        "https://img.examtopics.com/ai-102/image14.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image218.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/104894-exam-ai-102-topic-3-question-38-discussion/",
-      "explanation": "Discussion highlights: NNY is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/entity-linking/overview Entity linking is one of the features offered by Azure Cognitive Service for Language, a collection o | Y N Y https://learn.microsoft.com/en-us/rest/api/cognitiveservices-textanalytics/3.0/entities-linking/entities-linking?tabs=HTTP",
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions"
-    },
-    {
-      "questionId": "wk672W3KbJLJW0OxVlK0",
-      "question": "HOTSPOT - You have a collection of press releases stored as PDF files. You need to extract text from the files and perform sentiment analysis. Which service should you use for each task? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "B",
-      "correctAnswer": "A",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image136.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image137.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135062-exam-ai-102-topic-3-question-75-discussion/",
-      "explanation": "Discussion highlights: AI Document Intelligence and AI Language | Updated version of topic 3 question 46. So according to the discussion in that question the correct answer is: AI Vision AI Language | Answer inferred from top upvoted discussion consensus.",
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions"
-    }
-  ],
-  "skippedQuestions": [
-    "uQSZR2brZIclGwwo2gk9",
-    "0cOYKGwLV89rZ9aCIwRT"
-  ],
+  "wrongQuestions": [],
+  "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "p00Kw9dYaSXJJ7xvBQWK",
-      "question": "You are developing an app that will use the Decision and Language APIs. You need to provision resources for the app. The solution must ensure that each service is accessed by using a single endpoint and credential. Which type of resource should you create?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C C is right answer, but now this service name changed \"Azure AI\". | Selected Answer: C This question is depricated. Azure Cognitive services is now Azure AI services. I can't find any info about the Decision API but Language API resides within the new AI Services. So for the options: A)",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135625-exam-ai-102-topic-3-question-61-discussion/"
-    },
-    {
-      "questionId": "pOzZ9dbpzU00CIH9hExI",
-      "question": "HOTSPOT - You are building a text-to-speech app that will use a custom neural voice. You need to create an SSML file for the app. The solution must ensure that the voice profile meets the following requirements: • Expresses a calm tone • Imitates the voice of a young adult female How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Code: <mstts:express-as [Box 1]=\"YoungAdultFemale\" [Box 2]=\"gentle\"> How can I assist you? </mstts:express-as> Dropdown options for each box: role, style, styledegree, type, voice",
-      "userAnswer": "—",
-      "correctAnswer": "?",
-      "correct": false,
-      "gradable": false,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Box 1 = role, Box 2 = style. The 'role' attribute imitates a different age/gender (YoungAdultFemale). The 'style' attribute controls emotional tone (gentle = calm). See: https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-synthesis-markup-voice#speaking-styles-and-roles",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image39.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image40.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108985-exam-ai-102-topic-3-question-45-discussion/"
-    },
-    {
-      "questionId": "rimX5dDUEyCAFpz5iHo2",
-      "question": "DRAG DROP - You develop an app in C# named App1 that performs speech-to-speech translation. You need to configure App1 to translate English to German. How should you complete the SpeechTranslationConfig object? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Agreeing with @WinzigWeich Answer should be: 1) SpeechRecognitionLanguage 2) AddTargetLanguage | 1) SpeechRecognitionLanguage 2) AddTargetLanguage in the exercise of AI-102 online learning",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image33.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image219.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/108982-exam-ai-102-topic-3-question-40-discussion/"
-    },
-    {
-      "questionId": "sp6Wd69TyNv5YVmsXpDE",
-      "question": "DRAG DROP - You develop a Python app named App1 that performs speech-to-speech translation. You need to configure App1 to translate English to German. How should you complete the SpeechTranslationConfig object? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "D",
-      "correctAnswer": "D",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Pretty sure the second one is add_target_language | The answer is WRONG! Correct Answer is below: def translate_speech_to_text(): translation_config = speechsdk.translation.SpeechTranslationConfig(subscription=speech_key, region=service_region) translation_config.speech_r | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image79.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image221.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/122483-exam-ai-102-topic-3-question-58-discussion/"
-    },
-    {
-      "questionId": "splMGH8TZhJjXZ8UZ4QB",
-      "question": "You are building a Conversational Language Understanding model for an e-commerce chatbot. Users can speak or type their billing address when prompted by the chatbot. You need to construct an entity to capture billing addresses. Which entity type should you use?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: A The link provided mentions addresses under 'ML Entities with Structure'. Will be hard to identify all possible international addresses with RegEx. | Selected Answer: A A - MAchine Learned in documentation https://learn.microsoft.com/en-us/azure/cognitive-services/LUIS/concepts/entities#ml-entity-with-structure - ML Entity with Structure An ML entity can be composed o",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/80186-exam-ai-102-topic-3-question-7-discussion/"
-    },
-    {
-      "questionId": "t1V5ns251Fge7UiMBU84",
-      "question": "HOTSPOT - You are developing an application that includes language translation. The application will translate text retrieved by using a function named get_text_to_be_translated. The text can be in one of many languages. The content of the text must remain within the Americas Azure geography. You need to develop code to translate the text to a single language. How should you complete the code? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": "D",
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Box 1: (\"api-nam.cognitive.microsofttranslator.com\") Geography USA: api-nam.cognitive.microsofttranslator.com Datacenters: East US, South Central US, West Central US, and West US 2 Box 2: \"/translate?to=en\" Must specify the language which it is being translated to. The 'to' parameter is required Reference: https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate | Discussion highlights: 1.api-nam.cognitive.microsofttranslator.com 2. /translate?to=en https://learn.microsoft.com/en-us/azure/cognitive-services/Translator/reference/v3-0-reference#base-urls Requests to Translator are, in most cases, handled | The answer seems correct to me. api.nam would keep it within the US.",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0016800001.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0016900001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/83483-exam-ai-102-topic-3-question-29-discussion/"
-    },
-    {
-      "questionId": "tjv5JYKvv3CcN9ryD4bU",
-      "question": "You have the following C# method. You need to deploy an Azure resource to the East US Azure region. The resource will be used to perform sentiment analysis. How should you call the method?",
+      "questionId": "q181",
+      "question": "A sales organization plans to enable an AI assistant for opportunity reviews tomorrow. Required CRM fields are incomplete, duplicate account values remain, and the SharePoint proposal library has no approved sensitivity-label scheme. The sponsor proposes enabling a small production group first and cleaning the data afterward. What should the architect recommend?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
+      "topic": "D1.1 / Data-readiness sequencing and sensitivity labels",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: B B is right answer. TextAnalytics is justice. | free tier==>S0, region eastus not East US, sentiment analysis=>TextAnalytics",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0015500001.png"
-      ],
+      "explanation": "A limited audience doesn't repair unreliable or improperly governed grounding data. Data readiness is a release dependency: required fields and duplicates must be remediated, and information protection, permissions, and retrieval behavior must be validated before users rely on generated output. A controlled pilot follows those readiness checks; it doesn't replace them.",
+      "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/75322-exam-ai-102-topic-3-question-22-discussion/"
+      "sourceUrl": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100"
     },
     {
-      "questionId": "uQSZR2brZIclGwwo2gk9",
-      "question": "HOTSPOT - You are building an app that will answer customer calls about the status of an order. The app will query a database for the order details and provide the customers with a spoken response. You need to identify which Azure AI service APIs to use. The solution must minimize development effort. Which object should you use for each requirement? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
-      "gradable": true,
-      "skipped": true,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: SpeechRecognizer / SpeechSynthesizer doesn't say anything about translation recognizer, which needs more code | To convert customer calls into text queries, you should use the SpeechRecognizer object. This is part of the Speech service in Azure Cognitive Services and it converts spoken language into written text. To provide custom | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image130.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image224.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135018-exam-ai-102-topic-3-question-71-discussion/"
-    },
-    {
-      "questionId": "vHMvoWyXIGKpz5DgEIxQ",
-      "question": "HOTSPOT - You are building a solution that students will use to find references for essays. You use the following code to start building the solution. For each of the following statements, select Yes is the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.",
-      "userAnswer": "C",
-      "correctAnswer": "B",
-      "correct": false,
-      "gradable": true,
-      "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: NNY is the answer. https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/entity-linking/overview Entity linking is one of the features offered by Azure Cognitive Service for Language, a collection o | Y N Y https://learn.microsoft.com/en-us/rest/api/cognitiveservices-textanalytics/3.0/entities-linking/entities-linking?tabs=HTTP",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image13.png",
-        "https://img.examtopics.com/ai-102/image14.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image218.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/104894-exam-ai-102-topic-3-question-38-discussion/"
-    },
-    {
-      "questionId": "wk672W3KbJLJW0OxVlK0",
-      "question": "HOTSPOT - You have a collection of press releases stored as PDF files. You need to extract text from the files and perform sentiment analysis. Which service should you use for each task? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.",
+      "questionId": "q182",
+      "question": "A proposed procurement agent reads public supplier catalogs and can also approve high-value purchase orders with privileged ERP access. The team wants one agent and one broad identity to simplify operations. What is the strongest reason to split the design?",
       "userAnswer": "B",
-      "correctAnswer": "A",
-      "correct": false,
+      "correctAnswer": "B",
+      "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
-      "difficulty": "medium",
-      "explanation": "Discussion highlights: AI Document Intelligence and AI Language | Updated version of topic 3 question 46. So according to the discussion in that question the correct answer is: AI Vision AI Language | Answer inferred from top upvoted discussion consensus.",
-      "questionImages": [
-        "https://img.examtopics.com/ai-102/image136.png"
-      ],
-      "answerImages": [
-        "https://img.examtopics.com/ai-102/image137.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135062-exam-ai-102-topic-3-question-75-discussion/"
+      "topic": "D1.2 / Multi-agent separation at trust boundaries",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "Agent boundaries should reflect meaningful differences in trust, authority, and risk. Separating public-information retrieval from consequential ERP approval prevents privilege aggregation and allows each workload to have its own identity, tools, guardrails, and audit path. The split is justified by the security boundary, not by an assumption that more agents are inherently better.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns"
     },
     {
-      "questionId": "z4yBLbMCvadmF1QSftq0",
-      "question": "You are building a chatbot. You need to ensure that the bot will recognize the names of your company’s products and codenames. The solution must minimize development effort. Which Azure Cognitive Service for Language service should you include in the solution?",
+      "questionId": "q183",
+      "question": "A claims workflow must first extract policy facts. A coverage agent and a fraud-screening agent can then analyze those same facts independently, after which a decision agent combines both results. Which orchestration design best matches these dependencies?",
       "userAnswer": "C",
       "correctAnswer": "C",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
+      "topic": "D1.2 / Sequential and parallel orchestration dependencies",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C C. custom Named Entity Recognition (NER) Custom NER allows you to train a model to recognize specific terms relevant to your business, such as product names and codenames. https://learn.microsoft.com/e | Named Entity Recognition (NER) identifies and categorizes specific names or terms in text, such as names of people, organizations, places, and more. By customizing NER, you can tailor it to recognize your company-specifi",
+      "explanation": "Sequential orchestration is required where one step produces input needed by another. Parallel orchestration is appropriate for independent branches that share available input. This workflow therefore uses a sequential stage, a parallel fan-out, and a synchronization point before the final dependent decision.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/135626-exam-ai-102-topic-3-question-62-discussion/"
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns"
     },
     {
-      "questionId": "z8Fz0EBbcclD3u3pNVRU",
-      "question": "You have an Azure subscription. You need to deploy an Azure AI Search resource that will recognize geographic locations. Which built-in skill should you include in the skillset for the resource?",
-      "userAnswer": "C",
-      "correctAnswer": "C",
+      "questionId": "q184",
+      "question": "An Azure-hosted agent calls Azure Storage and Key Vault without user delegation. Operations proposes registering an application and storing its client secret in an encrypted environment variable. The host supports managed identities. Which identity design should the architect prefer?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "Topic 3",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
+      "topic": "D1.2 / Managed identity instead of stored workload secrets",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Discussion highlights: Selected Answer: C The correct answer is C. EntityRecognitionSkill. Explanation: The EntityRecognitionSkill in Azure Cognitive Search is a built-in skill designed to identify and recognize specific types of entities with | Entity Recognition skill",
+      "explanation": "Managed identities let supported Azure resources obtain Microsoft Entra tokens without the application managing credentials. This removes stored-secret rotation and exposure risk. The identity still needs explicit least-privilege authorization on Storage and Key Vault; managed identity changes authentication, not the need for scoped RBAC.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/150396-exam-ai-102-topic-3-question-81-discussion/"
+      "sourceUrl": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"
     },
     {
-      "questionId": "0cOYKGwLV89rZ9aCIwRT",
-      "question": "HOTSPOT - You are building an Azure Cognitive Search custom skill. You have the following custom skill schema definition. For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point. Hot Area:",
-      "userAnswer": null,
-      "correctAnswer": "A",
-      "correct": false,
+      "questionId": "q185",
+      "question": "A maker has the technical components and environment privileges needed to create a custom connector for an external payroll API. The connector is created successfully, but the solution can't use it with a Dataverse connector after an administrator updates Power Platform data policies. Which conclusion is correct?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
       "gradable": true,
-      "skipped": true,
-      "topic": "Topic 4",
-      "domainName": "Implement computer vision solutions",
-      "domainId": "4",
+      "skipped": false,
+      "topic": "D1.2 / Custom connector capability versus DLP governance",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "A maker's ability to define a connector doesn't grant an exception from tenant or environment governance. Power Platform data policies can classify custom connectors by host URL or connector identity and can prevent disallowed connector combinations or block use. Creation and policy permission are distinct gates.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/dlp-custom-connector-parity"
+    },
+    {
+      "questionId": "q186",
+      "question": "A sponsor claims an invoice agent will deliver a 300% first-year ROI by multiplying estimated hours saved by labor cost. The estimate omits adoption, exception handling, evaluation, monitoring, model consumption, integration, and ongoing governance. What should the architect do before approving the business case?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D1.3 / ROI baselines, realized value, and lifecycle TCO",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "hard",
+      "explanation": "A defensible AI business case starts from measurable current-state baselines and distinguishes theoretical productivity from benefits actually realized through adoption. TCO must include implementation and recurring operating costs, including integration, model use, evaluation, monitoring, support, and governance. Scenario analysis exposes sensitivity instead of presenting one fragile point estimate.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy"
+    },
+    {
+      "questionId": "q187",
+      "question": "A company needs common sales-email summaries and meeting preparation. A licensed Microsoft product already provides the required capability with acceptable controls, and the requirement contains no differentiating workflow. Which recommendation best follows a build-buy-extend decision sequence?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D1.2 / Build-buy-extend selection",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "easy",
+      "explanation": "When a supported product already satisfies a commodity requirement and its governance needs, adopting it generally reduces delivery time, implementation risk, and lifecycle cost. Extension is justified by concrete unmet requirements; a custom build is justified when control or differentiation can't be achieved by buying or extending.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100"
+    },
+    {
+      "questionId": "q188",
+      "question": "A business team needs an employee-support agent grounded in approved SharePoint content, using standard Power Platform connectors and workflows. Makers must maintain it through a graphical low-code experience, and no custom model runtime is required. Which platform is the best starting point?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D1.2 / Platform selection for a low-code business agent",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "easy",
+      "explanation": "Copilot Studio is the direct fit for a graphical, low-code agent maintained by business makers and integrated with Microsoft knowledge and Power Platform workflows. Foundry is appropriate when developer control, custom code, models, or orchestration are material requirements; those needs aren't present here.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/training/modules/power-virtual-agents-bots/"
+    },
+    {
+      "questionId": "q189",
+      "question": "A team needs to classify short internal service requests on edge hardware with strict latency and cost limits. Evaluation shows a catalog small language model meets the target accuracy without training. What should the architect recommend first?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D1.2 / SLM selection and custom-model justification",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
       "difficulty": "medium",
-      "explanation": "Box 1: Yes - Once you have defined a skillset, you must map the output fields of any skill that directly contributes values to a given field in your search index. Box 2: Yes - The definition is a custom skill that calls a web API as part of the enrichment process. Box 3: No - For each organization identified by entity recognition, this skill calls a web API to find the description of that organization. Reference: https://docs.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping | Discussion highlights: YYN is the answer. https://learn.microsoft.com/en-us/azure/search/cognitive-search-custom-skill-web-api#skill-outputs There are no predefined outputs for this skill. Be sure to define an output field mapping in the index | The first answer should be no: https://learn.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping?tabs=rest \"Output field mappings are required if your indexer has an attached skillset that creates new",
-      "questionImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019500001.jpg",
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019500002.png"
-      ],
-      "answerImages": [
-        "https://www.examtopics.com/assets/media/exam-media/04271/0019600001.png"
-      ],
-      "sourceUrl": "https://www.examtopics.com/discussions/microsoft/view/78061-exam-ai-102-topic-4-question-6-discussion/"
+      "explanation": "Model choice should be driven by evaluated task quality and nonfunctional constraints, not model size. If a smaller catalog model already meets accuracy, latency, deployment, and cost requirements, it is the simpler starting point. Customization adds data, evaluation, deployment, and maintenance obligations and should address a demonstrated gap.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/"
+    },
+    {
+      "questionId": "q190",
+      "question": "Business units are independently launching agents with duplicated tools, inconsistent risk reviews, and no shared success metrics. Executives ask the AI Center of Excellence to take ownership of every implementation. Which operating model should the architect recommend?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D1.2 / Federated AI Center of Excellence governance",
+      "domainName": "Deploy AI-powered business solutions",
+      "domainId": "3",
+      "difficulty": "medium",
+      "explanation": "An AI CoE should create organizational capability: shared strategy, governance, reference patterns, reusable assets, enablement, prioritization, and value measurement. A federated model lets domain teams deliver with business context and accountability while the CoE reduces duplication and enforces consistent guardrails; making the CoE the permanent owner of every solution creates a bottleneck.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/center-of-excellence"
     }
   ]
 }

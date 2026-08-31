@@ -135,8 +135,8 @@
 
 #### Day 20 (2026-08-31, Mon) — Domain 1 Review
 
-- [ ] Review weak areas + targeted quiz
-- [ ] Estimated time: 1 hr
+- [x] Review weak areas + targeted quiz (q181–q190; 10/10 = 100%; 1m 8.1s)
+- [x] Estimated time: 1 hr
 
 #### Day 21 (2026-09-01, Tue) — Domain 2 Review
 

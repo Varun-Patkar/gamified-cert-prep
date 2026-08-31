@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 180,
+	"totalQuestions": 190,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)",
 		"Microsoft Learn: Copilot Studio analytics overview and conversational-agent effectiveness",
@@ -55,7 +55,7 @@
 		"https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices",
 		"https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"
 	],
-	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q180 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, Day 15 questions q141-q150, Day 16 questions q151-q160, Day 17 questions q161-q170, and Day 19 questions q171-q180 are mapped to Domain 3, Deploy AI-powered business solutions.",
+	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q190 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, Day 15 questions q141-q150, Day 16 questions q151-q160, Day 17 questions q161-q170, and Day 19 questions q171-q180 are mapped to Domain 3, Deploy AI-powered business solutions. Day 20 questions q181-q190 are mapped to Domain 1, Plan AI-powered business solutions.",
 	"caseStudies": [
 		{
 			"id": "chg",
@@ -3414,6 +3414,196 @@
 					"difficulty": "hard",
 					"source": "ai-generated-from-microsoft-learn",
 					"sourceUrl": "https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices",
+					"section": "standalone"
+				},
+				{
+					"id": "q181",
+					"originalId": "DAY20-01",
+					"type": "mc",
+					"question": "A sales organization plans to enable an AI assistant for opportunity reviews tomorrow. Required CRM fields are incomplete, duplicate account values remain, and the SharePoint proposal library has no approved sensitivity-label scheme. The sponsor proposes enabling a small production group first and cleaning the data afterward. What should the architect recommend?",
+					"options": [
+						"A. Enable the production group because limiting the audience resolves data-readiness risk",
+						"B. Complete and standardize the required source data, apply and validate the required labels and permissions, and then run a controlled pilot",
+						"C. Fine-tune a language model on the incomplete records so it can infer the missing fields",
+						"D. Replace SharePoint with a public website so sensitivity labels are unnecessary"
+					],
+					"correctAnswer": "B",
+					"explanation": "A limited audience doesn't repair unreliable or improperly governed grounding data. Data readiness is a release dependency: required fields and duplicates must be remediated, and information protection, permissions, and retrieval behavior must be validated before users rely on generated output. A controlled pilot follows those readiness checks; it doesn't replace them.",
+					"topic": "D1.1 / Data-readiness sequencing and sensitivity labels",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100",
+					"sourceUrl": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100",
+					"section": "standalone"
+				},
+				{
+					"id": "q182",
+					"originalId": "DAY20-02",
+					"type": "mc",
+					"question": "A proposed procurement agent reads public supplier catalogs and can also approve high-value purchase orders with privileged ERP access. The team wants one agent and one broad identity to simplify operations. What is the strongest reason to split the design?",
+					"options": [
+						"A. Every data source requires a separate language model",
+						"B. Public retrieval and privileged approval cross materially different trust and authorization boundaries, so separate agents can enforce distinct identities, permissions, and controls",
+						"C. Multi-agent systems always cost less than single-agent systems",
+						"D. Separate agents eliminate the need for human approval of high-value purchases"
+					],
+					"correctAnswer": "B",
+					"explanation": "Agent boundaries should reflect meaningful differences in trust, authority, and risk. Separating public-information retrieval from consequential ERP approval prevents privilege aggregation and allows each workload to have its own identity, tools, guardrails, and audit path. The split is justified by the security boundary, not by an assumption that more agents are inherently better.",
+					"topic": "D1.2 / Multi-agent separation at trust boundaries",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns",
+					"section": "standalone"
+				},
+				{
+					"id": "q183",
+					"originalId": "DAY20-03",
+					"type": "mc",
+					"question": "A claims workflow must first extract policy facts. A coverage agent and a fraud-screening agent can then analyze those same facts independently, after which a decision agent combines both results. Which orchestration design best matches these dependencies?",
+					"options": [
+						"A. Run extraction, coverage, fraud screening, and decision all in parallel",
+						"B. Run every step sequentially, including coverage and fraud screening",
+						"C. Run extraction first, fan out coverage and fraud screening in parallel, and run the decision step after both complete",
+						"D. Use a round-robin loop until any agent returns a final decision"
+					],
+					"correctAnswer": "C",
+					"explanation": "Sequential orchestration is required where one step produces input needed by another. Parallel orchestration is appropriate for independent branches that share available input. This workflow therefore uses a sequential stage, a parallel fan-out, and a synchronization point before the final dependent decision.",
+					"topic": "D1.2 / Sequential and parallel orchestration dependencies",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns",
+					"section": "standalone"
+				},
+				{
+					"id": "q184",
+					"originalId": "DAY20-04",
+					"type": "mc",
+					"question": "An Azure-hosted agent calls Azure Storage and Key Vault without user delegation. Operations proposes registering an application and storing its client secret in an encrypted environment variable. The host supports managed identities. Which identity design should the architect prefer?",
+					"options": [
+						"A. A managed identity with only the required data-plane roles at the narrowest practical scopes",
+						"B. A service principal secret embedded in the system prompt so the agent can retrieve it",
+						"C. A shared administrator account protected by multifactor authentication",
+						"D. Storage account keys copied into the deployment pipeline"
+					],
+					"correctAnswer": "A",
+					"explanation": "Managed identities let supported Azure resources obtain Microsoft Entra tokens without the application managing credentials. This removes stored-secret rotation and exposure risk. The identity still needs explicit least-privilege authorization on Storage and Key Vault; managed identity changes authentication, not the need for scoped RBAC.",
+					"topic": "D1.2 / Managed identity instead of stored workload secrets",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview",
+					"sourceUrl": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q185",
+					"originalId": "DAY20-05",
+					"type": "mc",
+					"question": "A maker has the technical components and environment privileges needed to create a custom connector for an external payroll API. The connector is created successfully, but the solution can't use it with a Dataverse connector after an administrator updates Power Platform data policies. Which conclusion is correct?",
+					"options": [
+						"A. Successful creation permanently exempts the connector from data policies",
+						"B. Connector creation capability and governed use are separate; administrators can classify or block custom connectors and restrict which connector groups may be combined",
+						"C. Only Microsoft-built connectors can be governed by data policies",
+						"D. Recreating the connector with the same host automatically overrides the policy"
+					],
+					"correctAnswer": "B",
+					"explanation": "A maker's ability to define a connector doesn't grant an exception from tenant or environment governance. Power Platform data policies can classify custom connectors by host URL or connector identity and can prevent disallowed connector combinations or block use. Creation and policy permission are distinct gates.",
+					"topic": "D1.2 / Custom connector capability versus DLP governance",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/power-platform/admin/dlp-custom-connector-parity",
+					"sourceUrl": "https://learn.microsoft.com/en-us/power-platform/admin/dlp-custom-connector-parity",
+					"section": "standalone"
+				},
+				{
+					"id": "q186",
+					"originalId": "DAY20-06",
+					"type": "mc",
+					"question": "A sponsor claims an invoice agent will deliver a 300% first-year ROI by multiplying estimated hours saved by labor cost. The estimate omits adoption, exception handling, evaluation, monitoring, model consumption, integration, and ongoing governance. What should the architect do before approving the business case?",
+					"options": [
+						"A. Accept the estimate because labor savings are the only relevant AI benefit",
+						"B. Establish measured baselines, model realized adoption and benefits, include full-lifecycle TCO, and test conservative, expected, and optimistic scenarios",
+						"C. Exclude governance and monitoring because they are enterprise overhead rather than solution costs",
+						"D. Use the most optimistic model-consumption tier to protect the target ROI"
+					],
+					"correctAnswer": "B",
+					"explanation": "A defensible AI business case starts from measurable current-state baselines and distinguishes theoretical productivity from benefits actually realized through adoption. TCO must include implementation and recurring operating costs, including integration, model use, evaluation, monitoring, support, and governance. Scenario analysis exposes sensitivity instead of presenting one fragile point estimate.",
+					"topic": "D1.3 / ROI baselines, realized value, and lifecycle TCO",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+					"section": "standalone"
+				},
+				{
+					"id": "q187",
+					"originalId": "DAY20-07",
+					"type": "mc",
+					"question": "A company needs common sales-email summaries and meeting preparation. A licensed Microsoft product already provides the required capability with acceptable controls, and the requirement contains no differentiating workflow. Which recommendation best follows a build-buy-extend decision sequence?",
+					"options": [
+						"A. Buy or adopt the prebuilt capability first, and extend only for validated gaps",
+						"B. Build a custom agent runtime immediately to maximize code ownership",
+						"C. Train a custom language model before evaluating product functionality",
+						"D. Create multiple specialist agents because decomposition always improves ROI"
+					],
+					"correctAnswer": "A",
+					"explanation": "When a supported product already satisfies a commodity requirement and its governance needs, adopting it generally reduces delivery time, implementation risk, and lifecycle cost. Extension is justified by concrete unmet requirements; a custom build is justified when control or differentiation can't be achieved by buying or extending.",
+					"topic": "D1.2 / Build-buy-extend selection",
+					"difficulty": "easy",
+					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100",
+					"sourceUrl": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100",
+					"section": "standalone"
+				},
+				{
+					"id": "q188",
+					"originalId": "DAY20-08",
+					"type": "mc",
+					"question": "A business team needs an employee-support agent grounded in approved SharePoint content, using standard Power Platform connectors and workflows. Makers must maintain it through a graphical low-code experience, and no custom model runtime is required. Which platform is the best starting point?",
+					"options": [
+						"A. Microsoft Copilot Studio",
+						"B. A fully custom Microsoft Foundry application with a bespoke orchestration engine",
+						"C. A custom-trained language model deployed directly to a GPU cluster",
+						"D. Azure Batch without an agent framework"
+					],
+					"correctAnswer": "A",
+					"explanation": "Copilot Studio is the direct fit for a graphical, low-code agent maintained by business makers and integrated with Microsoft knowledge and Power Platform workflows. Foundry is appropriate when developer control, custom code, models, or orchestration are material requirements; those needs aren't present here.",
+					"topic": "D1.2 / Platform selection for a low-code business agent",
+					"difficulty": "easy",
+					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/training/modules/power-virtual-agents-bots/",
+					"sourceUrl": "https://learn.microsoft.com/en-us/training/modules/power-virtual-agents-bots/",
+					"section": "standalone"
+				},
+				{
+					"id": "q189",
+					"originalId": "DAY20-09",
+					"type": "mc",
+					"question": "A team needs to classify short internal service requests on edge hardware with strict latency and cost limits. Evaluation shows a catalog small language model meets the target accuracy without training. What should the architect recommend first?",
+					"options": [
+						"A. Use the evaluated small model and monitor it against the acceptance criteria before considering customization",
+						"B. Train a new foundation model from scratch because every enterprise task requires proprietary weights",
+						"C. Select the largest available model regardless of latency and operating cost",
+						"D. Fine-tune immediately even though the baseline model already meets the requirement"
+					],
+					"correctAnswer": "A",
+					"explanation": "Model choice should be driven by evaluated task quality and nonfunctional constraints, not model size. If a smaller catalog model already meets accuracy, latency, deployment, and cost requirements, it is the simpler starting point. Customization adds data, evaluation, deployment, and maintenance obligations and should address a demonstrated gap.",
+					"topic": "D1.2 / SLM selection and custom-model justification",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/",
+					"sourceUrl": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/",
+					"section": "standalone"
+				},
+				{
+					"id": "q190",
+					"originalId": "DAY20-10",
+					"type": "mc",
+					"question": "Business units are independently launching agents with duplicated tools, inconsistent risk reviews, and no shared success metrics. Executives ask the AI Center of Excellence to take ownership of every implementation. Which operating model should the architect recommend?",
+					"options": [
+						"A. A federated CoE that sets reusable standards, governance, enablement, intake, and measurement while domain teams retain accountable delivery ownership",
+						"B. A central CoE that writes and operates every agent indefinitely and removes business ownership",
+						"C. No central function; each team should define its own controls and metrics",
+						"D. A procurement-only committee that evaluates licenses but not risk, architecture, adoption, or value"
+					],
+					"correctAnswer": "A",
+					"explanation": "An AI CoE should create organizational capability: shared strategy, governance, reference patterns, reusable assets, enablement, prioritization, and value measurement. A federated model lets domain teams deliver with business context and accountability while the CoE reduces duplication and enforces consistent guardrails; making the CoE the permanent owner of every solution creates a bottleneck.",
+					"topic": "D1.2 / Federated AI Center of Excellence governance",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/center-of-excellence",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/center-of-excellence",
 					"section": "standalone"
 				}
 			]
