@@ -42,7 +42,8 @@ export function renderShell(
 	const script = mediaUri(webview, extensionUri, options.script);
 	const csp = [
 		"default-src 'none'",
-		`style-src ${webview.cspSource}`,
+		// Our renderers compose layout tweaks as style attributes; only literal, host-authored values land there.
+		`style-src ${webview.cspSource} 'unsafe-inline'`,
 		`img-src ${webview.cspSource} https: data:`,
 		`font-src ${webview.cspSource}`,
 		`script-src 'nonce-${nonce}'`,

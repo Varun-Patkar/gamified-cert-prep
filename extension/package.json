@@ -76,9 +76,34 @@
         "title": "Prepare for a New Exam",
         "category": "Cert Prep",
         "icon": "$(add)"
+      },
+      {
+        "command": "certPrep.openExam",
+        "title": "Open Exam Dashboard",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.openDay",
+        "title": "Open Study Session",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.startQuiz",
+        "title": "Start Day Quiz",
+        "category": "Cert Prep"
       }
     ],
     "menus": {
+      "commandPalette": [
+        {
+          "command": "certPrep.openDay",
+          "when": "false"
+        },
+        {
+          "command": "certPrep.startQuiz",
+          "when": "false"
+        }
+      ],
       "view/title": [
         {
           "command": "certPrep.newExam",

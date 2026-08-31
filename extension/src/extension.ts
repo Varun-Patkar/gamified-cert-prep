@@ -4,6 +4,9 @@ import * as path from "path";
 import { runLanguageModelDiagnostics } from "./lm/diagnostics";
 import { ExtensionState, findBoundFolder } from "./state/extensionState";
 import { RepoStore } from "./store/repoStore";
+import { DashboardView } from "./views/dashboardView";
+import { QuizView } from "./views/quizView";
+import { SessionView } from "./views/sessionView";
 import { SIDEBAR_VIEW_ID, SidebarView } from "./views/sidebarView";
 import { WELCOME_VIEW_ID, WelcomeView } from "./views/welcomeView";
 
@@ -17,7 +20,35 @@ export function activate(context: vscode.ExtensionContext): void {
 	const state = new ExtensionState({ log: (message) => channel.appendLine(message) });
 	context.subscriptions.push(state);
 
-	const sidebar = new SidebarView(context.extensionUri, state);
+	// Declared up front so the three panels can hand off to one another.
+	const views = {
+		dashboard: undefined as DashboardView | undefined,
+		session: undefined as SessionView | undefined,
+		quiz: undefined as QuizView | undefined,
+	};
+
+	const dashboard = new DashboardView(context.extensionUri, state, {
+		openSession: (examId, day) => views.session?.open(examId, day),
+		startQuiz: (examId, day) => views.quiz?.open(examId, day),
+		buildPlan: () => {
+			void vscode.window.showInformationMessage(
+				"The plan builder lands in the next update — your campaign generator is on its way!"
+			);
+		},
+	});
+	const session = new SessionView(context.extensionUri, state, {
+		startQuiz: (examId, day) => views.quiz?.open(examId, day),
+		openDashboard: (examId) => dashboard.open(examId),
+	});
+	const quiz = new QuizView(context.extensionUri, state, {
+		openDashboard: (examId) => dashboard.open(examId),
+	});
+	views.dashboard = dashboard;
+	views.session = session;
+	views.quiz = quiz;
+	context.subscriptions.push(dashboard, session, quiz);
+
+	const sidebar = new SidebarView(context.extensionUri, state, (examId) => void dashboard.open(examId));
 	const welcome = new WelcomeView(context.extensionUri, state, (message) => channel.appendLine(message));
 
 	context.subscriptions.push(
@@ -28,6 +59,7 @@ export function activate(context: vscode.ExtensionContext): void {
 		state.onDidChange(() => {
 			void vscode.commands.executeCommand("setContext", "certPrep.bound", state.bound);
 			sidebar.push();
+			void dashboard.refresh();
 		})
 	);
 
@@ -38,6 +70,15 @@ export function activate(context: vscode.ExtensionContext): void {
 		vscode.commands.registerCommand("certPrep.refresh", () => state.refresh()),
 		vscode.commands.registerCommand("certPrep.commitNow", () => state.commitNow()),
 		vscode.commands.registerCommand("certPrep.bindRepo", () => bindRepo(state)),
+		vscode.commands.registerCommand("certPrep.openExam", (examId?: string) =>
+			dashboard.open(resolveExamId(state, examId))
+		),
+		vscode.commands.registerCommand("certPrep.openDay", (examId: string, day: number) =>
+			session.open(resolveExamId(state, examId), Number(day))
+		),
+		vscode.commands.registerCommand("certPrep.startQuiz", (examId: string, day: number) =>
+			quiz.open(resolveExamId(state, examId), Number(day))
+		),
 		vscode.commands.registerCommand("certPrep.newExam", () =>
 			vscode.window.showInformationMessage(
 				"Exam setup lands in the next update — your campaign builder is on its way!"
@@ -48,6 +89,15 @@ export function activate(context: vscode.ExtensionContext): void {
 	void vscode.commands.executeCommand("setContext", "certPrep.bound", false);
 	void bindOnStartup(state);
 	void maybeRunUnattendedDiagnostics(channel);
+}
+
+/** Accepts an exam id or the on-disk folder name, so command palette callers can use either. */
+function resolveExamId(state: ExtensionState, value?: string): string {
+	if (!value) {
+		return state.snapshots[0]?.meta.id ?? "";
+	}
+	const byFolder = state.snapshots.find((snapshot) => snapshot.meta.folder === value);
+	return byFolder ? byFolder.meta.id : value;
 }
 
 async function bindOnStartup(state: ExtensionState): Promise<void> {

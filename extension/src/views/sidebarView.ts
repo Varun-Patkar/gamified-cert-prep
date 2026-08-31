@@ -13,7 +13,8 @@ export class SidebarView implements vscode.WebviewViewProvider {
 
 	constructor(
 		private readonly extensionUri: vscode.Uri,
-		private readonly state: ExtensionState
+		private readonly state: ExtensionState,
+		private readonly openDashboard: (examId: string) => void
 	) {}
 
 	resolveWebviewView(view: vscode.WebviewView): void {
@@ -31,7 +32,7 @@ export class SidebarView implements vscode.WebviewViewProvider {
 					this.push();
 					break;
 				case "command/openDay":
-					void this.openDay(message.examId, message.day);
+					this.openDashboard(message.examId);
 					break;
 				case "command/openExam":
 					void this.openExam(message.examId);
@@ -70,30 +71,19 @@ export class SidebarView implements vscode.WebviewViewProvider {
 		});
 	}
 
-	private async openDay(examId: string, day: number): Promise<void> {
-		const snapshot = this.state.findSnapshot(examId);
-		const root = this.state.root;
-		if (!snapshot || !root) {
-			return;
-		}
-		const planDay = snapshot.plan?.days.find((entry) => entry.day === day);
-		if (!planDay) {
-			void vscode.window.showInformationMessage(
-				`Day ${day} of ${snapshot.meta.code} does not have a session note yet — generate the plan first.`
-			);
-			return;
-		}
-		await openPath(path.join(root, snapshot.meta.folder, planDay.sessionFile));
-	}
-
 	private async openExam(examId: string): Promise<void> {
 		const snapshot = this.state.findSnapshot(examId);
 		const root = this.state.root;
 		if (!snapshot || !root) {
 			return;
 		}
+		// Trophies point at the score report; anything still in flight opens the campaign board.
 		const file = snapshot.meta.result?.scoreReportFile;
-		await openPath(path.join(root, file ? file : path.join(snapshot.meta.folder, "progress.md")));
+		if (!file) {
+			this.openDashboard(examId);
+			return;
+		}
+		await openPath(path.join(root, file));
 	}
 }
 
