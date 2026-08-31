@@ -102,6 +102,54 @@ export interface StreakState {
 	freezeTokens: number;
 }
 
+export type BattlePassRewardKind = "theme" | "frame" | "milestone" | "certificate";
+
+export interface BattlePassReward {
+	kind: BattlePassRewardKind;
+	id: string;
+	name: string;
+	icon: string;
+	description: string;
+	/** Only set on certificate rewards. */
+	domainId?: string;
+}
+
+export interface BattlePassTier {
+	/** 1-based position on the track. */
+	tier: number;
+	/** Completed plan days needed to unlock this tier. */
+	requiredDays: number;
+	/** The plan day this tier lands on, so the track reads against the calendar. */
+	day: number;
+	date?: string;
+	label: string;
+	reward: BattlePassReward;
+	unlocked: boolean;
+	/** Already acknowledged in progress.json — an unlocked-but-unclaimed tier is worth celebrating. */
+	claimed: boolean;
+	final: boolean;
+}
+
+/** Scoped to one exam's campaign, never lifetime: the track always ends on exam day. */
+export interface BattlePass {
+	examId: string;
+	totalTiers: number;
+	totalDays: number;
+	completedDays: number;
+	currentTier: number;
+	nextTier?: BattlePassTier;
+	/** 0-1 progress from the current tier toward the next one. */
+	fractionToNext: number;
+	tiers: BattlePassTier[];
+}
+
+export interface BadgeAward {
+	id: string;
+	name: string;
+	icon: string;
+	description: string;
+}
+
 /** Lifetime, cross-exam. Battle passes are per-exam; XP is not. */
 export interface UserProfile {
 	schemaVersion: 1;

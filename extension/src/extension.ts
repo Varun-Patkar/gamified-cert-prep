@@ -1,9 +1,11 @@
 import * as vscode from "vscode";
 import * as os from "os";
 import * as path from "path";
+import { CertificateService } from "./certificates/certificateService";
 import { runLanguageModelDiagnostics } from "./lm/diagnostics";
 import { ExtensionState, findBoundFolder } from "./state/extensionState";
 import { RepoStore } from "./store/repoStore";
+import { BattlePassView } from "./views/battlePassView";
 import { DashboardView } from "./views/dashboardView";
 import { QuizView } from "./views/quizView";
 import { SessionView } from "./views/sessionView";
@@ -20,16 +22,21 @@ export function activate(context: vscode.ExtensionContext): void {
 	const state = new ExtensionState({ log: (message) => channel.appendLine(message) });
 	context.subscriptions.push(state);
 
-	// Declared up front so the three panels can hand off to one another.
+	// Declared up front so the four panels can hand off to one another.
 	const views = {
 		dashboard: undefined as DashboardView | undefined,
 		session: undefined as SessionView | undefined,
 		quiz: undefined as QuizView | undefined,
+		battlePass: undefined as BattlePassView | undefined,
 	};
+
+	const certificates = new CertificateService(state);
 
 	const dashboard = new DashboardView(context.extensionUri, state, {
 		openSession: (examId, day) => views.session?.open(examId, day),
 		startQuiz: (examId, day) => views.quiz?.open(examId, day),
+		openBattlePass: (examId) => views.battlePass?.open(examId),
+		openCertificate: (examId, domainId) => certificates.open(examId, domainId),
 		buildPlan: () => {
 			void vscode.window.showInformationMessage(
 				"The plan builder lands in the next update — your campaign generator is on its way!"
@@ -42,11 +49,17 @@ export function activate(context: vscode.ExtensionContext): void {
 	});
 	const quiz = new QuizView(context.extensionUri, state, {
 		openDashboard: (examId) => dashboard.open(examId),
+		onDayBanked: (examId) => certificates.awardNewlyCleared(examId),
+	});
+	const battlePass = new BattlePassView(context.extensionUri, state, {
+		openCertificate: (examId, domainId) => certificates.open(examId, domainId),
+		openDashboard: (examId) => dashboard.open(examId),
 	});
 	views.dashboard = dashboard;
 	views.session = session;
 	views.quiz = quiz;
-	context.subscriptions.push(dashboard, session, quiz);
+	views.battlePass = battlePass;
+	context.subscriptions.push(dashboard, session, quiz, battlePass);
 
 	const sidebar = new SidebarView(context.extensionUri, state, (examId) => void dashboard.open(examId));
 	const welcome = new WelcomeView(context.extensionUri, state, (message) => channel.appendLine(message));
@@ -78,6 +91,12 @@ export function activate(context: vscode.ExtensionContext): void {
 		),
 		vscode.commands.registerCommand("certPrep.startQuiz", (examId: string, day: number) =>
 			quiz.open(resolveExamId(state, examId), Number(day))
+		),
+		vscode.commands.registerCommand("certPrep.openBattlePass", (examId?: string) =>
+			battlePass.open(resolveExamId(state, examId))
+		),
+		vscode.commands.registerCommand("certPrep.openCertificate", (examId: string, domainId: string) =>
+			certificates.open(resolveExamId(state, examId), String(domainId))
 		),
 		vscode.commands.registerCommand("certPrep.newExam", () =>
 			vscode.window.showInformationMessage(

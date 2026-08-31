@@ -11,11 +11,30 @@
 	}
 
 	function head(model) {
-		const pips = model.tier.pips
+		const pass = model.battlePass;
+		const pips = (pass ? pass.pips : model.tier.pips)
 			.map(function (on) {
-				return '<i class="cp-tier-pip' + (on ? " cp-tier-pip--on" : "") + '"></i>';
+				return '<i class="cp-tier-pip' + (pass ? " cp-tier-pip--sm" : "") + (on ? " cp-tier-pip--on" : "") + '"></i>';
 			})
 			.join("");
+
+		const tierBlock = model.gamificationEnabled
+			? '<button class="cp-tier-open" data-action="openBattlePass" title="Open the battle pass">' +
+				'<span class="cp-eyebrow">Battle pass · ' +
+				esc(pass ? "Tier " + pass.currentTier + "/" + pass.totalTiers : model.tier.label) +
+				"</span>" +
+				'<span class="cp-tier-track">' +
+				pips +
+				"</span>" +
+				'<span class="cp-note">' +
+				(pass && pass.nextRewardName
+					? "next: " + esc(pass.nextRewardName)
+					: model.tier.nextLabel
+						? "next: " + esc(model.tier.nextLabel)
+						: "track complete") +
+				"</span>" +
+				"</button>"
+			: "";
 
 		const countdown = model.examDate
 			? '<div class="cp-countdown"><b>' +
@@ -40,11 +59,7 @@
 			"</div>",
 			'<div class="cp-stack" style="align-items:flex-end;gap:14px">',
 			countdown,
-			'<div class="cp-tier">',
-			'<span class="cp-eyebrow">Battle pass · ' + esc(model.tier.label) + "</span>",
-			'<div class="cp-tier-track">' + pips + "</div>",
-			model.tier.nextLabel ? '<span class="cp-note">next: ' + esc(model.tier.nextLabel) + "</span>" : "",
-			"</div>",
+			tierBlock,
 			"</div>",
 			'<div class="cp-ring cp-ring--lg" data-ring="' +
 				model.fraction +
@@ -151,6 +166,25 @@
 					'</b><small>questions answered</small></span></div>'
 				: '<p class="cp-sub">Answer your first quiz to start the accuracy record.</p>';
 
+		const certificates =
+			model.gamificationEnabled && model.certificates && model.certificates.length > 0
+				? '<section class="cp-card cp-reveal"><h2 class="cp-title" style="font-size:13px;margin-bottom:10px">Certificates</h2><div class="cp-medallions">' +
+					model.certificates
+						.map(function (medallion) {
+							return (
+								'<button class="cp-medallion" data-action="openCertificate" data-domain="' +
+								esc(medallion.domainId) +
+								'" title="' +
+								esc(medallion.domainName) +
+								'"><i>📜</i><span>' +
+								esc(medallion.domainName) +
+								"</span></button>"
+							);
+						})
+						.join("") +
+					"</div></section>"
+				: "";
+
 		return [
 			'<aside class="cp-rail">',
 			'<section class="cp-card cp-reveal"><h2 class="cp-title" style="font-size:13px;margin-bottom:10px">Scoreboard</h2>' +
@@ -160,6 +194,7 @@
 				'</b><small>exam XP</small></span><span class="cp-stat"><b>' +
 				model.tier.label +
 				"</b><small>tier</small></span></div></section>",
+			certificates,
 			'<section class="cp-card cp-reveal"><h2 class="cp-title" style="font-size:13px;margin-bottom:10px">Domain progress</h2>' +
 				domains +
 				"</section>",
@@ -231,6 +266,10 @@
 				cp.post("command/startQuiz", { examId: examId, day: Number(detail.day) });
 			} else if (action === "buildPlan") {
 				cp.post("command/buildPlan", { examId: examId });
+			} else if (action === "openBattlePass") {
+				cp.post("command/openBattlePass", { examId: examId });
+			} else if (action === "openCertificate") {
+				cp.post("command/openCertificate", { examId: examId, domainId: detail.domain });
 			}
 		},
 	});

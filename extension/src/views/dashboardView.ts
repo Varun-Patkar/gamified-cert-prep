@@ -1,6 +1,7 @@
 /** The full-tab exam dashboard. Derivation lives in dashboardModel.ts; rendering in media/dashboard.js. */
 
 import * as vscode from "vscode";
+import { gamificationEnabled } from "../certificates/certificateService";
 import type { ExtensionState } from "../state/extensionState";
 import { buildDashboardModel, type DashboardModel } from "./dashboardModel";
 import { PanelHost } from "./panelHost";
@@ -9,6 +10,8 @@ export interface DashboardDeps {
 	openSession(examId: string, day: number): Promise<void> | void;
 	startQuiz(examId: string, day: number): Promise<void> | void;
 	buildPlan(examId: string): Promise<void> | void;
+	openBattlePass(examId: string): Promise<void> | void;
+	openCertificate(examId: string, domainId: string): Promise<void> | void;
 }
 
 export class DashboardView implements vscode.Disposable {
@@ -71,10 +74,11 @@ export class DashboardView implements vscode.Disposable {
 			plan: snapshot.plan,
 			progress: snapshot.progress,
 			questions,
+			gamificationEnabled: gamificationEnabled(),
 		});
 	}
 
-	private async handle(message: { type: string; day?: number }): Promise<void> {
+	private async handle(message: { type: string; day?: number; domainId?: string }): Promise<void> {
 		const examId = this.examId;
 		if (!examId) {
 			return;
@@ -92,6 +96,14 @@ export class DashboardView implements vscode.Disposable {
 				break;
 			case "command/buildPlan":
 				await this.deps.buildPlan(examId);
+				break;
+			case "command/openBattlePass":
+				await this.deps.openBattlePass(examId);
+				break;
+			case "command/openCertificate":
+				if (message.domainId) {
+					await this.deps.openCertificate(examId, message.domainId);
+				}
 				break;
 			case "command/commitNow":
 				await vscode.commands.executeCommand("certPrep.commitNow");

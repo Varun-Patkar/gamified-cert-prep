@@ -1,5 +1,6 @@
 /** Pure view-model construction for the exam dashboard. No fs, no vscode, so it stays unit-testable. */
 
+import { buildBattlePass } from "../gamification/battlePass";
 import type { DayKind, ExamMeta, Plan, Progress, QuestionBank } from "../model/types";
 
 export type DayState = "completed" | "next" | "locked" | "unlockable-early";
@@ -48,6 +49,21 @@ export interface TierModel {
 	pips: boolean[];
 }
 
+/** The real per-exam track, summarised for the header. Absent when gamification is off. */
+export interface BattlePassSummary {
+	currentTier: number;
+	totalTiers: number;
+	fractionToNext: number;
+	nextRewardName?: string;
+	pips: boolean[];
+}
+
+export interface CertificateMedallion {
+	domainId: string;
+	domainName: string;
+	accuracy?: number;
+}
+
 export interface DashboardModel {
 	examId: string;
 	folder: string;
@@ -67,6 +83,9 @@ export interface DashboardModel {
 	xp: number;
 	streak: number;
 	tier: TierModel;
+	gamificationEnabled: boolean;
+	battlePass?: BattlePassSummary;
+	certificates: CertificateMedallion[];
 	nextDay?: number;
 	days: DayCard[];
 	domains: DomainProgressRow[];
@@ -84,6 +103,8 @@ export interface DashboardInput {
 	questions?: QuestionBank;
 	/** ISO date used for the countdown; defaults to today. */
 	today?: string;
+	/** Mirrors `certPrep.gamification.enabled`; when false the track and certificates stay hidden. */
+	gamificationEnabled?: boolean;
 }
 
 const KIND_LABELS: Record<DayKind, string> = {
@@ -113,6 +134,9 @@ export function buildDashboardModel(input: DashboardInput): DashboardModel {
 	);
 	const correctQuestions = (progress.results ?? []).reduce((sum, result) => sum + Math.max(0, result.correct ?? 0), 0);
 
+	const gamificationEnabled = input.gamificationEnabled !== false;
+	const domains = buildDomainRows(input, completed);
+
 	const model: DashboardModel = {
 		examId: meta.id,
 		folder: meta.folder,
@@ -129,8 +153,10 @@ export function buildDashboardModel(input: DashboardInput): DashboardModel {
 		xp: Math.max(0, progress.xp ?? 0),
 		streak: Math.max(0, progress.streak?.current ?? 0),
 		tier: tierFor(fraction),
+		gamificationEnabled,
+		certificates: gamificationEnabled ? medallionsFor(progress, domains) : [],
 		days,
-		domains: buildDomainRows(input, completed),
+		domains,
 		focusAreas: focusAreasFrom(progress),
 		headline: headlineFor(meta, nextDay, totalDays),
 		encouragement: encouragementFor(fraction, completedDays > 0),
@@ -149,6 +175,9 @@ export function buildDashboardModel(input: DashboardInput): DashboardModel {
 	}
 	if (nextDay !== undefined) {
 		model.nextDay = nextDay;
+	}
+	if (gamificationEnabled && totalDays > 0) {
+		model.battlePass = battlePassSummary(plan, progress);
 	}
 	if (answeredQuestions > 0) {
 		model.overallAccuracy = clamp01(correctQuestions / answeredQuestions);
@@ -233,6 +262,35 @@ export function tierFor(fraction: number): TierModel {
 		tier.nextLabel = TIER_NAMES[index];
 	}
 	return tier;
+}
+
+function battlePassSummary(plan: Plan | undefined, progress: Progress): BattlePassSummary {
+	const pass = buildBattlePass(plan, progress);
+	const summary: BattlePassSummary = {
+		currentTier: pass.currentTier,
+		totalTiers: pass.totalTiers,
+		fractionToNext: pass.fractionToNext,
+		pips: pass.tiers.map((tier) => tier.unlocked),
+	};
+	if (pass.nextTier) {
+		summary.nextRewardName = pass.nextTier.reward.name;
+	}
+	return summary;
+}
+
+function medallionsFor(progress: Progress, domains: DomainProgressRow[]): CertificateMedallion[] {
+	const byId = new Map(domains.map((row) => [row.id, row]));
+	return (progress.domainCertificates ?? []).map((domainId) => {
+		const row = byId.get(String(domainId));
+		const medallion: CertificateMedallion = {
+			domainId: String(domainId),
+			domainName: row?.title ?? `Domain ${domainId}`,
+		};
+		if (row && typeof row.accuracy === "number") {
+			medallion.accuracy = row.accuracy;
+		}
+		return medallion;
+	});
 }
 
 function buildDomainRows(input: DashboardInput, completed: Set<number>): DomainProgressRow[] {

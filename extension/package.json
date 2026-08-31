@@ -91,6 +91,16 @@
         "command": "certPrep.startQuiz",
         "title": "Start Day Quiz",
         "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.openBattlePass",
+        "title": "Open Battle Pass",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.openCertificate",
+        "title": "Open Domain Certificate",
+        "category": "Cert Prep"
       }
     ],
     "menus": {
@@ -101,6 +111,10 @@
         },
         {
           "command": "certPrep.startQuiz",
+          "when": "false"
+        },
+        {
+          "command": "certPrep.openCertificate",
           "when": "false"
         }
       ],

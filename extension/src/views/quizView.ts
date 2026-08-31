@@ -37,6 +37,8 @@ const KIND_LABELS: Record<string, string> = {
 
 export interface QuizDeps {
 	openDashboard(examId: string): Promise<void> | void;
+	/** Fired after a day result is written, so a cleared domain can be certified. */
+	onDayBanked?(examId: string): Promise<void> | void;
 }
 
 interface RunState {
@@ -333,6 +335,11 @@ export class QuizView implements vscode.Disposable {
 		this.host.post({ type: "quiz/results", results: run.results });
 		await this.state.refresh();
 		this.push();
+		try {
+			await this.deps.onDayBanked?.(run.examId);
+		} catch {
+			// Rewards are never allowed to break the results screen.
+		}
 	}
 
 	private remember(ids: string[]): void {

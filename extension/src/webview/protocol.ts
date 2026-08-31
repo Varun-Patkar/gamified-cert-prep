@@ -1,6 +1,7 @@
 /** Typed message contracts between the extension host and every webview. No vscode imports: pure data. */
 
 import type { QuizFeedback, QuizResults, QuizViewModel } from "../quiz/quizEngine";
+import type { BattlePassViewModel } from "../views/battlePassModel";
 import type { DashboardModel } from "../views/dashboardModel";
 import type { SessionModel } from "../views/sessionModel";
 import type { SidebarModel } from "../views/sidebarModel";
@@ -12,7 +13,13 @@ export interface WelcomeModel {
 	hasWorkspace: boolean;
 }
 
-export type WebviewState = SidebarModel | WelcomeModel | DashboardModel | SessionModel | QuizViewModel;
+export type WebviewState =
+	| SidebarModel
+	| WelcomeModel
+	| DashboardModel
+	| SessionModel
+	| QuizViewModel
+	| BattlePassViewModel;
 
 export type ExtensionToWebview =
 	| { type: "state/update"; state: WebviewState }
@@ -33,6 +40,8 @@ export type WebviewToExtension =
 	| { type: "command/startQuiz"; examId: string; day: number }
 	| { type: "command/askAboutSession"; examId: string; day: number }
 	| { type: "command/backToDashboard"; examId: string }
+	| { type: "command/openBattlePass"; examId: string }
+	| { type: "command/openCertificate"; examId: string; domainId: string }
 	| { type: "command/openSource"; url: string }
 	| { type: "quiz/answer"; questionId: string; response: string[] }
 	| { type: "quiz/next" }
@@ -71,8 +80,13 @@ export function parseWebviewMessage(value: unknown): WebviewToExtension | undefi
 		case "command/openExam":
 		case "command/buildPlan":
 		case "command/backToDashboard":
+		case "command/openBattlePass":
 			return typeof message.examId === "string"
 				? ({ type: message.type, examId: message.examId } as WebviewToExtension)
+				: undefined;
+		case "command/openCertificate":
+			return typeof message.examId === "string" && typeof message.domainId === "string"
+				? { type: "command/openCertificate", examId: message.examId, domainId: message.domainId }
 				: undefined;
 		case "command/openSource":
 			return typeof message.url === "string" ? { type: "command/openSource", url: message.url } : undefined;
