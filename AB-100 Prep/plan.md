@@ -140,8 +140,8 @@
 
 #### Day 21 (2026-09-01, Tue) — Domain 2 Review
 
-- [ ] Review weak areas + targeted quiz
-- [ ] Estimated time: 1 hr
+- [x] Review weak areas + targeted quiz (q061, q068, q071, q076, q080, q084, q086, q090, q099, q100; 9/10 = 90%; 52.1s; completed early on 2026-08-31)
+- [x] Estimated time: 1 hr
 
 #### Day 22 (2026-09-02, Wed) — Domain 3 Review (Monitor/Test)
 

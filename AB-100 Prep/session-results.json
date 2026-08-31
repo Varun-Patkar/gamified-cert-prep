@@ -1,259 +1,272 @@
 {
-  "timestamp": "2026-08-30T09:42:29.927651",
+  "timestamp": "2026-08-31T19:29:24.634830",
   "examCode": "AB-100",
   "examName": "Agentic AI Business Solutions Architect",
   "summary": {
     "totalQuestions": 10,
     "gradedQuestions": 10,
-    "correct": 10,
-    "wrong": 0,
+    "correct": 9,
+    "wrong": 1,
     "skipped": 0,
     "ungraded": 0,
-    "accuracy": 100.0,
-    "timeSeconds": 71.5
+    "accuracy": 90.0,
+    "timeSeconds": 52.1
   },
   "domainBreakdown": {
-    "Deploy AI-powered business solutions": {
+    "Agentic AI Business Solutions Architecture (Practice Quiz)": {
       "total": 10,
-      "correct": 10,
-      "wrong": 0,
+      "correct": 9,
+      "wrong": 1,
       "skipped": 0
     }
   },
   "topicBreakdown": {
-    "D3.4 / Fairness measurement and release decisions": {
+    "D2.1 / Dynamics 365 business terms and grounding": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Actionable transparency and user recourse": {
+    "D2.1 / Prompt and response agents": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Organizational accountability for third-party AI": {
+    "D2.1 / Fallback and escalation": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Meaningful human oversight and automation bias": {
+    "D2.1 / Generative orchestration input limitations": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Risk-based guardrail tuning": {
+    "D2.1 / Prompt action validation and safety": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Guardrail enforcement and safe fallback": {
+    "D2.2 / Copilot Studio MCP and generative orchestration": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / System-assigned managed identity lifecycle": {
+    "D2.2 / Computer Use identity, security, and supervision": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / User-assigned managed identity for replaceable hosts": {
+    "D2.2 / SharePoint grounding and permission boundaries": {
+      "total": 1,
+      "correct": 0,
+      "wrong": 1,
+      "skipped": 0
+    },
+    "D2.3 / Knowledge versus transactional actions": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     },
-    "D3.4 / Least-privilege role and scope selection": {
-      "total": 1,
-      "correct": 1,
-      "wrong": 0,
-      "skipped": 0
-    },
-    "D3.4 / Managed identity reuse and privilege aggregation": {
+    "D2.3 / Finance generative-help source precedence": {
       "total": 1,
       "correct": 1,
       "wrong": 0,
       "skipped": 0
     }
   },
-  "wrongQuestions": [],
+  "wrongQuestions": [
+    {
+      "questionId": "q090",
+      "question": "An Agent Builder agent in Microsoft 365 Copilot is grounded in a SharePoint site containing both general procedures and restricted legal documents. The owner enables organization-wide chat access. What should the architect expect when an employee without permission to the legal documents uses the agent?",
+      "userAnswer": "A",
+      "correctAnswer": "D",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge",
+      "explanation": "Sharing or making an agent discoverable does not grant access to its underlying SharePoint content. SharePoint and OneDrive knowledge sources continue to respect existing permissions and sensitivity labels.",
+      "topic": "D2.2 / SharePoint grounding and permission boundaries",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)"
+    }
+  ],
   "skippedQuestions": [],
   "allResults": [
     {
-      "questionId": "q171",
-      "question": "A benefits-eligibility agent meets its overall accuracy target, but evaluation shows a materially higher false-negative rate for one age group with otherwise comparable cases. The product team argues that protected attributes were excluded from the prompt, so the solution is fair. What should the architect recommend?",
+      "questionId": "q061",
+      "question": "A service organization uses the term \"red account\" for a customer that has a critical service tier and at least one unresolved priority case. Representatives want Customer Service Copilot summaries to use this term consistently. What should the solution architect recommend?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.4 / Fairness measurement and release decisions",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "This original scenario applies Microsoft's fairness principle to measured outcomes. Excluding a protected attribute does not prove fairness because correlated features and business processes can still produce group disparities. Representative, disaggregated evaluation, mitigation, documented thresholds, and ongoing monitoring provide decision evidence that aggregate accuracy cannot.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview"
-    },
-    {
-      "questionId": "q172",
-      "question": "An employee-facing agent ranks benefit options from policy documents. The team wants transparency but proposes publishing the complete system prompt and model chain-of-thought to every user. Which design better supports transparency without creating unnecessary security and privacy risk?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Actionable transparency and user recourse",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
+      "topic": "D2.1 / Dynamics 365 business terms and grounding",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
       "difficulty": "medium",
-      "explanation": "This original question distinguishes useful transparency from disclosure of sensitive implementation details. People should know when AI is involved, what the system is intended to do, its consequential limitations, what grounds a result, and how to seek correction or human help. Transparency does not require exposing secrets or private internal reasoning.",
+      "explanation": "Define organization-specific terms precisely and map them to authoritative records, fields, and relationships. Summary configuration supports natural-language descriptions and explicit field selection while preserving existing access controls.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview"
+      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/copilot-enable-custom-record-summaries"
     },
     {
-      "questionId": "q173",
-      "question": "A company deploys a third-party model through an agent that recommends whether suppliers should be suspended. The sponsor says the model provider is accountable for every business outcome because it built the model. What governance design should the architect require?",
+      "questionId": "q068",
+      "question": "A seller asks an agent, \"Summarize this opportunity and identify the documented risks.\" The agent retrieves permitted CRM data, returns an answer, and makes no record changes. Which agent type best describes the design?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.4 / Organizational accountability for third-party AI",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "This original scenario applies accountability to the organization that designs and deploys the complete business solution. Supplier contracts and provider controls are inputs, but they don't replace named internal ownership, impact assessment, decision authority, operational monitoring, incident handling, and auditable approvals.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview"
-    },
-    {
-      "questionId": "q174",
-      "question": "A claims agent routes high-impact denial recommendations to a human reviewer, but the interface hides supporting evidence and uncertainty, allows ten seconds per case, and provides no reject or escalation action. The team calls this human-in-the-loop. What should change?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Meaningful human oversight and automation bias",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "This original human-oversight scenario tests whether intervention is meaningful rather than ceremonial. Effective review requires context, time, competence, and real authority to stop or change a consequential action. Monitoring overrides, escalations, and reviewer behavior helps detect rubber-stamping and automation bias.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview"
-    },
-    {
-      "questionId": "q175",
-      "question": "A production support agent's content guardrail blocks too many benign technical answers. Operations proposes disabling the guardrail globally to restore completion rates. What is the best response?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Risk-based guardrail tuning",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "This original scenario treats guardrail tuning as a governed risk decision. False positives should be measured against representative and harmful test cases, traced to the relevant control, and addressed with the narrowest justified change. Staging, documentation, and post-change monitoring protect both utility and safety.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview"
-    },
-    {
-      "questionId": "q176",
-      "question": "When a high-risk request is blocked by a configured guardrail, an agent flow automatically rephrases the request repeatedly until one variant passes. What should the architect recommend?",
-      "userAnswer": "B",
-      "correctAnswer": "B",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / Guardrail enforcement and safe fallback",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "hard",
-      "explanation": "This original scenario distinguishes a safety-policy decision from a transient technical failure. Automatically mutating blocked input until it passes can circumvent the configured control. The orchestration should fail safely, provide an approved fallback or review path, and preserve telemetry for governance and tuning.",
-      "questionImages": [],
-      "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview"
-    },
-    {
-      "questionId": "q177",
-      "question": "A single Azure-hosted agent needs a credential-free identity that should be created and deleted with that compute resource. The identity will not be shared with other resources. Which identity type best matches the lifecycle requirement?",
-      "userAnswer": "A",
-      "correctAnswer": "A",
-      "correct": true,
-      "gradable": true,
-      "skipped": false,
-      "topic": "D3.4 / System-assigned managed identity lifecycle",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
+      "topic": "D2.1 / Prompt and response agents",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
       "difficulty": "easy",
-      "explanation": "This original selection question uses the documented managed-identity lifecycle distinction. A system-assigned identity is enabled directly on one Azure resource and is deleted with that resource. It is appropriate when the identity should not outlive or be shared by the host.",
+      "explanation": "The interaction begins with a user prompt and produces an informational response without carrying out a bounded operational workflow.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"
+      "sourceUrl": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100"
     },
     {
-      "questionId": "q178",
-      "question": "A team uses blue-green deployments for an Azure-hosted agent. Both deployment slots need the same Azure identity and downstream role assignments, and the identity must survive when either compute resource is replaced. What should the architect use?",
+      "questionId": "q071",
+      "question": "A customer enters an utterance that matches no enabled topic in a classic-orchestration agent. The architect wants the standard unknown-intent behavior with a bounded retry before handoff. Which design should be used?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.4 / User-assigned managed identity for replaceable hosts",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
-      "difficulty": "medium",
-      "explanation": "This original scenario uses the independent lifecycle and shareability of a user-assigned managed identity. The identity can be created separately, attached to multiple approved Azure resources, and retain its role assignments as hosts are replaced, without introducing application-managed credentials.",
+      "topic": "D2.1 / Fallback and escalation",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "easy",
+      "explanation": "The Fallback system topic catches unrecognized input through On Unknown Intent. Its documented default path asks the user to rephrase no more than twice and then redirects to the Escalate system topic.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-fallback-topic"
     },
     {
-      "questionId": "q179",
-      "question": "An autonomous agent only reads invoice blobs from one container. Its managed identity currently has Storage Blob Data Contributor at subscription scope. Which change best follows least privilege?",
+      "questionId": "q076",
+      "question": "A generatively orchestrated topic requires a value that must match a custom regex entity for an internal asset tag. The maker tries to define that custom entity directly as the topic input parameter. What should the architect recommend?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / Generative orchestration input limitations",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "Generative topic and tool input parameters don't directly support custom closed-list or regex entities. The documented approach is to collect the value with a Question node in a topic.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
+    },
+    {
+      "questionId": "q080",
+      "question": "A custom prompt classifies incoming complaints and returns valid JSON during testing. The product owner argues that temperature 0 and valid JSON make further controls unnecessary. What should the architect recommend?",
+      "userAnswer": "B",
+      "correctAnswer": "B",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.1 / Prompt action validation and safety",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "medium",
+      "explanation": "Prompt output remains probabilistic even with low temperature and structured formatting. Validate the output contract, test edge cases, define an insufficient-information path, and keep human or deterministic controls around consequential actions.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node"
+    },
+    {
+      "questionId": "q084",
+      "question": "A Copilot Studio agent must use a standards-based server that exposes several tools and resources. The available operations will evolve over time, and the agent should select the appropriate operation from the user's intent. Which design best meets the requirement?",
       "userAnswer": "A",
       "correctAnswer": "A",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.4 / Least-privilege role and scope selection",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
+      "topic": "D2.2 / Copilot Studio MCP and generative orchestration",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
       "difficulty": "medium",
-      "explanation": "This original least-privilege question requires both the minimum actions and the minimum scope. A read-only workload should not receive write or delete data actions, and access to one container does not justify a subscription-wide assignment. Managed identity authenticates the workload but doesn't make excess authorization safe.",
+      "explanation": "Copilot Studio can connect to an MCP server to access dynamically advertised tools and resources. MCP requires generative orchestration so the agent can select the appropriate capability.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices"
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent"
     },
     {
-      "questionId": "q180",
-      "question": "A read-only reporting agent and a remediation agent that can delete secrets are attached to the same user-assigned managed identity for convenience. What is the primary governance problem, and how should it be corrected?",
+      "questionId": "q086",
+      "question": "A Computer Use agent will be shared with employees whose permissions in the target application differ by role. The organization must avoid having every execution inherit the maker's access and wants execution to stop for review when potentially harmful instructions are detected. What should the architect configure?",
+      "userAnswer": "C",
+      "correctAnswer": "C",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / Computer Use identity, security, and supervision",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "End-user credentials preserve each user's access boundary instead of running with the maker's permissions. Human supervision can stop potentially harmful instructions for review, with a configured response time limit.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use"
+    },
+    {
+      "questionId": "q090",
+      "question": "An Agent Builder agent in Microsoft 365 Copilot is grounded in a SharePoint site containing both general procedures and restricted legal documents. The owner enables organization-wide chat access. What should the architect expect when an employee without permission to the legal documents uses the agent?",
+      "userAnswer": "A",
+      "correctAnswer": "D",
+      "correct": false,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.2 / SharePoint grounding and permission boundaries",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "Sharing or making an agent discoverable does not grant access to its underlying SharePoint content. SharePoint and OneDrive knowledge sources continue to respect existing permissions and sensitivity labels.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge"
+    },
+    {
+      "questionId": "q099",
+      "question": "A finance agent can answer questions about purchase orders from a Dataverse knowledge source. The business now wants it to approve and update purchase orders. What additional design is required?",
+      "userAnswer": "A",
+      "correctAnswer": "A",
+      "correct": true,
+      "gradable": true,
+      "skipped": false,
+      "topic": "D2.3 / Knowledge versus transactional actions",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
+      "difficulty": "hard",
+      "explanation": "Knowledge sources support retrieval and Q&A; they do not grant transactional authority. Updates require authenticated actions or tools plus deterministic authorization, validation, and approval controls.",
+      "questionImages": [],
+      "answerImages": [],
+      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/chat-with-fno-data"
+    },
+    {
+      "questionId": "q100",
+      "question": "An administrator enables custom knowledge and optional general-question answering for finance and operations generative help. In what order does Copilot use these sources?",
       "userAnswer": "B",
       "correctAnswer": "B",
       "correct": true,
       "gradable": true,
       "skipped": false,
-      "topic": "D3.4 / Managed identity reuse and privilege aggregation",
-      "domainName": "Deploy AI-powered business solutions",
-      "domainId": "3",
+      "topic": "D2.3 / Finance generative-help source precedence",
+      "domainName": "Agentic AI Business Solutions Architecture (Practice Quiz)",
+      "domainId": "1",
       "difficulty": "hard",
-      "explanation": "This original cross-domain scenario exposes a reuse trap. Every host using a user-assigned identity can act with that identity's permissions. Sharing one identity across workloads with materially different duties creates privilege aggregation, weakens attribution, and lets the low-risk workload exercise high-impact authority. Separate identities preserve least privilege and clearer accountability.",
+      "explanation": "Microsoft Learn states that optional general content is used after Copilot exhausts the configured custom knowledge sources. General content can include model knowledge, Bing-identified web content, and other sources.",
       "questionImages": [],
       "answerImages": [],
-      "sourceUrl": "https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices"
+      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/copilot/copilot-generative-help"
     }
   ]
 }

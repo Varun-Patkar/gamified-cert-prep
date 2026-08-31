@@ -3,17 +3,17 @@
 ## Overall
 
 - Exam Date: 2026-09-12 (Sat, 9:00 AM IST)
-- Sessions Completed: 20 / 31
-- Questions Answered: 216 / 190 (completed bank plus review and carryover questions)
-- Accuracy: 97.7% (211/216)
-- Current Day: Day 21 (next: 2026-09-01)
+- Sessions Completed: 21 / 31
+- Questions Answered: 226 / 190 (completed bank plus review and carryover questions)
+- Accuracy: 97.3% (220/226)
+- Current Day: Day 22 (next: 2026-09-02)
 
 ## Domain Confidence (self-rated 1–5)
 
 | Domain                                   | Weight | Confidence           | Notes                                                                                                                                                                                                                                                |
 | ---------------------------------------- | ------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | D1: Plan AI-powered business solutions   | 25–30% | 5 (66/70 quiz)       | Strong across data readiness, multi-agent boundaries and orchestration, managed identity, connector governance, ROI/TCO, platform and model selection, and federated CoE governance                                                                  |
-| D2: Design AI-powered business solutions | 25–30% | 4 (49/50 Days 6–10)  | Strong overall; review custom regex and closed-list entity collection for generative topic inputs                                                                                                                                                    |
+| D2: Design AI-powered business solutions | 25–30% | 4 (58/60 quiz)       | Strong overall; generative custom-entity input limitation retained; reinforce that agent sharing and discoverability do not override SharePoint permissions or sensitivity labels                                                                     |
 | D3: Deploy AI-powered business solutions | 40–45% | 5 (96/96 Days 11–19) | Strong across monitoring, testing, ALM, security, agent governance, Responsible AI, compliance, residency boundaries, layered audit evidence, model/data lineage, and immutable retention; full-domain review and deep dive completed without misses |
 
 ## Daily Log
@@ -254,6 +254,19 @@
 - Skipped/ungraded: 0 / 0
 - Reference: sessions/day-20-domain1-review.md
 - Next action: Day 21 — Domain 2 Review
+
+### Day 21 — 2026-08-31 — Domain 2 Review (Completed Early)
+
+- Status: Completed
+- Covered: Dynamics 365 business-term grounding; prompt-response agent classification; classic fallback and escalation; generative custom-entity input limitations; prompt validation; MCP orchestration; Computer Use identity and supervision; SharePoint grounding permissions; transactional authority; finance generative-help source precedence
+- Quiz: 10 assigned Domain 2 review questions — q061, q068, q071, q076, q080, q084, q086, q090, q099, q100
+- Accuracy: 9 / 10 (90%)
+- Time: 52.1s
+- Missed question: q090 (answered A; correct D)
+- Weak spot: Sharing or making an Agent Builder agent discoverable organization-wide does not grant users access to restricted SharePoint content; existing user permissions and sensitivity-label boundaries still apply
+- Skipped/ungraded: 0 / 0
+- Reference: sessions/day-21-domain2-review.md
+- Next action: Day 22 — Domain 3 Review (Monitor/Test)
 
 <!-- Example entry:
 ### Day 1 — 2026-08-12
