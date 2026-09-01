@@ -3,3 +3,5 @@ dist/
 out/
 .vscode-test/
 *.vsix
+scripts/preview/out/
+scripts/preview/shots/

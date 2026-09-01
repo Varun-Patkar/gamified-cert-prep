@@ -3,7 +3,7 @@
 import * as vscode from "vscode";
 import type { SourceRef } from "../model/types";
 import type { WebviewToExtension } from "../webview/protocol";
-import { PanelHost } from "./panelHost";
+import { PanelHost, type PanelHostOptions } from "./panelHost";
 import {
 	addUserSource,
 	approvedSources,
@@ -13,6 +13,8 @@ import {
 	toggleSource,
 	type SourceCandidate,
 } from "./sourcesModel";
+
+export const SOURCES_PANEL: PanelHostOptions = { viewType: "certPrep.sources", script: "sources.js" };
 
 export interface SourcesRequest {
 	examId: string;
@@ -32,7 +34,7 @@ export class SourcesView implements vscode.Disposable {
 	private resolve?: (sources: SourceRef[] | undefined) => void;
 
 	constructor(extensionUri: vscode.Uri) {
-		this.host = new PanelHost(extensionUri, { viewType: "certPrep.sources", script: "sources.js" });
+		this.host = new PanelHost(extensionUri, SOURCES_PANEL);
 	}
 
 	/** Resolves with the approved list, or `undefined` if the user closed the tab. */

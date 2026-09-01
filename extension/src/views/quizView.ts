@@ -18,7 +18,9 @@ import {
 } from "../quiz/quizEngine";
 import { defaultProfile } from "../store/repoStore";
 import type { ExtensionState } from "../state/extensionState";
-import { PanelHost } from "./panelHost";
+import { PanelHost, type PanelHostOptions } from "./panelHost";
+
+export const QUIZ_PANEL: PanelHostOptions = { viewType: "certPrep.quiz", script: "quiz.js" };
 
 const BASE_DAY_XP = 100;
 const PERFECT_BONUS = 50;
@@ -64,7 +66,7 @@ export class QuizView implements vscode.Disposable {
 		private readonly state: ExtensionState,
 		private readonly deps: QuizDeps
 	) {
-		this.host = new PanelHost(extensionUri, { viewType: "certPrep.quiz", script: "quiz.js" });
+		this.host = new PanelHost(extensionUri, QUIZ_PANEL);
 	}
 
 	async open(examId: string, day: number, onlyQuestionIds?: string[]): Promise<void> {

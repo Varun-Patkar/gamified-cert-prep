@@ -95,7 +95,7 @@ export function buildBattlePassModel(input: BattlePassInput): BattlePassViewMode
 		vendor: meta.vendor,
 		enabled: input.enabled,
 		headline: headlineFor(pass.currentTier, pass.totalTiers, input.enabled),
-		subhead: subheadFor(pass.currentTier, pass.totalTiers, pass.nextTier?.reward.name),
+		subhead: subheadFor(pass.currentTier, pass.totalTiers, tiers[pass.currentTier]?.rewardName),
 		totalTiers: pass.totalTiers,
 		currentTier: pass.currentTier,
 		completedDays: pass.completedDays,
@@ -109,7 +109,8 @@ export function buildBattlePassModel(input: BattlePassInput): BattlePassViewMode
 	};
 
 	if (pass.nextTier) {
-		model.nextRewardName = pass.nextTier.reward.name;
+		// Use the resolved card name so the header and the tier card never disagree.
+		model.nextRewardName = tiers[pass.currentTier]?.rewardName ?? pass.nextTier.reward.name;
 	}
 	if (meta.examDate) {
 		model.examDate = meta.examDate;

@@ -11,7 +11,7 @@ describe("renderMarkdown escaping", () => {
 
 	it("escapes script tags inside code fences", () => {
 		const html = renderMarkdown("```js\n<script>alert('x')</script>\n```");
-		assert.ok(html.includes("<pre class=\"cp-code\"><code class=\"language-js\">"));
+		assert.ok(html.includes("<pre class=\"cp-pre\"><code class=\"language-js\">"));
 		assert.ok(html.includes("&lt;script&gt;"));
 		assert.ok(!html.includes("<script>"));
 	});

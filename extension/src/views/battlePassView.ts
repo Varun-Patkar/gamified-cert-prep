@@ -4,7 +4,9 @@ import * as vscode from "vscode";
 import { gamificationEnabled } from "../certificates/certificateService";
 import type { ExtensionState } from "../state/extensionState";
 import { buildBattlePassModel, type BattlePassViewModel } from "./battlePassModel";
-import { PanelHost } from "./panelHost";
+import { PanelHost, type PanelHostOptions } from "./panelHost";
+
+export const BATTLE_PASS_PANEL: PanelHostOptions = { viewType: "certPrep.battlePass", script: "battlepass.js" };
 
 export interface BattlePassDeps {
 	openCertificate(examId: string, domainId: string): Promise<void> | void;
@@ -20,7 +22,7 @@ export class BattlePassView implements vscode.Disposable {
 		private readonly state: ExtensionState,
 		private readonly deps: BattlePassDeps
 	) {
-		this.host = new PanelHost(extensionUri, { viewType: "certPrep.battlePass", script: "battlepass.js" });
+		this.host = new PanelHost(extensionUri, BATTLE_PASS_PANEL);
 	}
 
 	async open(examId: string): Promise<void> {

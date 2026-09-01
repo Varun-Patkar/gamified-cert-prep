@@ -63,6 +63,18 @@ body.vscode-high-contrast-light {
 	box-sizing: border-box;
 }
 
+/* Without this, any link outside .cp-prose falls back to the UA's link blue, which is
+   both off-palette and low contrast on the indigo panels. */
+a {
+	color: var(--cp-cyan);
+	text-underline-offset: 3px;
+}
+
+a:focus-visible {
+	outline: 2px solid var(--cp-cyan);
+	outline-offset: 2px;
+}
+
 html,
 body {
 	margin: 0;
@@ -287,6 +299,15 @@ body::before {
 	color: var(--cp-xp-hi);
 	font-variant-numeric: tabular-nums;
 	letter-spacing: -0.03em;
+}
+
+/* Reward names are long; without a cap the note stretches the whole header row. */
+.cp-xp > .cp-note {
+	max-width: 38ch;
+	align-self: flex-end;
+	text-align: right;
+	font-style: normal;
+	color: var(--cp-text-dim);
 }
 
 .cp-xp-track {
@@ -676,7 +697,9 @@ body::before {
 }
 
 .cp-trophy-medal--legacy {
-	background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.08));
+	/* Was a pale plate under a pale star, which read as an empty disc. */
+	background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03));
+	border: 1px solid var(--cp-line-strong);
 	color: var(--cp-text);
 }
 
@@ -707,8 +730,8 @@ body::before {
 }
 
 .cp-note {
-	font-size: 10px;
-	color: var(--cp-text-faint);
+	font-size: 11px;
+	color: var(--cp-text-dim);
 	font-style: italic;
 }
 
@@ -1019,6 +1042,12 @@ body::before {
 	letter-spacing: -0.025em;
 	font-size: 15px;
 	line-height: 1.2;
+	/* One long generated title must never stretch every card in its grid row. */
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 .cp-day-meta {
@@ -1065,7 +1094,11 @@ body::before {
 		radial-gradient(120% 120% at 0% 0%, color-mix(in srgb, var(--cp-cyan) 22%, transparent), transparent 62%),
 		linear-gradient(160deg, var(--cp-panel-2), var(--cp-deep));
 	box-shadow: 0 0 0 1px var(--cp-cyan), 0 12px 32px -18px color-mix(in srgb, var(--cp-cyan) 90%, transparent);
-	animation: cp-nextpulse 2.8s var(--cp-ease) infinite;
+	/* Must re-declare the entrance reveal: a bare `animation` here would replace .cp-reveal's
+	   cp-rise and strand the most important card on the board at opacity 0. */
+	animation:
+		cp-rise 520ms var(--cp-spring) forwards,
+		cp-nextpulse 2.8s var(--cp-ease) infinite;
 }
 
 @keyframes cp-nextpulse {
@@ -1165,6 +1198,8 @@ body::before {
 }
 
 .cp-meter-fill {
+	/* It is an <i>, and its track is not a flex container, so without this it stays inline at 0x0. */
+	display: block;
 	height: 100%;
 	width: 0;
 	border-radius: 999px;
@@ -1249,6 +1284,8 @@ body::before {
 
 .cp-prose {
 	max-width: 68ch;
+	/* Otherwise the measure hugs the left edge and leaves a third of the page empty. */
+	margin-inline: auto;
 	font-size: 15px;
 	line-height: 1.72;
 	color: color-mix(in srgb, var(--cp-text) 92%, transparent);
@@ -1355,7 +1392,7 @@ body::before {
 	margin-bottom: 0;
 }
 
-.cp-code {
+.cp-pre {
 	margin: 0 0 1.3em;
 	padding: var(--cp-s4);
 	border-radius: var(--cp-r2);
@@ -1364,13 +1401,60 @@ body::before {
 	overflow-x: auto;
 }
 
-.cp-code code {
+/* Code and tables are the two things a 68ch measure actively hurts, so let them use the slack
+   either side of the reading column once there is any. */
+@media (min-width: 860px) {
+	.cp-prose > .cp-pre,
+	.cp-prose > .cp-table-wrap {
+		margin-inline: -70px;
+	}
+}
+
+.cp-pre,
+.cp-table-wrap,
+.cp-bp-rail {
+	scrollbar-width: thin;
+	scrollbar-color: var(--cp-line-strong) transparent;
+}
+
+.cp-pre code {
 	background: none;
 	border: 0;
 	padding: 0;
 	color: color-mix(in srgb, var(--cp-cyan) 55%, var(--cp-text));
 	font-size: 12.5px;
 	line-height: 1.6;
+}
+
+/* ---------- form inputs ---------- */
+
+.cp-input {
+	width: 100%;
+	padding: 9px 12px;
+	border-radius: var(--cp-r2);
+	border: 1px solid var(--cp-line-strong);
+	background: rgba(0, 0, 0, 0.32);
+	color: var(--cp-text);
+	font-family: var(--cp-body);
+	font-size: 13px;
+}
+
+.cp-input::placeholder {
+	color: var(--cp-text-faint);
+}
+
+.cp-input:focus-visible {
+	outline: 2px solid var(--cp-cyan);
+	outline-offset: 1px;
+	border-color: transparent;
+}
+
+.cp-field {
+	display: block;
+}
+
+.cp-field .cp-input {
+	margin-top: 6px;
 }
 
 .cp-table-wrap {
@@ -1458,13 +1542,28 @@ body::before {
 .cp-check {
 	display: inline-grid;
 	place-items: center;
-	width: 15px;
-	height: 15px;
-	margin-right: 7px;
-	border-radius: 4px;
+	width: 22px;
+	height: 22px;
+	flex: 0 0 auto;
+	margin-top: 1px;
+	padding: 0;
+	border-radius: 7px;
 	border: 1px solid var(--cp-line-strong);
-	font-size: 10px;
-	vertical-align: -2px;
+	background: rgba(255, 255, 255, 0.05);
+	color: var(--cp-text);
+	font-size: 13px;
+	cursor: pointer;
+	transition: transform 160ms var(--cp-spring), border-color 160ms var(--cp-ease);
+}
+
+.cp-check:hover {
+	transform: scale(1.08);
+	border-color: color-mix(in srgb, var(--cp-cyan) 60%, transparent);
+}
+
+.cp-check:focus-visible {
+	outline: 2px solid var(--cp-cyan);
+	outline-offset: 2px;
 }
 
 .cp-check--on {
@@ -1514,6 +1613,14 @@ body::before {
 	padding: 14px 26px;
 	font-size: 14px;
 	margin-top: var(--cp-s3);
+}
+
+/* For sentence-length lead-ins. An eyebrow's caps and tracking only work on a few words. */
+.cp-cta-lead {
+	margin: 0 auto;
+	max-width: 54ch;
+	font-size: 13px;
+	color: var(--cp-text-dim);
 }
 
 /* ---------- quiz ---------- */
@@ -1577,7 +1684,8 @@ body::before {
 	display: flex;
 	flex-direction: column;
 	gap: var(--cp-s2);
-	max-width: 78ch;
+	/* Shared with .cp-group and .cp-explain: a ch measure drifts because each uses a different size. */
+	max-width: 640px;
 }
 
 .cp-opt {
@@ -1703,7 +1811,7 @@ body::before {
 
 .cp-group {
 	margin-bottom: var(--cp-s4);
-	max-width: 78ch;
+	max-width: 640px;
 }
 
 .cp-group-label {
@@ -1731,7 +1839,7 @@ body::before {
 	border-radius: var(--cp-r2);
 	border: 1px solid var(--cp-line);
 	background: rgba(255, 255, 255, 0.035);
-	max-width: 78ch;
+	max-width: 640px;
 	font-size: 13.5px;
 	line-height: 1.6;
 	animation: cp-rise 400ms var(--cp-spring) both;
@@ -2281,6 +2389,15 @@ body::before {
 .cp-tier-open:focus-visible {
 	outline: 2px solid var(--cp-cyan);
 	outline-offset: 2px;
+}
+
+/* Sits on the busiest gradient on the page, so it cannot be as faint as a normal note. */
+.cp-tier-open .cp-note {
+	font-style: normal;
+	font-size: 10.5px;
+	color: var(--cp-text-dim);
+	max-width: 26ch;
+	text-align: right;
 }
 
 .cp-tier-pip--sm {

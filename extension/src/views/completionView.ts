@@ -17,7 +17,9 @@ import { createLmService } from "../lm/lmService";
 import type { ExamMeta, ExamResult } from "../model/types";
 import type { ExtensionState } from "../state/extensionState";
 import type { WebviewToExtension } from "../webview/protocol";
-import { PanelHost } from "./panelHost";
+import { PanelHost, type PanelHostOptions } from "./panelHost";
+
+export const COMPLETION_PANEL: PanelHostOptions = { viewType: "certPrep.completion", script: "completion.js" };
 
 export interface CompletionDeps {
 	complete(meta: ExamMeta, result: ExamResult): Promise<void>;
@@ -39,7 +41,7 @@ export class CompletionView implements vscode.Disposable {
 		private readonly state: ExtensionState,
 		private readonly deps: CompletionDeps
 	) {
-		this.host = new PanelHost(extensionUri, { viewType: "certPrep.completion", script: "completion.js" });
+		this.host = new PanelHost(extensionUri, COMPLETION_PANEL);
 	}
 
 	async open(examId: string): Promise<void> {

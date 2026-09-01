@@ -7,6 +7,14 @@ const MIN_QUESTIONS_PER_DAY = 10;
 const MOCK_QUESTION_FLOOR = 40;
 /** Stops a typo'd exam date ten years out from generating a nonsense plan. */
 const MAX_PLAN_SPAN_DAYS = 3650;
+/** Buffer is breathing room, not filler: one mid-plan and one before the mock is the most it earns. */
+const MAX_BUFFER_DAYS = 2;
+/** How much slack a plan needs before each buffer day is worth spending. */
+const DAYS_PER_BUFFER = 6;
+/** Roughly one spaced-repetition review for every this many days of new material. */
+const REVIEW_SPACING = 4;
+/** Ceiling on how far a heavy domain may stretch its per-topic depth past the baseline. */
+const MAX_WEIGHT_BOOST = 2;
 
 export interface GeneratePlanInput {
 	examId: string;
@@ -155,6 +163,66 @@ function chunk<T>(items: T[], parts: number): T[][] {
 	return buckets;
 }
 
+/** With more days than topics the extra days revisit topics in rotation instead of sitting empty. */
+function splitTopics(topicIds: readonly string[], days: number): string[][] {
+	const parts = Math.max(1, days);
+	if (topicIds.length === 0) {
+		return Array.from({ length: parts }, () => []);
+	}
+	if (topicIds.length >= parts) {
+		return chunk([...topicIds], parts);
+	}
+	return Array.from({ length: parts }, (_, index) => [topicIds[index % topicIds.length]]);
+}
+
+/**
+ * How many days a domain may spend: topic count x depth, where depth is how much calendar room
+ * exists per topic, scaled by the domain's share of the exam so heavy domains can go deeper.
+ */
+function studyCaps(domains: readonly Domain[], studyTotal: number): number[] {
+	const topicCounts = domains.map((domain) => Math.max(1, domain.topicIds.length));
+	const totalTopics = topicCounts.reduce((acc, value) => acc + value, 0);
+	const depth = Math.max(1, Math.ceil(studyTotal / Math.max(1, totalTopics)));
+	const weights = domains.map((domain) => (Number.isFinite(domain.weight) && domain.weight > 0 ? domain.weight : 0));
+	const weightSum = weights.reduce((acc, value) => acc + value, 0);
+	const mean = weightSum > 0 ? weightSum / domains.length : 0;
+	return domains.map((_, index) => {
+		const share = mean > 0 ? weights[index] / mean : 1;
+		return Math.max(1, Math.ceil(topicCounts[index] * depth * Math.min(MAX_WEIGHT_BOOST, Math.max(1, share))));
+	});
+}
+
+/** Trims allocations to their caps and hands the freed days to domains that still have headroom. */
+function applyCaps(allocations: number[], caps: readonly number[], domains: readonly Domain[]): number {
+	let surplus = 0;
+	for (let index = 0; index < allocations.length; index += 1) {
+		if (allocations[index] > caps[index]) {
+			surplus += allocations[index] - caps[index];
+			allocations[index] = caps[index];
+		}
+	}
+	const byWeight = domains
+		.map((domain, index) => ({ weight: domain.weight, index }))
+		.sort((a, b) => b.weight - a.weight || a.index - b.index);
+	while (surplus > 0) {
+		let placed = 0;
+		for (const { index } of byWeight) {
+			if (surplus === 0) {
+				break;
+			}
+			if (allocations[index] > 0 && allocations[index] < caps[index]) {
+				allocations[index] += 1;
+				surplus -= 1;
+				placed += 1;
+			}
+		}
+		if (placed === 0) {
+			break;
+		}
+	}
+	return surplus;
+}
+
 function questionsPerDay(config: PlanConfig): number {
 	const requested = Number.isFinite(config.questionsPerDay) ? Math.floor(config.questionsPerDay) : 0;
 	return Math.max(MIN_QUESTIONS_PER_DAY, requested);
@@ -164,38 +232,87 @@ function examDayDraft(): DraftDay {
 	return { kind: "exam", title: "Exam Day", topicIds: [], questionCount: 0 };
 }
 
+/** Late review days cover everything seen so far, which is far too long to sit on a card. */
+const MAX_REVIEW_TITLES = 2;
+
+function reviewTitle(seenDomainTitles: readonly string[]): string {
+	if (seenDomainTitles.length === 0) {
+		return "Review";
+	}
+	if (seenDomainTitles.length <= MAX_REVIEW_TITLES) {
+		return `Review: ${seenDomainTitles.join(", ")}`;
+	}
+	const shown = seenDomainTitles.slice(0, MAX_REVIEW_TITLES).join(", ");
+	return `Review: ${shown} +${seenDomainTitles.length - MAX_REVIEW_TITLES} more`;
+}
+
+/**
+ * Rotates which earlier domains a review targets so back-to-back reviews are never the same card;
+ * every third one sweeps everything seen so far.
+ */
+function reviewFocus(seen: readonly Domain[], rotation: number): Domain[] {
+	if (seen.length <= MAX_REVIEW_TITLES || rotation % 3 === 2) {
+		return [...seen];
+	}
+	const start = rotation % seen.length;
+	return [seen[start], seen[(start + 1) % seen.length]];
+}
+
+function reviewDraft(seen: readonly Domain[], rotation: number, perDay: number): DraftDay {
+	const focus = reviewFocus(seen, rotation);
+	const topicIds: string[] = [];
+	for (const domain of focus) {
+		for (const topicId of domain.topicIds) {
+			if (!topicIds.includes(topicId)) {
+				topicIds.push(topicId);
+			}
+		}
+	}
+	return {
+		kind: "review",
+		title: reviewTitle(focus.map((domain) => domain.title)),
+		topicIds,
+		questionCount: perDay,
+	};
+}
+
+function bufferDraft(): DraftDay {
+	return { kind: "buffer", title: "Buffer & Catch-up", topicIds: [], questionCount: 0 };
+}
+
 function buildDrafts(input: GeneratePlanInput, total: number): DraftDay[] {
 	const { config, domains } = input;
 	const perDay = questionsPerDay(config);
-	const drafts: DraftDay[] = [];
 	const mockCount = config.includeFinalMock && total > domains.length ? 1 : 0;
 	const afterMock = total - mockCount;
+	// Slack is everything past the one-day-per-domain minimum; only that can fund buffer and review.
+	const slack = Math.max(0, afterMock - domains.length);
+	const bufferCount = Math.min(MAX_BUFFER_DAYS, Math.floor(slack / DAYS_PER_BUFFER));
+	const afterBuffer = afterMock - bufferCount;
 	const reviewBudget = config.includeReviewDays
-		? Math.max(0, Math.min(domains.length, afterMock - domains.length))
+		? Math.max(0, Math.min(Math.floor(afterBuffer / REVIEW_SPACING), afterBuffer - domains.length))
 		: 0;
-	const studyTotal = afterMock - reviewBudget;
+	const studyTotal = afterBuffer - reviewBudget;
 
 	const allocations = apportion(
 		domains.map((domain) => domain.weight),
 		studyTotal
 	);
 	boostWeakDomains(allocations, domains, input.weakDomainIds ?? []);
+	const unplaced = applyCaps(allocations, studyCaps(domains, studyTotal), domains);
 
-	let reviewsLeft = reviewBudget;
-	let studyUsed = 0;
-	const seenTopicIds: string[] = [];
-	const seenDomainTitles: string[] = [];
-
+	const studyDrafts: DraftDay[] = [];
+	/** Index into studyDrafts of each domain's first day, so a review knows what has been covered. */
+	const domainStartsAt: number[] = [];
 	domains.forEach((domain, index) => {
-		// More study days than topics adds nothing, so the surplus becomes buffer instead.
-		const days = Math.min(allocations[index], Math.max(1, domain.topicIds.length));
+		const days = allocations[index];
 		if (days <= 0) {
 			return;
 		}
-		studyUsed += days;
-		const slices = chunk(domain.topicIds, days);
+		domainStartsAt[index] = studyDrafts.length;
+		const slices = splitTopics(domain.topicIds, days);
 		for (let part = 0; part < days; part += 1) {
-			drafts.push({
+			studyDrafts.push({
 				kind: "study",
 				title: days > 1 ? `${domain.title} — Part ${part + 1}` : domain.title,
 				domainId: domain.id,
@@ -203,35 +320,15 @@ function buildDrafts(input: GeneratePlanInput, total: number): DraftDay[] {
 				questionCount: perDay,
 			});
 		}
-		for (const topicId of domain.topicIds) {
-			if (!seenTopicIds.includes(topicId)) {
-				seenTopicIds.push(topicId);
-			}
-		}
-		seenDomainTitles.push(domain.title);
-		if (reviewsLeft > 0) {
-			reviewsLeft -= 1;
-			drafts.push({
-				kind: "review",
-				title: `Review: ${seenDomainTitles.join(", ")}`,
-				topicIds: [...seenTopicIds],
-				questionCount: perDay,
-			});
-		}
 	});
 
-	for (let i = 0; i < studyTotal - studyUsed; i += 1) {
-		drafts.push({ kind: "buffer", title: "Buffer & Catch-up", topicIds: [], questionCount: 0 });
-	}
-	// Any review budget the domain loop could not place still has to fill a day.
-	for (let i = 0; i < reviewsLeft; i += 1) {
-		drafts.push({
-			kind: "review",
-			title: seenDomainTitles.length > 0 ? `Review: ${seenDomainTitles.join(", ")}` : "Review",
-			topicIds: [...seenTopicIds],
-			questionCount: perDay,
-		});
-	}
+	// Days the caps could not absorb still have to fill the calendar; review beats idle buffer.
+	const reviews = reviewBudget + (config.includeReviewDays ? unplaced : 0);
+	const extraBuffer = config.includeReviewDays ? 0 : unplaced;
+
+	const drafts = interleaveReviews(studyDrafts, domains, domainStartsAt, reviews, perDay);
+	placeBuffers(drafts, bufferCount + extraBuffer);
+
 	if (mockCount > 0) {
 		drafts.push({
 			kind: "mock",
@@ -241,6 +338,61 @@ function buildDrafts(input: GeneratePlanInput, total: number): DraftDay[] {
 		});
 	}
 	return drafts;
+}
+
+/** Spreads the review days evenly through the study sequence instead of stacking them at the end. */
+function interleaveReviews(
+	studyDrafts: readonly DraftDay[],
+	domains: readonly Domain[],
+	domainStartsAt: readonly number[],
+	reviews: number,
+	perDay: number
+): DraftDay[] {
+	const studyCount = studyDrafts.length;
+	if (reviews <= 0 || studyCount === 0) {
+		const tail = Array.from({ length: Math.max(0, reviews) }, (_, index) =>
+			reviewDraft(domains, index, perDay)
+		);
+		return [...studyDrafts, ...tail];
+	}
+	const afterIndex = new Map<number, number>();
+	for (let r = 1; r <= reviews; r += 1) {
+		const position = Math.min(studyCount - 1, Math.max(0, Math.round((r * studyCount) / (reviews + 1)) - 1));
+		afterIndex.set(position, (afterIndex.get(position) ?? 0) + 1);
+	}
+
+	const drafts: DraftDay[] = [];
+	const seen: Domain[] = [];
+	let rotation = 0;
+	for (let index = 0; index < studyCount; index += 1) {
+		drafts.push(studyDrafts[index]);
+		domains.forEach((domain, domainIndex) => {
+			if (domainStartsAt[domainIndex] === index) {
+				seen.push(domain);
+			}
+		});
+		const pending = afterIndex.get(index) ?? 0;
+		for (let i = 0; i < pending; i += 1) {
+			drafts.push(reviewDraft(seen.length > 0 ? seen : domains, rotation, perDay));
+			rotation += 1;
+		}
+	}
+	return drafts;
+}
+
+/** One buffer day mid-plan and one just before the mock; anything more would read as filler. */
+function placeBuffers(drafts: DraftDay[], count: number): void {
+	if (count <= 0) {
+		return;
+	}
+	let trailing = count;
+	if (count >= 2) {
+		drafts.splice(Math.floor(drafts.length / 2), 0, bufferDraft());
+		trailing -= 1;
+	}
+	for (let i = 0; i < trailing; i += 1) {
+		drafts.push(bufferDraft());
+	}
 }
 
 export function generatePlan(input: GeneratePlanInput): Plan {

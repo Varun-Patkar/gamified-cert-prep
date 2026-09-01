@@ -24,6 +24,10 @@ export class PanelHost implements vscode.Disposable {
 		return this.panel !== undefined;
 	}
 
+	get html(): string | undefined {
+		return this.panel?.webview.html;
+	}
+
 	reveal(title: string, handler: (message: WebviewToExtension) => void, onClose?: () => void): void {
 		this.handler = handler;
 		this.onClose = onClose;

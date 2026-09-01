@@ -47,7 +47,12 @@
 	function activeCard(card, index) {
 		const stats = [];
 		if (card.countdownLabel) {
-			stats.push(stat(card.daysUntilExam >= 0 ? String(card.daysUntilExam) : "—", card.countdownLabel));
+			// The label already reads "23 days to go"; pairing it with the numeral would say 23 twice.
+			stats.push(
+				typeof card.daysUntilExam === "number" && card.daysUntilExam > 0
+					? stat(String(card.daysUntilExam), card.daysUntilExam === 1 ? "day to go" : "days to go")
+					: stat("✦", card.countdownLabel)
+			);
 		}
 		if (typeof card.lastAccuracy === "number") {
 			stats.push(stat(pct(card.lastAccuracy) + "%", "last accuracy"));
@@ -142,6 +147,7 @@
 			'<span class="cp-sync-dot"></span><span>' + esc(sync.label) + "</span>",
 			sync.canCommit ? '<button class="cp-btn--link" style="margin-left:auto" data-action="commitNow">Commit now</button>' : "",
 			"</div>",
+			sync.error ? '<p class="cp-note" style="margin-top:4px">' + esc(sync.error) + "</p>" : "",
 		].join("");
 	}
 

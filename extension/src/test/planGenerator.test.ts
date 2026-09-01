@@ -244,6 +244,61 @@ describe("generatePlan", () => {
 	});
 });
 
+describe("generatePlan with far more days than topics", () => {
+	/** Mirrors the real AI-102 data: coarse topic labels, so days outnumber topics several times over. */
+	const coarse: Domain[] = [
+		domain("d1", "Plan and manage an Azure AI solution", 20, 2),
+		domain("d2", "Implement generative AI solutions", 15, 2),
+		domain("d3", "Implement an agentic solution", 5, 1),
+		domain("d4", "Implement computer vision solutions", 15, 2),
+		domain("d5", "Implement natural language processing solutions", 30, 3),
+		domain("d6", "Implement knowledge mining solutions", 15, 2),
+	];
+	const long = config({ startDate: "2026-08-18", examDate: "2026-09-19" });
+	const plan = generatePlan({ examId: "ai-102", domains: coarse, config: long });
+
+	it("still fills exactly the available days", () => {
+		assert.strictEqual(plan.days.filter((day) => day.kind !== "exam").length, availableDates(long).length);
+	});
+
+	it("keeps at most two buffer days", () => {
+		assert.ok(plan.days.filter((day) => day.kind === "buffer").length <= 2);
+	});
+
+	it("interleaves review days instead of trailing them", () => {
+		const nonExam = plan.days.filter((day) => day.kind !== "exam");
+		const reviews = nonExam.filter((day) => day.kind === "review");
+		assert.ok(reviews.length >= 3, `expected several review days, got ${reviews.length}`);
+		const firstReview = nonExam.findIndex((day) => day.kind === "review");
+		assert.ok(firstReview < nonExam.length / 2, "the first review day should land in the first half");
+		const lastStudy = nonExam.map((day) => day.kind).lastIndexOf("study");
+		const lastReview = nonExam.map((day) => day.kind).lastIndexOf("review");
+		assert.ok(lastReview < lastStudy, "review days should not all sit at the end of the plan");
+	});
+
+	it("never repeats the same title more than three days running", () => {
+		let run = 1;
+		for (let index = 1; index < plan.days.length; index += 1) {
+			run = plan.days[index].title === plan.days[index - 1].title ? run + 1 : 1;
+			assert.ok(run <= 3, `"${plan.days[index].title}" repeats ${run} days in a row`);
+		}
+	});
+
+	it("gives every study day at least one topic", () => {
+		for (const day of plan.days.filter((item) => item.kind === "study")) {
+			assert.ok(day.topicIds.length > 0, `${day.title} has no topics`);
+		}
+	});
+
+	it("lets a domain span more days than it has topics", () => {
+		const spread = coarse.map((item) => plan.days.filter((day) => day.domainId === item.id).length);
+		assert.ok(
+			spread.some((days, index) => days > coarse[index].topicIds.length),
+			"no domain used the extra calendar room"
+		);
+	});
+});
+
 describe("describePlan", () => {
 	it("contains a row for every day", () => {
 		const plan = generatePlan({ examId: "ai-102", domains, config: config() });

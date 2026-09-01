@@ -291,7 +291,7 @@
 				topics +
 				"</section>",
 			'<div class="cp-cta-footer cp-reveal">',
-			'<div class="cp-eyebrow">' + esc(results.nextAction) + "</div>",
+			'<div class="cp-cta-lead">' + esc(results.nextAction) + "</div>",
 			'<div class="cp-actions" style="justify-content:center">',
 			'<button class="cp-btn cp-btn--primary" data-action="back">← Back to campaign</button>',
 			results.missedCount > 0

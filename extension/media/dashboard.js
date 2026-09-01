@@ -37,11 +37,13 @@
 			: "";
 
 		const countdown = model.examDate
-			? '<div class="cp-countdown"><b>' +
-				(typeof model.daysUntilExam === "number" && model.daysUntilExam >= 0 ? model.daysUntilExam : "—") +
-				'</b><span class="cp-eyebrow">' +
-				esc(model.countdownLabel) +
-				"</span></div>"
+			? typeof model.daysUntilExam === "number" && model.daysUntilExam > 0
+				? '<div class="cp-countdown"><b>' +
+					model.daysUntilExam +
+					'</b><span class="cp-eyebrow">' +
+					(model.daysUntilExam === 1 ? "day to go" : "days to go") +
+					"</span></div>"
+				: '<div class="cp-countdown"><b>✦</b><span class="cp-eyebrow">' + esc(model.countdownLabel) + "</span></div>"
 			: '<p class="cp-sub" style="margin-top:6px">' + esc(model.countdownLabel) + "</p>";
 
 		return [
@@ -100,7 +102,7 @@
 			"</button>";
 
 		const early =
-			card.earlyLabel && card.state !== "next"
+			card.earlyLabel && card.state !== "next" && card.questionCount > 0
 				? '<button class="cp-btn cp-btn--ghost cp-btn--sm" data-action="startQuiz" data-day="' +
 					card.day +
 					'">' +

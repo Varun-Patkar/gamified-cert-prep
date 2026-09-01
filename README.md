@@ -16,6 +16,12 @@ These exams were passed using this prep system:
 
 _This table is regenerated automatically by the extension whenever an exam is marked complete._
 
+## See it
+
+[**📸 Visual walkthrough**](docs/WALKTHROUGH.md) — every screen, with real data.
+
+![Sidebar and campaign board](docs/screenshots/dashboard.png)
+
 ## How it works
 
 Everything lives in the sidebar. Your repo is the save file.

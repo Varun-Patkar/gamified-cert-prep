@@ -5,8 +5,10 @@ import { createLmService } from "../lm/lmService";
 import { ensureSessionMaterial, topUpQuestions } from "../pipeline/newExamPipeline";
 import { normalizeBank } from "../quiz/quizEngine";
 import type { ExtensionState } from "../state/extensionState";
-import { PanelHost } from "./panelHost";
+import { PanelHost, type PanelHostOptions } from "./panelHost";
 import { buildSessionModel, type SessionModel } from "./sessionModel";
+
+export const SESSION_PANEL: PanelHostOptions = { viewType: "certPrep.session", script: "session.js" };
 
 export interface SessionDeps {
 	startQuiz(examId: string, day: number): Promise<void> | void;
@@ -24,7 +26,7 @@ export class SessionView implements vscode.Disposable {
 		private readonly state: ExtensionState,
 		private readonly deps: SessionDeps
 	) {
-		this.host = new PanelHost(extensionUri, { viewType: "certPrep.session", script: "session.js" });
+		this.host = new PanelHost(extensionUri, SESSION_PANEL);
 	}
 
 	async open(examId: string, day: number): Promise<void> {

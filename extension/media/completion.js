@@ -12,9 +12,9 @@
 
 	function field(id, label, hint, type) {
 		return [
-			'<label style="display:block">',
+			'<label class="cp-field">',
 			'<span class="cp-eyebrow">' + esc(label) + "</span>",
-			'<input class="cp-code" id="cp-' +
+			'<input class="cp-input" id="cp-' +
 				id +
 				'" data-field="' +
 				id +
@@ -24,7 +24,7 @@
 				esc(hint) +
 				'" value="' +
 				esc(draft[id] || "") +
-				'" style="width:100%;padding:9px 12px;margin-top:6px" />',
+				'" />',
 			"</label>",
 		].join("");
 	}
@@ -96,7 +96,7 @@
 			"</section>",
 			"</div>",
 			'<div class="cp-cta-footer cp-reveal">',
-			'<div class="cp-eyebrow">' + esc(model.reassurance) + "</div>",
+			'<div class="cp-cta-lead">' + esc(model.reassurance) + "</div>",
 			'<button class="cp-btn cp-btn--primary" data-action="submit"' +
 				(model.busy ? " disabled" : "") +
 				">" +

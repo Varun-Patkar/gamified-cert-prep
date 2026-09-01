@@ -4,7 +4,9 @@ import * as vscode from "vscode";
 import { gamificationEnabled } from "../certificates/certificateService";
 import type { ExtensionState } from "../state/extensionState";
 import { buildDashboardModel, type DashboardModel } from "./dashboardModel";
-import { PanelHost } from "./panelHost";
+import { PanelHost, type PanelHostOptions } from "./panelHost";
+
+export const DASHBOARD_PANEL: PanelHostOptions = { viewType: "certPrep.dashboard", script: "dashboard.js" };
 
 export interface DashboardDeps {
 	openSession(examId: string, day: number): Promise<void> | void;
@@ -24,7 +26,7 @@ export class DashboardView implements vscode.Disposable {
 		private readonly state: ExtensionState,
 		private readonly deps: DashboardDeps
 	) {
-		this.host = new PanelHost(extensionUri, { viewType: "certPrep.dashboard", script: "dashboard.js" });
+		this.host = new PanelHost(extensionUri, DASHBOARD_PANEL);
 	}
 
 	get currentExamId(): string | undefined {

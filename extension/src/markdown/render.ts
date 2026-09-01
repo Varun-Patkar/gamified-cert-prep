@@ -114,7 +114,7 @@ function emitCode(lines: string[], start: number, marker: string, language: stri
 		index += 1;
 	}
 	const cls = language ? ` class="language-${escapeHtml(language.toLowerCase())}"` : "";
-	out.push(`<pre class="cp-code"><code${cls}>${escapeHtml(body.join("\n"))}</code></pre>`);
+	out.push(`<pre class="cp-pre"><code${cls}>${escapeHtml(body.join("\n"))}</code></pre>`);
 	return index < lines.length ? index + 1 : index;
 }
 

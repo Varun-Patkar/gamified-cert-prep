@@ -180,7 +180,7 @@ export function buildDashboardModel(input: DashboardInput): DashboardModel {
 		model.nextDay = nextDay;
 	}
 	if (gamificationEnabled && totalDays > 0) {
-		model.battlePass = battlePassSummary(plan, progress);
+		model.battlePass = battlePassSummary(plan, progress, domains);
 	}
 	if (answeredQuestions > 0) {
 		model.overallAccuracy = clamp01(correctQuestions / answeredQuestions);
@@ -213,10 +213,9 @@ function buildDayCard(
 	};
 
 	// Nothing is ever hard-blocked: a locked day still offers a way in.
-	if (state === "locked") {
-		card.earlyLabel = "Do this early";
-	} else if (state === "unlockable-early") {
-		card.earlyLabel = "Get ahead →";
+	// The ghost action is always the quiz, so it must not repeat the primary (session) label.
+	if (state === "locked" || state === "unlockable-early") {
+		card.earlyLabel = "Quiz me early";
 	}
 
 	const latest = results[results.length - 1];
@@ -251,7 +250,7 @@ function actionLabelFor(state: DayState, day: number): string {
 		case "unlockable-early":
 			return "Get ahead →";
 		default:
-			return "Do this early";
+			return "Read ahead";
 	}
 }
 
@@ -270,7 +269,11 @@ export function tierFor(fraction: number): TierModel {
 	return tier;
 }
 
-function battlePassSummary(plan: Plan | undefined, progress: Progress): BattlePassSummary {
+function battlePassSummary(
+	plan: Plan | undefined,
+	progress: Progress,
+	domains: DomainProgressRow[]
+): BattlePassSummary {
 	const pass = buildBattlePass(plan, progress);
 	const summary: BattlePassSummary = {
 		currentTier: pass.currentTier,
@@ -279,7 +282,10 @@ function battlePassSummary(plan: Plan | undefined, progress: Progress): BattlePa
 		pips: pass.tiers.map((tier) => tier.unlocked),
 	};
 	if (pass.nextTier) {
-		summary.nextRewardName = pass.nextTier.reward.name;
+		// Certificate rewards are named after a plan day; prefer the domain's real title.
+		const domainId = pass.nextTier.reward.domainId;
+		const title = domainId ? domains.find((row) => row.id === String(domainId))?.title : undefined;
+		summary.nextRewardName = title ? `${title} certificate` : pass.nextTier.reward.name;
 	}
 	return summary;
 }

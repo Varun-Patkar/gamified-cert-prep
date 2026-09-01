@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import * as fs from "fs";
 import * as os from "os";
 import * as path from "path";
 import { CertificateService } from "./certificates/certificateService";
@@ -7,6 +8,7 @@ import { CompletionService } from "./completion/completionService";
 import { shouldOfferCompletion } from "./completion/examCompletion";
 import { runLanguageModelDiagnostics } from "./lm/diagnostics";
 import { startNewExam } from "./pipeline/newExamCommand";
+import { beginConsoleCapture, runSelfTest, type ConsoleCapture } from "./selftest/selfTest";
 import { ExtensionState, findBoundFolder } from "./state/extensionState";
 import { RepoStore } from "./store/repoStore";
 import { BattlePassView } from "./views/battlePassView";
@@ -21,11 +23,54 @@ import { WELCOME_VIEW_ID, WelcomeView } from "./views/welcomeView";
 /** Env vars don't reach a dev host spawned by an already-running VS Code, so the spike signals via a file. */
 const DIAGNOSTICS_REQUEST_FILE = path.join(os.tmpdir(), "certprep-diagnostics-request.json");
 
+interface DiagnosticsRequest {
+	outPath: string;
+	mode?: "languageModel" | "selftest";
+	repoPath?: string;
+}
+
+interface ActivationResult {
+	channel: vscode.OutputChannel;
+	state: ExtensionState;
+	logLines: string[];
+	chatRegistered: boolean;
+	chatError?: unknown;
+	ready: Promise<void>;
+}
+
 export function activate(context: vscode.ExtensionContext): void {
+	// Read synchronously so console capture is installed before any other activation work.
+	const request = readDiagnosticsRequest();
+	const capture = request?.mode === "selftest" ? beginConsoleCapture() : undefined;
+
+	let result: ActivationResult | undefined;
+	let activationError: unknown;
+	try {
+		result = activateCore(context);
+	} catch (error) {
+		activationError = error;
+	}
+
+	if (request) {
+		void runUnattended(request, context, result, activationError, capture);
+		return;
+	}
+	capture?.stop();
+	if (activationError) {
+		throw activationError;
+	}
+}
+
+function activateCore(context: vscode.ExtensionContext): ActivationResult {
 	const channel = vscode.window.createOutputChannel("Cert Prep");
 	context.subscriptions.push(channel);
+	const logLines: string[] = [];
+	const log = (message: string): void => {
+		logLines.push(message);
+		channel.appendLine(message);
+	};
 
-	const state = new ExtensionState({ log: (message) => channel.appendLine(message) });
+	const state = new ExtensionState({ log });
 	context.subscriptions.push(state);
 
 	// Declared up front so the four panels can hand off to one another.
@@ -37,12 +82,10 @@ export function activate(context: vscode.ExtensionContext): void {
 	};
 
 	const certificates = new CertificateService(state);
-	const completionService = new CompletionService(state, certificates, {
-		log: (message) => channel.appendLine(message),
-	});
+	const completionService = new CompletionService(state, certificates, { log });
 	const completion = new CompletionView(context.extensionUri, state, {
 		complete: (meta, result) => completionService.complete(meta, result),
-		log: (message) => channel.appendLine(message),
+		log,
 	});
 	context.subscriptions.push(completion);
 	const sources = new SourcesView(context.extensionUri);
@@ -53,7 +96,7 @@ export function activate(context: vscode.ExtensionContext): void {
 			state,
 			sources,
 			openDashboard: (examId) => views.dashboard?.open(examId),
-			log: (message) => channel.appendLine(message),
+			log,
 		});
 
 	const dashboard = new DashboardView(context.extensionUri, state, {
@@ -83,19 +126,23 @@ export function activate(context: vscode.ExtensionContext): void {
 	context.subscriptions.push(dashboard, session, quiz, battlePass);
 
 	const sidebar = new SidebarView(context.extensionUri, state, (examId) => void dashboard.open(examId));
-	const welcome = new WelcomeView(context.extensionUri, state, (message) => channel.appendLine(message));
+	const welcome = new WelcomeView(context.extensionUri, state, log);
 
+	let chatRegistered = false;
+	let chatError: unknown;
 	try {
 		context.subscriptions.push(
 			registerChatParticipant(context, {
 				state,
 				sources,
 				openDashboard: (examId) => dashboard.open(examId),
-				log: (message) => channel.appendLine(message),
+				log,
 			})
 		);
+		chatRegistered = true;
 	} catch (error) {
-		channel.appendLine(`Chat participant unavailable: ${error instanceof Error ? error.message : String(error)}`);
+		chatError = error;
+		log(`Chat participant unavailable: ${error instanceof Error ? error.message : String(error)}`);
 	}
 
 	context.subscriptions.push(
@@ -138,9 +185,13 @@ export function activate(context: vscode.ExtensionContext): void {
 		)
 	);
 
-	void vscode.commands.executeCommand("setContext", "certPrep.bound", false);
-	void bindOnStartup(state);
-	void maybeRunUnattendedDiagnostics(channel);
+	// Sequential so a slow bind can never be overtaken by the initial `false`.
+	const ready = (async () => {
+		await vscode.commands.executeCommand("setContext", "certPrep.bound", false);
+		await bindOnStartup(state);
+	})();
+
+	return { channel, state, logLines, chatRegistered, chatError, ready };
 }
 
 /** Accepts an exam id or the on-disk folder name, so command palette callers can use either. */
@@ -184,33 +235,50 @@ async function bindRepo(state: ExtensionState): Promise<void> {
 	await state.bind(root);
 }
 
-async function maybeRunUnattendedDiagnostics(channel: vscode.OutputChannel): Promise<void> {
-	const requestUri = vscode.Uri.file(DIAGNOSTICS_REQUEST_FILE);
-	let outPath: string;
+function readDiagnosticsRequest(): DiagnosticsRequest | undefined {
 	try {
-		const raw = await vscode.workspace.fs.readFile(requestUri);
-		outPath = JSON.parse(Buffer.from(raw).toString("utf8")).outPath;
-		if (!outPath) {
-			return;
-		}
+		const parsed = JSON.parse(fs.readFileSync(DIAGNOSTICS_REQUEST_FILE, "utf8")) as DiagnosticsRequest;
+		return parsed.outPath ? parsed : undefined;
 	} catch {
-		return;
+		return undefined;
 	}
+}
 
-	const outUri = vscode.Uri.file(outPath);
+async function runUnattended(
+	request: DiagnosticsRequest,
+	context: vscode.ExtensionContext,
+	result: ActivationResult | undefined,
+	activationError: unknown,
+	capture: ConsoleCapture | undefined
+): Promise<void> {
+	const outUri = vscode.Uri.file(request.outPath);
 	const write = (body: string) => vscode.workspace.fs.writeFile(outUri, Buffer.from(body, "utf8"));
 
-	await write("ACTIVATED — diagnostics starting\n");
+	await write("ACTIVATED — unattended run starting\n");
 	let report: string;
 	try {
-		report = await runLanguageModelDiagnostics(channel);
+		await result?.ready;
+		report =
+			request.mode === "selftest"
+				? await runSelfTest({
+						context,
+						...(result?.state ? { state: result.state } : {}),
+						activationError,
+						...(result?.chatError ? { chatError: result.chatError } : {}),
+						chatRegistered: result?.chatRegistered ?? false,
+						logLines: result?.logLines ?? [],
+						...(request.repoPath ? { repoPath: request.repoPath } : {}),
+						...(capture ? { console: capture } : {}),
+					})
+				: await runLanguageModelDiagnostics(result?.channel ?? vscode.window.createOutputChannel("Cert Prep"));
 	} catch (err) {
-		report = `DIAGNOSTICS THREW: ${err instanceof Error ? err.stack : String(err)}`;
+		report = `UNATTENDED RUN THREW: ${err instanceof Error ? err.stack : String(err)}`;
 	}
+	capture?.stop();
 
 	try {
 		await write(report);
-		await vscode.workspace.fs.delete(requestUri);
+		await vscode.workspace.fs.delete(vscode.Uri.file(DIAGNOSTICS_REQUEST_FILE));
 	} finally {
 		await vscode.commands.executeCommand("workbench.action.closeWindow");
 	}
