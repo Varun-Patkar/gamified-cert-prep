@@ -24,6 +24,37 @@
     "onStartupFinished"
   ],
   "contributes": {
+    "chatParticipants": [
+      {
+        "id": "certPrep.chat",
+        "name": "certprep",
+        "fullName": "Cert Prep",
+        "description": "Plan a certification campaign, or ask about today's session.",
+        "isSticky": true,
+        "commands": [
+          {
+            "name": "new",
+            "description": "Set up a new exam campaign, one question at a time."
+          },
+          {
+            "name": "plan",
+            "description": "Show or rebuild the plan for your active exam."
+          },
+          {
+            "name": "today",
+            "description": "What today's study session is, and open it."
+          },
+          {
+            "name": "explain",
+            "description": "Teach a topic from your active exam, grounded in its sources."
+          },
+          {
+            "name": "status",
+            "description": "Days done, accuracy, streak, XP and days to exam."
+          }
+        ]
+      }
+    ],
     "viewsContainers": {
       "activitybar": [
         {

@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 import * as os from "os";
 import * as path from "path";
 import { CertificateService } from "./certificates/certificateService";
+import { registerChatParticipant } from "./chat/participant";
 import { runLanguageModelDiagnostics } from "./lm/diagnostics";
 import { startNewExam } from "./pipeline/newExamCommand";
 import { ExtensionState, findBoundFolder } from "./state/extensionState";
@@ -71,6 +72,19 @@ export function activate(context: vscode.ExtensionContext): void {
 
 	const sidebar = new SidebarView(context.extensionUri, state, (examId) => void dashboard.open(examId));
 	const welcome = new WelcomeView(context.extensionUri, state, (message) => channel.appendLine(message));
+
+	try {
+		context.subscriptions.push(
+			registerChatParticipant(context, {
+				state,
+				sources,
+				openDashboard: (examId) => dashboard.open(examId),
+				log: (message) => channel.appendLine(message),
+			})
+		);
+	} catch (error) {
+		channel.appendLine(`Chat participant unavailable: ${error instanceof Error ? error.message : String(error)}`);
+	}
 
 	context.subscriptions.push(
 		vscode.window.registerWebviewViewProvider(SIDEBAR_VIEW_ID, sidebar, {
