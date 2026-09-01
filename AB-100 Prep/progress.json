@@ -22,7 +22,8 @@
     18,
     19,
     20,
-    21
+    21,
+    22
   ],
   "results": [
     {
@@ -234,13 +235,24 @@
       "accuracy": 0.9,
       "weakTopicIds": [],
       "xpAwarded": 0
+    },
+    {
+      "day": 22,
+      "attempt": 1,
+      "completedAt": "2026-09-01T15:46:17.083Z",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 255
     }
   ],
-  "xp": 0,
+  "xp": 255,
   "streak": {
-    "current": 0,
+    "current": 1,
     "longest": 10,
-    "freezeTokens": 0
+    "freezeTokens": 0,
+    "lastStudyDate": "2026-09-01"
   },
   "badges": [],
   "unlockedTiers": [
