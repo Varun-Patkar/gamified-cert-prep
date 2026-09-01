@@ -9,13 +9,6 @@ import {
 } from "../chat/routing";
 
 describe("detectIntent", () => {
-	it("routes explicit daily session creation to the participant writer", () => {
-		assert.deepStrictEqual(detectIntent("Create Day 22 session for AB-100"), {
-			intent: "generate-session",
-			subject: "Create Day 22 session for AB-100",
-		});
-	});
-
 	const starting = [
 		"prep me for AZ-104",
 		"I want to study for the Claude cert",

@@ -124,8 +124,7 @@ export async function createLmService(options: CreateLmServiceOptions = {}): Pro
 			message: "No language model is available. Sign in to a provider such as GitHub Copilot, then try again.",
 		};
 	}
-	const configuredModel = vscode.workspace.getConfiguration("certPrep").get<string>("languageModel", "auto");
-	const model = pickModel(models, configuredModel);
+	const model = pickModel(models);
 	if (!model) {
 		return {
 			ok: false,
@@ -140,31 +139,6 @@ export async function createLmService(options: CreateLmServiceOptions = {}): Pro
 		modelLabel: `${model.vendor}/${model.family}`,
 		service: createLmServiceFromClient(new VscodeChatClient(model, justification), webTools),
 	};
-}
-
-export async function pickLanguageModelSetting(): Promise<void> {
-	const models = (await vscode.lm.selectChatModels()).filter((model) => model.maxInputTokens > 0);
-	const current = vscode.workspace.getConfiguration("certPrep").get<string>("languageModel", "auto");
-	const choices = [
-		{ label: "$(sparkle) Auto (recommended)", description: "Let Cert Prep choose the best available full model", id: "auto" },
-		...models.map((model) => ({
-			label: model.family || model.id,
-			description: `${model.vendor} · ${model.id} · ${model.maxInputTokens.toLocaleString()} input tokens`,
-			id: model.id,
-		})),
-	];
-	const choice = await vscode.window.showQuickPick(choices, {
-		title: "Cert Prep: Language Model",
-		placeHolder: `Current: ${current}`,
-		matchOnDescription: true,
-	});
-	if (!choice) return;
-	await vscode.workspace
-		.getConfiguration("certPrep")
-		.update("languageModel", choice.id, vscode.ConfigurationTarget.Global);
-	void vscode.window.showInformationMessage(
-		choice.id === "auto" ? "Cert Prep will choose the model automatically." : `Cert Prep will use ${choice.label}.`
-	);
 }
 
 class VscodeChatClient implements ChatClient {

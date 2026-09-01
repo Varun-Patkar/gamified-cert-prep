@@ -153,8 +153,17 @@ export class SessionView implements vscode.Disposable {
 	private async regenerateSession(): Promise<void> {
 		const snapshot = this.examId ? this.state.findSnapshot(this.examId) : undefined;
 		const planDay = snapshot?.plan?.days.find((entry) => entry.day === this.day);
-		const query = `@certprep Regenerate Day ${this.day} session for ${snapshot?.meta.code ?? "my exam"}: "${planDay?.title ?? `Day ${this.day}`}". Research current official sources, replace the existing session only after it passes the depth and citation checks, and match the quality of my strongest completed sessions.`;
+		const sessionFile = planDay?.sessionFile ?? `sessions/day-${String(this.day).padStart(2, "0")}.md`;
+		const examFolder = snapshot?.meta.folder ?? "the active exam folder";
+		const query = [
+			`Regenerate Day ${this.day} for ${snapshot?.meta.code ?? "my active exam"}: "${planDay?.title ?? `Day ${this.day}`}".`,
+			`Use Agent mode and edit ${examFolder}/${sessionFile} directly.`,
+			`Research current official sources using your available web/browser tools. Do not use example.com or invented URLs.`,
+			`Compare against ${examFolder}/sessions/day-21-domain2-review.md and match its depth, exact product detail, exam traps, decision frameworks, question alignment, and cited source quality.`,
+			"Replace the existing file only when the researched version is complete. Do not create a second file for this day.",
+		].join(" ");
 		try {
+			await vscode.commands.executeCommand("workbench.action.chat.newChat");
 			await vscode.commands.executeCommand("workbench.action.chat.open", { query });
 		} catch {
 			void vscode.window.showInformationMessage("Chat is not available in this window.");
