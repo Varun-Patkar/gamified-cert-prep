@@ -22,11 +22,20 @@ export function looksLikeWebTool(tool: vscode.LanguageModelToolInformation): boo
 }
 
 /** `selectChatModels()` can lead with unusable stubs (maxInputTokens 0), so pick deliberately. */
-export function pickModel(models: readonly vscode.LanguageModelChat[]): vscode.LanguageModelChat | undefined {
+export function pickModel(
+	models: readonly vscode.LanguageModelChat[],
+	preferredId?: string
+): vscode.LanguageModelChat | undefined {
 	const usable = models.filter((m) => m.maxInputTokens > 0);
+	if (preferredId && preferredId !== "auto") {
+		const selected = usable.find((model) => model.id === preferredId);
+		if (selected) return selected;
+	}
 	const preferred = ["gpt-4o", "gpt-4.1", "claude-sonnet"];
 	for (const family of preferred) {
-		const hit = usable.find((m) => m.vendor === "copilot" && m.family.startsWith(family));
+		const hit = usable.find(
+			(m) => m.vendor === "copilot" && m.family.startsWith(family) && !/mini|nano|small/i.test(`${m.family} ${m.id}`)
+		);
 		if (hit) {
 			return hit;
 		}
@@ -115,7 +124,8 @@ export async function createLmService(options: CreateLmServiceOptions = {}): Pro
 			message: "No language model is available. Sign in to a provider such as GitHub Copilot, then try again.",
 		};
 	}
-	const model = pickModel(models);
+	const configuredModel = vscode.workspace.getConfiguration("certPrep").get<string>("languageModel", "auto");
+	const model = pickModel(models, configuredModel);
 	if (!model) {
 		return {
 			ok: false,
@@ -132,6 +142,31 @@ export async function createLmService(options: CreateLmServiceOptions = {}): Pro
 	};
 }
 
+export async function pickLanguageModelSetting(): Promise<void> {
+	const models = (await vscode.lm.selectChatModels()).filter((model) => model.maxInputTokens > 0);
+	const current = vscode.workspace.getConfiguration("certPrep").get<string>("languageModel", "auto");
+	const choices = [
+		{ label: "$(sparkle) Auto (recommended)", description: "Let Cert Prep choose the best available full model", id: "auto" },
+		...models.map((model) => ({
+			label: model.family || model.id,
+			description: `${model.vendor} · ${model.id} · ${model.maxInputTokens.toLocaleString()} input tokens`,
+			id: model.id,
+		})),
+	];
+	const choice = await vscode.window.showQuickPick(choices, {
+		title: "Cert Prep: Language Model",
+		placeHolder: `Current: ${current}`,
+		matchOnDescription: true,
+	});
+	if (!choice) return;
+	await vscode.workspace
+		.getConfiguration("certPrep")
+		.update("languageModel", choice.id, vscode.ConfigurationTarget.Global);
+	void vscode.window.showInformationMessage(
+		choice.id === "auto" ? "Cert Prep will choose the model automatically." : `Cert Prep will use ${choice.label}.`
+	);
+}
+
 class VscodeChatClient implements ChatClient {
 	constructor(
 		private readonly model: vscode.LanguageModelChat,
@@ -141,18 +176,23 @@ class VscodeChatClient implements ChatClient {
 	async send(messages: ChatMessage[], tools: ToolSpec[], token?: CancellationLike): Promise<ChatPart[]> {
 		const bridge = bridgeToken(token);
 		try {
-			const response = await this.model.sendRequest(
-				messages.map(toLmMessage),
-				{
-					justification: this.justification,
-					tools: tools.map((tool) => ({
-						name: tool.name,
-						description: tool.description,
-						inputSchema: tool.inputSchema as object | undefined,
-					})),
-				},
-				bridge.token
-			);
+			const options = {
+				justification: this.justification,
+				tools: tools.map((tool) => ({
+					name: tool.name,
+					description: tool.description,
+					inputSchema: tool.inputSchema as object | undefined,
+				})),
+			};
+			let response: vscode.LanguageModelChatResponse;
+			try {
+				response = await this.model.sendRequest(messages.map(toLmMessage), options, bridge.token);
+			} catch (error) {
+				if (!isToolRoleProtocolError(error)) {
+					throw error;
+				}
+				response = await this.model.sendRequest(messages.map(toCompatibleLmMessage), options, bridge.token);
+			}
 			const parts: ChatPart[] = [];
 			for await (const part of response.stream) {
 				if (part instanceof vscode.LanguageModelToolCallPart) {
@@ -182,11 +222,55 @@ class VscodeChatClient implements ChatClient {
 	}
 }
 
+export function isToolRoleProtocolError(error: unknown): boolean {
+	return /messages with role ['"]tool['"] must be a response|preceding message with ['"]tool_calls['"]/i.test(
+		error instanceof Error ? error.message : String(error)
+	);
+}
+
 function toLmMessage(message: ChatMessage): vscode.LanguageModelChatMessage {
 	const content = message.parts.map(toLmPart);
 	return message.role === "assistant"
 		? vscode.LanguageModelChatMessage.Assistant(content as never)
 		: vscode.LanguageModelChatMessage.User(content as never);
+}
+
+function toCompatibleLmMessage(message: ChatMessage): vscode.LanguageModelChatMessage {
+	const content = message.parts.map((part) => {
+		switch (part.kind) {
+			case "text":
+				return part.value;
+			case "tool-call":
+				return `[Assistant requested tool ${part.name} (${part.callId}) with input ${safeStringify(part.input)}]`;
+			default:
+				return `[Tool result for ${part.callId}: ${toolContentText(part.content)}]`;
+		}
+	}).join("\n");
+	return message.role === "assistant"
+		? vscode.LanguageModelChatMessage.Assistant(content)
+		: vscode.LanguageModelChatMessage.User(content);
+}
+
+function toolContentText(value: unknown): string {
+	if (value instanceof vscode.LanguageModelToolResult) {
+		return value.content.map(partText).filter(Boolean).join("\n").slice(0, 40_000);
+	}
+	return partText(value).slice(0, 40_000);
+}
+
+function partText(value: unknown): string {
+	if (value instanceof vscode.LanguageModelTextPart) return value.value;
+	if (typeof value === "string") return value;
+	if (value && typeof value === "object" && "value" in value && typeof value.value === "string") return value.value;
+	return safeStringify(value);
+}
+
+function safeStringify(value: unknown): string {
+	try {
+		return JSON.stringify(value ?? null);
+	} catch {
+		return String(value);
+	}
 }
 
 function toLmPart(part: ChatMessage["parts"][number]): unknown {

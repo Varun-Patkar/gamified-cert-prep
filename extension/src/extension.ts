@@ -7,6 +7,7 @@ import { registerChatParticipant } from "./chat/participant";
 import { CompletionService } from "./completion/completionService";
 import { shouldOfferCompletion } from "./completion/examCompletion";
 import { runLanguageModelDiagnostics } from "./lm/diagnostics";
+import { pickLanguageModelSetting } from "./lm/lmService";
 import { startNewExam } from "./pipeline/newExamCommand";
 import { beginConsoleCapture, runSelfTest, type ConsoleCapture } from "./selftest/selfTest";
 import { ExtensionState, findBoundFolder } from "./state/extensionState";
@@ -161,6 +162,7 @@ function activateCore(context: vscode.ExtensionContext): ActivationResult {
 		vscode.commands.registerCommand("certPrep.diagnostics.languageModel", () =>
 			runLanguageModelDiagnostics(channel)
 		),
+		vscode.commands.registerCommand("certPrep.selectLanguageModel", () => pickLanguageModelSetting()),
 		vscode.commands.registerCommand("certPrep.refresh", () => state.refresh()),
 		vscode.commands.registerCommand("certPrep.commitNow", () => state.commitNow()),
 		vscode.commands.registerCommand("certPrep.bindRepo", () => bindRepo(state)),

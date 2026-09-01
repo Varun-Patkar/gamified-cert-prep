@@ -2,7 +2,7 @@
   "name": "gamified-cert-prep",
   "displayName": "Gamified Cert Prep",
   "description": "Turn any certification exam into a gamified, day-by-day study campaign backed by your own git repo.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "varun-patkar",
   "license": "MIT",
   "repository": {
@@ -96,6 +96,11 @@
         "category": "Cert Prep"
       },
       {
+        "command": "certPrep.selectLanguageModel",
+        "title": "Select Language Model",
+        "category": "Cert Prep"
+      },
+      {
         "command": "certPrep.bindRepo",
         "title": "Bind Prep Repository",
         "category": "Cert Prep"
@@ -179,6 +184,11 @@
     "configuration": {
       "title": "Gamified Cert Prep",
       "properties": {
+        "certPrep.languageModel": {
+          "type": "string",
+          "default": "auto",
+          "description": "Language model ID used for research and generation. Run 'Cert Prep: Select Language Model' to choose from models currently available in VS Code. Falls back to automatic selection if the saved model is unavailable."
+        },
         "certPrep.gamification.enabled": {
           "type": "boolean",
           "default": true,
