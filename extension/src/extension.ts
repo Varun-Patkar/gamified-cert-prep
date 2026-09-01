@@ -7,7 +7,6 @@ import { registerChatParticipant } from "./chat/participant";
 import { CompletionService } from "./completion/completionService";
 import { shouldOfferCompletion } from "./completion/examCompletion";
 import { runLanguageModelDiagnostics } from "./lm/diagnostics";
-import { startNewExam } from "./pipeline/newExamCommand";
 import { beginConsoleCapture, runSelfTest, type ConsoleCapture } from "./selftest/selfTest";
 import { ExtensionState, findBoundFolder } from "./state/extensionState";
 import { RepoStore } from "./store/repoStore";
@@ -91,13 +90,10 @@ function activateCore(context: vscode.ExtensionContext): ActivationResult {
 	const sources = new SourcesView(context.extensionUri);
 	context.subscriptions.push(sources);
 
-	const newExam = (): Promise<void> =>
-		startNewExam({
-			state,
-			sources,
-			openDashboard: (examId) => views.dashboard?.open(examId),
-			log,
-		});
+	const newExam = async (): Promise<void> => {
+		await vscode.commands.executeCommand("workbench.action.chat.newChat");
+		await vscode.commands.executeCommand("workbench.action.chat.open", { query: "@certprep /new" });
+	};
 
 	const dashboard = new DashboardView(context.extensionUri, state, {
 		openSession: (examId, day) => views.session?.open(examId, day),
