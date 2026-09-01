@@ -2,6 +2,7 @@ import * as assert from "assert";
 import type { JsonRequest } from "../lm/agentic";
 import type { Domain, SourceRef } from "../model/types";
 import {
+	assessSessionQuality,
 	INTEGRITY_RULE,
 	discoverSources,
 	extractTopics,
@@ -9,6 +10,18 @@ import {
 	generateSessionMaterial,
 	normalizeWeights,
 } from "../research/examResearch";
+
+describe("research/session quality", () => {
+	it("rejects short generic material and placeholder sources", () => {
+		const quality = assessSessionQuality(
+			"# Day 22\n\n## The concepts\nGeneric monitoring advice.\n\nhttps://example.com/docs",
+			APPROVED
+		);
+		assert.strictEqual(quality.acceptable, false);
+		assert.ok(quality.problems.includes("contains a placeholder URL"));
+		assert.ok(quality.problems.includes("fewer than 900 words"));
+	});
+});
 import { fakeLm } from "./fakeLm";
 
 const SOURCE_PAYLOAD = {

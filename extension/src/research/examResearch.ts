@@ -487,18 +487,41 @@ export interface SessionMaterialInput {
 	topicTitles?: Record<string, string>;
 }
 
+export interface SessionQuality {
+	acceptable: boolean;
+	problems: string[];
+}
+
+export function assessSessionQuality(markdown: string, sources: readonly SourceRef[]): SessionQuality {
+	const problems: string[] = [];
+	const words = markdown.trim().split(/\s+/).filter(Boolean).length;
+	if (words < 900) problems.push("fewer than 900 words");
+	if (!/^## (TL;DR|Learning Objectives|Key Concepts)/m.test(markdown)) problems.push("missing deep-study sections");
+	if (!/^## (Common Traps|Exam Traps|Common Traps & Misconceptions)/m.test(markdown)) problems.push("missing exam traps");
+	if (!/^## (Quick Reference|Important Details|Question-Alignment)/m.test(markdown)) problems.push("missing exam-focused reference material");
+	if (!/^## Sources/m.test(markdown)) problems.push("missing sources section");
+	const citedUrls = sources.filter((source) => source.url && markdown.includes(source.url)).length;
+	if (sources.length > 0 && citedUrls === 0) problems.push("does not cite an approved source URL");
+	if (/https?:\/\/(?:www\.)?example\.com\b/i.test(markdown)) problems.push("contains a placeholder URL");
+	return { acceptable: problems.length === 0, problems };
+}
+
 /** Teaching markdown for one plan day: concepts, a comparison table, traps, recap. */
 export async function generateSessionMaterial(
 	input: SessionMaterialInput,
 	deps: ResearchDeps
 ): Promise<string> {
+	if (input.sources.length === 0) {
+		throw new Error("No approved sources are available. Approve official sources before generating this session.");
+	}
 	const domain = input.domains.find((candidate) => candidate.id === input.planDay.domainId);
 	const topics = input.planDay.topicIds.map((id) => input.topicTitles?.[id] ?? id);
 
 	const result = await deps.lm.runAgenticTurn({
 		system: [
-			"You are a warm, precise instructor writing a study session for a working professional.",
-			"Ground every claim in the approved sources; open them with your tools when you need detail.",
+			"You are a rigorous certification instructor writing a source-backed study reference for a working professional.",
+			"Open the approved sources with web tools before writing. Never use example.com, invented URLs, generic AI advice, or unsupported claims.",
+			"Match the depth of a high-quality exam reference: exact product behavior, limits, decision rules, comparisons, worked scenarios, and version-sensitive caveats.",
 			"Write GitHub-flavoured markdown only. No preamble, no closing chatter, no code fences around the whole document.",
 			INTEGRITY_RULE,
 		].join("\n\n"),
@@ -511,13 +534,18 @@ export async function generateSessionMaterial(
 			"Approved sources:",
 			describeSources(input.sources),
 			"",
-			"Write the session with exactly these sections:",
+			"Write at least 1,200 words with these sections:",
 			`# Day ${input.planDay.day} — ${input.planDay.title}`,
-			"## What you'll learn — three to five bullets, second person, encouraging.",
-			"## The concepts — a `###` subsection per skill: explain it plainly, then a concrete worked example.",
-			"## Side by side — a markdown table comparing the options that are easy to confuse. Skip only if nothing here is comparable.",
-			"## Exam traps — the specific misreadings that cost people marks, as a bulleted list.",
-			"## Recap — five short lines someone can reread the morning of the exam.",
+			"## TL;DR (60-second skim)",
+			"## Learning Objectives",
+			"## Key Concepts — numbered `###` subsections with exact vendor terminology and worked scenarios.",
+			"## Decision Frameworks — practical selection rules; include Mermaid when it genuinely clarifies a decision.",
+			"## Comparisons — markdown tables for options that are easy to confuse.",
+			"## Important Details for Exam — precise limits, defaults, prerequisites, and behavior from current docs.",
+			"## Common Traps & Misconceptions",
+			"## Quick Reference Card",
+			"## Question-Alignment Checklist — map the day's topic/question scope to the relevant section without revealing answer letters.",
+			"## Sources — direct approved URLs actually consulted, with a note that version-sensitive facts should be rechecked.",
 			"",
 			`End with one encouraging sentence. Aim for a fifteen minute read.${
 				input.planDay.questionCount > 0
@@ -532,6 +560,10 @@ export async function generateSessionMaterial(
 	});
 
 	const markdown = stripDocumentFence(result.text);
+	const quality = assessSessionQuality(markdown, input.sources);
+	if (!quality.acceptable) {
+		throw new Error(`Generated session failed quality review: ${quality.problems.join(", ")}.`);
+	}
 	deps.log?.(`Wrote ${markdown.length} characters of session material for day ${input.planDay.day}.`);
 	return markdown;
 }

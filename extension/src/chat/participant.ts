@@ -6,8 +6,9 @@
 
 import * as vscode from "vscode";
 import { createLmService, type LmFailure } from "../lm/lmService";
-import type { ExamMeta, PlanDay } from "../model/types";
+import type { ExamMeta, PlanDay, SourceRef } from "../model/types";
 import { runNewExamPipeline, STEP_LABELS, type PipelineStep } from "../pipeline/newExamPipeline";
+import { generateSessionMaterial } from "../research/examResearch";
 import type { ExtensionState } from "../state/extensionState";
 import type { ExamSnapshot } from "../views/sidebarModel";
 import type { SourcesView } from "../views/sourcesView";
@@ -92,6 +93,9 @@ async function handleRequest(
 				return;
 			case "status":
 				showStatus(stream, deps);
+				return;
+			case "generate-session":
+				await createSession(routed.subject ?? request.prompt, stream, deps);
 				return;
 			case "explain":
 				await teach(routed.subject ?? request.prompt, stream, token, deps);
@@ -398,6 +402,99 @@ function daysUntil(examDate: string | undefined): number | undefined {
 		return undefined;
 	}
 	return Math.round((target - today) / 86_400_000);
+}
+
+async function createSession(
+	request: string,
+	stream: vscode.ChatResponseStream,
+	deps: ChatDeps
+): Promise<void> {
+	const dayMatch = /\bday\s+(\d+)\b/i.exec(request);
+	const requestedCode = /\b[A-Z]{2,4}-\d{2,4}\b/i.exec(request)?.[0];
+	const snapshot =
+		(requestedCode
+			? deps.state.snapshots.find((entry) => entry.meta.code.toLowerCase() === requestedCode.toLowerCase())
+			: undefined) ?? findActiveExam(deps);
+	const store = deps.state.store;
+	if (!snapshot || !store || !dayMatch) {
+		stream.markdown("I need an exam and day number to build that session. Try **Create Day 22 session for AB-100**.");
+		return;
+	}
+	const day = Number(dayMatch[1]);
+	const planDay = snapshot.plan?.days.find((entry) => entry.day === day);
+	if (!planDay) {
+		stream.markdown(`I couldn't find Day ${day} in the ${snapshot.meta.code} plan.`);
+		return;
+	}
+	const sources = await sessionSources(snapshot.meta, store);
+	if (sources.length === 0) {
+		stream.markdown(
+			`I won't generate Day ${day} from thin air. Add or approve at least one official source for **${snapshot.meta.code}**, then ask me again.`
+		);
+		return;
+	}
+	const lm = await createLmService({
+		justification: `Cert Prep is researching and writing Day ${day} for ${snapshot.meta.code}.`,
+	});
+	if (!lm.ok) {
+		streamLmFailure(lm, stream);
+		return;
+	}
+	stream.progress(`Researching current official sources for Day ${day}…`);
+	try {
+		const markdown = await generateSessionMaterial(
+			{
+				examMeta: snapshot.meta,
+				planDay,
+				domains: snapshot.meta.domains ?? [],
+				sources,
+				topicTitles: snapshot.meta.topicTitles,
+			},
+			{ lm: lm.service, log: deps.log }
+		);
+		await store.writeSources(snapshot.meta.folder, sources);
+		await store.writeSessionMaterial(snapshot.meta.folder, day, planDay.title, markdown);
+		await deps.state.sync?.enqueue(`Write source-backed Day ${day} session for ${snapshot.meta.code}`);
+		stream.markdown(
+			`**Day ${day} is ready.** I researched ${sources.length} real source${sources.length === 1 ? "" : "s"}, passed the session through the depth and citation checks, and wrote it to the repo.`
+		);
+		stream.button({ command: "certPrep.openDay", arguments: [snapshot.meta.id, day], title: `Open Day ${day}` });
+	} catch (error) {
+		stream.markdown(`I refused to save that draft: ${describe(error)} Add stronger official sources or ask me to try again.`);
+	}
+}
+
+async function sessionSources(
+	meta: ExamMeta,
+	store: NonNullable<ExtensionState["store"]>
+): Promise<SourceRef[]> {
+	const recorded = (await store.readSources(meta.folder)).filter(validSource);
+	if (recorded.length > 0) {
+		return recorded;
+	}
+	const topics = (await store.readTopics(meta.folder)) ?? "";
+	const urls = [...topics.matchAll(/https?:\/\/[^\s)\]>]+/g)].map((match) => match[0].replace(/[.,;]+$/, ""));
+	return [...new Set(urls)].filter(validUrl).slice(0, 12).map((url, index) => ({
+		id: `legacy-source-${index + 1}`,
+		title: new URL(url).hostname,
+		url,
+		kind: "official-docs",
+		trusted: true,
+		rationale: "Recovered from the existing exam topic reference.",
+	}));
+}
+
+function validSource(source: SourceRef): boolean {
+	return Boolean(source.url && validUrl(source.url));
+}
+
+function validUrl(url: string): boolean {
+	try {
+		const host = new URL(url).hostname.toLowerCase();
+		return (url.startsWith("https://") || url.startsWith("http://")) && host !== "example.com" && !host.endsWith(".example.com");
+	} catch {
+		return false;
+	}
 }
 
 // ---------------------------------------------------------------------------

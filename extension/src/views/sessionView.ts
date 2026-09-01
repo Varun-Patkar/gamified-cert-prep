@@ -1,8 +1,6 @@
 /** The full-tab session reader. Markdown is rendered host-side by markdown/render.ts. */
 
 import * as vscode from "vscode";
-import { createLmService } from "../lm/lmService";
-import { ensureSessionMaterial, topUpQuestions } from "../pipeline/newExamPipeline";
 import { normalizeBank } from "../quiz/quizEngine";
 import type { ExtensionState } from "../state/extensionState";
 import { PanelHost, type PanelHostOptions } from "./panelHost";
@@ -59,7 +57,7 @@ export class SessionView implements vscode.Disposable {
 		this.host.dispose();
 	}
 
-	/** First open of a day writes its teaching notes and tops the question bank up. */
+	/** Missing material is delegated to chat so research and source use stay visible. */
 	private async prepare(examId: string, day: number): Promise<void> {
 		const store = this.state.store;
 		const snapshot = this.state.findSnapshot(examId);
@@ -68,9 +66,7 @@ export class SessionView implements vscode.Disposable {
 			return;
 		}
 		const existing = await store.readSessionMaterial(snapshot.meta.folder, day);
-		const bank = await store.readQuestions(snapshot.meta.folder);
-		const shortOnQuestions = normalizeBank(bank).length < planDay.questionCount;
-		if ((existing && existing.trim() && !shortOnQuestions) || (snapshot.meta.domains ?? []).length === 0) {
+		if (existing && existing.trim()) {
 			return;
 		}
 
@@ -80,28 +76,8 @@ export class SessionView implements vscode.Disposable {
 		}
 		this.preparing.add(key);
 		try {
-			const lm = await createLmService({
-				justification: `Cert Prep is writing your Day ${day} study notes.`,
-			});
-			if (!lm.ok) {
-				void vscode.window.showWarningMessage(lm.message);
-				return;
-			}
-			const deps = {
-				store,
-				lm: lm.service,
-				checkpoint: (message: string) => this.state.sync?.enqueue(message),
-			};
-			await vscode.window.withProgress(
-				{ location: vscode.ProgressLocation.Notification, title: `Writing your Day ${day} session…` },
-				async () => {
-					await ensureSessionMaterial(snapshot.meta, planDay, deps);
-					if (shortOnQuestions) {
-						await topUpQuestions(snapshot.meta, planDay, deps);
-					}
-				}
-			);
-			await this.refresh();
+			const query = `@certprep Create Day ${day} session for ${snapshot.meta.code}: "${planDay.title}". Research current official sources, write it to the session file, and match the depth and source quality of my completed sessions.`;
+			await vscode.commands.executeCommand("workbench.action.chat.open", { query });
 		} catch (error) {
 			void vscode.window.showWarningMessage(
 				`Day ${day} notes could not be written: ${error instanceof Error ? error.message : String(error)}`

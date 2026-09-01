@@ -3,7 +3,7 @@
  * routing rules can be tested without a VS Code host.
  */
 
-export type ChatIntent = "new-exam" | "plan" | "today" | "explain" | "status" | "ask";
+export type ChatIntent = "new-exam" | "plan" | "today" | "explain" | "status" | "generate-session" | "ask";
 
 export interface RoutedRequest {
 	intent: ChatIntent;
@@ -81,6 +81,9 @@ export function detectIntent(prompt: string, command?: string): RoutedRequest {
 	const text = prompt.trim();
 	if (!text) {
 		return { intent: "ask" };
+	}
+	if (/\b(?:create|write|generate|research|rebuild)\b[\s\S]*\bday\s+\d+\b[\s\S]*\bsession\b/i.test(text)) {
+		return { intent: "generate-session", subject: text };
 	}
 
 	if (START_PATTERNS.some((pattern) => pattern.test(text))) {
