@@ -242,6 +242,36 @@ describe("pipeline/newExamPipeline", () => {
 		assert.strictEqual(await fs.readFile(examPaths(root, FOLDER).topics, "utf8"), "# Seeded topics\n");
 	});
 
+	it("writes topic titles into meta.json and keeps them across a resumed run", async () => {
+		const first = await harness();
+		await runNewExamPipeline({ examQuery: "AI-102", folder: FOLDER, config: CONFIG }, first.deps);
+
+		const written = await readJson<ExamMeta>(examPaths(first.root, FOLDER).meta);
+		assert.deepStrictEqual(Object.values(written.topicTitles ?? {}).sort(), [
+			"Choose a service",
+			"Ground with RAG",
+		]);
+		assert.deepStrictEqual(
+			written.domains?.map((domain) => domain.title),
+			["Plan", "Build"]
+		);
+
+		// A resumed run must not degrade the titles back into opaque ids.
+		const second = await harness({ store: first.store });
+		const outcome = await runNewExamPipeline(
+			{ examQuery: "AI-102", folder: FOLDER, config: CONFIG },
+			second.deps
+		);
+		assert.strictEqual(outcome.ok, true);
+		if (outcome.ok) {
+			assert.deepStrictEqual(outcome.meta.topicTitles, written.topicTitles);
+			assert.deepStrictEqual(
+				outcome.meta.domains?.map((domain) => domain.title),
+				["Plan", "Build"]
+			);
+		}
+	});
+
 	it("leaves coherent on-disk state and an actionable message when a step fails", async () => {
 		const { root, deps } = await harness({
 			lm: fakeLm({

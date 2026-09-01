@@ -12,6 +12,7 @@ export interface DashboardDeps {
 	buildPlan(examId: string): Promise<void> | void;
 	openBattlePass(examId: string): Promise<void> | void;
 	openCertificate(examId: string, domainId: string): Promise<void> | void;
+	openCompletion(examId: string): Promise<void> | void;
 }
 
 export class DashboardView implements vscode.Disposable {
@@ -99,6 +100,9 @@ export class DashboardView implements vscode.Disposable {
 				break;
 			case "command/openBattlePass":
 				await this.deps.openBattlePass(examId);
+				break;
+			case "command/openCompletion":
+				await this.deps.openCompletion(examId);
 				break;
 			case "command/openCertificate":
 				if (message.domainId) {

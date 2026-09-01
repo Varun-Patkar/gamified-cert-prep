@@ -90,7 +90,7 @@ function researchDeps(deps: PipelineDeps): ResearchDeps {
 	return { lm: deps.lm, log: deps.log, now: deps.now };
 }
 
-/** Resuming a run only has domain ids to work with; ids read well enough as prompt hints. */
+/** Older meta.json files predate `topicTitles`; ids read well enough as prompt hints. */
 function fallbackTopicTitles(domains: readonly Domain[]): Record<string, string> {
 	const titles: Record<string, string> = {};
 	for (const domain of domains) {
@@ -156,7 +156,7 @@ export async function runNewExamPipeline(
 		throwIfCancelled(deps.token);
 		const existingTopics = await deps.store.readTopics(request.folder);
 		let domains = meta.domains ?? [];
-		let topicTitles = fallbackTopicTitles(domains);
+		let topicTitles = meta.topicTitles ?? fallbackTopicTitles(domains);
 		if (existingTopics && domains.length > 0) {
 			skipped.push("topics");
 		} else {
@@ -169,6 +169,7 @@ export async function runNewExamPipeline(
 				code: request.code ?? extraction.code,
 				vendor: request.vendor ?? extraction.vendor,
 				domains,
+				topicTitles,
 			};
 			await deps.store.writeTopics(request.folder, extraction.topicsMarkdown);
 			await deps.store.writeMeta(meta);
@@ -295,7 +296,7 @@ export async function ensureSessionMaterial(
 	}
 	const sources = await deps.store.readSources(meta.folder);
 	const markdown = await generateSessionMaterial(
-		{ examMeta: meta, planDay, domains, sources },
+		{ examMeta: meta, planDay, domains, sources, topicTitles: meta.topicTitles },
 		{ lm: deps.lm, log: deps.log }
 	);
 	if (!markdown.trim()) {
@@ -334,6 +335,7 @@ export async function topUpQuestions(
 			sources,
 			count: shortfall,
 			targetDomainIds: domainId ? [domainId] : undefined,
+			topicTitles: meta.topicTitles,
 		},
 		{ lm: deps.lm, log: deps.log }
 	);

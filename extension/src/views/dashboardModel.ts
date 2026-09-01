@@ -1,5 +1,6 @@
 /** Pure view-model construction for the exam dashboard. No fs, no vscode, so it stays unit-testable. */
 
+import { completionPrompt, shouldOfferCompletion, type CompletionPrompt } from "../completion/examCompletion";
 import { buildBattlePass } from "../gamification/battlePass";
 import type { DayKind, ExamMeta, Plan, Progress, QuestionBank } from "../model/types";
 
@@ -94,6 +95,8 @@ export interface DashboardModel {
 	encouragement: string;
 	emptyHeadline: string;
 	emptyBody: string;
+	/** Set once the exam date has arrived: "How did it go?". */
+	completionPrompt?: CompletionPrompt;
 }
 
 export interface DashboardInput {
@@ -181,6 +184,9 @@ export function buildDashboardModel(input: DashboardInput): DashboardModel {
 	}
 	if (answeredQuestions > 0) {
 		model.overallAccuracy = clamp01(correctQuestions / answeredQuestions);
+	}
+	if (shouldOfferCompletion(meta, today)) {
+		model.completionPrompt = completionPrompt(meta, today);
 	}
 	return model;
 }

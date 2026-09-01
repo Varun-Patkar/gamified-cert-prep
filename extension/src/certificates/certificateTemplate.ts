@@ -18,6 +18,9 @@ export interface CertificateInput {
 	accuracy: number;
 	daysCompleted?: number;
 	vendor?: string;
+	/** Overrides for the whole-exam certificate; domain certificates leave both unset. */
+	eyebrow?: string;
+	lead?: string;
 }
 
 const WIDTH = 1400;
@@ -84,11 +87,11 @@ ${plate(seed)}
 			<span class="cert-vendor">${vendor}</span>
 			<span class="cert-rule"></span>
 		</div>
-		<p class="cert-eyebrow">Certificate of Domain Mastery</p>
+		<p class="cert-eyebrow">${escapeHtml(orFallback(input.eyebrow, "Certificate of Domain Mastery"))}</p>
 	</header>
 	<p class="cert-awarded">This is to certify that</p>
 	<h1 class="cert-name">${name}</h1>
-	<p class="cert-body">has completed every scheduled session of the domain</p>
+	<p class="cert-body">${escapeHtml(orFallback(input.lead, "has completed every scheduled session of the domain"))}</p>
 	<h2 class="cert-domain">${domain}</h2>
 	<p class="cert-body cert-body--wide">within the <strong>${code}</strong> &middot; ${examTitle} campaign,<br />
 	sustaining an assessed accuracy of <strong>${accuracy}%</strong>${days > 0 ? ` across <strong>${days}</strong> study day${days === 1 ? "" : "s"}` : ""}.</p>

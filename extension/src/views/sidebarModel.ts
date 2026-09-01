@@ -1,5 +1,6 @@
 /** Pure view-model construction for the sidebar. No fs, no vscode, so it stays directly unit-testable. */
 
+import { completionPrompt, shouldOfferCompletion, type CompletionPrompt } from "../completion/examCompletion";
 import { progressToNextLevel } from "../gamification/engine";
 import type { ExamMeta, Plan, Progress, UserProfile } from "../model/types";
 import type { SyncIndicatorState } from "../webview/protocol";
@@ -51,6 +52,8 @@ export interface ActiveExamCard {
 	started: boolean;
 	ctaLabel: string;
 	encouragement: string;
+	/** Set once the exam date has arrived: "How did it go?". */
+	completionPrompt?: CompletionPrompt;
 }
 
 export interface TrophyCard {
@@ -193,6 +196,9 @@ function buildActiveCard(snapshot: ExamSnapshot, today: string): ActiveExamCard 
 	}
 	if (lastAccuracy !== undefined) {
 		card.lastAccuracy = lastAccuracy;
+	}
+	if (shouldOfferCompletion(meta, today)) {
+		card.completionPrompt = completionPrompt(meta, today);
 	}
 	return card;
 }

@@ -75,6 +75,17 @@
 			"</div>",
 			'<div class="cp-row" style="margin-top:14px;gap:18px">' + stats.join("") + "</div>",
 			'<p class="cp-sub" style="margin:12px 0 12px;font-size:11.5px">' + esc(card.encouragement) + "</p>",
+			card.completionPrompt
+				? '<div class="cp-callout cp-callout--tip" style="margin-bottom:12px"><p><b>' +
+					esc(card.completionPrompt.headline) +
+					"</b></p><p>" +
+					esc(card.completionPrompt.body) +
+					'</p><button class="cp-btn cp-btn--sm" style="margin-top:10px" data-action="completeExam" data-exam="' +
+					esc(card.examId) +
+					'">' +
+					esc(card.completionPrompt.ctaLabel) +
+					"</button></div>"
+				: "",
 			'<button class="cp-btn cp-btn--primary" data-action="openDay" data-exam="' +
 				esc(card.examId) +
 				'" data-day="' +
@@ -201,6 +212,8 @@
 		onAction: function (action, detail) {
 			if (action === "openDay") {
 				cp.post("command/openDay", { examId: detail.exam, day: Number(detail.day) });
+			} else if (action === "completeExam") {
+				cp.post("command/openCompletion", { examId: detail.exam });
 			} else if (action === "openFile" || action === "openExam") {
 				cp.post("command/openExam", { examId: detail.exam });
 			} else if (action === "newExam") {

@@ -132,6 +132,11 @@
         "command": "certPrep.openCertificate",
         "title": "Open Domain Certificate",
         "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.completeExam",
+        "title": "Record Exam Result",
+        "category": "Cert Prep"
       }
     ],
     "menus": {

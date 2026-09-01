@@ -1,5 +1,6 @@
 /** Typed message contracts between the extension host and every webview. No vscode imports: pure data. */
 
+import type { CompletionForm, CompletionModel } from "../completion/examCompletion";
 import type { QuizFeedback, QuizResults, QuizViewModel } from "../quiz/quizEngine";
 import type { BattlePassViewModel } from "../views/battlePassModel";
 import type { DashboardModel } from "../views/dashboardModel";
@@ -21,6 +22,7 @@ export type WebviewState =
 	| SessionModel
 	| QuizViewModel
 	| BattlePassViewModel
+	| CompletionModel
 	| SourcesModel;
 
 export type ExtensionToWebview =
@@ -43,6 +45,9 @@ export type WebviewToExtension =
 	| { type: "command/askAboutSession"; examId: string; day: number }
 	| { type: "command/backToDashboard"; examId: string }
 	| { type: "command/openBattlePass"; examId: string }
+	| { type: "command/openCompletion"; examId: string }
+	| { type: "command/pickScoreReport" }
+	| { type: "command/submitCompletion"; form: CompletionForm }
 	| { type: "command/openCertificate"; examId: string; domainId: string }
 	| { type: "command/openSource"; url: string }
 	| { type: "command/toggleSource"; id: string }
@@ -84,6 +89,7 @@ export function parseWebviewMessage(value: unknown): WebviewToExtension | undefi
 		case "command/pickSourceFile":
 		case "command/approveSources":
 		case "command/rediscoverSources":
+		case "command/pickScoreReport":
 		case "quiz/next":
 		case "quiz/finish":
 		case "quiz/retryMissed":
@@ -92,9 +98,12 @@ export function parseWebviewMessage(value: unknown): WebviewToExtension | undefi
 		case "command/buildPlan":
 		case "command/backToDashboard":
 		case "command/openBattlePass":
+		case "command/openCompletion":
 			return typeof message.examId === "string"
 				? ({ type: message.type, examId: message.examId } as WebviewToExtension)
 				: undefined;
+		case "command/submitCompletion":
+			return { type: "command/submitCompletion", form: parseCompletionForm(message.form) };
 		case "command/openCertificate":
 			return typeof message.examId === "string" && typeof message.domainId === "string"
 				? { type: "command/openCertificate", examId: message.examId, domainId: message.domainId }
@@ -133,4 +142,25 @@ export function parseWebviewMessage(value: unknown): WebviewToExtension | undefi
 			: undefined;
 	}
 	return undefined;
+}
+
+const COMPLETION_FIELDS: readonly (keyof CompletionForm)[] = [
+	"outcome",
+	"score",
+	"maxScore",
+	"passingScore",
+	"credentialUrl",
+];
+
+/** Only ever strings, and only the fields we serve — the file path is host-owned. */
+function parseCompletionForm(value: unknown): CompletionForm {
+	const source = (typeof value === "object" && value !== null ? value : {}) as Record<string, unknown>;
+	const form: CompletionForm = {};
+	for (const field of COMPLETION_FIELDS) {
+		const entry = source[field];
+		if (typeof entry === "string") {
+			form[field] = entry.slice(0, 2048);
+		}
+	}
+	return form;
 }

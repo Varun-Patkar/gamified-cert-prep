@@ -62,6 +62,32 @@ function vendorFromCertification(certification: string): string {
 	return match ? match[1].trim() : "Unknown";
 }
 
+/**
+ * Exam-code prefixes we can attribute with confidence, checked in order.
+ * Extend this table rather than special-casing a vendor anywhere else.
+ */
+export const VENDOR_CODE_PREFIXES: readonly { readonly match: RegExp; readonly vendor: string }[] = [
+	{ match: /^GH-/, vendor: "GitHub" },
+	{ match: /^(AI|AZ|DP|MS|PL|SC|MB|AB|MD)-/, vendor: "Microsoft" },
+	{ match: /^(AWS|SAA|DVA|SOA|CLF)/, vendor: "AWS" },
+];
+
+/** Last-resort vendor when the README says nothing about this exam. */
+export function vendorFromCode(code: string): string {
+	const normalized = code.trim().toUpperCase();
+	for (const entry of VENDOR_CODE_PREFIXES) {
+		if (entry.match.test(normalized)) {
+			return entry.vendor;
+		}
+	}
+	return "Unknown";
+}
+
+/** A README-derived vendor always wins; the code prefix only fills the gap. */
+export function resolveVendor(fromReadme: string | undefined, code: string): string {
+	return fromReadme && fromReadme !== "Unknown" ? fromReadme : vendorFromCode(code);
+}
+
 function firstLinkTarget(cell: string | undefined): string | undefined {
 	if (!cell) {
 		return undefined;
@@ -139,7 +165,7 @@ export async function migrateLegacyExams(root: string): Promise<ExamMeta[]> {
 		const meta: ExamMeta = {
 			schemaVersion: 1,
 			id: slugify(code),
-			vendor: row?.vendor ?? "Unknown",
+			vendor: resolveVendor(row?.vendor, code),
 			code,
 			title: row?.certification ?? titleFromTopics(topics, code) ?? code,
 			status: earned ? "completed" : "in-progress",

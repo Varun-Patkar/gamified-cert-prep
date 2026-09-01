@@ -22,10 +22,13 @@ export interface ExamMeta {
 	examQuery?: string;
 	/** Written by topic extraction; weights sum to 100. */
 	domains?: Domain[];
+	/** Topic titles by id, so a resumed setup can still name skills instead of raw ids. */
+	topicTitles?: Record<string, string>;
 }
 
 export interface ExamResult {
-	passed: boolean;
+	/** Undefined when the candidate would rather not say. */
+	passed?: boolean;
 	score?: number;
 	maxScore?: number;
 	passingScore?: number;

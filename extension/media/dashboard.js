@@ -220,6 +220,15 @@
 		if (!model) {
 			return '<div class="cp-page"><p class="cp-sub">Loading the campaign…</p></div>';
 		}
+		const offer = model.completionPrompt
+			? '<div class="cp-callout cp-callout--important cp-reveal"><p><b>' +
+				esc(model.completionPrompt.headline) +
+				"</b></p><p>" +
+				esc(model.completionPrompt.body) +
+				'</p><button class="cp-btn cp-btn--primary" style="width:auto;margin-top:12px" data-action="completeExam">' +
+				esc(model.completionPrompt.ctaLabel) +
+				"</button></div>"
+			: "";
 		const board = model.hasPlan
 			? '<section><div class="cp-section-head"><h2 class="cp-title">Plan board</h2><span class="cp-eyebrow">' +
 				model.completedDays +
@@ -233,6 +242,7 @@
 		return (
 			'<div class="cp-page">' +
 			head(model) +
+			offer +
 			'<div class="cp-layout"><div class="cp-grow">' +
 			board +
 			"</div>" +
@@ -270,6 +280,8 @@
 				cp.post("command/openBattlePass", { examId: examId });
 			} else if (action === "openCertificate") {
 				cp.post("command/openCertificate", { examId: examId, domainId: detail.domain });
+			} else if (action === "completeExam") {
+				cp.post("command/openCompletion", { examId: examId });
 			}
 		},
 	});

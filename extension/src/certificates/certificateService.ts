@@ -10,6 +10,9 @@ import { examPaths } from "../store/paths";
 import { CertificateRenderer } from "./certificateRenderer";
 import { certificateFileBase } from "./certificateTemplate";
 
+/** Domain id reserved for the whole-exam certificate: `certificates/domain-completion.html`. */
+export const COMPLETION_CERTIFICATE_ID = "completion";
+
 export class CertificateService {
 	private readonly renderer = new CertificateRenderer();
 
@@ -81,6 +84,41 @@ export class CertificateService {
 		}
 	}
 
+	/** The final certificate, issued when a campaign is closed out. Passing the exam is not required. */
+	async awardExamCompletion(examId: string): Promise<void> {
+		const snapshot = this.state.findSnapshot(examId);
+		const store = this.state.store;
+		const root = this.state.root;
+		if (!snapshot || !store || !root) {
+			return;
+		}
+		const progress = await store.readProgress(snapshot.meta.folder);
+		const profile = await store.readProfile();
+		const result = snapshot.meta.result;
+		const scored =
+			typeof result?.score === "number" && typeof result.maxScore === "number" && result.maxScore > 0
+				? result.score / result.maxScore
+				: overallAccuracy(progress);
+
+		try {
+			await this.renderer.issue(examPaths(root, snapshot.meta.folder).certificatesDir, {
+				displayName: profile?.displayName ?? "A Determined Candidate",
+				examCode: snapshot.meta.code,
+				examTitle: snapshot.meta.title,
+				vendor: snapshot.meta.vendor,
+				domainId: COMPLETION_CERTIFICATE_ID,
+				domainName: snapshot.meta.title,
+				date: snapshot.meta.completedAt ?? new Date().toISOString().slice(0, 10),
+				accuracy: scored ?? 0,
+				daysCompleted: (progress.completedDays ?? []).length,
+				eyebrow: "Certificate of Completion",
+				lead: "has run the full certification campaign for",
+			});
+		} catch {
+			// A certificate is a reward, never a blocker.
+		}
+	}
+
 	async open(examId: string, domainId: string): Promise<void> {
 		const snapshot = this.state.findSnapshot(examId);
 		const root = this.state.root;
@@ -140,4 +178,14 @@ async function exists(file: string): Promise<boolean> {
 	} catch {
 		return false;
 	}
+}
+
+function overallAccuracy(progress: Progress): number | undefined {
+	let answered = 0;
+	let correct = 0;
+	for (const result of progress.results ?? []) {
+		answered += Math.max(0, result.questionsAnswered ?? 0);
+		correct += Math.max(0, result.correct ?? 0);
+	}
+	return answered > 0 ? Math.min(1, correct / answered) : undefined;
 }

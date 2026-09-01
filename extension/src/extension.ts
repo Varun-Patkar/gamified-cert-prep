@@ -3,11 +3,14 @@ import * as os from "os";
 import * as path from "path";
 import { CertificateService } from "./certificates/certificateService";
 import { registerChatParticipant } from "./chat/participant";
+import { CompletionService } from "./completion/completionService";
+import { shouldOfferCompletion } from "./completion/examCompletion";
 import { runLanguageModelDiagnostics } from "./lm/diagnostics";
 import { startNewExam } from "./pipeline/newExamCommand";
 import { ExtensionState, findBoundFolder } from "./state/extensionState";
 import { RepoStore } from "./store/repoStore";
 import { BattlePassView } from "./views/battlePassView";
+import { CompletionView } from "./views/completionView";
 import { DashboardView } from "./views/dashboardView";
 import { QuizView } from "./views/quizView";
 import { SessionView } from "./views/sessionView";
@@ -34,6 +37,14 @@ export function activate(context: vscode.ExtensionContext): void {
 	};
 
 	const certificates = new CertificateService(state);
+	const completionService = new CompletionService(state, certificates, {
+		log: (message) => channel.appendLine(message),
+	});
+	const completion = new CompletionView(context.extensionUri, state, {
+		complete: (meta, result) => completionService.complete(meta, result),
+		log: (message) => channel.appendLine(message),
+	});
+	context.subscriptions.push(completion);
 	const sources = new SourcesView(context.extensionUri);
 	context.subscriptions.push(sources);
 
@@ -50,6 +61,7 @@ export function activate(context: vscode.ExtensionContext): void {
 		startQuiz: (examId, day) => views.quiz?.open(examId, day),
 		openBattlePass: (examId) => views.battlePass?.open(examId),
 		openCertificate: (examId, domainId) => certificates.open(examId, domainId),
+		openCompletion: (examId) => completion.open(examId),
 		buildPlan: () => void newExam(),
 	});
 	const session = new SessionView(context.extensionUri, state, {
@@ -120,7 +132,10 @@ export function activate(context: vscode.ExtensionContext): void {
 		vscode.commands.registerCommand("certPrep.openCertificate", (examId: string, domainId: string) =>
 			certificates.open(resolveExamId(state, examId), String(domainId))
 		),
-		vscode.commands.registerCommand("certPrep.newExam", () => newExam())
+		vscode.commands.registerCommand("certPrep.newExam", () => newExam()),
+		vscode.commands.registerCommand("certPrep.completeExam", (examId?: string) =>
+			completion.open(resolveCompletableExamId(state, examId))
+		)
 	);
 
 	void vscode.commands.executeCommand("setContext", "certPrep.bound", false);
@@ -135,6 +150,16 @@ function resolveExamId(state: ExtensionState, value?: string): string {
 	}
 	const byFolder = state.snapshots.find((snapshot) => snapshot.meta.folder === value);
 	return byFolder ? byFolder.meta.id : value;
+}
+
+/** From the palette there is no argument, so prefer the campaign whose exam date has arrived. */
+function resolveCompletableExamId(state: ExtensionState, value?: string): string {
+	if (value) {
+		return resolveExamId(state, value);
+	}
+	const today = new Date().toISOString().slice(0, 10);
+	const due = state.snapshots.find((snapshot) => shouldOfferCompletion(snapshot.meta, today));
+	return due?.meta.id ?? resolveExamId(state, value);
 }
 
 async function bindOnStartup(state: ExtensionState): Promise<void> {

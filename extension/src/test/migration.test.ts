@@ -7,7 +7,9 @@ import {
 	earliestIsoDate,
 	migrateLegacyExams,
 	parseReadmeCertifications,
+	resolveVendor,
 	titleFromTopics,
+	vendorFromCode,
 } from "../store/migration";
 
 const README = `# Microsoft Certification Exam Prep
@@ -145,7 +147,7 @@ describe("migrateLegacyExams", () => {
 		assert.strictEqual(ab.status, "in-progress");
 		assert.strictEqual(ab.legacy, false);
 		assert.strictEqual(ab.gamified, true);
-		assert.strictEqual(ab.vendor, "Unknown");
+		assert.strictEqual(ab.vendor, "Microsoft");
 		assert.strictEqual(ab.title, "Agentic AI Business Solutions Architect");
 		assert.strictEqual(ab.result, undefined);
 		assert.strictEqual(ab.createdAt, "2026-08-12");
@@ -205,6 +207,38 @@ describe("migrateLegacyExams", () => {
 		await fs.rm(path.join(root, "README.md"));
 		const migrated = await migrateLegacyExams(root);
 		assert.strictEqual(migrated.length, 2);
-		assert.ok(migrated.every((m) => m.vendor === "Unknown"));
+		// No readme to read, so both fall back to the exam-code prefix.
+		assert.ok(migrated.every((m) => m.vendor === "Microsoft"));
+	});
+});
+
+describe("vendorFromCode", () => {
+	it("maps the microsoft families", () => {
+		for (const code of ["AI-102", "AZ-204", "DP-800", "MS-900", "PL-300", "SC-200", "MB-800", "AB-100", "MD-102"]) {
+			assert.strictEqual(vendorFromCode(code), "Microsoft", code);
+		}
+	});
+
+	it("maps github and aws codes", () => {
+		assert.strictEqual(vendorFromCode("GH-300"), "GitHub");
+		for (const code of ["AWS-SAA", "SAA-C03", "DVA-C02", "SOA-C02", "CLF-C02"]) {
+			assert.strictEqual(vendorFromCode(code), "AWS", code);
+		}
+	});
+
+	it("is case and whitespace insensitive", () => {
+		assert.strictEqual(vendorFromCode("  gh-300 "), "GitHub");
+	});
+
+	it("stays honest about codes it does not recognise", () => {
+		assert.strictEqual(vendorFromCode("ZZ-999"), "Unknown");
+		assert.strictEqual(vendorFromCode(""), "Unknown");
+	});
+
+	it("lets a readme-derived vendor win, but fills a gap", () => {
+		assert.strictEqual(resolveVendor("Contoso", "AI-102"), "Contoso");
+		assert.strictEqual(resolveVendor("Unknown", "AI-102"), "Microsoft");
+		assert.strictEqual(resolveVendor(undefined, "GH-300"), "GitHub");
+		assert.strictEqual(resolveVendor(undefined, "ZZ-999"), "Unknown");
 	});
 });

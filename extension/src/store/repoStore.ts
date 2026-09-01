@@ -227,5 +227,21 @@ async function writeText(file: string, contents: string): Promise<void> {
 
 /** Pretty-printed with a trailing newline so git diffs stay reviewable. */
 async function writeJson(file: string, value: unknown): Promise<void> {
-	await writeText(file, `${JSON.stringify(value, null, 2)}\n`);
+	const indent = detectJsonIndent(await readText(file)) ?? 2;
+	await writeText(file, `${JSON.stringify(value, null, indent)}\n`);
+}
+
+/**
+ * Indentation of the first indented line of an existing JSON document. Hand-written banks in this
+ * repo are tab-indented; rewriting them at two spaces would produce an enormous spurious diff.
+ */
+export function detectJsonIndent(raw: string | undefined): string | number | undefined {
+	if (!raw) {
+		return undefined;
+	}
+	const match = /\r?\n([ \t]+)\S/.exec(raw);
+	if (!match) {
+		return undefined;
+	}
+	return match[1].includes("\t") ? "\t" : match[1].length;
 }

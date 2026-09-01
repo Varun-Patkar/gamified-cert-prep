@@ -40,6 +40,9 @@ export class SidebarView implements vscode.WebviewViewProvider {
 				case "command/newExam":
 					void vscode.commands.executeCommand("certPrep.newExam");
 					break;
+				case "command/openCompletion":
+					void vscode.commands.executeCommand("certPrep.completeExam", message.examId);
+					break;
 				case "command/commitNow":
 					void vscode.commands.executeCommand("certPrep.commitNow");
 					break;

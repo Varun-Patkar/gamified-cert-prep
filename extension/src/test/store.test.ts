@@ -15,7 +15,7 @@ import {
 	sessionFile,
 	slugify,
 } from "../store/paths";
-import { RepoStore, defaultProfile, emptyProgress } from "../store/repoStore";
+import { RepoStore, defaultProfile, detectJsonIndent, emptyProgress } from "../store/repoStore";
 
 describe("paths", () => {
 	const root = path.join("/tmp", "repo");
@@ -327,5 +327,59 @@ describe("RepoStore", () => {
 	it("lists nothing for a directory that does not exist", async () => {
 		const missing = new RepoStore(path.join(root, "does-not-exist"));
 		assert.deepStrictEqual(await missing.listExams(), []);
+	});
+
+	describe("json indentation", () => {
+		const bank = (): QuestionBank => ({
+			examCode: "AI-102",
+			domains: [
+				{
+					domainId: "1",
+					domainName: "Plan and manage",
+					questions: [{ id: "q001", question: "Why?", options: ["a", "b"], correctAnswer: "a" }],
+				},
+			],
+		});
+
+		const write = async (indent: string | number): Promise<string> => {
+			const file = examPaths(root, "AI-102 Prep").questions;
+			await fs.mkdir(path.dirname(file), { recursive: true });
+			await fs.writeFile(file, `${JSON.stringify(bank(), null, indent)}\n`, "utf8");
+			await store.writeQuestions("AI-102 Prep", bank());
+			return fs.readFile(file, "utf8");
+		};
+
+		it("preserves tab indentation when rewriting a hand-formatted bank", async () => {
+			const raw = await write("\t");
+			assert.ok(raw.includes('\n\t"examCode": "AI-102"'), raw.slice(0, 80));
+			assert.ok(!raw.includes('\n  "examCode"'));
+		});
+
+		it("preserves two-space indentation", async () => {
+			const raw = await write(2);
+			assert.ok(raw.includes('\n  "examCode": "AI-102"'));
+			assert.ok(!raw.includes("\n\t"));
+		});
+
+		it("preserves four-space indentation", async () => {
+			const raw = await write(4);
+			assert.ok(raw.includes('\n    "examCode": "AI-102"'));
+		});
+
+		it("defaults to two spaces for a brand new file", async () => {
+			await store.writeQuestions("New Prep", bank());
+			const raw = await fs.readFile(examPaths(root, "New Prep").questions, "utf8");
+			assert.ok(raw.includes('\n  "examCode": "AI-102"'));
+			assert.ok(raw.endsWith("\n"));
+		});
+
+		it("reads the indent of the first indented line, or nothing at all", () => {
+			assert.strictEqual(detectJsonIndent('{\n\t"a": 1\n}\n'), "\t");
+			assert.strictEqual(detectJsonIndent('{\n  "a": 1\n}\n'), 2);
+			assert.strictEqual(detectJsonIndent('{\r\n    "a": 1\r\n}\r\n'), 4);
+			assert.strictEqual(detectJsonIndent('{"a":1}'), undefined);
+			assert.strictEqual(detectJsonIndent(""), undefined);
+			assert.strictEqual(detectJsonIndent(undefined), undefined);
+		});
 	});
 });
