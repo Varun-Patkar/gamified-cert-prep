@@ -1,6 +1,9 @@
 .vscode/**
 .vscode-test/**
 .vscode-test.mjs
+.gitignore
+run-selftest.ps1
+scripts/**
 out/**
 src/**
 scripts/**

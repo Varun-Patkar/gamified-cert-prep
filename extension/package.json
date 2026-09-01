@@ -2,9 +2,18 @@
   "name": "gamified-cert-prep",
   "displayName": "Gamified Cert Prep",
   "description": "Turn any certification exam into a gamified, day-by-day study campaign backed by your own git repo.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "varun-patkar",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Varun-Patkar/gamified-cert-prep.git",
+    "directory": "extension"
+  },
+  "bugs": {
+    "url": "https://github.com/Varun-Patkar/gamified-cert-prep/issues"
+  },
+  "homepage": "https://github.com/Varun-Patkar/gamified-cert-prep#readme",
   "engines": {
     "vscode": "^1.104.0"
   },
