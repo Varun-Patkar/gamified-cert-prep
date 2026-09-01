@@ -19,6 +19,7 @@
 			'<div class="cp-eyebrow">' + esc(model.code) + " · Day " + model.day + "</div>",
 			'<div style="font-weight:600">' + esc(model.title) + "</div>",
 			"</div>",
+			'<button class="cp-btn cp-btn--sm" style="width:auto" data-action="regenerate" title="Research current sources and replace this session">↻ Regenerate</button>',
 			'<span class="cp-pill cp-pill--ghost">' + esc(model.kindLabel) + "</span>",
 			'<span class="cp-pill">' + model.readingMinutes + " min read</span>",
 			"</div>",
@@ -119,6 +120,8 @@
 				cp.post("command/backToDashboard", { examId: examId });
 			} else if (action === "ask") {
 				cp.post("command/askAboutSession", { examId: examId, day: currentDay });
+			} else if (action === "regenerate") {
+				cp.post("command/regenerateSession", { examId: examId, day: currentDay });
 			} else if (action === "link" && detail.href) {
 				cp.post("command/openSource", { url: detail.href });
 			}

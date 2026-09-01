@@ -157,9 +157,12 @@ export class RepoStore {
 	}
 
 	async writeSessionMaterial(folder: string, day: number, slug: string, markdown: string): Promise<string> {
-		const target = sessionFile(this.root, folder, day, slug);
+		const paths = examPaths(this.root, folder);
+		const entries = await readDir(paths.sessionsDir);
+		const existing = entries.find((entry) => entry.isFile() && isSessionFileForDay(entry.name, day));
+		const target = existing ? path.join(paths.sessionsDir, existing.name) : sessionFile(this.root, folder, day, slug);
 		await writeText(target, markdown);
-		return path.join("sessions", dayFileName(day, slug));
+		return path.join("sessions", existing?.name ?? dayFileName(day, slug));
 	}
 
 	/** Appends the attempt to `results/day-NN.json` and folds it into `progress.json`. */

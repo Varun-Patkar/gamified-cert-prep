@@ -127,6 +127,9 @@ export class SessionView implements vscode.Disposable {
 			case "command/askAboutSession":
 				await this.askAboutSession();
 				break;
+			case "command/regenerateSession":
+				await this.regenerateSession();
+				break;
 			case "command/openSource":
 				await openExternal(message.url);
 				break;
@@ -140,6 +143,17 @@ export class SessionView implements vscode.Disposable {
 		const planDay = snapshot?.plan?.days.find((entry) => entry.day === this.day);
 		const topic = planDay?.title ?? `Day ${this.day}`;
 		const query = `@certprep I'm on Day ${this.day} of ${snapshot?.meta.code ?? "my exam"} ("${topic}"). Explain the trickiest ideas in this session and quiz me on them.`;
+		try {
+			await vscode.commands.executeCommand("workbench.action.chat.open", { query });
+		} catch {
+			void vscode.window.showInformationMessage("Chat is not available in this window.");
+		}
+	}
+
+	private async regenerateSession(): Promise<void> {
+		const snapshot = this.examId ? this.state.findSnapshot(this.examId) : undefined;
+		const planDay = snapshot?.plan?.days.find((entry) => entry.day === this.day);
+		const query = `@certprep Regenerate Day ${this.day} session for ${snapshot?.meta.code ?? "my exam"}: "${planDay?.title ?? `Day ${this.day}`}". Research current official sources, replace the existing session only after it passes the depth and citation checks, and match the quality of my strongest completed sessions.`;
 		try {
 			await vscode.commands.executeCommand("workbench.action.chat.open", { query });
 		} catch {

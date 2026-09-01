@@ -43,6 +43,7 @@ export type WebviewToExtension =
 	| { type: "command/openSession"; examId: string; day: number }
 	| { type: "command/startQuiz"; examId: string; day: number }
 	| { type: "command/askAboutSession"; examId: string; day: number }
+	| { type: "command/regenerateSession"; examId: string; day: number }
 	| { type: "command/backToDashboard"; examId: string }
 	| { type: "command/openBattlePass"; examId: string }
 	| { type: "command/openCompletion"; examId: string }
@@ -71,6 +72,7 @@ const EXAM_DAY_COMMANDS: readonly string[] = [
 	"command/openSession",
 	"command/startQuiz",
 	"command/askAboutSession",
+	"command/regenerateSession",
 ];
 
 /** Narrows an untrusted webview payload; returns undefined for anything we don't serve. */

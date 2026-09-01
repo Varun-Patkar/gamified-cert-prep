@@ -383,7 +383,8 @@ describe("research/generateQuestions", () => {
 
 describe("research/generateSessionMaterial", () => {
 	it("returns the model's markdown, unwrapped from a document fence", async () => {
-		const lm = fakeLm({ text: () => "```markdown\n# Day 1 — Planning\n\nHello.\n```" });
+		const body = qualitySession();
+		const lm = fakeLm({ text: () => `\`\`\`markdown\n${body}\n\`\`\`` });
 		const markdown = await generateSessionMaterial(
 			{
 				examMeta: { code: "AI-102", title: "Azure AI Engineer" },
@@ -402,11 +403,11 @@ describe("research/generateSessionMaterial", () => {
 			{ lm }
 		);
 
-		assert.strictEqual(markdown, "# Day 1 — Planning\n\nHello.");
+		assert.strictEqual(markdown, body);
 	});
 
 	it("asks for the teaching sections and mentions the queued questions", async () => {
-		const lm = fakeLm({ text: () => "# Day 2" });
+		const lm = fakeLm({ text: qualitySession });
 		await generateSessionMaterial(
 			{
 				examMeta: { code: "CKA", title: "Certified Kubernetes Administrator" },
@@ -418,11 +419,31 @@ describe("research/generateSessionMaterial", () => {
 		);
 
 		const request = lm.turnRequests[0];
-		assert.ok(request.prompt.includes("What you'll learn"));
-		assert.ok(request.prompt.includes("Side by side"));
-		assert.ok(request.prompt.includes("Exam traps"));
-		assert.ok(request.prompt.includes("Recap"));
+		assert.ok(request.prompt.includes("TL;DR"));
+		assert.ok(request.prompt.includes("Key Concepts"));
+		assert.ok(request.prompt.includes("Common Traps"));
+		assert.ok(request.prompt.includes("Question-Alignment"));
 		assert.ok(request.prompt.includes("12 questions"));
 		assert.ok((request.system ?? "").includes(INTEGRITY_RULE));
 	});
 });
+
+function qualitySession(): string {
+	const detail = Array.from({ length: 920 }, (_, index) => `fact${index}`).join(" ");
+	return [
+		"# Day 1 — Planning",
+		"## TL;DR (60-second skim)",
+		detail,
+		"## Learning Objectives",
+		"- Apply the documented behavior.",
+		"## Key Concepts",
+		"### Exact behavior",
+		"Use the official decision rule.",
+		"## Common Traps & Misconceptions",
+		"- Do not confuse scope and authority.",
+		"## Quick Reference Card",
+		"| Need | Choice |\n| --- | --- |\n| Source | Official docs |",
+		"## Sources",
+		`- ${APPROVED[0].url}`,
+	].join("\n\n");
+}
