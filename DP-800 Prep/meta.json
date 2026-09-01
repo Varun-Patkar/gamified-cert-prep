@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-800",
+  "vendor": "Microsoft",
+  "code": "DP-800",
+  "title": "Microsoft Certified: SQL AI Developer Associate",
+  "status": "completed",
+  "legacy": true,
+  "gamified": false,
+  "folder": "DP-800 Prep",
+  "createdAt": "2026-09-01",
+  "result": {
+    "passed": true,
+    "credentialUrl": "https://learn.microsoft.com/api/credentials/share/en-gb/VarunPatkar/2EC3461E6479548?sharingId=255AC49FFD10B95B",
+    "scoreReportFile": "DP-800 Prep/DP-800-score-report.pdf"
+  },
+  "examDate": "2026-05-04",
+  "domains": [
+    {
+      "id": "1",
+      "title": "Design and Develop Database Solutions",
+      "weight": 36.6,
+      "topicIds": [
+        "t-1-1",
+        "t-1-2",
+        "t-1-3",
+        "t-1-4"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Secure, Optimize, and Deploy Database Solutions",
+      "weight": 36.6,
+      "topicIds": [
+        "t-2-1",
+        "t-2-2",
+        "t-2-3",
+        "t-2-4"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Implement AI Capabilities in Database Solutions",
+      "weight": 26.8,
+      "topicIds": [
+        "t-3-1",
+        "t-3-2",
+        "t-3-3"
+      ]
+    }
+  ],
+  "topicTitles": {
+    "t-1-1": "Design and Implement Database Objects",
+    "t-1-2": "Implement Programmability Objects",
+    "t-1-3": "Write Advanced T-SQL Code",
+    "t-1-4": "Design and Implement SQL Solutions by Using AI-Assisted Tools",
+    "t-2-1": "Implement Data Security and Compliance",
+    "t-2-2": "Optimize Database Performance",
+    "t-2-3": "Implement CI/CD by Using SQL Database Projects",
+    "t-2-4": "Integrate SQL Solutions with Azure Services",
+    "t-3-1": "Design and Implement Models and Embeddings",
+    "t-3-2": "Design and Implement Intelligent Search",
+    "t-3-3": "Design and Implement Retrieval-Augmented Generation (RAG)"
+  }
+}

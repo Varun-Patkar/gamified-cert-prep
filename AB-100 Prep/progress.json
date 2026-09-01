@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "examId": "ab-100",
+  "completedDays": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "results": [
+    {
+      "day": 1,
+      "attempt": 1,
+      "completedAt": "2026-08-12",
+      "questionsAnswered": 0,
+      "correct": 0,
+      "accuracy": 0,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 2,
+      "attempt": 1,
+      "completedAt": "2026-08-13",
+      "questionsAnswered": 6,
+      "correct": 6,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 3,
+      "attempt": 1,
+      "completedAt": "2026-08-14",
+      "questionsAnswered": 0,
+      "correct": 0,
+      "accuracy": 0,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 4,
+      "attempt": 1,
+      "completedAt": "2026-08-15",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 5,
+      "attempt": 1,
+      "completedAt": "2026-08-16",
+      "questionsAnswered": 44,
+      "correct": 40,
+      "accuracy": 0.9090909090909091,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 6,
+      "attempt": 1,
+      "completedAt": "2026-08-17",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 7,
+      "attempt": 1,
+      "completedAt": "2026-08-18",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 8,
+      "attempt": 1,
+      "completedAt": "2026-08-19",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 9,
+      "attempt": 1,
+      "completedAt": "2026-08-20",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 10,
+      "attempt": 1,
+      "completedAt": "2026-08-20",
+      "questionsAnswered": 10,
+      "correct": 9,
+      "accuracy": 0.9,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 11,
+      "attempt": 1,
+      "completedAt": "2026-08-22",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 12,
+      "attempt": 1,
+      "completedAt": "2026-08-23",
+      "questionsAnswered": 13,
+      "correct": 13,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 13,
+      "attempt": 1,
+      "completedAt": "2026-08-24",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 14,
+      "attempt": 1,
+      "completedAt": "2026-08-25",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 15,
+      "attempt": 1,
+      "completedAt": "2026-08-26",
+      "questionsAnswered": 13,
+      "correct": 13,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 16,
+      "attempt": 1,
+      "completedAt": "2026-08-27",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 17,
+      "attempt": 1,
+      "completedAt": "2026-08-28",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 18,
+      "attempt": 1,
+      "completedAt": "2026-08-29",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 19,
+      "attempt": 1,
+      "completedAt": "2026-08-30",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 20,
+      "attempt": 1,
+      "completedAt": "2026-08-31",
+      "questionsAnswered": 10,
+      "correct": 10,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 21,
+      "attempt": 1,
+      "completedAt": "2026-08-31",
+      "questionsAnswered": 10,
+      "correct": 9,
+      "accuracy": 0.9,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    }
+  ],
+  "xp": 0,
+  "streak": {
+    "current": 0,
+    "longest": 10,
+    "freezeTokens": 0
+  },
+  "badges": [],
+  "unlockedTiers": [],
+  "domainCertificates": []
+}

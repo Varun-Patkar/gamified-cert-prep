@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "examId": "ab-100",
+  "generatedAt": "2026-09-01",
+  "config": {
+    "startDate": "2026-08-12",
+    "examDate": "2026-09-12",
+    "hoursPerDay": 1,
+    "dayPolicy": "all",
+    "questionsPerDay": 10,
+    "includeReviewDays": true,
+    "includeFinalMock": true
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-08-12",
+      "kind": "study",
+      "title": "Orientation & AI Strategy Foundations",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-01-orientation-ai-strategy.md"
+    },
+    {
+      "day": 2,
+      "date": "2026-08-13",
+      "kind": "study",
+      "title": "D1.1 Analyze Requirements",
+      "topicIds": [],
+      "questionCount": 6,
+      "sessionFile": "sessions/day-02-analyze-requirements-grounding-data.md",
+      "domainId": "1"
+    },
+    {
+      "day": 3,
+      "date": "2026-08-14",
+      "kind": "study",
+      "title": "D1.2 Multi-Agent Platform Strategy",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-03-multi-agent-platform-strategy.md",
+      "domainId": "1"
+    },
+    {
+      "day": 4,
+      "date": "2026-08-15",
+      "kind": "study",
+      "title": "D1.2 Custom vs Extend, SLMs, CoE",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-04-custom-vs-extend-slm-coe.md",
+      "domainId": "1"
+    },
+    {
+      "day": 5,
+      "date": "2026-08-16",
+      "kind": "study",
+      "title": "D1.3 ROI & Model Router + Domain 1 Quiz",
+      "topicIds": [],
+      "questionCount": 44,
+      "sessionFile": "sessions/day-05-roi-tco-model-router.md",
+      "domainId": "1"
+    },
+    {
+      "day": 6,
+      "date": "2026-08-17",
+      "kind": "study",
+      "title": "D2.1 Copilot in Dynamics 365 + Agent Types",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-06-copilot-dynamics-agent-types.md",
+      "domainId": "2"
+    },
+    {
+      "day": 7,
+      "date": "2026-08-18",
+      "kind": "study",
+      "title": "D2.1 Copilot Studio Design",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-07-copilot-studio-design.md",
+      "domainId": "2"
+    },
+    {
+      "day": 8,
+      "date": "2026-08-19",
+      "kind": "study",
+      "title": "D2.2 Extensibility",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-08-extensibility.md",
+      "domainId": "2"
+    },
+    {
+      "day": 9,
+      "date": "2026-08-20",
+      "kind": "study",
+      "title": "D2.3 Orchestrate Prebuilt Agents",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-09-orchestrate-prebuilt-agents.md",
+      "domainId": "2"
+    },
+    {
+      "day": 10,
+      "date": "2026-08-21",
+      "kind": "review",
+      "title": "Domain 2 Quiz + Review",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-10-domain2-review.md",
+      "domainId": "2"
+    },
+    {
+      "day": 11,
+      "date": "2026-08-22",
+      "kind": "study",
+      "title": "D3.1 Monitor & Tune",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-11-monitor-tune.md",
+      "domainId": "3"
+    },
+    {
+      "day": 12,
+      "date": "2026-08-23",
+      "kind": "study",
+      "title": "D3.2 Testing",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-12-testing.md",
+      "domainId": "3"
+    },
+    {
+      "day": 13,
+      "date": "2026-08-24",
+      "kind": "study",
+      "title": "D3.3 ALM (Data + Copilot Studio)",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-13-alm-data-copilot-studio.md",
+      "domainId": "3"
+    },
+    {
+      "day": 14,
+      "date": "2026-08-25",
+      "kind": "study",
+      "title": "D3.3 ALM (Foundry + Models + D365)",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-14-alm-foundry-models-d365.md",
+      "domainId": "3"
+    },
+    {
+      "day": 15,
+      "date": "2026-08-26",
+      "kind": "study",
+      "title": "D3.4 Agent & Model Security",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-15-agent-model-security.md",
+      "domainId": "3"
+    },
+    {
+      "day": 16,
+      "date": "2026-08-27",
+      "kind": "study",
+      "title": "D3.4 Governance & Responsible AI",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-16-governance-responsible-ai.md",
+      "domainId": "3"
+    },
+    {
+      "day": 17,
+      "date": "2026-08-28",
+      "kind": "study",
+      "title": "D3.4 Compliance & Audit",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-17-compliance-audit.md",
+      "domainId": "3"
+    },
+    {
+      "day": 18,
+      "date": "2026-08-29",
+      "kind": "review",
+      "title": "Domain 3 Full Quiz + Review",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-18-domain3-full-quiz-review.md",
+      "domainId": "3"
+    },
+    {
+      "day": 19,
+      "date": "2026-08-30",
+      "kind": "review",
+      "title": "Responsible AI & Governance Deep Dive",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-19-responsible-ai-governance-deep-dive.md"
+    },
+    {
+      "day": 20,
+      "date": "2026-08-31",
+      "kind": "review",
+      "title": "Domain 1 Review",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-20-domain1-review.md",
+      "domainId": "1"
+    },
+    {
+      "day": 21,
+      "date": "2026-09-01",
+      "kind": "review",
+      "title": "Domain 2 Review",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-21-domain2-review.md",
+      "domainId": "2"
+    },
+    {
+      "day": 22,
+      "date": "2026-09-02",
+      "kind": "review",
+      "title": "Domain 3 Review (Monitor/Test)",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-22-domain-3-review-monitor-test.md",
+      "domainId": "3"
+    },
+    {
+      "day": 23,
+      "date": "2026-09-03",
+      "kind": "review",
+      "title": "Domain 3 Review (ALM/Security)",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-23-domain-3-review-alm-security.md",
+      "domainId": "3"
+    },
+    {
+      "day": 24,
+      "date": "2026-09-04",
+      "kind": "mock",
+      "title": "Official Practice Assessment (Attempt 1)",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-24-official-practice-assessment-attempt-1.md"
+    },
+    {
+      "day": 25,
+      "date": "2026-09-05",
+      "kind": "study",
+      "title": "Case Study Practice + Mixed Quiz",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-25-case-study-practice-mixed-quiz.md"
+    },
+    {
+      "day": 26,
+      "date": "2026-09-06",
+      "kind": "review",
+      "title": "Weak-Area Remediation",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-26-weak-area-remediation.md"
+    },
+    {
+      "day": 27,
+      "date": "2026-09-07",
+      "kind": "mock",
+      "title": "Full Mock Simulation",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-27-full-mock-simulation.md"
+    },
+    {
+      "day": 28,
+      "date": "2026-09-08",
+      "kind": "mock",
+      "title": "Mock Review",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-28-mock-review.md"
+    },
+    {
+      "day": 29,
+      "date": "2026-09-09",
+      "kind": "mock",
+      "title": "Official Practice Assessment (Attempt 2)",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-29-official-practice-assessment-attempt-2.md"
+    },
+    {
+      "day": 30,
+      "date": "2026-09-10",
+      "kind": "review",
+      "title": "Last-Minute Revision",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-30-last-minute-revision.md"
+    },
+    {
+      "day": 31,
+      "date": "2026-09-11",
+      "kind": "review",
+      "title": "Light Review & Logistics",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-31-light-review-logistics.md"
+    }
+  ]
+}

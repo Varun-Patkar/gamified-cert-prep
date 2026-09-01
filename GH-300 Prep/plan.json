@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "examId": "gh-300",
+  "generatedAt": "2026-09-01",
+  "config": {
+    "startDate": "2026-07-09",
+    "examDate": "2026-08-08",
+    "hoursPerDay": 1,
+    "dayPolicy": "all",
+    "questionsPerDay": 23,
+    "includeReviewDays": true,
+    "includeFinalMock": true
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-07-09",
+      "kind": "study",
+      "title": "Domain 1: Responsible AI (Full)",
+      "topicIds": [],
+      "questionCount": 29,
+      "sessionFile": "sessions/day-01-responsible-ai.md",
+      "domainId": "1"
+    },
+    {
+      "day": 2,
+      "date": "2026-07-10",
+      "kind": "study",
+      "title": "Domain 2: IDE & Inline Suggestions",
+      "topicIds": [],
+      "questionCount": 23,
+      "sessionFile": "sessions/day-02-copilot-plans-licensing.md",
+      "domainId": "2"
+    },
+    {
+      "day": 3,
+      "date": "2026-07-11",
+      "kind": "study",
+      "title": "Domain 2: GitHub Copilot CLI",
+      "topicIds": [],
+      "questionCount": 23,
+      "sessionFile": "sessions/day-03-copilot-cli.md",
+      "domainId": "2"
+    },
+    {
+      "day": 4,
+      "date": "2026-07-12",
+      "kind": "study",
+      "title": "Domain 2: Agent Mode, Edit Mode, MCP",
+      "topicIds": [],
+      "questionCount": 23,
+      "sessionFile": "sessions/day-04-agent-mode-edit-mode-mcp.md",
+      "domainId": "2"
+    },
+    {
+      "day": 5,
+      "date": "2026-07-13",
+      "kind": "review",
+      "title": "Domain 2: Code Review, PR Summaries, Spaces",
+      "topicIds": [],
+      "questionCount": 23,
+      "sessionFile": "sessions/day-05-code-review-pr-summaries-spaces.md",
+      "domainId": "2"
+    },
+    {
+      "day": 6,
+      "date": "2026-07-14",
+      "kind": "buffer",
+      "title": "Domain 2: Org Policies, REST API, Audit",
+      "topicIds": [],
+      "questionCount": 23,
+      "sessionFile": "sessions/day-06-copilot-cloud-agent-governance.md",
+      "domainId": "2"
+    },
+    {
+      "day": 7,
+      "date": "2026-07-15",
+      "kind": "buffer",
+      "title": "Domain 2: Catch-up & Overflow",
+      "topicIds": [],
+      "questionCount": 23,
+      "sessionFile": "sessions/day-07-catchup-overflow-modes-review.md",
+      "domainId": "2"
+    },
+    {
+      "day": 8,
+      "date": "2026-07-16",
+      "kind": "study",
+      "title": "Domain 3: Data & Architecture",
+      "topicIds": [],
+      "questionCount": 7,
+      "sessionFile": "sessions/day-08-data-architecture.md",
+      "domainId": "3"
+    },
+    {
+      "day": 9,
+      "date": "2026-07-17",
+      "kind": "study",
+      "title": "Domain 4: Prompt Engineering Part 1",
+      "topicIds": [],
+      "questionCount": 11,
+      "sessionFile": "sessions/day-09-prompt-engineering-part1.md",
+      "domainId": "4"
+    },
+    {
+      "day": 10,
+      "date": "2026-07-18",
+      "kind": "study",
+      "title": "Domain 4: Prompt Engineering Part 2",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-10-prompt-engineering-part-2.md",
+      "domainId": "4"
+    },
+    {
+      "day": 11,
+      "date": "2026-07-19",
+      "kind": "study",
+      "title": "Domain 5: Developer Productivity Part 1",
+      "topicIds": [],
+      "questionCount": 15,
+      "sessionFile": "sessions/day-11-developer-productivity-part-1.md",
+      "domainId": "5"
+    },
+    {
+      "day": 12,
+      "date": "2026-07-20",
+      "kind": "study",
+      "title": "Domain 5: Developer Productivity Part 2",
+      "topicIds": [],
+      "questionCount": 15,
+      "sessionFile": "sessions/day-12-developer-productivity-part-2.md",
+      "domainId": "5"
+    },
+    {
+      "day": 13,
+      "date": "2026-07-21",
+      "kind": "study",
+      "title": "Domain 6: Privacy & Content Exclusions Part 1",
+      "topicIds": [],
+      "questionCount": 14,
+      "sessionFile": "sessions/day-13-privacy-content-exclusions-part-1.md",
+      "domainId": "6"
+    },
+    {
+      "day": 14,
+      "date": "2026-07-22",
+      "kind": "study",
+      "title": "Domain 6: Privacy & Content Exclusions Part 2",
+      "topicIds": [],
+      "questionCount": 13,
+      "sessionFile": "sessions/day-14-privacy-content-exclusions-part-2.md",
+      "domainId": "6"
+    },
+    {
+      "day": 15,
+      "date": "2026-07-23",
+      "kind": "review",
+      "title": "D1 + D3 + D4 Consolidation",
+      "topicIds": [],
+      "questionCount": 19,
+      "sessionFile": "sessions/day-15-consolidation-d1-d3-d4.md",
+      "domainId": "1"
+    },
+    {
+      "day": 16,
+      "date": "2026-07-24",
+      "kind": "review",
+      "title": "D1 + D3 + D4 Assignment Consolidation",
+      "topicIds": [],
+      "questionCount": 19,
+      "sessionFile": "sessions/day-16-d1-d3-d4-assignment-consolidation.md",
+      "domainId": "1"
+    },
+    {
+      "day": 17,
+      "date": "2026-07-25",
+      "kind": "review",
+      "title": "D1 + D4 Assignment Consolidation",
+      "topicIds": [],
+      "questionCount": 19,
+      "sessionFile": "sessions/day-17-d1-d4-assignment-consolidation.md",
+      "domainId": "1"
+    },
+    {
+      "day": 18,
+      "date": "2026-07-26",
+      "kind": "mock",
+      "title": "Mock Round 1 (All Domains)",
+      "topicIds": [],
+      "questionCount": 25,
+      "sessionFile": "sessions/day-18-mock-round-1.md"
+    },
+    {
+      "day": 19,
+      "date": "2026-07-27",
+      "kind": "mock",
+      "title": "Mock Round 2 + Review",
+      "topicIds": [],
+      "questionCount": 25,
+      "sessionFile": "sessions/day-19-mock-round-2.md"
+    },
+    {
+      "day": 20,
+      "date": "2026-07-28",
+      "kind": "mock",
+      "title": "Mock Round 3",
+      "topicIds": [],
+      "questionCount": 25,
+      "sessionFile": "sessions/day-20-mock-round-3.md"
+    },
+    {
+      "day": 21,
+      "date": "2026-07-29",
+      "kind": "mock",
+      "title": "Mock Round 4",
+      "topicIds": [],
+      "questionCount": 25,
+      "sessionFile": "sessions/day-21-mock-round-4.md"
+    },
+    {
+      "day": 22,
+      "date": "2026-07-30",
+      "kind": "mock",
+      "title": "Mock Round 5",
+      "topicIds": [],
+      "questionCount": 25,
+      "sessionFile": "sessions/day-22-mock-round-5.md"
+    },
+    {
+      "day": 23,
+      "date": "2026-07-31",
+      "kind": "review",
+      "title": "Responsible AI Focus Review",
+      "topicIds": [],
+      "questionCount": 25,
+      "sessionFile": "sessions/day-23-responsible-ai-focus-review.md"
+    },
+    {
+      "day": 24,
+      "date": "2026-08-01",
+      "kind": "review",
+      "title": "D2/D3 Focus Review",
+      "topicIds": [],
+      "questionCount": 25,
+      "sessionFile": "sessions/day-24-d2-d3-focus-review.md",
+      "domainId": "2"
+    },
+    {
+      "day": 25,
+      "date": "2026-08-02",
+      "kind": "review",
+      "title": "D4/D5 Focus Review",
+      "topicIds": [],
+      "questionCount": 25,
+      "sessionFile": "sessions/day-25-d4-d5-focus-review.md",
+      "domainId": "4"
+    },
+    {
+      "day": 26,
+      "date": "2026-08-03",
+      "kind": "review",
+      "title": "D6 Focus + Config Review",
+      "topicIds": [],
+      "questionCount": 25,
+      "sessionFile": "sessions/day-26-d6-focus-config-review.md",
+      "domainId": "6"
+    },
+    {
+      "day": 27,
+      "date": "2026-08-04",
+      "kind": "mock",
+      "title": "Full Timed Mock",
+      "topicIds": [],
+      "questionCount": 25,
+      "sessionFile": "sessions/day-27-full-timed-mock.md"
+    },
+    {
+      "day": 28,
+      "date": "2026-08-05",
+      "kind": "study",
+      "title": "Targeted Weak Areas",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-28-targeted-weak-areas.md"
+    },
+    {
+      "day": 29,
+      "date": "2026-08-06",
+      "kind": "review",
+      "title": "Light Review",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-29-light-review.md"
+    },
+    {
+      "day": 30,
+      "date": "2026-08-07",
+      "kind": "buffer",
+      "title": "Rest Day",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-30-rest-day.md"
+    }
+  ]
+}

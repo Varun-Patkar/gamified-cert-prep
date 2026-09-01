@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 1,
+  "examId": "ai-102",
+  "generatedAt": "2026-09-01",
+  "config": {
+    "startDate": "2026-05-06",
+    "examDate": "2026-06-07",
+    "hoursPerDay": 1,
+    "dayPolicy": "all",
+    "questionsPerDay": 11,
+    "includeReviewDays": true,
+    "includeFinalMock": true
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-05-06",
+      "kind": "study",
+      "title": "Domain 1: Service Selection",
+      "topicIds": [],
+      "questionCount": 14,
+      "sessionFile": "sessions/day-01-service-selection.md",
+      "domainId": "1"
+    },
+    {
+      "day": 2,
+      "date": "2026-05-07",
+      "kind": "study",
+      "title": "Domain 1: Deployment Planning",
+      "topicIds": [],
+      "questionCount": 13,
+      "sessionFile": "sessions/day-02-deployment-planning.md",
+      "domainId": "1"
+    },
+    {
+      "day": 3,
+      "date": "2026-05-08",
+      "kind": "study",
+      "title": "Domain 1: Security and Monitoring",
+      "topicIds": [],
+      "questionCount": 13,
+      "sessionFile": "sessions/day-03-security-monitoring.md",
+      "domainId": "1"
+    },
+    {
+      "day": 4,
+      "date": "2026-05-09",
+      "kind": "study",
+      "title": "Domain 1: Responsible AI Controls",
+      "topicIds": [],
+      "questionCount": 13,
+      "sessionFile": "sessions/day-04-responsible-ai-controls.md",
+      "domainId": "1"
+    },
+    {
+      "day": 5,
+      "date": "2026-05-10",
+      "kind": "review",
+      "title": "Domain 1: Consolidation",
+      "topicIds": [],
+      "questionCount": 13,
+      "sessionFile": "sessions/day-05-domain1-consolidation.md",
+      "domainId": "1"
+    },
+    {
+      "day": 6,
+      "date": "2026-05-11",
+      "kind": "study",
+      "title": "Domain 2: Foundry GenAI Foundations",
+      "topicIds": [],
+      "questionCount": 12,
+      "sessionFile": "sessions/day-06-foundry-genai-foundations.md",
+      "domainId": "2"
+    },
+    {
+      "day": 7,
+      "date": "2026-05-12",
+      "kind": "study",
+      "title": "Domain 2: RAG Fundamentals",
+      "topicIds": [],
+      "questionCount": 12,
+      "sessionFile": "sessions/day-07-rag-fundamentals.md",
+      "domainId": "2"
+    },
+    {
+      "day": 8,
+      "date": "2026-05-13",
+      "kind": "study",
+      "title": "Domain 2: Azure OpenAI Usage",
+      "topicIds": [],
+      "questionCount": 12,
+      "sessionFile": "sessions/day-08-azure-openai-usage.md",
+      "domainId": "2"
+    },
+    {
+      "day": 9,
+      "date": "2026-05-14",
+      "kind": "study",
+      "title": "Domain 2: Optimization and Ops",
+      "topicIds": [],
+      "questionCount": 12,
+      "sessionFile": "sessions/day-09-optimization-ops.md",
+      "domainId": "2"
+    },
+    {
+      "day": 10,
+      "date": "2026-05-15",
+      "kind": "study",
+      "title": "Domain 2: Fine-tuning and Orchestration",
+      "topicIds": [],
+      "questionCount": 11,
+      "sessionFile": "sessions/day-10-finetuning-orchestration.md",
+      "domainId": "2"
+    },
+    {
+      "day": 11,
+      "date": "2026-05-16",
+      "kind": "study",
+      "title": "Domain 3: Agent Concepts",
+      "topicIds": [],
+      "questionCount": 13,
+      "sessionFile": "sessions/day-11-agent-concepts.md",
+      "domainId": "3"
+    },
+    {
+      "day": 12,
+      "date": "2026-05-17",
+      "kind": "study",
+      "title": "Domain 3: Agent Framework Refresher",
+      "topicIds": [],
+      "questionCount": 12,
+      "sessionFile": "sessions/day-12-agent-framework-refresher.md",
+      "domainId": "3"
+    },
+    {
+      "day": 13,
+      "date": "2026-05-18",
+      "kind": "study",
+      "title": "Domain 4: Image Analysis",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-13-image-analysis.md",
+      "domainId": "4"
+    },
+    {
+      "day": 14,
+      "date": "2026-05-19",
+      "kind": "study",
+      "title": "Domain 4: Custom Vision Models",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-14-custom-vision-models.md",
+      "domainId": "4"
+    },
+    {
+      "day": 15,
+      "date": "2026-05-20",
+      "kind": "study",
+      "title": "Domain 4: Training and Publishing",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-15-training-publishing.md",
+      "domainId": "4"
+    },
+    {
+      "day": 16,
+      "date": "2026-05-21",
+      "kind": "study",
+      "title": "Domain 4: Video and Spatial Analysis",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-16-video-spatial-analysis.md",
+      "domainId": "4"
+    },
+    {
+      "day": 17,
+      "date": "2026-05-22",
+      "kind": "study",
+      "title": "Domain 5: Text Analytics",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-17-text-analytics.md",
+      "domainId": "5"
+    },
+    {
+      "day": 18,
+      "date": "2026-05-23",
+      "kind": "study",
+      "title": "Domain 5: Translation Workloads",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-18-translation-knowledge-mining.md",
+      "domainId": "5"
+    },
+    {
+      "day": 19,
+      "date": "2026-05-24",
+      "kind": "study",
+      "title": "Domain 5: Speech Solutions",
+      "topicIds": [],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-19-speech-solutions.md",
+      "domainId": "5"
+    },
+    {
+      "day": 20,
+      "date": "2026-05-25",
+      "kind": "study",
+      "title": "Domain 5: Custom Language Models",
+      "topicIds": [],
+      "questionCount": 9,
+      "sessionFile": "sessions/day-20-custom-language-models.md",
+      "domainId": "5"
+    },
+    {
+      "day": 21,
+      "date": "2026-05-26",
+      "kind": "study",
+      "title": "Domain 5: Question Answering",
+      "topicIds": [],
+      "questionCount": 9,
+      "sessionFile": "sessions/day-21-question-answering.md",
+      "domainId": "5"
+    },
+    {
+      "day": 22,
+      "date": "2026-05-27",
+      "kind": "review",
+      "title": "Domain 5: Consolidation",
+      "topicIds": [],
+      "questionCount": 9,
+      "sessionFile": "sessions/day-22-domain5-consolidation.md",
+      "domainId": "5"
+    },
+    {
+      "day": 23,
+      "date": "2026-05-28",
+      "kind": "study",
+      "title": "Domain 6: AI Search Core",
+      "topicIds": [],
+      "questionCount": 11,
+      "sessionFile": "sessions/day-23-ai-search-core.md",
+      "domainId": "6"
+    },
+    {
+      "day": 24,
+      "date": "2026-05-29",
+      "kind": "study",
+      "title": "Domain 6: Query and Enrichment",
+      "topicIds": [],
+      "questionCount": 11,
+      "sessionFile": "sessions/day-24-query-enrichment.md",
+      "domainId": "6"
+    },
+    {
+      "day": 25,
+      "date": "2026-05-30",
+      "kind": "study",
+      "title": "Domain 6: Semantic and Vector Search",
+      "topicIds": [],
+      "questionCount": 11,
+      "sessionFile": "sessions/day-25-semantic-vector-search.md",
+      "domainId": "6"
+    },
+    {
+      "day": 26,
+      "date": "2026-05-31",
+      "kind": "study",
+      "title": "Domain 6: Document Intelligence",
+      "topicIds": [],
+      "questionCount": 11,
+      "sessionFile": "sessions/day-26-document-intelligence.md",
+      "domainId": "6"
+    },
+    {
+      "day": 27,
+      "date": "2026-06-01",
+      "kind": "study",
+      "title": "Domain 6: Content Understanding",
+      "topicIds": [],
+      "questionCount": 11,
+      "sessionFile": "sessions/day-27-content-understanding.md",
+      "domainId": "6"
+    },
+    {
+      "day": 28,
+      "date": "2026-06-02",
+      "kind": "review",
+      "title": "Domain 6: Consolidation",
+      "topicIds": [],
+      "questionCount": 11,
+      "sessionFile": "sessions/day-28-domain6-consolidation.md",
+      "domainId": "6"
+    },
+    {
+      "day": 29,
+      "date": "2026-06-03",
+      "kind": "buffer",
+      "title": "Buffer / Catch-up",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-29-buffer-catchup.md"
+    },
+    {
+      "day": 30,
+      "date": "2026-06-04",
+      "kind": "review",
+      "title": "Full Review 1",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-30-full-review-1.md"
+    },
+    {
+      "day": 31,
+      "date": "2026-06-05",
+      "kind": "review",
+      "title": "Full Review 2",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-31-full-review-2.md"
+    },
+    {
+      "day": 32,
+      "date": "2026-06-06",
+      "kind": "mock",
+      "title": "Mock Simulation + Final Revision",
+      "topicIds": [],
+      "questionCount": 0,
+      "sessionFile": "sessions/day-32-mock-simulation-final-revision.md"
+    }
+  ]
+}

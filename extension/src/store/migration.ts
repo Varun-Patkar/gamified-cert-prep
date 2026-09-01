@@ -7,6 +7,7 @@ import type { Dirent } from "fs";
 import * as fs from "fs/promises";
 import * as path from "path";
 import type { ExamMeta } from "../model/types";
+import { importLegacyExam } from "./legacyImport";
 import { examPaths, slugify } from "./paths";
 
 const LEGACY_FOLDER = /^(.+?)\s+Prep$/;
@@ -148,7 +149,9 @@ export async function migrateLegacyExams(root: string): Promise<ExamMeta[]> {
 
 		const existing = await readJson<ExamMeta>(paths.meta);
 		if (existing) {
-			migrated.push(existing);
+			// An already-migrated folder can still be missing plan.json/progress.json.
+			await importLegacyExam(root, existing);
+			migrated.push((await readJson<ExamMeta>(paths.meta)) ?? existing);
 			continue;
 		}
 		// A meta.json we cannot parse is still the user's file; never clobber it.
@@ -185,7 +188,8 @@ export async function migrateLegacyExams(root: string): Promise<ExamMeta[]> {
 
 		await fs.mkdir(path.dirname(paths.meta), { recursive: true });
 		await fs.writeFile(paths.meta, `${JSON.stringify(meta, null, 2)}\n`, "utf8");
-		migrated.push(meta);
+		await importLegacyExam(root, meta);
+		migrated.push((await readJson<ExamMeta>(paths.meta)) ?? meta);
 	}
 
 	return migrated.sort((a, b) => a.code.localeCompare(b.code));

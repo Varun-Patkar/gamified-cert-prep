@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-102",
+  "vendor": "Microsoft",
+  "code": "AI-102",
+  "title": "Microsoft Certified: Azure AI Engineer Associate",
+  "status": "completed",
+  "legacy": true,
+  "gamified": false,
+  "folder": "AI-102 Prep",
+  "createdAt": "2026-05-06",
+  "result": {
+    "passed": true,
+    "credentialUrl": "https://learn.microsoft.com/api/credentials/share/en-gb/VarunPatkar/57E88FFE28157FDB?sharingId=255AC49FFD10B95B",
+    "scoreReportFile": "AI-102 Prep/AI-102-score-report.pdf"
+  },
+  "examDate": "2026-06-07",
+  "domains": [
+    {
+      "id": "1",
+      "title": "Plan and manage an Azure AI solution",
+      "weight": 23.7,
+      "topicIds": [
+        "t-1-1",
+        "t-1-2",
+        "t-1-3",
+        "t-1-4"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Implement generative AI solutions",
+      "weight": 18.4,
+      "topicIds": [
+        "t-2-1",
+        "t-2-2",
+        "t-2-3"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Implement an agentic solution",
+      "weight": 7.9,
+      "topicIds": [
+        "t-3-1"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Implement computer vision solutions",
+      "weight": 13.2,
+      "topicIds": [
+        "t-4-1",
+        "t-4-2",
+        "t-4-3"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Implement natural language processing solutions",
+      "weight": 18.4,
+      "topicIds": [
+        "t-5-1",
+        "t-5-2",
+        "t-5-3"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Implement knowledge mining and information extraction solutions",
+      "weight": 18.4,
+      "topicIds": [
+        "t-6-1",
+        "t-6-2",
+        "t-6-3"
+      ]
+    }
+  ],
+  "topicTitles": {
+    "t-1-1": "Select the appropriate Microsoft Foundry Services",
+    "t-1-2": "Plan, create and deploy a Microsoft Foundry Service",
+    "t-1-3": "Manage, monitor, and secure a Microsoft Foundry Service",
+    "t-1-4": "Implement AI solutions responsibly",
+    "t-2-1": "Build generative AI solutions with Microsoft Foundry",
+    "t-2-2": "Use Azure OpenAI in Foundry Models to generate content",
+    "t-2-3": "Optimize and operationalize a generative AI solution",
+    "t-3-1": "Create custom agents",
+    "t-4-1": "Analyze images",
+    "t-4-2": "Implement custom vision models",
+    "t-4-3": "Analyze videos",
+    "t-5-1": "Analyze and translate text",
+    "t-5-2": "Process and translate speech",
+    "t-5-3": "Implement custom language models",
+    "t-6-1": "Implement an Azure AI Search solution",
+    "t-6-2": "Implement an Azure Document Intelligence in Foundry Tools solution",
+    "t-6-3": "Extract information with Azure Content Understanding in Foundry Tools"
+  }
+}

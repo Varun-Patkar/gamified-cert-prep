@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "examId": "dp-800",
+  "completedDays": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "results": [
+    {
+      "day": 1,
+      "attempt": 1,
+      "completedAt": "2026-04-26",
+      "questionsAnswered": 19,
+      "correct": 19,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 2,
+      "attempt": 1,
+      "completedAt": "2026-04-27",
+      "questionsAnswered": 9,
+      "correct": 9,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 3,
+      "attempt": 1,
+      "completedAt": "2026-04-28",
+      "questionsAnswered": 8,
+      "correct": 6,
+      "accuracy": 0.75,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 4,
+      "attempt": 1,
+      "completedAt": "2026-04-29",
+      "questionsAnswered": 8,
+      "correct": 8,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 5,
+      "attempt": 1,
+      "completedAt": "2026-04-30",
+      "questionsAnswered": 8,
+      "correct": 7,
+      "accuracy": 0.875,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    },
+    {
+      "day": 6,
+      "attempt": 1,
+      "completedAt": "2026-05-01",
+      "questionsAnswered": 85,
+      "correct": 76,
+      "accuracy": 0.8941176470588236,
+      "weakTopicIds": [],
+      "xpAwarded": 0
+    }
+  ],
+  "xp": 0,
+  "streak": {
+    "current": 0,
+    "longest": 6,
+    "freezeTokens": 0
+  },
+  "badges": [],
+  "unlockedTiers": [],
+  "domainCertificates": []
+}

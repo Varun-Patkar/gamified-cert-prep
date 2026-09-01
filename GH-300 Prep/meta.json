@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "gh-300",
+  "vendor": "GitHub",
+  "code": "GH-300",
+  "title": "GitHub Certified: GitHub Copilot",
+  "status": "completed",
+  "legacy": true,
+  "gamified": false,
+  "folder": "GH-300 Prep",
+  "createdAt": "2026-07-09",
+  "result": {
+    "passed": true,
+    "credentialUrl": "https://learn.microsoft.com/api/credentials/share/en-gb/VarunPatkar/857C8CC1F8AB312A?sharingId=255AC49FFD10B95B",
+    "scoreReportFile": "GH-300 Prep/GH-300-score-report.pdf"
+  },
+  "examDate": "2026-08-08",
+  "domains": [
+    {
+      "id": "1",
+      "title": "Use GitHub Copilot Responsibly",
+      "weight": 18.4,
+      "topicIds": [
+        "t-1-1",
+        "t-1-2"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Use GitHub Copilot Features",
+      "weight": 28.9,
+      "topicIds": [
+        "t-2-1",
+        "t-2-2",
+        "t-2-3",
+        "t-2-4",
+        "t-2-5"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Understand GitHub Copilot Data and Architecture",
+      "weight": 13.2,
+      "topicIds": [
+        "t-3-1",
+        "t-3-2"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Apply Prompt Engineering and Context Crafting",
+      "weight": 13.2,
+      "topicIds": [
+        "t-4-1",
+        "t-4-2"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Improve Developer Productivity with GitHub Copilot",
+      "weight": 13.2,
+      "topicIds": [
+        "t-5-1",
+        "t-5-2"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Configure Privacy, Content Exclusions, and Safeguards",
+      "weight": 13.2,
+      "topicIds": [
+        "t-6-1",
+        "t-6-2"
+      ]
+    }
+  ],
+  "topicTitles": {
+    "t-1-1": "Understand Responsible AI Principles",
+    "t-1-2": "Validate and Operate AI Tools",
+    "t-2-1": "Use GitHub Copilot in the IDE",
+    "t-2-2": "Use GitHub Copilot CLI",
+    "t-2-3": "Use GitHub Copilot Features and Capabilities",
+    "t-2-4": "Use GitHub Copilot Chat",
+    "t-2-5": "Manage GitHub Copilot Policies and Administration",
+    "t-3-1": "Data Usage and Flow",
+    "t-3-2": "How Copilot Works",
+    "t-4-1": "Prompt Structure and Principles",
+    "t-4-2": "Prompting Techniques",
+    "t-5-1": "Code Generation and Quality",
+    "t-5-2": "Testing and Learning",
+    "t-6-1": "Content Exclusions and Settings",
+    "t-6-2": "Privacy and Ownership"
+  }
+}
