@@ -1,0 +1,219 @@
+{
+  "name": "gamified-cert-prep",
+  "displayName": "Gamified Cert Prep",
+  "description": "Turn any certification exam into a gamified, day-by-day study campaign backed by your own git repo.",
+  "version": "0.1.0",
+  "publisher": "varun-patkar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Varun-Patkar/gamified-cert-prep.git",
+    "directory": "extension"
+  },
+  "bugs": {
+    "url": "https://github.com/Varun-Patkar/gamified-cert-prep/issues"
+  },
+  "homepage": "https://github.com/Varun-Patkar/gamified-cert-prep#readme",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Education",
+    "Other"
+  ],
+  "keywords": [
+    "certification",
+    "exam",
+    "study",
+    "quiz",
+    "gamification"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "chatParticipants": [
+      {
+        "id": "certPrep.chat",
+        "name": "certprep",
+        "fullName": "Cert Prep",
+        "description": "Plan a certification campaign, or ask about today's session.",
+        "isSticky": true,
+        "commands": [
+          {
+            "name": "new",
+            "description": "Set up a new exam campaign, one question at a time."
+          },
+          {
+            "name": "plan",
+            "description": "Show or rebuild the plan for your active exam."
+          },
+          {
+            "name": "today",
+            "description": "What today's study session is, and open it."
+          },
+          {
+            "name": "explain",
+            "description": "Teach a topic from your active exam, grounded in its sources."
+          },
+          {
+            "name": "status",
+            "description": "Days done, accuracy, streak, XP and days to exam."
+          }
+        ]
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "certPrep",
+          "title": "Cert Prep",
+          "icon": "media/activity-bar.svg"
+        }
+      ]
+    },
+    "views": {
+      "certPrep": [
+        {
+          "type": "webview",
+          "id": "certPrep.welcome",
+          "name": "Get started",
+          "when": "!certPrep.bound"
+        },
+        {
+          "type": "webview",
+          "id": "certPrep.sidebar",
+          "name": "Campaign",
+          "when": "certPrep.bound"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "certPrep.diagnostics.languageModel",
+        "title": "Cert Prep: Run Language Model Diagnostics",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.bindRepo",
+        "title": "Bind Prep Repository",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.refresh",
+        "title": "Refresh",
+        "category": "Cert Prep",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "certPrep.commitNow",
+        "title": "Commit Progress Now",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.newExam",
+        "title": "Prepare for a New Exam",
+        "category": "Cert Prep",
+        "icon": "$(add)"
+      },
+      {
+        "command": "certPrep.openExam",
+        "title": "Open Exam Dashboard",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.openDay",
+        "title": "Open Study Session",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.startQuiz",
+        "title": "Start Day Quiz",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.openBattlePass",
+        "title": "Open Battle Pass",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.openCertificate",
+        "title": "Open Domain Certificate",
+        "category": "Cert Prep"
+      },
+      {
+        "command": "certPrep.completeExam",
+        "title": "Record Exam Result",
+        "category": "Cert Prep"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "certPrep.openDay",
+          "when": "false"
+        },
+        {
+          "command": "certPrep.startQuiz",
+          "when": "false"
+        },
+        {
+          "command": "certPrep.openCertificate",
+          "when": "false"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "certPrep.newExam",
+          "when": "view == certPrep.sidebar",
+          "group": "navigation@1"
+        },
+        {
+          "command": "certPrep.refresh",
+          "when": "view == certPrep.sidebar",
+          "group": "navigation@2"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Gamified Cert Prep",
+      "properties": {
+        "certPrep.gamification.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show XP, levels, streaks, battle pass and celebration screens."
+        },
+        "certPrep.sync.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically commit and push study progress to the bound repository."
+        },
+        "certPrep.sync.pullIntervalMinutes": {
+          "type": "number",
+          "default": 15,
+          "minimum": 0,
+          "description": "How often to pull from the remote. Set to 0 to disable periodic pulls."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "npm run check-types && node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "npm run check-types && node esbuild.js --production",
+    "check-types": "tsc --noEmit",
+    "compile-tests": "tsc -p tsconfig.json",
+    "test": "npm run compile-tests && mocha \"out/test/**/*.test.js\""
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.2",
+    "@types/vscode": "^1.104.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.24.2",
+    "mocha": "^11.0.1",
+    "typescript": "^5.7.2"
+  }
+}

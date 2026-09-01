@@ -1,0 +1,18 @@
+.vscode/**
+.vscode-test/**
+.vscode-test.mjs
+.gitignore
+run-selftest.ps1
+scripts/**
+out/**
+src/**
+scripts/**
+node_modules/**
+esbuild.js
+tsconfig.json
+run-selftest.ps1
+**/*.map
+**/*.ts
+
+# Every webview loads its CSS/JS/icons from disk, so media/** must ship in the VSIX.
+!media/**
