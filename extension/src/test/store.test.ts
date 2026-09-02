@@ -217,6 +217,18 @@ describe("RepoStore", () => {
 		assert.deepStrictEqual(await store.readQuestions(m.folder), bank);
 	});
 
+	it("reads the ordered question assignment for a day", async () => {
+		const m = meta();
+		await fs.mkdir(path.join(root, m.folder), { recursive: true });
+		await fs.writeFile(
+			path.join(root, m.folder, "day-assignments.json"),
+			JSON.stringify({ dayAssignments: { "24": ["q191", "q192", 193, "q191", "q200"] } })
+		);
+
+		assert.deepStrictEqual(await store.readDayQuestionIds(m.folder, 24), ["q191", "q192", "q200"]);
+		assert.strictEqual(await store.readDayQuestionIds(m.folder, 25), undefined);
+	});
+
 	it("round-trips progress and returns a zeroed one when missing", async () => {
 		await store.writeMeta(meta());
 

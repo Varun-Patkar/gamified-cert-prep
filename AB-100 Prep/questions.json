@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 190,
+	"totalQuestions": 200,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)",
 		"Microsoft Learn: Copilot Studio analytics overview and conversational-agent effectiveness",
@@ -53,9 +53,15 @@
 		"https://learn.microsoft.com/en-us/azure/machine-learning/how-to-manage-models?view=azureml-api-2",
 		"https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview",
 		"https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices",
-		"https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"
+		"https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview",
+		"https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+		"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router",
+		"https://learn.microsoft.com/en-us/training/modules/design-ai-agents-business-solutions/",
+		"https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-overview",
+		"https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview",
+		"https://learn.microsoft.com/en-us/azure/foundry/agents/overview"
 	],
-	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q190 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, Day 15 questions q141-q150, Day 16 questions q151-q160, Day 17 questions q161-q170, and Day 19 questions q171-q180 are mapped to Domain 3, Deploy AI-powered business solutions. Day 20 questions q181-q190 are mapped to Domain 1, Plan AI-powered business solutions.",
+	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q200 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, Day 15 questions q141-q150, Day 16 questions q151-q160, Day 17 questions q161-q170, and Day 19 questions q171-q180 are mapped to Domain 3, Deploy AI-powered business solutions. Day 20 questions q181-q190 are mapped to Domain 1, Plan AI-powered business solutions. Day 24 questions q191-q200 are a mixed-domain gap check mapped proportionally to Domain 1 (3), Domain 2 (3), and Domain 3 (4).",
 	"caseStudies": [
 		{
 			"id": "chg",
@@ -3604,6 +3610,196 @@
 					"difficulty": "medium",
 					"source": "AI-generated; grounded in https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/center-of-excellence",
 					"sourceUrl": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/center-of-excellence",
+					"section": "standalone"
+				},
+				{
+					"id": "q191",
+					"originalId": "DAY24-01",
+					"type": "mc",
+					"question": "A manufacturer has a list of 40 proposed AI initiatives. Executives want to select a platform first and require every business unit to use it. Several proposals have no measurable outcome, unavailable grounding data, or an untested dependency on autonomous approvals. What should the architect do first?",
+					"options": [
+						"A. Standardize on the platform with the largest model catalog, then rewrite every use case to fit it",
+						"B. Prioritize use cases by business outcome, feasibility, data readiness, risk, and expected value before selecting the appropriate solution pattern for each",
+						"C. Build all 40 initiatives as proofs of concept because feasibility cannot be assessed before deployment",
+						"D. Select the least expensive model for every initiative and use adoption as the only success measure"
+					],
+					"correctAnswer": "B",
+					"explanation": "Microsoft's Cloud Adoption Framework AI strategy guidance starts with the business use case and validates feasibility, value, data, cost, and risk before solution selection. A platform-first mandate can force unsuitable patterns and conceal initiatives that lack measurable outcomes or viable data. A prioritized portfolio gives each approved use case an explicit outcome and an architecture matched to its constraints.",
+					"topic": "D1.2 / AI adoption strategy and use-case prioritization",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+					"section": "standalone"
+				},
+				{
+					"id": "q192",
+					"originalId": "DAY24-02",
+					"type": "mc",
+					"question": "Multiple teams copy successful prompts into production agents and edit them independently. After a policy change, the organization cannot determine which prompts are approved, what inputs they expect, or which evaluation set supports them. Which prompt-library guideline best addresses the problem?",
+					"options": [
+						"A. Store only prompt text in a shared chat so makers can choose the newest-looking version",
+						"B. Maintain governed prompt assets with purpose, owner, input contract, version, approved examples, evaluation evidence, and change history",
+						"C. Prevent prompt reuse so every agent creates unique instructions directly in production",
+						"D. Treat temperature settings as sufficient version metadata because prompts are not solution components"
+					],
+					"correctAnswer": "B",
+					"explanation": "The AB-100 study guide explicitly requires guidelines for a prompt library and prompt engineering. A useful enterprise library is more than a text gallery: ownership, intended use, inputs, versions, examples, evaluation evidence, and change records make prompts discoverable, reusable, testable, and governable. Independent production copies create drift and make policy updates difficult to prove.",
+					"topic": "D1.2 / Governed prompt library",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100",
+					"section": "standalone"
+				},
+				{
+					"id": "q193",
+					"originalId": "DAY24-03",
+					"type": "mc",
+					"question": "An internal assistant receives a mix of simple rewriting requests and complex planning prompts. The team currently sends every request to its most capable model, producing unnecessary cost and latency. Quality must remain comparable for each request. What should the architect recommend?",
+					"options": [
+						"A. Route requests round-robin so each model receives the same number regardless of prompt complexity",
+						"B. Deploy Microsoft Foundry model router and evaluate its quality, latency, and cost against representative traffic",
+						"C. Fine-tune the largest model to answer simple prompts more slowly but with identical billing",
+						"D. Let users choose a model by deployment name without any evaluation or default"
+					],
+					"correctAnswer": "B",
+					"explanation": "Microsoft Foundry model router is itself deployed as a model and routes prompts in real time to a suitable supported language model. It is intended to maintain comparable quality while improving cost, latency, and responsiveness. Representative evaluation is still required because routing benefits and acceptable quality depend on the workload; equal distribution and user guesswork do not account for prompt complexity.",
+					"topic": "D1.3 / Model router for cost-quality-latency balance",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router",
+					"section": "standalone"
+				},
+				{
+					"id": "q194",
+					"originalId": "DAY24-04",
+					"type": "mc",
+					"question": "A code-first business app needs two agent experiences: an interactive page generated for the current case, and a persistent stream where employees can review agent-proposed work and take action later. Which design maps the experiences correctly?",
+					"options": [
+						"A. Use a generative page for the contextual interactive surface and an agent feed for the ongoing work stream",
+						"B. Use an agent feed to replace every app page and a generative page only for audit-log retention",
+						"C. Use a prompt library for the interactive surface and model router for the work stream",
+						"D. Use Computer Use for both experiences even though the application is being developed code-first"
+					],
+					"correctAnswer": "A",
+					"explanation": "The current AB-100 design objective and Microsoft Learn training distinguish code-first generative pages from agent feed applications. A generative page provides a contextual, agent-created interactive experience, while an agent feed presents persistent agent activity and proposed work that users can review and act on. Computer Use is for automating an existing interface when a suitable API or native integration is unavailable, not for defining these app experiences.",
+					"topic": "D2.1 / Code-first generative pages and agent feed",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/training/modules/design-ai-agents-business-solutions/",
+					"section": "standalone"
+				},
+				{
+					"id": "q195",
+					"originalId": "DAY24-05",
+					"type": "mc",
+					"question": "A company is adapting a Copilot Studio text agent for a customer-service voice channel. The existing topics contain long paragraphs, dense option lists, and silent tool calls that can take 20 seconds. Which redesign is most appropriate?",
+					"options": [
+						"A. Keep the text experience unchanged because speech synthesis automatically makes every interaction voice-appropriate",
+						"B. Design concise spoken turns, confirmations for consequential actions, interruption and fallback behavior, and progress handling for long-running operations; then test with real voice conversations",
+						"C. Remove confirmations because voice users cannot review consequential actions",
+						"D. Convert every topic to Computer Use so spoken responses no longer require orchestration"
+					],
+					"correctAnswer": "B",
+					"explanation": "Voice is an interaction behavior, not merely text read aloud. The architecture must account for short spoken turns, recognition errors, interruptions, silence, latency, fallback, and explicit confirmation before high-impact actions. Testing only the text transcript misses timing and conversational failures that occur in the voice channel.",
+					"topic": "D2.2 / Copilot Studio voice-mode behavior",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/training/modules/design-ai-agents-business-solutions/",
+					"section": "standalone"
+				},
+				{
+					"id": "q196",
+					"originalId": "DAY24-06",
+					"type": "mc",
+					"question": "A sales organization uses a supported CRM, but a seller-facing agent also needs current discount eligibility from a secured pricing service. The service exposes a stable API, and eligibility must be checked at run time rather than copied into model knowledge. What should the architect design?",
+					"options": [
+						"A. A governed connector or agent tool with a clear contract and delegated or workload authorization appropriate to the action",
+						"B. Fine-tune the language model on last quarter's discount table",
+						"C. Add discount values to the system prompt and grant all sellers administrator access",
+						"D. Use an ungrounded generative answer because CRM connectivity makes external authorization unnecessary"
+					],
+					"correctAnswer": "A",
+					"explanation": "Current transactional facts from a secured API belong behind a connector or tool, not in model weights or static instructions. The tool needs a precise description and input/output contract so orchestration can select it reliably, plus authorization that preserves the caller's permitted scope or a deliberately constrained workload identity. CRM connectivity does not automatically authorize a separate pricing system.",
+					"topic": "D2.1 / Sales agent connector and authorization design",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/training/modules/design-ai-agents-business-solutions/",
+					"section": "standalone"
+				},
+				{
+					"id": "q197",
+					"originalId": "DAY24-07",
+					"type": "mc",
+					"question": "A service agent's overall resolution rate is unchanged, but complaints say handoffs from the mobile channel have become slower. The owner proposes rewriting the global instructions immediately. What should the architect recommend first?",
+					"options": [
+						"A. Use Copilot Studio Monitor to segment sessions by channel, outcome, topic or component, and inspect recent transcripts and metrics before tuning the affected path",
+						"B. Increase model temperature globally because aggregate resolution is stable",
+						"C. Remove handoff events from analytics so they no longer reduce perceived performance",
+						"D. Replace every topic with generative answers without identifying the failing component"
+					],
+					"correctAnswer": "A",
+					"explanation": "Aggregate metrics can hide a channel-specific regression. Copilot Studio Monitor provides key metrics and drill-down usage data for conversational and autonomous agents, including recent session and transcript details. Segmenting the affected cohort and tracing its component path establishes evidence for a targeted fix; a global prompt change could degrade unaffected experiences.",
+					"topic": "D3.1 / Segmented monitoring before tuning",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q198",
+					"originalId": "DAY24-08",
+					"type": "mc",
+					"question": "An agent scores highly when each test asks one isolated question. In production, users refer to earlier turns, correct details, and approve a tool action only after clarification. Failures occur in these longer interactions. How should the test strategy change?",
+					"options": [
+						"A. Keep only single-response tests and raise the passing threshold",
+						"B. Add representative multi-turn conversation tests that verify context, clarification, tool selection, confirmation, and final outcome while retaining focused single-response tests",
+						"C. Test only the final answer text because tool execution and state are infrastructure concerns",
+						"D. Use production users as the first multi-turn test cohort and infer success from usage volume"
+					],
+					"correctAnswer": "B",
+					"explanation": "Microsoft documents different evaluation methods for single responses and conversations because they measure different behavior. The observed defect depends on state across turns and the sequence leading to an action, so representative conversation tests must assess context retention, clarification, tool behavior, confirmation, and outcome. Focused single-response tests still provide useful component-level evidence.",
+					"topic": "D3.2 / Multi-turn evaluation for stateful agent behavior",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q199",
+					"originalId": "DAY24-09",
+					"type": "mc",
+					"question": "Three applications consume the same Microsoft Foundry agent. A new instruction and tool set has passed evaluation, but the team plans to overwrite the production agent in place and ask every application owner to update configuration during the release window. Which ALM design is better?",
+					"options": [
+						"A. Publish the evaluated agent version behind a stable endpoint, use a controlled rollout, retain the previous version for rollback, and promote only after release gates pass",
+						"B. Give every application owner permission to edit the production agent directly",
+						"C. Reuse the development endpoint in production so version promotion is unnecessary",
+						"D. Delete the previous version before deployment to prevent rollback confusion"
+					],
+					"correctAnswer": "A",
+					"explanation": "Microsoft Foundry Agent Service supports versioned agents and stable publishing endpoints. Versioning separates the evaluated release artifact from mutable development work, while a stable endpoint reduces consumer coupling. Controlled rollout, release gates, and retention of the prior version provide a repeatable promotion and rollback path instead of coordinated in-place mutation.",
+					"topic": "D3.3 / Versioned Foundry agent release behind a stable endpoint",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q200",
+					"originalId": "DAY24-10",
+					"type": "mc",
+					"question": "A grounded support agent can read untrusted uploaded documents and invoke a tool that refunds orders. The team enables harmful-content filtering and concludes that the solution is secure. Which additional design is most important?",
+					"options": [
+						"A. Treat retrieved content as untrusted, constrain tool inputs and permissions, require confirmation or approval for consequential refunds, apply data policies, and monitor attempted misuse",
+						"B. Increase the model context window so malicious instructions are diluted by more text",
+						"C. Grant the refund tool broader permissions so failed attacks produce fewer authorization errors",
+						"D. Hide the agent instructions from users and rely on content filtering as the only runtime control"
+					],
+					"correctAnswer": "A",
+					"explanation": "Content filtering addresses selected harmful-content risks; it does not neutralize indirect prompt manipulation in retrieved documents or authorize consequential tools. Copilot Studio security and governance guidance supports layered controls. Untrusted content boundaries, least-privilege tool authorization, validated inputs, approval for high-impact actions, data policies, and monitoring reduce the chance and impact of manipulated tool use.",
+					"topic": "D3.4 / Layered defense for indirect prompt manipulation and tools",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-and-governance",
 					"section": "standalone"
 				}
 			]

@@ -142,6 +142,30 @@ export class RepoStore {
 		return bank && Array.isArray(bank.domains) ? bank : undefined;
 	}
 
+	async readDayQuestionIds(folder: string, day: number): Promise<string[] | undefined> {
+		const assignments = await readJson<unknown>(path.join(examPaths(this.root, folder).dir, "day-assignments.json"));
+		if (!assignments || typeof assignments !== "object" || Array.isArray(assignments)) {
+			return undefined;
+		}
+		const byDay = (assignments as Record<string, unknown>).dayAssignments;
+		if (!byDay || typeof byDay !== "object" || Array.isArray(byDay)) {
+			return undefined;
+		}
+		const assigned = (byDay as Record<string, unknown>)[String(day)];
+		if (!Array.isArray(assigned)) {
+			return undefined;
+		}
+		const ids = [
+			...new Set(
+				assigned
+					.filter((value): value is string => typeof value === "string")
+					.map((value) => value.trim())
+					.filter(Boolean)
+			),
+		];
+		return ids.length > 0 ? ids : undefined;
+	}
+
 	async writeQuestions(folder: string, questions: QuestionBank): Promise<void> {
 		await writeJson(examPaths(this.root, folder).questions, questions);
 	}

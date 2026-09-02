@@ -80,11 +80,12 @@ export class QuizView implements vscode.Disposable {
 		const bank = await store.readQuestions(snapshot.meta.folder);
 		const pool = normalizeBank(bank);
 		const planDay = snapshot.plan?.days.find((entry) => entry.day === day);
+		const selectedQuestionIds = onlyQuestionIds ?? (await store.readDayQuestionIds(snapshot.meta.folder, day));
 		const questions = selectQuestions({
 			pool,
 			...(planDay ? { day: planDay } : {}),
 			recentQuestionIds: this.recentQuestionIds,
-			...(onlyQuestionIds ? { onlyQuestionIds } : {}),
+			...(selectedQuestionIds ? { onlyQuestionIds: selectedQuestionIds } : {}),
 			seed: day * 7919 + this.recentQuestionIds.length,
 		});
 
