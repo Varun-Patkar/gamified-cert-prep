@@ -1,0 +1,14 @@
+[
+  {
+    "day": 25,
+    "attempt": 1,
+    "completedAt": "2026-09-03T14:37:32.537Z",
+    "questionsAnswered": 10,
+    "correct": 9,
+    "accuracy": 0.9,
+    "weakTopicIds": [
+      "D3.4 / User-assigned managed identity for replaceable hosts"
+    ],
+    "xpAwarded": 205
+  }
+]

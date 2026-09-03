@@ -1,7 +1,7 @@
 {
 	"examCode": "AB-100",
 	"examName": "Agentic AI Business Solutions Architect",
-	"totalQuestions": 200,
+	"totalQuestions": 210,
 	"sources": [
 		"Microsoft-powered practice quiz on learn.mslevelup.com (60 questions, 60-minute timed assessment)",
 		"Microsoft Learn: Copilot Studio analytics overview and conversational-agent effectiveness",
@@ -61,7 +61,7 @@
 		"https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview",
 		"https://learn.microsoft.com/en-us/azure/foundry/agents/overview"
 	],
-	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q200 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, Day 15 questions q141-q150, Day 16 questions q151-q160, Day 17 questions q161-q170, and Day 19 questions q171-q180 are mapped to Domain 3, Deploy AI-powered business solutions. Day 20 questions q181-q190 are mapped to Domain 1, Plan AI-powered business solutions. Day 24 questions q191-q200 are a mixed-domain gap check mapped proportionally to Domain 1 (3), Domain 2 (3), and Domain 3 (4).",
+	"note": "Questions q001-q060 were captured from a Microsoft-powered practice quiz attempt on 2026-08-10. Answers reflect the best-effort responses selected during the attempt and should be verified against official explanations before relying on them. Questions q061-q210 are original exam-style questions explicitly labeled as AI-generated and grounded in the cited Microsoft Learn pages. Question types: mc (multiple choice, includes single True/False), multi (select all that apply), dropdown (used here for match-the-item questions). Questions q001-q110 remain in the original practice domain; newly assigned Day 12 questions q111-q120, Day 13 questions q121-q130, Day 14 questions q131-q140, Day 15 questions q141-q150, Day 16 questions q151-q160, Day 17 questions q161-q170, and Day 19 questions q171-q180 are mapped to Domain 3, Deploy AI-powered business solutions. Day 20 questions q181-q190 are mapped to Domain 1, Plan AI-powered business solutions. Day 24 questions q191-q200 and Day 25 questions q201-q210 are mixed-domain checks, each mapped proportionally to Domain 1 (3), Domain 2 (3), and Domain 3 (4).",
 	"caseStudies": [
 		{
 			"id": "chg",
@@ -3800,6 +3800,196 @@
 					"difficulty": "hard",
 					"source": "AI-generated; grounded in current Microsoft Learn documentation",
 					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-and-governance",
+					"section": "standalone"
+				},
+				{
+					"id": "q201",
+					"originalId": "DAY25-01",
+					"type": "mc",
+					"question": "CHG plans a policy agent, but its knowledge library contains duplicate pages, conflicting effective dates, inconsistent owners, and content that some intended users cannot retrieve. What should the architect recommend before scaling the agent?",
+					"options": [
+						"A. Increase the model context window so it can reconcile every conflict at run time",
+						"B. Assess and remediate accuracy, relevance, timeliness, cleanliness, and runtime availability, then validate the curated source with representative users",
+						"C. Fine-tune a model on all current files so SharePoint permissions are no longer required",
+						"D. Publish immediately because indexing proves the grounding data is ready"
+					],
+					"correctAnswer": "B",
+					"explanation": "The AB-100 study guide explicitly requires review of grounding data for accuracy, relevance, timeliness, cleanliness, and availability. Duplicate and conflicting pages undermine accuracy and cleanliness, uncertain effective dates undermine timeliness, and failed retrieval for intended users is an availability and authorization problem. Indexing alone does not establish fitness for the use case.",
+					"topic": "D1.1 / Grounding-data readiness",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100",
+					"section": "standalone"
+				},
+				{
+					"id": "q202",
+					"originalId": "DAY25-02",
+					"type": "mc",
+					"question": "CHG executives want four agents delivered in 90 days, but no baseline, target benefit, risk tolerance, or ongoing support cost has been defined. What is the best first portfolio action?",
+					"options": [
+						"A. Select one platform for all four agents and use the number deployed as the ROI measure",
+						"B. Define measurable outcomes and owners, validate feasibility and risk, and estimate benefits and total cost of ownership before prioritizing the use cases",
+						"C. Build every agent as an autonomous proof of concept and calculate costs after production adoption",
+						"D. Choose the proposal with the lowest model-token price because integration and operations are fixed costs"
+					],
+					"correctAnswer": "B",
+					"explanation": "Cloud Adoption Framework AI strategy guidance begins with business value, measurable outcomes, feasibility, data, cost, and risk. TCO extends beyond model consumption to implementation, integration, security, testing, monitoring, support, training, and change management. This evidence supports prioritization and an appropriate build, buy, or extend decision.",
+					"topic": "D1.3 / AI portfolio value and TCO",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+					"section": "standalone"
+				},
+				{
+					"id": "q203",
+					"originalId": "DAY25-03",
+					"type": "mc",
+					"question": "A program includes a low-code employee FAQ agent maintained by business makers, a deeply customized code-first agent using specialized Azure models, and an employee experience embedded in Microsoft 365. Leadership proposes forcing all three onto one platform. What should the architect recommend?",
+					"options": [
+						"A. Match each use case to the appropriate Microsoft 365 Copilot, Copilot Studio, or Microsoft Foundry pattern and govern interoperability across the portfolio",
+						"B. Use Copilot Studio for every workload because low-code tools eliminate the need for developer controls",
+						"C. Use Microsoft Foundry for every workload because custom code is always required for enterprise agents",
+						"D. Build three new foundation models so platform capabilities and existing employee context are irrelevant"
+					],
+					"correctAnswer": "A",
+					"explanation": "AB-100 expects a multi-agent strategy across Microsoft 365 Copilot, Copilot Studio, and Microsoft Foundry. Copilot Studio fits low-code business-maker scenarios, Foundry supports deeper developer and model control, and Microsoft 365 agents fit employee work in Microsoft 365 context. Architecture should follow requirements while governance, identity, data, and handoffs provide portfolio consistency.",
+					"topic": "D1.2 / Multi-platform build-buy-extend strategy",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/training/modules/design-ai-agents-business-solutions/",
+					"section": "standalone"
+				},
+				{
+					"id": "q204",
+					"originalId": "DAY25-04",
+					"type": "mc",
+					"question": "A Copilot Studio agent uses generative orchestration. A benefit-change topic must collect a plan type from a custom closed-list entity and a case code from a custom regex entity. How should the architect design the collection step?",
+					"options": [
+						"A. Expose both custom entities directly as topic input parameters and rely on automatic slot filling",
+						"B. Use Question nodes inside the topic to collect the custom entity values, validate them, and pass the results to the action",
+						"C. Put every accepted plan and regex pattern in the agent description and skip deterministic validation",
+						"D. Replace the custom entities with a SharePoint knowledge source because knowledge retrieval enforces input formats"
+					],
+					"correctAnswer": "B",
+					"explanation": "Microsoft documents that generative orchestration does not currently support custom entities, including closed lists and regex entities, as topic or tool input parameters. The supported pattern is to collect the value with a Question node in a topic, where the entity and validation can be applied, and then pass the validated value onward.",
+					"topic": "D2.1 / Generative orchestration custom-entity inputs",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions#custom-entity-support-for-topic-and-tool-input-parameters",
+					"section": "standalone"
+				},
+				{
+					"id": "q205",
+					"originalId": "DAY25-05",
+					"type": "mc",
+					"question": "A signed-in employee has Read permission to a SharePoint site used by a Copilot Studio knowledge source. One policy file is protected by an encryption-enforcing sensitivity label and appears ready, but the agent returns no response from it. What best explains the behavior?",
+					"options": [
+						"A. Adding a SharePoint knowledge source removes the signed-in user's permissions until the agent owner approves each query",
+						"B. Permission trimming can allow the user to see eligible content, but Copilot Studio cannot extract or ground on encrypted, DKE-protected, or password-protected files",
+						"C. SharePoint grounding always uses the agent maker's permissions, so the employee's Read access is irrelevant",
+						"D. Ready status guarantees extraction, so the only possible cause is an incorrect model temperature"
+					],
+					"correctAnswer": "B",
+					"explanation": "The SharePoint knowledge option permission-trims content for the signed-in user and requires at least Read permission. Microsoft also documents a separate content-protection boundary: files encrypted by sensitivity labels, Double Key Encryption, or passwords cannot be extracted for grounding and can return no response even when they appear ready.",
+					"topic": "D2.2 / SharePoint grounding permissions and encryption",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-sharepoint",
+					"section": "standalone"
+				},
+				{
+					"id": "q206",
+					"originalId": "DAY25-06",
+					"type": "mc",
+					"question": "An agent must retrieve current claim status from one legacy system with a stable secured API and update appointments in another legacy portal that has no API. Which design is most appropriate?",
+					"options": [
+						"A. Use Computer Use for both systems because visual automation is always more reliable than APIs",
+						"B. Use a governed connector or tool for claim status and consider Computer Use for the UI-only portal, with controls around changes",
+						"C. Copy claim status and appointments into the system prompt each morning",
+						"D. Fine-tune a model to predict current claim status and click coordinates without accessing either system"
+					],
+					"correctAnswer": "B",
+					"explanation": "A stable secured API should be exposed through a governed connector or agent tool with typed inputs, authorization, error handling, and telemetry. Microsoft positions Computer Use for websites and desktop apps when no API is available; it can address the UI-only portal but still needs testing, bounded permissions, and confirmation or approval for consequential updates.",
+					"topic": "D2.2 / API tool versus Computer Use",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use",
+					"section": "standalone"
+				},
+				{
+					"id": "q207",
+					"originalId": "DAY25-07",
+					"type": "mc",
+					"question": "An analyst can open a Copilot Studio agent's Monitor page through the Analytics Viewer sharing role but cannot inspect conversation transcripts from the previous week. Which change is required, assuming transcript data collection is otherwise available?",
+					"options": [
+						"A. Grant the Bot Transcript Viewer security role in addition to the analytics access",
+						"B. Run the conversations again in the Copilot Studio test panel because test activity is the only source shown in Monitor",
+						"C. Wait until the sessions are older than 28 days so transcript access becomes available",
+						"D. Grant Global Administrator because Monitor has no limited transcript role"
+					],
+					"correctAnswer": "A",
+					"explanation": "Microsoft documents Analytics Viewer as limited view-only access to Monitor. Access to conversation transcript information additionally requires the Bot Transcript Viewer security role. Recent transcripts are within the documented 28-day detail window, and test-panel activity is not included in Monitor analytics.",
+					"topic": "D3.1 / Monitor and transcript access roles",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-overview#grant-limited-view-only-access-to-analytics",
+					"section": "standalone"
+				},
+				{
+					"id": "q208",
+					"originalId": "DAY25-08",
+					"type": "mc",
+					"question": "A claims agent may phrase a correct explanation in many ways, but it must invoke the eligibility tool and maintain context through clarification turns. Which evaluation strategy best covers these requirements?",
+					"options": [
+						"A. Use only Exact match against one approved paragraph",
+						"B. Combine Compare meaning or General quality with Tool use and representative conversation tests",
+						"C. Measure token count only because shorter responses prove factual correctness",
+						"D. Use production adoption as the sole release gate and investigate behavior after launch"
+					],
+					"correctAnswer": "B",
+					"explanation": "Compare meaning evaluates semantic equivalence when valid wording varies, while General quality assesses relevance, groundedness, completeness, and abstention. Tool use checks whether expected capabilities were invoked. Conversation tests cover context and multistep behavior. Exact match alone would reject valid paraphrases and would not prove the required tool path.",
+					"topic": "D3.2 / Evaluation methods for meaning, tools, and context",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q209",
+					"originalId": "DAY25-09",
+					"type": "mc",
+					"question": "A Copilot Studio release changes an agent, topics, and a connector-backed action. Developers want to edit production directly and hard-code the test endpoint in the action. Which ALM design should the architect recommend?",
+					"options": [
+						"A. Carry the components in a custom Power Platform solution, supply environment-specific configuration during promotion, apply test and approval gates, deploy in a ring, and retain a validated rollback artifact",
+						"B. Patch production first, then export it as the new development baseline if users do not complain",
+						"C. Use one shared environment and endpoint for development, test, and production to eliminate configuration differences",
+						"D. Recreate the agent manually in each environment so solution dependencies cannot be tracked"
+					],
+					"correctAnswer": "A",
+					"explanation": "Copilot Studio agents are created in Power Platform solutions, and custom solutions support movement across environments, pipelines, and ring deployments. A governed release carries dependent components, separates environment-specific configuration, evaluates before promotion, uses approvals and monitoring, and preserves the prior validated artifact for rollback rather than mutating production in place.",
+					"topic": "D3.3 / Copilot Studio solution promotion and rollback",
+					"difficulty": "hard",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-overview",
+					"section": "standalone"
+				},
+				{
+					"id": "q210",
+					"originalId": "DAY25-10",
+					"type": "mc",
+					"question": "An Azure-hosted agent helper runs on several replaceable compute resources and currently shares a storage account key. Permissions must remain stable as instances are recycled, and the workload needs access only to one storage container. What should the architect recommend?",
+					"options": [
+						"A. Store the account key in every instance's configuration and rotate it manually",
+						"B. Assign a user-assigned managed identity to the compute resources and grant it only the required storage data role at the narrowest practical scope",
+						"C. Grant every employee a storage owner role so the workload can act on their behalf",
+						"D. Use a system prompt to authenticate because model instructions replace Microsoft Entra tokens"
+					],
+					"correctAnswer": "B",
+					"explanation": "A user-assigned managed identity has an independent lifecycle, can be shared by multiple Azure resources, and is suited to recycled resources whose permissions must remain stable. Managed identity removes application-managed secrets for Entra-capable dependencies. Authorization remains separate, so assign only the required storage data role at the narrowest practical scope rather than broad owner access.",
+					"topic": "D3.4 / Managed identity and least-privilege RBAC",
+					"difficulty": "medium",
+					"source": "AI-generated; grounded in current Microsoft Learn documentation",
+					"sourceUrl": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview",
 					"section": "standalone"
 				}
 			]
