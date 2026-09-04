@@ -26,7 +26,8 @@
     22,
     23,
     24,
-    25
+    25,
+    26
   ],
   "results": [
     {
@@ -280,14 +281,26 @@
         "D3.4 / User-assigned managed identity for replaceable hosts"
       ],
       "xpAwarded": 205
+    },
+    {
+      "day": 26,
+      "attempt": 1,
+      "completedAt": "2026-09-04T16:04:08.267Z",
+      "questionsAnswered": 10,
+      "correct": 9,
+      "accuracy": 0.9,
+      "weakTopicIds": [
+        "D3.4 / User-assigned managed identity for replaceable hosts"
+      ],
+      "xpAwarded": 210
     }
   ],
-  "xp": 975,
+  "xp": 1185,
   "streak": {
-    "current": 3,
+    "current": 4,
     "longest": 10,
     "freezeTokens": 0,
-    "lastStudyDate": "2026-09-03"
+    "lastStudyDate": "2026-09-04"
   },
   "badges": [],
   "unlockedTiers": [
