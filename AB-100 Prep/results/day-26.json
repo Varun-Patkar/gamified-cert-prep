@@ -10,5 +10,15 @@
       "D3.4 / User-assigned managed identity for replaceable hosts"
     ],
     "xpAwarded": 210
+  },
+  {
+    "day": 26,
+    "attempt": 2,
+    "completedAt": "2026-09-04T16:04:31.745Z",
+    "questionsAnswered": 1,
+    "correct": 1,
+    "accuracy": 1,
+    "weakTopicIds": [],
+    "xpAwarded": 50
   }
 ]
