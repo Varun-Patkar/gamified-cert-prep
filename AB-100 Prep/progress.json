@@ -338,9 +338,21 @@
         "D3.4 / System-assigned managed identity lifecycle"
       ],
       "xpAwarded": 225
+    },
+    {
+      "day": 29,
+      "attempt": 2,
+      "completedAt": "2026-09-07T06:52:32.778Z",
+      "questionsAnswered": 1,
+      "correct": 0,
+      "accuracy": 0,
+      "weakTopicIds": [
+        "D3.4 / System-assigned managed identity lifecycle"
+      ],
+      "xpAwarded": 25
     }
   ],
-  "xp": 2015,
+  "xp": 2040,
   "streak": {
     "current": 7,
     "longest": 10,
