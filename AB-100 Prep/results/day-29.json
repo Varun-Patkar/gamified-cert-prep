@@ -1,0 +1,14 @@
+[
+  {
+    "day": 29,
+    "attempt": 1,
+    "completedAt": "2026-09-07T06:52:17.761Z",
+    "questionsAnswered": 10,
+    "correct": 9,
+    "accuracy": 0.9,
+    "weakTopicIds": [
+      "D3.4 / System-assigned managed identity lifecycle"
+    ],
+    "xpAwarded": 225
+  }
+]

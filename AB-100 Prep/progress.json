@@ -29,7 +29,8 @@
     25,
     26,
     27,
-    28
+    28,
+    29
   ],
   "results": [
     {
@@ -325,14 +326,26 @@
       "accuracy": 1,
       "weakTopicIds": [],
       "xpAwarded": 280
+    },
+    {
+      "day": 29,
+      "attempt": 1,
+      "completedAt": "2026-09-07T06:52:17.761Z",
+      "questionsAnswered": 10,
+      "correct": 9,
+      "accuracy": 0.9,
+      "weakTopicIds": [
+        "D3.4 / System-assigned managed identity lifecycle"
+      ],
+      "xpAwarded": 225
     }
   ],
-  "xp": 1790,
+  "xp": 2015,
   "streak": {
-    "current": 6,
+    "current": 7,
     "longest": 10,
     "freezeTokens": 1,
-    "lastStudyDate": "2026-09-06"
+    "lastStudyDate": "2026-09-07"
   },
   "badges": [],
   "unlockedTiers": [
