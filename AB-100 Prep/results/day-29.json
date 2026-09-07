@@ -22,5 +22,15 @@
       "D3.4 / System-assigned managed identity lifecycle"
     ],
     "xpAwarded": 25
+  },
+  {
+    "day": 29,
+    "attempt": 3,
+    "completedAt": "2026-09-07T06:52:41.502Z",
+    "questionsAnswered": 1,
+    "correct": 1,
+    "accuracy": 1,
+    "weakTopicIds": [],
+    "xpAwarded": 50
   }
 ]
