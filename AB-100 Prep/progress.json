@@ -384,9 +384,19 @@
         "Security / Permissions"
       ],
       "xpAwarded": 235
+    },
+    {
+      "day": 31,
+      "attempt": 2,
+      "completedAt": "2026-09-09T06:12:40.509Z",
+      "questionsAnswered": 1,
+      "correct": 1,
+      "accuracy": 1,
+      "weakTopicIds": [],
+      "xpAwarded": 50
     }
   ],
-  "xp": 2615,
+  "xp": 2665,
   "streak": {
     "current": 9,
     "longest": 10,
