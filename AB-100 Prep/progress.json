@@ -31,7 +31,8 @@
     27,
     28,
     29,
-    30
+    30,
+    31
   ],
   "results": [
     {
@@ -371,14 +372,26 @@
       "accuracy": 1,
       "weakTopicIds": [],
       "xpAwarded": 290
+    },
+    {
+      "day": 31,
+      "attempt": 1,
+      "completedAt": "2026-09-09T06:12:10.157Z",
+      "questionsAnswered": 10,
+      "correct": 9,
+      "accuracy": 0.9,
+      "weakTopicIds": [
+        "Security / Permissions"
+      ],
+      "xpAwarded": 235
     }
   ],
-  "xp": 2380,
+  "xp": 2615,
   "streak": {
-    "current": 8,
+    "current": 9,
     "longest": 10,
     "freezeTokens": 1,
-    "lastStudyDate": "2026-09-08"
+    "lastStudyDate": "2026-09-09"
   },
   "badges": [],
   "unlockedTiers": [

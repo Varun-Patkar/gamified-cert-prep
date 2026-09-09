@@ -1,0 +1,14 @@
+[
+  {
+    "day": 31,
+    "attempt": 1,
+    "completedAt": "2026-09-09T06:12:10.157Z",
+    "questionsAnswered": 10,
+    "correct": 9,
+    "accuracy": 0.9,
+    "weakTopicIds": [
+      "Security / Permissions"
+    ],
+    "xpAwarded": 235
+  }
+]
