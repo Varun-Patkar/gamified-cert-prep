@@ -4,7 +4,7 @@
   "vendor": "Microsoft",
   "code": "AB-100",
   "title": "Agentic AI Business Solutions Architect",
-  "status": "in-progress",
+  "status": "completed",
   "legacy": false,
   "gamified": true,
   "folder": "AB-100 Prep",
@@ -54,5 +54,14 @@
     "t-3-2": "Manage the testing of AI-powered business solutions",
     "t-3-3": "Design the ALM process for AI-powered business solutions",
     "t-3-4": "Design responsible AI, security, governance, risk management, and compliance"
+  },
+  "completedAt": "2026-09-12",
+  "result": {
+    "passed": true,
+    "score": 827,
+    "maxScore": 1000,
+    "passingScore": 700,
+    "credentialUrl": "https://learn.microsoft.com/api/credentials/share/en-gb/VarunPatkar/2D8CF142F73057E5?sharingId=255AC49FFD10B95B",
+    "scoreReportFile": "AB-100 Prep/AB-100-score-report.pdf"
   }
 }
