@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "ccdv-f",
+  "vendor": "Anthropic",
+  "code": "CCDV-F",
+  "title": "Claude Certified Developer – Foundations",
+  "status": "in-progress",
+  "legacy": false,
+  "gamified": false,
+  "folder": "CCDV-F Prep",
+  "createdAt": "2026-10-06",
+  "examDate": "2026-11-05",
+  "domains": [
+    {
+      "id": "1",
+      "title": "Agents and Workflows",
+      "weight": 14.7,
+      "topicIds": [
+        "t-1-1",
+        "t-1-2",
+        "t-1-3"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Applications and Integration",
+      "weight": 33.1,
+      "topicIds": [
+        "t-2-1",
+        "t-2-2",
+        "t-2-3",
+        "t-2-4",
+        "t-2-5",
+        "t-2-6"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Claude Code",
+      "weight": 3.1,
+      "topicIds": [
+        "t-3-1"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Eval, Testing, and Debugging",
+      "weight": 2.6,
+      "topicIds": [
+        "t-4-1"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Model Selection and Optimization",
+      "weight": 16.8,
+      "topicIds": [
+        "t-5-1",
+        "t-5-2",
+        "t-5-3",
+        "t-5-4"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Prompt and Context Engineering",
+      "weight": 11.0,
+      "topicIds": [
+        "t-6-1",
+        "t-6-2",
+        "t-6-3"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Security and Safety",
+      "weight": 8.1,
+      "topicIds": [
+        "t-7-1",
+        "t-7-2",
+        "t-7-3",
+        "t-7-4"
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Tools and MCPs",
+      "weight": 10.6,
+      "topicIds": [
+        "t-8-1",
+        "t-8-2",
+        "t-8-3"
+      ]
+    }
+  ],
+  "topicTitles": {
+    "t-1-1": "Agent Architecture",
+    "t-1-2": "Agent Construction with Claude",
+    "t-1-3": "Agent Patterns and Frameworks",
+    "t-2-1": "Understanding Requirements",
+    "t-2-2": "Systems Life Cycle",
+    "t-2-3": "Claude API Mechanics",
+    "t-2-4": "Software Engineering Foundations",
+    "t-2-5": "Claude Application Design",
+    "t-2-6": "Configuration Management",
+    "t-3-1": "Claude Code Operation",
+    "t-4-1": "Debugging and Error Handling",
+    "t-5-1": "LLM Fundamentals",
+    "t-5-2": "Technical Fundamentals",
+    "t-5-3": "Model Selection and Tradeoffs",
+    "t-5-4": "Cost and Token Management",
+    "t-6-1": "Context Engineering",
+    "t-6-2": "Prompt Engineering",
+    "t-6-3": "Output Handling",
+    "t-7-1": "AI Application Security",
+    "t-7-2": "Guardrails and Safe Deployment",
+    "t-7-3": "Claude Hooks",
+    "t-7-4": "Identity, Secrets, and Key Management",
+    "t-8-1": "Tool Implementation",
+    "t-8-2": "MCP Server Development",
+    "t-8-3": "Agentic Customization"
+  }
+}

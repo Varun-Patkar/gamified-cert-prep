@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "examId": "ccdv-f",
+  "generatedAt": "2026-10-06",
+  "config": {
+    "startDate": "2026-10-06",
+    "examDate": "2026-11-05",
+    "hoursPerDay": 1.5,
+    "dayPolicy": "all",
+    "questionsPerDay": 10,
+    "includeReviewDays": true,
+    "includeFinalMock": true
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-10-06",
+      "kind": "study",
+      "title": "Domain 1: Agent Architecture",
+      "topicIds": [
+        "t-1-1"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-01-agent-architecture.md",
+      "domainId": "1"
+    },
+    {
+      "day": 2,
+      "date": "2026-10-07",
+      "kind": "study",
+      "title": "Domain 1: Agent Architecture",
+      "topicIds": [
+        "t-1-1"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-02-agent-architecture.md",
+      "domainId": "1"
+    },
+    {
+      "day": 3,
+      "date": "2026-10-08",
+      "kind": "study",
+      "title": "Domain 1: Agent Architecture",
+      "topicIds": [
+        "t-1-1"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-03-agent-architecture.md",
+      "domainId": "1"
+    },
+    {
+      "day": 4,
+      "date": "2026-10-09",
+      "kind": "study",
+      "title": "Domain 1: Agent Patterns and Frameworks",
+      "topicIds": [
+        "t-1-3"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-04-agent-patterns-and-frameworks.md",
+      "domainId": "1"
+    },
+    {
+      "day": 5,
+      "date": "2026-10-10",
+      "kind": "study",
+      "title": "Mixed review: Agents and Workflows, Applications and Integration",
+      "topicIds": [
+        "t-1-3",
+        "t-2-1"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-05-agent-patterns-and-frameworks.md",
+      "domainId": null
+    },
+    {
+      "day": 6,
+      "date": "2026-10-11",
+      "kind": "study",
+      "title": "Domain 2: Understanding Requirements",
+      "topicIds": [
+        "t-2-1",
+        "t-2-2"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-06-understanding-requirements.md",
+      "domainId": "2"
+    },
+    {
+      "day": 7,
+      "date": "2026-10-12",
+      "kind": "study",
+      "title": "Domain 2: Systems Life Cycle",
+      "topicIds": [
+        "t-2-2"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-07-systems-life-cycle.md",
+      "domainId": "2"
+    },
+    {
+      "day": 8,
+      "date": "2026-10-13",
+      "kind": "study",
+      "title": "Domain 2: Claude API Mechanics",
+      "topicIds": [
+        "t-2-3"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-08-claude-api-mechanics.md",
+      "domainId": "2"
+    },
+    {
+      "day": 9,
+      "date": "2026-10-14",
+      "kind": "study",
+      "title": "Domain 2: Claude API Mechanics",
+      "topicIds": [
+        "t-2-3"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-09-claude-api-mechanics.md",
+      "domainId": "2"
+    },
+    {
+      "day": 10,
+      "date": "2026-10-15",
+      "kind": "study",
+      "title": "Domain 2: Claude API Mechanics",
+      "topicIds": [
+        "t-2-3"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-10-claude-api-mechanics.md",
+      "domainId": "2"
+    },
+    {
+      "day": 11,
+      "date": "2026-10-16",
+      "kind": "study",
+      "title": "Domain 2: Claude API Mechanics",
+      "topicIds": [
+        "t-2-3",
+        "t-2-4"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-11-claude-api-mechanics.md",
+      "domainId": "2"
+    },
+    {
+      "day": 12,
+      "date": "2026-10-17",
+      "kind": "study",
+      "title": "Domain 2: Software Engineering Foundations",
+      "topicIds": [
+        "t-2-4",
+        "t-2-5"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-12-software-engineering-foundations.md",
+      "domainId": "2"
+    },
+    {
+      "day": 13,
+      "date": "2026-10-18",
+      "kind": "study",
+      "title": "Domain 2: Claude Application Design",
+      "topicIds": [
+        "t-2-5",
+        "t-2-6"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-13-claude-application-design.md",
+      "domainId": "2"
+    },
+    {
+      "day": 14,
+      "date": "2026-10-19",
+      "kind": "study",
+      "title": "Domain 2: Configuration Management",
+      "topicIds": [
+        "t-2-6"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-14-configuration-management.md",
+      "domainId": "2"
+    },
+    {
+      "day": 15,
+      "date": "2026-10-20",
+      "kind": "study",
+      "title": "Mixed review: Applications and Integration, Claude Code",
+      "topicIds": [
+        "t-2-6",
+        "t-3-1"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-15-configuration-management.md",
+      "domainId": null
+    },
+    {
+      "day": 16,
+      "date": "2026-10-21",
+      "kind": "study",
+      "title": "Mixed review: Claude Code, Eval, Testing, and Debugging",
+      "topicIds": [
+        "t-3-1",
+        "t-4-1"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-16-claude-code-operation.md",
+      "domainId": null
+    },
+    {
+      "day": 17,
+      "date": "2026-10-22",
+      "kind": "study",
+      "title": "Domain 5: LLM Fundamentals",
+      "topicIds": [
+        "t-5-1"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-17-llm-fundamentals.md",
+      "domainId": "5"
+    },
+    {
+      "day": 18,
+      "date": "2026-10-23",
+      "kind": "study",
+      "title": "Domain 5: LLM Fundamentals",
+      "topicIds": [
+        "t-5-1",
+        "t-5-3"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-18-llm-fundamentals.md",
+      "domainId": "5"
+    },
+    {
+      "day": 19,
+      "date": "2026-10-24",
+      "kind": "study",
+      "title": "Domain 5: Model Selection and Tradeoffs",
+      "topicIds": [
+        "t-5-3",
+        "t-5-4"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-19-model-selection-and-tradeoffs.md",
+      "domainId": "5"
+    },
+    {
+      "day": 20,
+      "date": "2026-10-25",
+      "kind": "study",
+      "title": "Domain 5: Cost and Token Management",
+      "topicIds": [
+        "t-5-4",
+        "t-5-2"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-20-cost-and-token-management.md",
+      "domainId": "5"
+    },
+    {
+      "day": 21,
+      "date": "2026-10-26",
+      "kind": "study",
+      "title": "Domain 5: Technical Fundamentals",
+      "topicIds": [
+        "t-5-2"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-21-technical-fundamentals.md",
+      "domainId": "5"
+    },
+    {
+      "day": 22,
+      "date": "2026-10-27",
+      "kind": "study",
+      "title": "Domain 6: Context Engineering",
+      "topicIds": [
+        "t-6-1"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-22-context-engineering.md",
+      "domainId": "6"
+    },
+    {
+      "day": 23,
+      "date": "2026-10-28",
+      "kind": "study",
+      "title": "Domain 6: Context Engineering",
+      "topicIds": [
+        "t-6-1",
+        "t-6-2"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-23-context-engineering.md",
+      "domainId": "6"
+    },
+    {
+      "day": 24,
+      "date": "2026-10-29",
+      "kind": "study",
+      "title": "Domain 6: Prompt Engineering",
+      "topicIds": [
+        "t-6-2",
+        "t-6-3"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-24-prompt-engineering.md",
+      "domainId": "6"
+    },
+    {
+      "day": 25,
+      "date": "2026-10-30",
+      "kind": "study",
+      "title": "Mixed review: Prompt and Context Engineering, Security and Safety",
+      "topicIds": [
+        "t-6-3",
+        "t-7-1",
+        "t-7-2"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-25-output-handling.md",
+      "domainId": null
+    },
+    {
+      "day": 26,
+      "date": "2026-10-31",
+      "kind": "study",
+      "title": "Domain 7: Guardrails and Safe Deployment",
+      "topicIds": [
+        "t-7-2",
+        "t-7-3"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-26-guardrails-and-safe-deployment.md",
+      "domainId": "7"
+    },
+    {
+      "day": 27,
+      "date": "2026-11-01",
+      "kind": "review",
+      "title": "Mixed review: Security and Safety, Tools and MCPs",
+      "topicIds": [
+        "t-7-3",
+        "t-7-4",
+        "t-8-1"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-27-claude-hooks.md",
+      "domainId": null
+    },
+    {
+      "day": 28,
+      "date": "2026-11-02",
+      "kind": "review",
+      "title": "Domain 8: Tool Implementation",
+      "topicIds": [
+        "t-8-1",
+        "t-8-2"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-28-tool-implementation.md",
+      "domainId": "8"
+    },
+    {
+      "day": 29,
+      "date": "2026-11-03",
+      "kind": "review",
+      "title": "Domain 8: MCP Server Development",
+      "topicIds": [
+        "t-8-2",
+        "t-8-3"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-29-mcp-server-development.md",
+      "domainId": "8"
+    },
+    {
+      "day": 30,
+      "date": "2026-11-04",
+      "kind": "mock",
+      "title": "Final 10-question assessment and exam-readiness review",
+      "topicIds": [
+        "t-8-3"
+      ],
+      "questionCount": 10,
+      "sessionFile": "sessions/day-30-agentic-customization.md",
+      "domainId": "8"
+    }
+  ]
+}
